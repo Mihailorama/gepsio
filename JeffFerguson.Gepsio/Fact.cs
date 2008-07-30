@@ -144,31 +144,8 @@ namespace JeffFerguson.Gepsio
 
         internal void Validate()
         {
-            if (thisSchemaElement.ItemType == Element.ElementItemType.Monetary)
-                ValidateMonetaryType();
-        }
-
-        private void ValidateMonetaryType()
-        {
-            if (thisUnitRef.MeasureQualifiedName != null)
-            {
-                string Uri = thisUnitRef.MeasureQualifiedName.NamespaceUri;
-                if ((Uri.Length > 0) && (Uri.Equals("http://www.xbrl.org/2003/iso4217") == false))
-                {
-                    StringBuilder MessageBuilder = new StringBuilder();
-                    string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
-                    MessageBuilder.AppendFormat(StringFormat, thisName, thisUnitRef.Id, thisUnitRef.MeasureQualifiedName.NamespaceUri);
-                    throw new XbrlException(MessageBuilder.ToString());
-                }
-                thisUnitRef.SetCultureAndRegionInfoFromISO4217Code(thisUnitRef.MeasureQualifiedName.LocalName);
-                if ((thisUnitRef.CultureInformation == null) && (thisUnitRef.RegionInformation == null))
-                {
-                    StringBuilder MessageBuilder = new StringBuilder();
-                    string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");
-                    MessageBuilder.AppendFormat(StringFormat, thisName, thisUnitRef.Id, thisUnitRef.MeasureQualifiedName.LocalName);
-                    throw new XbrlException(MessageBuilder.ToString());
-                }
-            }
+            if (thisSchemaElement.Type != null)
+                thisSchemaElement.Type.ValidateFact(this);
         }
     }
 }

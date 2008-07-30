@@ -20,8 +20,8 @@ namespace JeffFerguson.Gepsio
         private XmlNode thisSegmentNode;
         private XmlNode thisScenarioNode;
         private XbrlFragment thisFragment;
-        private DateTime thisStartDate;
-        private DateTime thisEndDate;
+        private System.DateTime thisStartDate;
+        private System.DateTime thisEndDate;
 
         public string Id
         {
@@ -97,7 +97,7 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        public DateTime PeriodStartDate
+        public System.DateTime PeriodStartDate
         {
             get
             {
@@ -105,7 +105,7 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        public DateTime PeriodEndDate
+        public System.DateTime PeriodEndDate
         {
             get
             {
@@ -118,8 +118,8 @@ namespace JeffFerguson.Gepsio
             thisFragment = Fragment;
             thisContextNode = ContextNode;
             thisId = thisContextNode.Attributes["id"].Value;
-            thisStartDate = DateTime.MinValue;
-            thisEndDate = DateTime.MinValue;
+            thisStartDate = System.DateTime.MinValue;
+            thisEndDate = System.DateTime.MinValue;
             foreach (XmlNode CurrentChild in thisContextNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("period") == true)
@@ -264,19 +264,19 @@ namespace JeffFerguson.Gepsio
                 {
                     thisDurationPeriod = true;
                     thisStartDateDurationNode = CurrentChild;
-                    DateTime.TryParse(thisStartDateDurationNode.InnerText, out thisStartDate);
+                    System.DateTime.TryParse(thisStartDateDurationNode.InnerText, out thisStartDate);
                 }
                 else if (CurrentChild.LocalName.Equals("endDate") == true)
                 {
                     thisEndDateDurationNode = CurrentChild;
-                    DateTime.TryParse(thisEndDateDurationNode.InnerText, out thisEndDate);
+                    System.DateTime.TryParse(thisEndDateDurationNode.InnerText, out thisEndDate);
                 }
             }
         }
 
         private void ValidatePeriod()
         {
-            if ((thisStartDate != DateTime.MinValue) && (thisEndDate != DateTime.MinValue))
+            if ((thisStartDate != System.DateTime.MinValue) && (thisEndDate != System.DateTime.MinValue))
             {
                 if (thisEndDate < thisStartDate)
                 {

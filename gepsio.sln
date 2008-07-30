@@ -8,6 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FD587145-CF13-4F24-9E0E-71F2B0FA6954}"
 	ProjectSection(SolutionItems) = preProject
 		gepsio.vsmdi = gepsio.vsmdi
+		gepsio10.vsmdi = gepsio10.vsmdi
+		gepsio11.vsmdi = gepsio11.vsmdi
+		gepsio12.vsmdi = gepsio12.vsmdi
+		gepsio13.vsmdi = gepsio13.vsmdi
+		gepsio3.vsmdi = gepsio3.vsmdi
+		gepsio7.vsmdi = gepsio7.vsmdi
+		gepsio8.vsmdi = gepsio8.vsmdi
+		gepsio9.vsmdi = gepsio9.vsmdi
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
 	EndProjectSection
 EndProject
@@ -25,7 +33,7 @@ Global
 		SccLocalPath2 = JeffFerguson.Test.Gepsio
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = gepsio.vsmdi
+		CategoryFile = gepsio13.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

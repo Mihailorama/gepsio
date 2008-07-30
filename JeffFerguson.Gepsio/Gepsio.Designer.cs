@@ -59,5 +59,230 @@ namespace JeffFerguson.Gepsio {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot find a &lt;context&gt; tag for contextRef &apos;{0}&apos;..
+        /// </summary>
+        internal static string CannotFindContextForContextRef {
+            get {
+                return ResourceManager.GetString("CannotFindContextForContextRef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Footnote arc {0} references fact {1}, but no fact with that name can be found..
+        /// </summary>
+        internal static string CannotFindFactForFootnoteArc {
+            get {
+                return ResourceManager.GetString("CannotFindFactForFootnoteArc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Footnote arc {0} references footnote {1}, but no footnote with that name can be found..
+        /// </summary>
+        internal static string CannotFindFootnoteForFootnoteArc {
+            get {
+                return ResourceManager.GetString("CannotFindFootnoteForFootnoteArc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Footnote arc {0} references a footnote locator with a label of {1}, but the locator cannot be found..
+        /// </summary>
+        internal static string CannotFindFootnoteLocator {
+            get {
+                return ResourceManager.GetString("CannotFindFootnoteLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot find a &lt;unit&gt; tag for unitRef &apos;{0}&apos;..
+        /// </summary>
+        internal static string CannotFindUnitForUnitRef {
+            get {
+                return ResourceManager.GetString("CannotFindUnitForUnitRef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schema {0} defines fact element {1} with a duration-based period, but context {2}, used by the fact, does not implement a duration-based period..
+        /// </summary>
+        internal static string ElementSchemaDefinesDurationButUsedWithNonDurationContext {
+            get {
+                return ResourceManager.GetString("ElementSchemaDefinesDurationButUsedWithNonDurationContext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schema {0} defines fact element {1} with an instant-based period, but context {2}, used by the fact, does not implement an instant-based period..
+        /// </summary>
+        internal static string ElementSchemaDefinesInstantButUsedWithNonInstantContext {
+            get {
+                return ResourceManager.GetString("ElementSchemaDefinesInstantButUsedWithNonInstantContext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error loading XBRL document..
+        /// </summary>
+        internal static string ErrorLoadingXbrlDocument {
+            get {
+                return ResourceManager.GetString("ErrorLoadingXbrlDocument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facet creation does not support creation of facets defined by type {0}..
+        /// </summary>
+        internal static string FacetDefinitionNotSupportedForFacetCreation {
+            get {
+                return ResourceManager.GetString("FacetDefinitionNotSupportedForFacetCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Footnote references fact {0} in external document {1}. Footnotes cannot reference facts in external documents..
+        /// </summary>
+        internal static string FootnoteReferencesFactInExternalDoc {
+            get {
+                return ResourceManager.GetString("FootnoteReferencesFactInExternalDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schema {0} contains invalid item type {1} on element {2}..
+        /// </summary>
+        internal static string InvalidElementItemType {
+            get {
+                return ResourceManager.GetString("InvalidElementItemType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schema {0} contains invalid period type value {1} on element {2}..
+        /// </summary>
+        internal static string InvalidElementPeriodType {
+            get {
+                return ResourceManager.GetString("InvalidElementPeriodType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schema {0} contains invalid substitution group value {1} on element {2}..
+        /// </summary>
+        internal static string InvalidElementSubstitutionGroup {
+            get {
+                return ResourceManager.GetString("InvalidElementSubstitutionGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Footnote references a location of {0}, but none of the facts uses that ID..
+        /// </summary>
+        internal static string NoFactForFootnoteReference {
+            get {
+                return ResourceManager.GetString("NoFactForFootnoteReference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Footnote {0} does not include any language identifier information. Ensure that the footnote includes an xml:lang attribute..
+        /// </summary>
+        internal static string NoLangForFootnote {
+            get {
+                return ResourceManager.GetString("NoLangForFootnote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context ID {0} contains period information that specifies a start date that is later than the end date..
+        /// </summary>
+        internal static string PeriodEndDateLessThanPeriodStartDate {
+            get {
+                return ResourceManager.GetString("PeriodEndDateLessThanPeriodStartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context ID {0} contains a node in its scenario structure named &lt;{1}&gt;. This node is defined in the schema at {2} with a substitution group setting that references the XBRL namespace. XBRL namespace substitution group references are not allowed in context scenarios..
+        /// </summary>
+        internal static string ScenarioNodeUsingSubGroupInXBRLNamespace {
+            get {
+                return ResourceManager.GetString("ScenarioNodeUsingSubGroupInXBRLNamespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context ID {0} contains a node in its scenario structure named &lt;{1}&gt;. This namespace for this node is the XBRL namespace. XBRL namespace node names are not allowed in context segments..
+        /// </summary>
+        internal static string ScenarioNodeUsingXBRLNamespace {
+            get {
+                return ResourceManager.GetString("ScenarioNodeUsingXBRLNamespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context ID {0} contains a node in its segment structure named &lt;{1}&gt;. This node is defined in the schema at {2} with a substitution group setting that references the XBRL namespace. XBRL namespace substitution group references are not allowed in context segments..
+        /// </summary>
+        internal static string SegmentNodeUsingSubGroupInXBRLNamespace {
+            get {
+                return ResourceManager.GetString("SegmentNodeUsingSubGroupInXBRLNamespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Context ID {0} contains a node in its segment structure named &lt;{1}&gt;. This namespace for this node is the XBRL namespace. XBRL namespace node names are not allowed in context segments..
+        /// </summary>
+        internal static string SegmentNodeUsingXBRLNamespace {
+            get {
+                return ResourceManager.GetString("SegmentNodeUsingXBRLNamespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A facet named {0} was found in a schema and used for XML datatype {1}. This facet is not supported for this XML datatype..
+        /// </summary>
+        internal static string UnsupportedFacet {
+            get {
+                return ResourceManager.GetString("UnsupportedFacet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facet property {0} is not valid for facet {1}. See http://www.w3.org/TR/xmlschema-2/ for more information..
+        /// </summary>
+        internal static string UnsupportedFacetProperty {
+            get {
+                return ResourceManager.GetString("UnsupportedFacetProperty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a monetary item type. The fact also references a unit named {1}. The unit defines a code of {2}, which is to be interpreted as an ISO 4217 currency code. This code is not found in the list of supported ISO 4217 currency codes and is invalid..
+        /// </summary>
+        internal static string UnsupportedISO4217CodeForUnitMeasure {
+            get {
+                return ResourceManager.GetString("UnsupportedISO4217CodeForUnitMeasure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simple type {0} is unsupported as a restriction base type..
+        /// </summary>
+        internal static string UnsupportedRestrictionBaseSimpleType {
+            get {
+                return ResourceManager.GetString("UnsupportedRestrictionBaseSimpleType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a monetary item type. The fact also references a unit named {1}. The unit defines a measure referencing a namespace of {2}. This differs from the standard monetary unit namespace of http://www.xbrl.org/2003/iso4217. Monetary-based unit measures must reference the http://www.xbrl.org/2003/iso4217 namespace..
+        /// </summary>
+        internal static string WrongMeasureNamespaceForMonetaryFact {
+            get {
+                return ResourceManager.GetString("WrongMeasureNamespaceForMonetaryFact", resourceCulture);
+            }
+        }
     }
 }

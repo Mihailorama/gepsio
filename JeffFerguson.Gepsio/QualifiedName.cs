@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-    public class QualifiedName
+    public class QualifiedName : AnySimpleType<string>
     {
         private string thisLocalName;
         private string thisNamespace;
@@ -66,6 +66,11 @@ namespace JeffFerguson.Gepsio
                 thisNamespace = InnerTextSplit[0];
                 thisLocalName = InnerTextSplit[1];
             }
+        }
+
+        protected override string ConvertStringValue()
+        {
+            return ValueAsString;
         }
     }
 }

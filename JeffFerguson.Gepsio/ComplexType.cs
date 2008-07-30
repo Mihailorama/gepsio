@@ -5,10 +5,12 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-    public class ComplexType
+    public class ComplexType : AnyType
     {
         private XmlNode thisComplexTypeNode;
         private string thisName;
+        private SimpleType thisSimpleContentType;
+        private string thisValueAsString;
 
         public string Name
         {
@@ -18,40 +20,34 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        public override string ValueAsString
+        {
+            get
+            {
+                return thisValueAsString;
+            }
+            set
+            {
+                thisValueAsString = value;
+            }
+        }
+
         internal ComplexType(XmlNode ComplexTypeNode)
         {
             thisComplexTypeNode = ComplexTypeNode;
             thisName = XmlUtilities.GetAttributeValue(ComplexTypeNode, "name");
-        }
-
-        internal static ComplexType CreateComplexType(XmlNode ComplexTypeNode)
-        {
+            thisSimpleContentType = null;
             foreach (XmlNode CurrentChildNode in ComplexTypeNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("simpleContent") == true)
-                    return CreateComplexTypeWithSimpleContent(CurrentChildNode);
+                    thisSimpleContentType = new SimpleType(CurrentChildNode);
             }
-            return null;
         }
 
-        private static ComplexType CreateComplexTypeWithSimpleContent(XmlNode SimpleContentNode)
+        internal override void ValidateFact(Fact FactToValidate)
         {
-            foreach (XmlNode CurrentChildNode in SimpleContentNode.ChildNodes)
-            {
-                if (CurrentChildNode.LocalName.Equals("restriction") == true)
-                    return CreateComplexTypeWithRestriction(CurrentChildNode);
-            }
-            return null;
-        }
-
-        private static ComplexType CreateComplexTypeWithRestriction(XmlNode RestrictionNode)
-        {
-            string BaseType;
-
-            BaseType = XmlUtilities.GetAttributeValue(RestrictionNode, "base");
-            if (BaseType.Equals("xbrli:monetaryItemType") == true)
-                return new MonetaryComplexType(RestrictionNode.ParentNode.ParentNode, RestrictionNode.ParentNode);
-            throw new NotImplementedException("unsupported complex type with restriction");
+            if (thisSimpleContentType != null)
+                thisSimpleContentType.ValidateFact(FactToValidate);
         }
     }
 }

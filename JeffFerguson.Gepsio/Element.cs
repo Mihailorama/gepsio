@@ -7,55 +7,6 @@ namespace JeffFerguson.Gepsio
 {
     public class Element
     {
-        public enum ElementItemType
-        {
-            // derived from section 5.1.1.3 of the XBRL spec
-
-            Unknown,
-            Decimal,
-            Float,
-            Double,
-            Integer,
-            NonPositiveInteger,
-            NegativeInteger,
-            Long,
-            Int,
-            Short,
-            Byte,
-            NonNegativeInteger,
-            UnsignedLong,
-            UnsignedInt,
-            UnsignedShort,
-            UnsignedByte,
-            PositiveInteger,
-            Monetary,
-            Shares,
-            Pure,
-            Fraction,
-            String,
-            Boolean,
-            HexBinary,
-            Base64Binary,
-            AnyUri,
-            Qname,
-            Duration,
-            DateTime,
-            Time,
-            Date,
-            YearMonth,
-            Year,
-            MonthDay,
-            Day,
-            Month,
-            NormalizedString,
-            Token,
-            Language,
-            Name,
-            NCName,
-            SimpleType,
-            ComplexType
-        }
-
         public enum ElementSubstitutionGroup
         {
             Unknown,
@@ -73,12 +24,10 @@ namespace JeffFerguson.Gepsio
         private XmlNode thisElementNode;
         private string thisName;
         private string thisId;
-        private ElementItemType thisItemType;
         private XbrlSchema thisSchema;
         private ElementSubstitutionGroup thisSubstitutionGroup;
         private ElementPeriodType thisPeriodType;
-        private SimpleType thisSimpleTypeDeclaration;
-        private ComplexType thisComplexTypeDeclaration;
+        private AnyType thisItemType;
 
         public string Name
         {
@@ -93,14 +42,6 @@ namespace JeffFerguson.Gepsio
             get
             {
                 return thisId;
-            }
-        }
-
-        public ElementItemType ItemType
-        {
-            get
-            {
-                return thisItemType;
             }
         }
 
@@ -128,19 +69,11 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        public SimpleType SimpleTypeDeclaration
+        public AnyType Type
         {
             get
             {
-                return thisSimpleTypeDeclaration;
-            }
-        }
-
-        public ComplexType ComplexTypeDeclaration
-        {
-            get
-            {
-                return thisComplexTypeDeclaration;
+                return thisItemType;
             }
         }
 
@@ -156,8 +89,6 @@ namespace JeffFerguson.Gepsio
 
             if (thisElementNode.Attributes["type"] != null)
                 SetItemType(thisElementNode.Attributes["type"].Value);
-            else
-                thisItemType = ElementItemType.Unknown;
 
             if (thisElementNode.Attributes["substitutionGroup"] != null)
                 SetSubstitutionGroup(thisElementNode.Attributes["substitutionGroup"].Value);
@@ -226,156 +157,29 @@ namespace JeffFerguson.Gepsio
 
         private void SetItemType(string ItemTypeValue)
         {
-            thisSimpleTypeDeclaration = null;
-            thisItemType = ElementItemType.Unknown;
-            if (ItemTypeValue.Contains("decimalItemType") == true)
-                thisItemType = ElementItemType.Decimal;
-            else if (ItemTypeValue.Contains("floatItemType") == true)
-                thisItemType = ElementItemType.Float;
-            else if (ItemTypeValue.Contains("doubleItemType") == true)
-                thisItemType = ElementItemType.Double;
-            else if (ItemTypeValue.Contains("integerItemType") == true)
-                thisItemType = ElementItemType.Integer;
-            else if (ItemTypeValue.Contains("nonPositiveIntegerItemType") == true)
-                thisItemType = ElementItemType.NonPositiveInteger;
-            else if (ItemTypeValue.Contains("negativeIntegerItemType") == true)
-                thisItemType = ElementItemType.NegativeInteger;
-            else if (ItemTypeValue.Contains("longItemType") == true)
-                thisItemType = ElementItemType.Long;
-            else if (ItemTypeValue.Contains("intItemType") == true)
-                thisItemType = ElementItemType.Int;
-            else if (ItemTypeValue.Contains("shortItemType") == true)
-                thisItemType = ElementItemType.Short;
-            else if (ItemTypeValue.Contains("byteItemType") == true)
-                thisItemType = ElementItemType.Byte;
-            else if (ItemTypeValue.Contains("nonNegativeIntegerItemType") == true)
-                thisItemType = ElementItemType.NonNegativeInteger;
-            else if (ItemTypeValue.Contains("unsignedLongItemType") == true)
-                thisItemType = ElementItemType.UnsignedLong;
-            else if (ItemTypeValue.Contains("unsignedIntItemType") == true)
-                thisItemType = ElementItemType.UnsignedInt;
-            else if (ItemTypeValue.Contains("unsignedShortItemType") == true)
-                thisItemType = ElementItemType.UnsignedShort;
-            else if (ItemTypeValue.Contains("unsignedByteItemType") == true)
-                thisItemType = ElementItemType.UnsignedByte;
-            else if (ItemTypeValue.Contains("positiveIntegerItemType") == true)
-                thisItemType = ElementItemType.PositiveInteger;
-            else if (ItemTypeValue.Contains("monetaryItemType") == true)
-                thisItemType = ElementItemType.Monetary;
-            else if (ItemTypeValue.Contains("sharesItemType") == true)
-                thisItemType = ElementItemType.Shares;
-            else if (ItemTypeValue.Contains("pureItemType") == true)
-                thisItemType = ElementItemType.Pure;
-            else if (ItemTypeValue.Contains("fractionItemType") == true)
-                thisItemType = ElementItemType.Fraction;
-            else if (ItemTypeValue.Contains("stringItemType") == true)
-                thisItemType = ElementItemType.String;
-            else if (ItemTypeValue.Contains("booleanItemType") == true)
-                thisItemType = ElementItemType.Boolean;
-            else if (ItemTypeValue.Contains("hexBinaryItemType") == true)
-                thisItemType = ElementItemType.HexBinary;
-            else if (ItemTypeValue.Contains("base64BinaryItemType") == true)
-                thisItemType = ElementItemType.Base64Binary;
-            else if (ItemTypeValue.Contains("anyURIItemType") == true)
-                thisItemType = ElementItemType.AnyUri;
-            else if (ItemTypeValue.Contains("QNameItemType") == true)
-                thisItemType = ElementItemType.Qname;
-            else if (ItemTypeValue.Contains("durationItemType") == true)
-                thisItemType = ElementItemType.Duration;
-            else if (ItemTypeValue.Contains("dateTimeItemType") == true)
-                thisItemType = ElementItemType.DateTime;
-            else if (ItemTypeValue.Contains("timeItemType") == true)
-                thisItemType = ElementItemType.Time;
-            else if (ItemTypeValue.Contains("dateItemType") == true)
-                thisItemType = ElementItemType.Date;
-            else if (ItemTypeValue.Contains("gYearMonthItemType") == true)
-                thisItemType = ElementItemType.YearMonth;
-            else if (ItemTypeValue.Contains("gYearItemType") == true)
-                thisItemType = ElementItemType.Year;
-            else if (ItemTypeValue.Contains("gMonthDayItemType") == true)
-                thisItemType = ElementItemType.MonthDay;
-            else if (ItemTypeValue.Contains("gDayItemType") == true)
-                thisItemType = ElementItemType.Day;
-            else if (ItemTypeValue.Contains("gMonthItemType") == true)
-                thisItemType = ElementItemType.Month;
-            else if (ItemTypeValue.Contains("normalizedStringItemType") == true)
-                thisItemType = ElementItemType.NormalizedString;
-            else if (ItemTypeValue.Contains("tokenItemType") == true)
-                thisItemType = ElementItemType.Token;
-            else if (ItemTypeValue.Contains("languageItemType") == true)
-                thisItemType = ElementItemType.Language;
-            else if (ItemTypeValue.Contains("NameItemType") == true)
-                thisItemType = ElementItemType.Name;
-            else if (ItemTypeValue.Contains("NCNameItemType") == true)
-                thisItemType = ElementItemType.NCName;
-            else if (IsSimpleType(ItemTypeValue) == true)
+            thisItemType = null;
+            thisItemType = AnyType.CreateType(ItemTypeValue);
+            if (thisItemType == null)
             {
-                SetSimpleType(ItemTypeValue);
-                thisItemType = ElementItemType.SimpleType;
+                if (thisSchema != null)
+                {
+                    thisItemType = (AnyType)(thisSchema.GetSimpleType(GetLocalName(ItemTypeValue)));
+                }
             }
-            else if (IsComplexType(ItemTypeValue) == true)
+            if (thisItemType == null)
             {
-                SetComplexType(ItemTypeValue);
-                thisItemType = ElementItemType.ComplexType;
+                if (thisSchema != null)
+                {
+                    thisItemType = thisSchema.GetComplexType(GetLocalName(ItemTypeValue));
+                }
             }
-            else
+            if (thisItemType == null)
             {
-
-                // We can't identify the type, so throw an exception.
-
                 string MessageFormat = AssemblyResources.GetName("InvalidElementItemType");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, thisSchema.Path, ItemTypeValue, thisName);
                 throw new XbrlException(MessageFormatBuilder.ToString());
             }
-        }
-
-        private void SetSimpleType(string ItemTypeValue)
-        {
-            string LocalName = GetLocalName(ItemTypeValue);
-            foreach (SimpleType CurrentSimpleType in thisSchema.SimpleTypes)
-            {
-                if (CurrentSimpleType.Name.Equals(LocalName) == true)
-                {
-                    thisSimpleTypeDeclaration = CurrentSimpleType;
-                    break;
-                }
-            }
-        }
-
-        private void SetComplexType(string ItemTypeValue)
-        {
-            string LocalName = GetLocalName(ItemTypeValue);
-            foreach (ComplexType CurrentComplexType in thisSchema.ComplexTypes)
-            {
-                if (CurrentComplexType.Name.Equals(LocalName) == true)
-                {
-                    thisComplexTypeDeclaration = CurrentComplexType;
-                    break;
-                }
-            }
-        }
-
-        private bool IsSimpleType(string ItemTypeValue)
-        {
-            string LocalName = GetLocalName(ItemTypeValue);
-            foreach (SimpleType CurrentSimpleType in thisSchema.SimpleTypes)
-            {
-                if (CurrentSimpleType.Name.Equals(LocalName) == true)
-                    return true;
-            }
-            return false;
-        }
-
-        private bool IsComplexType(string ItemTypeValue)
-        {
-            string LocalName = GetLocalName(ItemTypeValue);
-            foreach (ComplexType CurrentComplexType in thisSchema.ComplexTypes)
-            {
-                if (CurrentComplexType.Name.Equals(LocalName) == true)
-                    return true;
-            }
-            return false;
         }
 
         private string GetLocalName(string FullName)

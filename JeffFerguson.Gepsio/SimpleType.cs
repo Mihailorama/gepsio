@@ -5,10 +5,11 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-    public class SimpleType
+    public class SimpleType : AnySimpleType<string>
     {
         private XmlNode thisSimpleTypeNode;
         private string thisName;
+        private AnyType thisRestrictionType;
 
         internal XmlNode SimpleTypeNode
         {
@@ -26,34 +27,39 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        internal SimpleType(XmlNode SimpleTypeRootNode)
+         internal SimpleType(XmlNode SimpleTypeRootNode)
         {
             thisSimpleTypeNode = SimpleTypeRootNode;
             thisName = XmlUtilities.GetAttributeValue(thisSimpleTypeNode, "name");
-        }
-
-        internal static SimpleType CreateSimpleType(XmlNode SimpleTypeNode)
-        {
             foreach (XmlNode CurrentChildNode in SimpleTypeNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("restriction") == true)
-                    return CreateSimpleTypeContainingRestriction(SimpleTypeNode, CurrentChildNode);
+                    CreateRestrictionType(CurrentChildNode);
             }
-            return null;
         }
 
-        private static SimpleType CreateSimpleTypeContainingRestriction(XmlNode SimpleTypeNode, XmlNode RestrictionNode)
+        private void CreateRestrictionType(XmlNode CurrentChildNode)
         {
-            string BaseValue = RestrictionNode.Attributes["base"].Value;
-            switch (BaseValue)
+            string BaseValue = CurrentChildNode.Attributes["base"].Value;
+            thisRestrictionType = AnyType.CreateType(BaseValue, CurrentChildNode);
+            if (thisRestrictionType == null)
             {
-                case "token":
-                    return new TokenSimpleType(SimpleTypeNode, RestrictionNode);
-                case "string":
-                    return new StringSimpleType(SimpleTypeNode, RestrictionNode);
-                default:
-                    throw new NotImplementedException("unsupported simple type");
+                string MessageFormat = AssemblyResources.GetName("UnsupportedRestrictionBaseSimpleType");
+                StringBuilder MessageBuilder = new StringBuilder();
+                MessageBuilder.AppendFormat(MessageFormat, BaseValue);
+                throw new XbrlException(MessageBuilder.ToString());
             }
+        }
+
+        protected override string ConvertStringValue()
+        {
+            return string.Empty;
+        }
+
+        internal override void ValidateFact(Fact FactToValidate)
+        {
+            if (thisRestrictionType != null)
+                thisRestrictionType.ValidateFact(FactToValidate);
         }
     }
 }

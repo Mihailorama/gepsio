@@ -124,7 +124,7 @@ namespace JeffFerguson.Gepsio
             thisSimpleTypes = new List<SimpleType>();
             XmlNodeList SimpleTypeNodes = thisSchemaDocument.SelectNodes("//schema:simpleType", thisNamespaceManager);
             foreach (XmlNode SimpleTypeNode in SimpleTypeNodes)
-                thisSimpleTypes.Add(SimpleType.CreateSimpleType(SimpleTypeNode));
+                thisSimpleTypes.Add(new SimpleType(SimpleTypeNode));
         }
 
         private void ReadComplexTypes()
@@ -132,7 +132,7 @@ namespace JeffFerguson.Gepsio
             thisComplexTypes = new List<ComplexType>();
             XmlNodeList ComplexTypeNodes = thisSchemaDocument.SelectNodes("//schema:complexType", thisNamespaceManager);
             foreach (XmlNode ComplexTypeNode in ComplexTypeNodes)
-                thisComplexTypes.Add(ComplexType.CreateComplexType(ComplexTypeNode));
+                thisComplexTypes.Add(new ComplexType(ComplexTypeNode));
         }
 
         private void ReadElements()
@@ -142,6 +142,26 @@ namespace JeffFerguson.Gepsio
                 if(CurrentChild.LocalName.Equals("element") == true)
                     thisElements.Add(new Element(this, CurrentChild));
             }
+        }
+
+        internal SimpleType GetSimpleType(string ItemTypeValue)
+        {
+            foreach (SimpleType CurrentSimpleType in this.SimpleTypes)
+            {
+                if (CurrentSimpleType.Name.Equals(ItemTypeValue) == true)
+                    return CurrentSimpleType;
+            }
+            return null;
+        }
+
+        internal ComplexType GetComplexType(string ItemTypeValue)
+        {
+            foreach (ComplexType CurrentComplexType in this.ComplexTypes)
+            {
+                if (CurrentComplexType.Name.Equals(ItemTypeValue) == true)
+                    return CurrentComplexType;
+            }
+            return null;
         }
     }
 }

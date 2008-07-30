@@ -49,11 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnySimpleType.cs" />
+    <Compile Include="AnyType.cs" />
+    <Compile Include="AnyUri.cs" />
     <Compile Include="AssemblyResources.cs" />
+    <Compile Include="Base64Binary.cs" />
+    <Compile Include="Boolean.cs" />
     <Compile Include="ComplexType.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Date.cs" />
+    <Compile Include="DateTime.cs" />
+    <Compile Include="Decimal.cs" />
+    <Compile Include="Double.cs" />
+    <Compile Include="Duration.cs" />
     <Compile Include="Element.cs" />
+    <Compile Include="EnumerationFacet.cs" />
+    <Compile Include="EnumerationFacetDefinition.cs" />
+    <Compile Include="Facet.cs" />
+    <Compile Include="FacetDefinition.cs" />
+    <Compile Include="FacetProperty.cs" />
+    <Compile Include="FacetPropertyDefinition.cs" />
     <Compile Include="Fact.cs" />
+    <Compile Include="Float.cs" />
     <Compile Include="Footnote.cs" />
     <Compile Include="FootnoteArc.cs" />
     <Compile Include="FootnoteLink.cs" />
@@ -63,17 +80,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Gepsio.resx</DependentUpon>
     </Compile>
+    <Compile Include="GregorianDay.cs" />
+    <Compile Include="GregorianMonth.cs" />
+    <Compile Include="GregorianMonthDay.cs" />
+    <Compile Include="GregorianYear.cs" />
+    <Compile Include="GregorianYearMonth.cs" />
+    <Compile Include="HexBinary.cs" />
     <Compile Include="HyperlinkReference.cs" />
+    <Compile Include="Integer.cs" />
+    <Compile Include="LengthFacet.cs" />
+    <Compile Include="LengthFacetDefinition.cs" />
+    <Compile Include="MaxLengthFacet.cs" />
+    <Compile Include="MaxLengthFacetDefinition.cs" />
+    <Compile Include="MinLengthFacet.cs" />
+    <Compile Include="MinLengthFacetDefinition.cs" />
+    <Compile Include="Monetary.cs" />
     <Compile Include="MonetaryComplexType.cs" />
+    <Compile Include="NonNegativeInteger.cs" />
+    <Compile Include="NormalizedString.cs" />
+    <Compile Include="Notation.cs" />
+    <Compile Include="PatternFacet.cs" />
+    <Compile Include="PatternFacetDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QualifiedName.cs" />
     <Compile Include="RestrictedSimpleType.cs" />
     <Compile Include="SimpleContentComplexType.cs" />
     <Compile Include="SimpleType.cs" />
-    <Compile Include="StringSimpleType.cs" />
-    <Compile Include="TokenSimpleType.cs" />
+    <Compile Include="String.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="Token.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="UriPrefixDictionary.cs" />
+    <Compile Include="WhiteSpaceFacet.cs" />
+    <Compile Include="WhiteSpaceFacetDefinition.cs" />
     <Compile Include="XbrlDocument.cs" />
     <Compile Include="XbrlException.cs" />
     <Compile Include="XbrlFragment.cs" />
@@ -86,6 +125,9 @@
       <LastGenOutput>Gepsio.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gepsio.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
