@@ -40,10 +40,13 @@ namespace JeffFerguson.Gepsio
                     TypeToReturn = new String(SchemaRootNode);
                     break;
                 case "xbrli:decimalItemType":
-                    TypeToReturn = new Decimal(SchemaRootNode);
+                    TypeToReturn = new DecimalItemType();
                     break;
                 case "xbrli:monetaryItemType":
-                    TypeToReturn = new Monetary(SchemaRootNode);
+                    TypeToReturn = new MonetaryItemType();
+                    break;
+                case "xbrli:pureItemType":
+                    TypeToReturn = new PureItemType();
                     break;
                 default:
                     TypeToReturn = null;

@@ -144,8 +144,8 @@ namespace JeffFerguson.Gepsio
 
         internal void Validate()
         {
-            if (thisSchemaElement.Type != null)
-                thisSchemaElement.Type.ValidateFact(this);
+            if (this.SchemaElement.Type != null)
+                this.SchemaElement.Type.ValidateFact(this);
         }
     }
 }

@@ -57,54 +57,5 @@ namespace JeffFerguson.Gepsio
             foreach (XmlNode XbrlNode in XbrlNodes)
                 thisXbrlFragments.Add(new XbrlFragment(this, XbrlNode));
         }
-
-        //===============================================================================
-        #region XML Schema Validation
-        //===============================================================================
-        [Obsolete()]
-        private void ValidateDocument(string Filename)
-        {
-            Assembly ExecutingAssembly = Assembly.GetExecutingAssembly();
-            Stream InstanceSchemaResourceStream = ExecutingAssembly.GetManifestResourceStream("JeffFerguson.Xbrl.xbrl-instance-2003-12-31.xsd");
-            XmlTextReader XbrlInstanceSchema = new XmlTextReader(InstanceSchemaResourceStream);
-            Stream LinkbaseSchemaResourceStream = ExecutingAssembly.GetManifestResourceStream("JeffFerguson.Xbrl.xbrl-linkbase-2003-12-31.xsd");
-            XmlTextReader XbrlLinkbaseSchema = new XmlTextReader(LinkbaseSchemaResourceStream);
-            Stream XlSchemaResourceStream = ExecutingAssembly.GetManifestResourceStream("JeffFerguson.Xbrl.xl-2003-12-31.xsd");
-            XmlTextReader XbrlXlSchema = new XmlTextReader(XlSchemaResourceStream);
-            Stream XlinkSchemaResourceStream = ExecutingAssembly.GetManifestResourceStream("JeffFerguson.Xbrl.xlink-2003-12-31.xsd");
-            XmlTextReader XbrlXlinkSchema = new XmlTextReader(XlinkSchemaResourceStream);
-
-            XmlReaderSettings Settings = new XmlReaderSettings();
-            Settings.Schemas.Add(null, XbrlInstanceSchema);
-            Settings.Schemas.Add(null, XbrlLinkbaseSchema);
-            Settings.Schemas.Add(null, XbrlXlSchema);
-            Settings.Schemas.Add(null, XbrlXlinkSchema);
-            Settings.ValidationType = ValidationType.Schema;
-            Settings.ValidationEventHandler += new ValidationEventHandler(Settings_ValidationEventHandler);
-
-            StreamReader XbrlStream = new StreamReader(Filename);
-            XmlReader XbrlTextReader;
-
-            try
-            {
-                XbrlTextReader = XmlReader.Create(XbrlStream, Settings);
-            }
-            catch (Exception e)
-            {
-                string Message = AssemblyResources.GetName("ErrorLoadingXbrlDoc");
-                throw new XbrlException(Message, e);
-            }
-        }
-
-        [Obsolete()]
-        private void Settings_ValidationEventHandler(object sender, EventArgs e)
-        {
-            string Message = AssemblyResources.GetName("ErrorLoadingXbrlDoc");
-            throw new XbrlException(Message);
-        }
-
-        //===============================================================================
-        #endregion
-        //===============================================================================
     }
 }

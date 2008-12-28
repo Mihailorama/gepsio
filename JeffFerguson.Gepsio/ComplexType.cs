@@ -9,8 +9,9 @@ namespace JeffFerguson.Gepsio
     {
         private XmlNode thisComplexTypeNode;
         private string thisName;
-        private SimpleType thisSimpleContentType;
+        private AnyType thisSimpleContentType;
         private string thisValueAsString;
+        private AttributeGroup thisAttributeGroup;
 
         public string Name
         {
@@ -32,8 +33,12 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //--------------------------------------------------------------------------------------------------------
+        // This constructor is used to construct user-defined complex types defined in XBRL schemas.
+        //--------------------------------------------------------------------------------------------------------
         internal ComplexType(XmlNode ComplexTypeNode)
         {
+            thisAttributeGroup = null;
             thisComplexTypeNode = ComplexTypeNode;
             thisName = XmlUtilities.GetAttributeValue(ComplexTypeNode, "name");
             thisSimpleContentType = null;
@@ -44,6 +49,19 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //--------------------------------------------------------------------------------------------------------
+        // This constructor is used to construct built-in complex types defined in the XBRL specification.
+        //--------------------------------------------------------------------------------------------------------
+        internal ComplexType(string Name, AnyType BaseSimpleType, AttributeGroup AttrGroup)
+        {
+            thisAttributeGroup = AttrGroup;
+            thisComplexTypeNode = null;
+            thisName = Name;
+            thisSimpleContentType = BaseSimpleType;
+        }
+
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
         internal override void ValidateFact(Fact FactToValidate)
         {
             if (thisSimpleContentType != null)

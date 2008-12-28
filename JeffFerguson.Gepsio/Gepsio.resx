@@ -164,18 +164,22 @@
   </data>
   <data name="PeriodEndDateLessThanPeriodStartDate" xml:space="preserve">
     <value>Context ID {0} contains period information that specifies a start date that is later than the end date.</value>
-    <comment>unit test 302.10</comment>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 302.10</comment>
+  </data>
+  <data name="PureItemTypeUnitLocalNameNotPure" xml:space="preserve">
+    <value>Fact {0} is defined as a pure item type. The fact also references a unit named {1}. The unit defines a measure referencing a local name of {2}. Local names for units of type pureItemType must be "pure".</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 304.11</comment>
   </data>
   <data name="ScenarioNodeUsingSubGroupInXBRLNamespace" xml:space="preserve">
     <value>Context ID {0} contains a node in its scenario structure named &lt;{1}&gt;. This node is defined in the schema at {2} with a substitution group setting that references the XBRL namespace. XBRL namespace substitution group references are not allowed in context scenarios.</value>
-    <comment>unit test 302.06</comment>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 302.06</comment>
   </data>
   <data name="ScenarioNodeUsingXBRLNamespace" xml:space="preserve">
     <value>Context ID {0} contains a node in its scenario structure named &lt;{1}&gt;. This namespace for this node is the XBRL namespace. XBRL namespace node names are not allowed in context segments.</value>
   </data>
   <data name="SegmentNodeUsingSubGroupInXBRLNamespace" xml:space="preserve">
     <value>Context ID {0} contains a node in its segment structure named &lt;{1}&gt;. This node is defined in the schema at {2} with a substitution group setting that references the XBRL namespace. XBRL namespace substitution group references are not allowed in context segments.</value>
-    <comment>unit test 302.05</comment>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 302.05</comment>
   </data>
   <data name="SegmentNodeUsingXBRLNamespace" xml:space="preserve">
     <value>Context ID {0} contains a node in its segment structure named &lt;{1}&gt;. This namespace for this node is the XBRL namespace. XBRL namespace node names are not allowed in context segments.</value>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A567264B-3053-4DAA-B601-AAC3DFC94FBB}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -53,6 +53,8 @@
     <Compile Include="AnyType.cs" />
     <Compile Include="AnyUri.cs" />
     <Compile Include="AssemblyResources.cs" />
+    <Compile Include="Attribute.cs" />
+    <Compile Include="AttributeGroup.cs" />
     <Compile Include="Base64Binary.cs" />
     <Compile Include="Boolean.cs" />
     <Compile Include="ComplexType.cs" />
@@ -60,16 +62,20 @@
     <Compile Include="Date.cs" />
     <Compile Include="DateTime.cs" />
     <Compile Include="Decimal.cs" />
+    <Compile Include="DecimalItemType.cs" />
+    <Compile Include="DecimalsType.cs" />
     <Compile Include="Double.cs" />
     <Compile Include="Duration.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="EnumerationFacet.cs" />
     <Compile Include="EnumerationFacetDefinition.cs" />
+    <Compile Include="EssentialNumericItemAttributes.cs" />
     <Compile Include="Facet.cs" />
     <Compile Include="FacetDefinition.cs" />
     <Compile Include="FacetProperty.cs" />
     <Compile Include="FacetPropertyDefinition.cs" />
     <Compile Include="Fact.cs" />
+    <Compile Include="FactAttributes.cs" />
     <Compile Include="Float.cs" />
     <Compile Include="Footnote.cs" />
     <Compile Include="FootnoteArc.cs" />
@@ -87,7 +93,10 @@
     <Compile Include="GregorianYearMonth.cs" />
     <Compile Include="HexBinary.cs" />
     <Compile Include="HyperlinkReference.cs" />
+    <Compile Include="ID.cs" />
+    <Compile Include="IDREF.cs" />
     <Compile Include="Integer.cs" />
+    <Compile Include="ItemAttributes.cs" />
     <Compile Include="LengthFacet.cs" />
     <Compile Include="LengthFacetDefinition.cs" />
     <Compile Include="MaxLengthFacet.cs" />
@@ -96,12 +105,21 @@
     <Compile Include="MinLengthFacetDefinition.cs" />
     <Compile Include="Monetary.cs" />
     <Compile Include="MonetaryComplexType.cs" />
+    <Compile Include="MonetaryItemType.cs" />
+    <Compile Include="Name.cs" />
+    <Compile Include="NCName.cs" />
     <Compile Include="NonNegativeInteger.cs" />
     <Compile Include="NormalizedString.cs" />
     <Compile Include="Notation.cs" />
+    <Compile Include="NumericItemAttributes.cs" />
     <Compile Include="PatternFacet.cs" />
     <Compile Include="PatternFacetDefinition.cs" />
+    <Compile Include="PrecisionType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pure.cs" />
+    <Compile Include="PureItemType.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="QualifiedName.cs" />
     <Compile Include="RestrictedSimpleType.cs" />
     <Compile Include="SimpleContentComplexType.cs" />
