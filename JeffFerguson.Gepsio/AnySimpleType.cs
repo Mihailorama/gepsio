@@ -6,35 +6,27 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-    public abstract class AnySimpleType<T> : AnyType
+    public abstract class AnySimpleType : AnyType
     {
-        private string thisValueAsString;
-        private T thisValue;
         private List<FacetDefinition> thisConstrainingFacetDefinitions;
         private List<Facet> thisFacets;
 
-        public override string ValueAsString
+        public override bool NumericType
         {
             get
             {
-                return thisValueAsString;
-            }
-            set
-            {
-                thisValueAsString = value;
-                this.Value = ConvertStringValue();
-            }
-        }
-
-        public T Value
-        {
-            get
-            {
-                return thisValue;
-            }
-            protected set
-            {
-                thisValue = value;
+                Type CurrentType = GetType();
+                while (CurrentType != null)
+                {
+                    if (CurrentType.Equals(typeof(Decimal)) == true)
+                        return true;
+                    if (CurrentType.Equals(typeof(Double)) == true)
+                        return true;
+                    if (CurrentType.Equals(typeof(Float)) == true)
+                        return true;
+                    CurrentType = CurrentType.BaseType;
+                }
+                return false;
             }
         }
 
@@ -62,6 +54,51 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
+        internal override decimal GetValueAfterApplyingPrecisionTruncation(int PrecisionValue)
+        {
+            if (this.NumericType == false)
+                throw new NotSupportedException();
+            decimal ValueAsDecimal = Convert.ToDecimal(this.ValueAsString);
+            if (PrecisionValue > 0)
+            {
+                string WholePart;
+                string TruncationAsString;
+
+                int DecimalPointIndex = ValueAsString.IndexOf('.');
+                if (DecimalPointIndex == -1)
+                    WholePart = ValueAsString;
+                else
+                    WholePart = ValueAsString.Substring(0, DecimalPointIndex);
+                if (PrecisionValue < WholePart.Length)
+                    TruncationAsString = WholePart;
+                else
+                {
+                    StringBuilder TruncationBuilder = new StringBuilder(WholePart.Substring(0, PrecisionValue));
+                    for (int AddZeroCounter = 0; AddZeroCounter < (WholePart.Length - PrecisionValue); AddZeroCounter++)
+                        TruncationBuilder.Append('0');
+                    TruncationAsString = TruncationBuilder.ToString();
+                }
+                ValueAsDecimal = Convert.ToDecimal(TruncationAsString);
+            }
+            return ValueAsDecimal;
+        }
+
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
+        internal override decimal GetValueAfterApplyingDecimalsTruncation(int DecimalsValue)
+        {
+            if (this.NumericType == false)
+                throw new NotSupportedException();
+            decimal ValueAsDecimal = Convert.ToDecimal(this.ValueAsString);
+            if (DecimalsValue > 0)
+                ValueAsDecimal = Math.Round(ValueAsDecimal, DecimalsValue);
+            return ValueAsDecimal;
+        }
+
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
         internal List<Facet> GetFacets(Type FacetType)
         {
             List<Facet> NewList;
@@ -127,7 +164,5 @@ namespace JeffFerguson.Gepsio
         protected virtual void AddConstrainingFacetDefinitions()
         {
         }
-
-        protected abstract T ConvertStringValue();
     }
 }

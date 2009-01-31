@@ -1,20 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Xml;
 using System.Text;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-    public class Decimal : AnySimpleType<double>
+    public class Decimal : AnySimpleType
     {
         internal Decimal(XmlNode StringRootNode) : base(StringRootNode)
         {
         }
 
-        protected override double ConvertStringValue()
+        internal override void ValidateFact(Fact FactToValidate)
         {
-            return double.Parse(ValueAsString);
+            base.ValidateFact(FactToValidate);
+
+            if (FactToValidate.NilSpecified == true)
+                ValidateNilFact(FactToValidate);
+            else
+                ValidateNonNilFact(FactToValidate);
+        }
+
+        private void ValidateNilFact(Fact FactToValidate)
+        {
+            if ((FactToValidate.PrecisionSpecified == true) || (FactToValidate.DecimalsSpecified == true))
+            {
+                string MessageFormat = AssemblyResources.GetName("NilNumericFactWithSpecifiedPrecisionOrDecimals");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, FactToValidate.Name, FactToValidate.Id);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
+        }
+
+        private void ValidateNonNilFact(Fact FactToValidate)
+        {
+            if ((FactToValidate.PrecisionSpecified == false) && (FactToValidate.DecimalsSpecified == false))
+            {
+                string MessageFormat = AssemblyResources.GetName("NumericFactWithoutSpecifiedPrecisionOrDecimals");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, FactToValidate.Name, FactToValidate.Id);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
+            if ((FactToValidate.PrecisionSpecified == true) && (FactToValidate.DecimalsSpecified == true))
+            {
+                string MessageFormat = AssemblyResources.GetName("NumericFactWithSpecifiedPrecisionAndDecimals");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, FactToValidate.Name, FactToValidate.Id);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
         }
     }
 }

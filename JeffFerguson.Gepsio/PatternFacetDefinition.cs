@@ -9,7 +9,7 @@ namespace JeffFerguson.Gepsio
     {
         internal PatternFacetDefinition() : base("pattern")
         {
-            AddFacetPropertyDefinition(new FacetPropertyDefinition("value", typeof(AnySimpleType<string>)));
+            AddFacetPropertyDefinition(new FacetPropertyDefinition("value", typeof(AnySimpleType)));
             AddFacetPropertyDefinition(new FacetPropertyDefinition("annotation", typeof(String), true));
         }
     }

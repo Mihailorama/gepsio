@@ -5,11 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class Float : AnySimpleType<float>
+    public class Float : AnySimpleType
     {
-        protected override float ConvertStringValue()
-        {
-            return float.Parse(ValueAsString);
-        }
     }
 }

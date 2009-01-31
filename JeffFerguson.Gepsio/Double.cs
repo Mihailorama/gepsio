@@ -5,11 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class Double : AnySimpleType<double>
+    public class Double : AnySimpleType
     {
-        protected override double ConvertStringValue()
-        {
-            return double.Parse(ValueAsString);
-        }
     }
 }

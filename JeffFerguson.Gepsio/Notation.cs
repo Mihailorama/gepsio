@@ -5,11 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class Notation : AnySimpleType<string>
+    public class Notation : AnySimpleType
     {
-        protected override string ConvertStringValue()
-        {
-            return ValueAsString;
-        }
     }
 }

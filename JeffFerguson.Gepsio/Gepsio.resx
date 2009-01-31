@@ -141,6 +141,18 @@
   <data name="ErrorLoadingXbrlDocument" xml:space="preserve">
     <value>Error loading XBRL document.</value>
   </data>
+  <data name="EssenceAliasFactsNotContextEquals" xml:space="preserve">
+    <value>Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} is not context equal with the fact with ID {3}. These two facts are therefore not in a valid essence alias relationship.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 304.21</comment>
+  </data>
+  <data name="EssenceAliasFactsNotParentEquals" xml:space="preserve">
+    <value>Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} is not parent equal with the fact with ID {3}. These two facts are therefore not in a valid essence alias relationship.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 304.21</comment>
+  </data>
+  <data name="EssenceAliasFactsNotUnitEquals" xml:space="preserve">
+    <value>Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} is not unit equal with the fact with ID {3}. These two facts are therefore not in a valid essence alias relationship.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 304.21</comment>
+  </data>
   <data name="FacetDefinitionNotSupportedForFacetCreation" xml:space="preserve">
     <value>Facet creation does not support creation of facets defined by type {0}.</value>
   </data>
@@ -161,6 +173,14 @@
   </data>
   <data name="NoLangForFootnote" xml:space="preserve">
     <value>Footnote {0} does not include any language identifier information. Ensure that the footnote includes an xml:lang attribute.</value>
+  </data>
+  <data name="NumericFactWithoutSpecifiedPrecisionOrDecimals" xml:space="preserve">
+    <value>Fact {0} is defined as a numeric item. All numeric-based facts must specify either a precision attribute or a decimals atribute. The fact with ID {1} does not specify either a precision or a decimals attribute.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 305.03; see section 4.6.3 of XBRL 2.1 Spec</comment>
+  </data>
+  <data name="NumericFactWithSpecifiedPrecisionAndDecimals" xml:space="preserve">
+    <value>Fact {0} is defined as a numeric item. All numeric-based facts must specify either a precision attribute or a decimals atribute. The fact with ID {1} specifies both a precision and a decimals attribute.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 305.04; see section 4.6.3 of XBRL 2.1 Spec</comment>
   </data>
   <data name="PeriodEndDateLessThanPeriodStartDate" xml:space="preserve">
     <value>Context ID {0} contains period information that specifies a start date that is later than the end date.</value>
@@ -184,6 +204,14 @@
   <data name="SegmentNodeUsingXBRLNamespace" xml:space="preserve">
     <value>Context ID {0} contains a node in its segment structure named &lt;{1}&gt;. This namespace for this node is the XBRL namespace. XBRL namespace node names are not allowed in context segments.</value>
   </data>
+  <data name="SharesItemTypeUnitLocalNameNotShares" xml:space="preserve">
+    <value>Fact {0} is defined as a shares item type. The fact also references a unit named {1}. The unit defines a measure referencing a local name of {2}. Local names for units of type sharesItemType must be "shares".</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 304.15</comment>
+  </data>
+  <data name="UnitRatioUsesSameMeasureInNumeratorAndDenominator" xml:space="preserve">
+    <value>Unit {0} is defined as a ratio. The ratio makes uses of a measure called {1} in both the numerator and the denominator. Ratios in units must not use the same measure in both the numerator and the denominator.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 304.16</comment>
+  </data>
   <data name="UnsupportedFacet" xml:space="preserve">
     <value>A facet named {0} was found in a schema and used for XML datatype {1}. This facet is not supported for this XML datatype.</value>
   </data>
@@ -198,5 +226,20 @@
   </data>
   <data name="WrongMeasureNamespaceForMonetaryFact" xml:space="preserve">
     <value>Fact {0} is defined as a monetary item type. The fact also references a unit named {1}. The unit defines a measure referencing a namespace of {2}. This differs from the standard monetary unit namespace of http://www.xbrl.org/2003/iso4217. Monetary-based unit measures must reference the http://www.xbrl.org/2003/iso4217 namespace.</value>
+  </data>
+  <data name="NilNumericFactWithSpecifiedPrecisionOrDecimals" xml:space="preserve">
+    <value>Fact {0} is defined as a numeric item with a nil value. All numeric-based facts with a nil value must not specify either a precision attribute or a decimals atribute. The fact with ID {1} specifies one or both of these attributes.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 305.05; see section 4.6.3 of XBRL 2.1 Spec</comment>
+  </data>
+  <data name="NotEnoughToFactsInRequiresElementRelationship" xml:space="preserve">
+    <value>Facts named {0} are defined as being in a requires-element relationship with facts named {1}. However, there are less instances of the {1} fact than of the {0} fact. A requires-element relationship mandates that there be one {1} fact instance for every {0} fact instance.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 306.03; see section 5.2.6.2.4 of XBRL 2.1 Spec</comment>
+  </data>
+  <data name="SchemaFileCandidateDoesNotContainSchemaRootNode" xml:space="preserve">
+    <value>The file {0} at is referenced as a XBRL taxonomy schema. However, this file does not contain a root &lt;schema&gt; node and is not a valid XBRL taxonomy schema.</value>
+    <comment>XBRL-CONF-CR3-2007-03-05 unit test 307.02</comment>
+  </data>
+  <data name="SummationConceptError" xml:space="preserve">
+    <value>Fact {0} is based on an element that is named as the summation concept in a calculation link. The fact's value, after precision or decimals trunation, is {1}; however, the sum of the values of the contributing concepts, after precision or decimals trunation, is {2}. These values do not match; therefore, the rule specified by the fact's calculation link has been broken.</value>
   </data>
 </root>

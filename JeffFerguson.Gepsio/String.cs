@@ -6,13 +6,8 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {   
-    public class String : AnySimpleType<string>
+    public class String : AnySimpleType
     {
-        protected override string ConvertStringValue()
-        {
-            return ValueAsString;
-        }
-
         public String() : base()
         {
         }

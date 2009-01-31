@@ -7,6 +7,8 @@ namespace JeffFerguson.Gepsio
 {
     public class Element
     {
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public enum ElementSubstitutionGroup
         {
             Unknown,
@@ -14,6 +16,8 @@ namespace JeffFerguson.Gepsio
             Tuple
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public enum ElementPeriodType
         {
             Unknown,
@@ -27,8 +31,10 @@ namespace JeffFerguson.Gepsio
         private XbrlSchema thisSchema;
         private ElementSubstitutionGroup thisSubstitutionGroup;
         private ElementPeriodType thisPeriodType;
-        private AnyType thisItemType;
+        private string thisTypeName;
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public string Name
         {
             get
@@ -37,6 +43,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public string Id
         {
             get
@@ -45,6 +53,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public ElementSubstitutionGroup SubstitutionGroup
         {
             get
@@ -53,6 +63,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public ElementPeriodType PeriodType
         {
             get
@@ -61,6 +73,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public XbrlSchema Schema
         {
             get
@@ -69,14 +83,18 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        public AnyType Type
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        public string TypeName
         {
             get
             {
-                return thisItemType;
+                return thisTypeName;
             }
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         internal Element(XbrlSchema Schema, XmlNode ElementNode)
         {
             thisSchema = Schema;
@@ -88,7 +106,10 @@ namespace JeffFerguson.Gepsio
                 thisName = string.Empty;
 
             if (thisElementNode.Attributes["type"] != null)
-                SetItemType(thisElementNode.Attributes["type"].Value);
+            {
+                thisTypeName = thisElementNode.Attributes["type"].Value;
+                //SetItemType(thisTypeName);
+            }
 
             if (thisElementNode.Attributes["substitutionGroup"] != null)
                 SetSubstitutionGroup(thisElementNode.Attributes["substitutionGroup"].Value);
@@ -103,6 +124,18 @@ namespace JeffFerguson.Gepsio
             SetPeriodType();
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        public override bool Equals(object obj)
+        {
+            if ((obj is Element) == false)
+                return false;
+            Element OtherElement = obj as Element;
+            return OtherElement.Id.Equals(this.Id);
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         private void SetPeriodType()
         {
             string PeriodTypePrefix = thisSchema.UrisAndPrefixes.GetPrefixForUri("http://www.xbrl.org/2003/instance");
@@ -117,6 +150,8 @@ namespace JeffFerguson.Gepsio
                 thisPeriodType = ElementPeriodType.Unknown;
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         private void SetPeriodType(string PeriodType)
         {
             thisPeriodType = ElementPeriodType.Unknown;
@@ -136,6 +171,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         private void SetSubstitutionGroup(string SubstitutionGroupValue)
         {
             thisSubstitutionGroup = ElementSubstitutionGroup.Unknown;
@@ -153,41 +190,6 @@ namespace JeffFerguson.Gepsio
                 MessageFormatBuilder.AppendFormat(MessageFormat, thisSchema.Path, SubstitutionGroupValue, thisName);
                 throw new XbrlException(MessageFormatBuilder.ToString());
             }
-        }
-
-        private void SetItemType(string ItemTypeValue)
-        {
-            thisItemType = null;
-            thisItemType = AnyType.CreateType(ItemTypeValue);
-            if (thisItemType == null)
-            {
-                if (thisSchema != null)
-                {
-                    thisItemType = (AnyType)(thisSchema.GetSimpleType(GetLocalName(ItemTypeValue)));
-                }
-            }
-            if (thisItemType == null)
-            {
-                if (thisSchema != null)
-                {
-                    thisItemType = thisSchema.GetComplexType(GetLocalName(ItemTypeValue));
-                }
-            }
-            if (thisItemType == null)
-            {
-                string MessageFormat = AssemblyResources.GetName("InvalidElementItemType");
-                StringBuilder MessageFormatBuilder = new StringBuilder();
-                MessageFormatBuilder.AppendFormat(MessageFormat, thisSchema.Path, ItemTypeValue, thisName);
-                throw new XbrlException(MessageFormatBuilder.ToString());
-            }
-        }
-
-        private string GetLocalName(string FullName)
-        {
-            int ColonIndex = FullName.IndexOf(':');
-            if (ColonIndex == -1)
-                return FullName;
-            return FullName.Substring(ColonIndex + 1);
         }
     }
 }

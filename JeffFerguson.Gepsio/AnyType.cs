@@ -8,10 +8,23 @@ namespace JeffFerguson.Gepsio
 {
     public abstract class AnyType
     {
-        public abstract string ValueAsString
+        private string thisValue;
+
+        public virtual string ValueAsString
+        {
+            get
+            {
+                return thisValue;
+            }
+            set
+            {
+                thisValue = value;
+            }
+        }
+
+        public abstract bool NumericType
         {
             get;
-            set;
         }
 
         internal AnyType()
@@ -26,6 +39,10 @@ namespace JeffFerguson.Gepsio
         {
             return AnyType.CreateType(TypeName, null);
         }
+
+        internal abstract decimal GetValueAfterApplyingPrecisionTruncation(int PrecisionValue);
+
+        internal abstract decimal GetValueAfterApplyingDecimalsTruncation(int DecimalsValue);
 
         public static AnyType CreateType(string TypeName, XmlNode SchemaRootNode)
         {
@@ -47,6 +64,12 @@ namespace JeffFerguson.Gepsio
                     break;
                 case "xbrli:pureItemType":
                     TypeToReturn = new PureItemType();
+                    break;
+                case "xbrli:sharesItemType":
+                    TypeToReturn = new SharesItemType();
+                    break;
+                case "xbrli:tokenItemType":
+                    TypeToReturn = new TokenItemType();
                     break;
                 default:
                     TypeToReturn = null;

@@ -5,11 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class HexBinary : AnySimpleType<int>
+    public class HexBinary : AnySimpleType
     {
-        protected override int ConvertStringValue()
-        {
-            return int.Parse(ValueAsString);
-        }
     }
 }

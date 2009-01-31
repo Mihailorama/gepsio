@@ -46,7 +46,7 @@ namespace JeffFerguson.Gepsio
                 if (ValueProperty != null)
                 {
                     String StringValueProperty = ValueProperty.Value as String;
-                    thisEnumerationValues.Add(StringValueProperty.Value);
+                    thisEnumerationValues.Add(StringValueProperty.ValueAsString);
                 }
             }
         }

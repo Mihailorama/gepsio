@@ -5,11 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class Base64Binary : AnySimpleType<int>
+    public class Base64Binary : AnySimpleType
     {
-        protected override int ConvertStringValue()
-        {
-            return int.Parse(ValueAsString);
-        }
     }
 }

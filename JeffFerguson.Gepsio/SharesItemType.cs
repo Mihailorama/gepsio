@@ -1,34 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    internal class PureItemType : ComplexType
+    internal class SharesItemType : ComplexType
     {
-        internal PureItemType()
-            : base("pureItemType", new Pure(null), new NumericItemAttributes())
+        internal SharesItemType()
+            : base("sharesItemType", new Shares(null), new NumericItemAttributes())
         {
         }
 
         internal override void ValidateFact(Fact FactToValidate)
         {
             base.ValidateFact(FactToValidate);
+            bool SharesMeasureFound = true;
             string UnitMeasureLocalName = string.Empty;
             Unit UnitReference = FactToValidate.UnitRef;
-            bool PureMeasureFound = true;
             if (UnitReference.MeasureQualifiedNames.Count != 1)
-                PureMeasureFound = false;
-            if (PureMeasureFound == true)
+                SharesMeasureFound = false;
+            if (SharesMeasureFound == true)
             {
                 UnitMeasureLocalName = UnitReference.MeasureQualifiedNames[0].LocalName;
-                PureMeasureFound = UnitMeasureLocalName.Equals("pure");
+                SharesMeasureFound = UnitMeasureLocalName.Equals("shares");
             }
-            if (PureMeasureFound == false)
+            if (SharesMeasureFound == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("PureItemTypeUnitLocalNameNotPure");
+                string StringFormat = AssemblyResources.GetName("SharesItemTypeUnitLocalNameNotShares");
                 MessageBuilder.AppendFormat(StringFormat, FactToValidate.Name, UnitReference.Id, UnitMeasureLocalName);
                 throw new XbrlException(MessageBuilder.ToString());
             }

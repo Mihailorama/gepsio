@@ -5,11 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class AnyUri : AnySimpleType<string>
+    public class AnyUri : AnySimpleType
     {
-        protected override string ConvertStringValue()
-        {
-            return ValueAsString;
-        }
     }
 }

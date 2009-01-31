@@ -9,10 +9,11 @@ namespace JeffFerguson.Gepsio
     {
         private XmlNode thisComplexTypeNode;
         private string thisName;
-        private AnyType thisSimpleContentType;
-        private string thisValueAsString;
+        private AnySimpleType thisSimpleContentType;
         private AttributeGroup thisAttributeGroup;
 
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
         public string Name
         {
             get
@@ -21,15 +22,27 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
         public override string ValueAsString
         {
             get
             {
-                return thisValueAsString;
+                return thisSimpleContentType.ValueAsString;
             }
             set
             {
-                thisValueAsString = value;
+                thisSimpleContentType.ValueAsString = value;
+            }
+        }
+
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
+        public override bool NumericType
+        {
+            get
+            {
+                return thisSimpleContentType.NumericType;
             }
         }
 
@@ -52,7 +65,7 @@ namespace JeffFerguson.Gepsio
         //--------------------------------------------------------------------------------------------------------
         // This constructor is used to construct built-in complex types defined in the XBRL specification.
         //--------------------------------------------------------------------------------------------------------
-        internal ComplexType(string Name, AnyType BaseSimpleType, AttributeGroup AttrGroup)
+        internal ComplexType(string Name, AnySimpleType BaseSimpleType, AttributeGroup AttrGroup)
         {
             thisAttributeGroup = AttrGroup;
             thisComplexTypeNode = null;
@@ -62,8 +75,23 @@ namespace JeffFerguson.Gepsio
 
         //--------------------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------------------
+        internal override decimal GetValueAfterApplyingPrecisionTruncation(int PrecisionValue)
+        {
+            return thisSimpleContentType.GetValueAfterApplyingPrecisionTruncation(PrecisionValue);
+        }
+
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
+        internal override decimal GetValueAfterApplyingDecimalsTruncation(int DecimalsValue)
+        {
+            return thisSimpleContentType.GetValueAfterApplyingDecimalsTruncation(DecimalsValue);
+        }
+
+        //--------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------
         internal override void ValidateFact(Fact FactToValidate)
         {
+            base.ValidateFact(FactToValidate);
             if (thisSimpleContentType != null)
                 thisSimpleContentType.ValidateFact(FactToValidate);
         }

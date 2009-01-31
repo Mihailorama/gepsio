@@ -133,6 +133,33 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} is not context equal with the fact with ID {3}. These two facts are therefore not in a valid essence alias relationship..
+        /// </summary>
+        internal static string EssenceAliasFactsNotContextEquals {
+            get {
+                return ResourceManager.GetString("EssenceAliasFactsNotContextEquals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} is not parent equal with the fact with ID {3}. These two facts are therefore not in a valid essence alias relationship..
+        /// </summary>
+        internal static string EssenceAliasFactsNotParentEquals {
+            get {
+                return ResourceManager.GetString("EssenceAliasFactsNotParentEquals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} is not unit equal with the fact with ID {3}. These two facts are therefore not in a valid essence alias relationship..
+        /// </summary>
+        internal static string EssenceAliasFactsNotUnitEquals {
+            get {
+                return ResourceManager.GetString("EssenceAliasFactsNotUnitEquals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Facet creation does not support creation of facets defined by type {0}..
         /// </summary>
         internal static string FacetDefinitionNotSupportedForFacetCreation {
@@ -178,6 +205,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a numeric item with a nil value. All numeric-based facts with a nil value must not specify either a precision attribute or a decimals atribute. The fact with ID {1} specifies one or both of these attributes..
+        /// </summary>
+        internal static string NilNumericFactWithSpecifiedPrecisionOrDecimals {
+            get {
+                return ResourceManager.GetString("NilNumericFactWithSpecifiedPrecisionOrDecimals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Footnote references a location of {0}, but none of the facts uses that ID..
         /// </summary>
         internal static string NoFactForFootnoteReference {
@@ -192,6 +228,33 @@ namespace JeffFerguson.Gepsio {
         internal static string NoLangForFootnote {
             get {
                 return ResourceManager.GetString("NoLangForFootnote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facts named {0} are defined as being in a requires-element relationship with facts named {1}. However, there are less instances of the {1} fact than of the {0} fact. A requires-element relationship mandates that there be one {1} fact instance for every {0} fact instance..
+        /// </summary>
+        internal static string NotEnoughToFactsInRequiresElementRelationship {
+            get {
+                return ResourceManager.GetString("NotEnoughToFactsInRequiresElementRelationship", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a numeric item. All numeric-based facts must specify either a precision attribute or a decimals atribute. The fact with ID {1} does not specify either a precision or a decimals attribute..
+        /// </summary>
+        internal static string NumericFactWithoutSpecifiedPrecisionOrDecimals {
+            get {
+                return ResourceManager.GetString("NumericFactWithoutSpecifiedPrecisionOrDecimals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a numeric item. All numeric-based facts must specify either a precision attribute or a decimals atribute. The fact with ID {1} specifies both a precision and a decimals attribute..
+        /// </summary>
+        internal static string NumericFactWithSpecifiedPrecisionAndDecimals {
+            get {
+                return ResourceManager.GetString("NumericFactWithSpecifiedPrecisionAndDecimals", resourceCulture);
             }
         }
         
@@ -232,6 +295,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The file {0} at is referenced as a XBRL taxonomy schema. However, this file does not contain a root &lt;schema&gt; node and is not a valid XBRL taxonomy schema..
+        /// </summary>
+        internal static string SchemaFileCandidateDoesNotContainSchemaRootNode {
+            get {
+                return ResourceManager.GetString("SchemaFileCandidateDoesNotContainSchemaRootNode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Context ID {0} contains a node in its segment structure named &lt;{1}&gt;. This node is defined in the schema at {2} with a substitution group setting that references the XBRL namespace. XBRL namespace substitution group references are not allowed in context segments..
         /// </summary>
         internal static string SegmentNodeUsingSubGroupInXBRLNamespace {
@@ -246,6 +318,33 @@ namespace JeffFerguson.Gepsio {
         internal static string SegmentNodeUsingXBRLNamespace {
             get {
                 return ResourceManager.GetString("SegmentNodeUsingXBRLNamespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a shares item type. The fact also references a unit named {1}. The unit defines a measure referencing a local name of {2}. Local names for units of type sharesItemType must be &quot;shares&quot;..
+        /// </summary>
+        internal static string SharesItemTypeUnitLocalNameNotShares {
+            get {
+                return ResourceManager.GetString("SharesItemTypeUnitLocalNameNotShares", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is based on an element that is named as the summation concept in a calculation link. The fact&apos;s value, after precision or decimals trunation, is {1}; however, the sum of the values of the contributing concepts, after precision or decimals trunation, is {2}. These values do not match; therefore, the rule specified by the fact&apos;s calculation link has been broken..
+        /// </summary>
+        internal static string SummationConceptError {
+            get {
+                return ResourceManager.GetString("SummationConceptError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit {0} is defined as a ratio. The ratio makes uses of a measure called {1} in both the numerator and the denominator. Ratios in units must not use the same measure in both the numerator and the denominator..
+        /// </summary>
+        internal static string UnitRatioUsesSameMeasureInNumeratorAndDenominator {
+            get {
+                return ResourceManager.GetString("UnitRatioUsesSameMeasureInNumeratorAndDenominator", resourceCulture);
             }
         }
         

@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-    public class SimpleType : AnySimpleType<string>
+    public class SimpleType : AnySimpleType
     {
         private XmlNode thisSimpleTypeNode;
         private string thisName;
@@ -49,11 +49,6 @@ namespace JeffFerguson.Gepsio
                 MessageBuilder.AppendFormat(MessageFormat, BaseValue);
                 throw new XbrlException(MessageBuilder.ToString());
             }
-        }
-
-        protected override string ConvertStringValue()
-        {
-            return string.Empty;
         }
 
         internal override void ValidateFact(Fact FactToValidate)

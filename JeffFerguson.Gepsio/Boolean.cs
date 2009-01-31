@@ -5,14 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class Boolean : AnySimpleType<bool>
+    public class Boolean : AnySimpleType
     {
-        protected override bool ConvertStringValue()
-        {
-            bool Result;
-
-            bool.TryParse(this.ValueAsString, out Result);
-            return Result;
-        }
     }
 }

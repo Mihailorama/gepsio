@@ -288,5 +288,100 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //------------------------------------------------------------------------------------
+        // Returns true if this context is Structure Equal (s-equal) to a supplied context,
+        // and false otherwise. See section 4.10 of the XBRL 2.1 spec for more information.
+        //------------------------------------------------------------------------------------
+        internal bool StructureEquals(Context OtherContext)
+        {
+            if (PeriodStructureEquals(OtherContext) == false)
+                return false;
+            if (EntityStructureEquals(OtherContext) == false)
+                return false;
+            if (ScenarioStructureEquals(OtherContext) == false)
+                return false;
+            return true;
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private bool ScenarioStructureEquals(Context OtherContext)
+        {
+            if ((this.Scenario == null) && (OtherContext.Scenario == null))
+                return true;
+            if ((this.Scenario == null) && (OtherContext.Scenario != null))
+                return true;
+            if ((this.Scenario != null) && (OtherContext.Scenario == null))
+                return true;
+            return this.Scenario.StructureEquals(OtherContext.Scenario);
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private bool EntityStructureEquals(Context OtherContext)
+        {
+            if (this.Identifier.Equals(OtherContext.Identifier) == false)
+                return false;
+            if (SegmentStructureEquals(OtherContext) == false)
+                return false;
+            return true;
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private bool SegmentStructureEquals(Context OtherContext)
+        {
+            //--------------------------------------------------------------------------------
+            // If neither context has a <segment> node, then the segments are considered
+            // equal.
+            //--------------------------------------------------------------------------------
+            if ((this.Segment == null) && (OtherContext.Segment == null))
+                return true;
+            //--------------------------------------------------------------------------------
+            // If this context does not have a <segment> node, but the other one does, then
+            // the segments are equal only if the other <segment> is empty.
+            //--------------------------------------------------------------------------------
+            if ((this.Segment == null) && (OtherContext.Segment != null))
+            {
+                if (OtherContext.Segment.ChildNodes.Count > 0)
+                    return false;
+                return true;
+            }
+            //--------------------------------------------------------------------------------
+            // If the other context does not have a <segment> node, but this one does, then
+            // the segments are equal only if this <segment> is empty.
+            //--------------------------------------------------------------------------------
+            if ((this.Segment != null) && (OtherContext.Segment == null))
+            {
+                if (this.Segment.ChildNodes.Count > 0)
+                    return false;
+                return true;
+            }
+            //--------------------------------------------------------------------------------
+            // At this point, both segments exist. Check to see if they have the same
+            // structure.
+            //--------------------------------------------------------------------------------
+            return this.Segment.StructureEquals(OtherContext.Segment);
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private bool PeriodStructureEquals(Context OtherContext)
+        {
+            if (this.ForeverPeriod != OtherContext.ForeverPeriod)
+                return false;
+            if (this.InstantPeriod != OtherContext.InstantPeriod)
+                return false;
+            if (this.DurationPeriod != OtherContext.DurationPeriod)
+                return false;
+            if (DurationPeriod == true)
+            {
+                if (this.thisStartDate != OtherContext.thisStartDate)
+                    return false;
+                if (this.thisEndDate != OtherContext.thisEndDate)
+                    return false;
+            }
+            return true;
+        }
     }
 }

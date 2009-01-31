@@ -5,14 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class DateTime : AnySimpleType<System.DateTime>
+    public class DateTime : AnySimpleType
     {
-        protected override System.DateTime ConvertStringValue()
-        {
-            System.DateTime Result;
-
-            System.DateTime.TryParse(this.ValueAsString, out Result);
-            return Result;
-        }
     }
 }

@@ -11,7 +11,9 @@ namespace JeffFerguson.Gepsio
         //===============================================================================
         #region Delegates
         //===============================================================================
+        
         public delegate void XbrlEventHandler(object sender, EventArgs e);
+
         //===============================================================================
         #endregion
         //===============================================================================
@@ -19,8 +21,10 @@ namespace JeffFerguson.Gepsio
         //===============================================================================
         #region Events
         //===============================================================================
+        
         public event XbrlEventHandler Loaded;
         public event XbrlEventHandler Validated;
+
         //===============================================================================
         #endregion
         //===============================================================================
@@ -28,6 +32,7 @@ namespace JeffFerguson.Gepsio
         //===============================================================================
         #region Fields
         //===============================================================================
+        
         private XbrlDocument thisDocument;
         private XmlNode thisXbrlRootNode;
         private List<Context> thisContexts;
@@ -37,6 +42,7 @@ namespace JeffFerguson.Gepsio
         private List<Fact> thisFacts;
         private List<Unit> thisUnits;
         private List<FootnoteLink> thisFootnoteLinks;
+
         //===============================================================================
         #endregion
         //===============================================================================
@@ -254,12 +260,9 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ReadTaxonomySchemaRef(XmlNode SchemaRefNode)
         {
-            StringBuilder HrefAttributeBuilder = new StringBuilder();
-            string XlinkNamespacePrefix = thisUriPrefixDictionary.GetPrefixForUri("http://www.w3.org/1999/xlink");
-            HrefAttributeBuilder.AppendFormat("{0}:href", XlinkNamespacePrefix);
-            string HrefAttributeKey = HrefAttributeBuilder.ToString();
-            string HrefAttributeValue = SchemaRefNode.Attributes[HrefAttributeKey].Value;
-            thisSchemas.Add(new XbrlSchema(this, HrefAttributeValue));
+            string HrefAttributeValue = XmlUtilities.GetAttributeValue(SchemaRefNode, "http://www.w3.org/1999/xlink", "href");
+            string Base = XmlUtilities.GetAttributeValue(SchemaRefNode, "http://www.w3.org/XML/1998/namespace", "base");
+            thisSchemas.Add(new XbrlSchema(this, HrefAttributeValue, Base));
         }
 
         //-------------------------------------------------------------------------------
@@ -282,26 +285,36 @@ namespace JeffFerguson.Gepsio
         private void ValidateContextRefs()
         {
             foreach (Fact CurrentFact in thisFacts)
+                ValidateContextRef(CurrentFact);
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validates the context reference for the given fact. Ensures that the context
+        // ref can be tied to a defined context.
+        //-------------------------------------------------------------------------------
+        private void ValidateContextRef(Fact FactToValidate)
+        {
+            string ContextRefValue = FactToValidate.ContextRefName;
+            if (ContextRefValue.Length == 0)
+                return;
+
+            bool ContextFound = false;
+            Context MatchingContext = null;
+            foreach (Context CurrentContext in thisContexts)
             {
-                string ContextRefValue = CurrentFact.ContextRefName;
-                bool ContextFound = false;
-                Context MatchingContext = null;
-                foreach (Context CurrentContext in thisContexts)
+                if (CurrentContext.Id == ContextRefValue)
                 {
-                    if (CurrentContext.Id == ContextRefValue)
-                    {
-                        ContextFound = true;
-                        MatchingContext = CurrentContext;
-                        CurrentFact.ContextRef = MatchingContext;
-                    }
+                    ContextFound = true;
+                    MatchingContext = CurrentContext;
+                    FactToValidate.ContextRef = MatchingContext;
                 }
-                if (ContextFound == false)
-                {
-                    string MessageFormat = AssemblyResources.GetName("CannotFindContextForContextRef");
-                    StringBuilder MessageBuilder = new StringBuilder();
-                    MessageBuilder.AppendFormat(MessageFormat, ContextRefValue);
-                    throw new XbrlException(MessageBuilder.ToString());
-                }
+            }
+            if (ContextFound == false)
+            {
+                string MessageFormat = AssemblyResources.GetName("CannotFindContextForContextRef");
+                StringBuilder MessageBuilder = new StringBuilder();
+                MessageBuilder.AppendFormat(MessageFormat, ContextRefValue);
+                throw new XbrlException(MessageBuilder.ToString());
             }
         }
 
@@ -310,26 +323,57 @@ namespace JeffFerguson.Gepsio
         private void ValidateUnitRefs()
         {
             foreach (Fact CurrentFact in thisFacts)
+                ValidateUnitRef(CurrentFact);
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validates the unit reference for the given fact. Ensures that the unit ref
+        // can be tied to a defined unit.
+        //-------------------------------------------------------------------------------
+        private void ValidateUnitRef(Fact FactToValidate)
+        {
+            string UnitRefValue = FactToValidate.UnitRefName;
+            //-----------------------------------------------------------------------
+            // According to section 4.6.2, non-numeric items must not have a unit
+            // reference. So, if the fact's unit reference is blank, and this is a
+            // non-numeric item, then there is nothing to validate.
+            //-----------------------------------------------------------------------
+            if (UnitRefValue.Length == 0)
             {
-                string UnitRefValue = CurrentFact.UnitRefName;
-                bool UnitFound = false;
-                Unit MatchingUnit = null;
-                foreach (Unit CurrentUnit in thisUnits)
+                if (FactToValidate.SchemaElement == null)
+                    return;
+                //if (FactToValidate.SchemaElement.Type == null)
+                //    return;
+                //if (FactToValidate.SchemaElement.Type.NumericType == false)
+                //    return;
+                if (FactToValidate.Type == null)
+                    return;
+                if (FactToValidate.Type.NumericType == false)
+                    return;
+            }
+            //-----------------------------------------------------------------------
+            // At this point, we have a unit ref should be matched to a unit.
+            //-----------------------------------------------------------------------
+            bool UnitFound = false;
+            Unit MatchingUnit = null;
+            foreach (Unit CurrentUnit in thisUnits)
+            {
+                if (CurrentUnit.Id == UnitRefValue)
                 {
-                    if (CurrentUnit.Id == UnitRefValue)
-                    {
-                        UnitFound = true;
-                        MatchingUnit = CurrentUnit;
-                        CurrentFact.UnitRef = MatchingUnit;
-                    }
+                    UnitFound = true;
+                    MatchingUnit = CurrentUnit;
+                    FactToValidate.UnitRef = MatchingUnit;
                 }
-                if (UnitFound == false)
-                {
-                    string MessageFormat = AssemblyResources.GetName("CannotFindUnitForUnitRef");
-                    StringBuilder MessageBuilder = new StringBuilder();
-                    MessageBuilder.AppendFormat(MessageFormat, UnitRefValue);
-                    throw new XbrlException(MessageBuilder.ToString());
-                }
+            }
+            //-----------------------------------------------------------------------
+            // Check to see if a unit is found.
+            //-----------------------------------------------------------------------
+            if(UnitFound == false)
+            {
+                string MessageFormat = AssemblyResources.GetName("CannotFindUnitForUnitRef");
+                StringBuilder MessageBuilder = new StringBuilder();
+                MessageBuilder.AppendFormat(MessageFormat, UnitRefValue);
+                throw new XbrlException(MessageBuilder.ToString());
             }
         }
 
@@ -433,12 +477,193 @@ namespace JeffFerguson.Gepsio
         }
 
         //-------------------------------------------------------------------------------
+        // Validate all of the facts found in the fragment. Multiple activities happen
+        // here:
+        //
+        // * each fact is validated against its data type described in its definition
+        //   via an <element> tag in a taxonomy schema
+        // * any facts that participate in an arc role are checked
         //-------------------------------------------------------------------------------
         private void ValidateFacts()
         {
             foreach (Fact CurrentFact in thisFacts)
                 CurrentFact.Validate();
+            ValidateFactsReferencedInDefinitionArcRoles();
+            ValidateSummationConcepts();
         }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private bool UrlReferencesFragmentDocument(HyperlinkReference Href)
+        {
+            if (Href.UrlSpecified == false)
+                return false;
+            string DocFullPath = Path.GetFullPath(thisDocument.Filename);
+            string HrefFullPath;
+            if (Href.Url.IndexOf(Path.DirectorySeparatorChar) == -1)
+                HrefFullPath = thisDocument.Path + Path.DirectorySeparatorChar + Href.Url;
+            else
+                HrefFullPath = Href.Url;
+            if (DocFullPath.Equals(HrefFullPath) == true)
+                return true;
+            return false;
+        }
+
+        //===============================================================================
+        #endregion
+        //===============================================================================
+
+        //===============================================================================
+        #region Definition Arc Role Validation
+        //===============================================================================
+
+        //-------------------------------------------------------------------------------
+        // Searches the associated XBRL schemas, looking for facts that are referenced
+        // in arc roles.
+        //-------------------------------------------------------------------------------
+        private void ValidateFactsReferencedInDefinitionArcRoles()
+        {
+            foreach (XbrlSchema CurrentSchema in thisSchemas)
+                ValidateFactsReferencedInDefinitionArcRoles(CurrentSchema);
+        }
+
+        //-------------------------------------------------------------------------------
+        // Searches the given XBRL schemas, looking for facts that are referenced
+        // in arc roles.
+        //-------------------------------------------------------------------------------
+        private void ValidateFactsReferencedInDefinitionArcRoles(XbrlSchema CurrentSchema)
+        {
+            foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
+                ValidateFactsReferencedInDefinitionArcRoles(CurrentLinkbaseDocument);
+        }
+
+        //-------------------------------------------------------------------------------
+        // Searches the given linkbase document, looking for facts that are referenced
+        // in arc roles.
+        //-------------------------------------------------------------------------------
+        private void ValidateFactsReferencedInDefinitionArcRoles(LinkbaseDocument CurrentLinkbaseDocument)
+        {
+            foreach (DefinitionLink CurrentDefinitionLink in CurrentLinkbaseDocument.DefinitionLinks)
+                ValidateFactsReferencedInDefinitionArcRoles(CurrentDefinitionLink);
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ValidateFactsReferencedInDefinitionArcRoles(DefinitionLink CurrentDefinitionLink)
+        {
+            foreach (DefinitionArc CurrentDefinitionArc in CurrentDefinitionLink.DefinitionArcs)
+            {
+                switch (CurrentDefinitionArc.Role)
+                {
+                    case DefinitionArc.RoleEnum.EssenceAlias:
+                        ValidateEssenceAliasedFacts(CurrentDefinitionArc);
+                        break;
+                    case DefinitionArc.RoleEnum.RequiresElement:
+                        ValidateRequiresElementFacts(CurrentDefinitionArc);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validate the "requires element" connection between two facts referenced in a
+        // definition arc.
+        //-------------------------------------------------------------------------------
+        private void ValidateRequiresElementFacts(DefinitionArc RequiresElementDefinitionArc)
+        {
+            Locator CurrentFromLocator = RequiresElementDefinitionArc.FromLocator;
+            Locator CurrentToLocator = RequiresElementDefinitionArc.ToLocator;
+            int FromFactCount = CountFactInstances(CurrentFromLocator.HrefResourceId);
+            int ToFactCount = CountFactInstances(CurrentToLocator.HrefResourceId);
+            if (FromFactCount > ToFactCount)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("NotEnoughToFactsInRequiresElementRelationship");
+                MessageBuilder.AppendFormat(StringFormat, CurrentFromLocator.HrefResourceId, CurrentToLocator.HrefResourceId);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        // Returns a count of the number of facts with the given name.
+        //-------------------------------------------------------------------------------
+        private int CountFactInstances(string FactName)
+        {
+            int Count = 0;
+
+            foreach (Fact CurrentFact in thisFacts)
+            {
+                if (CurrentFact.Name.Equals(FactName) == true)
+                    Count++;
+            }
+            return Count;
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validate the essence alias between two facts referenced in a definition arc.
+        //-------------------------------------------------------------------------------
+        private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc)
+        {
+            Locator CurrentFromLocator = EssenceAliasDefinitionArc.FromLocator;
+            Locator CurrentToLocator = EssenceAliasDefinitionArc.ToLocator;
+
+            foreach (Fact CurrentFact in thisFacts)
+            {
+                if (CurrentFact.Name.Equals(CurrentFromLocator.HrefResourceId) == true)
+                    ValidateEssenceAliasedFacts(CurrentFact, CurrentToLocator.HrefResourceId);
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validate the essence alias between a given fact and all other facts with the
+        // given fact name.
+        //-------------------------------------------------------------------------------
+        private void ValidateEssenceAliasedFacts(Fact FromFact, string ToFactName)
+        {
+            foreach(Fact CurrentFact in thisFacts)
+            {
+                if (CurrentFact.Name.Equals(ToFactName) == true)
+                    ValidateEssenceAliasedFacts(FromFact, CurrentFact);
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validate the essence alias between two given facts.
+        //-------------------------------------------------------------------------------
+        private void ValidateEssenceAliasedFacts(Fact FromFact, Fact ToFact)
+        {
+            if (FromFact.ContextEquals(ToFact) == false)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotContextEquals");
+                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+            if (FromFact.ParentEquals(ToFact) == false)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotParentEquals");
+                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+            if (FromFact.UnitEquals(ToFact) == false)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotUnitEquals");
+                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+        }
+
+        //===============================================================================
+        #endregion
+        //===============================================================================
+
+        //===============================================================================
+        #region Footnote Validation
+        //===============================================================================
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
@@ -509,25 +734,122 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //===============================================================================
+        #endregion
+        //===============================================================================
+
+        //===============================================================================
+        #region Summation Concept Validation
+        //===============================================================================
+
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private bool UrlReferencesFragmentDocument(HyperlinkReference Href)
+        private void ValidateSummationConcepts()
         {
-            if (Href.UrlSpecified == false)
-                return false;
-            string DocFullPath = Path.GetFullPath(thisDocument.Filename);
-            string HrefFullPath;
-            if (Href.Url.IndexOf(Path.DirectorySeparatorChar) == -1)
-                HrefFullPath = thisDocument.Path + Path.DirectorySeparatorChar + Href.Url;
-            else
-                HrefFullPath = Href.Url;
-            if (DocFullPath.Equals(HrefFullPath) == true)
-                return true;
-            return false;
+            foreach (XbrlSchema CurrentSchema in thisSchemas)
+                ValidateSummationConcepts(CurrentSchema);
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ValidateSummationConcepts(XbrlSchema CurrentSchema)
+        {
+            foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
+                ValidateSummationConcepts(CurrentLinkbaseDocument);
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ValidateSummationConcepts(LinkbaseDocument CurrentLinkbaseDocument)
+        {
+            foreach (CalculationLink CurrentCalculationLink in CurrentLinkbaseDocument.CalculationLinks)
+                ValidateSummationConcepts(CurrentCalculationLink);
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ValidateSummationConcepts(CalculationLink CurrentCalculationLink)
+        {
+            foreach (SummationConcept CurrentSummationConcept in CurrentCalculationLink.SummationConcepts)
+                ValidateSummationConcept(CurrentSummationConcept);
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ValidateSummationConcept(SummationConcept CurrentSummationConcept)
+        {
+            Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
+            Fact SummationConceptFact = LocateFact(SummationConceptElement);
+            decimal SummationConceptTruncatedValue = SummationConceptFact.GetValueAfterApplyingTruncation();
+            decimal ContributingConceptTruncatedValueTotal = 0;
+            foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
+            {
+                Element ContributingConceptElement = LocateElement(CurrentLocator);
+                Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
+                decimal ContributingConceptTruncatedValue = ContributingConceptFact.GetValueAfterApplyingTruncation();
+                ContributingConceptTruncatedValueTotal += ContributingConceptTruncatedValue;
+            }
+            if (SummationConceptTruncatedValue != ContributingConceptTruncatedValueTotal)
+            {
+                // not yet supported in the Feb 2009 CTP
+                //StringBuilder MessageBuilder = new StringBuilder();
+                //string StringFormat = AssemblyResources.GetName("SummationConceptError");
+                //MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptTruncatedValue, ContributingConceptTruncatedValueTotal);
+                //throw new XbrlException(MessageBuilder.ToString());
+            }
         }
 
         //===============================================================================
         #endregion
         //===============================================================================
+
+        //===============================================================================
+        #region Location Support
+        //===============================================================================
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private Fact LocateFact(Locator FactLocator)
+        {
+            if (FactLocator == null)
+                return null;
+            foreach (Fact CurrentFact in thisFacts)
+            {
+                if (CurrentFact.Name.Equals(FactLocator.HrefResourceId) == true)
+                    return CurrentFact;
+            }
+            return null;
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private Element LocateElement(Locator ElementLocator)
+        {
+            foreach (XbrlSchema CurrentSchema in thisSchemas)
+            {
+                if (ElementLocator.HrefEquals(CurrentSchema.Path) == true)
+                    return CurrentSchema.LocateElement(ElementLocator);
+            }
+            return null;
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private Fact LocateFact(Element FactElement)
+        {
+            if (FactElement == null)
+                return null;
+            foreach (Fact CurrentFact in thisFacts)
+            {
+                if (CurrentFact.SchemaElement.Equals(FactElement) == true)
+                    return CurrentFact;
+            }
+            return null;
+        }
+
+        //===============================================================================
+        #endregion
+        //===============================================================================
+
     }
 }

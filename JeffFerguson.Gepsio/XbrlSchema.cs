@@ -17,7 +17,10 @@ namespace JeffFerguson.Gepsio
         private List<SimpleType> thisSimpleTypes;
         private List<ComplexType> thisComplexTypes;
         private XmlNamespaceManager thisNamespaceManager;
+        private List<LinkbaseDocument> thisLinkbaseDocuments;
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         public string Path
         {
             get
@@ -26,6 +29,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         internal UriPrefixDictionary UrisAndPrefixes
         {
             get
@@ -34,6 +39,18 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        internal XmlNode SchemaRootNode
+        {
+            get
+            {
+                return thisSchemaNode;
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         public string TargetNamespace
         {
             get
@@ -42,6 +59,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         public List<Element> Elements
         {
             get
@@ -50,6 +69,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         public List<SimpleType> SimpleTypes
         {
             get
@@ -58,6 +79,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         public List<ComplexType> ComplexTypes
         {
             get
@@ -66,11 +89,24 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        internal XbrlSchema(XbrlFragment ContainingXbrlFragment, string SchemaFilename)
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        public List<LinkbaseDocument> LinkbaseDocuments
+        {
+            get
+            {
+                return thisLinkbaseDocuments;
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        internal XbrlSchema(XbrlFragment ContainingXbrlFragment, string SchemaFilename, string BaseDirectory)
         {
             thisContainingXbrlFragment = ContainingXbrlFragment;
-            thisSchemaPath = GetFullSchemaPath(SchemaFilename);
+            thisSchemaPath = GetFullSchemaPath(SchemaFilename, BaseDirectory);
             thisSchemaDocument = new XmlDocument();
+            thisLinkbaseDocuments = new List<LinkbaseDocument>();
             thisSchemaDocument.Load(thisSchemaPath);
             thisNamespaceManager = new XmlNamespaceManager(thisSchemaDocument.NameTable);
             thisNamespaceManager.AddNamespace("schema", "http://www.w3.org/2001/XMLSchema");
@@ -78,8 +114,11 @@ namespace JeffFerguson.Gepsio
             ReadSimpleTypes();
             ReadComplexTypes();
             ReadElements();
+            LookForAnnotations();
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         public Element GetElement(string ElementName)
         {
             foreach (Element CurrentElement in thisElements)
@@ -90,7 +129,9 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        private string GetFullSchemaPath(string SchemaFilename)
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private string GetFullSchemaPath(string SchemaFilename, string BaseDirectory)
         {
             string FullPath;
             int FirstPathSeparator = SchemaFilename.IndexOf(System.IO.Path.DirectorySeparatorChar);
@@ -101,6 +142,8 @@ namespace JeffFerguson.Gepsio
                 if (LastPathSeparator == -1)
                     LastPathSeparator = DocumentUri.LastIndexOf('/');
                 string DocumentPath = DocumentUri.Substring(0, LastPathSeparator + 1);
+                if (BaseDirectory.Length > 0)
+                    DocumentPath = DocumentPath + BaseDirectory;
                 FullPath = DocumentPath + SchemaFilename;
             }
             else
@@ -110,15 +153,26 @@ namespace JeffFerguson.Gepsio
             return FullPath;
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         private void ReadSchemaNode()
         {
             thisElements = new List<Element>();
             thisSchemaNode = thisSchemaDocument.SelectSingleNode("//schema:schema", thisNamespaceManager);
+            if (thisSchemaNode == null)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+                MessageBuilder.AppendFormat(StringFormat, thisSchemaPath);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
             thisTargetNamespace = thisSchemaNode.Attributes["targetNamespace"].Value;
             thisUriPrefixDictionary = new UriPrefixDictionary();
             thisUriPrefixDictionary.Load(thisSchemaNode);
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         private void ReadSimpleTypes()
         {
             thisSimpleTypes = new List<SimpleType>();
@@ -127,6 +181,8 @@ namespace JeffFerguson.Gepsio
                 thisSimpleTypes.Add(new SimpleType(SimpleTypeNode));
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         private void ReadComplexTypes()
         {
             thisComplexTypes = new List<ComplexType>();
@@ -135,6 +191,8 @@ namespace JeffFerguson.Gepsio
                 thisComplexTypes.Add(new ComplexType(ComplexTypeNode));
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         private void ReadElements()
         {
             foreach (XmlNode CurrentChild in thisSchemaNode.ChildNodes)
@@ -144,6 +202,8 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         internal SimpleType GetSimpleType(string ItemTypeValue)
         {
             foreach (SimpleType CurrentSimpleType in this.SimpleTypes)
@@ -154,12 +214,72 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         internal ComplexType GetComplexType(string ItemTypeValue)
         {
             foreach (ComplexType CurrentComplexType in this.ComplexTypes)
             {
                 if (CurrentComplexType.Name.Equals(ItemTypeValue) == true)
                     return CurrentComplexType;
+            }
+            return null;
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void LookForAnnotations()
+        {
+            foreach (XmlNode CurrentChild in thisSchemaNode.ChildNodes)
+            {
+                if (CurrentChild.LocalName.Equals("annotation") == true)
+                    ReadAnnotations(CurrentChild);
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ReadAnnotations(XmlNode AnnotationNode)
+        {
+            foreach (XmlNode CurrentChild in AnnotationNode.ChildNodes)
+            {
+                if (CurrentChild.LocalName.Equals("appinfo") == true)
+                    ReadAppInfo(CurrentChild);
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ReadAppInfo(XmlNode AppInfoNode)
+        {
+            foreach (XmlNode CurrentChild in AppInfoNode.ChildNodes)
+            {
+                if ((CurrentChild.NamespaceURI.Equals("http://www.xbrl.org/2003/linkbase") == true) && (CurrentChild.LocalName.Equals("linkbaseRef") == true))
+                {
+                    ReadLinkbaseReference(CurrentChild);
+                }
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ReadLinkbaseReference(XmlNode LinkbaseReferenceNode)
+        {
+            foreach (XmlAttribute CurrentAttribute in LinkbaseReferenceNode.Attributes)
+            {
+                if ((CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == true) && (CurrentAttribute.LocalName.Equals("href") == true))
+                    thisLinkbaseDocuments.Add(new LinkbaseDocument(this, CurrentAttribute.Value));
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        internal Element LocateElement(Locator ElementLocator)
+        {
+            foreach (Element CurrentElement in thisElements)
+            {
+                if (CurrentElement.Id.Equals(ElementLocator.HrefResourceId) == true)
+                    return CurrentElement;
             }
             return null;
         }

@@ -5,14 +5,7 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    public class GregorianYearMonth : AnySimpleType<System.DateTime>
+    public class GregorianYearMonth : AnySimpleType
     {
-        protected override System.DateTime ConvertStringValue()
-        {
-            System.DateTime Result;
-
-            System.DateTime.TryParse(this.ValueAsString, out Result);
-            return Result;
-        }
     }
 }
