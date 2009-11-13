@@ -499,11 +499,12 @@ namespace JeffFerguson.Gepsio
             if (Href.UrlSpecified == false)
                 return false;
             string DocFullPath = Path.GetFullPath(thisDocument.Filename);
-            string HrefFullPath;
+            string HrefFullPathString;
             if (Href.Url.IndexOf(Path.DirectorySeparatorChar) == -1)
-                HrefFullPath = thisDocument.Path + Path.DirectorySeparatorChar + Href.Url;
+                HrefFullPathString = thisDocument.Path + Path.DirectorySeparatorChar + Href.Url;
             else
-                HrefFullPath = Href.Url;
+                HrefFullPathString = Href.Url;
+            string HrefFullPath = Path.GetFullPath(HrefFullPathString);
             if (DocFullPath.Equals(HrefFullPath) == true)
                 return true;
             return false;
@@ -780,22 +781,30 @@ namespace JeffFerguson.Gepsio
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
             Fact SummationConceptFact = LocateFact(SummationConceptElement);
+            //---------------------------------------------------------------------------
+            // If the summation concept fact doesn't exist, then there is no calculation
+            // to perform.
+            //---------------------------------------------------------------------------
+            if (SummationConceptFact == null)
+                //throw new XbrlException(AssemblyResources.BuildMessage("CannotFindFactForElement", SummationConceptElement.Id));
+                return;
             decimal SummationConceptTruncatedValue = SummationConceptFact.GetValueAfterApplyingTruncation();
             decimal ContributingConceptTruncatedValueTotal = 0;
             foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
             {
                 Element ContributingConceptElement = LocateElement(CurrentLocator);
                 Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
+                if (ContributingConceptFact == null)
+                    return;
                 decimal ContributingConceptTruncatedValue = ContributingConceptFact.GetValueAfterApplyingTruncation();
                 ContributingConceptTruncatedValueTotal += ContributingConceptTruncatedValue;
             }
             if (SummationConceptTruncatedValue != ContributingConceptTruncatedValueTotal)
             {
-                // not yet supported in the Feb 2009 CTP
-                //StringBuilder MessageBuilder = new StringBuilder();
-                //string StringFormat = AssemblyResources.GetName("SummationConceptError");
-                //MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptTruncatedValue, ContributingConceptTruncatedValueTotal);
-                //throw new XbrlException(MessageBuilder.ToString());
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("SummationConceptError");
+                MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptTruncatedValue, ContributingConceptTruncatedValueTotal);
+                throw new XbrlException(MessageBuilder.ToString());
             }
         }
 

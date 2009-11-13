@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">
+      </identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:NetCashFlowOutflowFromOperatingActivities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">555000000</uk-gaap-pt:NetCashFlowOutflowFromOperatingActivities>
+  <uk-gaap-pt:InterestPaid contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">30000000</uk-gaap-pt:InterestPaid>
+  <uk-gaap-pt:InterestOtherInvestmentIncomeReceived contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">15000000</uk-gaap-pt:InterestOtherInvestmentIncomeReceived>
+  <uk-gaap-pt:InterestElementFinanceLeaseRentalPayments contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">1000000</uk-gaap-pt:InterestElementFinanceLeaseRentalPayments>
+  <uk-gaap-pt:DividendsPaidToMinorityInterests contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">600000</uk-gaap-pt:DividendsPaidToMinorityInterests>
+  <uk-gaap-pt:NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-16600000</uk-gaap-pt:NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance>
+  <uk-gaap-pt:TaxationPaid contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">130000000</uk-gaap-pt:TaxationPaid>
+  <uk-gaap-pt:PurchaseTangibleFixedAssets contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">300000000</uk-gaap-pt:PurchaseTangibleFixedAssets>
+  <uk-gaap-pt:SaleTangibleFixedAssets contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">20000000</uk-gaap-pt:SaleTangibleFixedAssets>
+  <uk-gaap-pt:NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-280000000</uk-gaap-pt:NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment>
+  <uk-gaap-pt:NetCashFlowOutflowFromAcquisitionsDisposals contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-900000</uk-gaap-pt:NetCashFlowOutflowFromAcquisitionsDisposals>
+  <uk-gaap-pt:EquityDividendsPaid contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">230000000</uk-gaap-pt:EquityDividendsPaid>
+  <uk-gaap-pt:NetCashFlowOutflowBeforeLiquidResourcesFinancing contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-102500000</uk-gaap-pt:NetCashFlowOutflowBeforeLiquidResourcesFinancing>
+  <uk-gaap-pt:WithdrawalFromTermDeposits contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">150000000</uk-gaap-pt:WithdrawalFromTermDeposits>
+  <uk-gaap-pt:NetCashFlowOutflowFromManagementLiquidResources contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-150000000</uk-gaap-pt:NetCashFlowOutflowFromManagementLiquidResources>
+  <uk-gaap-pt:CapitalElementFinanceLeaseRentalPayments contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">10000000</uk-gaap-pt:CapitalElementFinanceLeaseRentalPayments>
+  <uk-gaap-pt:RedemptionDebenturesLoansNotesBondsOtherLongTermInstruments contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">200000000</uk-gaap-pt:RedemptionDebenturesLoansNotesBondsOtherLongTermInstruments>
+  <uk-gaap-pt:NetProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">500000000</uk-gaap-pt:NetProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests>
+  <uk-gaap-pt:NetCashFlowOutflowFromFinancing contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">290000000</uk-gaap-pt:NetCashFlowOutflowFromFinancing>
+  <uk-gaap-pt:IncreaseDecreaseInNetCashForPeriod contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">37500000</uk-gaap-pt:IncreaseDecreaseInNetCashForPeriod>
+
+  <uk-gaap-pt:OperatingProfitLoss contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">590000000</uk-gaap-pt:OperatingProfitLoss>
+  <uk-gaap-pt:TotalDepreciationAmortisationImpairmentCharges contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">150000000</uk-gaap-pt:TotalDepreciationAmortisationImpairmentCharges>
+  <uk-gaap-pt:GainLossFromDisposalFixedAssets-Net contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-50000000</uk-gaap-pt:GainLossFromDisposalFixedAssets-Net>
+  <uk-gaap-pt:DecreaseIncreaseInStocks contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-30000000</uk-gaap-pt:DecreaseIncreaseInStocks>
+  <uk-gaap-pt:DecreaseIncreaseInDebtors contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-50000000</uk-gaap-pt:DecreaseIncreaseInDebtors>
+  <uk-gaap-pt:IncreaseDecreaseInCreditors contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-50000000</uk-gaap-pt:IncreaseDecreaseInCreditors>
+  <uk-gaap-pt:DecreaseIncreaseInProvisions contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-5000000</uk-gaap-pt:DecreaseIncreaseInProvisions>
+
+  <uk-gaap-pt:DecreaseIncreaseInNetDebtFromExchangeAdjustments contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">600000</uk-gaap-pt:DecreaseIncreaseInNetDebtFromExchangeAdjustments>
+  <uk-gaap-pt:DecreaseIncreaseInNetDebtResultingFromCashFlows contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-360000000</uk-gaap-pt:DecreaseIncreaseInNetDebtResultingFromCashFlows>
+  <uk-gaap-pt:NetCashFlowOutflowFromChangeInDebtLeaseFinancing contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">-210000000</uk-gaap-pt:NetCashFlowOutflowFromChangeInDebtLeaseFinancing>
+  <uk-gaap-pt:DecreaseIncreaseInNetDebtResultingFromCashFlows contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-3">320700000</uk-gaap-pt:DecreaseIncreaseInNetDebtResultingFromCashFlows>
+</xbrl>

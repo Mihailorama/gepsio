@@ -116,6 +116,7 @@
     <Compile Include="Monetary.cs" />
     <Compile Include="MonetaryItemType.cs" />
     <Compile Include="Name.cs" />
+    <Compile Include="NamespaceQualifiedValue.cs" />
     <Compile Include="NCName.cs" />
     <Compile Include="NonNegativeInteger.cs" />
     <Compile Include="NonNumericItemAttributes.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="SimpleContentComplexType.cs" />
     <Compile Include="SimpleType.cs" />
     <Compile Include="String.cs" />
+    <Compile Include="StringItemType.cs" />
     <Compile Include="SummationConcept.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Token.cs" />

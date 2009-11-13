@@ -10,8 +10,11 @@ using JeffFerguson.Gepsio;
 namespace JeffFerguson.Test.Gepsio
 {
     /// <summary>
-    /// Summary description for ConformanceTest
+    /// This class executes the XBRL-CONF-CR3-2007-03-05 conformance test suite.
     /// </summary>
+    /// <remarks>
+    /// The test suite is driven by a document in the root
+    /// </remarks>
     [TestClass]
     public class ConformanceTest
     {
@@ -42,7 +45,8 @@ namespace JeffFerguson.Test.Gepsio
         #endregion
 
         [TestMethod]
-        public void ExecuteTestcases()
+        [Description("XBRL-CONF-CR3-2007-03-05")]
+        public void ExecuteXBRLCONFCR320070305Testcases()
         {
             XmlDocument ConformanceXmlDocument;
 
@@ -115,13 +119,13 @@ namespace JeffFerguson.Test.Gepsio
         {
             StringBuilder FailMessage = new StringBuilder();
 
-            FailMessage.AppendFormat("Instance: {0} -- ", CurrentVariation.Instance);
-            FailMessage.AppendFormat("Name: {0} -- ", CurrentVariation.Name);
-            FailMessage.AppendFormat("Description: {0} -- ", CurrentVariation.Description);
+            FailMessage.AppendFormat("Instance: {0}{1}", CurrentVariation.Instance, Environment.NewLine);
+            FailMessage.AppendFormat("Name: {0}{1}", CurrentVariation.Name, Environment.NewLine);
+            FailMessage.AppendFormat("Description: {0}", CurrentVariation.Description);
             if (VariationException != null)
             {
-                FailMessage.AppendFormat("Exception Type: {0} -- ", VariationException.GetType().ToString());
-                FailMessage.AppendFormat("Exception Description: {0} -- ", VariationException.Message);
+                FailMessage.AppendFormat("{0}Exception Type: {1}{2}", Environment.NewLine, VariationException.GetType().ToString(), Environment.NewLine);
+                FailMessage.AppendFormat("Exception Description: {0}", VariationException.Message);
             }
             Assert.Fail(FailMessage.ToString());
         }

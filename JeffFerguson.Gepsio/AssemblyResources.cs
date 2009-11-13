@@ -19,5 +19,13 @@ namespace JeffFerguson.Gepsio
         {
             return staticResourceManager.GetString(Key);
         }
+
+        public static string BuildMessage(string Key, params object[] Parameters)
+        {
+            StringBuilder Message = new StringBuilder();
+            string MessageFormat = GetName(Key);
+            Message.AppendFormat(MessageFormat, Parameters);
+            return Message.ToString();
+        }
     }
 }

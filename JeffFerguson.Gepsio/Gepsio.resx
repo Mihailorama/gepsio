@@ -240,6 +240,9 @@
     <comment>XBRL-CONF-CR3-2007-03-05 unit test 307.02</comment>
   </data>
   <data name="SummationConceptError" xml:space="preserve">
-    <value>Fact {0} is based on an element that is named as the summation concept in a calculation link. The fact's value, after precision or decimals trunation, is {1}; however, the sum of the values of the contributing concepts, after precision or decimals trunation, is {2}. These values do not match; therefore, the rule specified by the fact's calculation link has been broken.</value>
+    <value>Fact {0} is based on an element that is named as the summation concept in a calculation link. The fact's value, after precision or decimals truncation, is {1}; however, the sum of the values of the contributing concepts, after precision or decimals truncation, is {2}. These values do not match; therefore, the rule specified by the fact's calculation link has been broken.</value>
+  </data>
+  <data name="CannotFindFactForElement" xml:space="preserve">
+    <value>Cannot find a fact for element {0}.</value>
   </data>
 </root>

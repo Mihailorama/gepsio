@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15"
+      xmlns:xbrldi="http://xbrl.org/2006/xbrldi">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="OPENING_BALANCE_LANDBUILDINGS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:LandBuildings</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2006-12-31</instant>
+    </period>
+  </context>
+  <context id="OPENING_BALANCE_PLANTMACHINERY">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:PlantMachinery</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2006-12-31</instant>
+    </period>
+  </context>
+  <context id="OPENING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:FixturesFittingsToolsEquipment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2006-12-31</instant>
+    </period>
+  </context>
+  <context id="OPENING_BALANCE_ALL">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2006-12-31</instant>
+    </period>
+  </context>
+  <context id="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:LandBuildings</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:PlantMachinery</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:FixturesFittingsToolsEquipment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_PERIOD_MOVEMENT_ALL">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CLOSING_BALANCE_LANDBUILDINGS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:LandBuildings</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2007-12-31</instant>
+    </period>
+  </context>
+  <context id="CLOSING_BALANCE_PLANTMACHINERY">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:PlantMachinery</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2007-12-31</instant>
+    </period>
+  </context>
+  <context id="CLOSING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:FixturesFittingsToolsEquipment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2007-12-31</instant>
+    </period>
+  </context>
+  <context id="CLOSING_BALANCE_ALL">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2007-12-31</instant>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="OPENING_BALANCE_LANDBUILDINGS" unitRef="GBP" decimals="0">700000000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="OPENING_BALANCE_PLANTMACHINERY" unitRef="GBP" decimals="0">400000000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="OPENING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">500000000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="OPENING_BALANCE_ALL" unitRef="GBP" decimals="0">1600000000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsAdditions contextRef="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS" unitRef="GBP" decimals="0">7000000</uk-gaap-pt:TangibleFixedAssetsAdditions>
+  <uk-gaap-pt:TangibleFixedAssetsAdditions contextRef="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY" unitRef="GBP" decimals="0">20000000</uk-gaap-pt:TangibleFixedAssetsAdditions>
+  <uk-gaap-pt:TangibleFixedAssetsAdditions contextRef="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">100000000</uk-gaap-pt:TangibleFixedAssetsAdditions>
+  <uk-gaap-pt:TangibleFixedAssetsAdditions contextRef="CURRENT_PERIOD_MOVEMENT_ALL" unitRef="GBP" decimals="0">127000000</uk-gaap-pt:TangibleFixedAssetsAdditions>
+  <uk-gaap-pt:TangibleFixedAssetsDisposals contextRef="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS" unitRef="GBP" decimals="0">6000000</uk-gaap-pt:TangibleFixedAssetsDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDisposals contextRef="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY" unitRef="GBP" decimals="0">30000000</uk-gaap-pt:TangibleFixedAssetsDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDisposals contextRef="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">100000000</uk-gaap-pt:TangibleFixedAssetsDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDisposals contextRef="CURRENT_PERIOD_MOVEMENT_ALL" unitRef="GBP" decimals="0">136000000</uk-gaap-pt:TangibleFixedAssetsDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS" unitRef="GBP" decimals="0">1000000</uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY" unitRef="GBP" decimals="0">1500000</uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">1000000</uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_ALL" unitRef="GBP" decimals="0">3500000</uk-gaap-pt:TangibleFixedAssetsIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="CLOSING_BALANCE_LANDBUILDINGS" unitRef="GBP" decimals="0">702000000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="CLOSING_BALANCE_PLANTMACHINERY" unitRef="GBP" decimals="0">391500000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="CLOSING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">501000000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsCostOrValuation contextRef="CLOSING_BALANCE_ALL" unitRef="GBP" decimals="0">1594500000</uk-gaap-pt:TangibleFixedAssetsCostOrValuation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="OPENING_BALANCE_LANDBUILDINGS" unitRef="GBP" decimals="0">75000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="OPENING_BALANCE_PLANTMACHINERY" unitRef="GBP" decimals="0">200000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="OPENING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">150000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="OPENING_BALANCE_ALL" unitRef="GBP" decimals="0">425000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod contextRef="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS" unitRef="GBP" decimals="0">3000000</uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod contextRef="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY" unitRef="GBP" decimals="0">30000000</uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod contextRef="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">80000000</uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod contextRef="CURRENT_PERIOD_MOVEMENT_ALL" unitRef="GBP" decimals="0">113000000</uk-gaap-pt:TangibleFixedAssetsDepreciationChargedInPeriod>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals contextRef="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS" unitRef="GBP" decimals="0">2000000</uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals contextRef="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY" unitRef="GBP" decimals="0">15000000</uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals contextRef="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">40000000</uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals contextRef="CURRENT_PERIOD_MOVEMENT_ALL" unitRef="GBP" decimals="0">57000000</uk-gaap-pt:TangibleFixedAssetsDepreciationDecreaseIncreaseOnDisposals>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_LANDBUILDINGS" unitRef="GBP" decimals="0">1000000</uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_PLANTMACHINERY" unitRef="GBP" decimals="0">5000000</uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">3000000</uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments contextRef="CURRENT_PERIOD_MOVEMENT_ALL" unitRef="GBP" decimals="0">9000000</uk-gaap-pt:TangibleFixedAssetsDepreciationIncreaseDecreaseFromExchangeAdjustments>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="CLOSING_BALANCE_LANDBUILDINGS" unitRef="GBP" decimals="0">77000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="CLOSING_BALANCE_PLANTMACHINERY" unitRef="GBP" decimals="0">220000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="CLOSING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">193000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssetsDepreciation contextRef="CLOSING_BALANCE_ALL" unitRef="GBP" decimals="0">490000000</uk-gaap-pt:TangibleFixedAssetsDepreciation>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="OPENING_BALANCE_LANDBUILDINGS" unitRef="GBP" decimals="0">625000000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="OPENING_BALANCE_PLANTMACHINERY" unitRef="GBP" decimals="0">200000000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="OPENING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">350000000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="OPENING_BALANCE_ALL" unitRef="GBP" decimals="0">1175000000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="CLOSING_BALANCE_LANDBUILDINGS" unitRef="GBP" decimals="0">625000000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="CLOSING_BALANCE_PLANTMACHINERY" unitRef="GBP" decimals="0">171500000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="CLOSING_BALANCE_FIXTURESFITTINGSTOOLSEQUIPMENT" unitRef="GBP" decimals="0">308000000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="CLOSING_BALANCE_ALL" unitRef="GBP" decimals="0">1104500000</uk-gaap-pt:TangibleFixedAssets>
+</xbrl>

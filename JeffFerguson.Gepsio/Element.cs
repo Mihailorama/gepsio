@@ -13,7 +13,9 @@ namespace JeffFerguson.Gepsio
         {
             Unknown,
             Item,
-            Tuple
+            Tuple,
+            DimensionItem,
+            HypercubeItem
         }
 
         //------------------------------------------------------------------------------------
@@ -175,11 +177,16 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void SetSubstitutionGroup(string SubstitutionGroupValue)
         {
+            NamespaceQualifiedValue Value = new NamespaceQualifiedValue(thisSchema.NamespaceManager, SubstitutionGroupValue);
             thisSubstitutionGroup = ElementSubstitutionGroup.Unknown;
-            if (SubstitutionGroupValue.Contains("item") == true)
+            if (Value.Equals("http://www.xbrl.org/2003/instance", "item") == true)
                 thisSubstitutionGroup = ElementSubstitutionGroup.Item;
-            else if (SubstitutionGroupValue.Contains("tuple") == true)
+            else if (Value.Equals("http://www.xbrl.org/2003/instance", "tuple") == true)
                 thisSubstitutionGroup = ElementSubstitutionGroup.Tuple;
+            else if (Value.Equals("http://xbrl.org/2005/xbrldt", "dimensionItem") == true)
+                thisSubstitutionGroup = ElementSubstitutionGroup.DimensionItem;
+            else if (Value.Equals("http://xbrl.org/2005/xbrldt", "hypercubeItem") == true)
+                thisSubstitutionGroup = ElementSubstitutionGroup.HypercubeItem;
             else
             {
 

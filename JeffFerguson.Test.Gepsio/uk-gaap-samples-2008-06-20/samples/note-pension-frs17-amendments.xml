@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:xbrli="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="YEAR_2007">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="YEAR_2006">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2006-01-01</startDate>
+      <endDate>2006-12-31</endDate>
+    </period>
+  </context>
+  <context id="YEAR_2005">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2005-01-01</startDate>
+      <endDate>2005-12-31</endDate>
+    </period>
+  </context>
+  <context id="YEAR_2004">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2004-01-01</startDate>
+      <endDate>2004-12-31</endDate>
+    </period>
+  </context>
+  <context id="YEAR_2003">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2003-01-01</startDate>
+      <endDate>2003-12-31</endDate>
+    </period>
+  </context>
+  <context id="FULL_VALUATION_DATE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2007-09-01</instant>
+    </period>
+  </context>
+  <context id="END_YEAR_2007">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2007-12-31</instant>
+    </period>
+  </context>
+  <context id="END_YEAR_2006">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2006-12-31</instant>
+    </period>
+  </context>
+  <context id="END_YEAR_2005">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2005-12-31</instant>
+    </period>
+  </context>
+  <context id="END_YEAR_2004">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2004-12-31</instant>
+    </period>
+  </context>
+  <context id="END_YEAR_2003">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2003-12-31</instant>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <unit id="PURE_NUMBER">
+    <measure>xbrli:pure</measure>
+  </unit>
+  <uk-gaap-pt:DefinedBenefitScheme-Details>
+    <uk-gaap-pt:DescriptionBenefitScheme contextRef="YEAR_2007">The principal UK pension scheme is the Example Pension Scheme.</uk-gaap-pt:DescriptionBenefitScheme>
+    <uk-gaap-pt:FullPensionSchemeValuation-Details>
+      <uk-gaap-pt:DateLastFullValuation contextRef="FULL_VALUATION_DATE">2007-09-01</uk-gaap-pt:DateLastFullValuation>
+    </uk-gaap-pt:FullPensionSchemeValuation-Details>
+    <uk-gaap-pt:UpdatePensionSchemeValuation-Details>
+      <uk-gaap-pt:DateLastUpdateToValuation contextRef="END_YEAR_2007">2007-12-31</uk-gaap-pt:DateLastUpdateToValuation>
+    </uk-gaap-pt:UpdatePensionSchemeValuation-Details>
+    <uk-gaap-pt:EquitiesHeldInPensionSchemeExpectedRateReturn contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="3">0.077</uk-gaap-pt:EquitiesHeldInPensionSchemeExpectedRateReturn>
+    <uk-gaap-pt:DebtInstrumentsHeldInPensionSchemeExpectedRateReturn contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="3">0.043</uk-gaap-pt:DebtInstrumentsHeldInPensionSchemeExpectedRateReturn>
+    <uk-gaap-pt:PropertyHeldInPensionSchemeExpectedRateReturn contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="3">0.029</uk-gaap-pt:PropertyHeldInPensionSchemeExpectedRateReturn>
+    <uk-gaap-pt:AssumedRateIncreasePensionableSalaries contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="2">0.05</uk-gaap-pt:AssumedRateIncreasePensionableSalaries>
+    <uk-gaap-pt:RateUsedToDiscountSchemeLiabilities contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="3">0.065</uk-gaap-pt:RateUsedToDiscountSchemeLiabilities>
+    <uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">10364</uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation>
+    <uk-gaap-pt:CurrentServiceCostPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">900</uk-gaap-pt:CurrentServiceCostPensionScheme>
+    <uk-gaap-pt:InterestOnLiabilitiesPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">1100</uk-gaap-pt:InterestOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:ActuarialGainLossOnLiabilitiesPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">1900</uk-gaap-pt:ActuarialGainLossOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:BenefitsPaidRelatedToPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">585</uk-gaap-pt:BenefitsPaidRelatedToPensionScheme>
+    <uk-gaap-pt:PastServiceCostPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">300</uk-gaap-pt:PastServiceCostPensionScheme>
+    <uk-gaap-pt:IncreaseDecreaseInLiabilitiesPensionSchemeFromSettlements contextRef="YEAR_2007" unitRef="GBP" decimals="0">500</uk-gaap-pt:IncreaseDecreaseInLiabilitiesPensionSchemeFromSettlements>
+    <uk-gaap-pt:IncreaseDecreaseInLiabilitiesPensionSchemeFromCurtailments contextRef="YEAR_2007" unitRef="GBP" decimals="0">350</uk-gaap-pt:IncreaseDecreaseInLiabilitiesPensionSchemeFromCurtailments>
+    <uk-gaap-pt:FairValueAssetsPensionScheme contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">10709</uk-gaap-pt:FairValueAssetsPensionScheme>
+    <uk-gaap-pt:ExpectedReturnOnAssetsPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">850</uk-gaap-pt:ExpectedReturnOnAssetsPensionScheme>
+    <uk-gaap-pt:ActuarialGainLossOnAssetsPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">1598</uk-gaap-pt:ActuarialGainLossOnAssetsPensionScheme>
+    <uk-gaap-pt:ContributionsToPensionSchemeByEmployer contextRef="YEAR_2007" unitRef="GBP" decimals="0">700</uk-gaap-pt:ContributionsToPensionSchemeByEmployer>
+    <uk-gaap-pt:IncreaseDecreaseInAssetsPensionSchemeFromSettlements contextRef="YEAR_2007" unitRef="GBP" decimals="0">-350</uk-gaap-pt:IncreaseDecreaseInAssetsPensionSchemeFromSettlements>
+    <uk-gaap-pt:NetPensionSchemeAssetLiability contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">805</uk-gaap-pt:NetPensionSchemeAssetLiability>
+    <uk-gaap-pt:SurplusDeficitInPensionScheme contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">1455</uk-gaap-pt:SurplusDeficitInPensionScheme>
+    <uk-gaap-pt:FairValueAssetsInPensionSchemeLessPresentValueFundedObligations contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">345</uk-gaap-pt:FairValueAssetsInPensionSchemeLessPresentValueFundedObligations>
+    <uk-gaap-pt:PresentValueFundedObligationsPensionScheme contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">1364</uk-gaap-pt:PresentValueFundedObligationsPensionScheme>
+    <uk-gaap-pt:PresentValueUnfundedObligations contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">1600</uk-gaap-pt:PresentValueUnfundedObligations>
+    <uk-gaap-pt:PastServiceCostNotPreviouslyRecognisedInBalanceSheet contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">200</uk-gaap-pt:PastServiceCostNotPreviouslyRecognisedInBalanceSheet>
+    <uk-gaap-pt:DeferredTaxLiabilityAssetRelatedToPensionScheme contextRef="END_YEAR_2007" unitRef="GBP" decimals="0">650</uk-gaap-pt:DeferredTaxLiabilityAssetRelatedToPensionScheme>
+    <uk-gaap-pt:GainLossFromPensionSchemeSettlements contextRef="YEAR_2007" unitRef="GBP" decimals="0">100</uk-gaap-pt:GainLossFromPensionSchemeSettlements>
+    <uk-gaap-pt:GainLossFromPensionSchemeCurtailments contextRef="YEAR_2007" unitRef="GBP" decimals="0">175</uk-gaap-pt:GainLossFromPensionSchemeCurtailments>
+    <uk-gaap-pt:ChargeCreditRelatedToPensionSchemeWithinStaffCosts contextRef="YEAR_2007" unitRef="GBP" decimals="0">459</uk-gaap-pt:ChargeCreditRelatedToPensionSchemeWithinStaffCosts>
+    <uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">179</uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:EquitiesHeldInPensionSchemePercentage contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="2">0.34</uk-gaap-pt:EquitiesHeldInPensionSchemePercentage>
+    <uk-gaap-pt:DebtInstrumentsBondsHeldInPensionSchemePercentage contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="2">0.31</uk-gaap-pt:DebtInstrumentsBondsHeldInPensionSchemePercentage>
+    <uk-gaap-pt:PropertyHeldInPensionSchemePercentage contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="1">0.3</uk-gaap-pt:PropertyHeldInPensionSchemePercentage>
+    <uk-gaap-pt:CashHeldInPensionSchemePercentage contextRef="END_YEAR_2007" unitRef="PURE_NUMBER" decimals="2">0.05</uk-gaap-pt:CashHeldInPensionSchemePercentage>
+    <uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme contextRef="YEAR_2007" unitRef="GBP" decimals="0">230</uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme>
+  </uk-gaap-pt:DefinedBenefitScheme-Details>
+  <uk-gaap-pt:DefinedBenefitScheme-Details>
+    <uk-gaap-pt:DescriptionBenefitScheme contextRef="YEAR_2006">The principal UK pension scheme is the Example Pension Scheme.</uk-gaap-pt:DescriptionBenefitScheme>
+    <uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation contextRef="END_YEAR_2006" unitRef="GBP" decimals="0">11749</uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation>
+    <uk-gaap-pt:FairValueAssetsPensionScheme contextRef="END_YEAR_2006" unitRef="GBP" decimals="0">10522</uk-gaap-pt:FairValueAssetsPensionScheme>
+    <uk-gaap-pt:SurplusDeficitInPensionScheme contextRef="END_YEAR_2006" unitRef="GBP" decimals="0">-1227</uk-gaap-pt:SurplusDeficitInPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme contextRef="YEAR_2006" unitRef="GBP" decimals="0">-415</uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme contextRef="YEAR_2006" unitRef="GBP" decimals="0">1600</uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme>
+  </uk-gaap-pt:DefinedBenefitScheme-Details>
+  <uk-gaap-pt:DefinedBenefitScheme-Details>
+    <uk-gaap-pt:DescriptionBenefitScheme contextRef="YEAR_2005">The principal UK pension scheme is the Example Pension Scheme.</uk-gaap-pt:DescriptionBenefitScheme>
+    <uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation contextRef="END_YEAR_2005" unitRef="GBP" decimals="0">11115</uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation>
+    <uk-gaap-pt:FairValueAssetsPensionScheme contextRef="END_YEAR_2005" unitRef="GBP" decimals="0">9916</uk-gaap-pt:FairValueAssetsPensionScheme>
+    <uk-gaap-pt:SurplusDeficitInPensionScheme contextRef="END_YEAR_2005" unitRef="GBP" decimals="0">-1199</uk-gaap-pt:SurplusDeficitInPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme contextRef="YEAR_2005" unitRef="GBP" decimals="0">-50</uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme contextRef="YEAR_2005" unitRef="GBP" decimals="0">300</uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme>
+  </uk-gaap-pt:DefinedBenefitScheme-Details>
+  <uk-gaap-pt:DefinedBenefitScheme-Details>
+    <uk-gaap-pt:DescriptionBenefitScheme contextRef="YEAR_2004">The principal UK pension scheme is the Example Pension Scheme.</uk-gaap-pt:DescriptionBenefitScheme>
+    <uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation contextRef="END_YEAR_2004" unitRef="GBP" decimals="0">10416</uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation>
+    <uk-gaap-pt:FairValueAssetsPensionScheme contextRef="END_YEAR_2004" unitRef="GBP" decimals="0">9100</uk-gaap-pt:FairValueAssetsPensionScheme>
+    <uk-gaap-pt:SurplusDeficitInPensionScheme contextRef="END_YEAR_2004" unitRef="GBP" decimals="0">-1316</uk-gaap-pt:SurplusDeficitInPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme contextRef="YEAR_2004" unitRef="GBP" decimals="0">561</uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme contextRef="YEAR_2004" unitRef="GBP" decimals="0">-1078</uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme>
+  </uk-gaap-pt:DefinedBenefitScheme-Details>
+  <uk-gaap-pt:DefinedBenefitScheme-Details>
+    <uk-gaap-pt:DescriptionBenefitScheme contextRef="YEAR_2003">The principal UK pension scheme is the Example Pension Scheme.</uk-gaap-pt:DescriptionBenefitScheme>
+    <uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation contextRef="END_YEAR_2003" unitRef="GBP" decimals="0">10200</uk-gaap-pt:PresentValueLiabilitiesPensionSchemeDefinedBenefitObligation>
+    <uk-gaap-pt:FairValueAssetsPensionScheme contextRef="END_YEAR_2003" unitRef="GBP" decimals="0">8850</uk-gaap-pt:FairValueAssetsPensionScheme>
+    <uk-gaap-pt:SurplusDeficitInPensionScheme contextRef="END_YEAR_2003" unitRef="GBP" decimals="0">-1350</uk-gaap-pt:SurplusDeficitInPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme contextRef="YEAR_2003" unitRef="GBP" decimals="0">-697</uk-gaap-pt:ExperienceGainLossArisingOnLiabilitiesPensionScheme>
+    <uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme contextRef="YEAR_2003" unitRef="GBP" decimals="0">2777</uk-gaap-pt:ExperienceGainLossArisingOnAssetsPensionScheme>
+  </uk-gaap-pt:DefinedBenefitScheme-Details>
+</xbrl>

@@ -101,6 +101,16 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
+        public XmlNamespaceManager NamespaceManager
+        {
+            get
+            {
+                return thisNamespaceManager;
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
         internal XbrlSchema(XbrlFragment ContainingXbrlFragment, string SchemaFilename, string BaseDirectory)
         {
             thisContainingXbrlFragment = ContainingXbrlFragment;
@@ -167,6 +177,9 @@ namespace JeffFerguson.Gepsio
                 throw new XbrlException(MessageBuilder.ToString());
             }
             thisTargetNamespace = thisSchemaNode.Attributes["targetNamespace"].Value;
+            foreach (XmlAttribute CurrentAttribute in thisSchemaNode.Attributes)
+                if (CurrentAttribute.Prefix == "xmlns")
+                    thisNamespaceManager.AddNamespace(CurrentAttribute.LocalName, CurrentAttribute.Value);
             thisUriPrefixDictionary = new UriPrefixDictionary();
             thisUriPrefixDictionary.Load(thisSchemaNode);
         }

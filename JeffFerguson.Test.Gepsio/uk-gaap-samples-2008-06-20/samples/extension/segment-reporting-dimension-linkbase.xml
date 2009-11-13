@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+  <arcroleRef xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member" arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member"/>
+  <roleRef xlink:type="simple" xlink:href="../../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd#Dimension-BusinessSegments" roleURI="http://www.xbrl.org/uk/role/DimensionDomain-BusinessSegments"/>
+  <roleRef xlink:type="simple" xlink:href="../../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd#Dimension-GeographicSegments" roleURI="http://www.xbrl.org/uk/role/DimensionDomain-GeographicSegments"/>
+  <definitionLink xlink:type="extended" xlink:role="http://www.xbrl.org/uk/role/DimensionDomain-BusinessSegments">
+    <loc xlink:type="locator" xlink:href="../../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd#uk-gaap-pt_TotalBusinessSegments" xlink:label="uk-gaap-pt_TotalBusinessSegments"/>
+    <loc xlink:type="locator" xlink:href="segment-reporting-dimension-schema.xsd#example_BeveragesBusinessSegment" xlink:label="example_BeveragesBusinessSegment"/>
+    <loc xlink:type="locator" xlink:href="segment-reporting-dimension-schema.xsd#example_ConfectionaryBusinessSegment" xlink:label="example_ConfectionaryBusinessSegment"/>
+    <definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="uk-gaap-pt_TotalBusinessSegments" xlink:to="example_BeveragesBusinessSegment" order="3" use="optional" />
+    <definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="uk-gaap-pt_TotalBusinessSegments" xlink:to="example_ConfectionaryBusinessSegment" order="4" use="optional" />
+  </definitionLink>
+  <definitionLink xlink:type="extended" xlink:role="http://www.xbrl.org/uk/role/DimensionDomain-GeographicSegments">
+    <loc xlink:type="locator" xlink:href="../../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd#uk-gaap-pt_TotalGeographicSegments" xlink:label="uk-gaap-pt_TotalGeographicSegments"/>
+    <loc xlink:type="locator" xlink:href="segment-reporting-dimension-schema.xsd#example_UKGeographicSegment" xlink:label="example_UKGeographicSegment"/>
+    <loc xlink:type="locator" xlink:href="segment-reporting-dimension-schema.xsd#example_RestOfEuropeGeographicSegment" xlink:label="example_RestOfEuropeGeographicSegment"/>
+    <loc xlink:type="locator" xlink:href="segment-reporting-dimension-schema.xsd#example_RestOfWorldGeographicSegment" xlink:label="example_RestOfWorldGeographicSegment"/>
+    <definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="uk-gaap-pt_TotalGeographicSegments" xlink:to="example_UKGeographicSegment" order="3" use="optional" />
+    <definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="uk-gaap-pt_TotalGeographicSegments" xlink:to="example_RestOfEuropeGeographicSegment" order="4" use="optional" />
+    <definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="uk-gaap-pt_TotalGeographicSegments" xlink:to="example_RestOfWorldGeographicSegment" order="5" use="optional" />
+  </definitionLink>
+</linkbase>

@@ -71,6 +71,9 @@ namespace JeffFerguson.Gepsio
                 case "xbrli:tokenItemType":
                     TypeToReturn = new TokenItemType();
                     break;
+                case "xbrli:stringItemType":
+                    TypeToReturn = new StringItemType();
+                    break;
                 default:
                     TypeToReturn = null;
                     break;

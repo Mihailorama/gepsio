@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15"
+      xmlns:xbrldi="http://xbrl.org/2006/xbrldi">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR_GROUP">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:ConsolidationDimension">uk-gaap-pt:Group</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR_JOINTVENTURE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:ConsolidationDimension">uk-gaap-pt:TotalJoint-ventures</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR_GROUP-JOINTVENTURE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:ConsolidationDimension">uk-gaap-pt:TotalGroupJoint-ventures</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CURRENT_YEAR_GROUP-JOINTVENTURE" unitRef="GBP" decimals="-6">320000000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CURRENT_YEAR_JOINTVENTURE" unitRef="GBP" decimals="-6">120000000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">200000000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:CostSales contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">120000000</uk-gaap-pt:CostSales>
+  <uk-gaap-pt:GrossProfitLoss contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">80000000</uk-gaap-pt:GrossProfitLoss>
+  <uk-gaap-pt:DistributionCosts contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">10000000</uk-gaap-pt:DistributionCosts>
+  <uk-gaap-pt:AdministrativeExpenses contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">10000000</uk-gaap-pt:AdministrativeExpenses>
+  <uk-gaap-pt:OtherOperatingIncome contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">10000000</uk-gaap-pt:OtherOperatingIncome>
+  <uk-gaap-pt:InterestPayableSimilarCharges contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">3000000</uk-gaap-pt:InterestPayableSimilarCharges>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">67000000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax>
+  <uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">21000000</uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesAfterTax contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">46000000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesAfterTax>
+  <uk-gaap-pt:MinorityInterests contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">5000000</uk-gaap-pt:MinorityInterests>
+  <uk-gaap-pt:ProfitLossForPeriodBeforeDividendAppropriations contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">41000000</uk-gaap-pt:ProfitLossForPeriodBeforeDividendAppropriations>
+  <uk-gaap-pt:GrossDividendPaymentAllShares contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">15000000</uk-gaap-pt:GrossDividendPaymentAllShares>
+  <uk-gaap-pt:RetainedProfitLossForPeriod-TransferredToFromReserves contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="-6">26000000</uk-gaap-pt:RetainedProfitLossForPeriod-TransferredToFromReserves>
+  <uk-gaap-pt:EarningsLossPerOrdinaryShare-Details>
+    <uk-gaap-pt:TypeOrdinaryShare contextRef="CURRENT_YEAR_GROUP">Ordinary Share</uk-gaap-pt:TypeOrdinaryShare>
+    <uk-gaap-pt:DilutedEPS contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="2">0.31</uk-gaap-pt:DilutedEPS>
+    <uk-gaap-pt:BasicEPS contextRef="CURRENT_YEAR_GROUP" unitRef="GBP" decimals="2">0.35</uk-gaap-pt:BasicEPS>
+  </uk-gaap-pt:EarningsLossPerOrdinaryShare-Details>
+</xbrl>

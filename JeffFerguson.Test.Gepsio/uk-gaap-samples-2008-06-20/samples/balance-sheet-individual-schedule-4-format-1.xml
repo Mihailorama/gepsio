@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <instant>2007-12-31</instant>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:TangibleFixedAssets contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">600000</uk-gaap-pt:TangibleFixedAssets>
+  <uk-gaap-pt:IntangibleFixedAssets contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">200000</uk-gaap-pt:IntangibleFixedAssets>
+  <uk-gaap-pt:FixedAssets contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">800000</uk-gaap-pt:FixedAssets>
+  <uk-gaap-pt:StocksInventory contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">100000</uk-gaap-pt:StocksInventory>
+  <uk-gaap-pt:Debtors contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">100000</uk-gaap-pt:Debtors>
+  <uk-gaap-pt:CashBankInHand contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">100000</uk-gaap-pt:CashBankInHand>
+  <uk-gaap-pt:CurrentAssets contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">300000</uk-gaap-pt:CurrentAssets>
+  <uk-gaap-pt:CreditorsDueWithinOneYearTotalCurrentLiabilities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">140000</uk-gaap-pt:CreditorsDueWithinOneYearTotalCurrentLiabilities>
+  <uk-gaap-pt:NetCurrentAssetsLiabilities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">160000</uk-gaap-pt:NetCurrentAssetsLiabilities>
+  <uk-gaap-pt:TotalAssetsLessCurrentLiabilities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">960000</uk-gaap-pt:TotalAssetsLessCurrentLiabilities>
+  <uk-gaap-pt:CreditorsDueAfterOneYearTotalNon-currentLiabilities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">260000</uk-gaap-pt:CreditorsDueAfterOneYearTotalNon-currentLiabilities>
+  <uk-gaap-pt:NetAssetsLiabilityExcludingPensionAssetLiability contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">700000</uk-gaap-pt:NetAssetsLiabilityExcludingPensionAssetLiability>
+  <uk-gaap-pt:CalledUpShareCapital contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">100000</uk-gaap-pt:CalledUpShareCapital>
+  <uk-gaap-pt:SharePremiumAccount contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">300000</uk-gaap-pt:SharePremiumAccount>
+  <uk-gaap-pt:ProfitLossAccountReserve contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">300000</uk-gaap-pt:ProfitLossAccountReserve>
+  <uk-gaap-pt:ShareholderFunds contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">700000</uk-gaap-pt:ShareholderFunds>
+</xbrl>
