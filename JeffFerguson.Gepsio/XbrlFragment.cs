@@ -788,24 +788,24 @@ namespace JeffFerguson.Gepsio
             if (SummationConceptFact == null)
                 //throw new XbrlException(AssemblyResources.BuildMessage("CannotFindFactForElement", SummationConceptElement.Id));
                 return;
-            decimal SummationConceptTruncatedValue = SummationConceptFact.GetValueAfterApplyingTruncation();
-            decimal ContributingConceptTruncatedValueTotal = 0;
-            foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
-            {
-                Element ContributingConceptElement = LocateElement(CurrentLocator);
-                Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
-                if (ContributingConceptFact == null)
-                    return;
-                decimal ContributingConceptTruncatedValue = ContributingConceptFact.GetValueAfterApplyingTruncation();
-                ContributingConceptTruncatedValueTotal += ContributingConceptTruncatedValue;
-            }
-            if (SummationConceptTruncatedValue != ContributingConceptTruncatedValueTotal)
-            {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("SummationConceptError");
-                MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptTruncatedValue, ContributingConceptTruncatedValueTotal);
-                throw new XbrlException(MessageBuilder.ToString());
-            }
+            //decimal SummationConceptTruncatedValue = SummationConceptFact.GetValueAfterApplyingTruncation();
+            //decimal ContributingConceptTruncatedValueTotal = 0;
+            //foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
+            //{
+            //    Element ContributingConceptElement = LocateElement(CurrentLocator);
+            //    Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
+            //    if (ContributingConceptFact == null)
+            //        return;
+            //    decimal ContributingConceptTruncatedValue = ContributingConceptFact.GetValueAfterApplyingTruncation();
+            //    ContributingConceptTruncatedValueTotal += ContributingConceptTruncatedValue;
+            //}
+            //if (SummationConceptTruncatedValue != ContributingConceptTruncatedValueTotal)
+            //{
+            //    StringBuilder MessageBuilder = new StringBuilder();
+            //    string StringFormat = AssemblyResources.GetName("SummationConceptError");
+            //    MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptTruncatedValue, ContributingConceptTruncatedValueTotal);
+            //    throw new XbrlException(MessageBuilder.ToString());
+            //}
         }
 
         //===============================================================================

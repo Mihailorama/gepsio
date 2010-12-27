@@ -24,6 +24,9 @@ namespace JeffFerguson.Gepsio
         private bool thisNilSpecified;
         private AnyType thisItemType;
         private XbrlSchema thisSchema;
+        private bool thisInfinitePrecision;
+        private bool thisInfiniteDecimals;
+        private bool thisPrecisionInferred;
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
@@ -85,11 +88,41 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
+        public bool InfinitePrecision
+        {
+            get
+            {
+                return thisInfinitePrecision;
+            }
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        public bool PrecisionInferred
+        {
+            get
+            {
+                return thisPrecisionInferred;
+            }
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
         public int Decimals
         {
             get
             {
                 return thisDecimals;
+            }
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        public bool InfiniteDecimals
+        {
+            get
+            {
+                return thisInfiniteDecimals;
             }
         }
 
@@ -212,22 +245,35 @@ namespace JeffFerguson.Gepsio
             thisContextRefName = XmlUtilities.GetAttributeValue(thisFactNode, "contextRef");
             thisUnitRefName = XmlUtilities.GetAttributeValue(thisFactNode, "unitRef");
 
-            thisPrecisionAttributeValue = XmlUtilities.GetAttributeValue(thisFactNode, "precision");
-            if (thisPrecisionAttributeValue.Length > 0)
-            {
-                if (thisPrecisionAttributeValue.Equals("INF") == true)
-                    thisPrecision = 0;
-                else
-                    thisPrecision = Convert.ToInt32(thisPrecisionAttributeValue);
-            }
-
             thisDecimalsAttributeValue = XmlUtilities.GetAttributeValue(thisFactNode, "decimals");
             if (thisDecimalsAttributeValue.Length > 0)
             {
                 if (thisDecimalsAttributeValue.Equals("INF") == true)
+                {
+                    thisInfiniteDecimals = true;
                     thisDecimals = 0;
+                }
                 else
+                {
+                    thisInfiniteDecimals = false;
                     thisDecimals = Convert.ToInt32(thisDecimalsAttributeValue);
+                }
+            }
+
+            thisPrecisionAttributeValue = XmlUtilities.GetAttributeValue(thisFactNode, "precision");
+            if (thisPrecisionAttributeValue.Length > 0)
+            {
+                thisPrecisionInferred = false;
+                if (thisPrecisionAttributeValue.Equals("INF") == true)
+                {
+                    thisInfinitePrecision = true;
+                    thisPrecision = 0;
+                }
+                else
+                {
+                    thisInfinitePrecision = false;
+                    thisPrecision = Convert.ToInt32(thisPrecisionAttributeValue);
+                }
             }
 
             thisId = XmlUtilities.GetAttributeValue(thisFactNode, "id");
@@ -242,16 +288,24 @@ namespace JeffFerguson.Gepsio
                 SetItemType(SchemaElement.TypeName);
                 thisItemType.ValueAsString = thisValue;
             }
+
+            if (thisPrecisionAttributeValue.Length == 0)
+                InferPrecision();
         }
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal decimal GetValueAfterApplyingTruncation()
+        private void InferPrecision()
         {
-            if (PrecisionSpecified == true)
-                return thisItemType.GetValueAfterApplyingPrecisionTruncation(this.Precision);
-            else
-                return thisItemType.GetValueAfterApplyingDecimalsTruncation(this.Decimals);
+            thisPrecisionInferred = true;
+            int CalculationPart1Value = GetNumberOfDigitsToLeftOfDecimalPoint();
+            if (CalculationPart1Value == 0)
+                CalculationPart1Value = GetNegativeNumberOfLeadingZerosToRightOfDecimalPoint();
+            int CalculationPart2Value = GetExponentValue();
+            int CalculationPart3Value = thisDecimals;
+            thisPrecision = CalculationPart1Value + CalculationPart2Value + CalculationPart3Value;
+            if (thisPrecision < 0)
+                thisPrecision = 0;
         }
 
         //------------------------------------------------------------------------------------
@@ -369,6 +423,103 @@ namespace JeffFerguson.Gepsio
             if (OtherFact.UnitRef == null)
                 return true;
             return this.UnitRef.StructureEquals(OtherFact.UnitRef);
+        }
+
+        /// <summary>
+        /// Calculates the number of digits to the left of the decimal point. Leading zeros are not counted.
+        /// </summary>
+        /// <returns>
+        /// The number of digits to the left of the decimal point. Leading zeros are not counted.
+        /// </returns>
+        private int GetNumberOfDigitsToLeftOfDecimalPoint()
+        {
+            if (thisValue == null)
+                return 0;
+            string[] ParsedValue = ParseValueIntoComponentParts();
+            string WithoutLeadingZeros = ParsedValue[0].TrimStart(new char[] { '0' });
+            return WithoutLeadingZeros.Length;
+        }
+
+        /// <summary>
+        /// Calculates the negative number of leading zeros to the right of the decimal point.
+        /// </summary>
+        /// <returns>
+        /// The negative number of leading zeros to the right of the decimal point.
+        /// </returns>
+        private int GetNegativeNumberOfLeadingZerosToRightOfDecimalPoint()
+        {
+            if (thisValue == null)
+                return 0;
+            string[] ParsedValue = ParseValueIntoComponentParts();
+            string ValueToTheRightOfTheDecimal = ParsedValue[1];
+            if (string.IsNullOrEmpty(ValueToTheRightOfTheDecimal))
+                return 0;
+            int NumberOfLeadingZeros = 0;
+            int Index = 0;
+            while (ValueToTheRightOfTheDecimal[Index] == '0' && Index < ValueToTheRightOfTheDecimal.Length)
+            {
+                NumberOfLeadingZeros++;
+                Index++;
+            }
+            return -NumberOfLeadingZeros;
+        }
+
+        /// <summary>
+        /// Calculates the value of the exponent in the lexical representation of the fact value.
+        /// </summary>
+        /// <returns>
+        /// The value of the exponent in the lexical representation of the fact value.
+        /// </returns>
+        private int GetExponentValue()
+        {
+            if (thisValue == null)
+                return 0;
+            string[] ParsedValue = ParseValueIntoComponentParts();
+            if (string.IsNullOrEmpty(ParsedValue[2]))
+                return 0;
+            int ExponentValue;
+            bool Success = int.TryParse(ParsedValue[2], out ExponentValue);
+            if(Success == true)
+                return ExponentValue;
+            return 0;
+        }
+
+        /// <summary>
+        /// <para>
+        /// Parses the fact value into three main parts:
+        /// </para>
+        /// <list>
+        /// <item>
+        /// Values to the left of the decimal point
+        /// </item>
+        /// <item>
+        /// Values to the right of the decimal point
+        /// </item>
+        /// <item>
+        /// Exponent value
+        /// </item>
+        /// </list>
+        /// </summary>
+        /// <para>
+        /// Some of these values may be empty if the original value did not carry all of these components.
+        /// </para>
+        /// <returns>A string array of length 3. Item 0 contains the value before the decimal point,
+        /// item 1 contains the value after the decimal point, and item 2 contains the exponent value. If any
+        /// of these elements are not available in the original value, then their individual value within the
+        /// array will be empty.</returns>
+        private string[] ParseValueIntoComponentParts()
+        {
+            string[] ArrayToReturn = new string[3];
+
+            string[] StringsAfterExponentSplit = thisValue.Split(new char[] { 'e', 'E' });
+            if (StringsAfterExponentSplit.Length == 2)
+                ArrayToReturn[2] = StringsAfterExponentSplit[1];
+            string NumericValue = StringsAfterExponentSplit[0];
+            string[] StringsAfterDecimalSplit = NumericValue.Split(new char[] { '.' });
+            ArrayToReturn[0] = StringsAfterDecimalSplit[0];
+            if (StringsAfterDecimalSplit.Length == 2)
+                ArrayToReturn[1] = StringsAfterDecimalSplit[1];
+            return ArrayToReturn;
         }
     }
 }

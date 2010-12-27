@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConformanceTest.cs" />
+    <Compile Include="InferPrecisionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestVariation.cs" />
     <Compile Include="UkGaapSamples20080620UnitTest.cs" />
@@ -703,6 +704,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="InferPrecisionTestDocuments\Example13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InferPrecisionTestDocuments\Example13Row1.xbrl" />
+    <None Include="InferPrecisionTestDocuments\Example13Row2.xbrl" />
+    <None Include="InferPrecisionTestDocuments\Example13Row3.xbrl" />
+    <None Include="InferPrecisionTestDocuments\Example13Row4.xbrl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InferPrecisionTestDocuments\Example13Row5.xbrl" />
+    <None Include="InferPrecisionTestDocuments\Example13Row6.xbrl" />
+    <None Include="InferPrecisionTestDocuments\Example13Row7.xbrl" />
     <None Include="uk-gaap-samples-2008-06-20\samples\a.qvw" />
     <None Include="uk-gaap-samples-2008-06-20\samples\extension\segment-reporting-dimension-schema.xsd" />
     <None Include="uk-gaap-samples-2008-06-20\taxonomy\UK-GAAP-2008-01-15\monolithic\2008-01-15\uk-gaap-pt-2008-01-15.xsd" />
