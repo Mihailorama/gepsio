@@ -136,5 +136,23 @@ namespace JeffFerguson.Gepsio
             }
             return null;
         }
+
+        /// <summary>
+        /// Find the calculation arc that is referenced by the given locator.
+        /// </summary>
+        /// <remarks>
+        /// The "to" link is searched.
+        /// </remarks>
+        /// <param name="SourceLocator">The locator used as the source of the search.</param>
+        /// <returns>The CalculationArc referenced by the Locator, or null if a calculation arc cannot be found.</returns>
+        internal CalculationArc GetCalculationArc(Locator SourceLocator)
+        {
+            foreach (CalculationArc CurrentCalculationArc in CalculationArcs)
+            {
+                if (CurrentCalculationArc.ToId.Equals(SourceLocator.HrefResourceId) == true)
+                    return CurrentCalculationArc;
+            }
+            return null;
+        }
     }
 }

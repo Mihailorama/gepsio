@@ -340,7 +340,7 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fact {0} is based on an element that is named as the summation concept in a calculation link. The fact&apos;s value, after precision or decimals truncation, is {1}; however, the sum of the values of the contributing concepts, after precision or decimals truncation, is {2}. These values do not match; therefore, the rule specified by the fact&apos;s calculation link has been broken..
+        ///   Looks up a localized string similar to Fact {0} is based on an element that is named as the summation concept in a calculation link. The fact&apos;s value, after rounding, is {1}; however, the sum of the values of the contributing concepts, after rounding, is {2}. These values do not match; therefore, the rule specified by the fact&apos;s calculation link has been broken..
         /// </summary>
         internal static string SummationConceptError {
             get {

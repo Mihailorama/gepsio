@@ -772,12 +772,12 @@ namespace JeffFerguson.Gepsio
         private void ValidateSummationConcepts(CalculationLink CurrentCalculationLink)
         {
             foreach (SummationConcept CurrentSummationConcept in CurrentCalculationLink.SummationConcepts)
-                ValidateSummationConcept(CurrentSummationConcept);
+                ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept);
         }
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ValidateSummationConcept(SummationConcept CurrentSummationConcept)
+        private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept)
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
             Fact SummationConceptFact = LocateFact(SummationConceptElement);
@@ -788,24 +788,29 @@ namespace JeffFerguson.Gepsio
             if (SummationConceptFact == null)
                 //throw new XbrlException(AssemblyResources.BuildMessage("CannotFindFactForElement", SummationConceptElement.Id));
                 return;
-            //decimal SummationConceptTruncatedValue = SummationConceptFact.GetValueAfterApplyingTruncation();
-            //decimal ContributingConceptTruncatedValueTotal = 0;
-            //foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
-            //{
-            //    Element ContributingConceptElement = LocateElement(CurrentLocator);
-            //    Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
-            //    if (ContributingConceptFact == null)
-            //        return;
-            //    decimal ContributingConceptTruncatedValue = ContributingConceptFact.GetValueAfterApplyingTruncation();
-            //    ContributingConceptTruncatedValueTotal += ContributingConceptTruncatedValue;
-            //}
-            //if (SummationConceptTruncatedValue != ContributingConceptTruncatedValueTotal)
-            //{
-            //    StringBuilder MessageBuilder = new StringBuilder();
-            //    string StringFormat = AssemblyResources.GetName("SummationConceptError");
-            //    MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptTruncatedValue, ContributingConceptTruncatedValueTotal);
-            //    throw new XbrlException(MessageBuilder.ToString());
-            //}
+            double SummationConceptRoundedValue = SummationConceptFact.RoundedValue;
+            double ContributingConceptRoundedValueTotal = 0;
+            foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
+            {
+                CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
+                Element ContributingConceptElement = LocateElement(CurrentLocator);
+                Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
+                if (ContributingConceptFact != null)
+                {
+                    double ContributingConceptRoundedValue = ContributingConceptFact.RoundedValue;
+                    if (ContributingConceptCalculationArc.Weight != (decimal)(1.0))
+                        ContributingConceptRoundedValue = ContributingConceptRoundedValue * (double)(ContributingConceptCalculationArc.Weight);
+                    ContributingConceptRoundedValueTotal += ContributingConceptRoundedValue;
+                }
+            }
+            ContributingConceptRoundedValueTotal = SummationConceptFact.Round(ContributingConceptRoundedValueTotal);
+            if (SummationConceptRoundedValue != ContributingConceptRoundedValueTotal)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("SummationConceptError");
+                MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptRoundedValue, ContributingConceptRoundedValueTotal);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
         }
 
         //===============================================================================

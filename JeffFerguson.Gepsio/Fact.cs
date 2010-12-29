@@ -27,6 +27,8 @@ namespace JeffFerguson.Gepsio
         private bool thisInfinitePrecision;
         private bool thisInfiniteDecimals;
         private bool thisPrecisionInferred;
+        private bool thisRoundedValueCalculated;
+        private double thisRoundedValue;
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
@@ -162,21 +164,6 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        public decimal NumericValue
-        {
-            get
-            {
-                if (this.Type.NumericType == false)
-                    return (decimal)0.0;
-                if (PrecisionSpecified == true)
-                    return this.Type.GetValueAfterApplyingPrecisionTruncation(this.Precision);
-                else
-                    return this.Type.GetValueAfterApplyingDecimalsTruncation(this.Decimals);
-            }
-        }
-
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
         public string Namespace
         {
             get
@@ -235,6 +222,23 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        /// <summary>
+        /// Returns the rounded value of the fact's actual value. The rounded value is calculated from the precision
+        /// (or imferred precision) of the fact's actual value.
+        /// </summary>
+        public double RoundedValue
+        {
+            get
+            {
+                if (thisRoundedValueCalculated == false)
+                {
+                    thisRoundedValue = GetRoundedValue();
+                    thisRoundedValueCalculated = true;
+                }
+                return thisRoundedValue;
+            }
+        }
+
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal Fact(XbrlFragment ParentFragment, XmlNode FactNode)
@@ -244,6 +248,7 @@ namespace JeffFerguson.Gepsio
             thisName = thisFactNode.LocalName;
             thisContextRefName = XmlUtilities.GetAttributeValue(thisFactNode, "contextRef");
             thisUnitRefName = XmlUtilities.GetAttributeValue(thisFactNode, "unitRef");
+            thisRoundedValueCalculated = false;
 
             thisDecimalsAttributeValue = XmlUtilities.GetAttributeValue(thisFactNode, "decimals");
             if (thisDecimalsAttributeValue.Length > 0)
@@ -456,10 +461,18 @@ namespace JeffFerguson.Gepsio
                 return 0;
             int NumberOfLeadingZeros = 0;
             int Index = 0;
-            while (ValueToTheRightOfTheDecimal[Index] == '0' && Index < ValueToTheRightOfTheDecimal.Length)
+            while (Index < ValueToTheRightOfTheDecimal.Length)
             {
-                NumberOfLeadingZeros++;
-                Index++;
+                if (ValueToTheRightOfTheDecimal[Index] == '0')
+                {
+                    NumberOfLeadingZeros++;
+                    Index++;
+                }
+                else
+                {
+                    Index = ValueToTheRightOfTheDecimal.Length; 
+                    break;
+                }
             }
             return -NumberOfLeadingZeros;
         }
@@ -509,9 +522,37 @@ namespace JeffFerguson.Gepsio
         /// array will be empty.</returns>
         private string[] ParseValueIntoComponentParts()
         {
+            return ParseValueIntoComponentParts(thisValue);
+        }
+
+        /// <summary>
+        /// <para>
+        /// Parses a string representation of a fact value into three main parts:
+        /// </para>
+        /// <list>
+        /// <item>
+        /// Values to the left of the decimal point
+        /// </item>
+        /// <item>
+        /// Values to the right of the decimal point
+        /// </item>
+        /// <item>
+        /// Exponent value
+        /// </item>
+        /// </list>
+        /// </summary>
+        /// <para>
+        /// Some of these values may be empty if the original value did not carry all of these components.
+        /// </para>
+        /// <returns>A string array of length 3. Item 0 contains the value before the decimal point,
+        /// item 1 contains the value after the decimal point, and item 2 contains the exponent value. If any
+        /// of these elements are not available in the original value, then their individual value within the
+        /// array will be empty.</returns>
+        private string[] ParseValueIntoComponentParts(string OriginalValue)
+        {
             string[] ArrayToReturn = new string[3];
 
-            string[] StringsAfterExponentSplit = thisValue.Split(new char[] { 'e', 'E' });
+            string[] StringsAfterExponentSplit = OriginalValue.Split(new char[] { 'e', 'E' });
             if (StringsAfterExponentSplit.Length == 2)
                 ArrayToReturn[2] = StringsAfterExponentSplit[1];
             string NumericValue = StringsAfterExponentSplit[0];
@@ -520,6 +561,57 @@ namespace JeffFerguson.Gepsio
             if (StringsAfterDecimalSplit.Length == 2)
                 ArrayToReturn[1] = StringsAfterDecimalSplit[1];
             return ArrayToReturn;
+        }
+
+        private double GetRoundedValue()
+        {
+            double RoundedValue = Convert.ToDouble(thisValue);
+            return Round(RoundedValue);
+        }
+
+        /// <summary>
+        ///  Round a given value using the Precision already available in the fact.
+        /// </summary>
+        /// <param name="OriginalValue"></param>
+        /// <returns></returns>
+        public double Round(double OriginalValue)
+        {
+            double RoundedValue = OriginalValue;
+            if (InfinitePrecision == false)
+            {
+                // Break the original value into three parts: (1) values to the left of the decimal, (2) values to the right of the decimal,
+                // and (3) the exponent value. Remember that one or more of these, particularly parts (2) and (3), may be empty or null.
+                string OriginalValueAsString = OriginalValue.ToString();
+                string[] ComponentParts = ParseValueIntoComponentParts(OriginalValueAsString);
+                ComponentParts[0] = ComponentParts[0].TrimStart(new char[] { '0' });
+                if (string.IsNullOrEmpty(ComponentParts[1]) == false)
+                    ComponentParts[1] = ComponentParts[1].TrimEnd(new char[] { '0' });
+                if (Precision > ComponentParts[0].Length)
+                {
+                    // In this case, the Precision value is greater than the length of the portion of the value to the left of the decimal.
+                    // An example of this may be a precision of 5 and a value of "123.456". The length of the portion of the value to the left
+                    // of the decimal ("123") is 3 and the precision is 5. In this situation, we will need to round to a number of places
+                    // to the right of the decimal. Since the precision is 5, and since three of those five will be used for the left of the decimal,
+                    // then we are left with two places to round to the right of the decimal.
+                    RoundedValue = Math.Round(RoundedValue, Precision - ComponentParts[0].Length);
+                }
+                else if (Precision == ComponentParts[0].Length)
+                {
+                    // In this case, the Precision value is equal to the length of the portion of the value to the left of the decimal. In this case,
+                    // we'll simply round to the nearest integer.
+                    RoundedValue = Math.Round(RoundedValue);
+                }
+                else
+                {
+                    // In this case, the Precision value is less than the length of the portion of the value to the left of the decimal. We need, therefore,
+                    // to round a whole number -- that part of the number stored as the first component part.
+                    double PowerOfTen = Math.Pow(10.0, (double)(ComponentParts[0].Length - Precision));
+                    RoundedValue = RoundedValue / PowerOfTen;
+                    RoundedValue = Math.Round(RoundedValue);
+                    RoundedValue = RoundedValue * PowerOfTen;
+                }
+            }
+            return RoundedValue;
         }
     }
 }
