@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jeff Ferguson")]
 [assembly: AssemblyProduct("Gepsio")]
-[assembly: AssemblyCopyright("Copyright © Jeff Ferguson 2009")]
+[assembly: AssemblyCopyright("Copyright © Jeff Ferguson 2009-2010")]
 [assembly: AssemblyTrademark("http://gepsio.codeplex.com")]
 [assembly: AssemblyCulture("")]
 
