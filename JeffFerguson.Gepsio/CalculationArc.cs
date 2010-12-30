@@ -9,7 +9,7 @@ namespace JeffFerguson.Gepsio
 
         private string thisFromId;
         private string thisToId;
-        private int thisOrder;
+        private decimal thisOrder;
         private decimal thisWeight;
         private Locator thisFromLocator;
         private Locator thisToLocator;
@@ -64,7 +64,7 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        public int Order
+        public decimal Order
         {
             get
             {
@@ -89,7 +89,7 @@ namespace JeffFerguson.Gepsio
             thisFromId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "from");
             thisToId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "to");
             string OrderString = XmlUtilities.GetAttributeValue(CalculationArcNode, "order");
-            thisOrder = Convert.ToInt32(OrderString);
+            thisOrder = Convert.ToDecimal(OrderString);
             string WeightString = XmlUtilities.GetAttributeValue(CalculationArcNode, "weight");
             thisWeight = Convert.ToDecimal(WeightString);
         }

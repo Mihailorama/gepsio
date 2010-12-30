@@ -74,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestVariation.cs" />
     <Compile Include="UkGaapSamples20080620UnitTest.cs" />
+    <Compile Include="WorkItemsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
@@ -100,6 +101,11 @@
     <Content Include="uk-gaap-samples-2008-06-20\taxonomy\UK-GAAP-2008-01-15\monolithic\2008-01-15\uk-gaap-pt-2008-01-15-labels.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\taxonomy\UK-GAAP-2008-01-15\monolithic\2008-01-15\uk-gaap-pt-2008-01-15-presentation.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\taxonomy\UK-GAAP-2008-01-15\monolithic\2008-01-15\uk-gaap-pt-2008-01-15-references.xml" />
+    <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231.xml" />
+    <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_cal.xml" />
+    <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_def.xml" />
+    <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_lab.xml" />
+    <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_pre.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-01-IdScopeValid.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-02-IdScopeOutOfScope.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-03-IdScopePeriodDiff.xml" />
@@ -732,6 +738,9 @@
     <None Include="uk-gaap-samples-2008-06-20\UK-GAAP-Taxonomy-Scope-15May2008.doc" />
     <None Include="uk-gaap-samples-2008-06-20\UK-GAAP-Taxonomy-Style-Guide-15May2008.doc" />
     <None Include="uk-gaap-samples-2008-06-20\UK-Taxonomies-Intro-15May2008.doc" />
+    <None Include="WorkItemsInput\WorkItem3828\cmi-20081231.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\.#303-05-ForeverSchema.xsd.1.1" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\303-05-ForeverElementewithInstancePeriodTypeReportedasForever.xbrl" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\303-05-ForeverSchema.xsd" />
