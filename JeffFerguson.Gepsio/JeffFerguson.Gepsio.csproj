@@ -165,7 +165,6 @@
     <Compile Include="Token.cs" />
     <Compile Include="TokenItemType.cs" />
     <Compile Include="Unit.cs" />
-    <Compile Include="UriPrefixDictionary.cs" />
     <Compile Include="WhiteSpaceFacet.cs" />
     <Compile Include="WhiteSpaceFacetDefinition.cs" />
     <Compile Include="XbrlDocument.cs" />

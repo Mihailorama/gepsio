@@ -100,11 +100,11 @@ namespace JeffFerguson.Test.Gepsio
             {
                 VariationException = e;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // This is a good place to catch non-XBRL exceptions, such as null reference
                 // exceptions, during debugging.
-                throw e;
+                throw;
             }
 
             if ((VariationException == null) && (CurrentVariation.ValidityExpected == false))

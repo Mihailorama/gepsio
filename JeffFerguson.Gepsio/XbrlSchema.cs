@@ -2,22 +2,29 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.Xml.Schema;
+using System.Collections;
 
 namespace JeffFerguson.Gepsio
 {
+    /// <summary>
+    /// A representation of all of the information in an XBRL schema file.
+    /// </summary>
     public class XbrlSchema
     {
         private XmlDocument thisSchemaDocument;
         private XbrlFragment thisContainingXbrlFragment;
         private XmlNode thisSchemaNode;
         private List<Element> thisElements;
-        private UriPrefixDictionary thisUriPrefixDictionary;
         private string thisSchemaPath;
         private string thisTargetNamespace;
         private List<SimpleType> thisSimpleTypes;
         private List<ComplexType> thisComplexTypes;
         private XmlNamespaceManager thisNamespaceManager;
         private List<LinkbaseDocument> thisLinkbaseDocuments;
+
+        private XmlSchema thisXmlSchema;
+        private XmlSchemaSet thisXmlSchemaSet;
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
@@ -26,16 +33,6 @@ namespace JeffFerguson.Gepsio
             get
             {
                 return thisSchemaPath;
-            }
-        }
-
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
-        internal UriPrefixDictionary UrisAndPrefixes
-        {
-            get
-            {
-                return thisUriPrefixDictionary;
             }
         }
 
@@ -115,6 +112,22 @@ namespace JeffFerguson.Gepsio
         {
             thisContainingXbrlFragment = ContainingXbrlFragment;
             thisSchemaPath = GetFullSchemaPath(SchemaFilename, BaseDirectory);
+
+            try
+            {
+                thisXmlSchema = XmlSchema.Read(XmlTextReader.Create(thisSchemaPath), null);
+                thisXmlSchemaSet = new XmlSchemaSet();
+                thisXmlSchemaSet.Add(thisXmlSchema);
+                thisXmlSchemaSet.Compile();
+            }
+            catch (XmlSchemaException)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+                MessageBuilder.AppendFormat(StringFormat, thisSchemaPath);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+
             thisSchemaDocument = new XmlDocument();
             thisLinkbaseDocuments = new List<LinkbaseDocument>();
             thisSchemaDocument.Load(thisSchemaPath);
@@ -163,8 +176,9 @@ namespace JeffFerguson.Gepsio
             return FullPath;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Reads the schema's root node and collects namespace data from the namespace attributes.
+        /// </summary>
         private void ReadSchemaNode()
         {
             thisElements = new List<Element>();
@@ -180,8 +194,6 @@ namespace JeffFerguson.Gepsio
             foreach (XmlAttribute CurrentAttribute in thisSchemaNode.Attributes)
                 if (CurrentAttribute.Prefix == "xmlns")
                     thisNamespaceManager.AddNamespace(CurrentAttribute.LocalName, CurrentAttribute.Value);
-            thisUriPrefixDictionary = new UriPrefixDictionary();
-            thisUriPrefixDictionary.Load(thisSchemaNode);
         }
 
         //-------------------------------------------------------------------------------
@@ -208,33 +220,29 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ReadElements()
         {
-            foreach (XmlNode CurrentChild in thisSchemaNode.ChildNodes)
+            //foreach (XmlNode CurrentChild in thisSchemaNode.ChildNodes)
+            //{
+            //    if (CurrentChild.LocalName.Equals("element") == true)
+            //        thisElements.Add(new Element(this, CurrentChild));
+            //}
+            foreach (DictionaryEntry CurrentEntry in thisXmlSchemaSet.GlobalElements)
             {
-                if(CurrentChild.LocalName.Equals("element") == true)
-                    thisElements.Add(new Element(this, CurrentChild));
+                XmlSchemaElement CurrentElement = CurrentEntry.Value as XmlSchemaElement;
+                thisElements.Add(new Element(this, CurrentElement));
             }
         }
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        internal SimpleType GetSimpleType(string ItemTypeValue)
+        internal XmlSchemaType GetXmlSchemaType(XmlQualifiedName ItemTypeValue)
         {
-            foreach (SimpleType CurrentSimpleType in this.SimpleTypes)
+            foreach (DictionaryEntry CurrentEntry in thisXmlSchemaSet.GlobalTypes)
             {
-                if (CurrentSimpleType.Name.Equals(ItemTypeValue) == true)
-                    return CurrentSimpleType;
-            }
-            return null;
-        }
-
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
-        internal ComplexType GetComplexType(string ItemTypeValue)
-        {
-            foreach (ComplexType CurrentComplexType in this.ComplexTypes)
-            {
-                if (CurrentComplexType.Name.Equals(ItemTypeValue) == true)
-                    return CurrentComplexType;
+                XmlSchemaType CurrentType = CurrentEntry.Value as XmlSchemaType;
+                if (CurrentType.QualifiedName.Equals(ItemTypeValue) == true)
+                {
+                    return CurrentType;
+                }
             }
             return null;
         }
@@ -291,10 +299,45 @@ namespace JeffFerguson.Gepsio
         {
             foreach (Element CurrentElement in thisElements)
             {
-                if (CurrentElement.Id.Equals(ElementLocator.HrefResourceId) == true)
-                    return CurrentElement;
+                if (string.IsNullOrEmpty(CurrentElement.Id) == false)
+                {
+                    if (CurrentElement.Id.Equals(ElementLocator.HrefResourceId) == true)
+                        return CurrentElement;
+                }
             }
             return null;
+        }
+
+        /// <summary>
+        /// Given a URI, return the namespace prefix associated with the URI.
+        /// </summary>
+        /// <param name="uri">A namespace URI.</param>
+        /// <returns>A string representing the namespace prefix. An empty string is returned if the URI is not defined in the schema.</returns>
+        internal string GetPrefixForUri(string uri)
+        {
+            XmlQualifiedName[] NamespacesArray = thisXmlSchema.Namespaces.ToArray();
+            foreach (XmlQualifiedName CurrentName in NamespacesArray)
+            {
+                if (CurrentName.Namespace.Equals(uri) == true)
+                    return CurrentName.Name;
+            }
+            return string.Empty;
+        }
+
+        /// <summary>
+        /// Given a namespace prefix, return the URI associated with the namespace.
+        /// </summary>
+        /// <param name="prefix">A namespace prefix.</param>
+        /// <returns>The URI associated with the namespace.</returns>
+        internal string GetUriForPrefix(string prefix)
+        {
+            XmlQualifiedName[] NamespacesArray = thisXmlSchema.Namespaces.ToArray();
+            foreach (XmlQualifiedName CurrentName in NamespacesArray)
+            {
+                if (CurrentName.Name.Equals(prefix) == true)
+                    return CurrentName.Namespace;
+            }
+            return string.Empty;
         }
     }
 }

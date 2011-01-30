@@ -94,11 +94,15 @@ namespace JeffFerguson.Test.Gepsio
             if (XsdNode != null)
             {
                 thisXsd = XsdNode.InnerText;
-                string ReadXsdFirstText = XsdNode.Attributes["readMeFirst"].Value;
-                if (ReadXsdFirstText == "true")
-                    thisReadXsdFirst = true;
-                else
-                    thisReadXsdFirst = false;
+                thisReadXsdFirst = false;
+                if (XsdNode.Attributes["readMeFirst"] != null)
+                {
+                    string ReadXsdFirstText = XsdNode.Attributes["readMeFirst"].Value;
+                    if (ReadXsdFirstText == "true")
+                        thisReadXsdFirst = true;
+                    else
+                        thisReadXsdFirst = false;
+                }
             }
             else
             {

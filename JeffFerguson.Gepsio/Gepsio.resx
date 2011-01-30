@@ -245,4 +245,10 @@
   <data name="CannotFindFactForElement" xml:space="preserve">
     <value>Cannot find a fact for element {0}.</value>
   </data>
+  <data name="CannotFindFactElementInSchema" xml:space="preserve">
+    <value>The schema element for fact {0} cannot be found in schema {1}.</value>
+  </data>
+  <data name="NoSchemasForFragment" xml:space="preserve">
+    <value>The current XBRL fragment does not have any associated schemas.</value>
+  </data>
 </root>

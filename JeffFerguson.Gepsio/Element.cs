@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio
 {
@@ -27,13 +28,14 @@ namespace JeffFerguson.Gepsio
             Duration
         }
 
+        private XmlSchemaElement thisSchemaElement;
         private XmlNode thisElementNode;
         private string thisName;
         private string thisId;
         private XbrlSchema thisSchema;
         private ElementSubstitutionGroup thisSubstitutionGroup;
         private ElementPeriodType thisPeriodType;
-        private string thisTypeName;
+        private XmlQualifiedName thisTypeName;
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
@@ -87,7 +89,7 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        public string TypeName
+        public XmlQualifiedName TypeName
         {
             get
             {
@@ -99,30 +101,19 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal Element(XbrlSchema Schema, XmlNode ElementNode)
         {
+            throw new NotSupportedException("no more hardcoded parsing of schema elements!");
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        internal Element(XbrlSchema Schema, XmlSchemaElement SchemaElement)
+        {
             thisSchema = Schema;
-            thisElementNode = ElementNode;
-
-            if (thisElementNode.Attributes["name"] != null)
-                thisName = thisElementNode.Attributes["name"].Value;
-            else
-                thisName = string.Empty;
-
-            if (thisElementNode.Attributes["type"] != null)
-            {
-                thisTypeName = thisElementNode.Attributes["type"].Value;
-                //SetItemType(thisTypeName);
-            }
-
-            if (thisElementNode.Attributes["substitutionGroup"] != null)
-                SetSubstitutionGroup(thisElementNode.Attributes["substitutionGroup"].Value);
-            else
-                thisSubstitutionGroup = ElementSubstitutionGroup.Unknown;
-
-            if (thisElementNode.Attributes["id"] != null)
-                thisId = thisElementNode.Attributes["id"].Value;
-            else
-                thisId = string.Empty;
-
+            thisSchemaElement = SchemaElement;
+            thisId = SchemaElement.Id;
+            thisName = SchemaElement.Name;
+            thisTypeName = SchemaElement.SchemaTypeName;
+            SetSubstitutionGroup(SchemaElement.SubstitutionGroup);
             SetPeriodType();
         }
 
@@ -140,16 +131,24 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void SetPeriodType()
         {
-            string PeriodTypePrefix = thisSchema.UrisAndPrefixes.GetPrefixForUri("http://www.xbrl.org/2003/instance");
+            string PeriodTypePrefix = thisSchema.GetPrefixForUri("http://www.xbrl.org/2003/instance");
             string AttributeName;
             if (PeriodTypePrefix == null)
                 AttributeName = "periodType";
             else
                 AttributeName = PeriodTypePrefix + ":periodType";
-            if (thisElementNode.Attributes[AttributeName] != null)
-                SetPeriodType(thisElementNode.Attributes[AttributeName].Value);
-            else
-                thisPeriodType = ElementPeriodType.Unknown;
+            thisPeriodType = ElementPeriodType.Unknown;
+            if (thisSchemaElement.UnhandledAttributes != null)
+            {
+                foreach (XmlAttribute CurrentAttribute in thisSchemaElement.UnhandledAttributes)
+                {
+                    if (CurrentAttribute.Name.Equals(AttributeName) == true)
+                    {
+                        SetPeriodType(CurrentAttribute.Value);
+                        return;
+                    }
+                }
+            }
         }
 
         //------------------------------------------------------------------------------------
@@ -175,27 +174,28 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void SetSubstitutionGroup(string SubstitutionGroupValue)
+        private void SetSubstitutionGroup(XmlQualifiedName SubstitutionGroupValue)
         {
-            NamespaceQualifiedValue Value = new NamespaceQualifiedValue(thisSchema.NamespaceManager, SubstitutionGroupValue);
             thisSubstitutionGroup = ElementSubstitutionGroup.Unknown;
-            if (Value.Equals("http://www.xbrl.org/2003/instance", "item") == true)
+            if ((SubstitutionGroupValue.Name.Length == 0) && (SubstitutionGroupValue.Namespace.Length == 0))
+                return;
+            if((SubstitutionGroupValue.Namespace.Equals("http://www.xbrl.org/2003/instance") == true) && (SubstitutionGroupValue.Name.Equals("item") == true))
                 thisSubstitutionGroup = ElementSubstitutionGroup.Item;
-            else if (Value.Equals("http://www.xbrl.org/2003/instance", "tuple") == true)
+            else if ((SubstitutionGroupValue.Namespace.Equals("http://www.xbrl.org/2003/instance") == true) && (SubstitutionGroupValue.Name.Equals("tuple") == true))
                 thisSubstitutionGroup = ElementSubstitutionGroup.Tuple;
-            else if (Value.Equals("http://xbrl.org/2005/xbrldt", "dimensionItem") == true)
+            else if ((SubstitutionGroupValue.Namespace.Equals("http://xbrl.org/2005/xbrldt") == true) && (SubstitutionGroupValue.Name.Equals("dimensionItem") == true))
                 thisSubstitutionGroup = ElementSubstitutionGroup.DimensionItem;
-            else if (Value.Equals("http://xbrl.org/2005/xbrldt", "hypercubeItem") == true)
+            else if ((SubstitutionGroupValue.Namespace.Equals("http://xbrl.org/2005/xbrldt") == true) && (SubstitutionGroupValue.Name.Equals("hypercubeItem") == true))
                 thisSubstitutionGroup = ElementSubstitutionGroup.HypercubeItem;
             else
             {
 
-                // We can't identify the type, so throw an exception.
+                //// We can't identify the type, so throw an exception.
 
-                string MessageFormat = AssemblyResources.GetName("InvalidElementSubstitutionGroup");
-                StringBuilder MessageFormatBuilder = new StringBuilder();
-                MessageFormatBuilder.AppendFormat(MessageFormat, thisSchema.Path, SubstitutionGroupValue, thisName);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                //string MessageFormat = AssemblyResources.GetName("InvalidElementSubstitutionGroup");
+                //StringBuilder MessageFormatBuilder = new StringBuilder();
+                //MessageFormatBuilder.AppendFormat(MessageFormat, thisSchema.Path, SubstitutionGroupValue, thisName);
+                //throw new XbrlException(MessageFormatBuilder.ToString());
             }
         }
     }

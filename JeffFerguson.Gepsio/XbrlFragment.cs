@@ -37,7 +37,6 @@ namespace JeffFerguson.Gepsio
         private XmlNode thisXbrlRootNode;
         private List<Context> thisContexts;
         private XmlNamespaceManager thisNamespaceManager;
-        private UriPrefixDictionary thisUriPrefixDictionary;
         private List<XbrlSchema> thisSchemas;
         private List<Fact> thisFacts;
         private List<Unit> thisUnits;
@@ -207,14 +206,14 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         public string GetUriForPrefix(string Prefix)
         {
-            return thisUriPrefixDictionary.GetUriForPrefix(Prefix);
+            return thisNamespaceManager.LookupNamespace(Prefix);
         }
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
         public string GetPrefixForUri(string Uri)
         {
-            return thisUriPrefixDictionary.GetPrefixForUri(Uri);
+            return thisNamespaceManager.LookupPrefix(Uri);
         }
 
         //-------------------------------------------------------------------------------
@@ -247,7 +246,7 @@ namespace JeffFerguson.Gepsio
         private void ReadTaxonomySchemaRefs()
         {
             thisSchemas = new List<XbrlSchema>();
-            string LinkbaseNamespacePrefix = thisUriPrefixDictionary.GetPrefixForUri("http://www.xbrl.org/2003/linkbase");
+            string LinkbaseNamespacePrefix = thisNamespaceManager.LookupPrefix("http://www.xbrl.org/2003/linkbase");
             StringBuilder XPathExpressionBuilder = new StringBuilder();
             XPathExpressionBuilder.AppendFormat("//{0}:schemaRef", LinkbaseNamespacePrefix);
             string XPathExpression = XPathExpressionBuilder.ToString();
@@ -276,8 +275,6 @@ namespace JeffFerguson.Gepsio
                 if (CurrentAttribute.Prefix == "xmlns")
                     thisNamespaceManager.AddNamespace(CurrentAttribute.LocalName, CurrentAttribute.Value);
             }
-            thisUriPrefixDictionary = new UriPrefixDictionary();
-            thisUriPrefixDictionary.Load(thisXbrlRootNode);
         }
 
         //-------------------------------------------------------------------------------
@@ -342,13 +339,9 @@ namespace JeffFerguson.Gepsio
             {
                 if (FactToValidate.SchemaElement == null)
                     return;
-                //if (FactToValidate.SchemaElement.Type == null)
-                //    return;
-                //if (FactToValidate.SchemaElement.Type.NumericType == false)
-                //    return;
                 if (FactToValidate.Type == null)
                     return;
-                if (FactToValidate.Type.NumericType == false)
+                if (FactToValidate.Type.IsNumeric() == false)
                     return;
             }
             //-----------------------------------------------------------------------
@@ -387,14 +380,17 @@ namespace JeffFerguson.Gepsio
                 thisContexts.Add(new Context(this, ContextNode));
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Reads all of the facts in the XBRL fragment and creates a Fact object for each.
+        /// </summary>
         private void ReadFacts()
         {
             thisFacts = new List<Fact>();
             foreach (XmlNode CurrentChild in thisXbrlRootNode.ChildNodes)
             {
-                if (IsTaxonomyNamespace(CurrentChild.NamespaceURI) == true)
+                if ((IsXbrlNamespace(CurrentChild.NamespaceURI) == false)
+                    && (IsW3Namespace(CurrentChild.NamespaceURI) == false)
+                    && (CurrentChild.NodeType != XmlNodeType.Comment))
                     thisFacts.Add(new Fact(this, CurrentChild));
             }
         }
@@ -409,6 +405,33 @@ namespace JeffFerguson.Gepsio
                     return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Determines whether or not a namespace URI is hosted by the www.xbrl.org domain.
+        /// </summary>
+        /// <param name="CandidateNamespace">A namespace URI.</param>
+        /// <returns>True if the namespace URI is hosted by the www.xbrl.org domain; false otherwise.</returns>
+        private bool IsXbrlNamespace(string CandidateNamespace)
+        {
+            CandidateNamespace = CandidateNamespace.Trim();
+            if (CandidateNamespace.Length == 0)
+                return false; Uri NamespaceUri = new Uri(CandidateNamespace);
+            return NamespaceUri.Host.ToLower().Equals("www.xbrl.org");
+        }
+
+        /// <summary>
+        /// Determines whether or not a namespace URI is hosted by the www.w3.org domain.
+        /// </summary>
+        /// <param name="CandidateNamespace">A namespace URI.</param>
+        /// <returns>True if the namespace URI is hosted by the www.w3.org domain; false otherwise.</returns>
+        private bool IsW3Namespace(string CandidateNamespace)
+        {
+            CandidateNamespace = CandidateNamespace.Trim();
+            if (CandidateNamespace.Length == 0)
+                return false;
+            Uri NamespaceUri = new Uri(CandidateNamespace);
+            return NamespaceUri.Host.ToLower().Equals("www.w3.org");
         }
 
         //-------------------------------------------------------------------------------
@@ -456,7 +479,7 @@ namespace JeffFerguson.Gepsio
         private void ReadFootnoteLinks()
         {
             thisFootnoteLinks = new List<FootnoteLink>();
-            string LinkbaseNamespacePrefix = thisUriPrefixDictionary.GetPrefixForUri("http://www.xbrl.org/2003/linkbase");
+            string LinkbaseNamespacePrefix = thisNamespaceManager.LookupPrefix("http://www.xbrl.org/2003/linkbase");
             StringBuilder XPathExpressionBuilder = new StringBuilder();
             XPathExpressionBuilder.AppendFormat("//{0}:footnoteLink", LinkbaseNamespacePrefix);
             string XPathExpression = XPathExpressionBuilder.ToString();
@@ -612,8 +635,14 @@ namespace JeffFerguson.Gepsio
 
             foreach (Fact CurrentFact in thisFacts)
             {
-                if (CurrentFact.Name.Equals(CurrentFromLocator.HrefResourceId) == true)
-                    ValidateEssenceAliasedFacts(CurrentFact, CurrentToLocator.HrefResourceId);
+                try
+                {
+                    if (CurrentFact.Name.Equals(CurrentFromLocator.HrefResourceId) == true)
+                        ValidateEssenceAliasedFacts(CurrentFact, CurrentToLocator.HrefResourceId);
+                }
+                catch (NullReferenceException nre)
+                {
+                }
             }
         }
 

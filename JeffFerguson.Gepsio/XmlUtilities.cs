@@ -20,6 +20,10 @@ namespace JeffFerguson.Gepsio
                 NameIncludesNamespaceId = false;
             else
                 NameIncludesNamespaceId = true;
+            if (Node == null)
+                return string.Empty;
+            if (Node.Attributes == null)
+                return string.Empty;
             foreach (XmlAttribute CurrentAttribute in Node.Attributes)
             {
                 if (NameIncludesNamespaceId == false)
@@ -43,6 +47,10 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal static string GetAttributeValue(XmlNode Node, string AttributeNamespaceUri, string AttributeLocalName)
         {
+            if (Node == null)
+                return string.Empty;
+            if (Node.Attributes == null)
+                return string.Empty; 
             foreach (XmlAttribute CurrentAttribute in Node.Attributes)
             {
                 if (CurrentAttribute.NamespaceURI.Equals(AttributeNamespaceUri) == true)

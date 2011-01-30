@@ -1,4 +1,5 @@
 ﻿using System.Xml;
+using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio
 {
@@ -62,6 +63,37 @@ namespace JeffFerguson.Gepsio
                     return false;
             }
             return true;
+        }
+
+        //====================================================================================
+        #endregion
+        //====================================================================================
+
+        //====================================================================================
+        #region XmlSchemaType Extension Methods
+        //====================================================================================
+        public static bool IsNumeric(this XmlSchemaType ThisXmlSchemaType)
+        {
+            switch (ThisXmlSchemaType.TypeCode)
+            {
+                case XmlTypeCode.Decimal:
+                case XmlTypeCode.Double:
+                case XmlTypeCode.Float:
+                case XmlTypeCode.Int:
+                case XmlTypeCode.Integer:
+                case XmlTypeCode.Long:
+                case XmlTypeCode.NegativeInteger:
+                case XmlTypeCode.NonNegativeInteger:
+                case XmlTypeCode.NonPositiveInteger:
+                case XmlTypeCode.PositiveInteger:
+                case XmlTypeCode.Short:
+                case XmlTypeCode.UnsignedInt:
+                case XmlTypeCode.UnsignedLong:
+                case XmlTypeCode.UnsignedShort:
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         //====================================================================================

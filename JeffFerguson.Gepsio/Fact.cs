@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio
 {
@@ -22,7 +23,7 @@ namespace JeffFerguson.Gepsio
         private string thisName;
         private string thisId;
         private bool thisNilSpecified;
-        private AnyType thisItemType;
+        private XmlSchemaType thisItemType;
         private XbrlSchema thisSchema;
         private bool thisInfinitePrecision;
         private bool thisInfiniteDecimals;
@@ -214,7 +215,7 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        public AnyType Type
+        public XmlSchemaType Type
         {
             get
             {
@@ -243,6 +244,8 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal Fact(XbrlFragment ParentFragment, XmlNode FactNode)
         {
+            if (FactNode == null)
+                throw new NullReferenceException("Null fact node in Fact constructor.");
             thisParentFragment = ParentFragment;
             thisFactNode = FactNode;
             thisName = thisFactNode.LocalName;
@@ -289,10 +292,7 @@ namespace JeffFerguson.Gepsio
             GetSchemaElementFromSchema();
             thisValue = thisFactNode.InnerText;
             if (SchemaElement.SubstitutionGroup == Element.ElementSubstitutionGroup.Item)
-            {
                 SetItemType(SchemaElement.TypeName);
-                thisItemType.ValueAsString = thisValue;
-            }
 
             if (thisPrecisionAttributeValue.Length == 0)
                 InferPrecision();
@@ -325,36 +325,35 @@ namespace JeffFerguson.Gepsio
                 }
             }
             if (thisSchema == null)
-                throw new NotImplementedException();
+            {
+                if (thisParentFragment.Schemas.Count == 0)
+                {
+                    string MessageFormat = AssemblyResources.GetName("NoSchemasForFragment");
+                    StringBuilder MessageFormatBuilder = new StringBuilder();
+                    MessageFormatBuilder.AppendFormat(MessageFormat);
+                    throw new XbrlException(MessageFormatBuilder.ToString());
+                }
+                thisSchema = thisParentFragment.Schemas[0];
+            }
             foreach (Element CurrentElement in thisSchema.Elements)
             {
                 if (CurrentElement.Name == thisName)
                     thisSchemaElement = CurrentElement;
             }
             if (thisSchemaElement == null)
-                throw new NotImplementedException();
+            {
+                string MessageFormat = AssemblyResources.GetName("CannotFindFactElementInSchema");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, thisName, thisSchema.Path);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
         }
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void SetItemType(string ItemTypeValue)
+        private void SetItemType(XmlQualifiedName ItemTypeValue)
         {
-            thisItemType = null;
-            thisItemType = AnyType.CreateType(ItemTypeValue);
-            if (thisItemType == null)
-            {
-                if (thisSchema != null)
-                {
-                    thisItemType = (AnyType)(thisSchema.GetSimpleType(GetLocalName(ItemTypeValue)));
-                }
-            }
-            if (thisItemType == null)
-            {
-                if (thisSchema != null)
-                {
-                    thisItemType = thisSchema.GetComplexType(GetLocalName(ItemTypeValue));
-                }
-            }
+            thisItemType = thisSchema.GetXmlSchemaType(ItemTypeValue);
             if (thisItemType == null)
             {
                 string MessageFormat = AssemblyResources.GetName("InvalidElementItemType");
@@ -376,6 +375,87 @@ namespace JeffFerguson.Gepsio
             return FullName.Substring(ColonIndex + 1);
         }
 
+        /// <summary>
+        /// Determines whether or not the item type for this fact is a monetary type.
+        /// </summary>
+        /// <returns>
+        /// True if the type for this fact is a monetary type and false otherwise.
+        /// </returns>
+        internal bool IsMonetary()
+        {
+            return TypeNameContains("monetary");
+        }
+
+        /// <summary>
+        /// Determines whether or not the item type for this fact is a pure type.
+        /// </summary>
+        /// <returns>
+        /// True if the type for this fact is a pure type and false otherwise.
+        /// </returns>
+        internal bool IsPure()
+        {
+            return TypeNameContains("pure");
+        }
+
+        /// <summary>
+        /// Determines whether or not the item type for this fact is a shares type.
+        /// </summary>
+        /// <returns>
+        /// True if the type for this fact is a shares type and false otherwise.
+        /// </returns>
+        internal bool IsShares()
+        {
+            return TypeNameContains("shares");
+        }
+
+        /// <summary>
+        /// Determines whether or not the item type for this fact is a decimal type.
+        /// </summary>
+        /// <returns>
+        /// True if the type for this fact is a decimal type and false otherwise.
+        /// </returns>
+        internal bool IsDecimal()
+        {
+            return TypeNameContains("decimal");
+        }
+
+        /// <summary>
+        /// Determines whether or not the fact's item type is of the given type.
+        /// </summary>
+        /// <returns>
+        /// True if the type is of the given type and false otherwise.
+        /// </returns>
+        private bool TypeNameContains(string TypeName)
+        {
+            try
+            {
+                return TypeNameContains(TypeName, thisItemType);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Determines whether or not the supplied item type is of the given type.
+        /// </summary>
+        /// <returns>
+        /// True if the type is of the given type and false otherwise.
+        /// </returns>
+        private bool TypeNameContains(string TypeName, XmlSchemaType CurrentType)
+        {
+            if (CurrentType.Name.Contains(TypeName) == true)
+                return true;
+            if (CurrentType is XmlSchemaComplexType)
+            {
+                XmlSchemaComplexType CurrentComplexType = CurrentType as XmlSchemaComplexType;
+                if (CurrentComplexType.DerivedBy == XmlSchemaDerivationMethod.Restriction)
+                    return TypeNameContains(TypeName, CurrentComplexType.BaseXmlSchemaType);
+            }
+            return false;
+        }
+
         //------------------------------------------------------------------------------------
         // Validates a fact.
         //
@@ -387,10 +467,136 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal void Validate()
         {
-            //if (this.SchemaElement.Type != null)
-            //    this.SchemaElement.Type.ValidateFact(this);
-            if (this.Type != null)
-                this.Type.ValidateFact(this);
+            if (IsMonetary())
+                ValidateMonetaryType();
+            else if (IsPure())
+                ValidatePureType();
+            else if (IsShares())
+                ValidateSharesType();
+            else if (IsDecimal())
+                ValidateDecimalType();
+        }
+
+        private void ValidateMonetaryType()
+        {
+            Unit UnitReference = UnitRef;
+            if (UnitReference == null)
+                return;
+            if (UnitReference.MeasureQualifiedNames[0] == null)
+                return;
+
+            string Uri = UnitReference.MeasureQualifiedNames[0].NamespaceUri;
+            if (Uri == null)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, "unspecified");
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+
+            if ((Uri.Length > 0) && (Uri.Equals("http://www.xbrl.org/2003/iso4217") == false))
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].NamespaceUri);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+            UnitReference.SetCultureAndRegionInfoFromISO4217Code(UnitReference.MeasureQualifiedNames[0].LocalName);
+            if ((UnitReference.CultureInformation == null) && (UnitReference.RegionInformation == null))
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].LocalName);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Validate pure item types.
+        /// </summary>
+        private void ValidatePureType()
+        {
+            string UnitMeasureLocalName = string.Empty;
+            Unit UnitReference = UnitRef;
+            bool PureMeasureFound = true;
+            if (UnitReference.MeasureQualifiedNames.Count != 1)
+                PureMeasureFound = false;
+            if (PureMeasureFound == true)
+            {
+                UnitMeasureLocalName = UnitReference.MeasureQualifiedNames[0].LocalName;
+                PureMeasureFound = UnitMeasureLocalName.Equals("pure");
+            }
+            if (PureMeasureFound == false)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("PureItemTypeUnitLocalNameNotPure");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitMeasureLocalName);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Validate shares item types.
+        /// </summary>
+        private void ValidateSharesType()
+        {
+            bool SharesMeasureFound = true;
+            string UnitMeasureLocalName = string.Empty;
+            Unit UnitReference = UnitRef;
+            if (UnitReference.MeasureQualifiedNames.Count != 1)
+                SharesMeasureFound = false;
+            if (SharesMeasureFound == true)
+            {
+                UnitMeasureLocalName = UnitReference.MeasureQualifiedNames[0].LocalName;
+                SharesMeasureFound = UnitMeasureLocalName.Equals("shares");
+            }
+            if (SharesMeasureFound == false)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("SharesItemTypeUnitLocalNameNotShares");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitMeasureLocalName);
+                throw new XbrlException(MessageBuilder.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Validate decimal item types.
+        /// </summary>
+        private void ValidateDecimalType()
+        {
+            if (NilSpecified == true)
+                ValidateNilDecimalType();
+            else
+                ValidateNonNilDecimalType();
+        }
+
+        private void ValidateNonNilDecimalType()
+        {
+            if ((PrecisionSpecified == false) && (DecimalsSpecified == false))
+            {
+                string MessageFormat = AssemblyResources.GetName("NumericFactWithoutSpecifiedPrecisionOrDecimals");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, Name, Id);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
+            if ((PrecisionSpecified == true) && (DecimalsSpecified == true))
+            {
+                string MessageFormat = AssemblyResources.GetName("NumericFactWithSpecifiedPrecisionAndDecimals");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, Name, Id);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
+        }
+
+        private void ValidateNilDecimalType()
+        {
+            if ((PrecisionSpecified == true) || (DecimalsSpecified == true))
+            {
+                string MessageFormat = AssemblyResources.GetName("NilNumericFactWithSpecifiedPrecisionOrDecimals");
+                StringBuilder MessageFormatBuilder = new StringBuilder();
+                MessageFormatBuilder.AppendFormat(MessageFormat, Name, Id);
+                throw new XbrlException(MessageFormatBuilder.ToString());
+            }
         }
 
         //------------------------------------------------------------------------------------

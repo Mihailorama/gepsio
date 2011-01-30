@@ -70,6 +70,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The schema element for fact {0} cannot be found in schema {1}..
+        /// </summary>
+        internal static string CannotFindFactElementInSchema {
+            get {
+                return ResourceManager.GetString("CannotFindFactElementInSchema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot find a fact for element {0}..
         /// </summary>
         internal static string CannotFindFactForElement {
@@ -237,6 +246,15 @@ namespace JeffFerguson.Gepsio {
         internal static string NoLangForFootnote {
             get {
                 return ResourceManager.GetString("NoLangForFootnote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The current XBRL fragment does not have any associated schemas..
+        /// </summary>
+        internal static string NoSchemasForFragment {
+            get {
+                return ResourceManager.GetString("NoSchemasForFragment", resourceCulture);
             }
         }
         

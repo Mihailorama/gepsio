@@ -21,5 +21,15 @@ namespace JeffFerguson.Test.Gepsio
             XbrlDocument NewXbrlDocument = new XbrlDocument();
             NewXbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem3828\cmi-20081231.xml");
         }
+
+        /// <summary>
+        /// Work item 3903 notes that multiple namespace URIs can exist in an XML schema, and early versions of Gepsio didn't support that.
+        /// </summary>
+        [TestMethod]
+        public void WorkItem3903Test()
+        {
+            XbrlDocument NewXbrlDocument = new XbrlDocument();
+            NewXbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem3903\WorkItem3903.xml");
+        }
     }
 }

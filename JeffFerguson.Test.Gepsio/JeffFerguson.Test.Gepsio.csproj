@@ -106,6 +106,9 @@
     <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_def.xml" />
     <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_lab.xml" />
     <Content Include="WorkItemsInput\WorkItem3828\cmi-20081231_pre.xml" />
+    <Content Include="WorkItemsInput\WorkItem3903\WorkItem3903.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-01-IdScopeValid.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-02-IdScopeOutOfScope.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-03-IdScopePeriodDiff.xml" />
@@ -143,7 +146,9 @@
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\303-periodType.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-01-monetaryItemTypeUnitsRestrictions.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-02-monetaryItemTypeUnitsRestrictions.xml" />
-    <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-03-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-03-monetaryItemTypeUnitsRestrictions.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-04-monetaryItemTypeUnitsRestrictions.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-05-monetaryItemTypeUnitsRestrictions.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-06-monetaryItemTypeUnitsRestrictions.xml" />
@@ -741,6 +746,9 @@
     <None Include="WorkItemsInput\WorkItem3828\cmi-20081231.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="WorkItemsInput\WorkItem3903\WorkItem3903.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\.#303-05-ForeverSchema.xsd.1.1" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\303-05-ForeverElementewithInstancePeriodTypeReportedasForever.xbrl" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\303-05-ForeverSchema.xsd" />
@@ -767,7 +775,9 @@
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\304-multiple-unitsEquality.xsd" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\305-decimalPrecision.xsd" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\305_07_decimals_test.xsd" />
-    <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\305_07_invalid_instance.xbrl" />
+    <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\305_07_invalid_instance.xbrl">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\306-Required.xsd" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\310-01-second-schema.xsd" />
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\310-custom-linkbase.xsd" />
@@ -1135,6 +1145,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
