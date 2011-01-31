@@ -864,14 +864,19 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Locates an element given an element locator.
+        /// </summary>
+        /// <param name="ElementLocator">The locator specifying the element to find.</param>
+        /// <returns>The element referenced by the locator; null if the element cannot be found.</returns>
         private Element LocateElement(Locator ElementLocator)
         {
             foreach (XbrlSchema CurrentSchema in thisSchemas)
             {
-                if (ElementLocator.HrefEquals(CurrentSchema.Path) == true)
-                    return CurrentSchema.LocateElement(ElementLocator);
+                var FoundElement = CurrentSchema.LocateElement(ElementLocator);
+                if (FoundElement != null)
+                    return FoundElement;
             }
             return null;
         }
