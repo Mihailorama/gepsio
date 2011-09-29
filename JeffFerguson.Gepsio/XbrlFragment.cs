@@ -6,32 +6,42 @@ using System.IO;
 
 namespace JeffFerguson.Gepsio
 {
+    /// <summary>
+    /// A fragment of XBRL data. A collection of fragments is available in the <see cref="XbrlDocument"/>
+    /// class.
+    /// </summary>
     public class XbrlFragment
     {
-        //===============================================================================
         #region Delegates
-        //===============================================================================
         
+        /// <summary>
+        /// The delegate used to handle events fired by the class.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender of the event.
+        /// </param>
+        /// <param name="e">
+        /// Event arguments.
+        /// </param>
         public delegate void XbrlEventHandler(object sender, EventArgs e);
 
-        //===============================================================================
         #endregion
-        //===============================================================================
 
-        //===============================================================================
         #region Events
-        //===============================================================================
         
+        /// <summary>
+        /// Event fired after a document has been loaded.
+        /// </summary>
         public event XbrlEventHandler Loaded;
+
+        /// <summary>
+        /// Event fired after all XBRL validation has been completed.
+        /// </summary>
         public event XbrlEventHandler Validated;
 
-        //===============================================================================
         #endregion
-        //===============================================================================
 
-        //===============================================================================
         #region Fields
-        //===============================================================================
         
         private XbrlDocument thisDocument;
         private XmlNode thisXbrlRootNode;
@@ -42,16 +52,14 @@ namespace JeffFerguson.Gepsio
         private List<Unit> thisUnits;
         private List<FootnoteLink> thisFootnoteLinks;
 
-        //===============================================================================
         #endregion
-        //===============================================================================
 
-        //===============================================================================
         #region Properties
-        //===============================================================================
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// A reference to the <see cref="XbrlDocument"/> instance in which the fragment
+        /// was contained.
+        /// </summary>
         public XbrlDocument Document
         {
             get
@@ -60,8 +68,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// The root XML node for the XBRL fragment.
+        /// </summary>
         public XmlNode XbrlRootNode
         {
             get
@@ -70,8 +79,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// A collection of <see cref="Context"/> objects representing all contexts found in the fragment.
+        /// </summary>
         public List<Context> Contexts
         {
             get
@@ -80,8 +90,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// A collection of <see cref="XbrlSchema"/> objects representing all schemas found in the fragment.
+        /// </summary>
         public List<XbrlSchema> Schemas
         {
             get
@@ -90,8 +101,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// A collection of <see cref="Fact"/> objects representing all facts found in the fragment.
+        /// </summary>
         public List<Fact> Facts
         {
             get
@@ -100,8 +112,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// A collection of <see cref="Unit"/> objects representing all units found in the fragment.
+        /// </summary>
         public List<Unit> Units
         {
             get
@@ -110,8 +123,10 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// A collection of <see cref="FootnoteLink"/> objects representing all footnote links
+        /// found in the fragment.
+        /// </summary>
         public List<FootnoteLink> FootnoteLinks
         {
             get
@@ -120,13 +135,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //===============================================================================
         #endregion
-        //===============================================================================
 
-        //===============================================================================
         #region Constructors
-        //===============================================================================
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
@@ -158,16 +169,20 @@ namespace JeffFerguson.Gepsio
                 Validated(this, null);
         }
 
-        //===============================================================================
         #endregion
-        //===============================================================================
 
-        //===============================================================================
         #region Public Methods
-        //===============================================================================
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Returns a reference to the context having the supplied context ID.
+        /// </summary>
+        /// <param name="ContextId">
+        /// The ID of the context to return.
+        /// </param>
+        /// <returns>
+        /// A reference to the context having the supplied context ID.
+        /// A null is returned if no contexts with the supplied context ID is available.
+        /// </returns>
         public Context GetContext(string ContextId)
         {
             foreach (Context CurrentContext in thisContexts)
@@ -178,8 +193,16 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Returns a reference to the unit having the supplied unit ID.
+        /// </summary>
+        /// <param name="UnitId">
+        /// The ID of the unit to return.
+        /// </param>
+        /// <returns>
+        /// A reference to the unit having the supplied unit ID.
+        /// A null is returned if no units with the supplied unit ID is available.
+        /// </returns>
         public Unit GetUnit(string UnitId)
         {
             foreach (Unit CurrentUnit in thisUnits)
@@ -190,8 +213,16 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Returns a reference to the fact having the supplied fact ID.
+        /// </summary>
+        /// <param name="FactId">
+        /// The ID of the fact to return.
+        /// </param>
+        /// <returns>
+        /// A reference to the fact having the supplied fact ID.
+        /// A null is returned if no facts with the supplied fact ID is available.
+        /// </returns>
         public Fact GetFact(string FactId)
         {
             foreach (Fact CurrentFact in thisFacts)
@@ -685,6 +716,13 @@ namespace JeffFerguson.Gepsio
                 MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
                 throw new XbrlException(MessageBuilder.ToString());
             }
+            if (FromFact.RoundedValue != ToFact.RoundedValue)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("EssenceAliasFactsHaveDifferentRoundedValues");
+                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, FromFact.RoundedValue.ToString(), ToFact.Id, ToFact.RoundedValue.ToString());
+                throw new XbrlException(MessageBuilder.ToString());
+            }
         }
 
         //===============================================================================
@@ -868,8 +906,12 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// Locates an element given an element locator.
         /// </summary>
-        /// <param name="ElementLocator">The locator specifying the element to find.</param>
-        /// <returns>The element referenced by the locator; null if the element cannot be found.</returns>
+        /// <param name="ElementLocator">
+        /// The locator specifying the element to find.
+        /// </param>
+        /// <returns>
+        /// The element referenced by the locator; null if the element cannot be found.
+        /// </returns>
         private Element LocateElement(Locator ElementLocator)
         {
             foreach (XbrlSchema CurrentSchema in thisSchemas)
