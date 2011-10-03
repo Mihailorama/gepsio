@@ -44,11 +44,13 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void ResolveLocators(DefinitionArc CurrentDefinitionArc)
         {
-            CurrentDefinitionArc.FromLocator = GetUnresolvedLocator(CurrentDefinitionArc.FromId);
+            //CurrentDefinitionArc.FromLocator = GetUnresolvedLocator(CurrentDefinitionArc.FromId);
+            CurrentDefinitionArc.FromLocator = GetLocator(CurrentDefinitionArc.FromId);
             if (CurrentDefinitionArc.FromLocator != null)
                 thisUnresolvedLocators.Remove(CurrentDefinitionArc.FromLocator);
 
-            CurrentDefinitionArc.ToLocator = GetUnresolvedLocator(CurrentDefinitionArc.ToId);
+            //CurrentDefinitionArc.ToLocator = GetUnresolvedLocator(CurrentDefinitionArc.ToId);
+            CurrentDefinitionArc.ToLocator = GetLocator(CurrentDefinitionArc.ToId);
             if (CurrentDefinitionArc.ToLocator != null)
                 thisUnresolvedLocators.Remove(CurrentDefinitionArc.ToLocator);
         }

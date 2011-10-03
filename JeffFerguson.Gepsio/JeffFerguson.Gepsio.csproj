@@ -20,6 +20,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -32,7 +33,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -122,6 +122,7 @@
     <Compile Include="ID.cs" />
     <Compile Include="IDREF.cs" />
     <Compile Include="Integer.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="ItemAttributes.cs" />
     <Compile Include="Label.cs" />
     <Compile Include="LabelArc.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Time.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TokenItemType.cs" />
+    <Compile Include="Tuple.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="WhiteSpaceFacet.cs" />
     <Compile Include="WhiteSpaceFacetDefinition.cs" />

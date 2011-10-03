@@ -25,7 +25,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);
@@ -46,7 +46,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);
@@ -67,7 +67,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);
@@ -88,7 +88,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);
@@ -109,7 +109,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);
@@ -130,7 +130,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);
@@ -151,7 +151,7 @@ namespace JeffFerguson.Test.Gepsio
             Assert.AreEqual<int>(1, NewXbrlDocument.XbrlFragments.Count, "No XBRL fragments found.");
             XbrlFragment FirstFragment = NewXbrlDocument.XbrlFragments[0];
             Assert.AreEqual<int>(1, FirstFragment.Facts.Count, "No facts found in fragment.");
-            Fact FirstFact = FirstFragment.Facts[0];
+            Item FirstFact = FirstFragment.Facts[0] as Item;
             Assert.IsTrue(FirstFact.DecimalsSpecified);
             Assert.IsFalse(FirstFact.PrecisionSpecified);
             Assert.IsTrue(FirstFact.PrecisionInferred);

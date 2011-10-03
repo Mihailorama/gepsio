@@ -8,7 +8,7 @@ namespace JeffFerguson.Gepsio
         {
         }
 
-        internal override void ValidateFact(Fact FactToValidate)
+        internal override void ValidateFact(Item FactToValidate)
         {
             base.ValidateFact(FactToValidate);
         }

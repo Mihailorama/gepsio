@@ -31,7 +31,7 @@ namespace JeffFerguson.Gepsio
         {
         }
 
-        internal virtual void ValidateFact(Fact FactToValidate)
+        internal virtual void ValidateFact(Item FactToValidate)
         {
         }
 

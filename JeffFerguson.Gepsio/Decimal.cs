@@ -9,7 +9,7 @@ namespace JeffFerguson.Gepsio
         {
         }
 
-        internal override void ValidateFact(Fact FactToValidate)
+        internal override void ValidateFact(Item FactToValidate)
         {
             base.ValidateFact(FactToValidate);
 
@@ -19,7 +19,7 @@ namespace JeffFerguson.Gepsio
                 ValidateNonNilFact(FactToValidate);
         }
 
-        private void ValidateNilFact(Fact FactToValidate)
+        private void ValidateNilFact(Item FactToValidate)
         {
             if ((FactToValidate.PrecisionSpecified == true) || (FactToValidate.DecimalsSpecified == true))
             {
@@ -30,7 +30,7 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        private void ValidateNonNilFact(Fact FactToValidate)
+        private void ValidateNonNilFact(Item FactToValidate)
         {
             if ((FactToValidate.PrecisionSpecified == false) && (FactToValidate.DecimalsSpecified == false))
             {

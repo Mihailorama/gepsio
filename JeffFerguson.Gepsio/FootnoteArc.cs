@@ -12,7 +12,7 @@ namespace JeffFerguson.Gepsio
         private string thisTitle;
         private string thisFromId;
         private string thisToId;
-        private Fact thisFrom;
+        private Item thisFrom;
         private Footnote thisTo;
 
         public FootnoteLink Link
@@ -23,7 +23,7 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        public Fact From
+        public Item From
         {
             get
             {

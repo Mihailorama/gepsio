@@ -152,7 +152,7 @@ namespace JeffFerguson.Gepsio
             ReadTaxonomySchemaRefs();
             ReadContexts();
             ReadUnits();
-            ReadFacts();
+            ReadElementInstances();
             ReadFootnoteLinks();
             if (Loaded != null)
                 Loaded(this, null);
@@ -164,7 +164,7 @@ namespace JeffFerguson.Gepsio
             ValidateContextTimeSpansAgainstPeriodTypes();
             ValidateFootnoteLocations();
             ValidateFootnoteArcs();
-            ValidateFacts();
+            ValidateItems();
             if (Validated != null)
                 Validated(this, null);
         }
@@ -223,9 +223,9 @@ namespace JeffFerguson.Gepsio
         /// A reference to the fact having the supplied fact ID.
         /// A null is returned if no facts with the supplied fact ID is available.
         /// </returns>
-        public Fact GetFact(string FactId)
+        public Item GetFact(string FactId)
         {
-            foreach (Fact CurrentFact in thisFacts)
+            foreach (Item CurrentFact in thisFacts)
             {
                 if (CurrentFact.Id == FactId)
                     return CurrentFact;
@@ -313,16 +313,19 @@ namespace JeffFerguson.Gepsio
         private void ValidateContextRefs()
         {
             foreach (Fact CurrentFact in thisFacts)
-                ValidateContextRef(CurrentFact);
+            {
+                if(CurrentFact is Item)
+                    ValidateContextRef(CurrentFact as Item);
+            }
         }
 
         //-------------------------------------------------------------------------------
         // Validates the context reference for the given fact. Ensures that the context
         // ref can be tied to a defined context.
         //-------------------------------------------------------------------------------
-        private void ValidateContextRef(Fact FactToValidate)
+        private void ValidateContextRef(Item ItemToValidate)
         {
-            string ContextRefValue = FactToValidate.ContextRefName;
+            string ContextRefValue = ItemToValidate.ContextRefName;
             if (ContextRefValue.Length == 0)
                 return;
 
@@ -334,7 +337,7 @@ namespace JeffFerguson.Gepsio
                 {
                     ContextFound = true;
                     MatchingContext = CurrentContext;
-                    FactToValidate.ContextRef = MatchingContext;
+                    ItemToValidate.ContextRef = MatchingContext;
                 }
             }
             if (ContextFound == false)
@@ -351,16 +354,19 @@ namespace JeffFerguson.Gepsio
         private void ValidateUnitRefs()
         {
             foreach (Fact CurrentFact in thisFacts)
-                ValidateUnitRef(CurrentFact);
+            {
+                if(CurrentFact is Item)
+                    ValidateUnitRef(CurrentFact as Item);
+            }
         }
 
         //-------------------------------------------------------------------------------
         // Validates the unit reference for the given fact. Ensures that the unit ref
         // can be tied to a defined unit.
         //-------------------------------------------------------------------------------
-        private void ValidateUnitRef(Fact FactToValidate)
+        private void ValidateUnitRef(Item ItemToValidate)
         {
-            string UnitRefValue = FactToValidate.UnitRefName;
+            string UnitRefValue = ItemToValidate.UnitRefName;
             //-----------------------------------------------------------------------
             // According to section 4.6.2, non-numeric items must not have a unit
             // reference. So, if the fact's unit reference is blank, and this is a
@@ -368,11 +374,11 @@ namespace JeffFerguson.Gepsio
             //-----------------------------------------------------------------------
             if (UnitRefValue.Length == 0)
             {
-                if (FactToValidate.SchemaElement == null)
+                if (ItemToValidate.SchemaElement == null)
                     return;
-                if (FactToValidate.Type == null)
+                if (ItemToValidate.Type == null)
                     return;
-                if (FactToValidate.Type.IsNumeric() == false)
+                if (ItemToValidate.Type.IsNumeric() == false)
                     return;
             }
             //-----------------------------------------------------------------------
@@ -386,7 +392,7 @@ namespace JeffFerguson.Gepsio
                 {
                     UnitFound = true;
                     MatchingUnit = CurrentUnit;
-                    FactToValidate.UnitRef = MatchingUnit;
+                    ItemToValidate.UnitRef = MatchingUnit;
                 }
             }
             //-----------------------------------------------------------------------
@@ -412,17 +418,33 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
-        /// Reads all of the facts in the XBRL fragment and creates a Fact object for each.
+        /// Reads all of the element instances in the XBRL fragment and creates an object for each.
         /// </summary>
-        private void ReadFacts()
+        /// <remarks>
+        /// <para>
+        /// Element instances can be any of the following:
+        /// </para>
+        /// <para>
+        /// <list type="bullet">
+        /// <item>
+        /// an item, represented in an XBRL schema by an element with a substitution group of "item"
+        /// and represented by an <see cref="Item"/> object
+        /// </item>
+        /// <item>
+        /// a tuple, represented in an XBRL schema by an element with a substitution group of "tuple"
+        /// and represented by an <see cref="Tuple"/> object
+        /// </item>
+        /// </list>
+        /// </para>
+        /// </remarks>
+        private void ReadElementInstances()
         {
             thisFacts = new List<Fact>();
             foreach (XmlNode CurrentChild in thisXbrlRootNode.ChildNodes)
             {
-                if ((IsXbrlNamespace(CurrentChild.NamespaceURI) == false)
-                    && (IsW3Namespace(CurrentChild.NamespaceURI) == false)
-                    && (CurrentChild.NodeType != XmlNodeType.Comment))
-                    thisFacts.Add(new Fact(this, CurrentChild));
+                var CurrentFact = Fact.Create(this, CurrentChild);
+                if (CurrentFact != null)
+                    thisFacts.Add(CurrentFact);
             }
         }
 
@@ -438,59 +460,36 @@ namespace JeffFerguson.Gepsio
             return false;
         }
 
-        /// <summary>
-        /// Determines whether or not a namespace URI is hosted by the www.xbrl.org domain.
-        /// </summary>
-        /// <param name="CandidateNamespace">A namespace URI.</param>
-        /// <returns>True if the namespace URI is hosted by the www.xbrl.org domain; false otherwise.</returns>
-        private bool IsXbrlNamespace(string CandidateNamespace)
-        {
-            CandidateNamespace = CandidateNamespace.Trim();
-            if (CandidateNamespace.Length == 0)
-                return false; Uri NamespaceUri = new Uri(CandidateNamespace);
-            return NamespaceUri.Host.ToLower().Equals("www.xbrl.org");
-        }
-
-        /// <summary>
-        /// Determines whether or not a namespace URI is hosted by the www.w3.org domain.
-        /// </summary>
-        /// <param name="CandidateNamespace">A namespace URI.</param>
-        /// <returns>True if the namespace URI is hosted by the www.w3.org domain; false otherwise.</returns>
-        private bool IsW3Namespace(string CandidateNamespace)
-        {
-            CandidateNamespace = CandidateNamespace.Trim();
-            if (CandidateNamespace.Length == 0)
-                return false;
-            Uri NamespaceUri = new Uri(CandidateNamespace);
-            return NamespaceUri.Host.ToLower().Equals("www.w3.org");
-        }
-
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
         private void ValidateContextTimeSpansAgainstPeriodTypes()
         {
             foreach (Fact CurrentFact in thisFacts)
             {
-                switch (CurrentFact.SchemaElement.PeriodType)
+                if (CurrentFact is Item)
                 {
-                    case Element.ElementPeriodType.Duration:
-                        if (CurrentFact.ContextRef.DurationPeriod == false)
-                        {
-                            StringBuilder MessageBuilder = new StringBuilder();
-                            string StringFormat = AssemblyResources.GetName("ElementSchemaDefinesDurationButUsedWithNonDurationContext");
-                            MessageBuilder.AppendFormat(StringFormat, CurrentFact.SchemaElement.Schema.Path, CurrentFact.Name, CurrentFact.ContextRef.Id);
-                            throw new XbrlException(MessageBuilder.ToString());
-                        }
-                        break;
-                    case Element.ElementPeriodType.Instant:
-                        if (CurrentFact.ContextRef.InstantPeriod == false)
-                        {
-                            StringBuilder MessageBuilder = new StringBuilder();
-                            string StringFormat = AssemblyResources.GetName("ElementSchemaDefinesInstantButUsedWithNonInstantContext");
-                            MessageBuilder.AppendFormat(StringFormat, CurrentFact.SchemaElement.Schema.Path, CurrentFact.Name, CurrentFact.ContextRef.Id);
-                            throw new XbrlException(MessageBuilder.ToString());
-                        }
-                        break;
+                    var CurrentItem = CurrentFact as Item;
+                    switch (CurrentItem.SchemaElement.PeriodType)
+                    {
+                        case Element.ElementPeriodType.Duration:
+                            if (CurrentItem.ContextRef.DurationPeriod == false)
+                            {
+                                StringBuilder MessageBuilder = new StringBuilder();
+                                string StringFormat = AssemblyResources.GetName("ElementSchemaDefinesDurationButUsedWithNonDurationContext");
+                                MessageBuilder.AppendFormat(StringFormat, CurrentItem.SchemaElement.Schema.Path, CurrentItem.Name, CurrentItem.ContextRef.Id);
+                                throw new XbrlException(MessageBuilder.ToString());
+                            }
+                            break;
+                        case Element.ElementPeriodType.Instant:
+                            if (CurrentItem.ContextRef.InstantPeriod == false)
+                            {
+                                StringBuilder MessageBuilder = new StringBuilder();
+                                string StringFormat = AssemblyResources.GetName("ElementSchemaDefinesInstantButUsedWithNonInstantContext");
+                                MessageBuilder.AppendFormat(StringFormat, CurrentItem.SchemaElement.Schema.Path, CurrentItem.Name, CurrentItem.ContextRef.Id);
+                                throw new XbrlException(MessageBuilder.ToString());
+                            }
+                            break;
+                    }
                 }
             }
         }
@@ -538,11 +537,15 @@ namespace JeffFerguson.Gepsio
         //   via an <element> tag in a taxonomy schema
         // * any facts that participate in an arc role are checked
         //-------------------------------------------------------------------------------
-        private void ValidateFacts()
+        private void ValidateItems()
         {
             foreach (Fact CurrentFact in thisFacts)
-                CurrentFact.Validate();
-            ValidateFactsReferencedInDefinitionArcRoles();
+            {
+                var CurrentItem = CurrentFact as Item;
+                if(CurrentItem != null)
+                    CurrentItem.Validate();
+            }
+            ValidateItemsReferencedInDefinitionArcRoles();
             ValidateSummationConcepts();
         }
 
@@ -576,7 +579,7 @@ namespace JeffFerguson.Gepsio
         // Searches the associated XBRL schemas, looking for facts that are referenced
         // in arc roles.
         //-------------------------------------------------------------------------------
-        private void ValidateFactsReferencedInDefinitionArcRoles()
+        private void ValidateItemsReferencedInDefinitionArcRoles()
         {
             foreach (XbrlSchema CurrentSchema in thisSchemas)
                 ValidateFactsReferencedInDefinitionArcRoles(CurrentSchema);
@@ -662,17 +665,17 @@ namespace JeffFerguson.Gepsio
         private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc)
         {
             Locator CurrentFromLocator = EssenceAliasDefinitionArc.FromLocator;
+            if (CurrentFromLocator == null)
+                throw new NullReferenceException("FromLocator is NULL in ValidateEssenceAliasedFacts()");
             Locator CurrentToLocator = EssenceAliasDefinitionArc.ToLocator;
 
             foreach (Fact CurrentFact in thisFacts)
             {
-                try
+                var CurrentItem = CurrentFact as Item;
+                if (CurrentItem != null)
                 {
                     if (CurrentFact.Name.Equals(CurrentFromLocator.HrefResourceId) == true)
-                        ValidateEssenceAliasedFacts(CurrentFact, CurrentToLocator.HrefResourceId);
-                }
-                catch (NullReferenceException nre)
-                {
+                        ValidateEssenceAliasedFacts(CurrentItem, CurrentToLocator.HrefResourceId);
                 }
             }
         }
@@ -681,46 +684,50 @@ namespace JeffFerguson.Gepsio
         // Validate the essence alias between a given fact and all other facts with the
         // given fact name.
         //-------------------------------------------------------------------------------
-        private void ValidateEssenceAliasedFacts(Fact FromFact, string ToFactName)
+        private void ValidateEssenceAliasedFacts(Item FromItem, string ToItemName)
         {
-            foreach(Fact CurrentFact in thisFacts)
+            foreach (Fact CurrentFact in thisFacts)
             {
-                if (CurrentFact.Name.Equals(ToFactName) == true)
-                    ValidateEssenceAliasedFacts(FromFact, CurrentFact);
+                var CurrentItem = CurrentFact as Item;
+                if (CurrentItem != null)
+                {
+                    if (CurrentFact.Name.Equals(ToItemName) == true)
+                        ValidateEssenceAliasedFacts(FromItem, CurrentItem);
+                }
             }
         }
 
         //-------------------------------------------------------------------------------
         // Validate the essence alias between two given facts.
         //-------------------------------------------------------------------------------
-        private void ValidateEssenceAliasedFacts(Fact FromFact, Fact ToFact)
+        private void ValidateEssenceAliasedFacts(Item FromItem, Item ToItem)
         {
-            if (FromFact.ContextEquals(ToFact) == false)
+            if (FromItem.ContextEquals(ToItem) == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotContextEquals");
-                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
+                MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
                 throw new XbrlException(MessageBuilder.ToString());
             }
-            if (FromFact.ParentEquals(ToFact) == false)
+            if (FromItem.ParentEquals(ToItem) == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotParentEquals");
-                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
+                MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
                 throw new XbrlException(MessageBuilder.ToString());
             }
-            if (FromFact.UnitEquals(ToFact) == false)
+            if (FromItem.UnitEquals(ToItem) == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotUnitEquals");
-                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, ToFact.Id);
+                MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
                 throw new XbrlException(MessageBuilder.ToString());
             }
-            if (FromFact.RoundedValue != ToFact.RoundedValue)
+            if (FromItem.RoundedValue != ToItem.RoundedValue)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("EssenceAliasFactsHaveDifferentRoundedValues");
-                MessageBuilder.AppendFormat(StringFormat, FromFact.Name, ToFact.Name, FromFact.Id, FromFact.RoundedValue.ToString(), ToFact.Id, ToFact.RoundedValue.ToString());
+                MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, FromItem.RoundedValue.ToString(), ToItem.Id, ToItem.RoundedValue.ToString());
                 throw new XbrlException(MessageBuilder.ToString());
             }
         }
@@ -847,7 +854,7 @@ namespace JeffFerguson.Gepsio
         private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept)
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
-            Fact SummationConceptFact = LocateFact(SummationConceptElement);
+            Item SummationConceptFact = LocateItem(SummationConceptElement);
             //---------------------------------------------------------------------------
             // If the summation concept fact doesn't exist, then there is no calculation
             // to perform.
@@ -861,7 +868,7 @@ namespace JeffFerguson.Gepsio
             {
                 CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
                 Element ContributingConceptElement = LocateElement(CurrentLocator);
-                Fact ContributingConceptFact = LocateFact(ContributingConceptElement);
+                Item ContributingConceptFact = LocateItem(ContributingConceptElement);
                 if (ContributingConceptFact != null)
                 {
                     double ContributingConceptRoundedValue = ContributingConceptFact.RoundedValue;
@@ -890,11 +897,11 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private Fact LocateFact(Locator FactLocator)
+        private Item LocateFact(Locator FactLocator)
         {
             if (FactLocator == null)
                 return null;
-            foreach (Fact CurrentFact in thisFacts)
+            foreach (Item CurrentFact in thisFacts)
             {
                 if (CurrentFact.Name.Equals(FactLocator.HrefResourceId) == true)
                     return CurrentFact;
@@ -925,14 +932,18 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private Fact LocateFact(Element FactElement)
+        private Item LocateItem(Element ItemElement)
         {
-            if (FactElement == null)
+            if (ItemElement == null)
                 return null;
             foreach (Fact CurrentFact in thisFacts)
             {
-                if (CurrentFact.SchemaElement.Equals(FactElement) == true)
-                    return CurrentFact;
+                var CurrentItem = CurrentFact as Item;
+                if (CurrentItem != null)
+                {
+                    if (CurrentItem.SchemaElement.Equals(ItemElement) == true)
+                        return CurrentItem;
+                }
             }
             return null;
         }
