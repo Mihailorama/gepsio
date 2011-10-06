@@ -22,6 +22,7 @@ namespace JeffFerguson.Gepsio
         private XbrlFragment thisFragment;
         private System.DateTime thisStartDate;
         private System.DateTime thisEndDate;
+        private System.DateTime thisInstantDate;
 
         public string Id
         {
@@ -110,6 +111,14 @@ namespace JeffFerguson.Gepsio
             get
             {
                 return thisEndDate;
+            }
+        }
+
+        public System.DateTime InstantDate
+        {
+            get
+            {
+                return thisInstantDate;
             }
         }
 
@@ -257,6 +266,7 @@ namespace JeffFerguson.Gepsio
                 {
                     thisInstantPeriod = true;
                     thisInstantPeriodNode = CurrentChild;
+                    System.DateTime.TryParse(thisInstantPeriodNode.InnerText, out thisInstantDate);
                 }
                 else if (CurrentChild.LocalName.Equals("forever") == true)
                     thisForeverPeriod = true;
@@ -379,6 +389,11 @@ namespace JeffFerguson.Gepsio
                 if (this.thisStartDate != OtherContext.thisStartDate)
                     return false;
                 if (this.thisEndDate != OtherContext.thisEndDate)
+                    return false;
+            }
+            if (InstantPeriod == true)
+            {
+                if (this.thisInstantDate != OtherContext.thisInstantDate)
                     return false;
             }
             return true;
