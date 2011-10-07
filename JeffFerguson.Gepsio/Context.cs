@@ -391,11 +391,6 @@ namespace JeffFerguson.Gepsio
                 if (this.thisEndDate != OtherContext.thisEndDate)
                     return false;
             }
-            if (InstantPeriod == true)
-            {
-                if (this.thisInstantDate != OtherContext.thisInstantDate)
-                    return false;
-            }
             return true;
         }
     }

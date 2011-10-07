@@ -152,7 +152,7 @@ namespace JeffFerguson.Gepsio
             ReadTaxonomySchemaRefs();
             ReadContexts();
             ReadUnits();
-            ReadElementInstances();
+            ReadFacts();
             ReadFootnoteLinks();
             if (Loaded != null)
                 Loaded(this, null);
@@ -308,14 +308,31 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Validate context references for all facts in the fragment.
+        /// </summary>
         private void ValidateContextRefs()
         {
-            foreach (Fact CurrentFact in thisFacts)
+            ValidateContextRefs(thisFacts);
+        }
+
+        /// <summary>
+        /// Validate context references for all facts in the given fact collection.
+        /// </summary>
+        /// <param name="FactList">
+        /// A collection of facts whose contexts should be validated.
+        /// </param>
+        private void ValidateContextRefs(List<Fact> FactList)
+        {
+            foreach (Fact CurrentFact in FactList)
             {
-                if(CurrentFact is Item)
+                if (CurrentFact is Item)
                     ValidateContextRef(CurrentFact as Item);
+                else if (CurrentFact is Tuple)
+                {
+                    var CurrentTuple = CurrentFact as Tuple;
+                    ValidateContextRefs(CurrentTuple.Facts);
+                }
             }
         }
 
@@ -418,7 +435,7 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
-        /// Reads all of the element instances in the XBRL fragment and creates an object for each.
+        /// Reads all of the facts in the XBRL fragment and creates an object for each.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -437,7 +454,7 @@ namespace JeffFerguson.Gepsio
         /// </list>
         /// </para>
         /// </remarks>
-        private void ReadElementInstances()
+        private void ReadFacts()
         {
             thisFacts = new List<Fact>();
             foreach (XmlNode CurrentChild in thisXbrlRootNode.ChildNodes)
@@ -659,34 +676,80 @@ namespace JeffFerguson.Gepsio
             return Count;
         }
 
-        //-------------------------------------------------------------------------------
-        // Validate the essence alias between two facts referenced in a definition arc.
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Validate the essence alias between two facts referenced in a definition arc using
+        /// the set of all facts in the fragment. 
+        /// </summary>
+        /// <param name="EssenceAliasDefinitionArc">
+        /// The definition arc defining the essence alias.
+        /// </param>
         private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc)
+        {
+            ValidateEssenceAliasedFacts(EssenceAliasDefinitionArc, thisFacts);
+        }
+
+        /// <summary>
+        /// Validate the essence alias between two facts referenced in a definition arc using
+        /// the set of all facts in the fragment. 
+        /// </summary>
+        /// <param name="EssenceAliasDefinitionArc">
+        /// The definition arc defining the essence alias.
+        /// </param>
+        private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc, List<Fact> FactList)
         {
             Locator CurrentFromLocator = EssenceAliasDefinitionArc.FromLocator;
             if (CurrentFromLocator == null)
                 throw new NullReferenceException("FromLocator is NULL in ValidateEssenceAliasedFacts()");
             Locator CurrentToLocator = EssenceAliasDefinitionArc.ToLocator;
 
-            foreach (Fact CurrentFact in thisFacts)
+            foreach (Fact CurrentFact in FactList)
             {
-                var CurrentItem = CurrentFact as Item;
-                if (CurrentItem != null)
+                if (CurrentFact is Item)
                 {
-                    if (CurrentFact.Name.Equals(CurrentFromLocator.HrefResourceId) == true)
-                        ValidateEssenceAliasedFacts(CurrentItem, CurrentToLocator.HrefResourceId);
+                    var CurrentItem = CurrentFact as Item;
+                    if (CurrentItem.Name.Equals(CurrentFromLocator.HrefResourceId) == true)
+                        ValidateEssenceAliasedFacts(CurrentItem, FactList, CurrentToLocator.HrefResourceId);
+                }
+                else if (CurrentFact is Tuple)
+                {
+                    var CurrentTuple = CurrentFact as Tuple;
+                    ValidateEssenceAliasedFacts(EssenceAliasDefinitionArc, CurrentTuple.Facts);
                 }
             }
         }
 
-        //-------------------------------------------------------------------------------
-        // Validate the essence alias between a given fact and all other facts with the
-        // given fact name.
-        //-------------------------------------------------------------------------------
-        private void ValidateEssenceAliasedFacts(Item FromItem, string ToItemName)
+        /// <summary>
+        /// Validate the essence alias between a given fact and all other facts with the given fact name.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// An essence alias is a relationship between a "from" item and a "to" item. The "from" item and
+        /// the "to" item must be identical. This method is given the "from" item and must search for the
+        /// corresponding "to" item.
+        /// </para>
+        /// <para>
+        /// The scoping of the search for the corresponding "to" item is important. In the simple case, an
+        /// XBRL fragment has only items, and the search for the corresponding "to" item can be conducted
+        /// in the list all of all items in the fragment.
+        /// </para>
+        /// <para>
+        /// However, if the "from" item is found in a tuple, then the list of items from which the "to" item
+        /// is to be found must be restricted to the other items in the tuple and not simply the set of all
+        /// items in the fragment.
+        /// </para>
+        /// </remarks>
+        /// <param name="FromItem">
+        /// The item that represents the "from" end of the essence alias relationship.
+        /// </param>
+        /// <param name="FactList">
+        /// The list of facts that should be searched to find the item that represents the "to" end of the essence alias relationship.
+        /// </param>
+        /// <param name="ToItemName">
+        /// The name of the item that represents the "to" end of the essence alias relationship.
+        /// </param>
+        private void ValidateEssenceAliasedFacts(Item FromItem, List<Fact> FactList, string ToItemName)
         {
-            foreach (Fact CurrentFact in thisFacts)
+            foreach (Fact CurrentFact in FactList)
             {
                 var CurrentItem = CurrentFact as Item;
                 if (CurrentItem != null)
@@ -707,7 +770,20 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotContextEquals");
                 MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
-                throw new XbrlException(MessageBuilder.ToString());
+                throw new XbrlException(MessageBuilder.ToString()); 
+            }
+            else
+            {
+
+                // Conformance test 392.11 says that this condition is valid.
+
+                if ((FromItem.ContextRef.InstantPeriod == true) && (ToItem.ContextRef.InstantPeriod == true))
+                {
+                    if (FromItem.ContextRef.InstantDate != ToItem.ContextRef.InstantDate)
+                    {
+                        return;
+                    }
+                }
             }
             if (FromItem.ParentEquals(ToItem) == false)
             {
@@ -723,7 +799,21 @@ namespace JeffFerguson.Gepsio
                 MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
                 throw new XbrlException(MessageBuilder.ToString());
             }
-            if (FromItem.RoundedValue != ToItem.RoundedValue)
+
+            // At this point, the valies of the items need to be compared. Check the item's type
+            // to ensure that the correct value is being compared.
+
+            var ItemValuesMatch = true;
+            if (FromItem.SchemaElement.TypeName.Name.Equals("stringItemType") == true)
+            {
+                ItemValuesMatch = FromItem.Value.Equals(ToItem.Value);
+            }
+            else
+            {
+                if (FromItem.RoundedValue != ToItem.RoundedValue)
+                    ItemValuesMatch = false;
+            }
+            if(ItemValuesMatch == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("EssenceAliasFactsHaveDifferentRoundedValues");
@@ -869,7 +959,7 @@ namespace JeffFerguson.Gepsio
                 CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
                 Element ContributingConceptElement = LocateElement(CurrentLocator);
                 Item ContributingConceptFact = LocateItem(ContributingConceptElement);
-                if (ContributingConceptFact != null)
+                if ((ContributingConceptFact != null) && (ContributingConceptCalculationArc != null))
                 {
                     double ContributingConceptRoundedValue = ContributingConceptFact.RoundedValue;
                     if (ContributingConceptCalculationArc.Weight != (decimal)(1.0))

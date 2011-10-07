@@ -85,6 +85,9 @@ namespace JeffFerguson.Test.Gepsio
         private void ExecuteVariation(string TestcaseXmlSourceDirectory, XmlNode VariationNode)
         {
             TestVariation CurrentVariation = new TestVariation(VariationNode);
+            if (string.IsNullOrEmpty(CurrentVariation.Instance) == true)
+                return;
+
             StringBuilder InstanceXmlSourceFullPathBuilder = new StringBuilder();
             InstanceXmlSourceFullPathBuilder.AppendFormat("{0}{1}{2}", TestcaseXmlSourceDirectory, Path.DirectorySeparatorChar, CurrentVariation.Instance);
             string InstanceXmlSourceFullPath = InstanceXmlSourceFullPathBuilder.ToString();
@@ -96,11 +99,11 @@ namespace JeffFerguson.Test.Gepsio
             {
                 NewXbrlDocument.Load(InstanceXmlSourceFullPath);
             }
-            catch (XbrlException e)
+            catch (XbrlException xbrle)
             {
-                VariationException = e;
+                VariationException = xbrle;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 // This is a good place to catch non-XBRL exceptions, such as null reference
                 // exceptions, during debugging.

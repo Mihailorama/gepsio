@@ -89,9 +89,11 @@ namespace JeffFerguson.Gepsio
             thisFromId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "from");
             thisToId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "to");
             string OrderString = XmlUtilities.GetAttributeValue(CalculationArcNode, "order");
-            thisOrder = Convert.ToDecimal(OrderString);
+            if(string.IsNullOrEmpty(OrderString) == false)
+                thisOrder = Convert.ToDecimal(OrderString);
             string WeightString = XmlUtilities.GetAttributeValue(CalculationArcNode, "weight");
-            thisWeight = Convert.ToDecimal(WeightString);
+            if (string.IsNullOrEmpty(WeightString) == false)
+                thisWeight = Convert.ToDecimal(WeightString);
         }
     }
 }

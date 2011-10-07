@@ -109,19 +109,26 @@ namespace JeffFerguson.Test.Gepsio
                 thisXsd = string.Empty;
                 thisReadXsdFirst = false;
             }
-            thisInstance = InstanceNode.InnerText;
 
-            string ReadInstanceFirstText = InstanceNode.Attributes["readMeFirst"].Value;
-            if (ReadInstanceFirstText == "true")
-                thisReadInstanceFirst = true;
-            else
-                thisReadInstanceFirst = false;
+            if (InstanceNode != null)
+            {
+                thisInstance = InstanceNode.InnerText;
+                string ReadInstanceFirstText = InstanceNode.Attributes["readMeFirst"].Value;
+                if (ReadInstanceFirstText == "true")
+                    thisReadInstanceFirst = true;
+                else
+                    thisReadInstanceFirst = false;
 
-            string ExpectedResultText = ResultNode.Attributes["expected"].Value;
-            if (ExpectedResultText == "valid")
-                thisValidityExpected = true;
+                string ExpectedResultText = ResultNode.Attributes["expected"].Value;
+                if (ExpectedResultText == "valid")
+                    thisValidityExpected = true;
+                else
+                    thisValidityExpected = false;
+            }
             else
-                thisValidityExpected = false;
+            {
+                 thisInstance = string.Empty;
+            }
         }
     }
 }
