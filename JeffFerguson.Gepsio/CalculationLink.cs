@@ -149,7 +149,7 @@ namespace JeffFerguson.Gepsio
         {
             foreach (CalculationArc CurrentCalculationArc in CalculationArcs)
             {
-                if (CurrentCalculationArc.ToId.Equals(SourceLocator.HrefResourceId) == true)
+                if (CurrentCalculationArc.ToId.Equals(SourceLocator.Label) == true)
                     return CurrentCalculationArc;
             }
             return null;

@@ -94,6 +94,8 @@ namespace JeffFerguson.Gepsio
             string WeightString = XmlUtilities.GetAttributeValue(CalculationArcNode, "weight");
             if (string.IsNullOrEmpty(WeightString) == false)
                 thisWeight = Convert.ToDecimal(WeightString);
+            else
+                thisWeight = (decimal)(1.0);
         }
     }
 }
