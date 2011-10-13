@@ -18,6 +18,8 @@ namespace JeffFerguson.Test.Gepsio
     [TestClass]
     public class ConformanceTest
     {
+        private int thisTestsPassed;
+
         public ConformanceTest()
         {
         }
@@ -50,6 +52,7 @@ namespace JeffFerguson.Test.Gepsio
         {
             XmlDocument ConformanceXmlDocument;
 
+            thisTestsPassed = 0;
             string ConformanceXmlSource = ConfigurationManager.AppSettings["ConformanceXml"];
             string ConformanceXmlSourcePath = Path.GetDirectoryName(ConformanceXmlSource);
             ConformanceXmlDocument = new XmlDocument();
@@ -114,6 +117,7 @@ namespace JeffFerguson.Test.Gepsio
                 AnnounceTestFailure(CurrentVariation);
             if ((VariationException != null) && (CurrentVariation.ValidityExpected == true))
                 AnnounceTestFailure(CurrentVariation, VariationException);
+            thisTestsPassed++;
         }
 
         //-------------------------------------------------------------------------------
