@@ -907,40 +907,62 @@ namespace JeffFerguson.Gepsio
         #region Summation Concept Validation
         //===============================================================================
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Validates all of the summation concepts in this fragment.
+        /// </summary>
         private void ValidateSummationConcepts()
         {
             foreach (XbrlSchema CurrentSchema in thisSchemas)
                 ValidateSummationConcepts(CurrentSchema);
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Validates all summation concepts defined in the current schema.
+        /// </summary>
+        /// <param name="CurrentSchema">
+        /// The schema whose containing summation concepts should be validated.
+        /// </param>
         private void ValidateSummationConcepts(XbrlSchema CurrentSchema)
         {
             foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
                 ValidateSummationConcepts(CurrentLinkbaseDocument);
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Validates all summation concepts found in the current linkbase document.
+        /// </summary>
+        /// <param name="CurrentLinkbaseDocument">
+        /// The linkbase document whose containing summation concepts should be validated.
+        /// </param>
         private void ValidateSummationConcepts(LinkbaseDocument CurrentLinkbaseDocument)
         {
             foreach (CalculationLink CurrentCalculationLink in CurrentLinkbaseDocument.CalculationLinks)
                 ValidateSummationConcepts(CurrentCalculationLink);
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Validates all summation concepts found in the current calculation link.
+        /// </summary>
+        /// <param name="CurrentCalculationLink">
+        /// The calculation link whose containing summation concepts should be validated.
+        /// </param>
         private void ValidateSummationConcepts(CalculationLink CurrentCalculationLink)
         {
             foreach (SummationConcept CurrentSummationConcept in CurrentCalculationLink.SummationConcepts)
                 ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept);
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Validates a given summation concept.
+        /// </summary>
+        /// <param name="CurrentCalculationLink">
+        /// The calculation link that defines the given summation concept.
+        /// </param>
+        /// <param name="CurrentSummationConcept">
+        /// The summation concept to be validated.
+        /// </param>
         private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept)
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
@@ -957,6 +979,23 @@ namespace JeffFerguson.Gepsio
             foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
             {
                 CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
+
+                // Locate the elements that contribute to the calculation. Note that there may be more
+                // than one element with the same label. The 397.00 test in the XBRL-CONF-CR3-2007-03-05
+                // conformance suite uses the following calculation link in 397-ABC-calculation.xml:
+                //
+                // <calculationLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+                //     <loc xlink:type="locator" xlink:href="397-ABC.xsd#A" xlink:label="summationItem" />
+                //     <loc xlink:type="locator" xlink:href="397-ABC.xsd#B" xlink:label="contributingItem" />
+                //     <loc xlink:type="locator" xlink:href="397-ABC.xsd#C" xlink:label="contributingItem" />
+                //     <!-- A = B + C -->
+                //     <calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="summationItem" xlink:to="contributingItem" weight="1"/>
+                // </calculationLink>
+                //
+                // Note that the calculation arc goes from a label of "summationItem" to a label of "contributingItem". Note also
+                // that there are two locators that match the "contributingItem" label: the locator with an href of "397-ABC.xsd#B"
+                // and a label with an href of "397-ABC.xsd#C". Both locators must be used for the calculation.
+
                 Element ContributingConceptElement = LocateElement(CurrentLocator);
                 Item ContributingConceptFact = LocateItem(ContributingConceptElement);
                 if ((ContributingConceptFact != null) && (ContributingConceptCalculationArc != null))

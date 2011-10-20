@@ -72,7 +72,8 @@ namespace JeffFerguson.Gepsio
                 CurrentSummationConcept = new SummationConcept(CurrentCalculationArc.FromLocator);
                 thisSummationConcepts.Add(CurrentSummationConcept);
             }
-            CurrentSummationConcept.AddContributingConceptLocator(CurrentCalculationArc.ToLocator);
+            foreach(var CurrentToLocator in CurrentCalculationArc.ToLocators)
+                CurrentSummationConcept.AddContributingConceptLocator(CurrentToLocator);
         }
 
         //------------------------------------------------------------------------------------
@@ -100,7 +101,11 @@ namespace JeffFerguson.Gepsio
         private void ResolveLocators(CalculationArc CurrentCalculationArc)
         {
             CurrentCalculationArc.FromLocator = GetLocator(CurrentCalculationArc.FromId);
-            CurrentCalculationArc.ToLocator = GetLocator(CurrentCalculationArc.ToId);
+            foreach (Locator CurrentLocator in thisLocators)
+            {
+                if (CurrentLocator.Label.Equals(CurrentCalculationArc.ToId) == true)
+                    CurrentCalculationArc.AddToLocator(CurrentLocator);
+            }
         }
 
         //------------------------------------------------------------------------------------
