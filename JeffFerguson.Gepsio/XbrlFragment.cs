@@ -1011,7 +1011,22 @@ namespace JeffFerguson.Gepsio
                 {
                     if (SummationConceptItem.ContextEquals(ContributingConceptItem) == false)
                         IncludeContributingConceptItemInCalculation = false;
-                    if(SummationConceptItem.UnitEquals(ContributingConceptItem) == false)
+                }
+
+                // Ensure that the contributing concept item is unit-equals
+                // with the summation item.
+
+                if (IncludeContributingConceptItemInCalculation == true)
+                {
+                    if (SummationConceptItem.UnitEquals(ContributingConceptItem) == false)
+                        IncludeContributingConceptItemInCalculation = false;
+                }
+
+                // Ensure that the contributing concept item does not have a nil value.
+
+                if (IncludeContributingConceptItemInCalculation == true)
+                {
+                    if(ContributingConceptItem.NilSpecified == true)
                         IncludeContributingConceptItemInCalculation = false;
                 }
 
