@@ -1004,11 +1004,21 @@ namespace JeffFerguson.Gepsio
                 if (ContributingConceptElement == null)
                     IncludeContributingConceptItemInCalculation = false;
 
+                // Find all items for the given element. If there is more than one, then
+                // the entire calculation validation is forfeit, according to test 397.12 in 
+                // the XBRL-CONF-CR3-2007-03-05 conformance suite.
+
+                var AllMatchingItems = LocateItems(ContributingConceptElement);
+                if (AllMatchingItems.Count > 1)
+                    return;
+
                 // Find the item for the given element.
 
-                Item ContributingConceptItem = LocateItem(ContributingConceptElement);
-                if (ContributingConceptItem == null)
+                Item ContributingConceptItem = null;
+                if (AllMatchingItems.Count == 0)
                     IncludeContributingConceptItemInCalculation = false;
+                else
+                    ContributingConceptItem = AllMatchingItems[0];
 
                 // Ensure that the contributing concept item is context-equals
                 // with the summation item.
@@ -1120,6 +1130,34 @@ namespace JeffFerguson.Gepsio
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        /// Locates all items that match the current element.
+        /// </summary>
+        /// <param name="ItemElement">
+        /// The element describing the items to be found.
+        /// </param>
+        /// <returns>
+        /// A collection of items that match the current element. If no items match,
+        /// a non-null List will still be returned, but the list will be empty.
+        /// </returns>
+        private List<Item> LocateItems(Element ItemElement)
+        {
+            var ItemList = new List<Item>();
+            if (ItemElement != null)
+            {
+                foreach (Fact CurrentFact in thisFacts)
+                {
+                    var CurrentItem = CurrentFact as Item;
+                    if (CurrentItem != null)
+                    {
+                        if (CurrentItem.SchemaElement.Equals(ItemElement) == true)
+                            ItemList.Add(CurrentItem);
+                    }
+                }
+            }
+            return ItemList;
         }
 
         //===============================================================================
