@@ -1011,6 +1011,8 @@ namespace JeffFerguson.Gepsio
                 {
                     if (SummationConceptItem.ContextEquals(ContributingConceptItem) == false)
                         IncludeContributingConceptItemInCalculation = false;
+                    if(SummationConceptItem.UnitEquals(ContributingConceptItem) == false)
+                        IncludeContributingConceptItemInCalculation = false;
                 }
 
                 // If the code is still interested in including the contributing concept item
