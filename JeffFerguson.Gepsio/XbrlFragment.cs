@@ -968,11 +968,17 @@ namespace JeffFerguson.Gepsio
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
             Item SummationConceptItem = LocateItem(SummationConceptElement);
-            //---------------------------------------------------------------------------
-            // If the summation concept fact doesn't exist, then there is no calculation
+
+            // If the summation concept item doesn't exist, then there is no calculation
             // to perform.
-            //---------------------------------------------------------------------------
+
             if (SummationConceptItem == null)
+                return;
+
+            // If the summation concept item has a "nil" value, then there is no calculation
+            // to perform.
+
+            if (SummationConceptItem.NilSpecified == true)
                 return;
 
             double SummationConceptRoundedValue = SummationConceptItem.RoundedValue;
