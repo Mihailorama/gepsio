@@ -765,25 +765,26 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ValidateEssenceAliasedFacts(Item FromItem, Item ToItem)
         {
+
+            // Essence alias checks for c-equals items are a bit tricky, according to the
+            // XBRL-CONF-CR3-2007-03-05 conformance suite. Test 392.11 says that it is valid
+            // to have two items with contexts having the same structure but different
+            // period values is valid; however, test 392.13 says that it is invalid two have
+            // two items with contexts having a different structure.
+
             if (FromItem.ContextEquals(ToItem) == false)
             {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotContextEquals");
-                MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
-                throw new XbrlException(MessageBuilder.ToString()); 
-            }
-            else
-            {
-
-                // Conformance test 392.11 says that this condition is valid.
-
-                if ((FromItem.ContextRef.InstantPeriod == true) && (ToItem.ContextRef.InstantPeriod == true))
+                if ((FromItem.ContextRef != null) && (ToItem.ContextRef != null))
                 {
-                    if (FromItem.ContextRef.InstantDate != ToItem.ContextRef.InstantDate)
+                    if (FromItem.ContextRef.PeriodTypeEquals(ToItem.ContextRef) == false)
                     {
-                        return;
+                        StringBuilder MessageBuilder = new StringBuilder();
+                        string StringFormat = AssemblyResources.GetName("EssenceAliasFactsNotContextEquals");
+                        MessageBuilder.AppendFormat(StringFormat, FromItem.Name, ToItem.Name, FromItem.Id, ToItem.Id);
+                        throw new XbrlException(MessageBuilder.ToString());
                     }
                 }
+                return;
             }
             if (FromItem.ParentEquals(ToItem) == false)
             {
@@ -966,53 +967,74 @@ namespace JeffFerguson.Gepsio
         private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept)
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
-            Item SummationConceptFact = LocateItem(SummationConceptElement);
+            Item SummationConceptItem = LocateItem(SummationConceptElement);
             //---------------------------------------------------------------------------
             // If the summation concept fact doesn't exist, then there is no calculation
             // to perform.
             //---------------------------------------------------------------------------
-            if (SummationConceptFact == null)
-                //throw new XbrlException(AssemblyResources.BuildMessage("CannotFindFactForElement", SummationConceptElement.Id));
+            if (SummationConceptItem == null)
                 return;
-            double SummationConceptRoundedValue = SummationConceptFact.RoundedValue;
+
+            double SummationConceptRoundedValue = SummationConceptItem.RoundedValue;
             double ContributingConceptRoundedValueTotal = 0;
+            var ContributingConceptItemsFound = false;
             foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
             {
-                CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
 
-                // Locate the elements that contribute to the calculation. Note that there may be more
-                // than one element with the same label. The 397.00 test in the XBRL-CONF-CR3-2007-03-05
-                // conformance suite uses the following calculation link in 397-ABC-calculation.xml:
-                //
-                // <calculationLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-                //     <loc xlink:type="locator" xlink:href="397-ABC.xsd#A" xlink:label="summationItem" />
-                //     <loc xlink:type="locator" xlink:href="397-ABC.xsd#B" xlink:label="contributingItem" />
-                //     <loc xlink:type="locator" xlink:href="397-ABC.xsd#C" xlink:label="contributingItem" />
-                //     <!-- A = B + C -->
-                //     <calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="summationItem" xlink:to="contributingItem" weight="1"/>
-                // </calculationLink>
-                //
-                // Note that the calculation arc goes from a label of "summationItem" to a label of "contributingItem". Note also
-                // that there are two locators that match the "contributingItem" label: the locator with an href of "397-ABC.xsd#B"
-                // and a label with an href of "397-ABC.xsd#C". Both locators must be used for the calculation.
+                // Some decisions need to be made before the code can actually add the value of the
+                // contributing concept to the total that the code is keeping.
+
+                var IncludeContributingConceptItemInCalculation = true;
+
+                // Find the calculation arc for the given calculation link.
+
+                CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
+                if (ContributingConceptCalculationArc == null)
+                    IncludeContributingConceptItemInCalculation = false;
+
+                // Find the elemement for the given locator.
 
                 Element ContributingConceptElement = LocateElement(CurrentLocator);
-                Item ContributingConceptFact = LocateItem(ContributingConceptElement);
-                if ((ContributingConceptFact != null) && (ContributingConceptCalculationArc != null))
+                if (ContributingConceptElement == null)
+                    IncludeContributingConceptItemInCalculation = false;
+
+                // Find the item for the given element.
+
+                Item ContributingConceptItem = LocateItem(ContributingConceptElement);
+                if (ContributingConceptItem == null)
+                    IncludeContributingConceptItemInCalculation = false;
+
+                // Ensure that the contributing concept item is context-equals
+                // with the summation item.
+
+                if (IncludeContributingConceptItemInCalculation == true)
                 {
-                    double ContributingConceptRoundedValue = ContributingConceptFact.RoundedValue;
+                    if (SummationConceptItem.ContextEquals(ContributingConceptItem) == false)
+                        IncludeContributingConceptItemInCalculation = false;
+                }
+
+                // If the code is still interested in including the contributing concept item
+                // in the calculation, then get its rounded value and add it to the total.
+
+                if (IncludeContributingConceptItemInCalculation == true)
+                {
+                    ContributingConceptItemsFound = true;
+                    double ContributingConceptRoundedValue = ContributingConceptItem.RoundedValue;
                     if (ContributingConceptCalculationArc.Weight != (decimal)(1.0))
                         ContributingConceptRoundedValue = ContributingConceptRoundedValue * (double)(ContributingConceptCalculationArc.Weight);
                     ContributingConceptRoundedValueTotal += ContributingConceptRoundedValue;
                 }
             }
-            ContributingConceptRoundedValueTotal = SummationConceptFact.Round(ContributingConceptRoundedValueTotal);
-            if (SummationConceptRoundedValue != ContributingConceptRoundedValueTotal)
+            if (ContributingConceptItemsFound == true)
             {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("SummationConceptError");
-                MessageBuilder.AppendFormat(StringFormat, SummationConceptFact.Name, SummationConceptRoundedValue, ContributingConceptRoundedValueTotal);
-                throw new XbrlException(MessageBuilder.ToString());
+                ContributingConceptRoundedValueTotal = SummationConceptItem.Round(ContributingConceptRoundedValueTotal);
+                if (SummationConceptRoundedValue != ContributingConceptRoundedValueTotal)
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("SummationConceptError");
+                    MessageBuilder.AppendFormat(StringFormat, SummationConceptItem.Name, SummationConceptRoundedValue, ContributingConceptRoundedValueTotal);
+                    throw new XbrlException(MessageBuilder.ToString());
+                }
             }
         }
 

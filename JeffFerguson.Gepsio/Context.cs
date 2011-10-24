@@ -374,9 +374,16 @@ namespace JeffFerguson.Gepsio
             return this.Segment.StructureEquals(OtherContext.Segment);
         }
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        private bool PeriodStructureEquals(Context OtherContext)
+        /// <summary>
+        /// Compares the period type of this context with the period type of another context.
+        /// </summary>
+        /// <param name="OtherContext">
+        /// The other context with which types should be compared.
+        /// </param>
+        /// <returns>
+        /// True if the two contexts have the same period type; false otherwise.
+        /// </returns>
+        internal bool PeriodTypeEquals(Context OtherContext)
         {
             if (this.ForeverPeriod != OtherContext.ForeverPeriod)
                 return false;
@@ -384,6 +391,20 @@ namespace JeffFerguson.Gepsio
                 return false;
             if (this.DurationPeriod != OtherContext.DurationPeriod)
                 return false;
+            return true;
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private bool PeriodStructureEquals(Context OtherContext)
+        {
+            if (PeriodTypeEquals(OtherContext) == false)
+                return false;
+            if (InstantPeriod == true)
+            {
+                if (this.InstantDate != OtherContext.InstantDate)
+                    return false;
+            }
             if (DurationPeriod == true)
             {
                 if (this.thisStartDate != OtherContext.thisStartDate)
