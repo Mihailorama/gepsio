@@ -10,7 +10,7 @@
   elementFormDefault="qualified">
 
 	<import namespace="http://www.xbrl.org/2003/instance" 
-          schemaLocation="../../lib/xbrl-instance-2003-12-31.xsd"/>
+          schemaLocation="../lib/xbrl-instance-2003-12-31.xsd"/>
 
   <!-- A holder for concepts -->
 	<element  name="H" 
