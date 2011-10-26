@@ -951,7 +951,24 @@ namespace JeffFerguson.Gepsio
         private void ValidateSummationConcepts(CalculationLink CurrentCalculationLink)
         {
             foreach (SummationConcept CurrentSummationConcept in CurrentCalculationLink.SummationConcepts)
-                ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept);
+            {
+
+                // Validate the main items in the fragment.
+
+                ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept, thisFacts);
+
+                // Look for any tuples in the fragment and validate their items as well. This action
+                // satisfies tests in the XBRL-CONF-CR3-2007-03-05 conformance suite such as 397.13.
+
+                foreach (var CurrentFact in thisFacts)
+                {
+                    if (CurrentFact is Tuple)
+                    {
+                        var CurrentTuple = CurrentFact as Tuple;
+                        ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept, CurrentTuple.Facts);
+                    }
+                }
+            }
         }
 
 
@@ -964,10 +981,13 @@ namespace JeffFerguson.Gepsio
         /// <param name="CurrentSummationConcept">
         /// The summation concept to be validated.
         /// </param>
-        private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept)
+        /// <param name="FactList">
+        /// The collection of items that should be searched when looking for summation or contributing items.
+        /// </param>
+        private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept, List<Fact> FactList)
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
-            Item SummationConceptItem = LocateItem(SummationConceptElement);
+            Item SummationConceptItem = LocateItem(SummationConceptElement, FactList);
 
             // If the summation concept item doesn't exist, then there is no calculation
             // to perform.
@@ -1008,7 +1028,7 @@ namespace JeffFerguson.Gepsio
                 // the entire calculation validation is forfeit, according to test 397.12 in 
                 // the XBRL-CONF-CR3-2007-03-05 conformance suite.
 
-                var AllMatchingItems = LocateItems(ContributingConceptElement);
+                var AllMatchingItems = LocateItems(ContributingConceptElement, FactList);
                 if (AllMatchingItems.Count > 1)
                     return;
 
@@ -1114,13 +1134,37 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Locates an item in the fragment's list of facts.
+        /// </summary>
+        /// <param name="ItemElement">
+        /// A schema element defining the item to be found.
+        /// </param>
+        /// <returns>
+        /// A reference to the first item that matches the given element, or null if no matching item is found.
+        /// </returns>
         private Item LocateItem(Element ItemElement)
+        {
+            return LocateItem(ItemElement, thisFacts);
+        }
+
+        /// <summary>
+        /// Locates an item in a list of facts.
+        /// </summary>
+        /// <param name="ItemElement">
+        /// A schema element defining the item to be found.
+        /// </param>
+        /// <param name="FactList">
+        /// The collection of items that should be searched.
+        /// </param>
+        /// <returns>
+        /// A reference to the first item that matches the given element, or null if no matching item is found.
+        /// </returns>
+        private Item LocateItem(Element ItemElement, List<Fact> FactList)
         {
             if (ItemElement == null)
                 return null;
-            foreach (Fact CurrentFact in thisFacts)
+            foreach (Fact CurrentFact in FactList)
             {
                 var CurrentItem = CurrentFact as Item;
                 if (CurrentItem != null)
@@ -1133,7 +1177,7 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
-        /// Locates all items that match the current element.
+        /// Locates all items in the fragment that match the current element.
         /// </summary>
         /// <param name="ItemElement">
         /// The element describing the items to be found.
@@ -1144,10 +1188,28 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         private List<Item> LocateItems(Element ItemElement)
         {
+            return LocateItems(ItemElement, thisFacts);
+        }
+
+        /// <summary>
+        /// Locates all items in the given collection of facts that match the current element.
+        /// </summary>
+        /// <param name="ItemElement">
+        /// The element describing the items to be found.
+        /// </param>
+        /// <param name="FactList">
+        /// The collection of items that should be searched.
+        /// </param>
+        /// <returns>
+        /// A collection of items that match the current element. If no items match,
+        /// a non-null List will still be returned, but the list will be empty.
+        /// </returns>
+        private List<Item> LocateItems(Element ItemElement, List<Fact> FactList)
+        {
             var ItemList = new List<Item>();
             if (ItemElement != null)
             {
-                foreach (Fact CurrentFact in thisFacts)
+                foreach (Fact CurrentFact in FactList)
                 {
                     var CurrentItem = CurrentFact as Item;
                     if (CurrentItem != null)
