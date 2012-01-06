@@ -69,11 +69,11 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConformanceTest.cs" />
+    <Compile Include="XBRLCONFCR320070305Test.cs" />
     <Compile Include="InferPrecisionTest.cs" />
     <Compile Include="iXBRLTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestVariation.cs" />
+    <Compile Include="XBRLCONFCR320070305TestVariation.cs" />
     <Compile Include="UkGaapSamples20080620UnitTest.cs" />
     <Compile Include="WorkItemsTests.cs" />
   </ItemGroup>
