@@ -12,7 +12,10 @@ namespace JeffFerguson.Test.Gepsio
 	/// This class executes the XBRL-CONF-CR3-2007-03-05 conformance test suite.
 	/// </summary>
 	/// <remarks>
-	/// The test suite is driven by a document in the root
+	/// The test suite is driven by a document in the root of the conformance suite
+	/// folder named "xbrl.xml". The root document is an XML document that contains
+	/// a set of &lt;testcase&gt; elements, each of which references a separate
+	/// test case document.
 	/// </remarks>
 	[TestClass]
 	public class XBRLCONFCR320070305Test
@@ -61,8 +64,15 @@ namespace JeffFerguson.Test.Gepsio
 			}
 		}
 
-		//-------------------------------------------------------------------------------
-		//-------------------------------------------------------------------------------
+		/// <summary>
+		/// Executes the test case referenced in the supplied test case node.
+		/// </summary>
+		/// <param name="ConformanceXmlSourcePath">
+		/// The path to the conformance suite.
+		/// </param>
+		/// <param name="TestcaseNode">
+		/// A reference to one of the &lt;testcase&gt; elements in the root test suiteb ocument.
+		/// </param>
 		private void ExecuteTestcase(string ConformanceXmlSourcePath, XmlNode TestcaseNode)
 		{
 			var uriAttribute = TestcaseNode.Attributes["uri"];

@@ -5,6 +5,31 @@ using System.Xml;
 
 namespace JeffFerguson.Test.Gepsio
 {
+	/// <summary>
+	/// A variation of a test case as defined in an XBRL-CONF-CR3-2007-03-05 test case document.
+	/// </summary>
+	/// <remarks>
+	/// <para>
+	/// Test case variations are found in one of the conformance suite test documents.
+	/// A test case document is an XML document with the following form:
+	/// </para>
+	/// <para>
+	/// &lt;testcase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Identifier Scope" description="Section 4.3  The Item Element" outpath="out" owner="mg@fla.fujitsu.com" xsi:noNamespaceSchemaLocation="../lib/test.xsd" minimal="true"&gt;
+	/// &lt;variation id="..." name="..."&gt;
+	/// &lt;description&gt;...&lt;/description&gt;
+	/// &lt;data&gt;
+	/// &lt;xsd readMeFirst="[true|false]"&gt;...&lt;/xsd&gt;
+	/// &lt;instance readMeFirst="[true|false]"&gt;...&lt;/instance&gt;
+	/// &lt;/data&gt;
+	/// &lt;result expected="[valid|invalid]"/&gt;
+	/// &lt;/variation&gt;
+	/// ... other &lt;testcase&gt; nodes ...
+	/// &lt;/testcase&gt;
+	/// </para>
+	/// <para>
+	/// This class represents one of the &lt;variation&gt; nodes as well as the content in its child nodes.
+	/// </para>
+	/// </remarks>
     internal class XBRLCONFCR320070305TestVariation
     {
 		internal string Id { get; private set; }
