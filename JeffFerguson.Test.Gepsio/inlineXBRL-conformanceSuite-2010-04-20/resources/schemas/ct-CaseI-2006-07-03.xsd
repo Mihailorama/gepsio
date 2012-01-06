@@ -1,0 +1,2611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ct-default="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+            xmlns:ct-CaseI="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseI/2006-07-03"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseI/2006-07-03">
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+               schemaLocation="ct-default-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.xbrl.org/2003/instance"
+               schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:annotation>
+      <xsd:appinfo>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-presentation-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+                         xlink:type="simple"/>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-label-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+                         xlink:type="simple"/>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsAssetDescription"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsWDVBF"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsTransfersIn"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsAdditionsTotal"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsAllowancesBalancingCharge"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsAllowancesBalancingAllowance"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsWDVCF"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsIndividualAssetPool"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIExpensiveCars3000WDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIExpensiveCars25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIExpensiveCarsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIExpensiveCarsTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceIndividualAssetPoolAssetDescription"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceWDVBF"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceTransfersIn"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceAdditionsTotal"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesBalancingCharge"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceWDVCF"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceIndividualAssetPool"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesLicenceNumber"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesAdditionsQualifyingFor100PercentInitialAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesAdditionsQualifyingFor10PercentWDA"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesPercentDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowances100PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowances25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowances10PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesBalancingAllowanceDue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesInitialAllowanceClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesBalancingAllowanceClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIMineralExtractionAllowancesTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryBalancingChargeTotal"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDescriptionOfTrade"
+                name="TradingProfitsIndividualTradeDescriptionOfTrade"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeProfitPerAccounts"
+                name="TradingProfitsIndividualTradeProfitPerAccounts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeAdditions"
+                name="TradingProfitsIndividualTradeAdditions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDeductions"
+                name="TradingProfitsIndividualTradeDeductions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeAdvertisingAndPromotions"
+                name="TradingProfitsIndividualTradeAdvertisingAndPromotions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeAdviceOnTax"
+                name="TradingProfitsIndividualTradeAdviceOnTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeBadDebts"
+                name="TradingProfitsIndividualTradeBadDebts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeCapitalInRevenue"
+                name="TradingProfitsIndividualTradeCapitalInRevenue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeChargesOnIncomePerPL"
+                name="TradingProfitsIndividualTradeChargesOnIncomePerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeClaimsAgainstTheCompany"
+                name="TradingProfitsIndividualTradeClaimsAgainstTheCompany"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeClaimsAgainstTheCompanyProvision"
+                name="TradingProfitsIndividualTradeClaimsAgainstTheCompanyProvision"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeClaimsAgainstTheCompanyReleased"
+                name="TradingProfitsIndividualTradeClaimsAgainstTheCompanyReleased"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeCommissions"
+                name="TradingProfitsIndividualTradeCommissions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeConsultancy"
+                name="TradingProfitsIndividualTradeConsultancy"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDepositAccountInterest"
+                name="TradingProfitsIndividualTradeDepositAccountInterest"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDepreciation"
+                name="TradingProfitsIndividualTradeDepreciation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDirectorsBonuses"
+                name="TradingProfitsIndividualTradeDirectorsBonuses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDirectorsRemunerationNotPaid"
+                name="TradingProfitsIndividualTradeDirectorsRemunerationNotPaid"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDisallowableEntertaining"
+                name="TradingProfitsIndividualTradeDisallowableEntertaining"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNonTradingForeignExchangeGainsAndLosses"
+                name="TradingProfitsIndividualTradeNonTradingForeignExchangeGainsAndLosses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFinanceLeaseAdjustments"
+                name="TradingProfitsIndividualTradeFinanceLeaseAdjustments"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeUKDividendReceivable"
+                name="TradingProfitsIndividualTradeUKDividendReceivable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeGeneralProvisions"
+                name="TradingProfitsIndividualTradeGeneralProvisions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeGeneralProvisionsIncreaseDecrease"
+                name="TradingProfitsIndividualTradeGeneralProvisionsIncreaseDecrease"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeGeneralProvisionsPerPL"
+                name="TradingProfitsIndividualTradeGeneralProvisionsPerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeUtilisationOfGeneralProvisions"
+                name="TradingProfitsIndividualTradeUtilisationOfGeneralProvisions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDisallowableUtilisationOfGeneralProvisions"
+                name="TradingProfitsIndividualTradeDisallowableUtilisationOfGeneralProvisions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDisallowableGiftsDonations"
+                name="TradingProfitsIndividualTradeDisallowableGiftsDonations"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDisallowableSubscriptionsAndDonations"
+                name="TradingProfitsIndividualTradeDisallowableSubscriptionsAndDonations"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeGoodwillAmortisation"
+                name="TradingProfitsIndividualTradeGoodwillAmortisation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIntercompanyCharges"
+                name="TradingProfitsIndividualTradeIntercompanyCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIntraGroupInterest"
+                name="TradingProfitsIndividualTradeIntraGroupInterest"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeInvestmentIncome"
+                name="TradingProfitsIndividualTradeInvestmentIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLeaseAmortisation"
+                name="TradingProfitsIndividualTradeLeaseAmortisation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeReliefForLeasePremiumsPaid"
+                name="TradingProfitsIndividualTradeReliefForLeasePremiumsPaid"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeDisallowableLegalAndProfessionalFees"
+                name="TradingProfitsIndividualTradeDisallowableLegalAndProfessionalFees"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLossProfitOnDisposalOfFixedAssets"
+                name="TradingProfitsIndividualTradeLossProfitOnDisposalOfFixedAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLossProfitOnDisposalOfInvestments"
+                name="TradingProfitsIndividualTradeLossProfitOnDisposalOfInvestments"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeManagementCharges"
+                name="TradingProfitsIndividualTradeManagementCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNonTradeDebitsCredits"
+                name="TradingProfitsIndividualTradeNonTradeDebitsCredits"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNonTradingLoanRelationshipDebitsPerPL"
+                name="TradingProfitsIndividualTradeNonTradingLoanRelationshipDebitsPerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNonTradingLoanRelationshipDebitsPerPLInterestPayable"
+                name="TradingProfitsIndividualTradeNonTradingLoanRelationshipDebitsPerPLInterestPayable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNonTradingLoanRelationshipCreditsPerPL"
+                name="TradingProfitsIndividualTradeNonTradingLoanRelationshipCreditsPerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNonTradingLoanRelationshipCreditsPerPLInterestReceivable"
+                name="TradingProfitsIndividualTradeNonTradingLoanRelationshipCreditsPerPLInterestReceivable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePaymentsToEBT"
+                name="TradingProfitsIndividualTradePaymentsToEBT"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePensionContributionsNotPaid"
+                name="TradingProfitsIndividualTradePensionContributionsNotPaid"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePreTradingExpenditure"
+                name="TradingProfitsIndividualTradePreTradingExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRepairsRenewalsMaintenance"
+                name="TradingProfitsIndividualTradeRepairsRenewalsMaintenance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRestructuringCosts"
+                name="TradingProfitsIndividualTradeRestructuringCosts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRoyalties"
+                name="TradingProfitsIndividualTradeRoyalties"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeScheduleAExpenses"
+                name="TradingProfitsIndividualTradeScheduleAExpenses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeScheduleAIncome"
+                name="TradingProfitsIndividualTradeScheduleAIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeSoftwareCharges"
+                name="TradingProfitsIndividualTradeSoftwareCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeSubscriptions"
+                name="TradingProfitsIndividualTradeSubscriptions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTelephoneAndTelex"
+                name="TradingProfitsIndividualTradeTelephoneAndTelex"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTradeFairsExhibitions"
+                name="TradingProfitsIndividualTradeTradeFairsExhibitions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTravelAndSubsistence"
+                name="TradingProfitsIndividualTradeTravelAndSubsistence"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeOther"
+                name="TradingProfitsIndividualTradeOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeOverseasDividendsReceivable"
+                name="TradingProfitsIndividualTradeOverseasDividendsReceivable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRevenueInCapital"
+                name="TradingProfitsIndividualTradeRevenueInCapital"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeCapitalAllowances"
+                name="TradingProfitsIndividualTradeCapitalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeCapitalAllowancesTotal"
+                name="TradingProfitsIndividualTradeCapitalAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradePMA"
+                name="TradingProfitsIndividualTradePMA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolWDVBF"
+                name="TradingProfitsIndividualTradePMAGeneralPoolWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolTransfersIn"
+                name="TradingProfitsIndividualTradePMAGeneralPoolTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAdditionsTotal"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA50Percent"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA50Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolDeductionsTotal"
+                name="TradingProfitsIndividualTradePMAGeneralPoolDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradePMAGeneralPoolDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradePMAGeneralPoolDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolDeductionsOther"
+                name="TradingProfitsIndividualTradePMAGeneralPoolDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAllowancesBalancingCharge"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAllowancesBalancingAllowance"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradePMAGeneralPoolAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAGeneralPoolWDVCF"
+                name="TradingProfitsIndividualTradePMAGeneralPoolWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssets"
+                name="TradingProfitsIndividualTradePMAShortLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsSummaryTotal"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsSummaryWDVBFTotal"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsSummaryWDVCFTotal"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssets"
+                name="TradingProfitsIndividualTradePMALongLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsWDVBF"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsTransfersIn"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsDeductionsTotal"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsDeductionsOther"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMALongLifeAssetsWDVCF"
+                name="TradingProfitsIndividualTradePMALongLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCars"
+                name="TradingProfitsIndividualTradePMAExpensiveCars"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsSummaryTotal"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsSummaryWDVBFTotal"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsSummaryBalancingChargeTotal"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAExpensiveCarsSummaryWDVCFTotal"
+                name="TradingProfitsIndividualTradePMAExpensiveCarsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeRDA"
+                name="TradingProfitsIndividualTradeRDA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRDATransfersIn"
+                name="TradingProfitsIndividualTradeRDATransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRDADeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeRDADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeRDAAllowancesBalancingCharge"
+                name="TradingProfitsIndividualTradeRDAAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowance"
+                name="TradingProfitsIndividualTradeKnowHowAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceWDVBF"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceTransfersIn"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceDeductionsTotal"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceDeductionsOther"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceAllowancesBalancingCharge"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceAllowancesBalancingAllowance"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeKnowHowAllowanceWDVCF"
+                name="TradingProfitsIndividualTradeKnowHowAllowanceWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowance"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryWDVBFTotal"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryAdditionsTotal"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryAllowancesTotal"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryBalancingChargeTotal"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryWDVCFTotal"
+                name="TradingProfitsIndividualTradeMineralExtractionAllowanceSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeFCA"
+                name="TradingProfitsIndividualTradeFCA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAWDVBF"
+                name="TradingProfitsIndividualTradeFCAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAdditionsTotalCost"
+                name="TradingProfitsIndividualTradeFCAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAdditionsTransfersIn"
+                name="TradingProfitsIndividualTradeFCAAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAdditionsQualifyingForInitialAllowance100Percent"
+                name="TradingProfitsIndividualTradeFCAAdditionsQualifyingForInitialAllowance100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradeFCAAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCADeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeFCADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCADeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeFCADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAllowancesBalancing"
+                name="TradingProfitsIndividualTradeFCAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAllowancesTotalClaimed"
+                name="TradingProfitsIndividualTradeFCAAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeFCAAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeFCAAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCABalancingCharge"
+                name="TradingProfitsIndividualTradeFCABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCATaxWDVCF"
+                name="TradingProfitsIndividualTradeFCATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeIBA"
+                name="TradingProfitsIndividualTradeIBA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAWDVBF"
+                name="TradingProfitsIndividualTradeIBAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsTotalCost"
+                name="TradingProfitsIndividualTradeIBAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsTransfersIn"
+                name="TradingProfitsIndividualTradeIBAAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsQualifyingForInitialAllowance100Percent"
+                name="TradingProfitsIndividualTradeIBAAdditionsQualifyingForInitialAllowance100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsQualifyingForInitialAllowance75Percent"
+                name="TradingProfitsIndividualTradeIBAAdditionsQualifyingForInitialAllowance75Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsQualifyingForInitialAllowance20Percent"
+                name="TradingProfitsIndividualTradeIBAAdditionsQualifyingForInitialAllowance20Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradeIBAAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsQualifyingForWDA4Percent"
+                name="TradingProfitsIndividualTradeIBAAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAdditionsQualifyingForWDA2Percent"
+                name="TradingProfitsIndividualTradeIBAAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBADeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeIBADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBADeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeIBADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAllowancesBalancing"
+                name="TradingProfitsIndividualTradeIBAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAllowancesTotalClaimed"
+                name="TradingProfitsIndividualTradeIBAAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeIBAAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeIBAAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBANotionalAllowancesCumulativeBF"
+                name="TradingProfitsIndividualTradeIBANotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBANotionalAllowancesCurrentAllowance"
+                name="TradingProfitsIndividualTradeIBANotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBANotionalAllowancesBalancingAdjustment"
+                name="TradingProfitsIndividualTradeIBANotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBANotionalAllowancesCumulativeCF"
+                name="TradingProfitsIndividualTradeIBANotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBABalancingCharge"
+                name="TradingProfitsIndividualTradeIBABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBATaxWDVCF"
+                name="TradingProfitsIndividualTradeIBATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeABA"
+                name="TradingProfitsIndividualTradeABA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAWDVBF"
+                name="TradingProfitsIndividualTradeABAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAdditionsTotalCost"
+                name="TradingProfitsIndividualTradeABAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAdditionsTransfersIn"
+                name="TradingProfitsIndividualTradeABAAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABADeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeABADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABADeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeABADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAllowancesBalancing"
+                name="TradingProfitsIndividualTradeABAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeABAAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeABAAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABABalancingCharge"
+                name="TradingProfitsIndividualTradeABABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABATaxWDVCF"
+                name="TradingProfitsIndividualTradeABATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeIAR"
+                name="TradingProfitsIndividualTradeIAR"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryAccountsWDVBFTotal"
+                name="TradingProfitsIndividualTradeIARSummaryAccountsWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryAccountsWDVCFTotal"
+                name="TradingProfitsIndividualTradeIARSummaryAccountsWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryAdditionsTotal"
+                name="TradingProfitsIndividualTradeIARSummaryAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryDeductionsTotal"
+                name="TradingProfitsIndividualTradeIARSummaryDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryTaxWDVBFTotal"
+                name="TradingProfitsIndividualTradeIARSummaryTaxWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryCumulativeTaxDebitsClaimedBFTotal"
+                name="TradingProfitsIndividualTradeIARSummaryCumulativeTaxDebitsClaimedBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryTaxDebitsTotal"
+                name="TradingProfitsIndividualTradeIARSummaryTaxDebitsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryTaxCreditsTotal"
+                name="TradingProfitsIndividualTradeIARSummaryTaxCreditsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryTaxWDVCFTotal"
+                name="TradingProfitsIndividualTradeIARSummaryTaxWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryCumulativeWDAsClaimedBFTotal"
+                name="TradingProfitsIndividualTradeIARSummaryCumulativeWDAsClaimedBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryTaxWDVTransferredTotal"
+                name="TradingProfitsIndividualTradeIARSummaryTaxWDVTransferredTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIARSummaryCumulativeWDAsClaimedTransferredTotal"
+                name="TradingProfitsIndividualTradeIARSummaryCumulativeWDAsClaimedTransferredTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLandRemediationQualifyingCapitalExpenditure"
+                name="TradingProfitsIndividualTradeLandRemediationQualifyingCapitalExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLandRemediationEnhancedExpenditure"
+                name="TradingProfitsIndividualTradeLandRemediationEnhancedExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeTradingLosses"
+                name="TradingProfitsIndividualTradeTradingLosses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeNetTradingProfitsIndividualTrade"
+                name="TradingProfitsIndividualTradeNetTradingProfitsIndividualTrade"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTotalProfitsAllTrades"
+                name="TradingProfitsTotalProfitsAllTrades"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesBF"
+                name="TradingProfitsTradingLossesBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesBroughtBack"
+                name="TradingProfitsTradingLossesBroughtBack"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesTotalArising"
+                name="TradingProfitsTradingLossesTotalArising"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesUsedAgainstTradingProfitsOfThePeriod"
+                name="TradingProfitsTradingLossesUsedAgainstTradingProfitsOfThePeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesUsedAgainstTotalProfitsOfThePeriod"
+                name="TradingProfitsTradingLossesUsedAgainstTotalProfitsOfThePeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesCarriedBack"
+                name="TradingProfitsTradingLossesCarriedBack"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesSurrenderedAsGroupRelief"
+                name="TradingProfitsTradingLossesSurrenderedAsGroupRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsTradingLossesCF"
+                name="TradingProfitsTradingLossesCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsNetTradingProfits"
+                name="TradingProfitsNetTradingProfits"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMAOtherAssetsTotalAllowances"
+                name="TradingProfitsPMAOtherAssetsTotalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMAExpensiveCarsBalancingCharge"
+                name="TradingProfitsPMAExpensiveCarsBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMAExpensiveCarsTotalAllowances"
+                name="TradingProfitsPMAExpensiveCarsTotalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMALongLifeAssetsBalancingCharge"
+                name="TradingProfitsPMALongLifeAssetsBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMALongLifeAssetsTotalAllowances"
+                name="TradingProfitsPMALongLifeAssetsTotalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMAGeneralPoolBalancingCharge"
+                name="TradingProfitsPMAGeneralPoolBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsPMASpecialLeasingReliefAgainstTotalIncomeThisPeriod"
+                name="TradingProfitsPMASpecialLeasingReliefAgainstTotalIncomeThisPeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIBABalancingCharge"
+                name="TradingProfitsIBABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIBATotalAllowances"
+                name="TradingProfitsIBATotalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsOtherChargesAllowancesBalancingCharge"
+                name="TradingProfitsOtherChargesAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsOtherChargesAllowancesTotalAllowances"
+                name="TradingProfitsOtherChargesAllowancesTotalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsRDAllowance"
+                name="TradingProfitsRDAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsRDAEnhancedExpenditure"
+                name="TradingProfitsRDAEnhancedExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsRDAEnhancedExpenditureOfAnSME"
+                name="TradingProfitsRDAEnhancedExpenditureOfAnSME"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsRDAVaccinesResearchExpenditure"
+                name="TradingProfitsRDAVaccinesResearchExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTrade"
+                name="TradingProfitsIndividualTrade"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeDescriptionOfTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeNetTradingProfitsIndividualTrade"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeExpensiveLeasedCarComputationLeasingCharges"
+                name="TradingProfitsIndividualTradeExpensiveLeasedCarComputationLeasingCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeExpensiveLeasedCarComputationMaintenanceElement"
+                name="TradingProfitsIndividualTradeExpensiveLeasedCarComputationMaintenanceElement"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeExpensiveLeasedCarComputationAmountAllowable"
+                name="TradingProfitsIndividualTradeExpensiveLeasedCarComputationAmountAllowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeExpensiveLeasedCarComputationAmountDisallowable"
+                name="TradingProfitsIndividualTradeExpensiveLeasedCarComputationAmountDisallowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetDescription"
+                name="TradingProfitsIndividualTradeFCAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetSite"
+                name="TradingProfitsIndividualTradeFCAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetBuilding"
+                name="TradingProfitsIndividualTradeFCAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetYearOfExpenditure"
+                name="TradingProfitsIndividualTradeFCAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetOriginalCost"
+                name="TradingProfitsIndividualTradeFCAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetWDVBF"
+                name="TradingProfitsIndividualTradeFCAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAdditionsTotalCost"
+                name="TradingProfitsIndividualTradeFCAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAdditionsTransfersIn"
+                name="TradingProfitsIndividualTradeFCAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAdditionsQualifyingForInitialAllowance100Percent"
+                name="TradingProfitsIndividualTradeFCAAssetAdditionsQualifyingForInitialAllowance100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradeFCAAssetAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeFCAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeFCAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAllowancesBalancing"
+                name="TradingProfitsIndividualTradeFCAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAllowancesTotalClaimed"
+                name="TradingProfitsIndividualTradeFCAAssetAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeFCAAssetAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeFCAAssetAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetBalancingCharge"
+                name="TradingProfitsIndividualTradeFCAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAssetTaxWDVCF"
+                name="TradingProfitsIndividualTradeFCAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeFCAAsset"
+                name="TradingProfitsIndividualTradeFCAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAdditionsQualifyingForInitialAllowance100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIFCAsDemolitionCosts"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIFCAs100PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIFCAs25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIFCAsInitialAllowanceClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:CapAllowSchDCaseIFCAsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAllowancesTotalClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeFCAAssetTaxWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAssetDescription"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsWDVBF"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsTransfersIn"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA50Percent"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA50Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsOther"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesBalancingCharge"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesBalancingAllowance"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsWDVCF"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradePMAShortLifeAssetsIndividualAssetPool"
+                name="TradingProfitsIndividualTradePMAShortLifeAssetsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA50Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssetsTotalAdditions"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssetsDateOfAcquisition"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssetsTransfersToPlantAndMachineryPool"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsDeductionsOther"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssets100PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssets50PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssets40PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssets25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssetsFYAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssetsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIShortLifeAssetsTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradePMAShortLifeAssetsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetDescription"
+                name="TradingProfitsIndividualTradeABAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetSite"
+                name="TradingProfitsIndividualTradeABAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetBuilding"
+                name="TradingProfitsIndividualTradeABAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetYearOfExpenditure"
+                name="TradingProfitsIndividualTradeABAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetOriginalCost"
+                name="TradingProfitsIndividualTradeABAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetDateOfTransfer"
+                name="TradingProfitsIndividualTradeABAAssetDateOfTransfer"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetNonQualifyingUseOnDisposal"
+                name="TradingProfitsIndividualTradeABAAssetNonQualifyingUseOnDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetWDVBF"
+                name="TradingProfitsIndividualTradeABAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetAdditionsTotalCost"
+                name="TradingProfitsIndividualTradeABAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetAdditionsTransfersIn"
+                name="TradingProfitsIndividualTradeABAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeABAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeABAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetAllowancesBalancing"
+                name="TradingProfitsIndividualTradeABAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeABAAssetAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeABAAssetAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetBalancingCharge"
+                name="TradingProfitsIndividualTradeABAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAssetTaxWDVCF"
+                name="TradingProfitsIndividualTradeABAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeABAAsset"
+                name="TradingProfitsIndividualTradeABAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetDateOfTransfer"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetNonQualifyingUseOnDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIABA4PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIABA2PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:CapAllowSchDCaseIABAWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIABATotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeABAAssetTaxWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetDescription"
+                name="TradingProfitsIndividualTradeIBAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetSite"
+                name="TradingProfitsIndividualTradeIBAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetBuilding"
+                name="TradingProfitsIndividualTradeIBAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetYearOfExpenditure"
+                name="TradingProfitsIndividualTradeIBAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetOriginalCost"
+                name="TradingProfitsIndividualTradeIBAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetDateOfTransfer"
+                name="TradingProfitsIndividualTradeIBAAssetDateOfTransfer"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetNonQualifyingUseOnDisposal"
+                name="TradingProfitsIndividualTradeIBAAssetNonQualifyingUseOnDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetWDVBF"
+                name="TradingProfitsIndividualTradeIBAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsTotalCost"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsTransfersIn"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance100Percent"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance75Percent"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance75Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance20Percent"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance20Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA25Percent"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA4Percent"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA2Percent"
+                name="TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetDeductionsDisposalProceeds"
+                name="TradingProfitsIndividualTradeIBAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetDeductionsTransfersOut"
+                name="TradingProfitsIndividualTradeIBAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesBalancing"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesTotalClaimed"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesDueToTransferor"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesDueToTransferee"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                name="TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCumulativeBF"
+                name="TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCurrentAllowance"
+                name="TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetNotionalAllowancesBalancingAdjustment"
+                name="TradingProfitsIndividualTradeIBAAssetNotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCumulativeCF"
+                name="TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetBalancingCharge"
+                name="TradingProfitsIndividualTradeIBAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAssetTaxWDVCF"
+                name="TradingProfitsIndividualTradeIBAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeIBAAsset"
+                name="TradingProfitsIndividualTradeIBAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetDateOfTransfer"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetNonQualifyingUseOnDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance75Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForInitialAllowance20Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA4Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsQualifyingForWDA2Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:CapAllowSchDCaseIIBAUnletBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:CapAllowSchDCaseIIBAUnletCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBA100PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBA75PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBA20PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBA25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBA4PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBA2PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBAInitialAllowanceClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:CapAllowSchDCaseIIBAWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCumulativeBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCurrentAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetNotionalAllowancesBalancingAdjustment"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetNotionalAllowancesCumulativeCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetTaxWDVCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeIBAAssetAllowancesTotalClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:CapAllowSchDCaseIIBAPotentialClawback"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfits" name="TradingProfits"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseI_TradingProfitsIndividualTradeTransferPricing"
+                name="TradingProfitsIndividualTradeTransferPricing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingAdjustment"
+                name="TradingProfitsIndividualTradeTransferPricingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingAdjustmentDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingAdjustmentAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingAdjustmentTotal"
+                name="TradingProfitsIndividualTradeTransferPricingAdjustmentTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingAdjustmentDescription"
+                name="TradingProfitsIndividualTradeTransferPricingAdjustmentDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingAdjustmentAmount"
+                name="TradingProfitsIndividualTradeTransferPricingAdjustmentAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDisallowance"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDisallowance"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestDisallowanceDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestDisallowanceReason"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestDisallowanceAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDisallowanceTotal"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDisallowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDisallowanceDescription"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDisallowanceDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDisallowanceReason"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDisallowanceReason"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDisallowanceAmount"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDisallowanceAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingCompensatingAdjustments"
+                name="TradingProfitsIndividualTradeTransferPricingCompensatingAdjustments"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentsTotal"
+                name="TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentDescription"
+                name="TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentAmount"
+                name="TradingProfitsIndividualTradeTransferPricingCompensatingAdjustmentAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantor"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantor"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorTotal"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorDescription"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorAmount"
+                name="TradingProfitsIndividualTradeTransferPricingInterestDeemedToBePaidAsGuarantorAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceived"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceived"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedTotal"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedDescription"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedAmount"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentReceivedAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMade"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMade"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseI:TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeTotal"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeDescription"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeAmount"
+                name="TradingProfitsIndividualTradeTransferPricingInterestBalancingPaymentMadeAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeAdjustmentForDifferentAccountingPracticesWithinGroup"
+                name="TradingProfitsIndividualTradeAdjustmentForDifferentAccountingPracticesWithinGroup"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLesseeIncomePermittedMaximumRestriction"
+                name="TradingProfitsIndividualTradeLesseeIncomePermittedMaximumRestriction"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLesseeIncomeTerminationIncrease"
+                name="TradingProfitsIndividualTradeLesseeIncomeTerminationIncrease"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLessorIncomePermittedThresholdDisregard"
+                name="TradingProfitsIndividualTradeLessorIncomePermittedThresholdDisregard"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseI_TradingProfitsIndividualTradeLessorIncomeTerminationAdjustment"
+                name="TradingProfitsIndividualTradeLessorIncomeTerminationAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-CaseI_TradingProfitsAggregationOfProfitsOfMoreThanOneTrade"
+                name="TradingProfitsAggregationOfProfitsOfMoreThanOneTrade"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+</xsd:schema>

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Taxonomy Label Linkbase based on XBRL Spec 2.1.
+-->
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_AccountingPolicies" xlink:label="uk-gaap-ae_AccountingPolicies" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_AccountingPolicies" xlink:to="uk-gaap-ae_AccountingPolicies_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_AccountingPolicies_lbl" xml:lang="en">Accounting Policies</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_AccountingPolicy" xlink:label="uk-gaap-ae_AccountingPolicy" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_AccountingPolicy" xlink:to="uk-gaap-ae_AccountingPolicy_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_AccountingPolicy_lbl" xml:lang="en">Accounting policy</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies" xlink:label="uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies" xlink:to="uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies_lbl" xml:lang="en">Accounts are in accordance with the special provisions of Companies Act relating to small companies</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies_lbl" xml:lang="en">The accounts have been prepared in accordance with the special provisions in part VII of the Companies Act 1985 relating to small companies</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE" xlink:label="uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE" xlink:to="uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE_lbl" xml:lang="en">Accounts prepared under historical cost convention and in accordance with FRSE</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE_lbl" xml:lang="en">The accounts have been prepared under the historical cost convention and in accordance with the Financial Reporting Standards for Small Entities (effective June 2002)</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_AddressCH" xlink:label="uk-gaap-ae_AddressCH" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_AddressCH" xlink:to="uk-gaap-ae_AddressCH_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_AddressCH_lbl" xml:lang="en">Address (CH)</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_ApprovalDirectorsReport" xlink:label="uk-gaap-ae_ApprovalDirectorsReport" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_ApprovalDirectorsReport" xlink:to="uk-gaap-ae_ApprovalDirectorsReport_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_ApprovalDirectorsReport_lbl" xml:lang="en">Approval of Directors' Report</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_BalanceSheet-AuditExemptFormat" xlink:label="uk-gaap-ae_BalanceSheet-AuditExemptFormat" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_BalanceSheet-AuditExemptFormat" xlink:to="uk-gaap-ae_BalanceSheet-AuditExemptFormat_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_BalanceSheet-AuditExemptFormat_lbl" xml:lang="en">Balance Sheet - Audit Exempt Format</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_BalanceSheetDeclarations" xlink:label="uk-gaap-ae_BalanceSheetDeclarations" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_BalanceSheetDeclarations" xlink:to="uk-gaap-ae_BalanceSheetDeclarations_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_BalanceSheetDeclarations_lbl" xml:lang="en">Balance sheet declarations</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_Bankers" xlink:label="uk-gaap-ae_Bankers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_Bankers" xlink:to="uk-gaap-ae_Bankers_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_Bankers_lbl" xml:lang="en">Bankers</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_BusinessAddress" xlink:label="uk-gaap-ae_BusinessAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_BusinessAddress" xlink:to="uk-gaap-ae_BusinessAddress_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_BusinessAddress_lbl" xml:lang="en">Business address</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CategoryItem" xlink:label="uk-gaap-ae_CategoryItem" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CategoryItem" xlink:to="uk-gaap-ae_CategoryItem_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CategoryItem_lbl" xml:lang="en">Category of item</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_ChargesBeforeOperatingProfit" xlink:label="uk-gaap-ae_ChargesBeforeOperatingProfit" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_ChargesBeforeOperatingProfit" xlink:to="uk-gaap-ae_ChargesBeforeOperatingProfit_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_ChargesBeforeOperatingProfit_lbl" xml:lang="en">Charges before operating profit</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompaniesHouseDocumentAuthentication" xlink:label="uk-gaap-ae_CompaniesHouseDocumentAuthentication" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompaniesHouseDocumentAuthentication" xlink:to="uk-gaap-ae_CompaniesHouseDocumentAuthentication_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompaniesHouseDocumentAuthentication_lbl" xml:lang="en">Companies House document authentication</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompaniesHouseRegisteredNumber" xlink:label="uk-gaap-ae_CompaniesHouseRegisteredNumber" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompaniesHouseRegisteredNumber" xlink:to="uk-gaap-ae_CompaniesHouseRegisteredNumber_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gaap-ae_CompaniesHouseRegisteredNumber_lbl" xml:lang="en">This is a mandatory -- all financial statements filed to Companies House must contain the Companies House registered number.</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompaniesHouseRegisteredNumber_lbl" xml:lang="en">Companies House registered number</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyDormant" xlink:label="uk-gaap-ae_CompanyDormant" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyDormant" xlink:to="uk-gaap-ae_CompanyDormant_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyDormant_lbl" xml:lang="en">Company is dormant</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-ae_CompanyDormant_lbl" xml:lang="en">Company is dormant and has not traded during the period or subsequent to the period end.</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985" xlink:label="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985" xlink:to="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985_lbl" xml:lang="en">Company entitled to exemption under section 249A(1) of Companies Act 1985</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985" xlink:label="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985" xlink:to="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985_lbl" xml:lang="en">Company entitled to exemption under section 249AA(1) of Companies Act 1985</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyHasActedAsAnAgentDuringPeriod" xlink:label="uk-gaap-ae_CompanyHasActedAsAnAgentDuringPeriod" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyHasActedAsAnAgentDuringPeriod" xlink:to="uk-gaap-ae_CompanyHasActedAsAnAgentDuringPeriod_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyHasActedAsAnAgentDuringPeriod_lbl" xml:lang="en">Company has acted as an agent during the period</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyIdentifyingNumbers" xlink:label="uk-gaap-ae_CompanyIdentifyingNumbers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyIdentifyingNumbers" xlink:to="uk-gaap-ae_CompanyIdentifyingNumbers_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyIdentifyingNumbers_lbl" xml:lang="en">Company identifying numbers</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyNon-trading" xlink:label="uk-gaap-ae_CompanyNon-trading" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyNon-trading" xlink:to="uk-gaap-ae_CompanyNon-trading_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyNon-trading_lbl" xml:lang="en">Company is non-trading</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanyNotDormant" xlink:label="uk-gaap-ae_CompanyNotDormant" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanyNotDormant" xlink:to="uk-gaap-ae_CompanyNotDormant_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanyNotDormant_lbl" xml:lang="en">Company is not dormant</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CompanySecretarysName" xlink:label="uk-gaap-ae_CompanySecretarysName" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CompanySecretarysName" xlink:to="uk-gaap-ae_CompanySecretarysName_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CompanySecretarysName_lbl" xml:lang="en">Company secretary's name</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_ContentAccountingPolicy" xlink:label="uk-gaap-ae_ContentAccountingPolicy" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_ContentAccountingPolicy" xlink:to="uk-gaap-ae_ContentAccountingPolicy_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_ContentAccountingPolicy_lbl" xml:lang="en">Content of accounting policy</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_CostOrValuationOtherTangibleFixedAsset" xlink:label="uk-gaap-ae_CostOrValuationOtherTangibleFixedAsset" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_CostOrValuationOtherTangibleFixedAsset" xlink:to="uk-gaap-ae_CostOrValuationOtherTangibleFixedAsset_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_CostOrValuationOtherTangibleFixedAsset_lbl" xml:lang="en">At cost or valuation, other tangible fixed asset</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DateApprovalDirectorsReport" xlink:label="uk-gaap-ae_DateApprovalDirectorsReport" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DateApprovalDirectorsReport" xlink:to="uk-gaap-ae_DateApprovalDirectorsReport_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DateApprovalDirectorsReport_lbl" xml:lang="en">Date of approval of Directors' Report</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DateResignation" xlink:label="uk-gaap-ae_DateResignation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DateResignation" xlink:to="uk-gaap-ae_DateResignation_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DateResignation_lbl" xml:lang="en">Date of resignation</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DepreciationOtherTangibleFixedAsset" xlink:label="uk-gaap-ae_DepreciationOtherTangibleFixedAsset" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DepreciationOtherTangibleFixedAsset" xlink:to="uk-gaap-ae_DepreciationOtherTangibleFixedAsset_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DepreciationOtherTangibleFixedAsset_lbl" xml:lang="en">Depreciation, other tangible fixed asset</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DepreciationRate" xlink:label="uk-gaap-ae_DepreciationRate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DepreciationRate" xlink:to="uk-gaap-ae_DepreciationRate_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DepreciationRate_lbl" xml:lang="en">Depreciation rate</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DescriptionAccountants" xlink:label="uk-gaap-ae_DescriptionAccountants" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DescriptionAccountants" xlink:to="uk-gaap-ae_DescriptionAccountants_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gaap-ae_DescriptionAccountants_lbl" xml:lang="en">Description of Accountantss' business, if required - e.g. "registered auditors"</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DescriptionAccountants_lbl" xml:lang="en">Description of accountants</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DescriptionBusinessAddress" xlink:label="uk-gaap-ae_DescriptionBusinessAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DescriptionBusinessAddress" xlink:to="uk-gaap-ae_DescriptionBusinessAddress_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DescriptionBusinessAddress_lbl" xml:lang="en">Description of business address</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct" xlink:label="uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct" xlink:to="uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct_lbl" xml:lang="en">Directors acknowledge their responsibilities under Companies Act</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct_lbl" xml:lang="en">The directors acknowledge their responsibility for:  i) ensuring the company keeps accounting records which comply with Section 221; and ii) preparing accounts which give a true and fair view of the state of affairs of the company as at the end of the financial year, and of its profit or loss for the financial year, in accordance with the requirements of section 226, and which otherwise comply with the requirements of the Companies Act relating to accounts, so far as is applicable to the company.</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DirectorShareholding" xlink:label="uk-gaap-ae_DirectorShareholding" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DirectorShareholding" xlink:to="uk-gaap-ae_DirectorShareholding_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DirectorShareholding_lbl" xml:lang="en">Director shareholdings</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DirectorsReport" xlink:label="uk-gaap-ae_DirectorsReport" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DirectorsReport" xlink:to="uk-gaap-ae_DirectorsReport_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DirectorsReport_lbl" xml:lang="en">Directors' Report</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_DirectorsReportGeneralText" xlink:label="uk-gaap-ae_DirectorsReportGeneralText" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_DirectorsReportGeneralText" xlink:to="uk-gaap-ae_DirectorsReportGeneralText_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_DirectorsReportGeneralText_lbl" xml:lang="en">Directors' Report general text</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_ListDirectorsExecutives" xlink:label="uk-gaap-ae_ListDirectorsExecutives" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_ListDirectorsExecutives" xlink:to="uk-gaap-ae_ListDirectorsExecutives_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_ListDirectorsExecutives_lbl" xml:lang="en">List of directors and executives</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit" xlink:label="uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit" xlink:to="uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit_lbl" xml:lang="en">Members have not required the company to obtain an audit</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit_lbl" xml:lang="en">Members have not required the company to obtain an audit in accordance with section 249B(2) of the Companies Act 1985</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_NameAccountants" xlink:label="uk-gaap-ae_NameAccountants" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_NameAccountants" xlink:to="uk-gaap-ae_NameAccountants_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_NameAccountants_lbl" xml:lang="en">Name of accountants</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_NameBankers" xlink:label="uk-gaap-ae_NameBankers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_NameBankers" xlink:to="uk-gaap-ae_NameBankers_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_NameBankers_lbl" xml:lang="en">Name of bankers</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_NamePersonApprovingDirectorsReport" xlink:label="uk-gaap-ae_NamePersonApprovingDirectorsReport" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_NamePersonApprovingDirectorsReport" xlink:to="uk-gaap-ae_NamePersonApprovingDirectorsReport_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gaap-ae_NamePersonApprovingDirectorsReport_lbl" xml:lang="en">Directors' Report may only be approved by a director of the company.</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_NamePersonApprovingDirectorsReport_lbl" xml:lang="en">Name of person approving Directors' Report</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_NameSolicitors" xlink:label="uk-gaap-ae_NameSolicitors" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_NameSolicitors" xlink:to="uk-gaap-ae_NameSolicitors_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_NameSolicitors_lbl" xml:lang="en">Name of solicitors</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_NameTypeTangibleFixedAsset" xlink:label="uk-gaap-ae_NameTypeTangibleFixedAsset" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_NameTypeTangibleFixedAsset" xlink:to="uk-gaap-ae_NameTypeTangibleFixedAsset_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_NameTypeTangibleFixedAsset_lbl" xml:lang="en">Name of type of tangible fixed asset</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAssetAdditions" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetAdditions" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAssetAdditions" xlink:to="uk-gaap-ae_OtherTangibleFixedAssetAdditions_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetAdditions_lbl" xml:lang="en">Other tangible fixed asset, additions</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation" xlink:to="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodEndLabel" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation_lbl" xml:lang="en">Other tangible fixed asset, at cost or valuation, end of period</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodStartLabel" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation_lbl" xml:lang="en">Other tangible fixed asset, at cost or valuation, beginning of period</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation_lbl" xml:lang="en">Other tangible fixed asset, at cost or valuation</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAssetDepreciationChargeForPeriod" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciationChargeForPeriod" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAssetDepreciationChargeForPeriod" xlink:to="uk-gaap-ae_OtherTangibleFixedAssetDepreciationChargeForPeriod_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciationChargeForPeriod_lbl" xml:lang="en">Other tangible fixed asset, depreciation, charge for period</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAssetDepreciationDisposals" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciationDisposals" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAssetDepreciationDisposals" xlink:to="uk-gaap-ae_OtherTangibleFixedAssetDepreciationDisposals_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciationDisposals_lbl" xml:lang="en">Other tangible fixed asset, depreciation, disposals</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAssetDepreciation" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAssetDepreciation" xlink:to="uk-gaap-ae_OtherTangibleFixedAssetDepreciation_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodEndLabel" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciation_lbl" xml:lang="en">Other tangible fixed asset, depreciation, end of period</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodStartLabel" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciation_lbl" xml:lang="en">Other tangible fixed asset, depreciation, beginning of period</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDepreciation_lbl" xml:lang="en">Other tangible fixed asset, depreciation</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAssetDisposals" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDisposals" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAssetDisposals" xlink:to="uk-gaap-ae_OtherTangibleFixedAssetDisposals_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAssetDisposals_lbl" xml:lang="en">Other tangible fixed asset, disposals</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTangibleFixedAsset" xlink:label="uk-gaap-ae_OtherTangibleFixedAsset" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTangibleFixedAsset" xlink:to="uk-gaap-ae_OtherTangibleFixedAsset_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTangibleFixedAsset_lbl" xml:lang="en">Other tangible fixed asset</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-ae_OtherTangibleFixedAsset_lbl" xml:lang="en">Other tangible fixed asset, net book value</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_OtherTypeTangibleFixedAsset-Analysis" xlink:label="uk-gaap-ae_OtherTypeTangibleFixedAsset-Analysis" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_OtherTypeTangibleFixedAsset-Analysis" xlink:to="uk-gaap-ae_OtherTypeTangibleFixedAsset-Analysis_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_OtherTypeTangibleFixedAsset-Analysis_lbl" xml:lang="en">Other type of tangible fixed asset - Analysis</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_PoliticalCharitableDonationsText" xlink:label="uk-gaap-ae_PoliticalCharitableDonationsText" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_PoliticalCharitableDonationsText" xlink:to="uk-gaap-ae_PoliticalCharitableDonationsText_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_PoliticalCharitableDonationsText_lbl" xml:lang="en">Political and charitable donations text</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_PositionPersonApprovingDirectorsReport" xlink:label="uk-gaap-ae_PositionPersonApprovingDirectorsReport" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_PositionPersonApprovingDirectorsReport" xlink:to="uk-gaap-ae_PositionPersonApprovingDirectorsReport_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_PositionPersonApprovingDirectorsReport_lbl" xml:lang="en">Position of person approving Directors' Report</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_ProfitLossAccount" xlink:label="uk-gaap-ae_ProfitLossAccount" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_ProfitLossAccount" xlink:to="uk-gaap-ae_ProfitLossAccount_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_ProfitLossAccount_lbl" xml:lang="en">Profit and loss account</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_RateDepreciation" xlink:label="uk-gaap-ae_RateDepreciation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_RateDepreciation" xlink:to="uk-gaap-ae_RateDepreciation_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_RateDepreciation_lbl" xml:lang="en">Rate of depreciation</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_RegisteredOfficeAddress" xlink:label="uk-gaap-ae_RegisteredOfficeAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_RegisteredOfficeAddress" xlink:to="uk-gaap-ae_RegisteredOfficeAddress_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_RegisteredOfficeAddress_lbl" xml:lang="en">Registered office address</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_ReportingAccountants" xlink:label="uk-gaap-ae_ReportingAccountants" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_ReportingAccountants" xlink:to="uk-gaap-ae_ReportingAccountants_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_ReportingAccountants_lbl" xml:lang="en">Reporting accountants</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_Shareholding" xlink:label="uk-gaap-ae_Shareholding" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_Shareholding" xlink:to="uk-gaap-ae_Shareholding_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_Shareholding_lbl" xml:lang="en">Shareholding</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_Solicitors" xlink:label="uk-gaap-ae_Solicitors" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_Solicitors" xlink:to="uk-gaap-ae_Solicitors_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_Solicitors_lbl" xml:lang="en">Solicitors</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_TitleAccountingPolicy" xlink:label="uk-gaap-ae_TitleAccountingPolicy" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_TitleAccountingPolicy" xlink:to="uk-gaap-ae_TitleAccountingPolicy_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_TitleAccountingPolicy_lbl" xml:lang="en">Title of accounting policy</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_TransactionsWithDirectors" xlink:label="uk-gaap-ae_TransactionsWithDirectors" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_TransactionsWithDirectors" xlink:to="uk-gaap-ae_TransactionsWithDirectors_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_TransactionsWithDirectors_lbl" xml:lang="en">Transactions with directors</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_TypeDepreciation" xlink:label="uk-gaap-ae_TypeDepreciation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_TypeDepreciation" xlink:to="uk-gaap-ae_TypeDepreciation_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_TypeDepreciation_lbl" xml:lang="en">Type of depreciation</label>
+    <loc xlink:type="locator" xlink:href="uk-gaap-ae-2005-06-01.xsd#uk-gaap-ae_VATRegistrationNumber" xlink:label="uk-gaap-ae_VATRegistrationNumber" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-ae_VATRegistrationNumber" xlink:to="uk-gaap-ae_VATRegistrationNumber_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-ae_VATRegistrationNumber_lbl" xml:lang="en">VAT registration number</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset" xlink:to="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset_lbl" xml:lang="en">This is current asset item in Debtors Note.  May alternatively be expressed as item in Balance Sheet.  Must NOT appear in both places. </label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset_lbl" xml:lang="en">Called up share capital not-paid, expressed as a current asset in Debtors Note.  This not an item in the Balance Sheet.</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset" xlink:to="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset_lbl" xml:lang="en">Called up share capital not paid, not expressed as current asset. This is an item in the Balance Sheet not in the Debtors Note.</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_FixturesFittingsToolsEquipment" xlink:label="uk-gaap-pt_FixturesFittingsToolsEquipment" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_FixturesFittingsToolsEquipment" xlink:to="uk-gaap-pt_FixturesFittingsToolsEquipment_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_FixturesFittingsToolsEquipment_lbl" xml:lang="en">Fixtures, fittings, tools and equipment, net book value</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IntangibleFixedAssets" xlink:label="uk-gaap-pt_IntangibleFixedAssets" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_IntangibleFixedAssets" xlink:to="uk-gaap-pt_IntangibleFixedAssets_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_IntangibleFixedAssets_lbl" xml:lang="en">Intangible fixed assets, net book value</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_LandBuildings" xlink:label="uk-gaap-pt_LandBuildings" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_LandBuildings" xlink:to="uk-gaap-pt_LandBuildings_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_LandBuildings_lbl" xml:lang="en">Land and buildings, net book value</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" xlink:label="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" xlink:to="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_lbl_1" xml:lang="en">Total net assets (liabilities)</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherAggregateReserves" xlink:label="uk-gaap-pt_OtherAggregateReserves" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_OtherAggregateReserves" xlink:to="uk-gaap-pt_OtherAggregateReserves_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-pt_OtherAggregateReserves_lbl_1" xml:lang="en">Other reserves</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PlantMachinery" xlink:label="uk-gaap-pt_PlantMachinery" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_PlantMachinery" xlink:to="uk-gaap-pt_PlantMachinery_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_PlantMachinery_lbl" xml:lang="en">Plant and machinery, net book value</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProfitLossAccountReserve" xlink:label="uk-gaap-pt_ProfitLossAccountReserve" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_ProfitLossAccountReserve" xlink:to="uk-gaap-pt_ProfitLossAccountReserve_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodEndLabel" xlink:label="uk-gaap-pt_ProfitLossAccountReserve_lbl_1" xml:lang="en">Retained profit (loss), end of period</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodStartLabel" xlink:label="uk-gaap-pt_ProfitLossAccountReserve_lbl_1" xml:lang="en">Retained profit (loss), beginning of period</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SharesDirectorOrExecutive" xlink:label="uk-gaap-pt_SharesDirectorOrExecutive" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_SharesDirectorOrExecutive" xlink:to="uk-gaap-pt_SharesDirectorOrExecutive_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gaap-pt_SharesDirectorOrExecutive_lbl_1" xml:lang="en">Number of shares</label>
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TangibleFixedAssets" xlink:label="uk-gaap-pt_TangibleFixedAssets" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_TangibleFixedAssets" xlink:to="uk-gaap-pt_TangibleFixedAssets_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xlink:label="uk-gaap-pt_TangibleFixedAssets_lbl" xml:lang="en">Tangible fixed assets, net book value</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine1Entity" xlink:label="uk-gcd_AddressLine1Entity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine1Entity" xlink:to="uk-gcd_AddressLine1Entity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine1Entity_lbl" xml:lang="en">Address line 1, company</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine2Entity" xlink:label="uk-gcd_AddressLine2Entity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine2Entity" xlink:to="uk-gcd_AddressLine2Entity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine2Entity_lbl" xml:lang="en">Address line 2, company</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine3Entity" xlink:label="uk-gcd_AddressLine3Entity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine3Entity" xlink:to="uk-gcd_AddressLine3Entity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine3Entity_lbl" xml:lang="en">Address line 3, company</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_CityOrTownEntity" xlink:label="uk-gcd_CityOrTownEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrTownEntity" xlink:to="uk-gcd_CityOrTownEntity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrTownEntity_lbl" xml:lang="en">City or town, company</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_CountryEntity" xlink:label="uk-gcd_CountryEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryEntity" xlink:to="uk-gcd_CountryEntity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryEntity_lbl" xml:lang="en">Country, company</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_CountyOrRegionEntity" xlink:label="uk-gcd_CountyOrRegionEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountyOrRegionEntity" xlink:to="uk-gcd_CountyOrRegionEntity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountyOrRegionEntity_lbl" xml:lang="en">County, company</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_DocumentInformation" xlink:label="uk-gcd_DocumentInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentInformation" xlink:to="uk-gcd_DocumentInformation_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentInformation_lbl_1" xml:lang="en">Instance document information</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_EntityAddress" xlink:label="uk-gcd_EntityAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityAddress" xlink:to="uk-gcd_EntityAddress_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityAddress_lbl" xml:lang="en">Registered Office</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_EntityBusinessDescription" xlink:label="uk-gcd_EntityBusinessDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityBusinessDescription" xlink:to="uk-gcd_EntityBusinessDescription_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityBusinessDescription_lbl_1" xml:lang="en">Principal activity</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_EntityCurrentLegalName" xlink:label="uk-gcd_EntityCurrentLegalName" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityCurrentLegalName" xlink:to="uk-gcd_EntityCurrentLegalName_lbl_1" priority="1" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityCurrentLegalName_lbl_1" xml:lang="en">Company current legal name</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_EntityGeneralIdentifier" xlink:label="uk-gcd_EntityGeneralIdentifier" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityGeneralIdentifier" xlink:to="uk-gcd_EntityGeneralIdentifier_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityGeneralIdentifier_lbl" xml:lang="en">Company identifier</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_IdentifyingCode" xlink:label="uk-gcd_IdentifyingCode" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_IdentifyingCode" xlink:to="uk-gcd_IdentifyingCode_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_IdentifyingCode_lbl" xml:lang="en">Companies House registered number</label>
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd#uk-gcd_ZIPOrPostalCodeEntity" xlink:label="uk-gcd_ZIPOrPostalCodeEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ZIPOrPostalCodeEntity" xlink:to="uk-gcd_ZIPOrPostalCodeEntity_lbl" />
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ZIPOrPostalCodeEntity_lbl" xml:lang="en">Postcode, company</label>
+  
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01-labels.xml#uk-gaap-pt_SharesDirectorOrExecutive_lbl_0" xlink:label="uk-gaap-pt_SharesDirectorOrExecutive_lbl_0" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_SharesDirectorOrExecutive" xlink:to="uk-gaap-pt_SharesDirectorOrExecutive_lbl_0" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01-labels.xml#uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_lbl_0" xlink:label="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_lbl_0" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" xlink:to="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_lbl_0" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01-labels.xml#uk-gaap-pt_ProfitLossAccountReserve_lbl_0" xlink:label="uk-gaap-pt_ProfitLossAccountReserve_lbl_0-orig" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_ProfitLossAccountReserve" xlink:to="uk-gaap-pt_ProfitLossAccountReserve_lbl_0-orig" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01-labels.xml#uk-gaap-pt_ProfitLossAccountReserve_lbl_1" xlink:label="uk-gaap-pt_ProfitLossAccountReserve_lbl_1-orig" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_ProfitLossAccountReserve" xlink:to="uk-gaap-pt_ProfitLossAccountReserve_lbl_1-orig" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01-labels.xml#uk-gcd_EntityCurrentLegalName_lbl_0" xlink:label="uk-gcd_EntityCurrentLegalName_0-orig" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityCurrentLegalName" xlink:to="uk-gcd_EntityCurrentLegalName_0-orig" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01-labels.xml#uk-gcd_DocumentInformation_lbl_1" xlink:label="uk-gcd_DocumentInformation_lbl_1-orig" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentInformation" xlink:to="uk-gcd_DocumentInformation_lbl_1-orig" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../gcd/2004-12-01/uk-gcd-2004-12-01-labels.xml#uk-gcd_EntityBusinessDescription_lbl_1" xlink:label="uk-gcd_EntityBusinessDescription_lbl_1-orig" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityBusinessDescription" xlink:to="uk-gcd_EntityBusinessDescription_lbl_1-orig" use="prohibited" priority="1" />
+
+    <loc xlink:type="locator" xlink:href="../../pt/2004-12-01/uk-gaap-pt-2004-12-01-labels.xml#uk-gaap-pt_OtherAggregateReserves_lbl_2" xlink:label="uk-gaap-pt_OtherAggregateReserves_lbl_2" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gaap-pt_OtherAggregateReserves" xlink:to="uk-gaap-pt_OtherAggregateReserves_lbl_2" use="prohibited" priority="1" />
+
+    </labelLink>
+</linkbase>

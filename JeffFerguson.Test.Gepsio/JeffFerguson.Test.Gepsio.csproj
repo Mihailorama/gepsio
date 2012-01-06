@@ -79,6 +79,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\bin\date.xsl" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\bin\extractTestInputs.xsl" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\bin\extractTestMetadata.xsl" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\bin\extractTestOutputs.xsl" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\bin\normalise.xsl" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\fragments\index_bottom.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\fragments\index_raw.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\fragments\index_testcase.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\fragments\index_testcases_top.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\fragments\index_top.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ae\2005-06-01\uk-gaap-ae-2005-06-01-calculation.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ae\2005-06-01\uk-gaap-ae-2005-06-01-definition.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ae\2005-06-01\uk-gaap-ae-2005-06-01-label.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ae\2005-06-01\uk-gaap-ae-2005-06-01-presentation.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ci\2004-12-01\uk-gaap-ci-2004-12-01-calculation.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ci\2004-12-01\uk-gaap-ci-2004-12-01-presentation.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\gcd\2004-12-01\uk-gcd-2004-12-01-labels.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\pt\2004-12-01\uk-gaap-pt-2004-12-01-labels.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\pt\2004-12-01\uk-gaap-pt-2004-12-01-references.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-stylesheet-label-2006-07-03.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-stylesheet-presentation-2006-07-03.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\stylesheets\documentation.xsl" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\stylesheets\specifications.xml" />
+    <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\stylesheets\test.xsl" />
     <Content Include="ixbrl-samples\UKGAAP2009.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\README.txt" />
     <Content Include="uk-gaap-samples-2008-06-20\samples\accounting-policies-dimension.xml" />
@@ -729,6 +753,182 @@
     <None Include="InferPrecisionTestDocuments\Example13Row5.xbrl" />
     <None Include="InferPrecisionTestDocuments\Example13Row6.xbrl" />
     <None Include="InferPrecisionTestDocuments\Example13Row7.xbrl" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\bin\checkOutputs.sh" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\bin\CONFIG" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\bin\makeDistribution.sh" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\bin\makeStaticFiles.sh" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\bin\makeXBRL.sh" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\bin\validateTestCases.sh" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-complete.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-footnoteArcrole.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-footnoteLinkRole.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-footnoteRole.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-nonNumeric-escaped.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-nonNumeric-unescaped.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-nothidden.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-xhtml-content-exclude.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\extra\PASS-element-link-footnote-xhtml-content.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\Makefile" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\README" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ae\2005-06-01\uk-gaap-ae-2005-06-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\ci\2004-12-01\uk-gaap-ci-2004-12-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\gcd\2004-12-01\uk-gcd-2004-12-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ch\pt\2004-12-01\uk-gaap-pt-2004-12-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-CaseI-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-CaseV-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-CG-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-CT-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-default-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-DR-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-FixedAss-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-OtherInc-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-PL-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-roles-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-SchA-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\ct-Tax-2006-07-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\roles.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\specifications.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\resources\schemas\test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\FAIL-multi-input-duplicate-context-ids.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\FAIL-multi-input-duplicate-unit-ids.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\PASS-double-input-single-output.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\PASS-ix-references-06.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\PASS-ix-references-07.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\PASS-multiple-input-multiple-output.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\PASS-single-input-double-output.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases-multiIO\PASS-single-input.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\FAIL-element-ix-footnote-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\FAIL-element-ix-nonNumeric-escape-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\FAIL-ix-references-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\FAIL-ix-references-08.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\FAIL-ix-references-09.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-extension-illegalPlacement-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-format-denominator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-format-nonFraction-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-format-numerator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-name-fraction-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-name-nonFraction-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-name-nonNumeric-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-name-tuple-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-scale-denominator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-scale-denominator-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-scale-nonFraction-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-scale-nonFraction-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-scale-numerator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-scale-numerator-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-sign-denominator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-sign-nonFraction-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-attribute-ix-sign-numerator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-exclude-complete.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-footnote-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonFraction-complete.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonFraction-ixt-numcomma.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonFraction-ixt-numcommadot.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonFraction-ixt-numdotcomma.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonFraction-ixt-numspacecomma.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonFraction-ixt-numspacedot.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-complete.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-escape-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-escape-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-escape-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-escape-05.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-escape-06.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-escape-07.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datedoteu-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datedotus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datedotus-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datedotus-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelongdaymonthuk-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelongmonthdayus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelongmonthyear-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelonguk-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelonguk-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelongus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelongus-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-datelongyearmonth-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortdaymonthuk-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortmonthdayus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortmonthyear-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortuk-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortuk-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortus-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateshortyearmonth-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslashdaymontheu-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslasheu-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslasheu-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslasheu-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslashmonthdayus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslashus-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslashus-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslashus-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-nonNumeric-ixt-dateslashus-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-references-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ix-tuple-complete.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-complete.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-footnoteArcrole.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-footnoteLinkRole.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-footnoteRole.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-nonNumeric-escaped.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-nonNumeric-unescaped.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-nothidden.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-resolved-uris.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-xhtml-content-exclude.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-link-footnote-xhtml-content.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-element-ordering.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-elements-footnote-and-nonNumeric-unresolvable-uris-in-exclude.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-denominator-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-denominator-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-denominator-03.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-denominator-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-numerator-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-01.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-02.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-04.example" />
+    <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-05.example" />
     <None Include="uk-gaap-samples-2008-06-20\samples\a.qvw" />
     <None Include="uk-gaap-samples-2008-06-20\samples\extension\segment-reporting-dimension-schema.xsd" />
     <None Include="uk-gaap-samples-2008-06-20\taxonomy\UK-GAAP-2008-01-15\monolithic\2008-01-15\uk-gaap-pt-2008-01-15.xsd" />
@@ -1147,7 +1347,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="inlineXBRL-conformanceSuite-2010-04-20\output\files\" />
+    <Folder Include="inlineXBRL-conformanceSuite-2010-04-20\output\schemas\" />
+    <Folder Include="inlineXBRL-conformanceSuite-2010-04-20\output\stylesheets\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

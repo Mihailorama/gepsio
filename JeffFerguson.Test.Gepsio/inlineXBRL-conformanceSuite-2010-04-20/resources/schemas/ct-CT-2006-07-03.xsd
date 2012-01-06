@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ct-CT="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CT/2006-07-03"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CT/2006-07-03">
+   <xsd:import namespace="http://www.xbrl.org/2003/instance"
+               schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:annotation>
+      <xsd:appinfo>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-presentation-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+                         xlink:type="simple"/>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-label-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+                         xlink:type="simple"/>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element abstract="true" id="ct-CT_CT" name="CT" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CT_CTPayableByInstalments" name="CTPayableByInstalments"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CT_Descriptor" name="Descriptor" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CT_DescriptorCompanyName" name="DescriptorCompanyName" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CT_DescriptorTaxReference" name="DescriptorTaxReference" nillable="true"
+                substitutionGroup="xbrli:item"
+                xbrli:periodType="instant">
+      <xsd:complexType>
+         <xsd:simpleContent>
+            <xsd:restriction base="xbrli:stringItemType">
+               <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                     <xsd:pattern value="[0-9]{10}"/>
+                     <xsd:whiteSpace value="collapse"/>
+                  </xsd:restriction>
+               </xsd:simpleType>
+            </xsd:restriction>
+         </xsd:simpleContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CT_DescriptorTaxDistrict" name="DescriptorTaxDistrict" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CT_CTCarryForwardAmounts" name="CTCarryForwardAmounts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CT_DescriptorAccountingPeriodEnded"
+                name="DescriptorAccountingPeriodEnded"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateItemType"
+                xbrli:periodType="instant"/>
+</xsd:schema>

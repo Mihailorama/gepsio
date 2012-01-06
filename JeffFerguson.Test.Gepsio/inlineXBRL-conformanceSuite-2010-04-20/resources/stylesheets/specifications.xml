@@ -1,0 +1,9 @@
+<specifications
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:s="http://xbrl.org/conformance/2007/specifications"
+  xsi:schemaLocation="
+    http://xbrl.org/2005/conformance/specifications ../infrastructure/specifications.xsd"
+>
+  <specification id="IXBRL" sid="ixbrl" href="inlineXBRL-part1-spec.html"/>
+  
+</specifications>

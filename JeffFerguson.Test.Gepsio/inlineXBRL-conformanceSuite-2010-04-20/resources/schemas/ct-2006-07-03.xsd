@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:ct="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct/2006-07-03"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct/2006-07-03">
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+               schemaLocation="ct-default-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseV/2006-07-03"
+               schemaLocation="ct-CaseV-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-SchA/2006-07-03"
+               schemaLocation="ct-SchA-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-OtherInc/2006-07-03"
+               schemaLocation="ct-OtherInc-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CG/2006-07-03"
+               schemaLocation="ct-CG-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseI/2006-07-03"
+               schemaLocation="ct-CaseI-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-Tax/2006-07-03"
+               schemaLocation="ct-Tax-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-DR/2006-07-03"
+               schemaLocation="ct-DR-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-PL/2006-07-03"
+               schemaLocation="ct-PL-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CT/2006-07-03"
+               schemaLocation="ct-CT-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-FixedAss/2006-07-03"
+               schemaLocation="ct-FixedAss-2006-07-03.xsd"/>
+</xsd:schema>

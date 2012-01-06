@@ -1,0 +1,152 @@
+<testcase
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:iso4217='http://www.xbrl.org/2003/iso4217'
+  xmlns:ix='http://www.xbrl.org/2008/inlineXBRL'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:pt='http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+>
+  <head>
+    <number>100</number>
+    <creator>
+      <name>Evan Lenz</name>
+      <email>evan@lenzconsulting.com</email>
+    </creator>
+    <description>Correct mapping of ix:references attributes to xbrli:xbrl</description>
+    <requirement>no reference</requirement>
+  </head>
+  <body>
+    <input>
+      <html
+        version='-//XBRL International//DTD XHTML Inline XBRL 1.0//EN'
+        xmlns='http://www.w3.org/1999/xhtml'
+        xsi:schemaLocation='http://www.w3.org/1999/xhtml ../../../schema/xhtml-inlinexbrl-1_0.xsd'
+      >
+        <head>
+          <meta
+            content='text/html; charset=UTF-8'
+            http-equiv='Content-Type'
+          ></meta>
+          <title>Basic Inline XBRL Example</title>
+        </head>
+        <body
+          xml:lang='en'
+        >
+          <div
+            style='display:none'
+          >
+            <ix:header>
+              <ix:references id="topLevelID" xsi:schemaLocation="justTesting thisAttribute">
+                <link:schemaRef
+                  xlink:href='../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd'
+                  xlink:type='simple'
+                ></link:schemaRef>
+              </ix:references>
+              <ix:resources>
+                <xbrli:context
+                  id='DUR-1'
+                >
+                  <xbrli:entity>
+                    <xbrli:identifier
+                      scheme='test'
+                    >Test Co 1</xbrli:identifier>
+                  </xbrli:entity>
+                  <xbrli:period>
+                    <xbrli:startDate>2003-01-01</xbrli:startDate>
+                    <xbrli:endDate>2003-12-31</xbrli:endDate>
+                  </xbrli:period>
+                </xbrli:context>
+                <xbrli:unit
+                  id='u1'
+                >
+                  <xbrli:measure>iso4217:GBP</xbrli:measure>
+                </xbrli:unit>
+                <xbrli:unit
+                  id='ID-PURE'
+                >
+                  <xbrli:measure>pure</xbrli:measure>
+                </xbrli:unit>
+                <xbrli:unit
+                  id='GBP'
+                >
+                  <xbrli:measure>iso4217:GBP</xbrli:measure>
+                </xbrli:unit>
+              </ix:resources>
+            </ix:header>
+          </div>
+          <ix:nonNumeric
+            contextRef='DUR-1'
+            name='pt:NameAcquisition'
+          >
+            <b>
+
+A string of text.
+              <ix:exclude>
+                <i>
+
+Some other text.
+
+        </i>
+              </ix:exclude>
+
+More text&gt;
+
+    
+            </b>
+          </ix:nonNumeric>
+        </body>
+      </html>
+    </input>
+    <transformedOutput>
+      <xbrli:xbrl id="topLevelID" xsi:schemaLocation="justTesting thisAttribute">
+        <link:schemaRef
+          xlink:href='../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd'
+          xlink:type='simple'
+        ></link:schemaRef>
+        <pt:NameAcquisition
+          contextRef='DUR-1'
+        >
+            
+
+A string of text.
+              
+
+More text&gt;
+
+    
+            
+          </pt:NameAcquisition>
+        <xbrli:context
+          id='DUR-1'
+        >
+          <xbrli:entity>
+            <xbrli:identifier
+              scheme='test'
+            >Test Co 1</xbrli:identifier>
+          </xbrli:entity>
+          <xbrli:period>
+            <xbrli:startDate>2003-01-01</xbrli:startDate>
+            <xbrli:endDate>2003-12-31</xbrli:endDate>
+          </xbrli:period>
+        </xbrli:context>
+        <xbrli:unit
+          id='u1'
+        >
+          <xbrli:measure>iso4217:GBP</xbrli:measure>
+        </xbrli:unit>
+        <xbrli:unit
+          id='ID-PURE'
+          xmlns='http://www.w3.org/1999/xhtml'
+        >
+          <xbrli:measure>pure</xbrli:measure>
+        </xbrli:unit>
+        <xbrli:unit
+          id='GBP'
+        >
+          <xbrli:measure>iso4217:GBP</xbrli:measure>
+        </xbrli:unit>
+      </xbrli:xbrl>
+    </transformedOutput>
+  </body>
+</testcase>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/roles" xmlns:tns="http://www.example.org/roles" xmlns:link="http://www.xbrl.org/2003/linkbase" elementFormDefault="qualified">
+  <annotation>
+    <appinfo>
+      <link:roleType id="footnote" roleURI="http://www.example.org/roles/footnote">
+        <link:definition>Custom footnote role</link:definition>
+        <link:usedOn>link:footnote</link:usedOn>
+     </link:roleType>
+     <link:roleType id="footnoteLink" roleURI="http://www.example.org/roles/footnoteLink">
+        <link:definition>Custom footnoteLink role</link:definition>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+     </link:roleType>
+     <link:arcroleType id="footnoteArc" arcroleURI="http://www.example.org/roles/footnoteArc" cyclesAllowed="any">
+        <link:definition>Custom footnoteArc arcrole</link:definition>
+        <link:usedOn>link:footnoteArc</link:usedOn>
+     </link:arcroleType>
+    </appinfo>
+  </annotation>
+</schema>
