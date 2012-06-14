@@ -5,18 +5,26 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// The base class for the encapsulation of all XML schema facets defined in the http://www.w3.org/2001/XMLSchema namespace. 
+	/// </summary>
+	/// <remarks>
+	/// <para>
+	/// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
+	/// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
+	/// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
+	/// Gepsio's XML schema type system obsolete.
+	/// </para>
+	/// </remarks>
     public class Facet
     {
         private FacetDefinition thisDefinition;
-        private List<FacetProperty> thisProperties;
 
-        internal List<FacetProperty> Properties
-        {
-            get
-            {
-                return thisProperties;
-            }
-        }
+		internal List<FacetProperty> Properties
+		{
+			get;
+			private set;
+		}
 
         internal static Facet CreateFacet(FacetDefinition Definition)
         {
@@ -38,20 +46,26 @@ namespace JeffFerguson.Gepsio
             throw new XbrlException(MessageBuilder.ToString());
         }
 
+		/// <summary>
+		/// Constructor for the <see cref="Facet"/> class.
+		/// </summary>
+		/// <param name="Definition">
+		/// The definition of the facet to be used during the construction of the facet.
+		/// </param>
         protected Facet(FacetDefinition Definition)
         {
             thisDefinition = Definition;
-            thisProperties = new List<FacetProperty>();
+            this.Properties = new List<FacetProperty>();
         }
 
         internal void AddFacetProperty(FacetPropertyDefinition Definition, string Value)
         {
-            thisProperties.Add(new FacetProperty(Definition, Value));
+            this.Properties.Add(new FacetProperty(Definition, Value));
         }
 
         internal FacetProperty GetFacetProperty(string PropertyName)
         {
-            foreach (FacetProperty CurrentFacetProperty in thisProperties)
+            foreach (FacetProperty CurrentFacetProperty in this.Properties)
             {
                 if (CurrentFacetProperty.Definition.Name.Equals(PropertyName) == true)
                     return CurrentFacetProperty;

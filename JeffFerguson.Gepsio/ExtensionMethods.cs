@@ -5,7 +5,7 @@ namespace JeffFerguson.Gepsio
 {
     // Various extension methods for .NET Framework classes.
 
-    public static class ExtensionMethods
+    internal static class ExtensionMethods
     {
         //====================================================================================
         #region XmlNode Extension Methods
@@ -15,7 +15,7 @@ namespace JeffFerguson.Gepsio
         // Returns true if this XmlNode structure equals (s-equals) the supplied XmlNode and
         // returns false otherwise.
         //------------------------------------------------------------------------------------
-        public static bool StructureEquals(this XmlNode ThisNode, XmlNode OtherNode)
+		internal static bool StructureEquals(this XmlNode ThisNode, XmlNode OtherNode)
         {
             if (OtherNode == null)
                 return false;
@@ -30,7 +30,7 @@ namespace JeffFerguson.Gepsio
         // Returns true if this XmlNode parent equals (p-equals) the supplied XmlNode and
         // returns false otherwise.
         //------------------------------------------------------------------------------------
-        public static bool ParentEquals(this XmlNode ThisNode, XmlNode OtherNode)
+		internal static bool ParentEquals(this XmlNode ThisNode, XmlNode OtherNode)
         {
             if (OtherNode == null)
                 return false;
@@ -49,7 +49,7 @@ namespace JeffFerguson.Gepsio
         // Returns true if this XmlNodeList structure equals (s-equals) the supplied
         // XmlNodeList and returns false otherwise.
         //------------------------------------------------------------------------------------
-        public static bool StructureEquals(this XmlNodeList ThisNodeList, XmlNodeList OtherNodeList)
+		internal static bool StructureEquals(this XmlNodeList ThisNodeList, XmlNodeList OtherNodeList)
         {
             if ((ThisNodeList == null) && (OtherNodeList != null))
                 return false;
@@ -72,7 +72,7 @@ namespace JeffFerguson.Gepsio
         //====================================================================================
         #region XmlSchemaType Extension Methods
         //====================================================================================
-        public static bool IsNumeric(this XmlSchemaType ThisXmlSchemaType)
+		internal static bool IsNumeric(this XmlSchemaType ThisXmlSchemaType)
         {
             switch (ThisXmlSchemaType.TypeCode)
             {

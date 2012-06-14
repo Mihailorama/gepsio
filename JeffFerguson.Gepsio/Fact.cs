@@ -3,27 +3,29 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// The encapsulation of a fact defined in an XBRL document. A fact is an occurrence in an instance
+	/// document of a value or other information tagged by a taxonomy element.
+	/// </summary>
     public class Fact
     {
-        protected XbrlFragment thisParentFragment;
-        protected XmlNode thisFactNode;
-        private string thisName;
+        internal XbrlFragment thisParentFragment;
+        internal XmlNode thisFactNode; // was protected
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string Name
-        {
-            get
-            {
-                return thisName;
-            }
-        }
+		/// <summary>
+		/// The name of the fact.
+		/// </summary>
+		public string Name
+		{
+			get;
+			private set;
+		}
 
         internal Fact(XbrlFragment ParentFragment, XmlNode FactNode)
         {
             thisParentFragment = ParentFragment;
             thisFactNode = FactNode;
-            thisName = thisFactNode.LocalName;
+            this.Name = thisFactNode.LocalName;
         }
 
         internal static Fact Create(XbrlFragment ParentFragment, XmlNode FactNode)

@@ -3,49 +3,46 @@ using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "calculationLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+	/// </summary>
     public class CalculationLink
     {
-        private List<Locator> thisLocators;
-        private List<CalculationArc> thisCalculationArcs;
-        private List<SummationConcept> thisSummationConcepts;
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<Locator> Locators
-        {
-            get
-            {
-                return thisLocators;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="Locator"/> objects that apply to this calculation link.
+		/// </summary>
+		public List<Locator> Locators
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<CalculationArc> CalculationArcs
-        {
-            get
-            {
-                return thisCalculationArcs;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="CalculationArc"/> objects that apply to this calculation link.
+		/// </summary>
+		public List<CalculationArc> CalculationArcs
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<SummationConcept> SummationConcepts
-        {
-            get
-            {
-                return thisSummationConcepts;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="SummationConcept"/> objects that apply to this calculation link.
+		/// </summary>
+		public List<SummationConcept> SummationConcepts
+		{
+			get;
+			private set;
+		}
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal CalculationLink(XmlNode CalculationLinkNode)
         {
-            thisLocators = new List<Locator>();
-            thisCalculationArcs = new List<CalculationArc>();
-            thisSummationConcepts = new List<SummationConcept>();
+            this.Locators = new List<Locator>();
+			this.CalculationArcs = new List<CalculationArc>();
+			this.SummationConcepts = new List<SummationConcept>();
             ReadChildLocators(CalculationLinkNode);
             ReadChildCalculationArcs(CalculationLinkNode);
             ResolveLocators();
@@ -56,7 +53,7 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void BuildSummationConcepts()
         {
-            foreach (CalculationArc CurrentCalculationArc in thisCalculationArcs)
+            foreach (CalculationArc CurrentCalculationArc in this.CalculationArcs)
                 BuildSummationConcepts(CurrentCalculationArc);
         }
 
@@ -70,7 +67,7 @@ namespace JeffFerguson.Gepsio
             if (CurrentSummationConcept == null)
             {
                 CurrentSummationConcept = new SummationConcept(CurrentCalculationArc.FromLocator);
-                thisSummationConcepts.Add(CurrentSummationConcept);
+                this.SummationConcepts.Add(CurrentSummationConcept);
             }
             foreach(var CurrentToLocator in CurrentCalculationArc.ToLocators)
                 CurrentSummationConcept.AddContributingConceptLocator(CurrentToLocator);
@@ -80,7 +77,7 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private SummationConcept FindSummationConcept(Locator SummationConceptLocator)
         {
-            foreach (SummationConcept CurrentSummationConcept in thisSummationConcepts)
+            foreach (SummationConcept CurrentSummationConcept in this.SummationConcepts)
             {
                 if (CurrentSummationConcept.SummationConceptLocator.Equals(SummationConceptLocator) == true)
                     return CurrentSummationConcept;
@@ -92,7 +89,7 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void ResolveLocators()
         {
-            foreach (CalculationArc CurrentCalculationArc in thisCalculationArcs)
+            foreach (CalculationArc CurrentCalculationArc in this.CalculationArcs)
                 ResolveLocators(CurrentCalculationArc);
         }
 
@@ -101,7 +98,7 @@ namespace JeffFerguson.Gepsio
         private void ResolveLocators(CalculationArc CurrentCalculationArc)
         {
             CurrentCalculationArc.FromLocator = GetLocator(CurrentCalculationArc.FromId);
-            foreach (Locator CurrentLocator in thisLocators)
+            foreach (Locator CurrentLocator in this.Locators)
             {
                 if (CurrentLocator.Label.Equals(CurrentCalculationArc.ToId) == true)
                     CurrentCalculationArc.AddToLocator(CurrentLocator);
@@ -115,7 +112,7 @@ namespace JeffFerguson.Gepsio
             foreach (XmlNode CurrentChildNode in CalculationLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("calculationArc") == true)
-                    thisCalculationArcs.Add(new CalculationArc(CurrentChildNode));
+                    this.CalculationArcs.Add(new CalculationArc(CurrentChildNode));
             }
         }
 
@@ -126,7 +123,7 @@ namespace JeffFerguson.Gepsio
             foreach (XmlNode CurrentChildNode in CalculationLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("loc") == true)
-                    thisLocators.Add(new Locator(CurrentChildNode));
+                    this.Locators.Add(new Locator(CurrentChildNode));
             }
         }
 
@@ -134,7 +131,7 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private Locator GetLocator(string LocatorLabel)
         {
-            foreach (Locator CurrentLocator in thisLocators)
+            foreach (Locator CurrentLocator in this.Locators)
             {
                 if (CurrentLocator.Label.Equals(LocatorLabel) == true)
                     return CurrentLocator;

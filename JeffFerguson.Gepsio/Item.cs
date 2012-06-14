@@ -1,133 +1,105 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An XBRL fact with a single value.
+	/// </summary>
     public class Item : Fact
     {
-        private string thisContextRefName;
-        private string thisUnitRefName;
         private string thisPrecisionAttributeValue;
-        private int thisPrecision;
-        private int thisDecimals;
         private string thisDecimalsAttributeValue;
-        private string thisValue;
-        private Context thisContextRef;
-        private Unit thisUnitRef;
-        private Element thisSchemaElement;
-        private string thisId;
-        private bool thisNilSpecified;
-        private XmlSchemaType thisItemType;
         private XbrlSchema thisSchema;
-        private bool thisInfinitePrecision;
-        private bool thisInfiniteDecimals;
-        private bool thisPrecisionInferred;
         private bool thisRoundedValueCalculated;
         private double thisRoundedValue;
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public Context ContextRef
-        {
-            get
-            {
-                return thisContextRef;
-            }
-            internal set
-            {
-                thisContextRef = value;
-            }
-        }
+		/// <summary>
+		/// The context associated with this item.
+		/// </summary>
+		public Context ContextRef
+		{
+			get;
+			internal set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string ContextRefName
-        {
-            get
-            {
-                return thisContextRefName;
-            }
-        }
+		/// <summary>
+		/// The name of the context reference associated with this item.
+		/// </summary>
+		public string ContextRefName
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public Unit UnitRef
-        {
-            get
-            {
-                return thisUnitRef;
-            }
-            internal set
-            {
-                thisUnitRef = value;
-            }
-        }
+		/// <summary>
+		/// The unit associated with this item.
+		/// </summary>
+		public Unit UnitRef
+		{
+			get;
+			internal set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string UnitRefName
-        {
-            get
-            {
-                return thisUnitRefName;
-            }
-        }
+		/// <summary>
+		/// The name of the unit reference associated with this item.
+		/// </summary>
+		public string UnitRefName
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public int Precision
-        {
-            get
-            {
-                return thisPrecision;
-            }
-        }
+		/// <summary>
+		/// The precision of this item.
+		/// </summary>
+		public int Precision
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public bool InfinitePrecision
-        {
-            get
-            {
-                return thisInfinitePrecision;
-            }
-        }
+		/// <summary>
+		/// True if this item has infinite precision. False if this item does not have infinite precision.
+		/// </summary>
+		public bool InfinitePrecision
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public bool PrecisionInferred
-        {
-            get
-            {
-                return thisPrecisionInferred;
-            }
-        }
+		/// <summary>
+		/// True if this item has inferred precision. False if this item does not have inferred precision.
+		/// </summary>
+		public bool PrecisionInferred
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public int Decimals
-        {
-            get
-            {
-                return thisDecimals;
-            }
-        }
+		/// <summary>
+		/// The decimals value of this item.
+		/// </summary>
+		public int Decimals
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public bool InfiniteDecimals
-        {
-            get
-            {
-                return thisInfiniteDecimals;
-            }
-        }
+		/// <summary>
+		/// True if this item has infinite decimals. False if this item does not have infinite decimals.
+		/// </summary>
+		public bool InfiniteDecimals
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
+		/// <summary>
+		/// True if this item has a specified precision. False if this fact does not have a specified precision.
+		/// </summary>
         public bool PrecisionSpecified
         {
             get
@@ -138,8 +110,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
+		/// <summary>
+		/// True if this item has a specified decimals value. False if this fact does not have a specified decimals value.
+		/// </summary>
         public bool DecimalsSpecified
         {
             get
@@ -150,18 +123,18 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string Value
-        {
-            get
-            {
-                return thisValue;
-            }
-        }
+		/// <summary>
+		/// The value of this fact.
+		/// </summary>
+		public string Value
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
+		/// <summary>
+		/// The namespace for this item.
+		/// </summary>
         public string Namespace
         {
             get
@@ -170,45 +143,41 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public Element SchemaElement
-        {
-            get
-            {
-                return thisSchemaElement;
-            }
-        }
+		/// <summary>
+		/// The schema element that defines this item.
+		/// </summary>
+		public Element SchemaElement
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string Id
-        {
-            get
-            {
-                return thisId;
-            }
-        }
+		/// <summary>
+		/// The ID of this item.
+		/// </summary>
+		public string Id
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public bool NilSpecified
-        {
-            get
-            {
-                return thisNilSpecified;
-            }
-        }
+		/// <summary>
+		/// True if this fact has a nil value. False if this fact does not have a nil value.
+		/// </summary>
+		public bool NilSpecified
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public XmlSchemaType Type
-        {
-            get
-            {
-                return thisItemType;
-            }
-        }
+		/// <summary>
+		/// The type of this item.
+		/// </summary>
+		public XmlSchemaType Type
+		{
+			get;
+			private set;
+		}
 
         /// <summary>
         /// Returns the rounded value of the fact's actual value. The rounded value is calculated from the precision
@@ -231,8 +200,8 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal Item(XbrlFragment ParentFragment, XmlNode ItemNode) : base(ParentFragment, ItemNode)
         {
-            thisContextRefName = XmlUtilities.GetAttributeValue(thisFactNode, "contextRef");
-            thisUnitRefName = XmlUtilities.GetAttributeValue(thisFactNode, "unitRef");
+            this.ContextRefName = XmlUtilities.GetAttributeValue(thisFactNode, "contextRef");
+            this.UnitRefName = XmlUtilities.GetAttributeValue(thisFactNode, "unitRef");
             thisRoundedValueCalculated = false;
 
             thisDecimalsAttributeValue = XmlUtilities.GetAttributeValue(thisFactNode, "decimals");
@@ -240,39 +209,39 @@ namespace JeffFerguson.Gepsio
             {
                 if (thisDecimalsAttributeValue.Equals("INF") == true)
                 {
-                    thisInfiniteDecimals = true;
-                    thisDecimals = 0;
+                    this.InfiniteDecimals = true;
+                    this.Decimals = 0;
                 }
                 else
                 {
-                    thisInfiniteDecimals = false;
-                    thisDecimals = Convert.ToInt32(thisDecimalsAttributeValue);
+                    this.InfiniteDecimals = false;
+                    this.Decimals = Convert.ToInt32(thisDecimalsAttributeValue);
                 }
             }
 
             thisPrecisionAttributeValue = XmlUtilities.GetAttributeValue(thisFactNode, "precision");
             if (thisPrecisionAttributeValue.Length > 0)
             {
-                thisPrecisionInferred = false;
+                this.PrecisionInferred = false;
                 if (thisPrecisionAttributeValue.Equals("INF") == true)
                 {
-                    thisInfinitePrecision = true;
-                    thisPrecision = 0;
+                    this.InfinitePrecision = true;
+                    this.Precision = 0;
                 }
                 else
                 {
-                    thisInfinitePrecision = false;
-                    thisPrecision = Convert.ToInt32(thisPrecisionAttributeValue);
+                    this.InfinitePrecision = false;
+                    this.Precision = Convert.ToInt32(thisPrecisionAttributeValue);
                 }
             }
 
-            thisId = XmlUtilities.GetAttributeValue(thisFactNode, "id");
-            thisNilSpecified = false;
+            this.Id = XmlUtilities.GetAttributeValue(thisFactNode, "id");
+            this.NilSpecified = false;
             string NilValue = XmlUtilities.GetAttributeValue(thisFactNode, "http://www.w3.org/2001/XMLSchema-instance", "nil");
             if (NilValue.Equals("true", StringComparison.CurrentCultureIgnoreCase) == true)
-                thisNilSpecified = true;
+                this.NilSpecified = true;
             GetSchemaElementFromSchema();
-            thisValue = thisFactNode.InnerText;
+            this.Value = thisFactNode.InnerText;
             if (SchemaElement.SubstitutionGroup == Element.ElementSubstitutionGroup.Item)
                 SetItemType(SchemaElement.TypeName);
 
@@ -284,15 +253,15 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void InferPrecision()
         {
-            thisPrecisionInferred = true;
+            this.PrecisionInferred = true;
             int CalculationPart1Value = GetNumberOfDigitsToLeftOfDecimalPoint();
             if (CalculationPart1Value == 0)
                 CalculationPart1Value = GetNegativeNumberOfLeadingZerosToRightOfDecimalPoint();
             int CalculationPart2Value = GetExponentValue();
-            int CalculationPart3Value = thisDecimals;
-            thisPrecision = CalculationPart1Value + CalculationPart2Value + CalculationPart3Value;
-            if (thisPrecision < 0)
-                thisPrecision = 0;
+            int CalculationPart3Value = this.Decimals;
+            this.Precision = CalculationPart1Value + CalculationPart2Value + CalculationPart3Value;
+            if (this.Precision < 0)
+                this.Precision = 0;
         }
 
         //------------------------------------------------------------------------------------
@@ -320,9 +289,9 @@ namespace JeffFerguson.Gepsio
             foreach (Element CurrentElement in thisSchema.Elements)
             {
                 if (CurrentElement.Name == this.Name)
-                    thisSchemaElement = CurrentElement;
+                    this.SchemaElement = CurrentElement;
             }
-            if (thisSchemaElement == null)
+            if (this.SchemaElement == null)
             {
                 string MessageFormat = AssemblyResources.GetName("CannotFindFactElementInSchema");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
@@ -335,8 +304,8 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void SetItemType(XmlQualifiedName ItemTypeValue)
         {
-            thisItemType = thisSchema.GetXmlSchemaType(ItemTypeValue);
-            if (thisItemType == null)
+            this.Type = thisSchema.GetXmlSchemaType(ItemTypeValue);
+            if (this.Type == null)
             {
                 string MessageFormat = AssemblyResources.GetName("InvalidElementItemType");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
@@ -411,7 +380,7 @@ namespace JeffFerguson.Gepsio
         {
             try
             {
-                return TypeNameContains(TypeName, thisItemType);
+                return TypeNameContains(TypeName, this.Type);
             }
             catch
             {
@@ -626,7 +595,7 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         private int GetNumberOfDigitsToLeftOfDecimalPoint()
         {
-            if (thisValue == null)
+            if (this.Value == null)
                 return 0;
             string[] ParsedValue = ParseValueIntoComponentParts();
             string WithoutLeadingZeros = ParsedValue[0].TrimStart(new char[] { '0' });
@@ -641,7 +610,7 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         private int GetNegativeNumberOfLeadingZerosToRightOfDecimalPoint()
         {
-            if (thisValue == null)
+            if (this.Value == null)
                 return 0;
             string[] ParsedValue = ParseValueIntoComponentParts();
             string ValueToTheRightOfTheDecimal = ParsedValue[1];
@@ -673,7 +642,7 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         private int GetExponentValue()
         {
-            if (thisValue == null)
+            if (this.Value == null)
                 return 0;
             string[] ParsedValue = ParseValueIntoComponentParts();
             if (string.IsNullOrEmpty(ParsedValue[2]))
@@ -710,7 +679,7 @@ namespace JeffFerguson.Gepsio
         /// array will be empty.</returns>
         private string[] ParseValueIntoComponentParts()
         {
-            return ParseValueIntoComponentParts(thisValue);
+            return ParseValueIntoComponentParts(this.Value);
         }
 
         /// <summary>
@@ -753,7 +722,7 @@ namespace JeffFerguson.Gepsio
 
         private double GetRoundedValue()
         {
-            double RoundedValue = Convert.ToDouble(thisValue);
+            double RoundedValue = Convert.ToDouble(this.Value);
             return Round(RoundedValue);
         }
 

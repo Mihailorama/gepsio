@@ -1,80 +1,81 @@
-using System;
-using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using System.Xml;
-using System.Globalization;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// A footnote as defined within an XBRL document.
+	/// </summary>
     public class Footnote
     {
         private XmlNode thisFootnoteNode;
-        private FootnoteLink thisFootnoteLink;
-        private string thisTitle;
-        private string thisLabel;
-        private string thisText;
-        private CultureInfo thisCulture;
 
-        public FootnoteLink Link
-        {
-            get
-            {
-                return thisFootnoteLink;
-            }
-        }
+		/// <summary>
+		/// The link associated with this footnote.
+		/// </summary>
+		public FootnoteLink Link
+		{
+			get;
+			private set;
+		}
 
-        public string Title
-        {
-            get
-            {
-                return thisTitle;
-            }
-        }
+		/// <summary>
+		/// The title for this footnote.
+		/// </summary>
+		public string Title
+		{
+			get;
+			private set;
+		}
 
-        public string Label
-        {
-            get
-            {
-                return thisLabel;
-            }
-        }
+		/// <summary>
+		/// The label of this footnote.
+		/// </summary>
+		public string Label
+		{
+			get;
+			private set;
+		}
 
-        public string Text
-        {
-            get
-            {
-                return thisText;
-            }
-        }
+		/// <summary>
+		/// The text of this footnote.
+		/// </summary>
+		public string Text
+		{
+			get;
+			private set;
+		}
 
-        public CultureInfo Culture
-        {
-            get
-            {
-                return thisCulture;
-            }
-        }
+		/// <summary>
+		/// The culture of this footnote.
+		/// </summary>
+		public CultureInfo Culture
+		{
+			get;
+			private set;
+		}
 
         internal Footnote(FootnoteLink ParentLink, XmlNode FootnoteNode)
         {
             thisFootnoteNode = FootnoteNode;
-            thisFootnoteLink = ParentLink;
-            thisText = thisFootnoteNode.FirstChild.Value;
-            thisCulture = null;
+            this.Link = ParentLink;
+            this.Text = thisFootnoteNode.FirstChild.Value;
+            this.Culture = null;
             foreach (XmlAttribute CurrentAttribute in thisFootnoteNode.Attributes)
             {
                 if (CurrentAttribute.LocalName.Equals("title") == true)
-                    thisTitle = CurrentAttribute.Value;
+                    this.Title = CurrentAttribute.Value;
                 else if (CurrentAttribute.LocalName.Equals("label") == true)
-                    thisLabel = CurrentAttribute.Value;
+                    this.Label = CurrentAttribute.Value;
                 else if (CurrentAttribute.LocalName.Equals("lang") == true)
-                    thisCulture = new CultureInfo(CurrentAttribute.Value);
+                    this.Culture = new CultureInfo(CurrentAttribute.Value);
             }
-            if (thisCulture == null)
+            if (this.Culture == null)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("NoLangForFootnote");
-                MessageBuilder.AppendFormat(StringFormat, thisLabel);
+                MessageBuilder.AppendFormat(StringFormat, this.Label);
                 throw new XbrlException(MessageBuilder.ToString());
             }
         }

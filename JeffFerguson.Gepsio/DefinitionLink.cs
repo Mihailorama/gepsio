@@ -3,38 +3,37 @@ using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "definitionLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+	/// </summary>
     public class DefinitionLink
     {
-        private List<Locator> thisLocators;
-        private List<DefinitionArc> thisDefinitionArcs;
-        private List<Locator> thisUnresolvedLocators;
+		private List<Locator> thisUnresolvedLocators;
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<Locator> Locators
-        {
-            get
-            {
-                return thisLocators;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="Locator"/> objects that apply to this definition link.
+		/// </summary>
+		public List<Locator> Locators
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<DefinitionArc> DefinitionArcs
-        {
-            get
-            {
-                return thisDefinitionArcs;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="DefinitionArc"/> objects that apply to this definition link.
+		/// </summary>
+		public List<DefinitionArc> DefinitionArcs
+		{
+			get;
+			private set;
+		}
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal DefinitionLink(XmlNode DefinitionLinkNode)
         {
-            thisLocators = new List<Locator>();
-            thisDefinitionArcs = new List<DefinitionArc>();
+            this.Locators = new List<Locator>();
+            this.DefinitionArcs = new List<DefinitionArc>();
             thisUnresolvedLocators = new List<Locator>();
             ReadChildLocators(DefinitionLinkNode);
             ReadChildDefinitionArcs(DefinitionLinkNode);
@@ -64,7 +63,7 @@ namespace JeffFerguson.Gepsio
                 if (CurrentChild.LocalName.Equals("definitionArc") == true)
                 {
                     DefinitionArc NewDefinitionArc = new DefinitionArc(CurrentChild);
-                    thisDefinitionArcs.Add(NewDefinitionArc);
+                    this.DefinitionArcs.Add(NewDefinitionArc);
                     ResolveLocators(NewDefinitionArc);
                 }
             }
@@ -115,7 +114,7 @@ namespace JeffFerguson.Gepsio
                 if (CurrentChild.LocalName.Equals("loc") == true)
                 {
                     Locator NewLocator = new Locator(CurrentChild);
-                    thisLocators.Add(NewLocator);
+                    this.Locators.Add(NewLocator);
                     thisUnresolvedLocators.Add(NewLocator);
                 }
             }
@@ -137,7 +136,7 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private Locator GetLocator(string LocatorLabel)
         {
-            foreach (Locator CurrentLocator in thisLocators)
+            foreach (Locator CurrentLocator in this.Locators)
             {
                 if (CurrentLocator.Label.Equals(LocatorLabel) == true)
                     return CurrentLocator;

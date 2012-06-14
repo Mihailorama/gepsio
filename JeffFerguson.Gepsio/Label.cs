@@ -1,94 +1,159 @@
-﻿using System.Xml;
-using System.Globalization;
+﻿using System.Globalization;
+using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "label" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+	/// </summary>
     public class Label
     {
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
+		/// <summary>
+		/// A list of possible roles for a label.
+		/// </summary>
+		/// <remarks>
+		/// See Table 8 in section 5.2.2.2.2 in the XBRL Specification for more information about label roles.
+		/// </remarks>
         public enum RoleEnum
         {
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/label.
+			/// </summary>
             Standard,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/terseLabel.
+			/// </summary>
             Short,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/verboseLabel.
+			/// </summary>
             Verbose,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/positiveLabel.
+			/// </summary>
             StandardPositiveValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/positiveTerseLabel.
+			/// </summary>
             ShortPositiveValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/positiveVerboseLabel.
+			/// </summary>
             VerbosePositiveValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/negativeLabel.
+			/// </summary>
             StandardNegativeValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/negativeTerseLabel.
+			/// </summary>
             ShortNegativeValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/negativeVerboseLabel.
+			/// </summary>
             VerboseNegativeValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/zeroLabel.
+			/// </summary>
             StandardZeroValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/zeroTerseLabel.
+			/// </summary>
             ShortZeroValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/zeroVerboseLabel.
+			/// </summary>
             VerboseZeroValue,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/totalLabel.
+			/// </summary>
             Total,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/periodStartLabel.
+			/// </summary>
             PeriodStart,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/periodEndLabel.
+			/// </summary>
             PeriodEnd,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/documentation.
+			/// </summary>
             Documentation,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/definitionGuidance.
+			/// </summary>
             DefinitionGuidance,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/disclosureGuidance.
+			/// </summary>
             DisclosureGuidance,
-            PresentationGuidance,
-            MeasurementGuidance,
-            CommentaryGuidance,
-            ExampleGuidance
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/presentationGuidance.
+			/// </summary>
+			PresentationGuidance,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/measurementGuidance.
+			/// </summary>
+			MeasurementGuidance,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/commentaryGuidance.
+			/// </summary>
+			CommentaryGuidance,
+			/// <summary>
+			/// A label with a role URI of http://www.xbrl.org/2003/role/exampleGuidance.
+			/// </summary>
+			ExampleGuidance
         }
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        private RoleEnum thisRole;
         private CultureInfo thisCultureInfo;
-        private string thisLabelId;
         private string thisLabelText;
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public RoleEnum Role
-        {
-            get
-            {
-                return thisRole;
-            }
-        }
+		/// <summary>
+		/// The role of this label.
+		/// </summary>
+		public RoleEnum Role
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string Id
-        {
-            get
-            {
-                return thisLabelId;
-            }
-        }
+		/// <summary>
+		/// The ID of this label.
+		/// </summary>
+		public string Id
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string Text
-        {
-            get
-            {
-                return thisLabelText;
-            }
-        }
+		/// <summary>
+		/// The text of this label.
+		/// </summary>
+		public string Text
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public CultureInfo Culture
-        {
-            get
-            {
-                return thisCultureInfo;
-            }
-        }
+		/// <summary>
+		/// The culture of this label.
+		/// </summary>
+		public CultureInfo Culture
+		{
+			get;
+			private set;
+		}
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal Label(XmlNode LabelNode)
         {
-            thisLabelId = XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/1999/xlink", "label");
-            thisLabelText = LabelNode.InnerText;
+            this.Id = XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/1999/xlink", "label");
+            this.Text = LabelNode.InnerText;
             SetRole(XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/1999/xlink", "role"));
             string LanguageValue = XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/XML/1998/namespace", "lang");
-            thisCultureInfo = new CultureInfo(LanguageValue);
+            this.Culture = new CultureInfo(LanguageValue);
         }
 
         //------------------------------------------------------------------------------------
@@ -96,51 +161,51 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void SetRole(string RoleUri)
         {
-            thisRole = RoleEnum.Standard;
+            this.Role = RoleEnum.Standard;
             if (RoleUri.Equals("http://www.xbrl.org/2003/role/label") == true)
-                thisRole = RoleEnum.Standard;
+                this.Role = RoleEnum.Standard;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/terseLabel") == true)
-                thisRole = RoleEnum.Short;
+                this.Role = RoleEnum.Short;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/verboseLabel") == true)
-                thisRole = RoleEnum.Verbose;
+                this.Role = RoleEnum.Verbose;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/positiveLabel") == true)
-                thisRole = RoleEnum.StandardPositiveValue;
+                this.Role = RoleEnum.StandardPositiveValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/positiveTerseLabel") == true)
-                thisRole = RoleEnum.ShortPositiveValue;
+                this.Role = RoleEnum.ShortPositiveValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/positiveVerboseLabel") == true)
-                thisRole = RoleEnum.VerbosePositiveValue;
+                this.Role = RoleEnum.VerbosePositiveValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/negativeLabel") == true)
-                thisRole = RoleEnum.StandardNegativeValue;
+                this.Role = RoleEnum.StandardNegativeValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/negativeTerseLabel") == true)
-                thisRole = RoleEnum.ShortNegativeValue;
+                this.Role = RoleEnum.ShortNegativeValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/negativeVerboseLabel") == true)
-                thisRole = RoleEnum.VerboseNegativeValue;
+                this.Role = RoleEnum.VerboseNegativeValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/zeroLabel") == true)
-                thisRole = RoleEnum.StandardZeroValue;
+                this.Role = RoleEnum.StandardZeroValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/zeroTerseLabel") == true)
-                thisRole = RoleEnum.ShortZeroValue;
+                this.Role = RoleEnum.ShortZeroValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/zeroVerboseLabel") == true)
-                thisRole = RoleEnum.VerboseZeroValue;
+                this.Role = RoleEnum.VerboseZeroValue;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/totalLabel") == true)
-                thisRole = RoleEnum.Total;
+                this.Role = RoleEnum.Total;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/periodStartLabel") == true)
-                thisRole = RoleEnum.PeriodStart;
+                this.Role = RoleEnum.PeriodStart;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/periodEndLabel") == true)
-                thisRole = RoleEnum.PeriodEnd;
+                this.Role = RoleEnum.PeriodEnd;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/documentation") == true)
-                thisRole = RoleEnum.Documentation;
+                this.Role = RoleEnum.Documentation;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/definitionGuidance") == true)
-                thisRole = RoleEnum.DefinitionGuidance;
+                this.Role = RoleEnum.DefinitionGuidance;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/disclosureGuidance") == true)
-                thisRole = RoleEnum.DisclosureGuidance;
+                this.Role = RoleEnum.DisclosureGuidance;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/presentationGuidance") == true)
-                thisRole = RoleEnum.PresentationGuidance;
+                this.Role = RoleEnum.PresentationGuidance;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/measurementGuidance") == true)
-                thisRole = RoleEnum.MeasurementGuidance;
+                this.Role = RoleEnum.MeasurementGuidance;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/commentaryGuidance") == true)
-                thisRole = RoleEnum.CommentaryGuidance;
+                this.Role = RoleEnum.CommentaryGuidance;
             else if (RoleUri.Equals("http://www.xbrl.org/2003/role/exampleGuidance") == true)
-                thisRole = RoleEnum.ExampleGuidance;
+                this.Role = RoleEnum.ExampleGuidance;
         }
     }
 }

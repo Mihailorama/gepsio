@@ -5,130 +5,207 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "context" as defined in the http://www.xbrl.org/2003/instance namespace. 
+	/// </summary>
     public class Context
     {
         private XmlNode thisContextNode;
-        private string thisId;
-        private bool thisForeverPeriod;
-        private bool thisInstantPeriod;
         private XmlNode thisInstantPeriodNode;
         private bool thisDurationPeriod;
         private XmlNode thisStartDateDurationNode;
         private XmlNode thisEndDateDurationNode;
-        private string thisIdentifier;
-        private string thisIdentifierScheme;
-        private XmlNode thisSegmentNode;
-        private XmlNode thisScenarioNode;
-        private XbrlFragment thisFragment;
-        private System.DateTime thisStartDate;
-        private System.DateTime thisEndDate;
-        private System.DateTime thisInstantDate;
 
-        public string Id
+		/// <summary>
+		/// The ID of this context.
+		/// </summary>
+		public string Id
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// Describes whether or not this context uses an instant period. Returns true if this context uses an instant
+		/// period. Returns false is this context does not use an instant period.
+		/// </summary>
+		public bool InstantPeriod
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// Describes whether or not this context uses a duration period. Returns true if this context uses a duration
+		/// period. Returns false is this context does not use a duration period.
+		/// </summary>
+		public bool DurationPeriod
         {
             get
             {
-                return thisId;
-            }
-        }
-
-        public bool InstantPeriod
-        {
-            get
-            {
-                return thisInstantPeriod;
-            }
-        }
-
-        public bool DurationPeriod
-        {
-            get
-            {
-                if ((thisForeverPeriod == true) || (thisDurationPeriod == true))
+                if ((this.ForeverPeriod == true) || (thisDurationPeriod == true))
                     return true;
                 return false;
             }
         }
 
-        public bool ForeverPeriod
-        {
-            get
-            {
-                return thisForeverPeriod;
-            }
-        }
+		/// <summary>
+		/// Describes whether or not this context uses a forever period. Returns true if this context uses a forever
+		/// period. Returns false is this context does not use a forever period.
+		/// </summary>
+		public bool ForeverPeriod
+		{
+			get;
+			private set;
+		}
 
-        public string Identifier
-        {
-            get
-            {
-                return thisIdentifier;
-            }
-        }
+		/// <summary>
+		/// The identifier for this context.
+		/// </summary>
+		public string Identifier
+		{
+			get;
+			private set;
+		}
 
-        public string IdentifierScheme
-        {
-            get
-            {
-                return thisIdentifierScheme;
-            }
-        }
+		/// <summary>
+		/// The identifier scheme for this context.
+		/// </summary>
+		public string IdentifierScheme
+		{
+			get;
+			private set;
+		}
 
-        public XmlNode Segment
-        {
-            get
-            {
-                return thisSegmentNode;
-            }
-        }
+		/// <summary>
+		/// The segment node defined for this context. If this context was not marked up with a segment node, then
+		/// this property will return null.
+		/// </summary>
+		public XmlNode Segment
+		{
+			get;
+			private set;
+		}
 
-        public XmlNode Scenario
-        {
-            get
-            {
-                return thisScenarioNode;
-            }
-        }
+		/// <summary>
+		/// The scenario node defined for this context. If this context was not marked up with a scenario node, then
+		/// this property will return null.
+		/// </summary>
+		public XmlNode Scenario
+		{
+			get;
+			private set;
+		}
 
-        public XbrlFragment Fragment
-        {
-            get
-            {
-                return thisFragment;
-            }
-        }
+		/// <summary>
+		/// A reference to the <see cref="XbrlFragment"/> in which this context is found.
+		/// </summary>
+		public XbrlFragment Fragment
+		{
+			get;
+			private set;
+		}
 
-        public System.DateTime PeriodStartDate
-        {
-            get
-            {
-                return thisStartDate;
-            }
-        }
+		/// <summary>
+		/// The start date of the period of this context. 
+		/// </summary>
+		/// <remarks>
+		/// This value of this property should be considered valid only if this context uses a duration period.
+		/// This can be checked using the context's <see cref="DurationPeriod"/> property:
+		/// <code>
+		/// var myDoc = new XbrlDocument();
+		/// myDoc.Load("MyXbrlDoc.xml");
+		/// foreach(var currentFragment in myDoc.Fragments)
+		/// {
+		///     foreach(var currentContext in currentFragment.Contexts)
+		///     {
+		///         if(currentContext.DurationPeriod == true)
+		///         {
+		///             // value of currentContext.PeriodStartDate is valid
+		///         }
+		///         else
+		///         {
+		///             // value of currentContext.PeriodStartDate is undefined
+		///         }
+		///     }
+		/// }
+		/// </code>
+		/// </remarks>
+		public System.DateTime PeriodStartDate
+		{
+			get;
+			private set;
+		}
 
-        public System.DateTime PeriodEndDate
-        {
-            get
-            {
-                return thisEndDate;
-            }
-        }
+		/// <summary>
+		/// The end date of the period of this context. 
+		/// </summary>
+		/// <remarks>
+		/// This value of this property should be considered valid only if this context uses a duration period.
+		/// This can be checked using the context's <see cref="DurationPeriod"/> property:
+		/// <code>
+		/// var myDoc = new XbrlDocument();
+		/// myDoc.Load("MyXbrlDoc.xml");
+		/// foreach(var currentFragment in myDoc.Fragments)
+		/// {
+		///     foreach(var currentContext in currentFragment.Contexts)
+		///     {
+		///         if(currentContext.DurationPeriod == true)
+		///         {
+		///             // value of currentContext.PeriodEndDate is valid
+		///         }
+		///         else
+		///         {
+		///             // value of currentContext.PeriodEndDate is undefined
+		///         }
+		///     }
+		/// }
+		/// </code>
+		/// </remarks>
+		public System.DateTime PeriodEndDate
+		{
+			get;
+			private set;
+		}
 
-        public System.DateTime InstantDate
-        {
-            get
-            {
-                return thisInstantDate;
-            }
-        }
+		/// <summary>
+		/// The date of the instant of this context. 
+		/// </summary>
+		/// <remarks>
+		/// This value of this property should be considered valid only if this context uses an instant period.
+		/// This can be checked using the context's <see cref="InstantPeriod"/> property:
+		/// <code>
+		/// var myDoc = new XbrlDocument();
+		/// myDoc.Load("MyXbrlDoc.xml");
+		/// foreach(var currentFragment in myDoc.Fragments)
+		/// {
+		///     foreach(var currentContext in currentFragment.Contexts)
+		///     {
+		///         if(currentContext.InstantPeriod == true)
+		///         {
+		///             // value of currentContext.InstantDate is valid
+		///         }
+		///         else
+		///         {
+		///             // value of currentContext.InstantDate is undefined
+		///         }
+		///     }
+		/// }
+		/// </code>
+		/// </remarks>
+		public System.DateTime InstantDate
+		{
+			get;
+			private set;
+		}
 
         internal Context(XbrlFragment Fragment, XmlNode ContextNode)
         {
-            thisFragment = Fragment;
+            this.Fragment = Fragment;
             thisContextNode = ContextNode;
-            thisId = thisContextNode.Attributes["id"].Value;
-            thisStartDate = System.DateTime.MinValue;
-            thisEndDate = System.DateTime.MinValue;
+            this.Id = thisContextNode.Attributes["id"].Value;
+            this.PeriodStartDate = System.DateTime.MinValue;
+			this.PeriodEndDate = System.DateTime.MinValue;
             foreach (XmlNode CurrentChild in thisContextNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("period") == true)
@@ -145,10 +222,10 @@ namespace JeffFerguson.Gepsio
 
         private void ProcessEntity(XmlNode EntityNode)
         {
-            thisIdentifier = string.Empty;
-            thisIdentifierScheme = string.Empty;
-            thisSegmentNode = null;
-            thisScenarioNode = null;
+            this.Identifier = string.Empty;
+            this.IdentifierScheme = string.Empty;
+            this.Segment = null;
+            this.Scenario = null;
             foreach (XmlNode CurrentChild in EntityNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("identifier") == true)
@@ -161,13 +238,13 @@ namespace JeffFerguson.Gepsio
 
         private void ProcessScenario(XmlNode ScenarioNode)
         {
-            thisScenarioNode = ScenarioNode;
+            this.Scenario = ScenarioNode;
             ValidateScenario();
         }
 
         private void ValidateScenario()
         {
-            foreach (XmlNode CurrentChild in thisScenarioNode.ChildNodes)
+            foreach (XmlNode CurrentChild in this.Scenario.ChildNodes)
                 ValidateScenarioNode(CurrentChild);
         }
 
@@ -177,12 +254,12 @@ namespace JeffFerguson.Gepsio
             {
                 string MessageFormat = AssemblyResources.GetName("ScenarioNodeUsingXBRLNamespace");
                 StringBuilder MessageBuilder = new StringBuilder();
-                MessageBuilder.AppendFormat(MessageFormat, thisId, ScenarioNode.Name);
+                MessageBuilder.AppendFormat(MessageFormat, this.Id, ScenarioNode.Name);
                 throw new XbrlException(MessageBuilder.ToString());
             }
             if (ScenarioNode.Prefix.Length > 0)
             {
-                XbrlSchema NodeSchema = thisFragment.GetXbrlSchemaForPrefix(ScenarioNode.Prefix);
+                XbrlSchema NodeSchema = this.Fragment.GetXbrlSchemaForPrefix(ScenarioNode.Prefix);
                 if (NodeSchema != null)
                 {
                     Element NodeElement = NodeSchema.GetElement(ScenarioNode.LocalName);
@@ -192,7 +269,7 @@ namespace JeffFerguson.Gepsio
                         {
                             string MessageFormat = AssemblyResources.GetName("ScenarioNodeUsingSubGroupInXBRLNamespace");
                             StringBuilder MessageBuilder = new StringBuilder();
-                            MessageBuilder.AppendFormat(MessageFormat, thisId, ScenarioNode.Name, NodeSchema.Path);
+                            MessageBuilder.AppendFormat(MessageFormat, this.Id, ScenarioNode.Name, NodeSchema.Path);
                             throw new XbrlException(MessageBuilder.ToString());
                         }
                     }
@@ -204,13 +281,13 @@ namespace JeffFerguson.Gepsio
 
         private void ProcessSegment(XmlNode SegmentNode)
         {
-            thisSegmentNode = SegmentNode;
+            this.Segment = SegmentNode;
             ValidateSegment();
         }
 
         private void ValidateSegment()
         {
-            foreach (XmlNode CurrentChild in thisSegmentNode.ChildNodes)
+            foreach (XmlNode CurrentChild in this.Segment.ChildNodes)
                 ValidateSegmentNode(CurrentChild);
         }
 
@@ -220,12 +297,12 @@ namespace JeffFerguson.Gepsio
             {
                 string MessageFormat = AssemblyResources.GetName("SegmentNodeUsingXBRLNamespace");
                 StringBuilder MessageBuilder = new StringBuilder();
-                MessageBuilder.AppendFormat(MessageFormat, thisId, SegmentNode.Name);
+                MessageBuilder.AppendFormat(MessageFormat, this.Id, SegmentNode.Name);
                 throw new XbrlException(MessageBuilder.ToString());
             }
             if (SegmentNode.Prefix.Length > 0)
             {
-                XbrlSchema NodeSchema = thisFragment.GetXbrlSchemaForPrefix(SegmentNode.Prefix);
+                XbrlSchema NodeSchema = this.Fragment.GetXbrlSchemaForPrefix(SegmentNode.Prefix);
                 if (NodeSchema != null)
                 {
                     Element NodeElement = NodeSchema.GetElement(SegmentNode.LocalName);
@@ -235,7 +312,7 @@ namespace JeffFerguson.Gepsio
                         {
                             string MessageFormat = AssemblyResources.GetName("SegmentNodeUsingSubGroupInXBRLNamespace");
                             StringBuilder MessageBuilder = new StringBuilder();
-                            MessageBuilder.AppendFormat(MessageFormat, thisId, SegmentNode.Name, NodeSchema.Path);
+                            MessageBuilder.AppendFormat(MessageFormat, this.Id, SegmentNode.Name, NodeSchema.Path);
                             throw new XbrlException(MessageBuilder.ToString());
                         }
                     }
@@ -247,16 +324,16 @@ namespace JeffFerguson.Gepsio
 
         private void ProcessIdentifier(XmlNode IdentifierNode)
         {
-            thisIdentifier = IdentifierNode.InnerText;
+            this.Identifier = IdentifierNode.InnerText;
             if (IdentifierNode.Attributes["scheme"] != null)
-                thisIdentifierScheme = IdentifierNode.Attributes["scheme"].Value;
+                this.IdentifierScheme = IdentifierNode.Attributes["scheme"].Value;
         }
 
         private void ProcessPeriod(XmlNode PeriodNode)
         {
-            thisInstantPeriod = false;
+            this.InstantPeriod = false;
             thisInstantPeriodNode = null;
-            thisForeverPeriod = false;
+            this.ForeverPeriod = false;
             thisDurationPeriod = false;
             thisStartDateDurationNode = null;
             thisEndDateDurationNode = null;
@@ -264,35 +341,41 @@ namespace JeffFerguson.Gepsio
             {
                 if (CurrentChild.LocalName.Equals("instant") == true)
                 {
-                    thisInstantPeriod = true;
+                    this.InstantPeriod = true;
                     thisInstantPeriodNode = CurrentChild;
-                    System.DateTime.TryParse(thisInstantPeriodNode.InnerText, out thisInstantDate);
+					var parsedInstantDate = System.DateTime.MinValue;
+					System.DateTime.TryParse(thisInstantPeriodNode.InnerText, out parsedInstantDate);
+					this.InstantDate = parsedInstantDate;
                 }
                 else if (CurrentChild.LocalName.Equals("forever") == true)
-                    thisForeverPeriod = true;
+                    this.ForeverPeriod = true;
                 else if (CurrentChild.LocalName.Equals("startDate") == true)
                 {
                     thisDurationPeriod = true;
                     thisStartDateDurationNode = CurrentChild;
-                    System.DateTime.TryParse(thisStartDateDurationNode.InnerText, out thisStartDate);
+					var parsedStartDate = System.DateTime.MinValue;
+					System.DateTime.TryParse(thisStartDateDurationNode.InnerText, out parsedStartDate);
+					this.PeriodStartDate = parsedStartDate;
                 }
                 else if (CurrentChild.LocalName.Equals("endDate") == true)
                 {
                     thisEndDateDurationNode = CurrentChild;
-                    System.DateTime.TryParse(thisEndDateDurationNode.InnerText, out thisEndDate);
+					var parsedEndDate = System.DateTime.MinValue;
+					System.DateTime.TryParse(thisEndDateDurationNode.InnerText, out parsedEndDate);
+					this.PeriodEndDate = parsedEndDate;
                 }
             }
         }
 
         private void ValidatePeriod()
         {
-            if ((thisStartDate != System.DateTime.MinValue) && (thisEndDate != System.DateTime.MinValue))
+			if ((this.PeriodStartDate != System.DateTime.MinValue) && (this.PeriodEndDate != System.DateTime.MinValue))
             {
-                if (thisEndDate < thisStartDate)
+				if (this.PeriodEndDate < this.PeriodStartDate)
                 {
                     string MessageFormat = AssemblyResources.GetName("PeriodEndDateLessThanPeriodStartDate");
                     StringBuilder MessageBuilder = new StringBuilder();
-                    MessageBuilder.AppendFormat(MessageFormat, thisId);
+                    MessageBuilder.AppendFormat(MessageFormat, this.Id);
                     throw new XbrlException(MessageBuilder.ToString());
                 }
             }
@@ -407,9 +490,9 @@ namespace JeffFerguson.Gepsio
             }
             if (DurationPeriod == true)
             {
-                if (this.thisStartDate != OtherContext.thisStartDate)
+                if (this.PeriodStartDate != OtherContext.PeriodStartDate)
                     return false;
-                if (this.thisEndDate != OtherContext.thisEndDate)
+                if (this.PeriodEndDate != OtherContext.PeriodEndDate)
                     return false;
             }
             return true;

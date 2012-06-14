@@ -5,41 +5,44 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// A locator used for a footnote.
+	/// </summary>
     public class FootnoteLocator
     {
         private XmlNode thisLocNode;
-        private FootnoteLink thisFootnoteLink;
-        private HyperlinkReference thisHref;
-        private string thisLabel;
 
-        public FootnoteLink Link
-        {
-            get
-            {
-                return thisFootnoteLink;
-            }
-        }
+		/// <summary>
+		/// The link for this footnote locator.
+		/// </summary>
+		public FootnoteLink Link
+		{
+			get;
+			private set;
+		}
 
-        public HyperlinkReference Href
-        {
-            get
-            {
-                return thisHref;
-            }
-        }
+		/// <summary>
+		/// The hyperlink reference for this footnote locator.
+		/// </summary>
+		public HyperlinkReference Href
+		{
+			get;
+			private set;
+		}
 
-        public string Label
-        {
-            get
-            {
-                return thisLabel;
-            }
-        }
+		/// <summary>
+		/// The label of this footnote locator.
+		/// </summary>
+		public string Label
+		{
+			get;
+			private set;
+		}
 
         internal FootnoteLocator(FootnoteLink ParentLink, XmlNode LocNode)
         {
             thisLocNode = LocNode;
-            thisFootnoteLink = ParentLink;
+            this.Link = ParentLink;
             foreach (XmlAttribute CurrentAttribute in LocNode.Attributes)
             {
                 if (CurrentAttribute.LocalName.Equals("href") == true)
@@ -47,11 +50,11 @@ namespace JeffFerguson.Gepsio
                     string AttributeValue;
 
                     AttributeValue = CurrentAttribute.Value;
-                    thisHref = new HyperlinkReference(AttributeValue);
+                    this.Href = new HyperlinkReference(AttributeValue);
                 }
                 else if (CurrentAttribute.LocalName.Equals("label") == true)
                 {
-                    thisLabel = CurrentAttribute.Value;
+                    this.Label = CurrentAttribute.Value;
                 }
             }
         }

@@ -5,67 +5,72 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "footnoteLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+	/// </summary>
     public class FootnoteLink
     {
         private XmlNode thisFootnoteLinkNode;
-        private List<FootnoteLocator> thisFootnoteLocators;
-        private List<Footnote> thisFootnotes;
-        private List<FootnoteArc> thisFootnoteArcs;
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
-        public List<FootnoteArc> FootnoteArcs
-        {
-            get
-            {
-                return thisFootnoteArcs;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="FootnoteArc"/> objects that apply to this footnote link.
+		/// </summary>
+		public List<FootnoteArc> FootnoteArcs
+		{
+			get;
+			private set;
+		}
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
-        public List<FootnoteLocator> FootnoteLocators
-        {
-            get
-            {
-                return thisFootnoteLocators;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="FootnoteLocator"/> objects that apply to this footnote link.
+		/// </summary>
+		public List<FootnoteLocator> FootnoteLocators
+		{
+			get;
+			private set;
+		}
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
-        public List<Footnote> Footnotes
-        {
-            get
-            {
-                return thisFootnotes;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="Footnote"/> objects that apply to this footnote link.
+		/// </summary>
+		public List<Footnote> Footnotes
+		{
+			get;
+			private set;
+		}
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
         internal FootnoteLink(XmlNode FootnoteLinkNode)
         {
             thisFootnoteLinkNode = FootnoteLinkNode;
-            thisFootnotes = new List<Footnote>();
-            thisFootnoteLocators = new List<FootnoteLocator>();
-            thisFootnoteArcs = new List<FootnoteArc>();
+            this.Footnotes = new List<Footnote>();
+            this.FootnoteLocators = new List<FootnoteLocator>();
+            this.FootnoteArcs = new List<FootnoteArc>();
             foreach (XmlNode ChildNode in thisFootnoteLinkNode.ChildNodes)
             {
                 if (ChildNode.LocalName.Equals("loc") == true)
-                    thisFootnoteLocators.Add(new FootnoteLocator(this, ChildNode));
+                    this.FootnoteLocators.Add(new FootnoteLocator(this, ChildNode));
                 else if (ChildNode.LocalName.Equals("footnote") == true)
-                    thisFootnotes.Add(new Footnote(this, ChildNode));
+                    this.Footnotes.Add(new Footnote(this, ChildNode));
                 else if (ChildNode.LocalName.Equals("footnoteArc") == true)
-                    thisFootnoteArcs.Add(new FootnoteArc(this, ChildNode));
+                    this.FootnoteArcs.Add(new FootnoteArc(this, ChildNode));
             }
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+		/// <summary>
+		/// Gets the footnote locator whose label matches the supplied label.
+		/// </summary>
+		/// <param name="Label">
+		/// The label of the footnote locator to be returned.
+		/// </param>
+		/// <returns>
+		/// The footnote locator whose label matches the supplied label. Null is returned if no
+		/// matching footnote locator can be found.
+		/// </returns>
         public FootnoteLocator GetLocator(string Label)
         {
-            foreach (FootnoteLocator CurrentLocator in thisFootnoteLocators)
+            foreach (FootnoteLocator CurrentLocator in this.FootnoteLocators)
             {
                 if (CurrentLocator.Label.Equals(Label) == true)
                     return CurrentLocator;
@@ -73,11 +78,19 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+		/// <summary>
+		/// Gets the footnote whose label matches the supplied label.
+		/// </summary>
+		/// <param name="Label">
+		/// The label of the footnote to be returned.
+		/// </param>
+		/// <returns>
+		/// The footnote whose label matches the supplied label. Null is returned if no
+		/// matching footnote can be found.
+		/// </returns>
         public Footnote GetFootnote(string Label)
         {
-            foreach (Footnote CurrentFootnote in thisFootnotes)
+            foreach (Footnote CurrentFootnote in this.Footnotes)
             {
                 if (CurrentFootnote.Label.Equals(Label) == true)
                     return CurrentFootnote;

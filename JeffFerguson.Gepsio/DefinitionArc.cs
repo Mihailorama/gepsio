@@ -2,81 +2,105 @@
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "definitionArc" as defined in the http://www.xbrl.org/2003/linkbase namespace.
+	/// </summary>
+	/// <remarks>
+	/// A definition arc is a concrete arc for use in definition extended links.
+	/// </remarks>
     public class DefinitionArc
     {
+		/// <summary>
+		/// An enumeration describing the role of this definition arc.
+		/// </summary>
         public enum RoleEnum
         {
+			/// <summary>
+			/// An unknown role type.
+			/// </summary>
             Unknown,
+			/// <summary>
+			/// An essence alias role type. Used when the definition arc's role has a value of http://www.xbrl.org/2003/arcrole/essence-alias.
+			/// </summary>
             EssenceAlias,
+			/// <summary>
+			/// A general special role type. Used when the definition arc's role has a value of http://www.xbrl.org/2003/arcrole/general-special.
+			/// </summary>
             GeneralSpecial,
+			/// <summary>
+			/// A similar tuples role type. Used when the definition arc's role has a value of http://www.xbrl.org/2003/arcrole/similar-tuples.
+			/// </summary>
             SimilarTuples,
+			/// <summary>
+			/// A requires element role type. Used when the definition arc's role has a value of http://www.xbrl.org/2003/arcrole/requires-element.
+			/// </summary>
             RequiresElement
         }
 
-        private RoleEnum thisRole;
-        private string thisTitle;
-        private string thisFromId;
-        private string thisToId;
-        private Locator thisFromLocator;
-        private Locator thisToLocator;
+		/// <summary>
+		/// The title of this definition arc.
+		/// </summary>
+		public string Title
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public RoleEnum Role
-        {
-            get
-            {
-                return thisRole;
-            }
-        }
+		/// <summary>
+		/// The role of this definition arc.
+		/// </summary>
+		/// <remarks>
+		/// <para>
+		/// A definition arc role is defined in XBRL markup through a "definitionArc" element attribute named
+		/// "arcrole". The value of the "arcrole" attribute, if it exists, should reference a namespace that
+		/// identifies the role.
+		/// </para>
+		/// <para>
+		/// If the "arcrole" attribute is not found in the "definitionArc" element, or if the value of the
+		/// "arcrole" attribute is not one of the defined values, then the Role will be set to <see cref="RoleEnum.Unknown"/>.
+		/// </para>
+		/// </remarks>
+		public RoleEnum Role
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string FromId
-        {
-            get
-            {
-                return thisFromId;
-            }
-        }
+		/// <summary>
+		/// The identifier of the "from" portion of the definition arc.
+		/// </summary>
+		public string FromId
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public string ToId
-        {
-            get
-            {
-                return thisToId;
-            }
-        }
+		/// <summary>
+		/// The identifier of the "to" portion of the definition arc.
+		/// </summary>
+		public string ToId
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public Locator FromLocator
-        {
-            get
-            {
-                return thisFromLocator;
-            }
-            internal set
-            {
-                thisFromLocator = value;
-            }
-        }
+		/// <summary>
+		/// The locator of the "from" portion of the definition arc.
+		/// </summary>
+		public Locator FromLocator
+		{
+			get;
+			internal set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public Locator ToLocator
-        {
-            get
-            {
-                return thisToLocator;
-            }
-            internal set
-            {
-                thisToLocator = value;
-            }
-        }
+		/// <summary>
+		/// The locator of the "to" portion of the definition arc.
+		/// </summary>
+		public Locator ToLocator
+		{
+			get;
+			internal set;
+		}
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
@@ -89,11 +113,11 @@ namespace JeffFerguson.Gepsio
                 if (CurrentAttribute.LocalName.Equals("arcrole") == true)
                     SetRole(CurrentAttribute.Value);
                 else if (CurrentAttribute.LocalName.Equals("title") == true)
-                    thisTitle = CurrentAttribute.Value;
+                    this.Title = CurrentAttribute.Value;
                 else if (CurrentAttribute.LocalName.Equals("from") == true)
-                    thisFromId = CurrentAttribute.Value;
+                    this.FromId = CurrentAttribute.Value;
                 else if (CurrentAttribute.LocalName.Equals("to") == true)
-                    thisToId = CurrentAttribute.Value;
+                    this.ToId = CurrentAttribute.Value;
             }
         }
 
@@ -101,15 +125,15 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         private void SetRole(string ArcRoleValue)
         {
-            thisRole = RoleEnum.Unknown;
+            this.Role = RoleEnum.Unknown;
             if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/essence-alias") == true)
-                thisRole = RoleEnum.EssenceAlias;
+                this.Role = RoleEnum.EssenceAlias;
             else if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/general-special") == true)
-                thisRole = RoleEnum.GeneralSpecial;
+                this.Role = RoleEnum.GeneralSpecial;
             else if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/similar-tuples") == true)
-                thisRole = RoleEnum.SimilarTuples;
+                this.Role = RoleEnum.SimilarTuples;
             else if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/requires-element") == true)
-                thisRole = RoleEnum.RequiresElement;
+                this.Role = RoleEnum.RequiresElement;
         }
     }
 }

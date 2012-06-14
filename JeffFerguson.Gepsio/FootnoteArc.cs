@@ -1,88 +1,80 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL element "footnoteArc" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+	/// </summary>
     public class FootnoteArc
     {
         private XmlNode thisFootnoteArcNode;
-        private FootnoteLink thisFootnoteLink;
-        private string thisTitle;
-        private string thisFromId;
-        private string thisToId;
-        private Item thisFrom;
-        private Footnote thisTo;
 
-        public FootnoteLink Link
-        {
-            get
-            {
-                return thisFootnoteLink;
-            }
-        }
+		/// <summary>
+		/// The link definition for the footnote.
+		/// </summary>
+		public FootnoteLink Link
+		{
+			get;
+			private set;
+		}
 
-        public Item From
-        {
-            get
-            {
-                return thisFrom;
-            }
-            internal set
-            {
-                thisFrom = value;
-            }
-        }
+		/// <summary>
+		/// The item referenced by the "from" portion of the footnote arc.
+		/// </summary>
+		public Item From
+		{
+			get;
+			internal set;
+		}
 
-        public string Title
-        {
-            get
-            {
-                return thisTitle;
-            }
-        }
+		/// <summary>
+		/// The title of the footnote arc.
+		/// </summary>
+		public string Title
+		{
+			get;
+			private set;
+		}
 
-        public string FromId
-        {
-            get
-            {
-                return thisFromId;
-            }
-        }
+		/// <summary>
+		/// The ID of the item referenced by the "from" portion of the footnote arc.
+		/// </summary>
+		public string FromId
+		{
+			get;
+			private set;
+		}
 
-        public string ToId
-        {
-            get
-            {
-                return thisToId;
-            }
-        }
+		/// <summary>
+		/// The ID of the item referenced by the "to" portion of the footnote arc.
+		/// </summary>
+		public string ToId
+		{
+			get;
+			private set;
+		}
 
-        public Footnote To
-        {
-            get
-            {
-                return thisTo;
-            }
-            internal set
-            {
-                thisTo = value;
-            }
-        }
+		/// <summary>
+		/// The footnote referenced by the "to" portion of the footnote arc.
+		/// </summary>
+		public Footnote To
+		{
+			get;
+			internal set;
+		}
 
         internal FootnoteArc(FootnoteLink ParentLink, XmlNode FootnoteArcNode)
         {
             thisFootnoteArcNode = FootnoteArcNode;
-            thisFootnoteLink = ParentLink;
+            this.Link = ParentLink;
             foreach (XmlAttribute CurrentAttribute in thisFootnoteArcNode.Attributes)
             {
                 if(CurrentAttribute.LocalName.Equals("title") == true)
-                    thisTitle = CurrentAttribute.Value;
+                    this.Title = CurrentAttribute.Value;
                 else if (CurrentAttribute.LocalName.Equals("from") == true)
-                    thisFromId = CurrentAttribute.Value;
+                    this.FromId = CurrentAttribute.Value;
                 else if (CurrentAttribute.LocalName.Equals("to") == true)
-                    thisToId = CurrentAttribute.Value;
+                    this.ToId = CurrentAttribute.Value;
             }
         }
     }

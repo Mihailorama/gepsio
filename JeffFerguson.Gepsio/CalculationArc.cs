@@ -5,12 +5,12 @@ using System.Collections.Generic;
 namespace JeffFerguson.Gepsio
 {
     /// <summary>
-    /// The CalculationArc manages information stored in a calculation arc. Calculation arcs are found in
-    /// calculation linkbase documents.
+	/// An encapsulation of the XBRL element "calculationArc" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
     /// </summary>
     /// <remarks>
     /// <para>
-    /// Calculation arcs take the following form:
+	/// The CalculationArc manages information stored in a calculation arc. Calculation arcs are found in
+	/// calculation linkbase documents. Calculation arcs take the following form:
     /// </para>
     /// <para>
     /// <code>
@@ -48,82 +48,59 @@ namespace JeffFerguson.Gepsio
     /// </remarks>
     public class CalculationArc
     {
-        private string thisFromId;
-        private string thisToId;
-        private decimal thisOrder;
-        private decimal thisWeight;
-        private Locator thisFromLocator;
-        private List<Locator> thisToLocators;
-
         /// <summary>
         /// The ID of the "from" label referenced in the calculation arc.
         /// </summary>
-        public string FromId
-        {
-            get
-            {
-                return thisFromId;
-            }
-        }
+		public string FromId
+		{
+			get;
+			private set;
+		}
 
         /// <summary>
         /// The ID of the "to" label referenced in the calculation arc.
         /// </summary>
-        public string ToId
-        {
-            get
-            {
-                return thisToId;
-            }
-        }
+		public string ToId
+		{
+			get;
+			private set;
+		}
 
         /// <summary>
         /// The locator referenced by the "from" label referenced in the calculation arc.
         /// </summary>
-        public Locator FromLocator
-        {
-            get
-            {
-                return thisFromLocator;
-            }
-            internal set
-            {
-                thisFromLocator = value;
-            }
-        }
+		public Locator FromLocator
+		{
+			get;
+			internal set;
+		}
 
         /// <summary>
         /// A collection of locators referenced by the "to" label referenced in the calculation arc.
         /// </summary>
-        public List<Locator> ToLocators
-        {
-            get
-            {
-                return thisToLocators;
-            }
-        }
+		public List<Locator> ToLocators
+		{
+			get;
+			private set;
+		}
 
         /// <summary>
         /// The value of the "order" attribute used in the calculation arc.
         /// </summary>
-        public decimal Order
-        {
-            get
-            {
-                return thisOrder;
-            }
-        }
+		public decimal Order
+		{
+			get;
+			private set;
+		}
 
         /// <summary>
         /// The value of the "weight" attribute used in the calculation arc.
         /// </summary>
-        public decimal Weight
-        {
-            get
-            {
-                return thisWeight;
-            }
-        }
+		public decimal Weight
+		{
+			get;
+			private set;
+		}
 
         /// <summary>
         /// The constructor for the CalculationArc class.
@@ -133,17 +110,17 @@ namespace JeffFerguson.Gepsio
         /// </param>
         internal CalculationArc(XmlNode CalculationArcNode)
         {
-            thisToLocators = new List<Locator>();
-            thisFromId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "from");
-            thisToId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "to");
+            this.ToLocators = new List<Locator>();
+            this.FromId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "from");
+            this.ToId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "to");
             string OrderString = XmlUtilities.GetAttributeValue(CalculationArcNode, "order");
             if(string.IsNullOrEmpty(OrderString) == false)
-                thisOrder = Convert.ToDecimal(OrderString);
+                this.Order = Convert.ToDecimal(OrderString);
             string WeightString = XmlUtilities.GetAttributeValue(CalculationArcNode, "weight");
             if (string.IsNullOrEmpty(WeightString) == false)
-                thisWeight = Convert.ToDecimal(WeightString);
+                this.Weight = Convert.ToDecimal(WeightString);
             else
-                thisWeight = (decimal)(1.0);
+                this.Weight = (decimal)(1.0);
         }
 
         /// <summary>
@@ -154,7 +131,7 @@ namespace JeffFerguson.Gepsio
         /// </param>
         internal void AddToLocator(Locator ToLocator)
         {
-            thisToLocators.Add(ToLocator);
+            this.ToLocators.Add(ToLocator);
         }
     }
 }

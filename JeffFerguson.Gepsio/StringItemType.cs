@@ -1,6 +1,9 @@
 ﻿
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XBRL complex type "stringItemType" as defined in the http://www.xbrl.org/2003/instance namespace.
+	/// </summary>
     public class StringItemType : ComplexType
     {
         internal StringItemType()
