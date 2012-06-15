@@ -1,57 +1,65 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
+	/// <summary>
+	/// An encapsulation of the XML schema type "qualifiedName" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
+	/// </summary>
+	/// <remarks>
+	/// <para>
+	/// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
+	/// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
+	/// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
+	/// Gepsio's XML schema type system obsolete.
+	/// </para>
+	/// </remarks>
     public class QualifiedName : AnySimpleType
     {
-        private string thisLocalName;
-        private string thisNamespace;
-        private string thisNamespaceUri;
         private string thisToStringValue;
 
-        public string LocalName
-        {
-            get
-            {
-                return thisLocalName;
-            }
-        }
+		/// <summary>
+		/// The local name portion of the qualified name.
+		/// </summary>
+		public string LocalName
+		{
+			get;
+			private set;
+		}
 
-        public string Namespace
-        {
-            get
-            {
-                return thisNamespace;
-            }
-        }
+		/// <summary>
+		/// The namespace of the qualified name.
+		/// </summary>
+		public string Namespace
+		{
+			get;
+			private set;
+		}
 
-        public string NamespaceUri
-        {
-            get
-            {
-                return thisNamespaceUri;
-            }
-        }
+		/// <summary>
+		/// The URI of the namespace of the qualified name.
+		/// </summary>
+		public string NamespaceUri
+		{
+			get;
+			private set;
+		}
 
         internal QualifiedName(XmlNode QnameNode)
         {
             InitializeLocalNameAndNamespace(QnameNode);
-            if (thisNamespace.Length > 0)
+            if (this.Namespace.Length > 0)
                 InitializeNamespaceUri(QnameNode);
         }
 
         private void InitializeNamespaceUri(XmlNode QnameNode)
         {
-            if (thisNamespace.Length == 0)
+            if (this.Namespace.Length == 0)
             {
-                thisNamespaceUri = string.Empty;
+                this.NamespaceUri = string.Empty;
                 return;
             }
-            string AttributeName = "xmlns:" + thisNamespace;
-            thisNamespaceUri = XmlUtilities.GetAttributeValue(QnameNode, AttributeName);
+            string AttributeName = "xmlns:" + this.Namespace;
+            this.NamespaceUri = XmlUtilities.GetAttributeValue(QnameNode, AttributeName);
         }
 
         private void InitializeLocalNameAndNamespace(XmlNode QnameNode)
@@ -60,35 +68,57 @@ namespace JeffFerguson.Gepsio
             string[] InnerTextSplit = QnameNode.InnerText.Split(':');
             if (InnerTextSplit.Length == 1)
             {
-                thisNamespace = string.Empty;
-                thisLocalName = InnerTextSplit[0];
+                this.Namespace = string.Empty;
+                this.LocalName = InnerTextSplit[0];
             }
             else
             {
-                thisNamespace = InnerTextSplit[0];
-                thisLocalName = InnerTextSplit[1];
+                this.Namespace = InnerTextSplit[0];
+                this.LocalName = InnerTextSplit[1];
             }
         }
 
+		/// <summary>
+		/// Compares the current qualified name object with the supplied qualified name object.
+		/// </summary>
+		/// <param name="obj">
+		/// The object which should be compared to the current qualified name object.
+		/// </param>
+		/// <returns>
+		/// True if the supplied object is equal to the current qualified name object. False
+		/// if the supplied object is not equal to the current qualified name object.
+		/// </returns>
         public override bool Equals(object obj)
         {
             if ((obj is QualifiedName) == false)
                 return false;
             QualifiedName OtherObj = obj as QualifiedName;
-            if(thisLocalName.Equals(OtherObj.thisLocalName) == false)
+            if(this.LocalName.Equals(OtherObj.LocalName) == false)
                 return false;
-            if(thisNamespace.Equals(OtherObj.thisNamespace) == false)
+            if(this.Namespace.Equals(OtherObj.Namespace) == false)
                 return false;
-            if(thisNamespaceUri.Equals(OtherObj.thisNamespaceUri) == false)
+            if(this.NamespaceUri.Equals(OtherObj.NamespaceUri) == false)
                 return false;
             return true;
         }
 
+		/// <summary>
+		/// Calculates a hash code for the current object.
+		/// </summary>
+		/// <returns>
+		/// A hash code for the current object.
+		/// </returns>
         public override int GetHashCode()
         {
-            return thisLocalName.GetHashCode();
+            return this.LocalName.GetHashCode();
         }
 
+		/// <summary>
+		/// Represents the qualified name object as a string.
+		/// </summary>
+		/// <returns>
+		/// The string representation of the qualified name object.
+		/// </returns>
         public override string ToString()
         {
             return thisToStringValue;

@@ -2,45 +2,46 @@
 
 namespace JeffFerguson.Gepsio
 {
-    public class SummationConcept
-    {
-        private Locator thisSummationConceptLocator;
-        private List<Locator> thisContributingConceptLocators;
+	/// <summary>
+	/// The representation of a summation concept used in a calculation arc.
+	/// </summary>
+	/// <remarks>>
+	/// Section 5.2.5.2 of the XBRL 2.1 Specification discusses summation concepts.
+	/// </remarks>
+	public class SummationConcept
+	{
+		/// <summary>
+		/// The locator for the summation concept.
+		/// </summary>
+		public Locator SummationConceptLocator
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public Locator SummationConceptLocator
-        {
-            get
-            {
-                return thisSummationConceptLocator;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="Locator"/> objects for the contributing concepts.
+		/// </summary>
+		public List<Locator> ContributingConceptLocators
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<Locator> ContributingConceptLocators
-        {
-            get
-            {
-                return thisContributingConceptLocators;
-            }
-        }
+		//------------------------------------------------------------------------------------
+		//------------------------------------------------------------------------------------
+		internal SummationConcept(Locator SummationConceptLocator)
+		{
+			this.SummationConceptLocator = SummationConceptLocator;
+			this.ContributingConceptLocators = new List<Locator>();
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        internal SummationConcept(Locator SummationConceptLocator)
-        {
-            thisSummationConceptLocator = SummationConceptLocator;
-            thisContributingConceptLocators = new List<Locator>();
-        }
-
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        internal void AddContributingConceptLocator(Locator ContributingConceptLocator)
-        {
-            if(thisContributingConceptLocators.Contains(ContributingConceptLocator) == false)
-                thisContributingConceptLocators.Add(ContributingConceptLocator);
-        }
-    }
+		//------------------------------------------------------------------------------------
+		//------------------------------------------------------------------------------------
+		internal void AddContributingConceptLocator(Locator ContributingConceptLocator)
+		{
+			if (this.ContributingConceptLocators.Contains(ContributingConceptLocator) == false)
+				this.ContributingConceptLocators.Add(ContributingConceptLocator);
+		}
+	}
 }

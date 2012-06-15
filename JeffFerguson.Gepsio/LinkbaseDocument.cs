@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml;
-using System;
 
 namespace JeffFerguson.Gepsio
 {
-    //========================================================================================
-    // Represents an XML document with a root element called <linkbase>. Linkbase documents
-    // are referenced in <linkbaseRef> elements in XBRL schemas.
-    //========================================================================================
+	/// <summary>
+	/// Represents a linkbase document. A linkbase document is an XML document with a root
+	/// element called linkbase. Linkbase documents are referenced in linkbaseRef elements in
+	/// XBRL schemas.
+	/// </summary>
     public class LinkbaseDocument
     {
         private XbrlSchema thisContainingXbrlSchema;
@@ -15,47 +16,41 @@ namespace JeffFerguson.Gepsio
         private string thisLinkbasePath;
         private XmlNamespaceManager thisNamespaceManager;
         private XmlNode thisLinkbaseNode;
-        private List<DefinitionLink> thisDefinitionLinks;
-        private List<CalculationLink> thisCalculationLinks;
-        private List<LabelLink> thisLabelLinks;
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<DefinitionLink> DefinitionLinks
-        {
-            get
-            {
-                return thisDefinitionLinks;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="DefinitionLink"/> objects defined by the linkbase document.
+		/// </summary>
+		public List<DefinitionLink> DefinitionLinks
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<CalculationLink> CalculationLinks
-        {
-            get
-            {
-                return thisCalculationLinks;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="CalculationLink"/> objects defined by the linkbase document.
+		/// </summary>
+		public List<CalculationLink> CalculationLinks
+		{
+			get;
+			private set;
+		}
 
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        public List<LabelLink> LabelLinks
-        {
-            get
-            {
-                return thisLabelLinks;
-            }
-        }
+		/// <summary>
+		/// A collection of <see cref="LabelLink"/> objects defined by the linkbase document.
+		/// </summary>
+		public List<LabelLink> LabelLinks
+		{
+			get;
+			private set;
+		}
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal LinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
         {
-            thisDefinitionLinks = new List<DefinitionLink>();
-            thisCalculationLinks = new List<CalculationLink>();
-            thisLabelLinks = new List<LabelLink>();
+            this.DefinitionLinks = new List<DefinitionLink>();
+            this.CalculationLinks = new List<CalculationLink>();
+            this.LabelLinks = new List<LabelLink>();
             thisContainingXbrlSchema = ContainingXbrlSchema;
             thisLinkbasePath = GetFullLinkbasePath(DocumentPath);
             thisXmlDocument = new XmlDocument();
@@ -73,11 +68,11 @@ namespace JeffFerguson.Gepsio
             foreach (XmlNode CurrentChild in thisLinkbaseNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("definitionLink") == true)
-                    thisDefinitionLinks.Add(new DefinitionLink(CurrentChild));
+                    this.DefinitionLinks.Add(new DefinitionLink(CurrentChild));
                 else if (CurrentChild.LocalName.Equals("calculationLink") == true)
-                    thisCalculationLinks.Add(new CalculationLink(CurrentChild));
+                    this.CalculationLinks.Add(new CalculationLink(CurrentChild));
                 else if (CurrentChild.LocalName.Equals("labelLink") == true)
-                    thisLabelLinks.Add(new LabelLink(CurrentChild));
+                    this.LabelLinks.Add(new LabelLink(CurrentChild));
             }
         }
 

@@ -5,78 +5,65 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-    /// <summary>
-    /// 
-    /// </summary>
+	/// <summary>
+	/// A definition of a unit of measure used by numeric or fractional facts within the
+	/// XBRL document. XBRL allows more complex units to be defined if necessary. Facts
+	/// of a monetary nature must use a unit from the ISO 4217 namespace.
+	/// </summary>
     public class Unit
     {
         private XmlNode thisUnitNode;
-        private string thisId;
-        private List<QualifiedName> thisMeasureQualifiedNames;
-        private RegionInfo thisRegionInfo;
-        private CultureInfo thisCultureInfo;
-        private bool thisRatio;
         private List<QualifiedName> thisRatioNumeratorQualifiedNames;
         private List<QualifiedName> thisRatioDenominatorQualifiedNames;
 
-        public string Id
-        {
-            get
-            {
-                return thisId;
-            }
-        }
+		public string Id
+		{
+			get;
+			private set;
+		}
 
-        public List<QualifiedName> MeasureQualifiedNames
-        {
-            get
-            {
-                return thisMeasureQualifiedNames;
-            }
-        }
+		public List<QualifiedName> MeasureQualifiedNames
+		{
+			get;
+			private set;
+		}
 
-        public RegionInfo RegionInformation
-        {
-            get
-            {
-                return thisRegionInfo;
-            }
-        }
+		public RegionInfo RegionInformation
+		{
+			get;
+			private set;
+		}
 
-        public CultureInfo CultureInformation
-        {
-            get
-            {
-                return thisCultureInfo;
-            }
-        }
+		public CultureInfo CultureInformation
+		{
+			get;
+			private set;
+		}
 
-        public bool Ratio
-        {
-            get
-            {
-                return thisRatio;
-            }
-        }
+		public bool Ratio
+		{
+			get;
+			private set;
+		}
 
         internal Unit(XmlNode UnitNode)
         {
-            thisRegionInfo = null;
+			this.RegionInformation = null;
             thisUnitNode = UnitNode;
-            thisId = thisUnitNode.Attributes["id"].Value;
-            thisMeasureQualifiedNames = new List<QualifiedName>();
-            thisRatio = false;
+            this.Id = thisUnitNode.Attributes["id"].Value;
+            this.MeasureQualifiedNames = new List<QualifiedName>();
+            this.Ratio = false;
             thisRatioNumeratorQualifiedNames = new List<QualifiedName>();
             thisRatioDenominatorQualifiedNames = new List<QualifiedName>();
             foreach (XmlNode CurrentChild in UnitNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
-                    thisMeasureQualifiedNames.Add(new QualifiedName(CurrentChild));
+                    this.MeasureQualifiedNames.Add(new QualifiedName(CurrentChild));
                 else if (CurrentChild.LocalName.Equals("divide") == true)
                 {
                     ProcessDivideChildElement(CurrentChild);
                     CheckForMeasuresCommonToNumeratorsAndDenominators();
-                    thisRatio = true;
+                    this.Ratio = true;
                 }
             }
         }
@@ -89,7 +76,7 @@ namespace JeffFerguson.Gepsio
                 {
                     string MessageFormat = AssemblyResources.GetName("UnitRatioUsesSameMeasureInNumeratorAndDenominator");
                     StringBuilder MessageFormatBuilder = new StringBuilder();
-                    MessageFormatBuilder.AppendFormat(MessageFormat, thisId, CurrentNumeratorMeasure.ToString());
+                    MessageFormatBuilder.AppendFormat(MessageFormat, this.Id, CurrentNumeratorMeasure.ToString());
                     throw new XbrlException(MessageFormatBuilder.ToString());
                 }
             }
@@ -146,8 +133,8 @@ namespace JeffFerguson.Gepsio
                 RegionInfo CurrentRegionInfo = new RegionInfo(CurrentCultureInfo.LCID);
                 if (CurrentRegionInfo.ISOCurrencySymbol == Iso4217Code)
                 {
-                    thisCultureInfo = CurrentCultureInfo;
-                    thisRegionInfo = CurrentRegionInfo;
+					this.CultureInformation = CurrentCultureInfo;
+					this.RegionInformation = CurrentRegionInfo;
                     return;
                 }
             }
@@ -170,8 +157,8 @@ namespace JeffFerguson.Gepsio
                 RegionInfo CurrentRegionInfo = new RegionInfo(CurrentCultureInfo.LCID);
                 if (CurrentRegionInfo.Name == RegionInfoName)
                 {
-                    thisCultureInfo = CurrentCultureInfo;
-                    thisRegionInfo = CurrentRegionInfo;
+					this.CultureInformation = CurrentCultureInfo;
+					this.RegionInformation = CurrentRegionInfo;
                     return;
                 }
             }
