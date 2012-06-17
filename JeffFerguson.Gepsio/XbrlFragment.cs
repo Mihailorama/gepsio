@@ -233,22 +233,44 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+		/// <summary>
+		/// Gets the URI associated with a given namespace prefix.
+		/// </summary>
+		/// <param name="Prefix">
+		/// The namespace prefix whose URI should be returned.
+		/// </param>
+		/// <returns>
+		/// The namespace URI associated with the specified namespace prefix.
+		/// </returns>
         public string GetUriForPrefix(string Prefix)
         {
             return thisNamespaceManager.LookupNamespace(Prefix);
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+		/// <summary>
+		/// Gets the namespace prefix associated with a given URI.
+		/// </summary>
+		/// <param name="Uri">
+		/// The URI whose namespace prefix should be returned.
+		/// </param>
+		/// <returns>
+		/// The namespace prefix associated with the specified namespace URI.
+		/// </returns>
         public string GetPrefixForUri(string Uri)
         {
             return thisNamespaceManager.LookupPrefix(Uri);
         }
 
-        //-------------------------------------------------------------------------------
-        //-------------------------------------------------------------------------------
+		/// <summary>
+		/// Gets the schema associated with a given namespace prefix.
+		/// </summary>
+		/// <param name="Prefix">
+		/// The namespace prefix whose schema should be returned.
+		/// </param>
+		/// <returns>
+		/// A reference to the XBRL schema containing the specified namespace prefix. A null
+		/// is returned if the given namespace prefix is not found in any of the XBRL schemas.
+		/// </returns>
         public XbrlSchema GetXbrlSchemaForPrefix(string Prefix)
         {
             string Uri = GetUriForPrefix(Prefix);
@@ -688,13 +710,16 @@ namespace JeffFerguson.Gepsio
             ValidateEssenceAliasedFacts(EssenceAliasDefinitionArc, thisFacts);
         }
 
-        /// <summary>
-        /// Validate the essence alias between two facts referenced in a definition arc using
-        /// the set of all facts in the fragment. 
-        /// </summary>
-        /// <param name="EssenceAliasDefinitionArc">
-        /// The definition arc defining the essence alias.
-        /// </param>
+		/// <summary>
+		/// Validate the essence alias between two facts referenced in a definition arc using
+		/// the set of all facts in the fragment. 
+		/// </summary>
+		/// <param name="EssenceAliasDefinitionArc">
+		/// The definition arc defining the essence alias.
+		/// </param>
+		/// <param name="FactList">
+		/// A collection of <see cref="Fact"/> objects defined in the fragment.
+		/// </param>
         private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc, List<Fact> FactList)
         {
             Locator CurrentFromLocator = EssenceAliasDefinitionArc.FromLocator;

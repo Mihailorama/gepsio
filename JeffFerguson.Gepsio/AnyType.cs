@@ -19,7 +19,6 @@ namespace JeffFerguson.Gepsio
 	/// </remarks>
     public abstract class AnyType
     {
-        private string thisValue;
 
 		/// <summary>
 		/// The value of the type, represented as a <see cref="string"/>.

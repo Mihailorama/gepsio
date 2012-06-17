@@ -16,30 +16,46 @@ namespace JeffFerguson.Gepsio
         private List<QualifiedName> thisRatioNumeratorQualifiedNames;
         private List<QualifiedName> thisRatioDenominatorQualifiedNames;
 
+		/// <summary>
+		/// The ID of this unit.
+		/// </summary>
 		public string Id
 		{
 			get;
 			private set;
 		}
 
+		/// <summary>
+		/// A collection of <see cref="QualifiedName"/> objects representing the set of measure qualified names for this unit.
+		/// </summary>
 		public List<QualifiedName> MeasureQualifiedNames
 		{
 			get;
 			private set;
 		}
 
+		/// <summary>
+		/// Region information for this unit.
+		/// </summary>
 		public RegionInfo RegionInformation
 		{
 			get;
 			private set;
 		}
 
+		/// <summary>
+		/// Culture information for this unit.
+		/// </summary>
 		public CultureInfo CultureInformation
 		{
 			get;
 			private set;
 		}
 
+		/// <summary>
+		/// Describes whether or not this unit represents a ratio. Returns true if this unit represents a ratio.
+		/// Returns false if this unit does not represent a ratio.
+		/// </summary>
 		public bool Ratio
 		{
 			get;

@@ -113,7 +113,7 @@ namespace JeffFerguson.Test.Gepsio
 			{
 				VariationException = xbrle;
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 				// This is a good place to catch non-XBRL exceptions, such as null reference
 				// exceptions, during debugging.

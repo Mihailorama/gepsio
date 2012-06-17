@@ -106,9 +106,6 @@ namespace JeffFerguson.Gepsio
 			ExampleGuidance
         }
 
-        private CultureInfo thisCultureInfo;
-        private string thisLabelText;
-
 		/// <summary>
 		/// The role of this label.
 		/// </summary>

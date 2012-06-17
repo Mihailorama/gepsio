@@ -57,7 +57,6 @@ namespace JeffFerguson.Gepsio
         }
 
         private XmlSchemaElement thisSchemaElement;
-        private XmlNode thisElementNode;
 
 		/// <summary>
 		/// The name of the element.
