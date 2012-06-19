@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using JeffFerguson.Gepsio;
+﻿using JeffFerguson.Gepsio;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace JeffFerguson.Test.Gepsio
 {
@@ -18,7 +18,7 @@ namespace JeffFerguson.Test.Gepsio
         [TestMethod]
         public void WorkItem3828Test()
         {
-            XbrlDocument NewXbrlDocument = new XbrlDocument();
+            var NewXbrlDocument = new XbrlDocument();
             NewXbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem3828\cmi-20081231.xml");
         }
 
@@ -28,8 +28,19 @@ namespace JeffFerguson.Test.Gepsio
         [TestMethod]
         public void WorkItem3903Test()
         {
-            XbrlDocument NewXbrlDocument = new XbrlDocument();
+            var NewXbrlDocument = new XbrlDocument();
             NewXbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem3903\WorkItem3903.xml");
         }
-    }
+
+		/// <summary>
+		/// Work item 9401 notes that Gepsio throws a Null Reference Exception in the Qualified Name code when the associated
+		/// document is loaded.
+		/// </summary>
+		[TestMethod]
+		public void WorkItem9401Test()
+		{
+			var NewXbrlDocument = new XbrlDocument();
+			NewXbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem9401\amzn-20120331.xml");
+		}
+	}
 }

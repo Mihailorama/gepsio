@@ -135,6 +135,11 @@
     <Content Include="WorkItemsInput\WorkItem3903\WorkItem3903.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331.xml" />
+    <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_cal.xml" />
+    <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_def.xml" />
+    <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_lab.xml" />
+    <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_pre.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-01-IdScopeValid.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-02-IdScopeOutOfScope.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-03-IdScopePeriodDiff.xml" />
@@ -949,6 +954,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="WorkItemsInput\WorkItem3903\WorkItem3903.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkItemsInput\WorkItem9401\amzn-20120331.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\.#303-05-ForeverSchema.xsd.1.1" />

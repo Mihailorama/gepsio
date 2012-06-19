@@ -97,7 +97,21 @@ namespace JeffFerguson.Gepsio
                 return false;
             if(this.Namespace.Equals(OtherObj.Namespace) == false)
                 return false;
-            if(this.NamespaceUri.Equals(OtherObj.NamespaceUri) == false)
+
+			// At this point, the equality of the namespace URIs need to be checked.
+			// Start by checking the various null conditions.
+
+			if ((this.NamespaceUri == null) && (OtherObj.NamespaceUri == null))
+				return true;
+			if ((this.NamespaceUri != null) && (OtherObj.NamespaceUri == null))
+				return false;
+			if ((this.NamespaceUri == null) && (OtherObj.NamespaceUri != null))
+				return false;
+
+			// At this point, we know that both namespace URIs are non-null. Check
+			// their values for equality.
+
+			if(this.NamespaceUri.Equals(OtherObj.NamespaceUri) == false)
                 return false;
             return true;
         }
