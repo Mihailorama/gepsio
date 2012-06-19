@@ -89,6 +89,12 @@ namespace JeffFerguson.Gepsio
                 if (LastPathSeparator == -1)
                     LastPathSeparator = DocumentUri.LastIndexOf('/');
                 string DocumentPath = DocumentUri.Substring(0, LastPathSeparator + 1);
+
+				// Check for remote linkbases when using local files
+
+				if ((DocumentPath.StartsWith("file:///") == true) && (LinkbaseDocFilename.StartsWith("http://") == true))
+					return LinkbaseDocFilename;
+
                 FullPath = DocumentPath + LinkbaseDocFilename;
             }
             else
