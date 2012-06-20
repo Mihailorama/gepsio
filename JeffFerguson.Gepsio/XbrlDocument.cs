@@ -6,21 +6,37 @@ namespace JeffFerguson.Gepsio
     /// <summary>
     /// An XML document containing one or more XBRL fragments.
     /// </summary>
-    /// <remarks>
-    /// <para>
-    /// Typically, XBRL documents are XML documents with a single &lt;xbrl&gt; element at the root of the
-    /// XML document. However, the XBRL community does provide for XBRL fragments to appear in higher level
-    /// documents. For example, Inline XBRL provides a formal specification that governs the production of
-    /// web pages in HTML or xHTML that incorporate XBRL tagging instructions around specific facts
-    /// commingled inside the HTML markup. This scenario illustrates that a document may not, at its root,
-    /// be an XBRL document, but that the root document may contain "fragments" of XBRL. The XbrlDocument
-    /// class, therefore, is not simply structured to contain a single XBRL instance, but to contain a
-    /// collection of XBRL fragments. The typical XBRL document will contain a single &lt;xbrl&gt; element
-    /// at the root of the opened XML document, and, in this case, the XbrlDocument will have a single
-    /// XBRL fragment. More complex Inline XBRL scenarios may be represented as an XbrlDocument with one or
-    /// more fragments.
-    /// </para>
-    /// </remarks>
+	/// <remarks>
+	/// <para>
+	/// An XBRL fragment is a fragment of XBRL data having an xbrl tag as its root. In the generic case,
+	/// an XBRL document will have an xbrl tag as the root tag of the XML document, and, in this case,
+	/// the entire XBRL document is one large XBRL fragment. However, section 4.1 of the XBRL 2.1 Specification
+	/// makes provisions for multiple XBRL fragments to be stored in a single document:
+	/// </para>
+	/// <para>
+	/// "If multiple 'data islands' of XBRL mark-up are included in a larger document, the xbrl element is
+	/// the container for each [fragment]."
+	/// </para>
+	/// <para>
+	/// Gepsio supports this notion by defining an XBRL document containing a collection of one or more
+	/// XBRL fragments, as in the following code sample:
+	/// </para>
+	/// <code>
+	/// var myDocument = new XbrlDocument();
+	/// myDocument.Load("myxbrldoc.xml");
+	/// foreach(var currentFragment in myDocument.XbrlFragments)
+	/// {
+	///     // XBRL data is available from the "currentFragment" variable
+	/// }
+	/// </code>
+	/// <para>
+	/// In the vast majority of cases, an XBRL document will be an XML document with the xbrl tag at its
+	/// root, and, as a result, the <see cref="XbrlDocument"/> uses to load the XBRL document will have
+	/// a single <see cref="XbrlFragment"/> in the document's fragments container. Consider, however, the
+	/// possibility of having more than one fragment in a document, in accordance of the text in section
+	/// 4.1 of the XBRL 2.1 Specification.
+	/// </para>
+	/// </remarks>
     public class XbrlDocument
     {
         /// <summary>
