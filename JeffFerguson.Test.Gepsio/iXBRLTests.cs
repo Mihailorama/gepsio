@@ -7,6 +7,7 @@ namespace JeffFerguson.Test.Gepsio
 	public class iXBRLTests
 	{
 		[TestMethod]
+		[Ignore] // iXBRL unsupported at this time
 		public void UKGAAP2009Test()
 		{
 			var doc = new XbrlDocument();
