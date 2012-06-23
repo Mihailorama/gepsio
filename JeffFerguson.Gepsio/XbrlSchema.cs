@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Xml.Schema;
+using System.Net;
 
 namespace JeffFerguson.Gepsio
 {
@@ -96,20 +97,28 @@ namespace JeffFerguson.Gepsio
             thisContainingXbrlFragment = ContainingXbrlFragment;
             this.Path = GetFullSchemaPath(SchemaFilename, BaseDirectory);
 
-            try
-            {
-				thisXmlSchema = XmlSchema.Read(XmlTextReader.Create(this.Path), null);
-                thisXmlSchemaSet = new XmlSchemaSet();
-                thisXmlSchemaSet.Add(thisXmlSchema);
-                thisXmlSchemaSet.Compile();
-            }
-            catch (XmlSchemaException)
-            {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
-                MessageBuilder.AppendFormat(StringFormat, this.Path);
-                throw new XbrlException(MessageBuilder.ToString());
-            }
+			try
+			{
+				var schemaReader = XmlTextReader.Create(this.Path);
+				thisXmlSchema = XmlSchema.Read(schemaReader, null);
+				thisXmlSchemaSet = new XmlSchemaSet();
+				thisXmlSchemaSet.Add(thisXmlSchema);
+				thisXmlSchemaSet.Compile();
+			}
+			catch (XmlSchemaException xmlSchemaEx)
+			{
+				StringBuilder MessageBuilder = new StringBuilder();
+				string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+				MessageBuilder.AppendFormat(StringFormat, this.Path);
+				throw new XbrlException(MessageBuilder.ToString(), xmlSchemaEx);
+			}
+			catch (WebException webEx)
+			{
+				StringBuilder MessageBuilder = new StringBuilder();
+				string StringFormat = AssemblyResources.GetName("WebExceptionThrownDuringSchemaCreation");
+				MessageBuilder.AppendFormat(StringFormat, this.Path);
+				throw new XbrlException(MessageBuilder.ToString(), webEx);
+			}
 
             thisSchemaDocument = new XmlDocument();
             this.LinkbaseDocuments = new List<LinkbaseDocument>();
