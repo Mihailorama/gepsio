@@ -11,11 +11,19 @@ namespace JeffFerguson.Gepsio
 	/// </summary>
     public class LinkbaseDocument
     {
-        private XbrlSchema thisContainingXbrlSchema;
         private XmlDocument thisXmlDocument;
         private string thisLinkbasePath;
         private XmlNamespaceManager thisNamespaceManager;
         private XmlNode thisLinkbaseNode;
+
+		/// <summary>
+		/// The schema that references this linkbase document.
+		/// </summary>
+		public XbrlSchema Schema
+		{
+			get;
+			private set;
+		}
 
 		/// <summary>
 		/// A collection of <see cref="DefinitionLink"/> objects defined by the linkbase document.
@@ -51,7 +59,7 @@ namespace JeffFerguson.Gepsio
             this.DefinitionLinks = new List<DefinitionLink>();
             this.CalculationLinks = new List<CalculationLink>();
             this.LabelLinks = new List<LabelLink>();
-            thisContainingXbrlSchema = ContainingXbrlSchema;
+            this.Schema = ContainingXbrlSchema;
             thisLinkbasePath = GetFullLinkbasePath(DocumentPath);
             thisXmlDocument = new XmlDocument();
             thisXmlDocument.Load(thisLinkbasePath);
@@ -84,7 +92,7 @@ namespace JeffFerguson.Gepsio
             int FirstPathSeparator = LinkbaseDocFilename.IndexOf(System.IO.Path.DirectorySeparatorChar);
             if (FirstPathSeparator == -1)
             {
-                string DocumentUri = thisContainingXbrlSchema.SchemaRootNode.BaseURI;
+                string DocumentUri = this.Schema.SchemaRootNode.BaseURI;
                 int LastPathSeparator = DocumentUri.LastIndexOf(System.IO.Path.DirectorySeparatorChar);
                 if (LastPathSeparator == -1)
                     LastPathSeparator = DocumentUri.LastIndexOf('/');
