@@ -70,7 +70,7 @@ namespace JeffFerguson.Gepsio
                 if (CurrentChild.LocalName.Equals("definitionLink") == true)
                     this.DefinitionLinks.Add(new DefinitionLink(CurrentChild));
                 else if (CurrentChild.LocalName.Equals("calculationLink") == true)
-                    this.CalculationLinks.Add(new CalculationLink(CurrentChild));
+                    this.CalculationLinks.Add(new CalculationLink(this, CurrentChild));
                 else if (CurrentChild.LocalName.Equals("labelLink") == true)
                     this.LabelLinks.Add(new LabelLink(CurrentChild));
             }

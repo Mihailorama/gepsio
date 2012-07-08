@@ -10,6 +10,15 @@ namespace JeffFerguson.Gepsio
     {
 
 		/// <summary>
+		/// The linkbase document containing this calculation link.
+		/// </summary>
+		public LinkbaseDocument Linkbase
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
 		/// A collection of <see cref="Locator"/> objects that apply to this calculation link.
 		/// </summary>
 		public List<Locator> Locators
@@ -38,8 +47,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal CalculationLink(XmlNode CalculationLinkNode)
+        internal CalculationLink(LinkbaseDocument linkbaseDoc, XmlNode CalculationLinkNode)
         {
+			this.Linkbase = linkbaseDoc;
             this.Locators = new List<Locator>();
 			this.CalculationArcs = new List<CalculationArc>();
 			this.SummationConcepts = new List<SummationConcept>();
