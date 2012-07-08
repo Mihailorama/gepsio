@@ -66,7 +66,7 @@ namespace JeffFerguson.Gepsio
             CurrentSummationConcept = FindSummationConcept(CurrentCalculationArc.FromLocator);
             if (CurrentSummationConcept == null)
             {
-                CurrentSummationConcept = new SummationConcept(CurrentCalculationArc.FromLocator);
+                CurrentSummationConcept = new SummationConcept(this, CurrentCalculationArc.FromLocator);
                 this.SummationConcepts.Add(CurrentSummationConcept);
             }
             foreach(var CurrentToLocator in CurrentCalculationArc.ToLocators)

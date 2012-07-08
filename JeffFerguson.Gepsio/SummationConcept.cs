@@ -20,6 +20,15 @@ namespace JeffFerguson.Gepsio
 		}
 
 		/// <summary>
+		/// The calculation link that contains this summation concept.
+		/// </summary>
+		public CalculationLink Link
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
 		/// A collection of <see cref="Locator"/> objects for the contributing concepts.
 		/// </summary>
 		public List<Locator> ContributingConceptLocators
@@ -30,8 +39,9 @@ namespace JeffFerguson.Gepsio
 
 		//------------------------------------------------------------------------------------
 		//------------------------------------------------------------------------------------
-		internal SummationConcept(Locator SummationConceptLocator)
+		internal SummationConcept(CalculationLink link, Locator SummationConceptLocator)
 		{
+			this.Link = link;
 			this.SummationConceptLocator = SummationConceptLocator;
 			this.ContributingConceptLocators = new List<Locator>();
 		}
