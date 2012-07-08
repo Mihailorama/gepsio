@@ -74,7 +74,6 @@ namespace JeffFerguson.Gepsio
 
 		#region Fields
 
-		private XbrlDocument thisDocument;
 		private XmlNode thisXbrlRootNode;
 		private List<Context> thisContexts;
 		private XmlNamespaceManager thisNamespaceManager;
@@ -93,10 +92,8 @@ namespace JeffFerguson.Gepsio
 		/// </summary>
 		public XbrlDocument Document
 		{
-			get
-			{
-				return thisDocument;
-			}
+			get;
+			private set;
 		}
 
 		/// <summary>
@@ -174,7 +171,7 @@ namespace JeffFerguson.Gepsio
 		//-------------------------------------------------------------------------------
 		internal XbrlFragment(XbrlDocument ParentDocument, XmlNode XbrlRootNode)
 		{
-			thisDocument = ParentDocument;
+			this.Document = ParentDocument;
 			thisXbrlRootNode = XbrlRootNode;
 			CreateNamespaceManager();
 			//---------------------------------------------------------------------------
@@ -625,10 +622,10 @@ namespace JeffFerguson.Gepsio
 		{
 			if (Href.UrlSpecified == false)
 				return false;
-			string DocFullPath = Path.GetFullPath(thisDocument.Filename);
+			string DocFullPath = Path.GetFullPath(this.Document.Filename);
 			string HrefFullPathString;
 			if (Href.Url.IndexOf(Path.DirectorySeparatorChar) == -1)
-				HrefFullPathString = thisDocument.Path + Path.DirectorySeparatorChar + Href.Url;
+				HrefFullPathString = this.Document.Path + Path.DirectorySeparatorChar + Href.Url;
 			else
 				HrefFullPathString = Href.Url;
 			string HrefFullPath = Path.GetFullPath(HrefFullPathString);
@@ -969,182 +966,8 @@ namespace JeffFerguson.Gepsio
 		/// </summary>
 		private void ValidateSummationConcepts()
 		{
-			foreach (XbrlSchema CurrentSchema in thisSchemas)
-				ValidateSummationConcepts(CurrentSchema);
-		}
-
-		/// <summary>
-		/// Validates all summation concepts defined in the current schema.
-		/// </summary>
-		/// <param name="CurrentSchema">
-		/// The schema whose containing summation concepts should be validated.
-		/// </param>
-		private void ValidateSummationConcepts(XbrlSchema CurrentSchema)
-		{
-			foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
-				ValidateSummationConcepts(CurrentLinkbaseDocument);
-		}
-
-
-		/// <summary>
-		/// Validates all summation concepts found in the current linkbase document.
-		/// </summary>
-		/// <param name="CurrentLinkbaseDocument">
-		/// The linkbase document whose containing summation concepts should be validated.
-		/// </param>
-		private void ValidateSummationConcepts(LinkbaseDocument CurrentLinkbaseDocument)
-		{
-			foreach (CalculationLink CurrentCalculationLink in CurrentLinkbaseDocument.CalculationLinks)
-				ValidateSummationConcepts(CurrentCalculationLink);
-		}
-
-		/// <summary>
-		/// Validates all summation concepts found in the current calculation link.
-		/// </summary>
-		/// <param name="CurrentCalculationLink">
-		/// The calculation link whose containing summation concepts should be validated.
-		/// </param>
-		private void ValidateSummationConcepts(CalculationLink CurrentCalculationLink)
-		{
-			foreach (SummationConcept CurrentSummationConcept in CurrentCalculationLink.SummationConcepts)
-			{
-
-				// Validate the main items in the fragment.
-
-				ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept, thisFacts);
-
-				// Look for any tuples in the fragment and validate their items as well. This action
-				// satisfies tests in the XBRL-CONF-CR3-2007-03-05 conformance suite such as 397.13.
-
-				foreach (var CurrentFact in thisFacts)
-				{
-					if (CurrentFact is Tuple)
-					{
-						var CurrentTuple = CurrentFact as Tuple;
-						ValidateSummationConcept(CurrentCalculationLink, CurrentSummationConcept, CurrentTuple.Facts);
-					}
-				}
-			}
-		}
-
-
-		/// <summary>
-		/// Validates a given summation concept.
-		/// </summary>
-		/// <param name="CurrentCalculationLink">
-		/// The calculation link that defines the given summation concept.
-		/// </param>
-		/// <param name="CurrentSummationConcept">
-		/// The summation concept to be validated.
-		/// </param>
-		/// <param name="FactList">
-		/// The collection of items that should be searched when looking for summation or contributing items.
-		/// </param>
-		private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept, List<Fact> FactList)
-		{
-			Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
-			Item SummationConceptItem = LocateItem(SummationConceptElement, FactList);
-
-			// If the summation concept item doesn't exist, then there is no calculation
-			// to perform.
-
-			if (SummationConceptItem == null)
-				return;
-
-			// If the summation concept item has a "nil" value, then there is no calculation
-			// to perform.
-
-			if (SummationConceptItem.NilSpecified == true)
-				return;
-
-			double SummationConceptRoundedValue = SummationConceptItem.RoundedValue;
-			double ContributingConceptRoundedValueTotal = 0;
-			var ContributingConceptItemsFound = false;
-			foreach (Locator CurrentLocator in CurrentSummationConcept.ContributingConceptLocators)
-			{
-
-				// Some decisions need to be made before the code can actually add the value of the
-				// contributing concept to the total that the code is keeping.
-
-				var IncludeContributingConceptItemInCalculation = true;
-
-				// Find the calculation arc for the given calculation link.
-
-				CalculationArc ContributingConceptCalculationArc = CurrentCalculationLink.GetCalculationArc(CurrentLocator);
-				if (ContributingConceptCalculationArc == null)
-					IncludeContributingConceptItemInCalculation = false;
-
-				// Find the elemement for the given locator.
-
-				Element ContributingConceptElement = LocateElement(CurrentLocator);
-				if (ContributingConceptElement == null)
-					IncludeContributingConceptItemInCalculation = false;
-
-				// Find all items for the given element. If there is more than one, then
-				// the entire calculation validation is forfeit, according to test 397.12 in 
-				// the XBRL-CONF-CR3-2007-03-05 conformance suite.
-
-				var AllMatchingItems = LocateItems(ContributingConceptElement, FactList);
-				if (AllMatchingItems.Count > 1)
-					return;
-
-				// Find the item for the given element.
-
-				Item ContributingConceptItem = null;
-				if (AllMatchingItems.Count == 0)
-					IncludeContributingConceptItemInCalculation = false;
-				else
-					ContributingConceptItem = AllMatchingItems[0];
-
-				// Ensure that the contributing concept item is context-equals
-				// with the summation item.
-
-				if (IncludeContributingConceptItemInCalculation == true)
-				{
-					if (SummationConceptItem.ContextEquals(ContributingConceptItem) == false)
-						IncludeContributingConceptItemInCalculation = false;
-				}
-
-				// Ensure that the contributing concept item is unit-equals
-				// with the summation item.
-
-				if (IncludeContributingConceptItemInCalculation == true)
-				{
-					if (SummationConceptItem.UnitEquals(ContributingConceptItem) == false)
-						IncludeContributingConceptItemInCalculation = false;
-				}
-
-				// Ensure that the contributing concept item does not have a nil value.
-
-				if (IncludeContributingConceptItemInCalculation == true)
-				{
-					if (ContributingConceptItem.NilSpecified == true)
-						IncludeContributingConceptItemInCalculation = false;
-				}
-
-				// If the code is still interested in including the contributing concept item
-				// in the calculation, then get its rounded value and add it to the total.
-
-				if (IncludeContributingConceptItemInCalculation == true)
-				{
-					ContributingConceptItemsFound = true;
-					double ContributingConceptRoundedValue = ContributingConceptItem.RoundedValue;
-					if (ContributingConceptCalculationArc.Weight != (decimal)(1.0))
-						ContributingConceptRoundedValue = ContributingConceptRoundedValue * (double)(ContributingConceptCalculationArc.Weight);
-					ContributingConceptRoundedValueTotal += ContributingConceptRoundedValue;
-				}
-			}
-			if (ContributingConceptItemsFound == true)
-			{
-				ContributingConceptRoundedValueTotal = SummationConceptItem.Round(ContributingConceptRoundedValueTotal);
-				if (SummationConceptRoundedValue != ContributingConceptRoundedValueTotal)
-				{
-					StringBuilder MessageBuilder = new StringBuilder();
-					string StringFormat = AssemblyResources.GetName("SummationConceptError");
-					MessageBuilder.AppendFormat(StringFormat, SummationConceptItem.Name, SummationConceptRoundedValue, ContributingConceptRoundedValueTotal);
-					throw new XbrlException(MessageBuilder.ToString());
-				}
-			}
+			var validator = new SummationConceptValidator(this);
+			validator.Validate();
 		}
 
 		//===============================================================================
@@ -1167,115 +990,6 @@ namespace JeffFerguson.Gepsio
 					return CurrentFact;
 			}
 			return null;
-		}
-
-
-		/// <summary>
-		/// Locates an element given an element locator.
-		/// </summary>
-		/// <param name="ElementLocator">
-		/// The locator specifying the element to find.
-		/// </param>
-		/// <returns>
-		/// The element referenced by the locator; null if the element cannot be found.
-		/// </returns>
-		private Element LocateElement(Locator ElementLocator)
-		{
-			foreach (XbrlSchema CurrentSchema in thisSchemas)
-			{
-				var FoundElement = CurrentSchema.LocateElement(ElementLocator);
-				if (FoundElement != null)
-					return FoundElement;
-			}
-			return null;
-		}
-
-		/// <summary>
-		/// Locates an item in the fragment's list of facts.
-		/// </summary>
-		/// <param name="ItemElement">
-		/// A schema element defining the item to be found.
-		/// </param>
-		/// <returns>
-		/// A reference to the first item that matches the given element, or null if no matching item is found.
-		/// </returns>
-		private Item LocateItem(Element ItemElement)
-		{
-			return LocateItem(ItemElement, thisFacts);
-		}
-
-		/// <summary>
-		/// Locates an item in a list of facts.
-		/// </summary>
-		/// <param name="ItemElement">
-		/// A schema element defining the item to be found.
-		/// </param>
-		/// <param name="FactList">
-		/// The collection of items that should be searched.
-		/// </param>
-		/// <returns>
-		/// A reference to the first item that matches the given element, or null if no matching item is found.
-		/// </returns>
-		private Item LocateItem(Element ItemElement, List<Fact> FactList)
-		{
-			if (ItemElement == null)
-				return null;
-			foreach (Fact CurrentFact in FactList)
-			{
-				var CurrentItem = CurrentFact as Item;
-				if (CurrentItem != null)
-				{
-					if (CurrentItem.SchemaElement.Equals(ItemElement) == true)
-						return CurrentItem;
-				}
-			}
-			return null;
-		}
-
-		/// <summary>
-		/// Locates all items in the fragment that match the current element.
-		/// </summary>
-		/// <param name="ItemElement">
-		/// The element describing the items to be found.
-		/// </param>
-		/// <returns>
-		/// A collection of items that match the current element. If no items match,
-		/// a non-null List will still be returned, but the list will be empty.
-		/// </returns>
-		private List<Item> LocateItems(Element ItemElement)
-		{
-			return LocateItems(ItemElement, thisFacts);
-		}
-
-		/// <summary>
-		/// Locates all items in the given collection of facts that match the current element.
-		/// </summary>
-		/// <param name="ItemElement">
-		/// The element describing the items to be found.
-		/// </param>
-		/// <param name="FactList">
-		/// The collection of items that should be searched.
-		/// </param>
-		/// <returns>
-		/// A collection of items that match the current element. If no items match,
-		/// a non-null List will still be returned, but the list will be empty.
-		/// </returns>
-		private List<Item> LocateItems(Element ItemElement, List<Fact> FactList)
-		{
-			var ItemList = new List<Item>();
-			if (ItemElement != null)
-			{
-				foreach (Fact CurrentFact in FactList)
-				{
-					var CurrentItem = CurrentFact as Item;
-					if (CurrentItem != null)
-					{
-						if (CurrentItem.SchemaElement.Equals(ItemElement) == true)
-							ItemList.Add(CurrentItem);
-					}
-				}
-			}
-			return ItemList;
 		}
 
 		//===============================================================================

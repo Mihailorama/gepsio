@@ -163,6 +163,7 @@
     <Compile Include="String.cs" />
     <Compile Include="StringItemType.cs" />
     <Compile Include="SummationConcept.cs" />
+    <Compile Include="SummationConceptValidator.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TokenItemType.cs" />
