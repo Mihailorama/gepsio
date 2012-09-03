@@ -156,6 +156,7 @@
     </Compile>
     <Compile Include="QualifiedName.cs" />
     <Compile Include="RestrictedSimpleType.cs" />
+    <Compile Include="RoleType.cs" />
     <Compile Include="Shares.cs" />
     <Compile Include="SharesItemType.cs" />
     <Compile Include="SimpleContentComplexType.cs" />

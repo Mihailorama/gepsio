@@ -140,6 +140,14 @@
     <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_def.xml" />
     <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_lab.xml" />
     <Content Include="WorkItemsInput\WorkItem9401\amzn-20120331_pre.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\gaap-cal.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\gaap-def.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\gaap-formula.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\gaap-lab.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\gaap-pre.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\gaap-ref.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\presentation.xml" />
+    <Content Include="WorkItemsInput\WorkItem9571\Sample-Instance-Proof.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-01-IdScopeValid.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-02-IdScopeOutOfScope.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-03-IdScopePeriodDiff.xml" />
@@ -957,6 +965,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="WorkItemsInput\WorkItem9401\amzn-20120331.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkItemsInput\WorkItem9571\gaap-ComplexTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkItemsInput\WorkItem9571\gaap.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\.#303-05-ForeverSchema.xsd.1.1" />

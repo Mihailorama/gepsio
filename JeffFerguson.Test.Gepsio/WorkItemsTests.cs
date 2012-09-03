@@ -42,5 +42,20 @@ namespace JeffFerguson.Test.Gepsio
 			var NewXbrlDocument = new XbrlDocument();
 			NewXbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem9401\amzn-20120331.xml");
 		}
-	}
+
+        /// <summary>
+        /// Work item 9571 notes that the Nov 2011 CTP has no support for schema role types.
+        /// </summary>
+        [TestMethod]
+        public void WorkItem9571Test()
+        {
+            var xbrlDocument = new XbrlDocument();
+            xbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem9571\Sample-Instance-Proof.xml");
+            Assert.AreEqual<int>(1, xbrlDocument.XbrlFragments.Count);
+            var firstFragment = xbrlDocument.XbrlFragments[0];
+            Assert.AreEqual<int>(1, firstFragment.Schemas.Count);
+            var firstSchema = firstFragment.Schemas[0];
+            Assert.AreEqual<int>(60, firstSchema.RoleTypes.Count);
+        }
+    }
 }

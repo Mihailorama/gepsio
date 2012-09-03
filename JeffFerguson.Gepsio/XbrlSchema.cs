@@ -90,6 +90,15 @@ namespace JeffFerguson.Gepsio
 			private set;
 		}
 
+        /// <summary>
+        /// A collection of <see cref="RoleType"/> objects representing all role types defined in the schema.
+        /// </summary>
+        public List<RoleType> RoleTypes
+        {
+            get;
+            private set;
+        }
+
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
         internal XbrlSchema(XbrlFragment ContainingXbrlFragment, string SchemaFilename, string BaseDirectory)
@@ -122,6 +131,7 @@ namespace JeffFerguson.Gepsio
 
             thisSchemaDocument = new XmlDocument();
             this.LinkbaseDocuments = new List<LinkbaseDocument>();
+            this.RoleTypes = new List<RoleType>();
             thisSchemaDocument.Load(this.Path);
             this.NamespaceManager = new XmlNamespaceManager(thisSchemaDocument.NameTable);
             this.NamespaceManager.AddNamespace("schema", "http://www.w3.org/2001/XMLSchema");
@@ -271,9 +281,9 @@ namespace JeffFerguson.Gepsio
             foreach (XmlNode CurrentChild in AppInfoNode.ChildNodes)
             {
                 if ((CurrentChild.NamespaceURI.Equals("http://www.xbrl.org/2003/linkbase") == true) && (CurrentChild.LocalName.Equals("linkbaseRef") == true))
-                {
                     ReadLinkbaseReference(CurrentChild);
-                }
+                else if ((CurrentChild.NamespaceURI.Equals("http://www.xbrl.org/2003/linkbase") == true) && (CurrentChild.LocalName.Equals("roleType") == true))
+                    ReadRoleType(CurrentChild);
             }
         }
 
@@ -286,6 +296,13 @@ namespace JeffFerguson.Gepsio
                 if ((CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == true) && (CurrentAttribute.LocalName.Equals("href") == true))
                     this.LinkbaseDocuments.Add(new LinkbaseDocument(this, CurrentAttribute.Value));
             }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ReadRoleType(XmlNode RoleTypeNode)
+        {
+            this.RoleTypes.Add(new RoleType(this, RoleTypeNode));
         }
 
         //-------------------------------------------------------------------------------
