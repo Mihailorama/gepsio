@@ -260,6 +260,7 @@ namespace JeffFerguson.Gepsio
                     TypeToReturn = new TokenItemType();
                     break;
                 case "xbrli:stringItemType":
+                case "xbrli:normalizedStringItemType":
                     TypeToReturn = new StringItemType();
                     break;
                 default:

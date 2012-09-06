@@ -57,5 +57,31 @@ namespace JeffFerguson.Test.Gepsio
             var firstSchema = firstFragment.Schemas[0];
             Assert.AreEqual<int>(60, firstSchema.RoleTypes.Count);
         }
+
+        /// <summary>
+        /// Work item 9612 notes that the Nov 2011 failed to load a document. The actual issue is that the 
+        /// schema references are HTTP-based, and not file-based, which confuses the code that calculates the
+        /// full path to the referenced schema.
+        /// </summary>
+        /// <remarks>
+        /// This document is invalid because it contains a calculation error. The current validation error
+        /// reporting scheme does not provide an easy way to tell if an XBRL exception thrown as the result of
+        /// a validation error because of the schemas or because of a calculation. Ideally, this test needs
+        /// to say "validation error is OK as long as the schemas loaded". Currently, there is no good way to
+        /// write this kind of code. This test should be revisited if and when the validation reporting code is
+        /// redesigned (see http://gepsio.blogspot.com/2012/09/gepsio-xbrl-validation-strategies.html for more
+        /// information on this possibility).
+        /// </remarks>
+        [TestMethod]
+        [Ignore]
+        public void WorkItem9612Test()
+        {
+            var xbrlDocument = new XbrlDocument();               
+            xbrlDocument.Load(@"..\..\..\JeffFerguson.Test.Gepsio\WorkItemsInput\WorkItem9612\intc-20111231.xml");
+            Assert.AreEqual<int>(1, xbrlDocument.XbrlFragments.Count);
+            var firstFragment = xbrlDocument.XbrlFragments[0];
+            Assert.AreEqual<int>(1, firstFragment.Schemas.Count);
+            var firstSchema = firstFragment.Schemas[0];
+        }
     }
 }

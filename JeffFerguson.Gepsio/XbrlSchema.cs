@@ -166,6 +166,18 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private string GetFullSchemaPath(string SchemaFilename, string BaseDirectory)
         {
+
+            // The first check is to see whether or not the "filename" is actually an HTTP-based
+            // reference. If it is, then it will be returned without modification.
+
+            var lowerCaseSchemaFilename = SchemaFilename.ToLower();
+            if (lowerCaseSchemaFilename.StartsWith("http://") == true)
+                return SchemaFilename;
+            if (lowerCaseSchemaFilename.StartsWith("https://") == true)
+                return SchemaFilename;
+
+            // At this point, we're confident that we have an actual filename.
+
             string FullPath;
             int FirstPathSeparator = SchemaFilename.IndexOf(System.IO.Path.DirectorySeparatorChar);
             if (FirstPathSeparator == -1)

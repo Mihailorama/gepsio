@@ -148,6 +148,11 @@
     <Content Include="WorkItemsInput\WorkItem9571\gaap-ref.xml" />
     <Content Include="WorkItemsInput\WorkItem9571\presentation.xml" />
     <Content Include="WorkItemsInput\WorkItem9571\Sample-Instance-Proof.xml" />
+    <Content Include="WorkItemsInput\WorkItem9612\intc-20111231.xml" />
+    <Content Include="WorkItemsInput\WorkItem9612\intc-20111231_cal.xml" />
+    <Content Include="WorkItemsInput\WorkItem9612\intc-20111231_def.xml" />
+    <Content Include="WorkItemsInput\WorkItem9612\intc-20111231_lab.xml" />
+    <Content Include="WorkItemsInput\WorkItem9612\intc-20111231_pre.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-01-IdScopeValid.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-02-IdScopeOutOfScope.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\Common\instance\301-03-IdScopePeriodDiff.xml" />
@@ -971,6 +976,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="WorkItemsInput\WorkItem9571\gaap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkItemsInput\WorkItem9612\intc-20111231.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="XBRL-CONF-CR3-2007-03-05\Common\instance\.#303-05-ForeverSchema.xsd.1.1" />
