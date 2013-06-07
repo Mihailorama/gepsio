@@ -282,7 +282,7 @@ namespace JeffFerguson.Gepsio
                     string MessageFormat = AssemblyResources.GetName("NoSchemasForFragment");
                     StringBuilder MessageFormatBuilder = new StringBuilder();
                     MessageFormatBuilder.AppendFormat(MessageFormat);
-                    throw new XbrlException(MessageFormatBuilder.ToString());
+                    thisParentFragment.AddValidationError(new ItemValidationError(this, MessageFormatBuilder.ToString()));
                 }
                 thisSchema = thisParentFragment.Schemas[0];
             }
@@ -296,7 +296,7 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("CannotFindFactElementInSchema");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, this.Name, thisSchema.Path);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageFormatBuilder.ToString()));
             }
         }
 
@@ -310,7 +310,7 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("InvalidElementItemType");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, thisSchema.Path, ItemTypeValue, this.Name);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageFormatBuilder.ToString()));
             }
         }
 
@@ -442,7 +442,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
                 MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, "unspecified");
-                throw new XbrlException(MessageBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
 
             if ((Uri.Length > 0) && (Uri.Equals("http://www.xbrl.org/2003/iso4217") == false))
@@ -450,7 +450,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
                 MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].NamespaceUri);
-                throw new XbrlException(MessageBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
             UnitReference.SetCultureAndRegionInfoFromISO4217Code(UnitReference.MeasureQualifiedNames[0].LocalName);
             if ((UnitReference.CultureInformation == null) && (UnitReference.RegionInformation == null))
@@ -458,7 +458,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");
                 MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].LocalName);
-                throw new XbrlException(MessageBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
         }
 
@@ -482,7 +482,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("PureItemTypeUnitLocalNameNotPure");
                 MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitMeasureLocalName);
-                throw new XbrlException(MessageBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
         }
 
@@ -506,7 +506,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("SharesItemTypeUnitLocalNameNotShares");
                 MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitMeasureLocalName);
-                throw new XbrlException(MessageBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
         }
 
@@ -528,14 +528,14 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("NumericFactWithoutSpecifiedPrecisionOrDecimals");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, Name, Id);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageFormatBuilder.ToString()));
             }
             if ((PrecisionSpecified == true) && (DecimalsSpecified == true))
             {
                 string MessageFormat = AssemblyResources.GetName("NumericFactWithSpecifiedPrecisionAndDecimals");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, Name, Id);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageFormatBuilder.ToString()));
             }
         }
 
@@ -546,7 +546,7 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("NilNumericFactWithSpecifiedPrecisionOrDecimals");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, Name, Id);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageFormatBuilder.ToString()));
             }
         }
 

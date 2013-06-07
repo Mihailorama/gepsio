@@ -62,8 +62,18 @@ namespace JeffFerguson.Gepsio
 			private set;
 		}
 
-        internal Unit(XmlNode UnitNode)
+        /// <summary>
+        /// The <see cref="XbrlFragment"/> which contains the unit.
+        /// </summary>
+        public XbrlFragment Fragment
         {
+            get;
+            private set;
+        }
+
+        internal Unit(XbrlFragment fragment, XmlNode UnitNode)
+        {
+            this.Fragment = fragment;
 			this.RegionInformation = null;
             thisUnitNode = UnitNode;
             this.Id = thisUnitNode.Attributes["id"].Value;
@@ -93,7 +103,8 @@ namespace JeffFerguson.Gepsio
                     string MessageFormat = AssemblyResources.GetName("UnitRatioUsesSameMeasureInNumeratorAndDenominator");
                     StringBuilder MessageFormatBuilder = new StringBuilder();
                     MessageFormatBuilder.AppendFormat(MessageFormat, this.Id, CurrentNumeratorMeasure.ToString());
-                    throw new XbrlException(MessageFormatBuilder.ToString());
+                    this.Fragment.AddValidationError(new UnitValidationError(this, MessageFormatBuilder.ToString()));
+                    return;
                 }
             }
         }

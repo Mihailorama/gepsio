@@ -42,7 +42,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
                 MessageBuilder.AppendFormat(StringFormat, FactToValidate.Name, UnitReference.Id, "unspecified");
-                throw new XbrlException(MessageBuilder.ToString());
+                //throw new XbrlException(MessageBuilder.ToString());
             }
 
             if ((Uri.Length > 0) && (Uri.Equals("http://www.xbrl.org/2003/iso4217") == false))
@@ -50,7 +50,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
                 MessageBuilder.AppendFormat(StringFormat, FactToValidate.Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].NamespaceUri);
-                throw new XbrlException(MessageBuilder.ToString());
+                //throw new XbrlException(MessageBuilder.ToString());
             }
             UnitReference.SetCultureAndRegionInfoFromISO4217Code(UnitReference.MeasureQualifiedNames[0].LocalName);
             if ((UnitReference.CultureInformation == null) && (UnitReference.RegionInformation == null))
@@ -58,7 +58,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");
                 MessageBuilder.AppendFormat(StringFormat, FactToValidate.Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].LocalName);
-                throw new XbrlException(MessageBuilder.ToString());
+                //throw new XbrlException(MessageBuilder.ToString());
             }
         }
     }

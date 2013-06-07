@@ -83,16 +83,20 @@
     <Compile Include="CalculationLink.cs" />
     <Compile Include="ComplexType.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="ContextValidationError.cs" />
     <Compile Include="Date.cs" />
     <Compile Include="DateTime.cs" />
     <Compile Include="Decimal.cs" />
     <Compile Include="DecimalItemType.cs" />
     <Compile Include="DecimalsType.cs" />
+    <Compile Include="DecimalValidationError.cs" />
     <Compile Include="DefinitionArc.cs" />
+    <Compile Include="DefinitionArcValidationError.cs" />
     <Compile Include="DefinitionLink.cs" />
     <Compile Include="Double.cs" />
     <Compile Include="Duration.cs" />
     <Compile Include="Element.cs" />
+    <Compile Include="ElementValidationError.cs" />
     <Compile Include="EnumerationFacet.cs" />
     <Compile Include="EnumerationFacetDefinition.cs" />
     <Compile Include="EssentialNumericItemAttributes.cs" />
@@ -106,8 +110,10 @@
     <Compile Include="Float.cs" />
     <Compile Include="Footnote.cs" />
     <Compile Include="FootnoteArc.cs" />
+    <Compile Include="FootnoteArcValidationError.cs" />
     <Compile Include="FootnoteLink.cs" />
     <Compile Include="FootnoteLocator.cs" />
+    <Compile Include="FootnoteValidationError.cs" />
     <Compile Include="Gepsio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,11 +126,14 @@
     <Compile Include="GregorianYearMonth.cs" />
     <Compile Include="HexBinary.cs" />
     <Compile Include="HyperlinkReference.cs" />
+    <Compile Include="HyperlinkReferenceValidationError.cs" />
     <Compile Include="ID.cs" />
     <Compile Include="IDREF.cs" />
     <Compile Include="Integer.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemAttributes.cs" />
+    <Compile Include="ItemsValidationError.cs" />
+    <Compile Include="ItemValidationError.cs" />
     <Compile Include="Label.cs" />
     <Compile Include="LabelArc.cs" />
     <Compile Include="LabelLink.cs" />
@@ -157,6 +166,7 @@
     <Compile Include="QualifiedName.cs" />
     <Compile Include="RestrictedSimpleType.cs" />
     <Compile Include="RoleType.cs" />
+    <Compile Include="SchemaValidationError.cs" />
     <Compile Include="Shares.cs" />
     <Compile Include="SharesItemType.cs" />
     <Compile Include="SimpleContentComplexType.cs" />
@@ -164,16 +174,18 @@
     <Compile Include="String.cs" />
     <Compile Include="StringItemType.cs" />
     <Compile Include="SummationConcept.cs" />
+    <Compile Include="SummationConceptValidationError.cs" />
     <Compile Include="SummationConceptValidator.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TokenItemType.cs" />
     <Compile Include="Tuple.cs" />
     <Compile Include="Unit.cs" />
+    <Compile Include="UnitValidationError.cs" />
+    <Compile Include="ValidationError.cs" />
     <Compile Include="WhiteSpaceFacet.cs" />
     <Compile Include="WhiteSpaceFacetDefinition.cs" />
     <Compile Include="XbrlDocument.cs" />
-    <Compile Include="XbrlException.cs" />
     <Compile Include="XbrlFragment.cs" />
     <Compile Include="XbrlSchema.cs" />
     <Compile Include="XmlUtilities.cs" />

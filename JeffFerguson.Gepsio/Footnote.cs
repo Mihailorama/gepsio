@@ -76,7 +76,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("NoLangForFootnote");
                 MessageBuilder.AppendFormat(StringFormat, this.Label);
-                throw new XbrlException(MessageBuilder.ToString());
+                this.Link.Fragment.AddValidationError(new FootnoteValidationError(this, MessageBuilder.ToString()));
             }
         }
     }

@@ -30,7 +30,7 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("PureItemTypeUnitLocalNameNotPure");
                 MessageBuilder.AppendFormat(StringFormat, FactToValidate.Name, UnitReference.Id, UnitMeasureLocalName);
-                throw new XbrlException(MessageBuilder.ToString());
+                //throw new XbrlException(MessageBuilder.ToString());
             }
         }
     }

@@ -3,17 +3,17 @@ using System.Text;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XML schema type "decimal" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
-	/// </summary>
-	/// <remarks>
-	/// <para>
-	/// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
-	/// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
-	/// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
-	/// Gepsio's XML schema type system obsolete.
-	/// </para>
-	/// </remarks>
+    /// <summary>
+    /// An encapsulation of the XML schema type "decimal" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
+    /// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
+    /// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
+    /// Gepsio's XML schema type system obsolete.
+    /// </para>
+    /// </remarks>
     public class Decimal : AnySimpleType
     {
         internal Decimal(XmlNode StringRootNode) : base(StringRootNode)
@@ -37,7 +37,7 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("NilNumericFactWithSpecifiedPrecisionOrDecimals");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, FactToValidate.Name, FactToValidate.Id);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                //throw new XbrlException(MessageFormatBuilder.ToString());
             }
         }
 
@@ -48,14 +48,14 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("NumericFactWithoutSpecifiedPrecisionOrDecimals");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, FactToValidate.Name, FactToValidate.Id);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                //throw new XbrlException(MessageFormatBuilder.ToString());
             }
             if ((FactToValidate.PrecisionSpecified == true) && (FactToValidate.DecimalsSpecified == true))
             {
                 string MessageFormat = AssemblyResources.GetName("NumericFactWithSpecifiedPrecisionAndDecimals");
                 StringBuilder MessageFormatBuilder = new StringBuilder();
                 MessageFormatBuilder.AppendFormat(MessageFormat, FactToValidate.Name, FactToValidate.Id);
-                throw new XbrlException(MessageFormatBuilder.ToString());
+                //throw new XbrlException(MessageFormatBuilder.ToString());
             }
         }
     }

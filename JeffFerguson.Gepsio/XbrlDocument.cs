@@ -85,6 +85,49 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
+        /// Evaluates to true if the document contains no XBRL validation errors. Evaluates to
+        /// false if the document contains at least one XBRL validation error.
+        /// </summary>
+        public bool IsValid
+        {
+            get
+            {
+                if (thisXbrlFragments == null)
+                    return true;
+                if (thisXbrlFragments.Count == 0)
+                    return true;
+                foreach (var currentFragment in thisXbrlFragments)
+                {
+                    if (currentFragment.IsValid == false)
+                        return false;
+                }
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// A collection of all validation errors found while validating the fragment.
+        /// </summary>
+        public List<ValidationError> ValidationErrors
+        {
+            get
+            {
+                if (thisXbrlFragments == null)
+                    return null;
+                if (thisXbrlFragments.Count == 0)
+                    return null;
+                if (thisXbrlFragments.Count == 1)
+                    return thisXbrlFragments[0].ValidationErrors;
+                var aggregatedValidationErrors = new List<ValidationError>();
+                foreach (var currentFragment in thisXbrlFragments)
+                {
+                    aggregatedValidationErrors.AddRange(currentFragment.ValidationErrors);
+                }
+                return aggregatedValidationErrors;
+            }
+        }
+
+        /// <summary>
         /// The constructor for the XbrlDocument class.
         /// </summary>
         public XbrlDocument()

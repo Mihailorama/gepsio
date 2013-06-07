@@ -39,11 +39,21 @@ namespace JeffFerguson.Gepsio
 			private set;
 		}
 
+        /// <summary>
+        /// The <see cref="XbrlFragment"/> which contains the unit.
+        /// </summary>
+        public XbrlFragment Fragment
+        {
+            get;
+            private set;
+        }
+
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        internal FootnoteLink(XmlNode FootnoteLinkNode)
+        internal FootnoteLink(XbrlFragment ParentFragment, XmlNode FootnoteLinkNode)
         {
             thisFootnoteLinkNode = FootnoteLinkNode;
+            this.Fragment = ParentFragment;
             this.Footnotes = new List<Footnote>();
             this.FootnoteLocators = new List<FootnoteLocator>();
             this.FootnoteArcs = new List<FootnoteArc>();

@@ -53,7 +53,7 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("UnsupportedRestrictionBaseSimpleType");
                 StringBuilder MessageBuilder = new StringBuilder();
                 MessageBuilder.AppendFormat(MessageFormat, BaseValue);
-                throw new XbrlException(MessageBuilder.ToString());
+                //throw new XbrlException(MessageBuilder.ToString());
             }
         }
 

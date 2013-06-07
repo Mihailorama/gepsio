@@ -8,9 +8,9 @@ namespace JeffFerguson.Gepsio
     /// </summary>
     public class SummationConceptValidator
     {
-		/// <summary>
-		/// The XBRL fragment whose summation concepts have been validated by the validator.
-		/// </summary>
+        /// <summary>
+        /// The XBRL fragment whose summation concepts have been validated by the validator.
+        /// </summary>
         public XbrlFragment ValidatedFragment
         {
             get;
@@ -39,8 +39,11 @@ namespace JeffFerguson.Gepsio
         /// </param>
         private void Validate(XbrlSchema CurrentSchema)
         {
-            foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
-                Validate(CurrentLinkbaseDocument);
+            if (CurrentSchema.LinkbaseDocuments != null)
+            {
+                foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
+                    Validate(CurrentLinkbaseDocument);
+            }
         }
 
 
@@ -148,52 +151,52 @@ namespace JeffFerguson.Gepsio
 
                 // Find the item for the given element.
 
-				if (AllMatchingItems.Count == 0)
-					IncludeContributingConceptItemInCalculation = false;
-				else
-				{
-					foreach (var ContributingConceptItem in AllMatchingItems)
-					{
+                if (AllMatchingItems.Count == 0)
+                    IncludeContributingConceptItemInCalculation = false;
+                else
+                {
+                    foreach (var ContributingConceptItem in AllMatchingItems)
+                    {
 
-						// Ensure that the contributing concept item is context-equals
-						// with the summation item.
+                        // Ensure that the contributing concept item is context-equals
+                        // with the summation item.
 
-						if (IncludeContributingConceptItemInCalculation == true)
-						{
-							if (SummationConceptItem.ContextEquals(ContributingConceptItem) == false)
-								IncludeContributingConceptItemInCalculation = false;
-						}
+                        if (IncludeContributingConceptItemInCalculation == true)
+                        {
+                            if (SummationConceptItem.ContextEquals(ContributingConceptItem) == false)
+                                IncludeContributingConceptItemInCalculation = false;
+                        }
 
-						// Ensure that the contributing concept item is unit-equals
-						// with the summation item.
+                        // Ensure that the contributing concept item is unit-equals
+                        // with the summation item.
 
-						if (IncludeContributingConceptItemInCalculation == true)
-						{
-							if (SummationConceptItem.UnitEquals(ContributingConceptItem) == false)
-								IncludeContributingConceptItemInCalculation = false;
-						}
+                        if (IncludeContributingConceptItemInCalculation == true)
+                        {
+                            if (SummationConceptItem.UnitEquals(ContributingConceptItem) == false)
+                                IncludeContributingConceptItemInCalculation = false;
+                        }
 
-						// Ensure that the contributing concept item does not have a nil value.
+                        // Ensure that the contributing concept item does not have a nil value.
 
-						if (IncludeContributingConceptItemInCalculation == true)
-						{
-							if (ContributingConceptItem.NilSpecified == true)
-								IncludeContributingConceptItemInCalculation = false;
-						}
+                        if (IncludeContributingConceptItemInCalculation == true)
+                        {
+                            if (ContributingConceptItem.NilSpecified == true)
+                                IncludeContributingConceptItemInCalculation = false;
+                        }
 
-						// If the code is still interested in including the contributing concept item
-						// in the calculation, then get its rounded value and add it to the total.
+                        // If the code is still interested in including the contributing concept item
+                        // in the calculation, then get its rounded value and add it to the total.
 
-						if (IncludeContributingConceptItemInCalculation == true)
-						{
-							ContributingConceptItemsFound = true;
-							double ContributingConceptRoundedValue = ContributingConceptItem.RoundedValue;
-							if (ContributingConceptCalculationArc.Weight != (decimal)(1.0))
-								ContributingConceptRoundedValue = ContributingConceptRoundedValue * (double)(ContributingConceptCalculationArc.Weight);
-							ContributingConceptRoundedValueTotal += ContributingConceptRoundedValue;
-						}
-					}
-				}
+                        if (IncludeContributingConceptItemInCalculation == true)
+                        {
+                            ContributingConceptItemsFound = true;
+                            double ContributingConceptRoundedValue = ContributingConceptItem.RoundedValue;
+                            if (ContributingConceptCalculationArc.Weight != (decimal)(1.0))
+                                ContributingConceptRoundedValue = ContributingConceptRoundedValue * (double)(ContributingConceptCalculationArc.Weight);
+                            ContributingConceptRoundedValueTotal += ContributingConceptRoundedValue;
+                        }
+                    }
+                }
             }
             if (ContributingConceptItemsFound == true)
             {
@@ -203,7 +206,8 @@ namespace JeffFerguson.Gepsio
                     StringBuilder MessageBuilder = new StringBuilder();
                     string StringFormat = AssemblyResources.GetName("SummationConceptError");
                     MessageBuilder.AppendFormat(StringFormat, SummationConceptItem.Name, SummationConceptRoundedValue, ContributingConceptRoundedValueTotal);
-                    throw new XbrlException(MessageBuilder.ToString());
+                    ValidatedFragment.AddValidationError(new SummationConceptValidationError(CurrentSummationConcept, MessageBuilder.ToString()));
+                    return;
                 }
             }
         }

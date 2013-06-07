@@ -14,7 +14,6 @@ namespace JeffFerguson.Gepsio
     public class XbrlSchema
     {
         private XmlDocument thisSchemaDocument;
-        private XbrlFragment thisContainingXbrlFragment;
         private XmlSchema thisXmlSchema;
         private XmlSchemaSet thisXmlSchemaSet;
 
@@ -99,11 +98,20 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
+        /// <summary>
+        /// The <see cref="XbrlFragment"/> which references the schema.
+        /// </summary>
+        public XbrlFragment Fragment
+        {
+            get;
+            private set;
+        }
+
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
         internal XbrlSchema(XbrlFragment ContainingXbrlFragment, string SchemaFilename, string BaseDirectory)
         {
-            thisContainingXbrlFragment = ContainingXbrlFragment;
+            this.Fragment = ContainingXbrlFragment;
             this.Path = GetFullSchemaPath(SchemaFilename, BaseDirectory);
 
 			try
@@ -119,14 +127,16 @@ namespace JeffFerguson.Gepsio
 				StringBuilder MessageBuilder = new StringBuilder();
 				string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
 				MessageBuilder.AppendFormat(StringFormat, this.Path);
-				throw new XbrlException(MessageBuilder.ToString(), xmlSchemaEx);
+                this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString(), xmlSchemaEx));
+                return;
 			}
 			catch (WebException webEx)
 			{
 				StringBuilder MessageBuilder = new StringBuilder();
 				string StringFormat = AssemblyResources.GetName("WebExceptionThrownDuringSchemaCreation");
 				MessageBuilder.AppendFormat(StringFormat, this.Path);
-				throw new XbrlException(MessageBuilder.ToString(), webEx);
+                this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString(), webEx));
+                return;
 			}
 
             thisSchemaDocument = new XmlDocument();
@@ -154,6 +164,8 @@ namespace JeffFerguson.Gepsio
 		/// </returns>
         public Element GetElement(string ElementName)
         {
+            if (this.Elements == null)
+                return null;
             foreach (Element CurrentElement in this.Elements)
             {
                 if (CurrentElement.Name.Equals(ElementName) == true)
@@ -182,7 +194,7 @@ namespace JeffFerguson.Gepsio
             int FirstPathSeparator = SchemaFilename.IndexOf(System.IO.Path.DirectorySeparatorChar);
             if (FirstPathSeparator == -1)
             {
-                string DocumentUri = thisContainingXbrlFragment.XbrlRootNode.BaseURI;
+                string DocumentUri = this.Fragment.XbrlRootNode.BaseURI;
                 int LastPathSeparator = DocumentUri.LastIndexOf(System.IO.Path.DirectorySeparatorChar);
                 if (LastPathSeparator == -1)
                     LastPathSeparator = DocumentUri.LastIndexOf('/');
@@ -210,7 +222,8 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
                 MessageBuilder.AppendFormat(StringFormat, this.Path);
-                throw new XbrlException(MessageBuilder.ToString());
+                this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString()));
+                return;
             }
 			this.TargetNamespace = this.SchemaRootNode.Attributes["targetNamespace"].Value;
 			foreach (XmlAttribute CurrentAttribute in this.SchemaRootNode.Attributes)

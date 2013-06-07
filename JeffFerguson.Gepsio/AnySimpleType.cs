@@ -6,26 +6,26 @@ using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XML schema type "anySimpleType" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
-	/// </summary>
-	/// <remarks>
-	/// <para>
-	/// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
-	/// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
-	/// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
-	/// Gepsio's XML schema type system obsolete.
-	/// </para>
-	/// </remarks>
+    /// <summary>
+    /// An encapsulation of the XML schema type "anySimpleType" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
+    /// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
+    /// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
+    /// Gepsio's XML schema type system obsolete.
+    /// </para>
+    /// </remarks>
     public abstract class AnySimpleType : AnyType
     {
         private List<FacetDefinition> thisConstrainingFacetDefinitions;
         private List<Facet> thisFacets;
 
-		/// <summary>
-		/// Describes whether or not this type is a numeric type. Returns true if this type is a numeric type. Returns false if this
-		/// type is not a numeric type.
-		/// </summary>
+        /// <summary>
+        /// Describes whether or not this type is a numeric type. Returns true if this type is a numeric type. Returns false if this
+        /// type is not a numeric type.
+        /// </summary>
         public override bool NumericType
         {
             get
@@ -45,9 +45,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-		/// <summary>
-		/// A collection of <see cref="Facet"/> objects that apply to this type.
-		/// </summary>
+        /// <summary>
+        /// A collection of <see cref="Facet"/> objects that apply to this type.
+        /// </summary>
         public List<Facet> Facets
         {
             get
@@ -148,7 +148,7 @@ namespace JeffFerguson.Gepsio
             string MessageFormat = AssemblyResources.GetName("UnsupportedFacet");
             StringBuilder MessageBuilder = new StringBuilder();
             MessageBuilder.AppendFormat(MessageFormat, FacetNode.Name, this.GetType().Name);
-            throw new XbrlException(MessageBuilder.ToString());
+            //throw new XbrlException(MessageBuilder.ToString());
         }
 
         private void ProcessFacet(FacetDefinition CurrentFacetDefinition, XmlNode FacetNode)
@@ -170,28 +170,28 @@ namespace JeffFerguson.Gepsio
                 string MessageFormat = AssemblyResources.GetName("UnsupportedFacetProperty");
                 StringBuilder MessageBuilder = new StringBuilder();
                 MessageBuilder.AppendFormat(MessageFormat, CurrentAttribute.Name, CurrentFacetDefinition.Name);
-                throw new XbrlException(MessageBuilder.ToString());
+                //throw new XbrlException(MessageBuilder.ToString());
             }
         }
 
-		/// <summary>
-		/// Adds a constraining facet definition to this type.
-		/// </summary>
-		/// <param name="ConstrainingFacet">
-		/// The constraining facet to add to this type.
-		/// </param>
+        /// <summary>
+        /// Adds a constraining facet definition to this type.
+        /// </summary>
+        /// <param name="ConstrainingFacet">
+        /// The constraining facet to add to this type.
+        /// </param>
         protected void AddConstrainingFacetDefinition(FacetDefinition ConstrainingFacet)
         {
             thisConstrainingFacetDefinitions.Add(ConstrainingFacet);
         }
 
-		/// <summary>
-		/// Add constraining facet definitions to this type.
-		/// </summary>
-		/// <remarks>
-		/// This method is a virtual method with no implementation for this class. It is expected that derived
-		/// classes will override this method with functionality appropriate for the derived class.
-		/// </remarks>
+        /// <summary>
+        /// Add constraining facet definitions to this type.
+        /// </summary>
+        /// <remarks>
+        /// This method is a virtual method with no implementation for this class. It is expected that derived
+        /// classes will override this method with functionality appropriate for the derived class.
+        /// </remarks>
         protected virtual void AddConstrainingFacetDefinitions()
         {
         }

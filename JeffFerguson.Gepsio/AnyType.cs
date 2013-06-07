@@ -133,9 +133,9 @@ namespace JeffFerguson.Gepsio
 		/// A type object representing the type referenced by the parameter, or null if the type name is
 		/// not supported.
 		/// </returns>
-        public static AnyType CreateType(string TypeName)
+        public static AnyType CreateType(string TypeName, XbrlSchema Schema)
         {
-            return AnyType.CreateType(TypeName, null);
+            return AnyType.CreateType(TypeName, (XbrlSchema)null);
         }
 
         internal abstract decimal GetValueAfterApplyingPrecisionTruncation(int PrecisionValue);

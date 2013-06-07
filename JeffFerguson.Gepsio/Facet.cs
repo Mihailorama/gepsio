@@ -43,7 +43,8 @@ namespace JeffFerguson.Gepsio
             string MessageFormat = AssemblyResources.GetName("FacetDefinitionNotSupportedForFacetCreation");
             StringBuilder MessageBuilder = new StringBuilder();
             MessageBuilder.AppendFormat(MessageFormat, Definition.GetType().ToString());
-            throw new XbrlException(MessageBuilder.ToString());
+            //throw new XbrlException(MessageBuilder.ToString());
+            return null;
         }
 
 		/// <summary>
