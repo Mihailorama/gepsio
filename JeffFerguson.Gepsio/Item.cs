@@ -286,11 +286,7 @@ namespace JeffFerguson.Gepsio
                 }
                 thisSchema = thisParentFragment.Schemas[0];
             }
-            foreach (Element CurrentElement in thisSchema.Elements)
-            {
-                if (CurrentElement.Name == this.Name)
-                    this.SchemaElement = CurrentElement;
-            }
+            this.SchemaElement = thisSchema.GetElement(this.Name);
             if (this.SchemaElement == null)
             {
                 string MessageFormat = AssemblyResources.GetName("CannotFindFactElementInSchema");

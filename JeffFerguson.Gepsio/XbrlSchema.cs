@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Net;
+using System.Linq;
 
 namespace JeffFerguson.Gepsio
 {
@@ -16,6 +17,7 @@ namespace JeffFerguson.Gepsio
         private XmlDocument thisSchemaDocument;
         private XmlSchema thisXmlSchema;
         private XmlSchemaSet thisXmlSchemaSet;
+        private ILookup<string, Element> thisLookupElements;
 
 		/// <summary>
 		/// The full path to the XBRL schema file.
@@ -166,12 +168,9 @@ namespace JeffFerguson.Gepsio
         {
             if (this.Elements == null)
                 return null;
-            foreach (Element CurrentElement in this.Elements)
-            {
-                if (CurrentElement.Name.Equals(ElementName) == true)
-                    return CurrentElement;
-            }
-            return null;
+            if (thisLookupElements == null)
+                thisLookupElements = Elements.ToLookup(a => a.Name);
+            return thisLookupElements[ElementName].First();
         }
 
         //-------------------------------------------------------------------------------
@@ -259,6 +258,7 @@ namespace JeffFerguson.Gepsio
             {
                 XmlSchemaElement CurrentElement = CurrentEntry.Value as XmlSchemaElement;
                 this.Elements.Add(new Element(this, CurrentElement));
+                thisLookupElements = null;
             }
         }
 
