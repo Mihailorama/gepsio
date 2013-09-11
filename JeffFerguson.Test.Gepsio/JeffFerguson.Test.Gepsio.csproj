@@ -69,6 +69,7 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PerformanceTests.cs" />
     <Compile Include="XBRLCONFCR320070305Test.cs" />
     <Compile Include="InferPrecisionTest.cs" />
     <Compile Include="iXBRLTests.cs" />
@@ -104,6 +105,11 @@
     <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\stylesheets\specifications.xml" />
     <Content Include="inlineXBRL-conformanceSuite-2010-04-20\resources\stylesheets\test.xsl" />
     <Content Include="ixbrl-samples\UKGAAP2009.xml" />
+    <Content Include="PerformanceTests\aig20130630\aig-20130630.xml" />
+    <Content Include="PerformanceTests\aig20130630\aig-20130630_cal.xml" />
+    <Content Include="PerformanceTests\aig20130630\aig-20130630_def.xml" />
+    <Content Include="PerformanceTests\aig20130630\aig-20130630_lab.xml" />
+    <Content Include="PerformanceTests\aig20130630\aig-20130630_pre.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\README.txt" />
     <Content Include="uk-gaap-samples-2008-06-20\samples\accounting-policies-dimension.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\samples\balance-sheet-individual-foreign-currency.xml" />
@@ -947,6 +953,9 @@
     <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-02.example" />
     <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-04.example" />
     <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-05.example" />
+    <None Include="PerformanceTests\aig20130630\aig-20130630.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="uk-gaap-samples-2008-06-20\samples\a.qvw" />
     <None Include="uk-gaap-samples-2008-06-20\samples\extension\segment-reporting-dimension-schema.xsd" />
     <None Include="uk-gaap-samples-2008-06-20\taxonomy\UK-GAAP-2008-01-15\monolithic\2008-01-15\uk-gaap-pt-2008-01-15.xsd" />
