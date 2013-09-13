@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml;
+using System.Linq;
 
 namespace JeffFerguson.Gepsio
 {
@@ -76,6 +77,7 @@ namespace JeffFerguson.Gepsio
 
         private XmlNode thisXbrlRootNode;
         private List<Context> thisContexts;
+        private IDictionary<string, Context> thisContextDictionary;
         private XmlNamespaceManager thisNamespaceManager;
         private List<XbrlSchema> thisSchemas;
         private List<Fact> thisFacts;
@@ -397,6 +399,7 @@ namespace JeffFerguson.Gepsio
         /// </summary>
         private void ValidateContextRefs()
         {
+            thisContextDictionary = thisContexts.ToDictionary(context => context.Id);
             ValidateContextRefs(thisFacts);
         }
 
@@ -430,18 +433,12 @@ namespace JeffFerguson.Gepsio
             if (ContextRefValue.Length == 0)
                 return;
 
-            bool ContextFound = false;
-            Context MatchingContext = null;
-            foreach (Context CurrentContext in thisContexts)
+            try
             {
-                if (CurrentContext.Id == ContextRefValue)
-                {
-                    ContextFound = true;
-                    MatchingContext = CurrentContext;
-                    ItemToValidate.ContextRef = MatchingContext;
-                }
+                Context MatchingContext = this.thisContextDictionary[ContextRefValue];
+                ItemToValidate.ContextRef = MatchingContext;
             }
-            if (ContextFound == false)
+            catch (KeyNotFoundException)
             {
                 string MessageFormat = AssemblyResources.GetName("CannotFindContextForContextRef");
                 StringBuilder MessageBuilder = new StringBuilder();
