@@ -19,8 +19,8 @@
     <HtmlHelpName>JeffFerguson.Gepsio</HtmlHelpName>
     <Language>en-US</Language>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
-    <CopyrightText>Copyright %28c%29 2008-2012 Jeff Ferguson</CopyrightText>
-    <FeedbackEMailAddress>jeffrey.ferguson%40gmail.com</FeedbackEMailAddress>
+    <CopyrightText>Copyright %28c%29 2008-2013 Jeff Ferguson</CopyrightText>
+    <FeedbackEMailAddress>gepsio%40outlook.com</FeedbackEMailAddress>
     <HelpTitle>Gepsio</HelpTitle>
     <DocumentationSources>
       <DocumentationSource sourceFile="JeffFerguson.Gepsio\bin\Debug\JeffFerguson.Gepsio.dll" />
@@ -29,7 +29,7 @@
     <FrameworkVersion>.NET 3.5</FrameworkVersion>
     <NamingMethod>MemberName</NamingMethod>
     <CopyrightHref>http://gepsio.codeplex.com</CopyrightHref>
-    <FeedbackEMailLinkText>Jeff Ferguson</FeedbackEMailLinkText>
+    <FeedbackEMailLinkText>Gepsio</FeedbackEMailLinkText>
     <ProjectSummary>Gepsio is a .NET-based document object model for XBRL documents. Load your XBRL document with the XbrlDocument class and work with your XBRL document exposed as a set of .NET classes with a variety of properties and methods. Loaded XBRL documents are automatically validated against the information against the XBRL specification, and exceptions are thrown when invalid XBRL documents are loaded. The Gepsio code base is unit tested using the XBRL-CONF-CR3-2007-03-05 unit tests designed by the XBRL organization. </ProjectSummary>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="JeffFerguson.Gepsio" isDocumented="True" xmlns="">Gepsio is a .NET-based document object model for XBRL documents. Load your XBRL document with the XbrlDocument class and work with your XBRL document exposed as a set of .NET classes with a variety of properties and methods. Loaded XBRL documents are automatically validated against the information against the XBRL specification, and exceptions are thrown when invalid XBRL documents are loaded. The Gepsio code base is unit tested using the XBRL-CONF-CR3-2007-03-05 unit tests designed by the XBRL organization.</NamespaceSummaryItem>
@@ -43,6 +43,8 @@
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <Preliminary>False</Preliminary>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <HelpFileVersion>2.1.0.7</HelpFileVersion>
+    <IncludeStopWordList>False</IncludeStopWordList>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in
        order for Visual Studio to perform the build.  The others are optional
