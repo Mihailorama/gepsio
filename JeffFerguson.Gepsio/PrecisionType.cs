@@ -1,10 +1,10 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
     internal class PrecisionType : NonNegativeInteger
     {
-        internal PrecisionType(XmlNode StringRootNode) : base(StringRootNode)
+        internal PrecisionType(INode StringRootNode) : base(StringRootNode)
         {
         }
     }

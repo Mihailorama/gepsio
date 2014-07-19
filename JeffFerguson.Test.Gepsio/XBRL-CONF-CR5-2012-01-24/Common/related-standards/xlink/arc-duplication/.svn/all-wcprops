@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/conformance/!svn/ver/627/trunk/Common/related-standards/xlink/arc-duplication
+END
+202-04-XLinkLabelCounterExample.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/conformance/!svn/ver/623/trunk/Common/related-standards/xlink/arc-duplication/202-04-XLinkLabelCounterExample.xsd
+END
+202-04a-XLinkLabelCounterExample.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/conformance/!svn/ver/623/trunk/Common/related-standards/xlink/arc-duplication/202-04a-XLinkLabelCounterExample.xsd
+END
+202-04b-XLinkLabelCounterExample-label.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/conformance/!svn/ver/623/trunk/Common/related-standards/xlink/arc-duplication/202-04b-XLinkLabelCounterExample-label.xml
+END
+202-04b-XLinkLabelCounterExample.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/conformance/!svn/ver/623/trunk/Common/related-standards/xlink/arc-duplication/202-04b-XLinkLabelCounterExample.xsd
+END
+202-04c-XLinkLabelCounterExample.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/conformance/!svn/ver/627/trunk/Common/related-standards/xlink/arc-duplication/202-04c-XLinkLabelCounterExample.xsd
+END
+arc-duplication-testcase.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/conformance/!svn/ver/626/trunk/Common/related-standards/xlink/arc-duplication/arc-duplication-testcase.xml
+END
+202-04-XLinkLabelCounterExample-definition.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/conformance/!svn/ver/623/trunk/Common/related-standards/xlink/arc-duplication/202-04-XLinkLabelCounterExample-definition.xml
+END
+202-04a-XLinkLabelCounterExample-presentation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/conformance/!svn/ver/623/trunk/Common/related-standards/xlink/arc-duplication/202-04a-XLinkLabelCounterExample-presentation.xml
+END

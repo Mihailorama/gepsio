@@ -1,127 +1,126 @@
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
 using System.Text;
-using System.Xml;
-using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// A definition of a fact as found in an XBRL schema.
-	/// </summary>
+    /// <summary>
+    /// A definition of a fact as found in an XBRL schema.
+    /// </summary>
     public class Element
     {
-		/// <summary>
-		/// The set of possible substitution groups for an element.
-		/// </summary>
+        /// <summary>
+        /// The set of possible substitution groups for an element.
+        /// </summary>
         public enum ElementSubstitutionGroup
         {
-			/// <summary>
-			/// An unknown substitution group.
-			/// </summary>
+            /// <summary>
+            /// An unknown substitution group.
+            /// </summary>
             Unknown,
-			/// <summary>
-			/// An item substitution group.
-			/// </summary>
+            /// <summary>
+            /// An item substitution group.
+            /// </summary>
             Item,
-			/// <summary>
-			/// A tuple substitution group.
-			/// </summary>
+            /// <summary>
+            /// A tuple substitution group.
+            /// </summary>
             Tuple,
-			/// <summary>
-			/// A dimension item substitution group.
-			/// </summary>
+            /// <summary>
+            /// A dimension item substitution group.
+            /// </summary>
             DimensionItem,
-			/// <summary>
-			/// A hypercube item substitution group.
-			/// </summary>
+            /// <summary>
+            /// A hypercube item substitution group.
+            /// </summary>
             HypercubeItem
         }
 
-		/// <summary>
-		/// The set of possible period types for an element.
-		/// </summary>
+        /// <summary>
+        /// The set of possible period types for an element.
+        /// </summary>
         public enum ElementPeriodType
         {
-			/// <summary>
-			/// An unknown period type.
-			/// </summary>
+            /// <summary>
+            /// An unknown period type.
+            /// </summary>
             Unknown,
-			/// <summary>
-			/// An instant period type.
-			/// </summary>
+            /// <summary>
+            /// An instant period type.
+            /// </summary>
             Instant,
-			/// <summary>
-			/// A duration period type.
-			/// </summary>
+            /// <summary>
+            /// A duration period type.
+            /// </summary>
             Duration
         }
 
-        private XmlSchemaElement thisSchemaElement;
+        private ISchemaElement thisSchemaElement;
 
-		/// <summary>
-		/// The name of the element.
-		/// </summary>
-		public string Name
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The name of the element.
+        /// </summary>
+        public string Name
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// The ID of the element.
-		/// </summary>
-		public string Id
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The ID of the element.
+        /// </summary>
+        public string Id
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// The substitution group for the element.
-		/// </summary>
-		public ElementSubstitutionGroup SubstitutionGroup
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The substitution group for the element.
+        /// </summary>
+        public ElementSubstitutionGroup SubstitutionGroup
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// The period type for the element.
-		/// </summary>
-		public ElementPeriodType PeriodType
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The period type for the element.
+        /// </summary>
+        public ElementPeriodType PeriodType
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// A reference to the schema which contains the element.
-		/// </summary>
-		public XbrlSchema Schema
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// A reference to the schema which contains the element.
+        /// </summary>
+        public XbrlSchema Schema
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// The type name of this element.
-		/// </summary>
-		public XmlQualifiedName TypeName
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The type name of this element.
+        /// </summary>
+        internal IQualifiedName TypeName
+        {
+            get;
+            private set;
+        }
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal Element(XbrlSchema Schema, XmlNode ElementNode)
+        internal Element(XbrlSchema Schema, INode ElementNode)
         {
             throw new NotSupportedException("no more hardcoded parsing of schema elements!");
         }
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal Element(XbrlSchema Schema, XmlSchemaElement SchemaElement)
+        internal Element(XbrlSchema Schema, ISchemaElement SchemaElement)
         {
             this.Schema = Schema;
             thisSchemaElement = SchemaElement;
@@ -132,16 +131,16 @@ namespace JeffFerguson.Gepsio
             SetPeriodType();
         }
 
-		/// <summary>
-		/// Determines whether or not a supplied object equals the current element.
-		/// </summary>
-		/// <param name="obj">
-		/// The object to compare to the current element.
-		/// </param>
-		/// <returns>
-		/// Returns true if the supplied object equals the current element. Returns false if
-		/// the supplied object does not equal the current element.
-		/// </returns>
+        /// <summary>
+        /// Determines whether or not a supplied object equals the current element.
+        /// </summary>
+        /// <param name="obj">
+        /// The object to compare to the current element.
+        /// </param>
+        /// <returns>
+        /// Returns true if the supplied object equals the current element. Returns false if
+        /// the supplied object does not equal the current element.
+        /// </returns>
         public override bool Equals(object obj)
         {
             if ((obj is Element) == false)
@@ -150,16 +149,16 @@ namespace JeffFerguson.Gepsio
             return OtherElement.Id.Equals(this.Id);
         }
 
-		/// <summary>
-		/// Calculates a hash code for the element.
-		/// </summary>
-		/// <returns>
-		/// A hash code for the element.
-		/// </returns>
-		public override int GetHashCode()
-		{
-			return this.Id.GetHashCode();
-		}
+        /// <summary>
+        /// Calculates a hash code for the element.
+        /// </summary>
+        /// <returns>
+        /// A hash code for the element.
+        /// </returns>
+        public override int GetHashCode()
+        {
+            return this.Id.GetHashCode();
+        }
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
@@ -174,7 +173,7 @@ namespace JeffFerguson.Gepsio
             this.PeriodType = ElementPeriodType.Unknown;
             if (thisSchemaElement.UnhandledAttributes != null)
             {
-                foreach (XmlAttribute CurrentAttribute in thisSchemaElement.UnhandledAttributes)
+                foreach (IAttribute CurrentAttribute in thisSchemaElement.UnhandledAttributes)
                 {
                     if (CurrentAttribute.Name.Equals(AttributeName) == true)
                     {
@@ -208,7 +207,7 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void SetSubstitutionGroup(XmlQualifiedName SubstitutionGroupValue)
+        private void SetSubstitutionGroup(IQualifiedName SubstitutionGroupValue)
         {
             this.SubstitutionGroup = ElementSubstitutionGroup.Unknown;
             if ((SubstitutionGroupValue.Name.Length == 0) && (SubstitutionGroupValue.Namespace.Length == 0))

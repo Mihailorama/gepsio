@@ -1,58 +1,58 @@
-﻿using System.Xml;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XBRL element "calculationLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
-	/// </summary>
+    /// <summary>
+    /// An encapsulation of the XBRL element "calculationLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+    /// </summary>
     public class CalculationLink
     {
 
-		/// <summary>
-		/// The linkbase document containing this calculation link.
-		/// </summary>
-		public LinkbaseDocument Linkbase
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// A collection of <see cref="Locator"/> objects that apply to this calculation link.
-		/// </summary>
-		public List<Locator> Locators
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// A collection of <see cref="CalculationArc"/> objects that apply to this calculation link.
-		/// </summary>
-		public List<CalculationArc> CalculationArcs
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// A collection of <see cref="SummationConcept"/> objects that apply to this calculation link.
-		/// </summary>
-		public List<SummationConcept> SummationConcepts
-		{
-			get;
-			private set;
-		}
-
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        internal CalculationLink(LinkbaseDocument linkbaseDoc, XmlNode CalculationLinkNode)
+        /// <summary>
+        /// The linkbase document containing this calculation link.
+        /// </summary>
+        public LinkbaseDocument Linkbase
         {
-			this.Linkbase = linkbaseDoc;
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// A collection of <see cref="Locator"/> objects that apply to this calculation link.
+        /// </summary>
+        public List<Locator> Locators
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// A collection of <see cref="CalculationArc"/> objects that apply to this calculation link.
+        /// </summary>
+        public List<CalculationArc> CalculationArcs
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// A collection of <see cref="SummationConcept"/> objects that apply to this calculation link.
+        /// </summary>
+        public List<SummationConcept> SummationConcepts
+        {
+            get;
+            private set;
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        internal CalculationLink(LinkbaseDocument linkbaseDoc, INode CalculationLinkNode)
+        {
+            this.Linkbase = linkbaseDoc;
             this.Locators = new List<Locator>();
-			this.CalculationArcs = new List<CalculationArc>();
-			this.SummationConcepts = new List<SummationConcept>();
+            this.CalculationArcs = new List<CalculationArc>();
+            this.SummationConcepts = new List<SummationConcept>();
             ReadChildLocators(CalculationLinkNode);
             ReadChildCalculationArcs(CalculationLinkNode);
             ResolveLocators();
@@ -117,9 +117,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void ReadChildCalculationArcs(XmlNode CalculationLinkNode)
+        private void ReadChildCalculationArcs(INode CalculationLinkNode)
         {
-            foreach (XmlNode CurrentChildNode in CalculationLinkNode.ChildNodes)
+            foreach (INode CurrentChildNode in CalculationLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("calculationArc") == true)
                     this.CalculationArcs.Add(new CalculationArc(CurrentChildNode));
@@ -128,9 +128,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void ReadChildLocators(XmlNode CalculationLinkNode)
+        private void ReadChildLocators(INode CalculationLinkNode)
         {
-            foreach (XmlNode CurrentChildNode in CalculationLinkNode.ChildNodes)
+            foreach (INode CurrentChildNode in CalculationLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("loc") == true)
                     this.Locators.Add(new Locator(CurrentChildNode));

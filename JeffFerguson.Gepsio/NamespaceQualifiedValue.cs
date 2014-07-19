@@ -1,5 +1,5 @@
-﻿using System.Xml;
-
+﻿
+using JeffFerguson.Gepsio.Xml.Interfaces;
 namespace JeffFerguson.Gepsio
 {
     internal class NamespaceQualifiedValue
@@ -44,7 +44,7 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        internal NamespaceQualifiedValue(XmlNamespaceManager NamespaceManager, string FullyQualifiedValue)
+        internal NamespaceQualifiedValue(INamespaceManager NamespaceManager, string FullyQualifiedValue)
         {
             thisFullyQualifiedValue = FullyQualifiedValue;
             thisFullyQualifiedValueComponents = thisFullyQualifiedValue.Split(':');

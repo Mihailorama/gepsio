@@ -1,40 +1,40 @@
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// The encapsulation of a fact defined in an XBRL document. A fact is an occurrence in an instance
-	/// document of a value or other information tagged by a taxonomy element.
-	/// </summary>
+    /// <summary>
+    /// The encapsulation of a fact defined in an XBRL document. A fact is an occurrence in an instance
+    /// document of a value or other information tagged by a taxonomy element.
+    /// </summary>
     public class Fact
     {
         internal XbrlFragment thisParentFragment;
-        internal XmlNode thisFactNode; // was protected
+        internal INode thisFactNode; // was protected
 
-		/// <summary>
-		/// The name of the fact.
-		/// </summary>
-		public string Name
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The name of the fact.
+        /// </summary>
+        public string Name
+        {
+            get;
+            private set;
+        }
 
-        internal Fact(XbrlFragment ParentFragment, XmlNode FactNode)
+        internal Fact(XbrlFragment ParentFragment, INode FactNode)
         {
             thisParentFragment = ParentFragment;
             thisFactNode = FactNode;
             this.Name = thisFactNode.LocalName;
         }
 
-        internal static Fact Create(XbrlFragment ParentFragment, XmlNode FactNode)
+        internal static Fact Create(XbrlFragment ParentFragment, INode FactNode)
         {
             Fact FactToReturn = null;
 
             if ((IsXbrlNamespace(FactNode.NamespaceURI) == false)
                 && (IsW3Namespace(FactNode.NamespaceURI) == false)
-                && (FactNode.NodeType != XmlNodeType.Comment))
+                && (FactNode.IsComment == false))
             {
 
                 // This item could be a fact, or it could be a tuple. Examine the schemas

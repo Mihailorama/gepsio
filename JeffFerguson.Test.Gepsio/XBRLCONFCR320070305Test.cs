@@ -53,7 +53,7 @@ namespace JeffFerguson.Test.Gepsio
         public void ExecuteXBRLCONFCR320070305Testcases()
         {
             thisTestsPassed = 0;
-            var conformanceXmlSource = ConfigurationManager.AppSettings["ConformanceXml"];
+            var conformanceXmlSource = ConfigurationManager.AppSettings["ConformanceXmlCR3"];
             var conformanceXmlSourcePath = Path.GetDirectoryName(conformanceXmlSource);
             var conformanceXmlDocument = new XmlDocument();
             conformanceXmlDocument.Load(conformanceXmlSource);

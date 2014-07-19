@@ -1,49 +1,49 @@
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// A locator used for a footnote.
-	/// </summary>
+    /// <summary>
+    /// A locator used for a footnote.
+    /// </summary>
     public class FootnoteLocator
     {
-        private XmlNode thisLocNode;
+        private INode thisLocNode;
 
-		/// <summary>
-		/// The link for this footnote locator.
-		/// </summary>
-		public FootnoteLink Link
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The link for this footnote locator.
+        /// </summary>
+        public FootnoteLink Link
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// The hyperlink reference for this footnote locator.
-		/// </summary>
-		public HyperlinkReference Href
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The hyperlink reference for this footnote locator.
+        /// </summary>
+        public HyperlinkReference Href
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// The label of this footnote locator.
-		/// </summary>
-		public string Label
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The label of this footnote locator.
+        /// </summary>
+        public string Label
+        {
+            get;
+            private set;
+        }
 
-        internal FootnoteLocator(FootnoteLink ParentLink, XmlNode LocNode)
+        internal FootnoteLocator(FootnoteLink ParentLink, INode LocNode)
         {
             thisLocNode = LocNode;
             this.Link = ParentLink;
-            foreach (XmlAttribute CurrentAttribute in LocNode.Attributes)
+            foreach (IAttribute CurrentAttribute in LocNode.Attributes)
             {
                 if (CurrentAttribute.LocalName.Equals("href") == true)
                 {

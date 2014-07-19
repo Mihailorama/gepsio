@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Xml;
 using System.Linq;
+using JeffFerguson.Gepsio.Xml.Interfaces;
+using JeffFerguson.Gepsio.IoC;
 
 namespace JeffFerguson.Gepsio
 {
@@ -75,10 +76,10 @@ namespace JeffFerguson.Gepsio
 
         #region Fields
 
-        private XmlNode thisXbrlRootNode;
+        private INode thisXbrlRootNode;
         private List<Context> thisContexts;
         private IDictionary<string, Context> thisContextDictionary;
-        private XmlNamespaceManager thisNamespaceManager;
+        private INamespaceManager thisNamespaceManager;
         private List<XbrlSchema> thisSchemas;
         private List<Fact> thisFacts;
         private List<Unit> thisUnits;
@@ -102,7 +103,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The root XML node for the XBRL fragment.
         /// </summary>
-        public XmlNode XbrlRootNode
+        internal INode XbrlRootNode
         {
             get
             {
@@ -199,7 +200,7 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        internal XbrlFragment(XbrlDocument ParentDocument, XmlNode XbrlRootNode)
+        internal XbrlFragment(XbrlDocument ParentDocument, INode XbrlRootNode)
         {
             this.Document = ParentDocument;
             thisXbrlRootNode = XbrlRootNode;
@@ -367,17 +368,17 @@ namespace JeffFerguson.Gepsio
             StringBuilder XPathExpressionBuilder = new StringBuilder();
             XPathExpressionBuilder.AppendFormat("//{0}:schemaRef", LinkbaseNamespacePrefix);
             string XPathExpression = XPathExpressionBuilder.ToString();
-            XmlNodeList SchemaRefNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
-            foreach (XmlNode SchemaRefNode in SchemaRefNodes)
+            INodeList SchemaRefNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
+            foreach (INode SchemaRefNode in SchemaRefNodes)
                 ReadTaxonomySchemaRef(SchemaRefNode);
         }
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadTaxonomySchemaRef(XmlNode SchemaRefNode)
+        private void ReadTaxonomySchemaRef(INode SchemaRefNode)
         {
-            string HrefAttributeValue = XmlUtilities.GetAttributeValue(SchemaRefNode, "http://www.w3.org/1999/xlink", "href");
-            string Base = XmlUtilities.GetAttributeValue(SchemaRefNode, "http://www.w3.org/XML/1998/namespace", "base");
+            string HrefAttributeValue = SchemaRefNode.GetAttributeValue("http://www.w3.org/1999/xlink", "href");
+            string Base = SchemaRefNode.GetAttributeValue("http://www.w3.org/XML/1998/namespace", "base");
             thisSchemas.Add(new XbrlSchema(this, HrefAttributeValue, Base));
         }
 
@@ -385,9 +386,9 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void CreateNamespaceManager()
         {
-            thisNamespaceManager = new XmlNamespaceManager(new NameTable());
+            thisNamespaceManager = Container.Resolve<INamespaceManager>();
             thisNamespaceManager.AddNamespace("instance", thisXbrlRootNode.NamespaceURI);
-            foreach (XmlAttribute CurrentAttribute in thisXbrlRootNode.Attributes)
+            foreach (IAttribute CurrentAttribute in thisXbrlRootNode.Attributes)
             {
                 if (CurrentAttribute.Prefix == "xmlns")
                     thisNamespaceManager.AddNamespace(CurrentAttribute.LocalName, CurrentAttribute.Value);
@@ -476,7 +477,7 @@ namespace JeffFerguson.Gepsio
                     return;
                 if (ItemToValidate.Type == null)
                     return;
-                if (ItemToValidate.Type.IsNumeric() == false)
+                if (ItemToValidate.Type.IsNumeric == false)
                     return;
             }
             //-----------------------------------------------------------------------
@@ -510,8 +511,8 @@ namespace JeffFerguson.Gepsio
         private void ReadContexts()
         {
             thisContexts = new List<Context>();
-            XmlNodeList ContextNodes = thisXbrlRootNode.SelectNodes("//instance:context", thisNamespaceManager);
-            foreach (XmlNode ContextNode in ContextNodes)
+            INodeList ContextNodes = thisXbrlRootNode.SelectNodes("//instance:context", thisNamespaceManager);
+            foreach (INode ContextNode in ContextNodes)
                 thisContexts.Add(new Context(this, ContextNode));
         }
 
@@ -538,7 +539,7 @@ namespace JeffFerguson.Gepsio
         private void ReadFacts()
         {
             thisFacts = new List<Fact>();
-            foreach (XmlNode CurrentChild in thisXbrlRootNode.ChildNodes)
+            foreach (INode CurrentChild in thisXbrlRootNode.ChildNodes)
             {
                 var CurrentFact = Fact.Create(this, CurrentChild);
                 if (CurrentFact != null)
@@ -603,8 +604,8 @@ namespace JeffFerguson.Gepsio
         private void ReadUnits()
         {
             thisUnits = new List<Unit>();
-            XmlNodeList UnitNodes = thisXbrlRootNode.SelectNodes("//instance:unit", thisNamespaceManager);
-            foreach (XmlNode UnitNode in UnitNodes)
+            INodeList UnitNodes = thisXbrlRootNode.SelectNodes("//instance:unit", thisNamespaceManager);
+            foreach (INode UnitNode in UnitNodes)
                 thisUnits.Add(new Unit(this, UnitNode));
         }
 
@@ -617,8 +618,8 @@ namespace JeffFerguson.Gepsio
             StringBuilder XPathExpressionBuilder = new StringBuilder();
             XPathExpressionBuilder.AppendFormat("//{0}:footnoteLink", LinkbaseNamespacePrefix);
             string XPathExpression = XPathExpressionBuilder.ToString();
-            XmlNodeList FootnoteLinkNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
-            foreach (XmlNode FootnoteLinkNode in FootnoteLinkNodes)
+            INodeList FootnoteLinkNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
+            foreach (INode FootnoteLinkNode in FootnoteLinkNodes)
                 thisFootnoteLinks.Add(new FootnoteLink(this, FootnoteLinkNode));
         }
 
@@ -941,41 +942,74 @@ namespace JeffFerguson.Gepsio
         //===============================================================================
 
         //-------------------------------------------------------------------------------
+        // Validates a footnote arc.
+        //
+        // Validation is handled differently, depending on the arc's role. Note that
+        // the XBRL specification discusses this:
+        //
+        // 4.11.1.3.1 @xlink:arcrole attributes on <footnoteArc> elements
+        // The value of the @xlink:arcrole attribute MUST be a URI that indicates the
+        // meaning of the arc. One standard arc role value has been defined for arc role
+        // values on <footnoteArc> elements. Its value is:
+        //
+        // http://www.xbrl.org/2003/arcrole/fact-footnote
+        //
+        // This arc role value is for use on a <footnoteArc> from item or tuple Locators
+        // to footnote resources and it indicates that the <footnote> conveys human-readable
+        // information about the fact or facts.
+        //
+        // For more information, see the blog post at http://gepsio.wordpress.com/2014/07/09/better-validation-coming-for-footnote-arcs-and-arc-roles/.
         //-------------------------------------------------------------------------------
         private void ValidateFootnoteArc(FootnoteArc CurrentArc)
         {
-            FootnoteLocator Locator = CurrentArc.Link.GetLocator(CurrentArc.FromId);
+            FootnoteLocator Locator = CurrentArc.Link.GetLocator(CurrentArc.From);
             if (Locator == null)
             {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("CannotFindFootnoteLocator");
-                MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, CurrentArc.FromId);
-                AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
-                return;
+                if (CurrentArc.StandardArcRole == true)
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("CannotFindFootnoteLocator");
+                    MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, CurrentArc.From);
+                    AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
+                    return;
+                }
+                var fromFootnote = CurrentArc.Link.GetFootnote(CurrentArc.From);
+                if(fromFootnote == null)
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("CannotFindFootnoteLocatorOrFootnote");
+                    MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, CurrentArc.From);
+                    AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
+                    return;
+                }
+                CurrentArc.FromFootnote = fromFootnote;
             }
-            if ((Locator.Href.UrlSpecified == true) && (UrlReferencesFragmentDocument(Locator.Href) == false))
+            else
             {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("FootnoteReferencesFactInExternalDoc");
-                MessageBuilder.AppendFormat(StringFormat, Locator.Href.ElementId, Locator.Href.Url);
-                AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
-                return;
+                if ((Locator.Href.UrlSpecified == true) && (UrlReferencesFragmentDocument(Locator.Href) == false))
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("FootnoteReferencesFactInExternalDoc");
+                    MessageBuilder.AppendFormat(StringFormat, Locator.Href.ElementId, Locator.Href.Url);
+                    AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
+                    return;
+                }
+                CurrentArc.FromItem = GetFact(Locator.Href.ElementId);
+                if (CurrentArc.FromItem == null)
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("CannotFindFactForFootnoteArc");
+                    MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, Locator.Href);
+                    AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
+                    return;
+                }
             }
-            CurrentArc.From = GetFact(Locator.Href.ElementId);
-            if (CurrentArc.From == null)
-            {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("CannotFindFactForFootnoteArc");
-                MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, Locator.Href);
-                AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
-                return;
-            }
-            CurrentArc.To = CurrentArc.Link.GetFootnote(CurrentArc.ToId);
-            if (CurrentArc.To == null)
+            CurrentArc.ToFootnote = CurrentArc.Link.GetFootnote(CurrentArc.To);
+            if (CurrentArc.ToFootnote == null)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("CannotFindFootnoteForFootnoteArc");
-                MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, CurrentArc.ToId);
+                MessageBuilder.AppendFormat(StringFormat, CurrentArc.Title, CurrentArc.To);
                 AddValidationError(new FootnoteArcValidationError(CurrentArc, MessageBuilder.ToString()));
                 return;
             }

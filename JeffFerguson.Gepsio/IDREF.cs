@@ -1,10 +1,10 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
     internal class IDREF : NCName
     {
-        internal IDREF(XmlNode StringRootNode)
+        internal IDREF(INode StringRootNode)
             : base(StringRootNode)
         {
         }

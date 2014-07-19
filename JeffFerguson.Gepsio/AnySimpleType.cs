@@ -1,8 +1,7 @@
-﻿using System;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
@@ -63,11 +62,11 @@ namespace JeffFerguson.Gepsio
             AddConstrainingFacetDefinitions();
         }
 
-        internal AnySimpleType(XmlNode TypeRootNode) : this()
+        internal AnySimpleType(INode TypeRootNode) : this()
         {
             if (TypeRootNode != null)
             {
-                foreach (XmlNode ChildNode in TypeRootNode.ChildNodes)
+                foreach (INode ChildNode in TypeRootNode.ChildNodes)
                     AddFacet(ChildNode);
             }
         }
@@ -130,12 +129,12 @@ namespace JeffFerguson.Gepsio
             return NewList;
         }
 
-        private void AddFacet(XmlNode FacetNode)
+        private void AddFacet(INode FacetNode)
         {
             ValidateFacet(FacetNode);
         }
 
-        private void ValidateFacet(XmlNode FacetNode)
+        private void ValidateFacet(INode FacetNode)
         {
             foreach (FacetDefinition CurrentFacetDefinition in thisConstrainingFacetDefinitions)
             {
@@ -151,12 +150,12 @@ namespace JeffFerguson.Gepsio
             //throw new XbrlException(MessageBuilder.ToString());
         }
 
-        private void ProcessFacet(FacetDefinition CurrentFacetDefinition, XmlNode FacetNode)
+        private void ProcessFacet(FacetDefinition CurrentFacetDefinition, INode FacetNode)
         {
             Facet NewFacet;
 
             NewFacet = Facet.CreateFacet(CurrentFacetDefinition);
-            foreach (XmlAttribute CurrentAttribute in FacetNode.Attributes)
+            foreach (IAttribute CurrentAttribute in FacetNode.Attributes)
             {
                 foreach (FacetPropertyDefinition CurrentPropertyDefinition in CurrentFacetDefinition.PropertyDefinitions)
                 {

@@ -20,7 +20,7 @@ namespace JeffFerguson.Gepsio
         /// Class constructor. This constructor will store a message and will automatically set the
         /// Exception property to a null value.
         /// </summary>
-        /// <param name="SummationConcept">
+        /// <param name="summationConcept">
         /// The SummationConcept containing the error being reported.
         /// </param>
         /// <param name="message">
@@ -35,7 +35,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// Class constructor. This constructor will store a message and an exception.
         /// </summary>
-        /// <param name="SummationConcept">
+        /// <param name="summationConcept">
         /// The SummationConcept containing the error being reported.
         /// </param>
         /// <param name="message">

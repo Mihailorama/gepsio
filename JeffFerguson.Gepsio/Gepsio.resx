@@ -257,4 +257,7 @@
   <data name="WebExceptionThrownDuringSchemaCreation" xml:space="preserve">
     <value>The XBRL schema at {0} could not be read due to error that occurred while accessing the network through a pluggable protocol. More information is available from the thrown exception's inner exception.</value>
   </data>
+  <data name="CannotFindFootnoteLocatorOrFootnote" xml:space="preserve">
+    <value>Footnote arc {0} references a resource with a label of {1}, but no locator or footnote can be found.</value>
+  </data>
 </root>

@@ -1,4 +1,4 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -124,9 +124,9 @@ namespace JeffFerguson.Gepsio
 
 		//-------------------------------------------------------------------------------
 		//-------------------------------------------------------------------------------
-		internal Locator(XmlNode LocatorNode)
+		internal Locator(INode LocatorNode)
 		{
-			foreach (XmlAttribute CurrentAttribute in LocatorNode.Attributes)
+			foreach (IAttribute CurrentAttribute in LocatorNode.Attributes)
 			{
 				if (CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == false)
 					continue;

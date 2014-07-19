@@ -1,6 +1,6 @@
-﻿using System;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
 using System.Collections.Generic;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
@@ -58,13 +58,13 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal RoleType(XbrlSchema ContainingXbrlSchema, XmlNode roleTypeNode)
+        internal RoleType(XbrlSchema ContainingXbrlSchema, INode roleTypeNode)
         {
             this.Schema = ContainingXbrlSchema;
             this.UsedOnReferences = new List<string>();
-            this.RoleUri = new Uri(XmlUtilities.GetAttributeValue(roleTypeNode, "roleURI"));
-            this.Id = XmlUtilities.GetAttributeValue(roleTypeNode, "id");
-            foreach (XmlNode currentChild in roleTypeNode.ChildNodes)
+            this.RoleUri = new Uri(roleTypeNode.GetAttributeValue("roleURI"));
+            this.Id = roleTypeNode.GetAttributeValue("id");
+            foreach (INode currentChild in roleTypeNode.ChildNodes)
             {
                 if (currentChild.LocalName.Equals("definition") == true)
                 {

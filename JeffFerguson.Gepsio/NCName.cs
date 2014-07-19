@@ -1,4 +1,4 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -15,7 +15,7 @@ namespace JeffFerguson.Gepsio
 	/// </remarks>
 	public class NCName : Name
 	{
-		internal NCName(XmlNode StringRootNode)
+		internal NCName(INode StringRootNode)
 			: base(StringRootNode)
 		{
 		}

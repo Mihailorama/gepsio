@@ -1,7 +1,7 @@
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
@@ -10,11 +10,11 @@ namespace JeffFerguson.Gepsio
     /// </summary>
     public class Context
     {
-        private XmlNode thisContextNode;
-        private XmlNode thisInstantPeriodNode;
+        private INode thisContextNode;
+        private INode thisInstantPeriodNode;
         private bool thisDurationPeriod;
-        private XmlNode thisStartDateDurationNode;
-        private XmlNode thisEndDateDurationNode;
+        private INode thisStartDateDurationNode;
+        private INode thisEndDateDurationNode;
 
         /// <summary>
         /// The ID of this context.
@@ -81,7 +81,7 @@ namespace JeffFerguson.Gepsio
         /// The segment node defined for this context. If this context was not marked up with a segment node, then
         /// this property will return null.
         /// </summary>
-        public XmlNode Segment
+        internal INode Segment
         {
             get;
             private set;
@@ -91,7 +91,7 @@ namespace JeffFerguson.Gepsio
         /// The scenario node defined for this context. If this context was not marked up with a scenario node, then
         /// this property will return null.
         /// </summary>
-        public XmlNode Scenario
+        internal INode Scenario
         {
             get;
             private set;
@@ -199,14 +199,14 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        internal Context(XbrlFragment Fragment, XmlNode ContextNode)
+        internal Context(XbrlFragment Fragment, INode ContextNode)
         {
             this.Fragment = Fragment;
             thisContextNode = ContextNode;
-            this.Id = thisContextNode.Attributes["id"].Value;
+            this.Id = thisContextNode.Attributes.FindAttribute("id").Value;
             this.PeriodStartDate = System.DateTime.MinValue;
             this.PeriodEndDate = System.DateTime.MinValue;
-            foreach (XmlNode CurrentChild in thisContextNode.ChildNodes)
+            foreach (INode CurrentChild in thisContextNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("period") == true)
                 {
@@ -220,13 +220,13 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        private void ProcessEntity(XmlNode EntityNode)
+        private void ProcessEntity(INode EntityNode)
         {
             this.Identifier = string.Empty;
             this.IdentifierScheme = string.Empty;
             this.Segment = null;
             this.Scenario = null;
-            foreach (XmlNode CurrentChild in EntityNode.ChildNodes)
+            foreach (INode CurrentChild in EntityNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("identifier") == true)
                     ProcessIdentifier(CurrentChild);
@@ -236,7 +236,7 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        private void ProcessScenario(XmlNode ScenarioNode)
+        private void ProcessScenario(INode ScenarioNode)
         {
             this.Scenario = ScenarioNode;
             ValidateScenario();
@@ -244,11 +244,11 @@ namespace JeffFerguson.Gepsio
 
         private void ValidateScenario()
         {
-            foreach (XmlNode CurrentChild in this.Scenario.ChildNodes)
+            foreach (INode CurrentChild in this.Scenario.ChildNodes)
                 ValidateScenarioNode(CurrentChild);
         }
 
-        private void ValidateScenarioNode(XmlNode ScenarioNode)
+        private void ValidateScenarioNode(INode ScenarioNode)
         {
             if (ScenarioNode.NamespaceURI.Equals("http://www.xbrl.org/2003/instance") == true)
             {
@@ -275,11 +275,11 @@ namespace JeffFerguson.Gepsio
                     }
                 }
             }
-            foreach (XmlNode CurrentChild in ScenarioNode.ChildNodes)
+            foreach (INode CurrentChild in ScenarioNode.ChildNodes)
                 ValidateScenarioNode(CurrentChild);
         }
 
-        private void ProcessSegment(XmlNode SegmentNode)
+        private void ProcessSegment(INode SegmentNode)
         {
             this.Segment = SegmentNode;
             ValidateSegment();
@@ -287,11 +287,11 @@ namespace JeffFerguson.Gepsio
 
         private void ValidateSegment()
         {
-            foreach (XmlNode CurrentChild in this.Segment.ChildNodes)
+            foreach (INode CurrentChild in this.Segment.ChildNodes)
                 ValidateSegmentNode(CurrentChild);
         }
 
-        private void ValidateSegmentNode(XmlNode SegmentNode)
+        private void ValidateSegmentNode(INode SegmentNode)
         {
             if (SegmentNode.NamespaceURI.Equals("http://www.xbrl.org/2003/instance") == true)
             {
@@ -318,18 +318,18 @@ namespace JeffFerguson.Gepsio
                     }
                 }
             }
-            foreach (XmlNode CurrentChild in SegmentNode.ChildNodes)
+            foreach (INode CurrentChild in SegmentNode.ChildNodes)
                 ValidateSegmentNode(CurrentChild);
         }
 
-        private void ProcessIdentifier(XmlNode IdentifierNode)
+        private void ProcessIdentifier(INode IdentifierNode)
         {
             this.Identifier = IdentifierNode.InnerText;
             if (IdentifierNode.Attributes["scheme"] != null)
                 this.IdentifierScheme = IdentifierNode.Attributes["scheme"].Value;
         }
 
-        private void ProcessPeriod(XmlNode PeriodNode)
+        private void ProcessPeriod(INode PeriodNode)
         {
             this.InstantPeriod = false;
             thisInstantPeriodNode = null;
@@ -337,7 +337,7 @@ namespace JeffFerguson.Gepsio
             thisDurationPeriod = false;
             thisStartDateDurationNode = null;
             thisEndDateDurationNode = null;
-            foreach (XmlNode CurrentChild in PeriodNode.ChildNodes)
+            foreach (INode CurrentChild in PeriodNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("instant") == true)
                 {

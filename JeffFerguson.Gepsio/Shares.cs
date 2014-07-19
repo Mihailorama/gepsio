@@ -1,4 +1,4 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -15,7 +15,7 @@ namespace JeffFerguson.Gepsio
 	/// </remarks>
 	public class Shares : Decimal
 	{
-		internal Shares(XmlNode StringRootNode)
+		internal Shares(INode StringRootNode)
 			: base(StringRootNode)
 		{
 		}

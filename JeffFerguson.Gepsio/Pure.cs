@@ -1,4 +1,4 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -15,7 +15,7 @@ namespace JeffFerguson.Gepsio
 	/// </remarks>
 	public class Pure : Decimal
 	{
-		internal Pure(XmlNode StringRootNode)
+		internal Pure(INode StringRootNode)
 			: base(StringRootNode)
 		{
 		}

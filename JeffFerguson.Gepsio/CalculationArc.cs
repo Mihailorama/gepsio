@@ -1,16 +1,16 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
 using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
     /// <summary>
-	/// An encapsulation of the XBRL element "calculationArc" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+    /// An encapsulation of the XBRL element "calculationArc" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
     /// </summary>
     /// <remarks>
     /// <para>
-	/// The CalculationArc manages information stored in a calculation arc. Calculation arcs are found in
-	/// calculation linkbase documents. Calculation arcs take the following form:
+    /// The CalculationArc manages information stored in a calculation arc. Calculation arcs are found in
+    /// calculation linkbase documents. Calculation arcs take the following form:
     /// </para>
     /// <para>
     /// <code>
@@ -51,56 +51,56 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The ID of the "from" label referenced in the calculation arc.
         /// </summary>
-		public string FromId
-		{
-			get;
-			private set;
-		}
+        public string FromId
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// The ID of the "to" label referenced in the calculation arc.
         /// </summary>
-		public string ToId
-		{
-			get;
-			private set;
-		}
+        public string ToId
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// The locator referenced by the "from" label referenced in the calculation arc.
         /// </summary>
-		public Locator FromLocator
-		{
-			get;
-			internal set;
-		}
+        public Locator FromLocator
+        {
+            get;
+            internal set;
+        }
 
         /// <summary>
         /// A collection of locators referenced by the "to" label referenced in the calculation arc.
         /// </summary>
-		public List<Locator> ToLocators
-		{
-			get;
-			private set;
-		}
+        public List<Locator> ToLocators
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// The value of the "order" attribute used in the calculation arc.
         /// </summary>
-		public decimal Order
-		{
-			get;
-			private set;
-		}
+        public decimal Order
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// The value of the "weight" attribute used in the calculation arc.
         /// </summary>
-		public decimal Weight
-		{
-			get;
-			private set;
-		}
+        public decimal Weight
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// The constructor for the CalculationArc class.
@@ -108,15 +108,15 @@ namespace JeffFerguson.Gepsio
         /// <param name="CalculationArcNode">
         /// The XML node for the calculation arc.
         /// </param>
-        internal CalculationArc(XmlNode CalculationArcNode)
+        internal CalculationArc(INode CalculationArcNode)
         {
             this.ToLocators = new List<Locator>();
-            this.FromId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "from");
-            this.ToId = XmlUtilities.GetAttributeValue(CalculationArcNode, "http://www.w3.org/1999/xlink", "to");
-            string OrderString = XmlUtilities.GetAttributeValue(CalculationArcNode, "order");
+            this.FromId = CalculationArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "from");
+            this.ToId = CalculationArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "to");
+            string OrderString = CalculationArcNode.GetAttributeValue("order");
             if(string.IsNullOrEmpty(OrderString) == false)
                 this.Order = Convert.ToDecimal(OrderString);
-            string WeightString = XmlUtilities.GetAttributeValue(CalculationArcNode, "weight");
+            string WeightString = CalculationArcNode.GetAttributeValue("weight");
             if (string.IsNullOrEmpty(WeightString) == false)
                 this.Weight = Convert.ToDecimal(WeightString);
             else

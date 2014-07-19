@@ -1,36 +1,36 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XBRL element "definitionLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
-	/// </summary>
+    /// <summary>
+    /// An encapsulation of the XBRL element "definitionLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+    /// </summary>
     public class DefinitionLink
     {
-		private List<Locator> thisUnresolvedLocators;
+        private List<Locator> thisUnresolvedLocators;
 
-		/// <summary>
-		/// A collection of <see cref="Locator"/> objects that apply to this definition link.
-		/// </summary>
-		public List<Locator> Locators
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// A collection of <see cref="Locator"/> objects that apply to this definition link.
+        /// </summary>
+        public List<Locator> Locators
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// A collection of <see cref="DefinitionArc"/> objects that apply to this definition link.
-		/// </summary>
-		public List<DefinitionArc> DefinitionArcs
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// A collection of <see cref="DefinitionArc"/> objects that apply to this definition link.
+        /// </summary>
+        public List<DefinitionArc> DefinitionArcs
+        {
+            get;
+            private set;
+        }
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal DefinitionLink(XmlNode DefinitionLinkNode)
+        internal DefinitionLink(INode DefinitionLinkNode)
         {
             this.Locators = new List<Locator>();
             this.DefinitionArcs = new List<DefinitionArc>();
@@ -56,9 +56,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void ReadChildDefinitionArcs(XmlNode DefinitionLinkNode)
+        private void ReadChildDefinitionArcs(INode DefinitionLinkNode)
         {
-            foreach (XmlNode CurrentChild in DefinitionLinkNode.ChildNodes)
+            foreach (INode CurrentChild in DefinitionLinkNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("definitionArc") == true)
                 {
@@ -107,9 +107,9 @@ namespace JeffFerguson.Gepsio
         // This also means that, after a <definitionArc> is fully processed, that the
         // unresolved Locator list is empty.
         //------------------------------------------------------------------------------------
-        private void ReadChildLocators(XmlNode DefinitionLinkNode)
+        private void ReadChildLocators(INode DefinitionLinkNode)
         {
-            foreach (XmlNode CurrentChild in DefinitionLinkNode.ChildNodes)
+            foreach (INode CurrentChild in DefinitionLinkNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("loc") == true)
                 {

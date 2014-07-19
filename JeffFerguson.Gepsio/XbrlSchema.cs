@@ -2,10 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml;
-using System.Xml.Schema;
 using System.Net;
 using System.Linq;
+using JeffFerguson.Gepsio.Xml.Interfaces;
+using JeffFerguson.Gepsio.IoC;
 
 namespace JeffFerguson.Gepsio
 {
@@ -14,9 +14,9 @@ namespace JeffFerguson.Gepsio
     /// </summary>
     public class XbrlSchema
     {
-        private XmlDocument thisSchemaDocument;
-        private XmlSchema thisXmlSchema;
-        private XmlSchemaSet thisXmlSchemaSet;
+        private IDocument thisSchemaDocument;
+        private ISchema thisXmlSchema;
+        private ISchemaSet thisXmlSchemaSet;
         private ILookup<string, Element> thisLookupElements;
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The root node of the parsed schema document.
         /// </summary>
-        internal XmlNode SchemaRootNode
+        internal INode SchemaRootNode
         {
             get;
             private set;
@@ -85,7 +85,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The namespace manager associated with the parsed schema document.
         /// </summary>
-        public XmlNamespaceManager NamespaceManager
+        internal INamespaceManager NamespaceManager
         {
             get;
             private set;
@@ -118,20 +118,20 @@ namespace JeffFerguson.Gepsio
 
             try
             {
-                var schemaReader = XmlTextReader.Create(this.Path);
-                thisXmlSchema = XmlSchema.Read(schemaReader, null);
-                thisXmlSchemaSet = new XmlSchemaSet();
+                thisXmlSchema = Container.Resolve<ISchema>();
+                thisXmlSchema.Read(this.Path);
+                thisXmlSchemaSet = Container.Resolve<ISchemaSet>();
                 thisXmlSchemaSet.Add(thisXmlSchema);
                 thisXmlSchemaSet.Compile();
             }
-            catch (XmlSchemaException xmlSchemaEx)
-            {
-                StringBuilder MessageBuilder = new StringBuilder();
-                string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
-                MessageBuilder.AppendFormat(StringFormat, this.Path);
-                this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString(), xmlSchemaEx));
-                return;
-            }
+            //catch (XmlSchemaException xmlSchemaEx)
+            //{
+            //    StringBuilder MessageBuilder = new StringBuilder();
+            //    string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+            //    MessageBuilder.AppendFormat(StringFormat, this.Path);
+            //    this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString(), xmlSchemaEx));
+            //    return;
+            //}
             catch (WebException webEx)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
@@ -141,11 +141,12 @@ namespace JeffFerguson.Gepsio
                 return;
             }
 
-            thisSchemaDocument = new XmlDocument();
+            thisSchemaDocument = Container.Resolve<IDocument>();
             this.LinkbaseDocuments = new List<LinkbaseDocument>();
             this.RoleTypes = new List<RoleType>();
             thisSchemaDocument.Load(this.Path);
-            this.NamespaceManager = new XmlNamespaceManager(thisSchemaDocument.NameTable);
+            this.NamespaceManager = Container.Resolve<INamespaceManager>();
+            this.NamespaceManager.Document = thisSchemaDocument;
             this.NamespaceManager.AddNamespace("schema", "http://www.w3.org/2001/XMLSchema");
             ReadSchemaNode();
             ReadSimpleTypes();
@@ -225,7 +226,7 @@ namespace JeffFerguson.Gepsio
                 return;
             }
             this.TargetNamespace = this.SchemaRootNode.Attributes["targetNamespace"].Value;
-            foreach (XmlAttribute CurrentAttribute in this.SchemaRootNode.Attributes)
+            foreach (IAttribute CurrentAttribute in this.SchemaRootNode.Attributes)
                 if (CurrentAttribute.Prefix == "xmlns")
                     this.NamespaceManager.AddNamespace(CurrentAttribute.LocalName, CurrentAttribute.Value);
         }
@@ -235,8 +236,8 @@ namespace JeffFerguson.Gepsio
         private void ReadSimpleTypes()
         {
             this.SimpleTypes = new List<SimpleType>();
-            XmlNodeList SimpleTypeNodes = thisSchemaDocument.SelectNodes("//schema:simpleType", this.NamespaceManager);
-            foreach (XmlNode SimpleTypeNode in SimpleTypeNodes)
+            INodeList SimpleTypeNodes = thisSchemaDocument.SelectNodes("//schema:simpleType", this.NamespaceManager);
+            foreach (INode SimpleTypeNode in SimpleTypeNodes)
                 this.SimpleTypes.Add(new SimpleType(SimpleTypeNode));
         }
 
@@ -245,8 +246,8 @@ namespace JeffFerguson.Gepsio
         private void ReadComplexTypes()
         {
             this.ComplexTypes = new List<ComplexType>();
-            XmlNodeList ComplexTypeNodes = thisSchemaDocument.SelectNodes("//schema:complexType", this.NamespaceManager);
-            foreach (XmlNode ComplexTypeNode in ComplexTypeNodes)
+            INodeList ComplexTypeNodes = thisSchemaDocument.SelectNodes("//schema:complexType", this.NamespaceManager);
+            foreach (INode ComplexTypeNode in ComplexTypeNodes)
                 this.ComplexTypes.Add(new ComplexType(ComplexTypeNode));
         }
 
@@ -254,9 +255,9 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ReadElements()
         {
-            foreach (DictionaryEntry CurrentEntry in thisXmlSchemaSet.GlobalElements)
+            foreach (var CurrentEntry in thisXmlSchemaSet.GlobalElements)
             {
-                XmlSchemaElement CurrentElement = CurrentEntry.Value as XmlSchemaElement;
+                ISchemaElement CurrentElement = CurrentEntry.Value as ISchemaElement;
                 this.Elements.Add(new Element(this, CurrentElement));
                 thisLookupElements = null;
             }
@@ -264,12 +265,12 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        internal XmlSchemaType GetXmlSchemaType(XmlQualifiedName ItemTypeValue)
+        internal ISchemaType GetXmlSchemaType(IQualifiedName ItemTypeValue)
         {
-            foreach (DictionaryEntry CurrentEntry in thisXmlSchemaSet.GlobalTypes)
+            foreach (var CurrentEntry in thisXmlSchemaSet.GlobalTypes)
             {
-                XmlSchemaType CurrentType = CurrentEntry.Value as XmlSchemaType;
-                if (CurrentType.QualifiedName.Equals(ItemTypeValue) == true)
+                ISchemaType CurrentType = CurrentEntry.Value as ISchemaType;
+                if (CurrentType.QualifiedName.FullyQualifiedName.Equals(ItemTypeValue.FullyQualifiedName) == true)
                 {
                     return CurrentType;
                 }
@@ -281,7 +282,7 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void LookForAnnotations()
         {
-            foreach (XmlNode CurrentChild in this.SchemaRootNode.ChildNodes)
+            foreach (INode CurrentChild in this.SchemaRootNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("annotation") == true)
                     ReadAnnotations(CurrentChild);
@@ -290,9 +291,9 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadAnnotations(XmlNode AnnotationNode)
+        private void ReadAnnotations(INode AnnotationNode)
         {
-            foreach (XmlNode CurrentChild in AnnotationNode.ChildNodes)
+            foreach (INode CurrentChild in AnnotationNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("appinfo") == true)
                     ReadAppInfo(CurrentChild);
@@ -301,9 +302,9 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadAppInfo(XmlNode AppInfoNode)
+        private void ReadAppInfo(INode AppInfoNode)
         {
-            foreach (XmlNode CurrentChild in AppInfoNode.ChildNodes)
+            foreach (INode CurrentChild in AppInfoNode.ChildNodes)
             {
                 if ((CurrentChild.NamespaceURI.Equals("http://www.xbrl.org/2003/linkbase") == true) && (CurrentChild.LocalName.Equals("linkbaseRef") == true))
                     ReadLinkbaseReference(CurrentChild);
@@ -314,9 +315,9 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadLinkbaseReference(XmlNode LinkbaseReferenceNode)
+        private void ReadLinkbaseReference(INode LinkbaseReferenceNode)
         {
-            foreach (XmlAttribute CurrentAttribute in LinkbaseReferenceNode.Attributes)
+            foreach (IAttribute CurrentAttribute in LinkbaseReferenceNode.Attributes)
             {
                 if ((CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == true) && (CurrentAttribute.LocalName.Equals("href") == true))
                     this.LinkbaseDocuments.Add(new LinkbaseDocument(this, CurrentAttribute.Value));
@@ -325,7 +326,7 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadRoleType(XmlNode RoleTypeNode)
+        private void ReadRoleType(INode RoleTypeNode)
         {
             this.RoleTypes.Add(new RoleType(this, RoleTypeNode));
         }
@@ -352,8 +353,8 @@ namespace JeffFerguson.Gepsio
         /// <returns>A string representing the namespace prefix. An empty string is returned if the URI is not defined in the schema.</returns>
         internal string GetPrefixForUri(string uri)
         {
-            XmlQualifiedName[] NamespacesArray = thisXmlSchema.Namespaces.ToArray();
-            foreach (XmlQualifiedName CurrentName in NamespacesArray)
+            var NamespacesArray = thisXmlSchema.Namespaces.ToArray();
+            foreach (var CurrentName in NamespacesArray)
             {
                 if (CurrentName.Namespace.Equals(uri) == true)
                     return CurrentName.Name;
@@ -368,8 +369,8 @@ namespace JeffFerguson.Gepsio
         /// <returns>The URI associated with the namespace.</returns>
         internal string GetUriForPrefix(string prefix)
         {
-            XmlQualifiedName[] NamespacesArray = thisXmlSchema.Namespaces.ToArray();
-            foreach (XmlQualifiedName CurrentName in NamespacesArray)
+            var NamespacesArray = thisXmlSchema.Namespaces.ToArray();
+            foreach (var CurrentName in NamespacesArray)
             {
                 if (CurrentName.Name.Equals(prefix) == true)
                     return CurrentName.Namespace;

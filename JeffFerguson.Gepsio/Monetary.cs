@@ -1,25 +1,25 @@
-﻿using System;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
 using System.Text;
-using System.Xml;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XML schema type "monetary" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
-	/// </summary>
-	/// <remarks>
-	/// <para>
-	/// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
-	/// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
-	/// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
-	/// Gepsio's XML schema type system obsolete.
-	/// </para>
-	/// </remarks>
+    /// <summary>
+    /// An encapsulation of the XML schema type "monetary" as defined in the http://www.w3.org/2001/XMLSchema namespace. 
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class should be considered deprecated and will most likely be removed in a future version of Gepsio. In early CTPs,
+    /// Gepsio implemented its own XML schema parser, and this class was created for the implementation of the XML schema parser
+    /// type system. In later CTPs, Gepsio levergaed the XML schema support already available in the .NET Framework, which rendered
+    /// Gepsio's XML schema type system obsolete.
+    /// </para>
+    /// </remarks>
     public class Monetary : Decimal
     {
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        internal Monetary(XmlNode StringRootNode)
+        internal Monetary(INode StringRootNode)
             : base(StringRootNode)
         {
         }

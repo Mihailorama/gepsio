@@ -1,155 +1,155 @@
-﻿using System.Globalization;
-using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System.Globalization;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XBRL element "label" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
-	/// </summary>
+    /// <summary>
+    /// An encapsulation of the XBRL element "label" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+    /// </summary>
     public class Label
     {
-		/// <summary>
-		/// A list of possible roles for a label.
-		/// </summary>
-		/// <remarks>
-		/// See Table 8 in section 5.2.2.2.2 in the XBRL Specification for more information about label roles.
-		/// </remarks>
+        /// <summary>
+        /// A list of possible roles for a label.
+        /// </summary>
+        /// <remarks>
+        /// See Table 8 in section 5.2.2.2.2 in the XBRL Specification for more information about label roles.
+        /// </remarks>
         public enum RoleEnum
         {
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/label.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/label.
+            /// </summary>
             Standard,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/terseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/terseLabel.
+            /// </summary>
             Short,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/verboseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/verboseLabel.
+            /// </summary>
             Verbose,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/positiveLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/positiveLabel.
+            /// </summary>
             StandardPositiveValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/positiveTerseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/positiveTerseLabel.
+            /// </summary>
             ShortPositiveValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/positiveVerboseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/positiveVerboseLabel.
+            /// </summary>
             VerbosePositiveValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/negativeLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/negativeLabel.
+            /// </summary>
             StandardNegativeValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/negativeTerseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/negativeTerseLabel.
+            /// </summary>
             ShortNegativeValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/negativeVerboseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/negativeVerboseLabel.
+            /// </summary>
             VerboseNegativeValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/zeroLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/zeroLabel.
+            /// </summary>
             StandardZeroValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/zeroTerseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/zeroTerseLabel.
+            /// </summary>
             ShortZeroValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/zeroVerboseLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/zeroVerboseLabel.
+            /// </summary>
             VerboseZeroValue,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/totalLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/totalLabel.
+            /// </summary>
             Total,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/periodStartLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/periodStartLabel.
+            /// </summary>
             PeriodStart,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/periodEndLabel.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/periodEndLabel.
+            /// </summary>
             PeriodEnd,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/documentation.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/documentation.
+            /// </summary>
             Documentation,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/definitionGuidance.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/definitionGuidance.
+            /// </summary>
             DefinitionGuidance,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/disclosureGuidance.
-			/// </summary>
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/disclosureGuidance.
+            /// </summary>
             DisclosureGuidance,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/presentationGuidance.
-			/// </summary>
-			PresentationGuidance,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/measurementGuidance.
-			/// </summary>
-			MeasurementGuidance,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/commentaryGuidance.
-			/// </summary>
-			CommentaryGuidance,
-			/// <summary>
-			/// A label with a role URI of http://www.xbrl.org/2003/role/exampleGuidance.
-			/// </summary>
-			ExampleGuidance
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/presentationGuidance.
+            /// </summary>
+            PresentationGuidance,
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/measurementGuidance.
+            /// </summary>
+            MeasurementGuidance,
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/commentaryGuidance.
+            /// </summary>
+            CommentaryGuidance,
+            /// <summary>
+            /// A label with a role URI of http://www.xbrl.org/2003/role/exampleGuidance.
+            /// </summary>
+            ExampleGuidance
         }
 
-		/// <summary>
-		/// The role of this label.
-		/// </summary>
-		public RoleEnum Role
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The ID of this label.
-		/// </summary>
-		public string Id
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The text of this label.
-		/// </summary>
-		public string Text
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The culture of this label.
-		/// </summary>
-		public CultureInfo Culture
-		{
-			get;
-			private set;
-		}
-
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        internal Label(XmlNode LabelNode)
+        /// <summary>
+        /// The role of this label.
+        /// </summary>
+        public RoleEnum Role
         {
-            this.Id = XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/1999/xlink", "label");
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// The ID of this label.
+        /// </summary>
+        public string Id
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// The text of this label.
+        /// </summary>
+        public string Text
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// The culture of this label.
+        /// </summary>
+        public CultureInfo Culture
+        {
+            get;
+            private set;
+        }
+
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        internal Label(INode LabelNode)
+        {
+            this.Id = LabelNode.GetAttributeValue("http://www.w3.org/1999/xlink", "label");
             this.Text = LabelNode.InnerText;
-            SetRole(XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/1999/xlink", "role"));
-            string LanguageValue = XmlUtilities.GetAttributeValue(LabelNode, "http://www.w3.org/XML/1998/namespace", "lang");
+            SetRole(LabelNode.GetAttributeValue("http://www.w3.org/1999/xlink", "role"));
+            string LanguageValue = LabelNode.GetAttributeValue("http://www.w3.org/XML/1998/namespace", "lang");
             this.Culture = new CultureInfo(LanguageValue);
         }
 

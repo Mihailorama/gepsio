@@ -100,7 +100,6 @@
     <Compile Include="EnumerationFacet.cs" />
     <Compile Include="EnumerationFacetDefinition.cs" />
     <Compile Include="EssentialNumericItemAttributes.cs" />
-    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Facet.cs" />
     <Compile Include="FacetDefinition.cs" />
     <Compile Include="FacetProperty.cs" />
@@ -130,6 +129,7 @@
     <Compile Include="ID.cs" />
     <Compile Include="IDREF.cs" />
     <Compile Include="Integer.cs" />
+    <Compile Include="IoC\Container.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemAttributes.cs" />
     <Compile Include="ItemsValidationError.cs" />
@@ -188,7 +188,29 @@
     <Compile Include="XbrlDocument.cs" />
     <Compile Include="XbrlFragment.cs" />
     <Compile Include="XbrlSchema.cs" />
-    <Compile Include="XmlUtilities.cs" />
+    <Compile Include="Xlink\XlinkNode.cs" />
+    <Compile Include="Xml\Implementation\DotNet\Attribute.cs" />
+    <Compile Include="Xml\Implementation\DotNet\AttributeList.cs" />
+    <Compile Include="Xml\Implementation\DotNet\Document.cs" />
+    <Compile Include="Xml\Implementation\DotNet\Schema.cs" />
+    <Compile Include="Xml\Implementation\DotNet\SchemaSet.cs" />
+    <Compile Include="Xml\Implementation\DotNet\SchemaType.cs" />
+    <Compile Include="Xml\Interfaces\ISchema.cs" />
+    <Compile Include="Xml\Interfaces\ISchemaSet.cs" />
+    <Compile Include="Xml\Interfaces\ISchemaType.cs" />
+    <Compile Include="Xml\Implementation\DotNet\NamespaceManager.cs" />
+    <Compile Include="Xml\Implementation\DotNet\Node.cs" />
+    <Compile Include="Xml\Implementation\DotNet\NodeList.cs" />
+    <Compile Include="Xml\Implementation\DotNet\QualifiedName.cs" />
+    <Compile Include="Xml\Implementation\DotNet\SchemaElement.cs" />
+    <Compile Include="Xml\Interfaces\IAttribute.cs" />
+    <Compile Include="Xml\Interfaces\IAttributeList.cs" />
+    <Compile Include="Xml\Interfaces\IDocument.cs" />
+    <Compile Include="Xml\Interfaces\INamespaceManager.cs" />
+    <Compile Include="Xml\Interfaces\INode.cs" />
+    <Compile Include="Xml\Interfaces\INodeList.cs" />
+    <Compile Include="Xml\Interfaces\IQualifiedName.cs" />
+    <Compile Include="Xml\Interfaces\ISchemaElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Gepsio.resx">
@@ -217,6 +239,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

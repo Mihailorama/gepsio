@@ -1,4 +1,4 @@
-﻿using System.Xml;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -36,10 +36,10 @@ namespace JeffFerguson.Gepsio
 
 		//------------------------------------------------------------------------------------
 		//------------------------------------------------------------------------------------
-		internal LabelArc(XmlNode LabelArcNode)
+		internal LabelArc(INode LabelArcNode)
 		{
-			this.FromId = XmlUtilities.GetAttributeValue(LabelArcNode, "http://www.w3.org/1999/xlink", "from");
-			this.ToId = XmlUtilities.GetAttributeValue(LabelArcNode, "http://www.w3.org/1999/xlink", "to");
+            this.FromId = LabelArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "from");
+            this.ToId = LabelArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "to");
 		}
 	}
 }

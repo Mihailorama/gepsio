@@ -1,81 +1,122 @@
-using System.Xml;
+using JeffFerguson.Gepsio.Xlink;
+using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// An encapsulation of the XBRL element "footnoteArc" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
-	/// </summary>
-    public class FootnoteArc
+    /// <summary>
+    /// An encapsulation of the XBRL element "footnoteArc" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
+    /// </summary>
+    public class FootnoteArc : XlinkNode
     {
-        private XmlNode thisFootnoteArcNode;
+        private Item fromItem;
+        private Footnote fromFootnote;
 
-		/// <summary>
-		/// The link definition for the footnote.
-		/// </summary>
-		public FootnoteLink Link
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The item referenced by the "from" portion of the footnote arc.
-		/// </summary>
-		public Item From
-		{
-			get;
-			internal set;
-		}
-
-		/// <summary>
-		/// The title of the footnote arc.
-		/// </summary>
-		public string Title
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The ID of the item referenced by the "from" portion of the footnote arc.
-		/// </summary>
-		public string FromId
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The ID of the item referenced by the "to" portion of the footnote arc.
-		/// </summary>
-		public string ToId
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The footnote referenced by the "to" portion of the footnote arc.
-		/// </summary>
-		public Footnote To
-		{
-			get;
-			internal set;
-		}
-
-        internal FootnoteArc(FootnoteLink ParentLink, XmlNode FootnoteArcNode)
+        /// <summary>
+        /// Describes the possible sources of the "from" portion of a footnote arc.
+        /// </summary>
+        public enum FromSources
         {
-            thisFootnoteArcNode = FootnoteArcNode;
-            this.Link = ParentLink;
-            foreach (XmlAttribute CurrentAttribute in thisFootnoteArcNode.Attributes)
+            /// <summary>
+            /// This footnote arc has no "from" portion set.
+            /// </summary>
+            None,
+            /// <summary>
+            /// This footnote arc has an item as the "from" source.
+            /// </summary>
+            Item,
+            /// <summary>
+            /// This footnote arc has an footnote as the "from" source.
+            /// </summary>
+            Footnote
+        }
+
+        /// <summary>
+        /// The link definition for the footnote.
+        /// </summary>
+        public FootnoteLink Link
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// The item referenced by the "from" portion of the footnote arc.
+        /// </summary>
+        /// <remarks>
+        /// This value will be valid only if the <see cref="FromSource"/> property
+        /// has a value of <see cref="FromSources.Item"/>. If the property has any
+        /// other value, then the value of this property will be null.
+        /// </remarks>
+        public Item FromItem
+        {
+            get
             {
-                if(CurrentAttribute.LocalName.Equals("title") == true)
-                    this.Title = CurrentAttribute.Value;
-                else if (CurrentAttribute.LocalName.Equals("from") == true)
-                    this.FromId = CurrentAttribute.Value;
-                else if (CurrentAttribute.LocalName.Equals("to") == true)
-                    this.ToId = CurrentAttribute.Value;
+                return fromItem;
             }
+            internal set
+            {
+                fromItem = value;
+                if(value != null)
+                    this.FromSource = FromSources.Item;
+            }
+        }
+
+        /// <summary>
+        /// The footnote referenced by the "from" portion of the footnote arc.
+        /// </summary>
+        /// This value will be valid only if the <see cref="FromSource"/> property
+        /// has a value of <see cref="FromSources.Footnote"/>. If the property has any
+        /// other value, then the value of this property will be null.
+        /// </remarks>
+        public Footnote FromFootnote
+        {
+            get
+            {
+                return fromFootnote;
+            }
+            internal set
+            {
+                fromFootnote = value;
+                if(value != null)
+                    this.FromSource = FromSources.Footnote;
+            }
+        }
+
+        /// <summary>
+        /// The footnote referenced by the "to" portion of the footnote arc.
+        /// </summary>
+        public Footnote ToFootnote
+        {
+            get;
+            internal set;
+        }
+
+        /// <summary>
+        /// Describes whether or not the footnote arc is in the standard footnote arc role,
+        /// according to section 4.11.1.3.1 of the XBRL spec.
+        /// </summary>
+        public bool StandardArcRole
+        {
+            get
+            {
+                return ArcRole.Equals("http://www.xbrl.org/2003/arcrole/fact-footnote");
+            }
+        }
+
+        /// <summary>
+        /// The source of the "from" portion of the arc.
+        /// </summary>
+        public FromSources FromSource
+        {
+            get;
+            private set;
+        }
+
+        internal FootnoteArc(FootnoteLink ParentLink, INode FootnoteArcNode) : base(FootnoteArcNode)
+        {
+            this.Link = ParentLink;
+            this.FromSource = FromSources.None;
         }
     }
 }

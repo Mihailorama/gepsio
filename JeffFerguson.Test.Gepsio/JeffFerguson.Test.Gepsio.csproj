@@ -77,6 +77,8 @@
     <Compile Include="XBRLCONFCR320070305TestVariation.cs" />
     <Compile Include="UkGaapSamples20080620UnitTest.cs" />
     <Compile Include="WorkItemsTests.cs" />
+    <Compile Include="XBRLCONFCR520120124Test.cs" />
+    <Compile Include="XBRLCONFCR520120124TestVariation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
@@ -756,6 +758,788 @@
     <Content Include="XBRL-CONF-CR3-2007-03-05\xbrl-conformance-to-excel.xsl" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\xbrl-conformance.xml" />
     <Content Include="XBRL-CONF-CR3-2007-03-05\xbrl.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-01-SpecExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-item.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\103-01-ComplexContentCounterExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\103-type.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-01-SpecTupleExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-02-TupleExampleAnyOrder.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-03-TupleExampleCardinality.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-04-TupleExampleComplextype.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-05-TupleExampleNestedComplextype.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-06-TupleCounterExampleNestedComplextype.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-07-TupleChoiceExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-09-TupleAttributeCounterExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10-TupleXBRLAttributeCounterExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-13-TupleRestrictionExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-14-TupleNestedRestrictionExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-tuple.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-01-ElementWithBalanceTypeNotMonetary-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-02-TuplesMustHaveNoBalanceAttribute-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-03-ElementWithBalanceTypeMonetary.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-04-DerivedElementWithBalanceTypeMonetary-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-05-DerivedElementWithBalanceTypeString-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-balance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-targetNamespace.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\107-DTSWithLinkbaseInSchema.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\115-ArcroleAndRoleRefs-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\155-TypeExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-01-roleType-standard-linkbase-incorrect-element-Invalid-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-02-roleType-standard-linkbase-incorrect-element-Invalid-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-04-roleType-non-standard-linkbase-incorrect-element-Valid-custom.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-05-roleType-non-standard-linkbase-incorrect-element-invalid-custom.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-UsedOn.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-Appinfo.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\out\104-01-SpecTupleExampleOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-linkref.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-01-HrefResolution-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-02-HrefResolutionCounterExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-02a-HrefResolutionCounterExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-02b-HrefResolutionCounterExample-custom.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03f-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03g-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-05-ElementLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-06-DuplicateLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-07-ShorthandPointerExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-08-XPointerLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-09-ElementSchemeXPointerLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-10-ElementSchemeXPointerLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-11-ElementSchemeXPointerLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-12-ElementSchemeXPointerLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-13-ElementSchemeXPointerLocatorExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-xlinkLocator.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\204-arcCycles.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\205-roleDeclared.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\206-arcDeclared.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\207-arcDeclaredCycles.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-01-ItemNoneSummationNone-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-02-ItemCreditSumCreditWeight+1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-02-ItemCreditSumCreditWeight+1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-03-ItemCreditSumCreditWeight-1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-03-ItemCreditSumCreditWeight-1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-04-ItemDebitSumCreditWeight+1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-04-ItemDebitSumCreditWeight+1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-05-ItemDebitSumCreditWeight-1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-05-ItemDebitSumCreditWeight-1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-06-ItemCreditSumDebitWeight+1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-06-ItemCreditSumDebitWeight+1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-07-ItemCreditSumDebitWeight-1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-07-ItemCreditSumDebitWeight-1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-08-ItemDebitSumDebitWeight+1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-08-ItemDebitSumDebitWeight+1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-09-ItemDebitSumDebitWeight-1-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-09-ItemDebitSumDebitWeight-1-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-10-WeightNotZero-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-10-WeightNotZero-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-balance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-01-DifferentWeights-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-02-DifferentPreferredLabels-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-02-DifferentPreferredLabels-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-03-SameDefinitionArcs-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-04-DifferentArcroles-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-Arcs.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-01-RelationshipEquivalence-calculation-1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-01-RelationshipEquivalence-calculation-2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-01-RelationshipEquivalence-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-02-DifferentOrder-calculation-1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-02-DifferentOrder-calculation-2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-02-DifferentOrder-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-03-MissingOrder-calculation-1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-03-MissingOrder-calculation-2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-03-MissingOrder-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-04-RelationshipEquivalence-calculation-1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-04-RelationshipEquivalence-calculation-2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-04-RelationshipEquivalence-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-05-RelationshipEquivalence-calculation-1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-05-RelationshipEquivalence-calculation-2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-05-RelationshipEquivalence-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-relationshipEquivalence.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\211-Testcase-sEqualUsedOn.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-01-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-02-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-03-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-04-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-05-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-06-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-07-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-08-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-09-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-10-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-Testcase-linkbaseDocumentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-01-SummationNumeric_ItemNumeric-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-02-SummationNonNumeric_ItemNumeric-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-03-SummationNumeric_ItemNonNumeric-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-SummationItemArcEndpoints.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-01-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-02-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-03-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-04-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-01-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-02-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-03-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-04-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-05-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-06-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-07-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-08-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-09-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-10-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-ArcroleAndRoleRefs-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-06-Linkbase1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-06-Linkbase2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-NonStandardArcsAndTypes.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-01-Custom-linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-02-Custom-linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-CustomLinkbasesAndLocators.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\231-01-ArcsAreNotEqualButTheyLookAsEqual-calculation1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\231-01-ArcsAreNotEqualButTheyLookAsEqual-calculation2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\231-SyntacticallyEqualArcsThatAreNotEquivalentArcs.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-01-ArcsUsingNonCanonicalDecimalOrder-calculation1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-01-ArcsUsingNonCanonicalDecimalOrder-calculation2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-03-ArcsUsingNonCanonicalDecimalWeight-calculation1.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-03-ArcsUsingNonCanonicalDecimalWeight-calculation2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-ArcsUsingNonCanonicalDecimal.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-01-ArcOverrideDisjointLinkbases-1-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-01-ArcOverrideDisjointLinkbases-2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-02-ArcOverrideLabelLinkbases-1-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-02-ArcOverrideLabelLinkbases-2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-03-ArcOverrideLabelLinkbases-1-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-03-ArcOverrideLabelLinkbases-2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-03-ArcOverrideLabelLinkbases-3-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-04-ArcOverrideLinkbases-1-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-04-ArcOverrideLinkbases-2-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-05-ArcOverrideLinkbases-1-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-05-ArcOverrideLinkbases-2-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-06-ArcOverrideLinkbases-1-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-06-ArcOverrideLinkbases-2-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-06-ArcOverrideLinkbases-3-def.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-07-ArcOverrideLabelLinkbases-1-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-07-ArcOverrideLabelLinkbases-2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-08-ArcOverrideLabelLinkbases-1-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-08-ArcOverrideLabelLinkbases-2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-09-ArcOverrideLabelLinkbases-1-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-09-ArcOverrideLabelLinkbases-2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-10-ArcOverrideDisjointLinkbases-1-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-10-ArcOverrideDisjointLinkbases-2-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-11-ArcOverrideReferenceLinkbases-1-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-11-ArcOverrideReferenceLinkbases-2-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-12-ArcOverrideReferenceLinkbases-1-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-12-ArcOverrideReferenceLinkbases-2-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-12-ArcOverrideReferenceLinkbases-3-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-13-ArcOverrideReferenceLinkbases-1-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-13-ArcOverrideReferenceLinkbases-2-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-14-ArcOverrideReferenceLinkbases-1-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-14-ArcOverrideReferenceLinkbases-2-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-15-ArcOverrideReferenceLinkbases-1-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-15-ArcOverrideReferenceLinkbases-2-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-inferArcOverride.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\292-Embeddedlinkbaseinthexsd.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-UsedOn.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustNCcustLink.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustNCcustLink_customlinkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustRolesDC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustRolesDC_customlinkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustRolesNC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustRolesNC_customlinkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesEADC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesEADC_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesEAUC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesEAUC_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDCcustArc.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDCcustArc_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDCcustLink.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDCcustLink_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDC_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCcustArc.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCcustArc_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCcustLink.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCcustLink_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCExtension_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCWR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCWR_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNC_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSUC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSUC_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSWDCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSWDCExtension_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSWUCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSWUCExtension_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCDC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCDC_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNCExtension_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNCWR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNCWR_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNC_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCUC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCUC_presentation-2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCUC_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCWCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCWCExtension_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIDC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIDC_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINCExtension_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINCWR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINCWR_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINC_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIUC.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIUC_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIWCExtension.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIWCExtension_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBR2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBR2_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBR_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBU.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBU_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBU_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleCustomEndPoints-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleCustomEndPoints-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleCustomEndPoints-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleCustomEndPoints-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR2_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR3.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR3_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleG.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleG_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\201-03-LinkbaseRefXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03a-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03b-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03c-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03d-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03e-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\202-03d-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\202-03e-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\base\202-03d-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\base\202-03e-HrefResolutionXMLBase-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\CSummationItemDirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\CSummationItemUndirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDD.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDD_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDN.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDN_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDU.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDU_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesND.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesND_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNE.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNE2_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNE_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNN.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNN_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNU.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNU2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNU2_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNUE.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNUE2_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNUE_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNU_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUD.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUDE.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUDE2_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUDE_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUD_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUN.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUN_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUU.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUUE.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUUE2_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUUE_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUU_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DEssenceAliasDirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DGeneralSpecialDirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-2-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-3-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef-reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\209-01-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\209-02-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\209-03-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\209-04-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\210-01-RelationshipEquivalence-instanceOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\210-03-MissingOrder-instanceOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\210-04-RelationshipEquivalence-instanceOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\210-05-RelationshipEquivalence-instanceOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-01-ArcOverrideDisjointLinkbasesOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-02-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-03-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-04-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-05-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-06-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-09-ArcOverrideLabelLinkbases-1-labelOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-10-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-11-Out.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\out\291-15-ArcOverrideReferenceLinkbases-1-referenceOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\PContainerContentDirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\PContainerContentUndirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\PParentChildDirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\PParentChildUndirected.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\preferredLabel.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-invalid-label-ja.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-invalid-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-invalid-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-label-ja.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-invalid-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-invalid-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-invalid2-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-invalid2-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-valid-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-valid-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE2_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE2_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleEBR.sml.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleEBR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleEBR_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE_presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleL.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleLDR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleLDR_label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleL_label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleR_reference.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleS.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBR_linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBU.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBU_linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDR.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDRI.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDRI_linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDR_linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleS_linkbase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\SpecExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\XMLBaseProcessing.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-01-IdScopeValid.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-03-IdScopePeriodDiff.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-04-IdScopeContextRefToUnit.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-05-IdScopeUnitRefToContext.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-06-FootnoteScopeValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-08-FootnoteToContext.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-09-FootnoteToUnit.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-10-FootnoteFromOutOfScope.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-11-FootnoteToOutOfScope.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-12-FootnoteLocOutOfScope.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-12-FootnoteLocOutOfScope2.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-13-FootnoteLocInScope.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-14-FootnoteFromResource.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-15-FootnoteToLoc.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-16-FootnoteWithoutLang.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-17-FootnoteCustomArcRole.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-idScope.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-01-SegmentValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-02-SegmentNamespaceInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-03-ScenarioValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-04-ScenarioNamespaceInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-05-SegmentSubstitutionInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-06-ScenarioSubstitutionInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-07-SegmentEmptyContent.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-08-ScenarioEmptyContent.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-09-PeriodDateTimeValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-10-PeriodDateTimeInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-context.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-01-PeriodInstantValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-02-PeriodDurationValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-03-PeriodInstantInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-04-PeriodDurationInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-05-ForeverSchema-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-periodType.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-01-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-02-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-03-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-04-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-05-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-06-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-07-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-08-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-09-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-10-pureItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-11-pureItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-12-pureItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-12a-pureItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-13-sharesItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-14-sharesItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-15-pureItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-15a-sharesItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-16-unitsInSimplestForm.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-17-sameOrderMeasuresValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-18-sameOrderDivisionMeasuresValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-19-differentOrderMeasuresValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-20-differentOrderDivisionMeasuresValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-21-measuresInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-22-divisionMeasuresInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-23-Calculation-item-does-not-match-unit-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-23-Calculation-item-does-not-match-unit.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-24-valid-ISO-unit-of-measue.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-26-monetaryItemTypeUnitsRestrictions.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-multiple-unitsEquality-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-unitOfMeasure.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-01-DecimalOnlySpecified.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-02-PrecisionOnlySpecified.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-03-NoDecimalOrPrecisionSpecified.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-04-BothDecimalAndPrecisionSpecified.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-05-DecimalSpecifiedOnNilItem.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-06-PrecisionSpecifiedOnNilItem.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-08-UnitsSpecifiedOnNilItem.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-decimalPrecision.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305_07_decimals_test-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305_07_decimals_test-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305_07_decimals_test-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\306-01-RequiredInstanceValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\306-02-RequiredInstanceTupleValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\306-03-RequiredInstanceInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\306-Required-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\306-required.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\307-01-SchemaRefExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\307-02-SchemaRefCounterExample.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\307-03-SchemaRefXMLBase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\307-schemaRef.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\308-01-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\308-02-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\308-ArcroleAndRoleRefs-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-01-instance-points-to-another-instance-in-a-schema.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-02-custom-linkbase-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-02-instance-points-to-xml-file.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-02-raw-xml-file.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-custom-linkbase-instance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-custom-linkbases-on-instances.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-SimpleTaxonomy-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-01.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-02.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-03.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-04.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-05.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-06.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-03-nestedtupleBindCalc-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-03-nestedtupleBindCalc-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-03-nestedtupleBindCalc-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-17-BindCalculationInferPrecision-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-17-BindCalculationInferPrecision-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-18-BindCalculationInferPrecision-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-18-BindCalculationInferPrecision-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-24-BindCalculationInferPrecision-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-26-BindCalculationInferPrecision-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-BindCalculationInferPrecision-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-BindCalculationInferPrecision-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-CalculationBinding.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-01-internationalization-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-01-internationalization-instance-invalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-01-internationalization-instance-valid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-01-internationalization-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-01-internationalization-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-internationalization.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-XmlXbrlInteraction-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-XmlXbrlInteraction.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-01-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-02-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-01.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-02.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-03.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-04.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-04a.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-05.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-06.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-07.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-08.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-09.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-10.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-11.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-12.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-13.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-14.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-15.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-16.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-17.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-81.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-82.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-83.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-84.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-85.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-86.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-87.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-88.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-89.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-90.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-91.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-92.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-93.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-instance-94.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-01-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-02-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-03-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-04-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-05-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-06-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-07-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-08-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-09-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-10-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-11-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-12-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-13-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-01.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-02.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-03.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-04.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-05.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-06.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-07.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-08.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-09.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-10.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-11.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-12.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-instance-13.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-01-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-02-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-03-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-04-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-05-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-06-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-07-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-08-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-09-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-10-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-11-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-12-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-13-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-14-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-15-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-16-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-17-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-18-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-19-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-20-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-21-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-22-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-23-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-24-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-25-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-26-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-27-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-28-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-29-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-30-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-31-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-32-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-33-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-34-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-35-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-36-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-37-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-38-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-39-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-40-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-41-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-42-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-43-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-44-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-45-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-46-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-47-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-48-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-49-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-50-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-51-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-52-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-53-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-54-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-55-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-56-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-57-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-58-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-59-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-60-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-61-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-62-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-63-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-64-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-65-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-66-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-67-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-68-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-69-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-70-InferPrecisionFromDecimals.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-inferDecimalPrecision.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-01-EssenceAliasValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-02-EssenceAliasDuplicate.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-03-EssenceAliasDuplicateNoEssence.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-04-EssenceAliasReverse.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-05-EssenceAliasValidWithValue.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-06-EssenceAliasInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-07-EssenceAliasDifferentScopeValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-08-EssenceAliasDifferentScopeInValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-09-EssenceAliasDifferentScopeValidWithValue.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-10-EssenceAliasDifferentUnit.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-11-EssenceAliasDifferentContext.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-12-EssenceAlias_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-13-EssenceAliasDifferentPeriodType.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-13-EssenceAlias_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-14-EssenceAliasNonNumericValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-15-EssenceAliasNonNumericInValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-16-EssenceAliasNonNumericTupleValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-17-EssenceAliasNonNumericTupleInValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-19-Essence-Alias-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-Essence-Alias-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-inferEssenceAlias.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-String-EssenceAlias_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-01-InferCalculatedValueConsistencyValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-02-InferCalculatedValueConsistencyDifferentValue.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-03-InferCalculatedValueConsistencyWithDefaultContributorValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-04-InferCalculatedValueConsistencyWithDefaultContributorMissingInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-05-InferCalculatedValueConsistencyWithDefaultScenarioValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-06-InferCalculatedValueConsistencyWithDefaultScenarioMissingInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-07-InferCalculatedValueConsistencyWithScenarioAttributeDefaultValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-08-InferCalculatedValueConsistencyWithScenarioAttributeMissingInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\395-inferNumericConsistency.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-ABC-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-Testcase-SummationItem.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-XYZ-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-XYZ-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\398-Testcase-Nillable.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\bi-locational-dim-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\DecimalAttributeOnSegmentOrScenario-calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\EssenceAlias_definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\InstanceHeader.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\303-01-PeriodInstantValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\303-02-PeriodDurationValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-01-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-02-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-03-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-04-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-05-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-06-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-07-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-08-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-09-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-10-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-11-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-12-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-13-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-14-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-15-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-16-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-17-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-18-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-19-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-20-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-21-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-22-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-23-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-24-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-25-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-26-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-27-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-28-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-29-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-30-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-31-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-32-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-33-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-34-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-35-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-36-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-37-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-38-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-39-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-40-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-41-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-42-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-43-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-44-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-45-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-46-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-47-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-48-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-49-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-50-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-51-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-52-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-53-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-54-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-55-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-56-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-57-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-58-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-59-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-60-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-61-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-62-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-63-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-64-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-65-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-66-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-67-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-68-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-69-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\391-70-InferPrecisionFromDecimalsOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-01-EssenceAliasValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-02-EssenceAliasDuplicateOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-03-EssenceAliasDuplicateNoEssenceOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-04-EssenceAliasReverseOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-05-EssenceAliasValidWithValueOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-07-EssenceAliasDifferentScopeValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-09-EssenceAliasDifferentScopeValidWithValueOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-11-EssenceAliasDifferentContextOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-14-EssenceAliasNonNumericValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\392-16-EssenceAliasNonNumericTupleValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-01-InferCalculatedValueConsistencyValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-02-InferCalculatedValueConsistencyDifferentValueOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-03-InferCalculatedValueConsistencyWithDefaultContributorValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-04-InferCalculatedValueConsistencyWithDefaultContributorMissingInvalidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-05-InferCalculatedValueConsistencyWithDefaultScenarioValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-06-InferCalculatedValueConsistencyWithDefaultScenarioMissingInvalidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-07-InferCalculatedValueConsistencyWithScenarioAttributeDefaultValidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\out\395-08-InferCalculatedValueConsistencyWithScenarioAttributeMissingInvalidOut.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\PeriodDateTimeInvalid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\PeriodDateTimeValid.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\Required-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SummationItem_calculation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\typedDimContentValidity-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-01-singleNestedInstance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-02-multipleNestedInstances.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-nestedElements.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\401-datatypes.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\lib\testinstance.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04-XLinkLabelCounterExample-definition.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04a-XLinkLabelCounterExample-presentation.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04b-XLinkLabelCounterExample-label.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\arc-duplication-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-testcase.xml" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\infoset.xsl" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\testcase.xsl" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\testcases.xsl" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\xbrl-infoset.xsl" />
+    <Content Include="XBRL-CONF-CR5-2012-01-24\xbrl.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JeffFerguson.Gepsio\JeffFerguson.Gepsio.csproj">
@@ -1363,6 +2147,1277 @@
     <None Include="XBRL-CONF-CR3-2007-03-05\xbrl-conformance-2003-11-10.xsx">
       <DependentUpon>xbrl-conformance-2003-11-10.xsd</DependentUpon>
     </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-01-SpecExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-02-MissingPeriodType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-03-NoPeriodTypeTuple.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-04-substitutionAllowed.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-04-substitutionItem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-05-substitutionItem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-06-substitutionItemValid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-08-substitutionTuple.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-09-substitutionTuple.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-10-substitutionTupleValid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-11-DerivedElementFromAnElementInAnotherSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\102-11-TheOtherSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\103-01-ComplexContentCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-01-SpecTupleExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-02-TupleExampleAnyOrder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-03-TupleExampleCardinality.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-04-TupleExampleComplexType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-05-TupleExampleNestedComplexType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-06-TupleCounterExampleNestedComplexType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-07-TupleChoiceExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-08-TupleAnyCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-09-TupleAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10-TupleXBRLAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10c-TupleXBRLAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10d1-TupleXBRLAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10d2-TupleXBRLAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10d3-TupleXBRLAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-10d4-TupleXBRLAttributeCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-11-TupleGroupCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-12-TupleMixedCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-13-TupleRestrictionExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-14-TupleNestedRestrictionExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-16-TupleAbstractCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-17-TupleAnonymousCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-18-base.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-18-redefine.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-19-abstractTuple.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-20-extreme-tuple-content-model.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\104-20-extreme-tuple-content-model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-01-ElementWithBalanceTypeNotMonetary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-02-TuplesMustHaveNoBalanceAttribute.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-03-ElementWithBalanceTypeMonetary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-04-DerivedElementWithBalanceTypeMonetary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-04-DerivedElementWithBalanceTypeMonetary.xsx">
+      <DependentUpon>105-04-DerivedElementWithBalanceTypeMonetary.xsd</DependentUpon>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\105-05-DerivedElementWithBalanceTypeString.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-01-NonEmptyTargetNamespace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-02-EmptyTargetNamespace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-03-ExtTargetNamespace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-03-TargetNamespace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-04-ExtTargetNamespace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\106-04-NoTargetNamespace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\107-01-SchemaContainingALinkbase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\107-01-SchemaLinkingToALinkbaseInAnotherSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-05.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\114-lax-validation-defs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\115-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\115-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\115-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\115-04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\155-TypeExtension-Valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-01-roleType-standard-linkbase-incorrect-element-Invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-02-roleType-standard-linkbase-incorrect-element-Invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-04-roleType-non-standard-linkbase-incorrect-element-Valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-05-roleType-non-standard-linkbase-incorrect-element-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-custom-elements-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-custom-elements-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-custom-roleType-hidden-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-custom-roleType-hidden-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\160-custom-roleType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-01-roleType-id-missing-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-02-roleType-id-notncname-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-03-roleType-uri-missing-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-04-roleType-uri-empty-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-05-roleType-uri-notabsolute-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-11-arcroleType-id-missing-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-12-arcroleType-id-notncname-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-13-arcroleType-uri-missing-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-14-arcroleType-uri-empty-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-15-arcroleType-uri-noturi-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\161-16-arcroleType-cyclesAllowedAll-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\ArcroleUsedOnNonArcElements.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\RoleUsedOnArcElement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\UsedOnSEquality-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\100-schema\UsedOnSEquality-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-01-LinkbaseRefCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-02-LinkbaseRef.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-03-LinkbaseRefXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-04-LinkbaseRefLabelCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-05-LinkbaseRefReferenceCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-06-LinkbaseRefDefinitionCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-07-LinkbaseRefPresentationCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-08-LinkbaseRefCalculationCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-09-LinkbaseRefMultipleExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\201-10-InvalidLinbaseRefInSecondAppinfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-01-HrefResolution.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-02-HrefResolutionCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-02a-HrefResolutionCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-02b-HrefResolutionCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03a-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03b-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03c-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03d-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03e-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-03g-HrefResolutionXMLBase-attribute.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-05-ElementLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-06-DuplicateLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-07-ShorthandPointerExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-08-XPointerLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-09-ElementSchemeXPointerLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-10-ElementSchemeXPointerLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-11-ElementSchemeXPointerLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-12-ElementSchemeXPointerLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\202-13-ElementSchemeXPointerLocatorExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-01-ItemNoneSummationNone.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-02-ItemCreditSumCreditWeight+1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-03-ItemCreditSumCreditWeight-1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-04-ItemDebitSumCreditWeight+1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-05-ItemDebitSumCreditWeight-1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-06-ItemCreditSumDebitWeight+1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-07-ItemCreditSumDebitWeight-1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-08-ItemDebitSumDebitWeight+1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-09-ItemDebitSumDebitWeight-1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\208-10-WeightNotZero.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-01-DifferentWeights.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-02-DifferentPreferredLabels.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-03-SameDefinitionArcs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\209-04-DifferentArcroles.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-01-RelationshipEquivalence.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-02-DifferentOrder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-03-MissingOrder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-04-RelationshipEquivalence.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\210-05-RelationshipEquivalence.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\211-00-NonSEqualUsedOn-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\211-01-SEqualUsedOnSamePrefixSameNamespace-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\211-02-SEqualUsedOnDifferentPrefixesSameNamespace-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\211-03-NonSEqualUsedOnSamePrefixDifferentNamespaces-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-01-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-02-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-03-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-04-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-05-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-06-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-07-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-08-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-09-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\212-10-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-01-SummationNumeric_ItemNumeric.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-02-SummationNonNumeric_ItemNumeric.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\213-03-SummationNumeric_ItemNonNumeric.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\214-lax-validation-defs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-05.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-06.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-07.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-08.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\215-10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-01-NonStandardArcrole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-02-NonStandardArcWithUndefinedArcrole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-03-CycleInUnreferencedArcrole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-04-StandardArcWithUnreferencedArcrole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-05-UsedOnSignificanceOnCustomArc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-06-Arcrole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-06-Concepts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-06-Taxonomy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\220-08-Taxonomy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-01-Custom-linkbase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-01-LocatorToADocumentWithoutFragment-T1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-01-LocatorToADocumentWithoutFragment-T2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-01-LocatorToADocumentWithoutFragment.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-02-BadTaxonomy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-02-Custom-linkbase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\230-02-ElementInLinkLocSubGroup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\231-01-ArcsAreNotEqualButTheyLookAsEqual.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\231-01-ArcsAreNotEqualButTheyLookAsEqual.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\231-02-ArcsAreNotEqualButTheyLookAsEqual.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-01-ArcsUsingNonCanonicalDecimalOrder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-01-ArcsUsingNonCanonicalDecimalOrderInconsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-02-ArcsUsingNonCanonicalDecimalOrderConsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-03-ArcsUsingNonCanonicalDecimalWeight.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-03-ArcsUsingNonCanonicalDecimalWeightInconsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\232-04-ArcsUsingNonCanonicalDecimalWeightConsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-02-ArcOverrideLabelLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-03-ArcOverrideLabelLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-04-ArcOverrideDisjointLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-05-ArcOverrideDisjointLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-06-ArcOverrideDisjointLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-07-ArcOverrideLabelLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-08-ArcOverrideLabelLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-09-ArcOverrideLabelLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-10-ArcOverrideDisjointLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-11-ArcOverrideReferenceLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-12-ArcOverrideReferenceLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-13-ArcOverrideReferenceLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-14-ArcOverrideReferenceLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\291-15-ArcOverrideReferenceLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\292-00-Embeddedlinkbaseinthexsd.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\292-01-Embeddedlinkbaseinthexsd.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\292-02-EmbeddedLinkbaseAndLinkbaseRef.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\292-03-EmbeddedLinkbaseSecondInvalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-01-RoleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-02-RoleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-03-RoleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-04-RoleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-05-ArcroleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-06-ArcroleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-07-ArcroleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\293-08-ArcroleTypeUsedOnValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustNCcustLink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustRolesDC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesCustRolesNC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesEADC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesEAUC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDCcustArc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSDCcustLink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCcustArc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCcustLink.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSNCWR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSUC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSWDCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesGSWUCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCDC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCNCWR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCUC-2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCUC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesPCWCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIDC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSINCWR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIUC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcCyclesSIWCExtension.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcOverrideDisjointLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBR2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleBU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleCustomEndPoints.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR2a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleDR3a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\ArcRoleG.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\202-03g-HrefResolutionXMLBase-attribute.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\202-03f-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\202-03g-HrefResolutionXMLBase-attribute.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\202-03g-HrefResolutionXMLBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\base\base\base\202-03g-HrefResolutionXMLBase-attribute.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesDU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesND.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNU2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNUE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesNUE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUDE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUDE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUUE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\DecArcCyclesUUE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\LinkbaseRef.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\NonStandardLinks.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-incomplete-multi-languageset.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-invalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-invalid2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\prefLabel-single-language-valid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleE2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleEBR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleL.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleLDR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBRSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSBUSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDR.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDR2Schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDRI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDRI2Schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDRISchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSDRSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\200-linkbase\RoleSSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\301-17-FootnoteCustomArcRole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-11-DecimalAttributeOnSegmentInconsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\302-12-DecimalAttributeOnScenarioInconsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-05-ForeverElementewithInstancePeriodTypeReportedasForever.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\303-05-ForeverSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-01-monetaryItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-03-monetaryItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-05-monetaryItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-10-pureItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-12-pureItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-13-sharesItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-14-sharesItemTypeUnitsRestrictions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-16-unitsInSimplestForm.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-23-Calculation-item-does-not-match-unit.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-25-measure-reported-with-prefix-undefined-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-25-measure-reported-with-prefix-undefined.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\304-multiple-unitsEquality.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-decimalPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305-decimalPrecisionFixed.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305_07_decimals_test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\305_07_invalid_instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\306-Required.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\308-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\308-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-01-second-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-custom-linkbase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\310-SimpleTaxonomy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\314-lax-validation-defs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-00-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-01-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-02-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-03-nestedtupleBindCalc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-03-nestedtupleBindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-04-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-05-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-06-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-07-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-08-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-09-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-10-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-11-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-12-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-13-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-14-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-15-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-16-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-17-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-17-BindCalculationInferPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-18-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-18-BindCalculationInferPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-19-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-20-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-21-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-22-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-23-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-24-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-24-BindCalculationInferPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-25-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-26-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-26-BindCalculationInferPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-30-BindCalculationInferDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-31-BindCalculationInferDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-32-BindCalculationInferDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-33-BindCalculationInferDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-34-BindCalculationInferDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-35-BindCalculationInferDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-71-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-72-BindCalculationInferPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\320-BindCalculationInferPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\321-01-internationalization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-00-BindCalculationDefaultDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-01-BindCalculationDefaultDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-02-BindCalculationDefaultPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-03-BindCalculationDefaultPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-04-BindCalculationFixedDecimals-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-05-BindCalculationFixedPrecision-instance.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\322-XmlXbrlInteraction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\330-s-equal-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\331-equivalentRelationships-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\391-inferDecimalPrecision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-12-EssenceAliasInvalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-13-EssenceAlias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-18-Essence-Alias-tuplesInvalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-19-Essence-Alias-itemDerivedvalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-19-Essence-Alias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-Essence-Alias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\392-String-EssenceAlias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-00-ConsistentInstance-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-01-InconsistentInstance-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-02-NonCEqualContributing-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-03-NonUEqualContributing-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-04-SEqualContextsAndUnitsContributing-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-05-BothNilContributing-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-06-OneNilContributing-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-07-OneNilContributing-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-08-OneContributing-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-09-OneContributing-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-10-NilSummationItem-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-11-DuplicateSummationItems-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-12-DuplicateContributingItems-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-13-InconsistentWithinTuple-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-14-SeparateTuplesConsistent-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-15-ContributingWithinTuples-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-16-MultiLevelBinding-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-17-ConsistentCountdown-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-18-InconsistentCountdown-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-19-DuplicateCountdown-valid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-20-NoSummationItemInference-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-21-NoEssenceAliasInference-invalid.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-22-TopAndTuple-inconsistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-23-TopAndTuple-consistent.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-24-PrecisionZeroRoundUp.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-25-PrecisionZeroRoundDown.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-26-DecimalsTrailingDigits.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-27-DecimalsTrailingDigits.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-28-PrecisionDifferentScales.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-29-StatedPrecisionZeroContributions.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-30-InferredPrecisionZeroContributions.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-ABC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-Holder.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\397-XYZ.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\398-NilTuple.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\398-NilTuple.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\base\SchemaRefTrickyExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\base\SchemaRefXMLBaseExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\bi-locational-dim-concepts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\DecimalAttributeOnSegmentOrScenario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\EssenceAlias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\IdScope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\Nautilus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\Period.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\Required.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\ScenarioEmptyContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\ScenarioSubstitutionInvalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\ScenarioValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SchemaRefCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SchemaRefExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SchemaRefTrickyExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SegmentEmptyContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SegmentSubstitutionInvalid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SegmentValid.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SummationItem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SummationItemDefaultContributor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\SummationItemDefaultScenario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\300-instance\typedDimContentValidity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-03-singleNestedSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-04-multipleNestedSchemas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-05-singleNestedLinkbase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-06-multipleNestedLinkbases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-nestedInstanceTaxonomySchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\400-xbrlEnvelope.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\401-00-instance_nonexistentQNamedFactValue_withSchemaRef.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\401-01-instance_invalidQNamedElementwithinFactValue_withSchemaRef.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\401-02-instance_FactValuewith_with_qname_value.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\401-03-instance_QnameFactValue_withSchemaRef.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\401-04-instance_QnameFactValue_withSchemaRef.xbrl" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\schemaforqnamevalue.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\400-misc\schema_with_qname_datatype.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\lib\ptv-2003-12-31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\lib\test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\lib\testinstancexsdns.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\all-wcprops" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\entries" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\prop-base\arc-duplication-testcase.xml.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04-XLinkLabelCounterExample-definition.xml.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04-XLinkLabelCounterExample.xsd.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04a-XLinkLabelCounterExample-presentation.xml.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04a-XLinkLabelCounterExample.xsd.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04b-XLinkLabelCounterExample-label.xml.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04b-XLinkLabelCounterExample.xsd.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\202-04c-XLinkLabelCounterExample.xsd.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\text-base\arc-duplication-testcase.xml.svn-base" />
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04-XLinkLabelCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04a-XLinkLabelCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04b-XLinkLabelCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\202-04c-XLinkLabelCounterExample.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-04.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-05.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xml-schema\uniqueParticleAttribution\uniqueParticleAttribution-06.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XBRL-CONF-CR5-2012-01-24\XBRL-CONF-CR5-2012-01-24.rtf" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -1390,6 +3445,10 @@
     <Folder Include="inlineXBRL-conformanceSuite-2010-04-20\output\files\" />
     <Folder Include="inlineXBRL-conformanceSuite-2010-04-20\output\schemas\" />
     <Folder Include="inlineXBRL-conformanceSuite-2010-04-20\output\stylesheets\" />
+    <Folder Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\props\" />
+    <Folder Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\tmp\prop-base\" />
+    <Folder Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\tmp\props\" />
+    <Folder Include="XBRL-CONF-CR5-2012-01-24\Common\related-standards\xlink\arc-duplication\.svn\tmp\text-base\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

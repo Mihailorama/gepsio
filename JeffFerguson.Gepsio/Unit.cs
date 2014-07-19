@@ -1,66 +1,66 @@
-using System.Xml;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
-	/// <summary>
-	/// A definition of a unit of measure used by numeric or fractional facts within the
-	/// XBRL document. XBRL allows more complex units to be defined if necessary. Facts
-	/// of a monetary nature must use a unit from the ISO 4217 namespace.
-	/// </summary>
+    /// <summary>
+    /// A definition of a unit of measure used by numeric or fractional facts within the
+    /// XBRL document. XBRL allows more complex units to be defined if necessary. Facts
+    /// of a monetary nature must use a unit from the ISO 4217 namespace.
+    /// </summary>
     public class Unit
     {
-        private XmlNode thisUnitNode;
+        private INode thisUnitNode;
         private List<QualifiedName> thisRatioNumeratorQualifiedNames;
         private List<QualifiedName> thisRatioDenominatorQualifiedNames;
 
-		/// <summary>
-		/// The ID of this unit.
-		/// </summary>
-		public string Id
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// The ID of this unit.
+        /// </summary>
+        public string Id
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// A collection of <see cref="QualifiedName"/> objects representing the set of measure qualified names for this unit.
-		/// </summary>
-		public List<QualifiedName> MeasureQualifiedNames
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// A collection of <see cref="QualifiedName"/> objects representing the set of measure qualified names for this unit.
+        /// </summary>
+        public List<QualifiedName> MeasureQualifiedNames
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// Region information for this unit.
-		/// </summary>
-		public RegionInfo RegionInformation
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// Region information for this unit.
+        /// </summary>
+        public RegionInfo RegionInformation
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// Culture information for this unit.
-		/// </summary>
-		public CultureInfo CultureInformation
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// Culture information for this unit.
+        /// </summary>
+        public CultureInfo CultureInformation
+        {
+            get;
+            private set;
+        }
 
-		/// <summary>
-		/// Describes whether or not this unit represents a ratio. Returns true if this unit represents a ratio.
-		/// Returns false if this unit does not represent a ratio.
-		/// </summary>
-		public bool Ratio
-		{
-			get;
-			private set;
-		}
+        /// <summary>
+        /// Describes whether or not this unit represents a ratio. Returns true if this unit represents a ratio.
+        /// Returns false if this unit does not represent a ratio.
+        /// </summary>
+        public bool Ratio
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// The <see cref="XbrlFragment"/> which contains the unit.
@@ -71,17 +71,17 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        internal Unit(XbrlFragment fragment, XmlNode UnitNode)
+        internal Unit(XbrlFragment fragment, INode UnitNode)
         {
             this.Fragment = fragment;
-			this.RegionInformation = null;
+            this.RegionInformation = null;
             thisUnitNode = UnitNode;
             this.Id = thisUnitNode.Attributes["id"].Value;
             this.MeasureQualifiedNames = new List<QualifiedName>();
             this.Ratio = false;
             thisRatioNumeratorQualifiedNames = new List<QualifiedName>();
             thisRatioDenominatorQualifiedNames = new List<QualifiedName>();
-            foreach (XmlNode CurrentChild in UnitNode.ChildNodes)
+            foreach (INode CurrentChild in UnitNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
                     this.MeasureQualifiedNames.Add(new QualifiedName(CurrentChild));
@@ -109,9 +109,9 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        private void ProcessDivideChildElement(XmlNode UnitDivideNode)
+        private void ProcessDivideChildElement(INode UnitDivideNode)
         {
-            foreach (XmlNode CurrentChild in UnitDivideNode.ChildNodes)
+            foreach (INode CurrentChild in UnitDivideNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("unitNumerator") == true)
                     ProcessUnitNumerators(CurrentChild);
@@ -120,18 +120,18 @@ namespace JeffFerguson.Gepsio
             }
         }
 
-        private void ProcessUnitDenominators(XmlNode UnitDivideDenominatorNode)
+        private void ProcessUnitDenominators(INode UnitDivideDenominatorNode)
         {
-            foreach (XmlNode CurrentChild in UnitDivideDenominatorNode.ChildNodes)
+            foreach (INode CurrentChild in UnitDivideDenominatorNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
                     thisRatioDenominatorQualifiedNames.Add(new QualifiedName(CurrentChild));
             }
         }
 
-        private void ProcessUnitNumerators(XmlNode UnitDivideNumeratorNode)
+        private void ProcessUnitNumerators(INode UnitDivideNumeratorNode)
         {
-            foreach (XmlNode CurrentChild in UnitDivideNumeratorNode.ChildNodes)
+            foreach (INode CurrentChild in UnitDivideNumeratorNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
                     thisRatioNumeratorQualifiedNames.Add(new QualifiedName(CurrentChild));
@@ -160,8 +160,8 @@ namespace JeffFerguson.Gepsio
                 RegionInfo CurrentRegionInfo = new RegionInfo(CurrentCultureInfo.LCID);
                 if (CurrentRegionInfo.ISOCurrencySymbol == Iso4217Code)
                 {
-					this.CultureInformation = CurrentCultureInfo;
-					this.RegionInformation = CurrentRegionInfo;
+                    this.CultureInformation = CurrentCultureInfo;
+                    this.RegionInformation = CurrentRegionInfo;
                     return;
                 }
             }
@@ -184,8 +184,8 @@ namespace JeffFerguson.Gepsio
                 RegionInfo CurrentRegionInfo = new RegionInfo(CurrentCultureInfo.LCID);
                 if (CurrentRegionInfo.Name == RegionInfoName)
                 {
-					this.CultureInformation = CurrentCultureInfo;
-					this.RegionInformation = CurrentRegionInfo;
+                    this.CultureInformation = CurrentCultureInfo;
+                    this.RegionInformation = CurrentRegionInfo;
                     return;
                 }
             }

@@ -1,6 +1,6 @@
-﻿using System.Xml;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -38,7 +38,7 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal LabelLink(XmlNode LabelLinkNode)
+        internal LabelLink(INode LabelLinkNode)
         {
             this.Locators = new List<Locator>();
             this.LabelArcs = new List<LabelArc>();
@@ -69,9 +69,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void ReadChildLabelArcs(XmlNode LabelLinkNode)
+        private void ReadChildLabelArcs(INode LabelLinkNode)
         {
-            foreach (XmlNode CurrentChildNode in LabelLinkNode.ChildNodes)
+            foreach (INode CurrentChildNode in LabelLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("labelArc") == true)
                     this.LabelArcs.Add(new LabelArc(CurrentChildNode));
@@ -80,9 +80,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void ReadChildLocators(XmlNode LabelLinkNode)
+        private void ReadChildLocators(INode LabelLinkNode)
         {
-            foreach (XmlNode CurrentChildNode in LabelLinkNode.ChildNodes)
+            foreach (INode CurrentChildNode in LabelLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("loc") == true)
                     this.Locators.Add(new Locator(CurrentChildNode));
@@ -91,9 +91,9 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        private void ReadChildLabels(XmlNode LabelLinkNode)
+        private void ReadChildLabels(INode LabelLinkNode)
         {
-            foreach (XmlNode CurrentChildNode in LabelLinkNode.ChildNodes)
+            foreach (INode CurrentChildNode in LabelLinkNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("label") == true)
                     this.Labels.Add(new Label(CurrentChildNode));
