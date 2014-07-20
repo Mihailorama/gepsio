@@ -260,4 +260,7 @@
   <data name="CannotFindFootnoteLocatorOrFootnote" xml:space="preserve">
     <value>Footnote arc {0} references a resource with a label of {1}, but no locator or footnote can be found.</value>
   </data>
+  <data name="WrongMeasureNamespaceForSharesFact" xml:space="preserve">
+    <value>Fact {0} is defined as a shares item type. The fact also references a unit named {1}. The unit defines a measure referencing a namespace of {2}. This differs from the standard shares unit namespace of http://www.xbrl.org/2003/instance. Shares-based unit measures must reference the http://www.xbrl.org/2003/instance namespace.</value>
+  </data>
 </root>

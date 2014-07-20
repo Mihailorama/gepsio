@@ -446,5 +446,14 @@ namespace JeffFerguson.Gepsio {
                 return ResourceManager.GetString("WrongMeasureNamespaceForMonetaryFact", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a shares item type. The fact also references a unit named {1}. The unit defines a measure referencing a namespace of {2}. This differs from the standard shares unit namespace of http://www.xbrl.org/2003/instance. Shares-based unit measures must reference the http://www.xbrl.org/2003/instance namespace..
+        /// </summary>
+        internal static string WrongMeasureNamespaceForSharesFact {
+            get {
+                return ResourceManager.GetString("WrongMeasureNamespaceForSharesFact", resourceCulture);
+            }
+        }
     }
 }

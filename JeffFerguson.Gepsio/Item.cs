@@ -491,7 +491,7 @@ namespace JeffFerguson.Gepsio
             string UnitMeasureLocalName = string.Empty;
             Unit UnitReference = UnitRef;
             if (UnitReference.MeasureQualifiedNames.Count != 1)
-                SharesMeasureFound = false;
+                SharesMeasureFound = false;            
             if (SharesMeasureFound == true)
             {
                 UnitMeasureLocalName = UnitReference.MeasureQualifiedNames[0].LocalName;
@@ -502,6 +502,20 @@ namespace JeffFerguson.Gepsio
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("SharesItemTypeUnitLocalNameNotShares");
                 MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitMeasureLocalName);
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
+                return;
+            }
+            var SharesNamespaceCorrect = true;
+            string Uri = UnitReference.MeasureQualifiedNames[0].NamespaceUri;
+            if (string.IsNullOrEmpty(Uri) == true)
+                SharesNamespaceCorrect = false;
+            else if (Uri.Equals("http://www.xbrl.org/2003/instance") == false)
+                SharesNamespaceCorrect = false;
+            if(SharesNamespaceCorrect == false)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForSharesFact");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, Uri);
                 thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
         }

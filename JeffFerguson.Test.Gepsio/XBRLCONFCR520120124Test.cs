@@ -138,7 +138,13 @@ namespace JeffFerguson.Test.Gepsio
                     failMessage.AppendFormat("Validation Error Description: {0}{1}", currentValidationError.Message, Environment.NewLine);
                 }
             }
-            Debug.WriteLine("*** FAIL ***");
+            Debug.WriteLine("***");
+            Debug.Write("*** FAIL *** [");
+            if (CurrentVariation.ValidityExpected == true)
+                Debug.WriteLine("Gepsio failed a test expected to pass.]");
+            else
+                Debug.WriteLine("Gepsio passed a test expected to fail.]");
+            Debug.WriteLine("***");
             Debug.WriteLine(failMessage.ToString());
             Assert.Fail(failMessage.ToString());
         }
