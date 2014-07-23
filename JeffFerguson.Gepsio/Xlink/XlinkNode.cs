@@ -45,55 +45,55 @@ namespace JeffFerguson.Gepsio.Xlink
         public string TypeAttributeValue { get; private set; }
 
         /// <summary>
-        /// The value of the node's "href" attribute. This valus is the empty string
+        /// The value of the node's "href" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string Href { get; private set; }
 
         /// <summary>
-        /// The value of the node's "role" attribute. This valus is the empty string
+        /// The value of the node's "role" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string Role { get; private set; }
 
         /// <summary>
-        /// The value of the node's "arcrole" attribute. This valus is the empty string
+        /// The value of the node's "arcrole" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string ArcRole { get; private set; }
 
         /// <summary>
-        /// The value of the node's "title" attribute. This valus is the empty string
+        /// The value of the node's "title" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string Title { get; private set; }
 
         /// <summary>
-        /// The value of the node's "show" attribute. This valus is the empty string
+        /// The value of the node's "show" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string Show { get; private set; }
 
         /// <summary>
-        /// The value of the node's "actuate" attribute. This valus is the empty string
+        /// The value of the node's "actuate" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string Actuate { get; private set; }
 
         /// <summary>
-        /// The value of the node's "label" attribute. This valus is the empty string
+        /// The value of the node's "label" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string Label { get; private set; }
 
         /// <summary>
-        /// The value of the node's "from" attribute. This valus is the empty string
+        /// The value of the node's "from" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string From { get; private set; }
 
         /// <summary>
-        /// The value of the node's "to" attribute. This valus is the empty string
+        /// The value of the node's "to" attribute. This value is the empty string
         /// if the attribute was not found on the node.
         /// </summary>
         public string To { get; private set; }

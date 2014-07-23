@@ -70,6 +70,26 @@ namespace JeffFerguson.Gepsio
             ReadLinkbaseNode();
         }
 
+        /// <summary>
+        /// Finds the <see cref="CalculationLink"/> object having the given role.
+        /// </summary>
+        /// <param name="CalculationLinkRole">
+        /// The role type to find.
+        /// </param>
+        /// <returns>
+        /// The <see cref="CalculationLink"/> object having the given role, or
+        /// null if no object can be found.
+        /// </returns>
+        public CalculationLink GetCalculationLink(RoleType CalculationLinkRole)
+        {
+            foreach (var currentCalculationLink in CalculationLinks)
+            {
+                if (currentCalculationLink.RoleUri.Equals(CalculationLinkRole.RoleUri) == true)
+                    return currentCalculationLink;
+            }
+            return null;
+        }
+
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         private void ReadLinkbaseNode()

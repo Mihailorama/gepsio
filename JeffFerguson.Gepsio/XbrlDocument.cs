@@ -155,5 +155,47 @@ namespace JeffFerguson.Gepsio
             foreach(INode XbrlNode in XbrlNodes)
                 thisXbrlFragments.Add(new XbrlFragment(this, XbrlNode));
         }
+
+        /// <summary>
+        /// Finds the <see cref="RoleType"/> object having the given ID.
+        /// </summary>
+        /// <param name="RoleTypeId">
+        /// The ID of the role type to find.
+        /// </param>
+        /// <returns>
+        /// The <see cref="RoleType"/> object having the given ID, or null if no
+        /// object can be found.
+        /// </returns>
+        public RoleType GetRoleType(string RoleTypeId)
+        {
+            foreach (var currentFragment in XbrlFragments)
+            {
+                var roleTypeCandidate = currentFragment.GetRoleType(RoleTypeId);
+                if (roleTypeCandidate != null)
+                    return roleTypeCandidate;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Finds the <see cref="CalculationLink"/> object having the given role.
+        /// </summary>
+        /// <param name="CalculationLinkRole">
+        /// The role type to find.
+        /// </param>
+        /// <returns>
+        /// The <see cref="CalculationLink"/> object having the given role, or
+        /// null if no object can be found.
+        /// </returns>
+        public CalculationLink GetCalculationLink(RoleType CalculationLinkRole)
+        {
+            foreach (var currentFragment in XbrlFragments)
+            {
+                var calculationLinkCandidate = currentFragment.GetCalculationLink(CalculationLinkRole);
+                if (calculationLinkCandidate != null)
+                    return calculationLinkCandidate;
+            }
+            return null;
+        }
     }
 }

@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PerformanceTests.cs" />
+    <Compile Include="RoleTypeTests.cs" />
     <Compile Include="XBRLCONFCR320070305Test.cs" />
     <Compile Include="InferPrecisionTest.cs" />
     <Compile Include="iXBRLTests.cs" />
@@ -112,6 +113,11 @@
     <Content Include="PerformanceTests\aig20130630\aig-20130630_def.xml" />
     <Content Include="PerformanceTests\aig20130630\aig-20130630_lab.xml" />
     <Content Include="PerformanceTests\aig20130630\aig-20130630_pre.xml" />
+    <Content Include="RoleType\tgt-20130202.xml" />
+    <Content Include="RoleType\tgt-20130202_cal.xml" />
+    <Content Include="RoleType\tgt-20130202_def.xml" />
+    <Content Include="RoleType\tgt-20130202_lab.xml" />
+    <Content Include="RoleType\tgt-20130202_pre.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\README.txt" />
     <Content Include="uk-gaap-samples-2008-06-20\samples\accounting-policies-dimension.xml" />
     <Content Include="uk-gaap-samples-2008-06-20\samples\balance-sheet-individual-foreign-currency.xml" />
@@ -1738,6 +1744,9 @@
     <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-04.example" />
     <None Include="inlineXBRL-conformanceSuite-2010-04-20\testCases\PASS-ix-references-05.example" />
     <None Include="PerformanceTests\aig20130630\aig-20130630.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RoleType\tgt-20130202.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="uk-gaap-samples-2008-06-20\samples\a.qvw" />

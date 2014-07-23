@@ -174,6 +174,47 @@ namespace JeffFerguson.Gepsio
             return thisLookupElements[ElementName].FirstOrDefault();
         }
 
+        /// <summary>
+        /// Finds the <see cref="RoleType"/> object having the given ID.
+        /// </summary>
+        /// <param name="RoleTypeId">
+        /// The ID of the role type to find.
+        /// </param>
+        /// <returns>
+        /// The <see cref="RoleType"/> object having the given ID, or null if no
+        /// object can be found.
+        /// </returns>
+        public RoleType GetRoleType(string RoleTypeId)
+        {
+            foreach (var currentRoleType in RoleTypes)
+            {
+                if (currentRoleType.Id.Equals(RoleTypeId) == true)
+                    return currentRoleType; 
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Finds the <see cref="CalculationLink"/> object having the given role.
+        /// </summary>
+        /// <param name="CalculationLinkRole">
+        /// The role type to find.
+        /// </param>
+        /// <returns>
+        /// The <see cref="CalculationLink"/> object having the given role, or
+        /// null if no object can be found.
+        /// </returns>
+        public CalculationLink GetCalculationLink(RoleType CalculationLinkRole)
+        {
+            foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+            {
+                var calculationLinkCandidate = currentLinkbaseDocument.GetCalculationLink(CalculationLinkRole);
+                if (calculationLinkCandidate != null)
+                    return calculationLinkCandidate;
+            }
+            return null;
+        }
+
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
         private string GetFullSchemaPath(string SchemaFilename, string BaseDirectory)

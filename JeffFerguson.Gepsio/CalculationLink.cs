@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using JeffFerguson.Gepsio.Xlink;
 using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
     /// <summary>
     /// An encapsulation of the XBRL element "calculationLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
     /// </summary>
-    public class CalculationLink
+    public class CalculationLink : XlinkNode
     {
 
         /// <summary>
@@ -45,14 +47,28 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
+        /// <summary>
+        /// The URI of the role for this calculation link.
+        /// </summary>
+        /// <remarks>
+        /// See http://gepsio.wordpress.com/2014/03/12/searching-for-balance-sheet-calculations-with-the-sep-2013-ctp
+        /// for more information regarding the rationale for this property.
+        /// </remarks>
+        public Uri RoleUri
+        {
+            get;
+            private set;
+        }
+
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal CalculationLink(LinkbaseDocument linkbaseDoc, INode CalculationLinkNode)
+        internal CalculationLink(LinkbaseDocument linkbaseDoc, INode CalculationLinkNode) : base(CalculationLinkNode)
         {
             this.Linkbase = linkbaseDoc;
             this.Locators = new List<Locator>();
             this.CalculationArcs = new List<CalculationArc>();
             this.SummationConcepts = new List<SummationConcept>();
+            this.RoleUri = new Uri(this.Role);
             ReadChildLocators(CalculationLinkNode);
             ReadChildCalculationArcs(CalculationLinkNode);
             ResolveLocators();
