@@ -44,14 +44,14 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        internal QualifiedName(INode QnameNode)
+        internal QualifiedName(INode QnameNode, INamespaceManager namespaceManager)
         {
             InitializeLocalNameAndNamespace(QnameNode);
             if (this.Namespace.Length > 0)
-                InitializeNamespaceUri(QnameNode);
+                InitializeNamespaceUri(QnameNode, namespaceManager);
         }
 
-        private void InitializeNamespaceUri(INode QnameNode)
+        private void InitializeNamespaceUri(INode QnameNode, INamespaceManager namespaceManager)
         {
             if (this.Namespace.Length == 0)
             {
@@ -60,6 +60,8 @@ namespace JeffFerguson.Gepsio
             }
             string AttributeName = "xmlns:" + this.Namespace;
             this.NamespaceUri = QnameNode.GetAttributeValue(AttributeName);
+            if (string.IsNullOrEmpty(this.NamespaceUri) == true)
+                this.NamespaceUri = namespaceManager.LookupNamespace(this.Namespace);
         }
 
         private void InitializeLocalNameAndNamespace(INode QnameNode)

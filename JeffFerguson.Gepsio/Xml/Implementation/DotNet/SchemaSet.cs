@@ -60,18 +60,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
 
         public void Compile()
         {
-            try
-            {
-                thisSchemaSet.Compile();
-            }
-            catch (XmlSchemaException e)
-            {
-                throw;
-            }
-            catch (System.Exception e2)
-            {
-                throw;
-            }
+            thisSchemaSet.Compile();
         }
 
         public SchemaSet()

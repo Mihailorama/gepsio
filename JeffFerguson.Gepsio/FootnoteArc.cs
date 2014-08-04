@@ -65,6 +65,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The footnote referenced by the "from" portion of the footnote arc.
         /// </summary>
+        /// <remarks>
         /// This value will be valid only if the <see cref="FromSource"/> property
         /// has a value of <see cref="FromSources.Footnote"/>. If the property has any
         /// other value, then the value of this property will be null.

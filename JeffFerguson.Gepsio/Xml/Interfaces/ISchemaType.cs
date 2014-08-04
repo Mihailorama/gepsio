@@ -13,7 +13,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// knowledge of a specific implementation.
     /// </para>
     /// <para>
-    /// The <see cref="Container"/> class provides a simple container mechanism for resolving interface types
+    /// The <see cref="JeffFerguson.Gepsio.IoC.Container"/> class provides a simple container mechanism for resolving interface types
     /// into a specific implementation.
     /// </para>
     /// </remarks>

@@ -25,12 +25,33 @@ namespace JeffFerguson.Gepsio.Xlink
         /// </summary>
         public enum XlinkType
         {
+            /// <summary>
+            /// An unknown link type.
+            /// </summary>
             Unknown,
+            /// <summary>
+            /// The "simple" link type.
+            /// </summary>
             Simple,
+            /// <summary>
+            /// The "extended" link type.
+            /// </summary>
             Extended,
+            /// <summary>
+            /// The "locator" link type.
+            /// </summary>
             Locator,
+            /// <summary>
+            /// The "arc" link type.
+            /// </summary>
             Arc,
+            /// <summary>
+            /// The "resource" link type.
+            /// </summary>
             Resource,
+            /// <summary>
+            /// The "title" link type.
+            /// </summary>
             Title
         }
 

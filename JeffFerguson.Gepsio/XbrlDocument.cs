@@ -153,7 +153,7 @@ namespace JeffFerguson.Gepsio
             NewNamespaceManager.AddNamespace("instance", XbrlNamespaceUri);
             INodeList XbrlNodes = SchemaValidXbrl.SelectNodes("//instance:xbrl", NewNamespaceManager);
             foreach(INode XbrlNode in XbrlNodes)
-                thisXbrlFragments.Add(new XbrlFragment(this, XbrlNode));
+                thisXbrlFragments.Add(new XbrlFragment(this, NewNamespaceManager, XbrlNode));
         }
 
         /// <summary>

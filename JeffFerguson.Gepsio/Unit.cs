@@ -71,7 +71,9 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        internal Unit(XbrlFragment fragment, INode UnitNode)
+        private INamespaceManager namespaceManager;
+
+        internal Unit(XbrlFragment fragment, INode UnitNode, INamespaceManager namespaceManager)
         {
             this.Fragment = fragment;
             this.RegionInformation = null;
@@ -81,10 +83,11 @@ namespace JeffFerguson.Gepsio
             this.Ratio = false;
             thisRatioNumeratorQualifiedNames = new List<QualifiedName>();
             thisRatioDenominatorQualifiedNames = new List<QualifiedName>();
+            this.namespaceManager = namespaceManager;
             foreach (INode CurrentChild in UnitNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
-                    this.MeasureQualifiedNames.Add(new QualifiedName(CurrentChild));
+                    this.MeasureQualifiedNames.Add(new QualifiedName(CurrentChild, namespaceManager));
                 else if (CurrentChild.LocalName.Equals("divide") == true)
                 {
                     ProcessDivideChildElement(CurrentChild);
@@ -125,7 +128,7 @@ namespace JeffFerguson.Gepsio
             foreach (INode CurrentChild in UnitDivideDenominatorNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
-                    thisRatioDenominatorQualifiedNames.Add(new QualifiedName(CurrentChild));
+                    thisRatioDenominatorQualifiedNames.Add(new QualifiedName(CurrentChild, namespaceManager));
             }
         }
 
@@ -134,7 +137,7 @@ namespace JeffFerguson.Gepsio
             foreach (INode CurrentChild in UnitDivideNumeratorNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("measure") == true)
-                    thisRatioNumeratorQualifiedNames.Add(new QualifiedName(CurrentChild));
+                    thisRatioNumeratorQualifiedNames.Add(new QualifiedName(CurrentChild, namespaceManager));
             }
         }
 

@@ -194,15 +194,22 @@ namespace JeffFerguson.Gepsio
             }
         }
 
+        internal INamespaceManager NamespaceManager
+        {
+            get;
+            private set;
+        }
+
         #endregion
 
         #region Constructors
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        internal XbrlFragment(XbrlDocument ParentDocument, INode XbrlRootNode)
+        internal XbrlFragment(XbrlDocument ParentDocument, INamespaceManager namespaceManager, INode XbrlRootNode)
         {
             this.Document = ParentDocument;
+            this.NamespaceManager = namespaceManager;
             thisXbrlRootNode = XbrlRootNode;
             thisValidationErrors = new List<ValidationError>();
             CreateNamespaceManager();
@@ -648,7 +655,7 @@ namespace JeffFerguson.Gepsio
             thisUnits = new List<Unit>();
             INodeList UnitNodes = thisXbrlRootNode.SelectNodes("//instance:unit", thisNamespaceManager);
             foreach (INode UnitNode in UnitNodes)
-                thisUnits.Add(new Unit(this, UnitNode));
+                thisUnits.Add(new Unit(this, UnitNode, thisNamespaceManager));
         }
 
         //-------------------------------------------------------------------------------
