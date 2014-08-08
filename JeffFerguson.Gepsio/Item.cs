@@ -426,34 +426,52 @@ namespace JeffFerguson.Gepsio
 
         private void ValidateMonetaryType()
         {
-            Unit UnitReference = UnitRef;
-            if (UnitReference == null)
-                return;
-            if (UnitReference.MeasureQualifiedNames[0] == null)
+            if (UnitRef == null)
                 return;
 
-            string Uri = UnitReference.MeasureQualifiedNames[0].NamespaceUri;
+            // According to Table 3 in section 4.8.2 of the XBRL spec, monetary item units cannot use
+            // ratios; they must be single measures. This condition is checked by test 304.26 in the
+            // XBRL-CONF-CR5-2012-01-24 conformance suite.
+
+            if (UnitRef.Ratio == true)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("RatioFoundInMonetaryItemUnit");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitRef.Id);
+                thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
+                return;
+            }
+
+            // Validate the unit's measure, if it exists.
+
+            if (UnitRef.MeasureQualifiedNames.Count == 0)
+                return;
+            if (UnitRef.MeasureQualifiedNames[0] == null)
+                return;
+
+            string Uri = UnitRef.MeasureQualifiedNames[0].NamespaceUri;
             if (Uri == null)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
-                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, "unspecified");
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitRef.Id, "unspecified");
                 thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
+                return;
             }
-
             if ((Uri.Length > 0) && (Uri.Equals("http://www.xbrl.org/2003/iso4217") == false))
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
-                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].NamespaceUri);
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitRef.Id, UnitRef.MeasureQualifiedNames[0].NamespaceUri);
                 thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
+                return;
             }
-            UnitReference.SetCultureAndRegionInfoFromISO4217Code(UnitReference.MeasureQualifiedNames[0].LocalName);
-            if ((UnitReference.CultureInformation == null) && (UnitReference.RegionInformation == null))
+            UnitRef.SetCultureAndRegionInfoFromISO4217Code(UnitRef.MeasureQualifiedNames[0].LocalName);
+            if ((UnitRef.CultureInformation == null) && (UnitRef.RegionInformation == null))
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");
-                MessageBuilder.AppendFormat(StringFormat, Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].LocalName);
+                MessageBuilder.AppendFormat(StringFormat, Name, UnitRef.Id, UnitRef.MeasureQualifiedNames[0].LocalName);
                 thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
             }
         }

@@ -322,6 +322,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fact {0} is defined as a monetary item type. The fact also references a unit named {1}. The unit is a ratio-based complex type that defines a numerator and denominator. According to Table 3 of section 4.8.2 of the XBRL specification, units used for monetary items must be single measures rather than ratios..
+        /// </summary>
+        internal static string RatioFoundInMonetaryItemUnit {
+            get {
+                return ResourceManager.GetString("RatioFoundInMonetaryItemUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Context ID {0} contains a node in its scenario structure named &lt;{1}&gt;. This node is defined in the schema at {2} with a substitution group setting that references the XBRL namespace. XBRL namespace substitution group references are not allowed in context scenarios..
         /// </summary>
         internal static string ScenarioNodeUsingSubGroupInXBRLNamespace {

@@ -263,4 +263,7 @@
   <data name="WrongMeasureNamespaceForSharesFact" xml:space="preserve">
     <value>Fact {0} is defined as a shares item type. The fact also references a unit named {1}. The unit defines a measure referencing a namespace of {2}. This differs from the standard shares unit namespace of http://www.xbrl.org/2003/instance. Shares-based unit measures must reference the http://www.xbrl.org/2003/instance namespace.</value>
   </data>
+  <data name="RatioFoundInMonetaryItemUnit" xml:space="preserve">
+    <value>Fact {0} is defined as a monetary item type. The fact also references a unit named {1}. The unit is a ratio-based complex type that defines a numerator and denominator. According to Table 3 of section 4.8.2 of the XBRL specification, units used for monetary items must be single measures rather than ratios.</value>
+  </data>
 </root>

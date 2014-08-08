@@ -59,7 +59,12 @@ namespace JeffFerguson.Gepsio
                 return;
             }
             string AttributeName = "xmlns:" + this.Namespace;
-            this.NamespaceUri = QnameNode.GetAttributeValue(AttributeName);
+            var currentNode = QnameNode;
+            while ((currentNode != null) && (string.IsNullOrEmpty(this.NamespaceUri) == true))
+            {
+                this.NamespaceUri = currentNode.GetAttributeValue(AttributeName);
+                currentNode = currentNode.ParentNode;
+            }
             if (string.IsNullOrEmpty(this.NamespaceUri) == true)
                 this.NamespaceUri = namespaceManager.LookupNamespace(this.Namespace);
         }
