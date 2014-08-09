@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JeffFerguson.Gepsio.Xsd;
+using System.Collections.Generic;
 using System.Text;
 
 namespace JeffFerguson.Gepsio

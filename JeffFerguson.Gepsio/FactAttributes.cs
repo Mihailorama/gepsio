@@ -1,4 +1,5 @@
-﻿namespace JeffFerguson.Gepsio
+﻿using JeffFerguson.Gepsio.Xsd;
+namespace JeffFerguson.Gepsio
 {
     internal class FactAttributes : AttributeGroup
     {

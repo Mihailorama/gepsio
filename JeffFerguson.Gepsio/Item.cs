@@ -1,4 +1,5 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using JeffFerguson.Gepsio.Xsd;
 using System;
 using System.Text;
 
@@ -414,6 +415,9 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal void Validate()
         {
+            if(this.NilSpecified == true)
+            {
+            }
             if (IsMonetary())
                 ValidateMonetaryType();
             else if (IsPure())

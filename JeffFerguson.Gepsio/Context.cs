@@ -1,6 +1,5 @@
 using JeffFerguson.Gepsio.Xml.Interfaces;
-using System;
-using System.Collections.Generic;
+using JeffFerguson.Gepsio.Xsd;
 using System.Text;
 
 namespace JeffFerguson.Gepsio

@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
 using JeffFerguson.Gepsio.Xml.Interfaces;
+using JeffFerguson.Gepsio.Xsd;
 
 namespace JeffFerguson.Gepsio
 {

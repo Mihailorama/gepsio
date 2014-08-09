@@ -1,10 +1,11 @@
+using JeffFerguson.Gepsio.IoC;
+using JeffFerguson.Gepsio.Xml.Interfaces;
+using JeffFerguson.Gepsio.Xsd;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Linq;
-using JeffFerguson.Gepsio.Xml.Interfaces;
-using JeffFerguson.Gepsio.IoC;
+using System.Text;
 
 namespace JeffFerguson.Gepsio
 {

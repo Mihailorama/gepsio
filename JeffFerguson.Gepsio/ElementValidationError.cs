@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JeffFerguson.Gepsio.Xsd;
+using System;
 
 namespace JeffFerguson.Gepsio
 {
