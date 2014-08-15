@@ -52,10 +52,18 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
             thisNamespaceList = null;
         }
 
-        public void Read(string path)
-        {
-            var schemaReader = XmlTextReader.Create(path);
-            thisSchema = XmlSchema.Read(schemaReader, null);
+        public bool Read(string path)
+        {            
+            try
+            {
+                var schemaReader = XmlTextReader.Create(path);
+                thisSchema = XmlSchema.Read(schemaReader, null);
+                return true;
+            }
+            catch(XmlSchemaException e)
+            {
+                return false;
+            }
         }
     }
 }

@@ -119,19 +119,18 @@ namespace JeffFerguson.Gepsio
             try
             {
                 thisXmlSchema = Container.Resolve<ISchema>();
-                thisXmlSchema.Read(this.Path);
                 thisXmlSchemaSet = Container.Resolve<ISchemaSet>();
+                if(thisXmlSchema.Read(this.Path) == false)
+                {
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
+                    MessageBuilder.AppendFormat(StringFormat, this.Path);
+                    this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString()));
+                    return;
+                }                
                 thisXmlSchemaSet.Add(thisXmlSchema);
                 thisXmlSchemaSet.Compile();
             }
-            //catch (XmlSchemaException xmlSchemaEx)
-            //{
-            //    StringBuilder MessageBuilder = new StringBuilder();
-            //    string StringFormat = AssemblyResources.GetName("SchemaFileCandidateDoesNotContainSchemaRootNode");
-            //    MessageBuilder.AppendFormat(StringFormat, this.Path);
-            //    this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString(), xmlSchemaEx));
-            //    return;
-            //}
             catch (WebException webEx)
             {
                 StringBuilder MessageBuilder = new StringBuilder();

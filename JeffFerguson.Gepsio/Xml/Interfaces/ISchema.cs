@@ -22,6 +22,6 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     {
         List<IQualifiedName> Namespaces { get; }
 
-        void Read(string path);
+        bool Read(string path);
     }
 }
