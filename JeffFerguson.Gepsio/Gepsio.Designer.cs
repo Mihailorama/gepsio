@@ -133,6 +133,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arcrole reference URI {0} is used in more than one arcrole reference. Every arcrole reference must use a URI unique to the XBRL fragment..
+        /// </summary>
+        internal static string DuplicateArcroleReferenceUri {
+            get {
+                return ResourceManager.GetString("DuplicateArcroleReferenceUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Role reference URI {0} is used in more than one role reference. Every role reference must use a URI unique to the XBRL fragment..
         /// </summary>
         internal static string DuplicateRoleReferenceUri {

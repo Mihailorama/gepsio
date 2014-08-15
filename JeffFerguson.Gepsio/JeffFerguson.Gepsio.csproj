@@ -71,6 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArcroleReference.cs" />
+    <Compile Include="ArcroleReferenceValidationError.cs" />
     <Compile Include="RoleReference.cs" />
     <Compile Include="RoleReferenceValidationError.cs" />
     <Compile Include="Xml\Implementation\DotNet\SchemaAttribute.cs" />

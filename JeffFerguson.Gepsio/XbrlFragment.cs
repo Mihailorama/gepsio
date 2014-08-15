@@ -210,6 +210,15 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
+        /// <summary>
+        /// A collection of arcrole references found in the fragment.
+        /// </summary>
+        public List<ArcroleReference> ArcroleReferences
+        {
+            get;
+            private set;
+        }
+
         #endregion
 
         #region Constructors
@@ -228,6 +237,7 @@ namespace JeffFerguson.Gepsio
             //---------------------------------------------------------------------------
             ReadTaxonomySchemaReferences();
             ReadRoleReferences();
+            ReadArcroleReferences();
             ReadContexts();
             ReadUnits();
             ReadFacts();
@@ -238,6 +248,7 @@ namespace JeffFerguson.Gepsio
             // Validate.
             //---------------------------------------------------------------------------
             ValidateRoleReferences();
+            ValidateArcroleReferences();
             ValidateContextRefs();
             ValidateUnitRefs();
             ValidateContextTimeSpansAgainstPeriodTypes();
@@ -449,9 +460,23 @@ namespace JeffFerguson.Gepsio
         }
 
         //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ReadArcroleReferences()
+        {
+            ArcroleReferences = new List<ArcroleReference>();
+            string LinkbaseNamespacePrefix = thisNamespaceManager.LookupPrefix("http://www.xbrl.org/2003/linkbase");
+            StringBuilder XPathExpressionBuilder = new StringBuilder();
+            XPathExpressionBuilder.AppendFormat("//{0}:arcroleRef", LinkbaseNamespacePrefix);
+            string XPathExpression = XPathExpressionBuilder.ToString();
+            INodeList ArcroleRefNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
+            foreach (INode ArcroleRefNode in ArcroleRefNodes)
+                this.ArcroleReferences.Add(new ArcroleReference(ArcroleRefNode));
+        }
+
+        //-------------------------------------------------------------------------------
         // Validate role references.
         //
-        // According to test 308.01 of the CR5 conformace suite, each role reference must
+        // According to test 308.01 of the CR5 conformance suite, each role reference must
         // reference a unique URI.
         //-------------------------------------------------------------------------------
         private void ValidateRoleReferences()
@@ -470,6 +495,31 @@ namespace JeffFerguson.Gepsio
                     return;
                 }
                 uniqueUris.Add(currentRoleReferenceUriAsString, currentRoleReference);
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validate arcrole references.
+        //
+        // According to test 308.02 of the CR5 conformance suite, each arcrole reference
+        // must reference a unique URI.
+        //-------------------------------------------------------------------------------
+        private void ValidateArcroleReferences()
+        {
+            var uniqueUris = new Dictionary<string, ArcroleReference>();
+
+            foreach (var currentArcroleReference in ArcroleReferences)
+            {
+                var currentArcroleReferenceUriAsString = currentArcroleReference.Uri.ToString();
+                if (uniqueUris.ContainsKey(currentArcroleReferenceUriAsString) == true)
+                {
+                    string MessageFormat = AssemblyResources.GetName("DuplicateArcroleReferenceUri");
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    MessageBuilder.AppendFormat(MessageFormat, currentArcroleReferenceUriAsString);
+                    AddValidationError(new ArcroleReferenceValidationError(currentArcroleReference, MessageBuilder.ToString()));
+                    return;
+                }
+                uniqueUris.Add(currentArcroleReferenceUriAsString, currentArcroleReference);
             }
         }
 

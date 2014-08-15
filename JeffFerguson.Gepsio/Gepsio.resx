@@ -270,4 +270,8 @@
     <value>Role reference URI {0} is used in more than one role reference. Every role reference must use a URI unique to the XBRL fragment.</value>
     <comment>XBRL-CONF-CR5-2012-01-24 unit test 308.01</comment>
   </data>
+  <data name="DuplicateArcroleReferenceUri" xml:space="preserve">
+    <value>Arcrole reference URI {0} is used in more than one arcrole reference. Every arcrole reference must use a URI unique to the XBRL fragment.</value>
+    <comment>XBRL-CONF-CR5-2012-01-24 unit test 308.02</comment>
+  </data>
 </root>
