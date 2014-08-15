@@ -17,15 +17,12 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    interface ISchemaType
+    interface ISchemaAttribute
     {
-        IQualifiedName QualifiedName { get; }
         string Name { get; }
-        bool IsNumeric { get; }
-        bool IsComplex { get; }
-        bool DerivedByRestriction { get; }
-        ISchemaType BaseSchemaType { get; }
-
-        ISchemaAttribute GetAttribute(string name);
+        bool Optional { get; }
+        bool Prohibited { get; }
+        bool Required { get; }
+        string FixedValue { get; }
     }
 }

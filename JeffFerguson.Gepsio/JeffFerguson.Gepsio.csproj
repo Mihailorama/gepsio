@@ -71,6 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Xml\Implementation\DotNet\SchemaAttribute.cs" />
+    <Compile Include="Xml\Interfaces\ISchemaAttribute.cs" />
     <Compile Include="Xsd\AnySimpleType.cs" />
     <Compile Include="Xsd\AnyType.cs" />
     <Compile Include="Xsd\AnyUri.cs" />

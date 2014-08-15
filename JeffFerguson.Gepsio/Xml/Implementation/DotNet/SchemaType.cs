@@ -1,4 +1,5 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System.Collections.Generic;
 using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
@@ -8,6 +9,8 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
         private XmlSchemaType schemaType;
         private IQualifiedName thisQualifiedName;
         private ISchemaType thisBaseSchemaType;
+        private XmlSchemaComplexType thisComplexType;
+        private List<ISchemaAttribute> thisSchemaAttributes;
 
         public IQualifiedName QualifiedName
         {
@@ -56,25 +59,14 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
 
         public bool IsComplex
         {
-            get
-            {
-                if (schemaType is XmlSchemaComplexType)
-                    return true;
-                return false;
-            }
+            get;
+            private set;
         }
 
         public bool DerivedByRestriction
         {
-            get
-            {
-                if (IsComplex == false)
-                    return false;
-                XmlSchemaComplexType CurrentComplexType = schemaType as XmlSchemaComplexType;
-                if (CurrentComplexType.DerivedBy == XmlSchemaDerivationMethod.Restriction)
-                    return true;
-                return false;
-            }
+            get;
+            private set;
         }
 
         public ISchemaType BaseSchemaType
@@ -84,10 +76,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
                 if (DerivedByRestriction == false)
                     return null;
                 if (thisBaseSchemaType == null)
-                {
-                    XmlSchemaComplexType CurrentComplexType = schemaType as XmlSchemaComplexType;
-                    thisBaseSchemaType = new SchemaType(CurrentComplexType.BaseXmlSchemaType);
-                }
+                    thisBaseSchemaType = new SchemaType(thisComplexType.BaseXmlSchemaType);
                 return thisBaseSchemaType;
             }
         }
@@ -95,8 +84,38 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
         internal SchemaType(XmlSchemaType type)
         {
             schemaType = type;
+            IsComplex = false;
+            DerivedByRestriction = false;
+            thisComplexType = null;
+            thisSchemaAttributes = new List<ISchemaAttribute>();
+            if (schemaType is XmlSchemaComplexType)
+            {
+                IsComplex = true;
+                thisComplexType = schemaType as XmlSchemaComplexType;
+                if (this.thisComplexType.DerivedBy == XmlSchemaDerivationMethod.Restriction)
+                    DerivedByRestriction = true;
+                thisSchemaAttributes.Capacity = thisComplexType.AttributeUses.Count;
+                foreach (System.Collections.DictionaryEntry currentEntry in thisComplexType.AttributeUses)
+                {
+                    var newAttribute = new SchemaAttribute(currentEntry.Value as XmlSchemaAttribute);
+                    thisSchemaAttributes.Add(newAttribute);
+                }
+            }
             thisQualifiedName = null;
             thisBaseSchemaType = null;
+        }
+
+        public ISchemaAttribute GetAttribute(string name)
+        {
+            foreach(var currentAttribute in thisSchemaAttributes)
+            {
+                if(string.IsNullOrEmpty(currentAttribute.Name) == false)
+                {
+                    if (currentAttribute.Name.Equals(name) == true)
+                        return currentAttribute;
+                }
+            }
+            return null;
         }
     }
 }

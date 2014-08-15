@@ -102,12 +102,8 @@ namespace JeffFerguson.Gepsio
         /// </summary>
         public bool PrecisionSpecified
         {
-            get
-            {
-                if (thisPrecisionAttributeValue.Length == 0)
-                    return false;
-                return true;
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -115,12 +111,8 @@ namespace JeffFerguson.Gepsio
         /// </summary>
         public bool DecimalsSpecified
         {
-            get
-            {
-                if (thisDecimalsAttributeValue.Length == 0)
-                    return false;
-                return true;
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -203,25 +195,44 @@ namespace JeffFerguson.Gepsio
             this.ContextRefName = thisFactNode.GetAttributeValue("contextRef");
             this.UnitRefName = thisFactNode.GetAttributeValue("unitRef");
             thisRoundedValueCalculated = false;
+            this.Id = thisFactNode.GetAttributeValue("id");
+            this.NilSpecified = false;
+            string NilValue = thisFactNode.GetAttributeValue("http://www.w3.org/2001/XMLSchema-instance", "nil");
+            if (NilValue.Equals("true", StringComparison.CurrentCultureIgnoreCase) == true)
+                this.NilSpecified = true;
+            GetSchemaElementFromSchema();
+            this.Value = thisFactNode.InnerText;
+            if (SchemaElement.SubstitutionGroup == Element.ElementSubstitutionGroup.Item)
+                SetItemType(SchemaElement.TypeName);
+            SetDecimals();
+            SetPrecision();
+            if (string.IsNullOrEmpty(thisPrecisionAttributeValue) == true)
+                InferPrecision();
+        }
 
-            thisDecimalsAttributeValue = thisFactNode.GetAttributeValue("decimals");
-            if (thisDecimalsAttributeValue.Length > 0)
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private void SetPrecision()
+        {
+            PrecisionSpecified = false;
+            thisPrecisionAttributeValue = thisFactNode.GetAttributeValue("precision");
+            if (string.IsNullOrEmpty(thisPrecisionAttributeValue) == true)
             {
-                if (thisDecimalsAttributeValue.Equals("INF") == true)
+
+                // There is no "precision" attribute on the item itself, but one may be specified
+                // in the schema definition for the type. Check there if the type is a complex
+                // type.
+
+                if(this.Type.IsComplex == true)
                 {
-                    this.InfiniteDecimals = true;
-                    this.Decimals = 0;
-                }
-                else
-                {
-                    this.InfiniteDecimals = false;
-                    this.Decimals = Convert.ToInt32(thisDecimalsAttributeValue);
+                    var precisionAttribute = this.Type.GetAttribute("precision");
+                    if (precisionAttribute != null)
+                        thisPrecisionAttributeValue = precisionAttribute.FixedValue;
                 }
             }
-
-            thisPrecisionAttributeValue = thisFactNode.GetAttributeValue("precision");
-            if (thisPrecisionAttributeValue.Length > 0)
+            if (string.IsNullOrEmpty(thisPrecisionAttributeValue) == false)
             {
+                PrecisionSpecified = true;
                 this.PrecisionInferred = false;
                 if (thisPrecisionAttributeValue.Equals("INF") == true)
                 {
@@ -234,19 +245,42 @@ namespace JeffFerguson.Gepsio
                     this.Precision = Convert.ToInt32(thisPrecisionAttributeValue);
                 }
             }
+        }
 
-            this.Id = thisFactNode.GetAttributeValue("id");
-            this.NilSpecified = false;
-            string NilValue = thisFactNode.GetAttributeValue("http://www.w3.org/2001/XMLSchema-instance", "nil");
-            if (NilValue.Equals("true", StringComparison.CurrentCultureIgnoreCase) == true)
-                this.NilSpecified = true;
-            GetSchemaElementFromSchema();
-            this.Value = thisFactNode.InnerText;
-            if (SchemaElement.SubstitutionGroup == Element.ElementSubstitutionGroup.Item)
-                SetItemType(SchemaElement.TypeName);
+        //------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------
+        private void SetDecimals()
+        {
+            DecimalsSpecified = false;
+            thisDecimalsAttributeValue = thisFactNode.GetAttributeValue("decimals");
+            if (string.IsNullOrEmpty(thisDecimalsAttributeValue) == true)
+            {
 
-            if (thisPrecisionAttributeValue.Length == 0)
-                InferPrecision();
+                // There is no "decimals" attribute on the item itself, but one may be specified
+                // in the schema definition for the type. Check there if the type is a complex
+                // type.
+
+                if (this.Type.IsComplex == true)
+                {
+                    var decimalsAttribute = this.Type.GetAttribute("decimals");
+                    if (decimalsAttribute != null)
+                        thisDecimalsAttributeValue = decimalsAttribute.FixedValue;
+                }
+            }
+            if (string.IsNullOrEmpty(thisDecimalsAttributeValue) == false)
+            {
+                DecimalsSpecified = true;
+                if (thisDecimalsAttributeValue.Equals("INF") == true)
+                {
+                    this.InfiniteDecimals = true;
+                    this.Decimals = 0;
+                }
+                else
+                {
+                    this.InfiniteDecimals = false;
+                    this.Decimals = Convert.ToInt32(thisDecimalsAttributeValue);
+                }
+            }
         }
 
         //------------------------------------------------------------------------------------
@@ -415,17 +449,21 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal void Validate()
         {
-            if(this.NilSpecified == true)
-            {
-            }
             if (IsMonetary())
                 ValidateMonetaryType();
-            else if (IsPure())
-                ValidatePureType();
             else if (IsShares())
                 ValidateSharesType();
             else if (IsDecimal())
                 ValidateDecimalType();
+            else if (IsPure())
+            {
+
+                // Pure item types are derived from restriction, so run the pure validation
+                // as well as the decimal validation.
+
+                ValidatePureType();
+                ValidateDecimalType();
+            }
         }
 
         private void ValidateMonetaryType()
