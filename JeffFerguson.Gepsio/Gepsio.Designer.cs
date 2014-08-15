@@ -133,6 +133,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Role reference URI {0} is used in more than one role reference. Every role reference must use a URI unique to the XBRL fragment..
+        /// </summary>
+        internal static string DuplicateRoleReferenceUri {
+            get {
+                return ResourceManager.GetString("DuplicateRoleReferenceUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Schema {0} defines fact element {1} with a duration-based period, but context {2}, used by the fact, does not implement a duration-based period..
         /// </summary>
         internal static string ElementSchemaDefinesDurationButUsedWithNonDurationContext {

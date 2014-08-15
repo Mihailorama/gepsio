@@ -201,6 +201,15 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
+        /// <summary>
+        /// A collection of role references found in the fragment.
+        /// </summary>
+        public List<RoleReference> RoleReferences
+        {
+            get;
+            private set;
+        }
+
         #endregion
 
         #region Constructors
@@ -217,7 +226,8 @@ namespace JeffFerguson.Gepsio
             //---------------------------------------------------------------------------
             // Load.
             //---------------------------------------------------------------------------
-            ReadTaxonomySchemaRefs();
+            ReadTaxonomySchemaReferences();
+            ReadRoleReferences();
             ReadContexts();
             ReadUnits();
             ReadFacts();
@@ -227,6 +237,7 @@ namespace JeffFerguson.Gepsio
             //---------------------------------------------------------------------------
             // Validate.
             //---------------------------------------------------------------------------
+            ValidateRoleReferences();
             ValidateContextRefs();
             ValidateUnitRefs();
             ValidateContextTimeSpansAgainstPeriodTypes();
@@ -411,7 +422,7 @@ namespace JeffFerguson.Gepsio
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadTaxonomySchemaRefs()
+        private void ReadTaxonomySchemaReferences()
         {
             thisSchemas = new List<XbrlSchema>();
             string LinkbaseNamespacePrefix = thisNamespaceManager.LookupPrefix("http://www.xbrl.org/2003/linkbase");
@@ -420,12 +431,51 @@ namespace JeffFerguson.Gepsio
             string XPathExpression = XPathExpressionBuilder.ToString();
             INodeList SchemaRefNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
             foreach (INode SchemaRefNode in SchemaRefNodes)
-                ReadTaxonomySchemaRef(SchemaRefNode);
+                ReadTaxonomySchemaReference(SchemaRefNode);
         }
 
         //-------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------
-        private void ReadTaxonomySchemaRef(INode SchemaRefNode)
+        private void ReadRoleReferences()
+        {
+            RoleReferences = new List<RoleReference>();
+            string LinkbaseNamespacePrefix = thisNamespaceManager.LookupPrefix("http://www.xbrl.org/2003/linkbase");
+            StringBuilder XPathExpressionBuilder = new StringBuilder();
+            XPathExpressionBuilder.AppendFormat("//{0}:roleRef", LinkbaseNamespacePrefix);
+            string XPathExpression = XPathExpressionBuilder.ToString();
+            INodeList RoleRefNodes = thisXbrlRootNode.SelectNodes(XPathExpression, thisNamespaceManager);
+            foreach (INode RoleRefNode in RoleRefNodes)
+                this.RoleReferences.Add(new RoleReference(RoleRefNode));
+        }
+
+        //-------------------------------------------------------------------------------
+        // Validate role references.
+        //
+        // According to test 308.01 of the CR5 conformace suite, each role reference must
+        // reference a unique URI.
+        //-------------------------------------------------------------------------------
+        private void ValidateRoleReferences()
+        {
+            var uniqueUris = new Dictionary<string, RoleReference>();
+
+            foreach(var currentRoleReference in RoleReferences)
+            {
+                var currentRoleReferenceUriAsString = currentRoleReference.Uri.ToString();
+                if(uniqueUris.ContainsKey(currentRoleReferenceUriAsString) == true)
+                {
+                    string MessageFormat = AssemblyResources.GetName("DuplicateRoleReferenceUri");
+                    StringBuilder MessageBuilder = new StringBuilder();
+                    MessageBuilder.AppendFormat(MessageFormat, currentRoleReferenceUriAsString);
+                    AddValidationError(new RoleReferenceValidationError(currentRoleReference, MessageBuilder.ToString()));
+                    return;
+                }
+                uniqueUris.Add(currentRoleReferenceUriAsString, currentRoleReference);
+            }
+        }
+
+        //-------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------
+        private void ReadTaxonomySchemaReference(INode SchemaRefNode)
         {
             string HrefAttributeValue = SchemaRefNode.GetAttributeValue("http://www.w3.org/1999/xlink", "href");
             string Base = SchemaRefNode.GetAttributeValue("http://www.w3.org/XML/1998/namespace", "base");

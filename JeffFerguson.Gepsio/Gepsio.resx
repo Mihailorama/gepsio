@@ -266,4 +266,8 @@
   <data name="RatioFoundInMonetaryItemUnit" xml:space="preserve">
     <value>Fact {0} is defined as a monetary item type. The fact also references a unit named {1}. The unit is a ratio-based complex type that defines a numerator and denominator. According to Table 3 of section 4.8.2 of the XBRL specification, units used for monetary items must be single measures rather than ratios.</value>
   </data>
+  <data name="DuplicateRoleReferenceUri" xml:space="preserve">
+    <value>Role reference URI {0} is used in more than one role reference. Every role reference must use a URI unique to the XBRL fragment.</value>
+    <comment>XBRL-CONF-CR5-2012-01-24 unit test 308.01</comment>
+  </data>
 </root>
