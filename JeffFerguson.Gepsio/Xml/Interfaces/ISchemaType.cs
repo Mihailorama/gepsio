@@ -2,7 +2,7 @@
 namespace JeffFerguson.Gepsio.Xml.Interfaces
 {
     /// <summary>
-    /// An interface to a specific XML implementation.
+    /// An interface to a global type defined in an XML schema. The interface supports both simple and complex types.
     /// </summary>
     /// <remarks>
     /// <para>

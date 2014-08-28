@@ -197,7 +197,7 @@ namespace JeffFerguson.Gepsio
             thisRoundedValueCalculated = false;
             this.Id = thisFactNode.GetAttributeValue("id");
             this.NilSpecified = false;
-            string NilValue = thisFactNode.GetAttributeValue("http://www.w3.org/2001/XMLSchema-instance", "nil");
+            string NilValue = thisFactNode.GetAttributeValue(XbrlSchema.XmlSchemaInstanceNamespaceUri, "nil");
             if (NilValue.Equals("true", StringComparison.CurrentCultureIgnoreCase) == true)
                 this.NilSpecified = true;
             GetSchemaElementFromSchema();
@@ -500,7 +500,7 @@ namespace JeffFerguson.Gepsio
                 thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
                 return;
             }
-            if ((Uri.Length > 0) && (Uri.Equals("http://www.xbrl.org/2003/iso4217") == false))
+            if ((Uri.Length > 0) && (Uri.Equals(XbrlDocument.XbrlIso4217NamespaceUri) == false))
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("WrongMeasureNamespaceForMonetaryFact");
@@ -569,7 +569,7 @@ namespace JeffFerguson.Gepsio
             string Uri = UnitReference.MeasureQualifiedNames[0].NamespaceUri;
             if (string.IsNullOrEmpty(Uri) == true)
                 SharesNamespaceCorrect = false;
-            else if (Uri.Equals("http://www.xbrl.org/2003/instance") == false)
+            else if (Uri.Equals(XbrlDocument.XbrlNamespaceUri) == false)
                 SharesNamespaceCorrect = false;
             if(SharesNamespaceCorrect == false)
             {

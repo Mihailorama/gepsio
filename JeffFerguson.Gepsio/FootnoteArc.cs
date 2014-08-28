@@ -101,7 +101,7 @@ namespace JeffFerguson.Gepsio
         {
             get
             {
-                return ArcRole.Equals("http://www.xbrl.org/2003/arcrole/fact-footnote");
+                return ArcRole.Equals(XbrlDocument.XbrlFactFootnoteArcroleNamespaceUri);
             }
         }
 

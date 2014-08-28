@@ -128,7 +128,7 @@ namespace JeffFerguson.Gepsio
 		{
 			foreach (IAttribute CurrentAttribute in LocatorNode.Attributes)
 			{
-				if (CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == false)
+				if (CurrentAttribute.NamespaceURI.Equals(Xlink.XlinkNode.xlinkNamespace) == false)
 					continue;
 				if (CurrentAttribute.LocalName.Equals("href") == true)
 				{

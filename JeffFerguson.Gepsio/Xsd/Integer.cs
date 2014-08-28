@@ -18,5 +18,21 @@ namespace JeffFerguson.Gepsio.Xsd
         internal Integer(INode StringRootNode) : base(StringRootNode)
         {
         }
+
+        /// <summary>
+        /// Determines whether or not the supplied string value can be converted to an integer.
+        /// </summary>
+        /// <param name="valueAsString">
+        /// The original string-based value.
+        /// </param>
+        /// <returns>
+        /// True if the supplied string value can be converted to an integer; false otherwise.
+        /// </returns>
+        internal override bool CanConvert(string valueAsString)
+        {
+            int ParsedResult;
+
+            return int.TryParse(valueAsString, out ParsedResult);
+        }
     }
 }

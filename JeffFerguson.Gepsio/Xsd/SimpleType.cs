@@ -1,3 +1,4 @@
+using JeffFerguson.Gepsio.IoC;
 using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Text;
 
@@ -33,21 +34,26 @@ namespace JeffFerguson.Gepsio.Xsd
             private set;
         }
 
-         internal SimpleType(INode SimpleTypeRootNode)
+         internal SimpleType(INode SimpleTypeRootNode, INamespaceManager namespaceManager)
         {
             this.SimpleTypeNode = SimpleTypeRootNode;
             this.Name = this.SimpleTypeNode.GetAttributeValue("name");
             foreach (INode CurrentChildNode in SimpleTypeNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("restriction") == true)
-                    CreateRestrictionType(CurrentChildNode);
+                    CreateRestrictionType(CurrentChildNode, namespaceManager);
             }
         }
 
-        private void CreateRestrictionType(INode CurrentChildNode)
+         private void CreateRestrictionType(INode CurrentChildNode, INamespaceManager namespaceManager)
         {
             string BaseValue = CurrentChildNode.Attributes["base"].Value;
-            thisRestrictionType = AnyType.CreateType(BaseValue, CurrentChildNode);
+            var BaseValueAsQualifiedName = Container.Resolve<IQualifiedName>();
+            BaseValueAsQualifiedName.FullyQualifiedName = BaseValue;
+            //var NamespaceUri = string.Empty;
+            //if (string.IsNullOrEmpty(BaseValueAsQualifiedName.Namespace) == false)
+            //    NamespaceUri = namespaceManager.LookupNamespace(BaseValueAsQualifiedName.Namespace);
+            thisRestrictionType = AnyType.CreateType(BaseValueAsQualifiedName.Name, CurrentChildNode);
             if (thisRestrictionType == null)
             {
                 string MessageFormat = AssemblyResources.GetName("UnsupportedRestrictionBaseSimpleType");

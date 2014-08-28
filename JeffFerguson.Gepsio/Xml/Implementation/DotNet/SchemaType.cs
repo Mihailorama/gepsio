@@ -4,6 +4,9 @@ using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
 {
+    /// <summary>
+    /// An encapsulation of a global type defined in an XML schema. The class supports both simple and complex types.
+    /// </summary>
     internal class SchemaType : ISchemaType
     {
         private XmlSchemaType schemaType;

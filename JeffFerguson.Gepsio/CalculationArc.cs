@@ -1,4 +1,5 @@
-﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+﻿using JeffFerguson.Gepsio.Xlink;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
 using System.Collections.Generic;
 
@@ -111,8 +112,8 @@ namespace JeffFerguson.Gepsio
         internal CalculationArc(INode CalculationArcNode)
         {
             this.ToLocators = new List<Locator>();
-            this.FromId = CalculationArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "from");
-            this.ToId = CalculationArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "to");
+            this.FromId = CalculationArcNode.GetAttributeValue(XlinkNode.xlinkNamespace, "from");
+            this.ToId = CalculationArcNode.GetAttributeValue(XlinkNode.xlinkNamespace, "to");
             string OrderString = CalculationArcNode.GetAttributeValue("order");
             if(string.IsNullOrEmpty(OrderString) == false)
                 this.Order = Convert.ToDecimal(OrderString);

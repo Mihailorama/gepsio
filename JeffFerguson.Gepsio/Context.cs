@@ -249,7 +249,7 @@ namespace JeffFerguson.Gepsio
 
         private void ValidateScenarioNode(INode ScenarioNode)
         {
-            if (ScenarioNode.NamespaceURI.Equals("http://www.xbrl.org/2003/instance") == true)
+            if (ScenarioNode.NamespaceURI.Equals(XbrlDocument.XbrlNamespaceUri) == true)
             {
                 string MessageFormat = AssemblyResources.GetName("ScenarioNodeUsingXBRLNamespace");
                 StringBuilder MessageBuilder = new StringBuilder();
@@ -292,13 +292,26 @@ namespace JeffFerguson.Gepsio
 
         private void ValidateSegmentNode(INode SegmentNode)
         {
-            if (SegmentNode.NamespaceURI.Equals("http://www.xbrl.org/2003/instance") == true)
+            ValidateSegmentNodeNamespace(SegmentNode);
+            ValidateSegmentNodePrefix(SegmentNode);
+            ValidateSegmentInnerText(SegmentNode);
+            foreach (INode CurrentChild in SegmentNode.ChildNodes)
+                ValidateSegmentNode(CurrentChild);
+        }
+
+        private void ValidateSegmentNodeNamespace(INode SegmentNode)
+        {
+            if (SegmentNode.NamespaceURI.Equals(XbrlDocument.XbrlNamespaceUri) == true)
             {
                 string MessageFormat = AssemblyResources.GetName("SegmentNodeUsingXBRLNamespace");
                 StringBuilder MessageBuilder = new StringBuilder();
                 MessageBuilder.AppendFormat(MessageFormat, this.Id, SegmentNode.Name);
                 this.Fragment.AddValidationError(new ContextValidationError(this, MessageBuilder.ToString()));
             }
+        }
+
+        private void ValidateSegmentNodePrefix(INode SegmentNode)
+        {
             if (SegmentNode.Prefix.Length > 0)
             {
                 XbrlSchema NodeSchema = this.Fragment.GetXbrlSchemaForPrefix(SegmentNode.Prefix);
@@ -317,8 +330,24 @@ namespace JeffFerguson.Gepsio
                     }
                 }
             }
-            foreach (INode CurrentChild in SegmentNode.ChildNodes)
-                ValidateSegmentNode(CurrentChild);
+        }
+
+        private void ValidateSegmentInnerText(INode SegmentNode)
+        {
+            var text = SegmentNode.InnerText;
+            if (string.IsNullOrEmpty(text) == true)
+                return;
+            var schema = this.Fragment.Schemas[0];
+            var segmentNodeType = schema.GetNodeType(SegmentNode);
+            if (segmentNodeType == null)
+                return;
+            if(segmentNodeType.CanConvert(text) == false)
+            {
+                string MessageFormat = AssemblyResources.GetName("SegmentTextNotConvertable");
+                StringBuilder MessageBuilder = new StringBuilder();
+                MessageBuilder.AppendFormat(MessageFormat, text);
+                this.Fragment.AddValidationError(new ContextValidationError(this, MessageBuilder.ToString()));
+            }
         }
 
         private void ProcessIdentifier(INode IdentifierNode)

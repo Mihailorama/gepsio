@@ -53,7 +53,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
             }
         }
 
-        internal QualifiedName()
+        public QualifiedName()
         {
             thisQualifiedName = new XmlQualifiedName();
         }

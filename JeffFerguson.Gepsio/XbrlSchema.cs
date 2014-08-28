@@ -19,6 +19,9 @@ namespace JeffFerguson.Gepsio
         private ISchemaSet thisXmlSchemaSet;
         private ILookup<string, Element> thisLookupElements;
 
+        internal static string XmlSchemaInstanceNamespaceUri = "http://www.w3.org/2001/XMLSchema-instance";
+        internal static string XmlSchemaNamespaceUri = "http://www.w3.org/2001/XMLSchema";
+
         /// <summary>
         /// The full path to the XBRL schema file.
         /// </summary>
@@ -146,7 +149,7 @@ namespace JeffFerguson.Gepsio
             thisSchemaDocument.Load(this.Path);
             this.NamespaceManager = Container.Resolve<INamespaceManager>();
             this.NamespaceManager.Document = thisSchemaDocument;
-            this.NamespaceManager.AddNamespace("schema", "http://www.w3.org/2001/XMLSchema");
+            this.NamespaceManager.AddNamespace("schema", XbrlSchema.XmlSchemaNamespaceUri);
             ReadSchemaNode();
             ReadSimpleTypes();
             ReadComplexTypes();
@@ -278,7 +281,7 @@ namespace JeffFerguson.Gepsio
             this.SimpleTypes = new List<SimpleType>();
             INodeList SimpleTypeNodes = thisSchemaDocument.SelectNodes("//schema:simpleType", this.NamespaceManager);
             foreach (INode SimpleTypeNode in SimpleTypeNodes)
-                this.SimpleTypes.Add(new SimpleType(SimpleTypeNode));
+                this.SimpleTypes.Add(new SimpleType(SimpleTypeNode, this.NamespaceManager));
         }
 
         //-------------------------------------------------------------------------------
@@ -288,7 +291,7 @@ namespace JeffFerguson.Gepsio
             this.ComplexTypes = new List<ComplexType>();
             INodeList ComplexTypeNodes = thisSchemaDocument.SelectNodes("//schema:complexType", this.NamespaceManager);
             foreach (INode ComplexTypeNode in ComplexTypeNodes)
-                this.ComplexTypes.Add(new ComplexType(ComplexTypeNode));
+                this.ComplexTypes.Add(new ComplexType(ComplexTypeNode, this.NamespaceManager));
         }
 
         //-------------------------------------------------------------------------------
@@ -346,9 +349,9 @@ namespace JeffFerguson.Gepsio
         {
             foreach (INode CurrentChild in AppInfoNode.ChildNodes)
             {
-                if ((CurrentChild.NamespaceURI.Equals("http://www.xbrl.org/2003/linkbase") == true) && (CurrentChild.LocalName.Equals("linkbaseRef") == true))
+                if ((CurrentChild.NamespaceURI.Equals(XbrlDocument.XbrlLinkbaseNamespaceUri) == true) && (CurrentChild.LocalName.Equals("linkbaseRef") == true))
                     ReadLinkbaseReference(CurrentChild);
-                else if ((CurrentChild.NamespaceURI.Equals("http://www.xbrl.org/2003/linkbase") == true) && (CurrentChild.LocalName.Equals("roleType") == true))
+                else if ((CurrentChild.NamespaceURI.Equals(XbrlDocument.XbrlLinkbaseNamespaceUri) == true) && (CurrentChild.LocalName.Equals("roleType") == true))
                     ReadRoleType(CurrentChild);
             }
         }
@@ -359,7 +362,7 @@ namespace JeffFerguson.Gepsio
         {
             foreach (IAttribute CurrentAttribute in LinkbaseReferenceNode.Attributes)
             {
-                if ((CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == true) && (CurrentAttribute.LocalName.Equals("href") == true))
+                if ((CurrentAttribute.NamespaceURI.Equals(Xlink.XlinkNode.xlinkNamespace) == true) && (CurrentAttribute.LocalName.Equals("href") == true))
                     this.LinkbaseDocuments.Add(new LinkbaseDocument(this, CurrentAttribute.Value));
             }
         }
@@ -416,6 +419,14 @@ namespace JeffFerguson.Gepsio
                     return CurrentName.Namespace;
             }
             return string.Empty;
+        }
+
+        internal AnyType GetNodeType(INode node)
+        {
+            var matchingElement = GetElement(node.LocalName);
+            if(matchingElement == null)
+                return null;
+            return AnyType.CreateType(matchingElement.TypeName.Name, this);
         }
     }
 }

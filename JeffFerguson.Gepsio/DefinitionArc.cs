@@ -1,4 +1,5 @@
-﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+﻿using JeffFerguson.Gepsio.Xlink;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
@@ -108,7 +109,7 @@ namespace JeffFerguson.Gepsio
         {
             foreach (IAttribute CurrentAttribute in DefinitionArcNode.Attributes)
             {
-                if (CurrentAttribute.NamespaceURI.Equals("http://www.w3.org/1999/xlink") == false)
+                if (CurrentAttribute.NamespaceURI.Equals(XlinkNode.xlinkNamespace) == false)
                     continue;
                 if (CurrentAttribute.LocalName.Equals("arcrole") == true)
                     SetRole(CurrentAttribute.Value);
@@ -126,13 +127,13 @@ namespace JeffFerguson.Gepsio
         private void SetRole(string ArcRoleValue)
         {
             this.Role = RoleEnum.Unknown;
-            if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/essence-alias") == true)
+            if (ArcRoleValue.Equals(XbrlDocument.XbrlEssenceAliasArcroleNamespaceUri) == true)
                 this.Role = RoleEnum.EssenceAlias;
-            else if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/general-special") == true)
+            else if (ArcRoleValue.Equals(XbrlDocument.XbrlGeneralSpecialArcroleNamespaceUri) == true)
                 this.Role = RoleEnum.GeneralSpecial;
-            else if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/similar-tuples") == true)
+            else if (ArcRoleValue.Equals(XbrlDocument.XbrlSimilarTuplesArcroleNamespaceUri) == true)
                 this.Role = RoleEnum.SimilarTuples;
-            else if (ArcRoleValue.Equals("http://www.xbrl.org/2003/arcrole/requires-element") == true)
+            else if (ArcRoleValue.Equals(XbrlDocument.XbrlRequiresElementArcroleNamespaceUri) == true)
                 this.Role = RoleEnum.RequiresElement;
         }
     }

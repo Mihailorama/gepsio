@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xlink
     /// </remarks>
     public class XlinkNode
     {
-        private static string xlinkNamespace = "http://www.w3.org/1999/xlink";
+        internal static string xlinkNamespace = "http://www.w3.org/1999/xlink";
 
         /// <summary>
         /// An enumeration of possible types for an Xlink node.

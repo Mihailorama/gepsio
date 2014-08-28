@@ -61,7 +61,7 @@ namespace JeffFerguson.Gepsio.Xsd
         //--------------------------------------------------------------------------------------------------------
         // This constructor is used to construct user-defined complex types defined in XBRL schemas.
         //--------------------------------------------------------------------------------------------------------
-        internal ComplexType(INode ComplexTypeNode)
+        internal ComplexType(INode ComplexTypeNode, INamespaceManager namespaceManager)
         {
             thisAttributeGroup = null;
             thisComplexTypeNode = ComplexTypeNode;
@@ -70,7 +70,7 @@ namespace JeffFerguson.Gepsio.Xsd
             foreach (INode CurrentChildNode in ComplexTypeNode.ChildNodes)
             {
                 if (CurrentChildNode.LocalName.Equals("simpleContent") == true)
-                    thisSimpleContentType = new SimpleType(CurrentChildNode);
+                    thisSimpleContentType = new SimpleType(CurrentChildNode, namespaceManager);
             }
         }
 

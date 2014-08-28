@@ -134,7 +134,7 @@ namespace JeffFerguson.Gepsio.Xsd
         /// </returns>
         public static AnyType CreateType(string TypeName, XbrlSchema Schema)
         {
-            return AnyType.CreateType(TypeName, (XbrlSchema)null);
+            return AnyType.CreateType(TypeName, Schema.SchemaRootNode);
         }
 
         internal abstract decimal GetValueAfterApplyingPrecisionTruncation(int PrecisionValue);
@@ -243,30 +243,54 @@ namespace JeffFerguson.Gepsio.Xsd
                 case "string":
                     TypeToReturn = new String(SchemaRootNode);
                     break;
-                case "xbrli:decimalItemType":
+                case "decimalItemType":
                     TypeToReturn = new DecimalItemType();
                     break;
-                case "xbrli:monetaryItemType":
+                case "monetaryItemType":
                     TypeToReturn = new MonetaryItemType();
                     break;
-                case "xbrli:pureItemType":
+                case "pureItemType":
                     TypeToReturn = new PureItemType();
                     break;
-                case "xbrli:sharesItemType":
+                case "sharesItemType":
                     TypeToReturn = new SharesItemType();
                     break;
-                case "xbrli:tokenItemType":
+                case "tokenItemType":
                     TypeToReturn = new TokenItemType();
                     break;
-                case "xbrli:stringItemType":
-                case "xbrli:normalizedStringItemType":
+                case "stringItemType":
+                case "normalizedStringItemType":
                     TypeToReturn = new StringItemType();
+                    break;
+                case "integer":
+                    TypeToReturn = new Integer(SchemaRootNode);
                     break;
                 default:
                     TypeToReturn = null;
                     break;
             }
             return TypeToReturn;
+        }
+
+        /// <summary>
+        /// Determines whether or not the supplied string value can be converted to a data type
+        /// consistent with the class type.
+        /// </summary>
+        /// <remarks>
+        /// This method should be overrridden in derives classes to ensure that the supplied string
+        /// value can be converted to a data type consistent with the data type managed by the
+        /// derived class.
+        /// </remarks>
+        /// <param name="valueAsString">
+        /// The original string-based value.
+        /// </param>
+        /// <returns>
+        /// True if the supplied string value can be converted to a data type consistent with the
+        /// class type; false otherwise.
+        /// </returns>
+        internal virtual bool CanConvert(string valueAsString)
+        {
+            return true;
         }
     }
 }

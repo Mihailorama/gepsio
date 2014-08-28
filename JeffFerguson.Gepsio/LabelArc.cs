@@ -38,8 +38,8 @@ namespace JeffFerguson.Gepsio
 		//------------------------------------------------------------------------------------
 		internal LabelArc(INode LabelArcNode)
 		{
-            this.FromId = LabelArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "from");
-            this.ToId = LabelArcNode.GetAttributeValue("http://www.w3.org/1999/xlink", "to");
+            this.FromId = LabelArcNode.GetAttributeValue(Xlink.XlinkNode.xlinkNamespace, "from");
+            this.ToId = LabelArcNode.GetAttributeValue(Xlink.XlinkNode.xlinkNamespace, "to");
 		}
 	}
 }

@@ -21,7 +21,8 @@ namespace JeffFerguson.Gepsio.Xsd
             private set;
         }
 
-        internal RestrictedSimpleType(INode SimpleTypeNode, INode RestrictionNode) : base(SimpleTypeNode)
+        internal RestrictedSimpleType(INode SimpleTypeNode, INamespaceManager namespaceManager, INode RestrictionNode)
+            : base(SimpleTypeNode, namespaceManager)
         {
             this.RestrictionNode = RestrictionNode;
         }

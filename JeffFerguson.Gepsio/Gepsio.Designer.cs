@@ -394,6 +394,15 @@ namespace JeffFerguson.Gepsio {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The child of a segment node has a text value of &apos;{0}&apos;. This value is not convertable to the child node&apos;s data type..
+        /// </summary>
+        internal static string SegmentTextNotConvertable {
+            get {
+                return ResourceManager.GetString("SegmentTextNotConvertable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fact {0} is defined as a shares item type. The fact also references a unit named {1}. The unit defines a measure referencing a local name of {2}. Local names for units of type sharesItemType must be &quot;shares&quot;..
         /// </summary>
         internal static string SharesItemTypeUnitLocalNameNotShares {

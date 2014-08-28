@@ -66,7 +66,7 @@ namespace JeffFerguson.Gepsio
             thisXmlDocument.Load(thisLinkbasePath);
             thisNamespaceManager = Container.Resolve<INamespaceManager>();
             thisNamespaceManager.Document = thisXmlDocument;
-            thisNamespaceManager.AddNamespace("default", "http://www.xbrl.org/2003/linkbase");
+            thisNamespaceManager.AddNamespace("default", XbrlDocument.XbrlLinkbaseNamespaceUri);
             ReadLinkbaseNode();
         }
 

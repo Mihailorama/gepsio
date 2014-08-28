@@ -1,4 +1,5 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using JeffFerguson.Gepsio.Xsd;
 using System.Xml.Schema;
 
 namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
@@ -9,6 +10,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
         private IQualifiedName thisSchemaTypeName;
         private IQualifiedName thisSubstitutionGroup;
         private IAttributeList thisUnhandledAttributes;
+        private AnyType thisSchemaType;
 
         public string Id
         {

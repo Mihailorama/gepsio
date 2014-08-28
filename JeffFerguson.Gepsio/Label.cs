@@ -1,4 +1,5 @@
-﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+﻿using JeffFerguson.Gepsio.Xlink;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Globalization;
 
 namespace JeffFerguson.Gepsio
@@ -146,10 +147,10 @@ namespace JeffFerguson.Gepsio
         //------------------------------------------------------------------------------------
         internal Label(INode LabelNode)
         {
-            this.Id = LabelNode.GetAttributeValue("http://www.w3.org/1999/xlink", "label");
+            this.Id = LabelNode.GetAttributeValue(XlinkNode.xlinkNamespace, "label");
             this.Text = LabelNode.InnerText;
-            SetRole(LabelNode.GetAttributeValue("http://www.w3.org/1999/xlink", "role"));
-            string LanguageValue = LabelNode.GetAttributeValue("http://www.w3.org/XML/1998/namespace", "lang");
+            SetRole(LabelNode.GetAttributeValue(XlinkNode.xlinkNamespace, "role"));
+            string LanguageValue = LabelNode.GetAttributeValue(XbrlDocument.XmlNamespaceUri, "lang");
             this.Culture = new CultureInfo(LanguageValue);
         }
 
@@ -159,49 +160,49 @@ namespace JeffFerguson.Gepsio
         private void SetRole(string RoleUri)
         {
             this.Role = RoleEnum.Standard;
-            if (RoleUri.Equals("http://www.xbrl.org/2003/role/label") == true)
+            if (RoleUri.Equals(XbrlDocument.XbrlLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.Standard;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/terseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlTerseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.Short;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/verboseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlVerboseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.Verbose;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/positiveLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlPositiveLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.StandardPositiveValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/positiveTerseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlPositiveTerseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.ShortPositiveValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/positiveVerboseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlPositiveVerboseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.VerbosePositiveValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/negativeLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlNegativeLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.StandardNegativeValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/negativeTerseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlNegativeTerseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.ShortNegativeValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/negativeVerboseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlNegativeVerboseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.VerboseNegativeValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/zeroLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlZeroLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.StandardZeroValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/zeroTerseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlZeroTerseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.ShortZeroValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/zeroVerboseLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlZeroVerboseLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.VerboseZeroValue;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/totalLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlTotalLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.Total;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/periodStartLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlPeriodStartLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.PeriodStart;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/periodEndLabel") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlPeriodEndLabelRoleNamespaceUri) == true)
                 this.Role = RoleEnum.PeriodEnd;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/documentation") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlDocumentationRoleNamespaceUri) == true)
                 this.Role = RoleEnum.Documentation;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/definitionGuidance") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlDocumentationGuidanceRoleNamespaceUri) == true)
                 this.Role = RoleEnum.DefinitionGuidance;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/disclosureGuidance") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlDisclosureGuidanceRoleNamespaceUri) == true)
                 this.Role = RoleEnum.DisclosureGuidance;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/presentationGuidance") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlPresentationGuidanceRoleNamespaceUri) == true)
                 this.Role = RoleEnum.PresentationGuidance;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/measurementGuidance") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlMeasurementGuidanceRoleNamespaceUri) == true)
                 this.Role = RoleEnum.MeasurementGuidance;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/commentaryGuidance") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlCommentaryGuidanceRoleNamespaceUri) == true)
                 this.Role = RoleEnum.CommentaryGuidance;
-            else if (RoleUri.Equals("http://www.xbrl.org/2003/role/exampleGuidance") == true)
+            else if (RoleUri.Equals(XbrlDocument.XbrlExampleGuidanceRoleNamespaceUri) == true)
                 this.Role = RoleEnum.ExampleGuidance;
         }
     }
