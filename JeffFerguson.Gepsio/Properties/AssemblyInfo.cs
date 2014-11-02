@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Gepsio")]
-[assembly: AssemblyDescription("Gepsio is a .NET-based document object model for XBRL documents. Load your XBRL document with the XbrlDocument class and work with your XBRL document exposed as a set of .NET classes with a variety of properties and methods. Loaded XBRL documents are automatically validated against the information against the XBRL specification, and exceptions are thrown when invalid XBRL documents are loaded. The Gepsio code base is unit tested using the XBRL-CONF-CR3-2007-03-05 unit tests designed by the XBRL organization.")]
+[assembly: AssemblyDescription("Gepsio is a .NET-based document object model for XBRL documents. Load your XBRL document with the XbrlDocument class and work with your XBRL document exposed as a set of .NET classes with a variety of properties and methods. Loaded XBRL documents are automatically validated against the information against the XBRL specification, and exceptions are thrown when invalid XBRL documents are loaded. The Gepsio code base is unit tested using the XBRL-CONF-CR5-2012-01-24 unit tests designed by the XBRL organization.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jeff Ferguson")]
 [assembly: AssemblyProduct("Gepsio")]
