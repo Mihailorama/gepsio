@@ -1,39 +1,13 @@
-﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+﻿using JeffFerguson.Gepsio.Xlink;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 
 namespace JeffFerguson.Gepsio
 {
 	/// <summary>
 	/// An encapsulation of the locator functionality as defined in the http://www.w3.org/1999/xlink namespace. 
 	/// </summary>
-	public class Locator
+	public class Locator : XlinkNode
 	{
-		/// <summary>
-		/// The hyperlink reference defined by this locator.
-		/// </summary>
-		public string Href
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The label of this locator.
-		/// </summary>
-		public string Label
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
-		/// The title of this locator.
-		/// </summary>
-		public string Title
-		{
-			get;
-			private set;
-		}
-
 		/// <summary>
 		/// The document URI for the locator's hyperlink reference.
 		/// </summary>
@@ -124,22 +98,10 @@ namespace JeffFerguson.Gepsio
 
 		//-------------------------------------------------------------------------------
 		//-------------------------------------------------------------------------------
-		internal Locator(INode LocatorNode)
+		internal Locator(INode LocatorNode) : base(LocatorNode)
 		{
-			foreach (IAttribute CurrentAttribute in LocatorNode.Attributes)
-			{
-				if (CurrentAttribute.NamespaceURI.Equals(Xlink.XlinkNode.xlinkNamespace) == false)
-					continue;
-				if (CurrentAttribute.LocalName.Equals("href") == true)
-				{
-					this.Href = CurrentAttribute.Value;
-					ParseHref();
-				}
-				else if (CurrentAttribute.LocalName.Equals("label") == true)
-					this.Label = CurrentAttribute.Value;
-				else if (CurrentAttribute.LocalName.Equals("title") == true)
-					this.Title = CurrentAttribute.Value;
-			}
+            if (string.IsNullOrEmpty(this.Href) == false)
+                ParseHref();
 		}
 
 		/// <summary>

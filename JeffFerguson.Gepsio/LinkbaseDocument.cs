@@ -53,6 +53,15 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
+        /// <summary>
+        /// A collection of <see cref="PresentationLink"/> objects defined by the linkbase document.
+        /// </summary>
+        public List<PresentationLink> PresentationLinks
+        {
+            get;
+            private set;
+        }
+
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal LinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
@@ -60,6 +69,7 @@ namespace JeffFerguson.Gepsio
             this.DefinitionLinks = new List<DefinitionLink>();
             this.CalculationLinks = new List<CalculationLink>();
             this.LabelLinks = new List<LabelLink>();
+            this.PresentationLinks = new List<PresentationLink>();
             this.Schema = ContainingXbrlSchema;
             thisLinkbasePath = GetFullLinkbasePath(DocumentPath);
             thisXmlDocument = Container.Resolve<IDocument>();
@@ -103,6 +113,8 @@ namespace JeffFerguson.Gepsio
                     this.CalculationLinks.Add(new CalculationLink(this, CurrentChild));
                 else if (CurrentChild.LocalName.Equals("labelLink") == true)
                     this.LabelLinks.Add(new LabelLink(CurrentChild));
+                else if (CurrentChild.LocalName.Equals("presentationLink") == true)
+                    this.PresentationLinks.Add(new PresentationLink(CurrentChild));
             }
         }
 
