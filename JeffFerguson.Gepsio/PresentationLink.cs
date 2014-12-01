@@ -31,7 +31,9 @@ namespace JeffFerguson.Gepsio
         internal PresentationLink(INode PresentationLinkNode)
         {
             Locators = new List<Locator>();
+            Locators.Capacity = PresentationLinkNode.ChildNodes.Count;
             PresentationArcs = new List<PresentationArc>();
+            PresentationArcs.Capacity = PresentationLinkNode.ChildNodes.Count;
             foreach (INode CurrentChild in PresentationLinkNode.ChildNodes)
             {
                 if (CurrentChild.LocalName.Equals("loc") == true)
@@ -39,6 +41,26 @@ namespace JeffFerguson.Gepsio
                 else if (CurrentChild.LocalName.Equals("presentationArc") == true)
                     PresentationArcs.Add(new PresentationArc(CurrentChild));
             }
+            SortPresentationArcsInAscendingOrder();
+            Locators.TrimExcess();
+            PresentationArcs.TrimExcess();
+        }
+
+        //------------------------------------------------------------------------------------
+        // Sorts the presentation arcs in ascending order by their Order value.
+        //------------------------------------------------------------------------------------
+        private void SortPresentationArcsInAscendingOrder()
+        {
+            PresentationArcs.Sort(
+                delegate(PresentationArc firstArc, PresentationArc secondArc)
+                {
+                    if (firstArc.Order == secondArc.Order)
+                        return 0;
+                    if (firstArc.Order < secondArc.Order)
+                        return -1;
+                    return 1;
+                }
+                );
         }
     }
 }

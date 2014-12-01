@@ -8,8 +8,18 @@ namespace JeffFerguson.Gepsio
     /// </summary>
     public class PresentationArc : XlinkNode
     {
+        public double Order
+        {
+            get;
+            private set;
+        }
+
         internal PresentationArc(INode presentationArcNode) : base(presentationArcNode)
         {
+            var orderAsString = presentationArcNode.GetAttributeValue("order");
+            double orderParsedValue;
+            if (double.TryParse(orderAsString, out orderParsedValue) == true)
+                Order = orderParsedValue;
         }
     }
 }
