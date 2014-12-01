@@ -1,5 +1,6 @@
 ﻿using JeffFerguson.Gepsio.Xlink;
 using JeffFerguson.Gepsio.Xml.Interfaces;
+using System;
 
 namespace JeffFerguson.Gepsio
 {
@@ -8,7 +9,19 @@ namespace JeffFerguson.Gepsio
     /// </summary>
     public class PresentationArc : XlinkNode
     {
+        /// <summary>
+        /// The order of the presentation arc amongst all of the arcs in the same presentation link.
+        /// </summary>
         public double Order
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// The URI of the preferred label for this presentation arc.
+        /// </summary>
+        public Uri PreferredLabelUri
         {
             get;
             private set;
@@ -20,6 +33,9 @@ namespace JeffFerguson.Gepsio
             double orderParsedValue;
             if (double.TryParse(orderAsString, out orderParsedValue) == true)
                 Order = orderParsedValue;
+            var preferredLabelUriAsString = presentationArcNode.GetAttributeValue("preferredLabel");
+            if (string.IsNullOrEmpty(preferredLabelUriAsString) == false)
+                PreferredLabelUri = new Uri(preferredLabelUriAsString);
         }
     }
 }
