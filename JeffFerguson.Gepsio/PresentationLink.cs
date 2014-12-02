@@ -1,4 +1,5 @@
-﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+﻿using JeffFerguson.Gepsio.Xlink;
+using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
@@ -6,7 +7,7 @@ namespace JeffFerguson.Gepsio
     /// <summary>
     /// An encapsulation of the XBRL element "presentationLink" as defined in the http://www.xbrl.org/2003/linkbase namespace. 
     /// </summary>
-    public class PresentationLink
+    public class PresentationLink : XlinkNode
     {
         /// <summary>
         /// A list of locators used in this presentation link.
@@ -20,6 +21,11 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// A list of presentation arcs used in this presentation link.
         /// </summary>
+        /// <remarks>
+        /// The arcs in this collection will not necessarily appear in the order in which they appear
+        /// in the linkbase document. Instead, the will appear sorted in ascending order by the
+        /// value of the arc's Order property.
+        /// </remarks>
         public List<PresentationArc> PresentationArcs
         {
             get;
@@ -28,7 +34,7 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal PresentationLink(INode PresentationLinkNode)
+        internal PresentationLink(INode PresentationLinkNode) : base(PresentationLinkNode)
         {
             Locators = new List<Locator>();
             Locators.Capacity = PresentationLinkNode.ChildNodes.Count;

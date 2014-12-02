@@ -12,6 +12,9 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The order of the presentation arc amongst all of the arcs in the same presentation link.
         /// </summary>
+        /// <remarks>
+        /// This value is populated from the value of the arc's "order" attribute.
+        /// </remarks>
         public double Order
         {
             get;
