@@ -1,4 +1,5 @@
 using JeffFerguson.Gepsio.IoC;
+using JeffFerguson.Gepsio.Xlink;
 using JeffFerguson.Gepsio.Xml.Interfaces;
 using JeffFerguson.Gepsio.Xsd;
 using System;
@@ -360,6 +361,22 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ReadLinkbaseReference(INode LinkbaseReferenceNode)
         {
+            var xlinkNode = new XlinkNode(LinkbaseReferenceNode);
+            if (xlinkNode.IsInRole(XbrlDocument.XbrlCalculationLinkbaseReferenceRoleNamespaceUri) == true)
+            {
+            }
+            else if (xlinkNode.IsInRole(XbrlDocument.XbrlDefinitionLinkbaseReferenceRoleNamespaceUri) == true)
+            {
+            }
+            else if (xlinkNode.IsInRole(XbrlDocument.XbrlLabelLinkbaseReferenceRoleNamespaceUri) == true)
+            {
+            }
+            else if (xlinkNode.IsInRole(XbrlDocument.XbrlLabelPresentationReferenceRoleNamespaceUri) == true)
+            {
+            }
+            else if (xlinkNode.IsInRole(XbrlDocument.XbrlReferencePresentationReferenceRoleNamespaceUri) == true)
+            {
+            }
             foreach (IAttribute CurrentAttribute in LinkbaseReferenceNode.Attributes)
             {
                 if ((CurrentAttribute.NamespaceURI.Equals(Xlink.XlinkNode.xlinkNamespace) == true) && (CurrentAttribute.LocalName.Equals("href") == true))

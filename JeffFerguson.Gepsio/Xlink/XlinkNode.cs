@@ -143,6 +143,11 @@ namespace JeffFerguson.Gepsio.Xlink
             this.To = xmlNode.GetAttributeValue(xlinkNamespace, "to");
         }
 
+        internal bool IsInRole(string roleUri)
+        {
+            return this.Role.Equals(roleUri);
+        }
+
         private void SetType()
         {
             this.Type = XlinkType.Unknown;

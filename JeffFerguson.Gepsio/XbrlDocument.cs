@@ -40,6 +40,9 @@ namespace JeffFerguson.Gepsio
     /// </remarks>
     public class XbrlDocument
     {
+
+        // namespace URIs
+
         internal static string XbrlNamespaceUri = "http://www.xbrl.org/2003/instance";
         internal static string XbrlLinkbaseNamespaceUri = "http://www.xbrl.org/2003/linkbase";
         internal static string XbrlDimensionsNamespaceUri = "http://xbrl.org/2005/xbrldt";
@@ -50,6 +53,9 @@ namespace JeffFerguson.Gepsio
         internal static string XbrlFactFootnoteArcroleNamespaceUri = "http://www.xbrl.org/2003/arcrole/fact-footnote";
         internal static string XbrlIso4217NamespaceUri = "http://www.xbrl.org/2003/iso4217";
         internal static string XmlNamespaceUri = "http://www.w3.org/XML/1998/namespace";
+
+        // role URIs
+
         internal static string XbrlLabelRoleNamespaceUri = "http://www.xbrl.org/2003/role/label";
         internal static string XbrlTerseLabelRoleNamespaceUri = "http://www.xbrl.org/2003/role/terseLabel";
         internal static string XbrlVerboseLabelRoleNamespaceUri = "http://www.xbrl.org/2003/role/verboseLabel";
@@ -72,6 +78,13 @@ namespace JeffFerguson.Gepsio
         internal static string XbrlMeasurementGuidanceRoleNamespaceUri = "http://www.xbrl.org/2003/role/measurementGuidance";
         internal static string XbrlCommentaryGuidanceRoleNamespaceUri = "http://www.xbrl.org/2003/role/commentaryGuidance";
         internal static string XbrlExampleGuidanceRoleNamespaceUri = "http://www.xbrl.org/2003/role/exampleGuidance";
+        internal static string XbrlCalculationLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/calculationLinkbaseRef";
+        internal static string XbrlDefinitionLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/definitionLinkbaseRef";
+        internal static string XbrlLabelLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/labelLinkbaseRef";
+        internal static string XbrlLabelPresentationReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/presentationLinkbaseRef";
+        internal static string XbrlReferencePresentationReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/referenceLinkbaseRef";
+
+        // fields
 
         private List<XbrlFragment> thisXbrlFragments;
         private string thisFilename;
