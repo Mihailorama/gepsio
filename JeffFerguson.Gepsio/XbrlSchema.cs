@@ -19,6 +19,7 @@ namespace JeffFerguson.Gepsio
         private ISchema thisXmlSchema;
         private ISchemaSet thisXmlSchemaSet;
         private ILookup<string, Element> thisLookupElements;
+        private List<LinkbaseDocument> thisLinkbaseDocuments;
 
         internal static string XmlSchemaInstanceNamespaceUri = "http://www.w3.org/2001/XMLSchema-instance";
         internal static string XmlSchemaNamespaceUri = "http://www.w3.org/2001/XMLSchema";
@@ -78,25 +79,15 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
-        /// A collection of <see cref="LinkbaseDocument"/> objects representing all linkbase documents defined in the schema.
-        /// </summary>
-        private List<LinkbaseDocument> LinkbaseDocuments
-        {
-            get;
-            //private set;
-            set;
-        }
-
-        /// <summary>
         /// A reference to the schema's calculation linkbase. Null is returned if no such linkbase is available.
         /// </summary>
         public CalculationLinkbaseDocument CalculationLinkbase
         {
             get
             {
-                if(LinkbaseDocuments != null)
+                if(thisLinkbaseDocuments != null)
                 {
-                    foreach(var currentLinkbaseDocument in LinkbaseDocuments)
+                    foreach(var currentLinkbaseDocument in thisLinkbaseDocuments)
                     {
                         if (currentLinkbaseDocument is CalculationLinkbaseDocument)
                             return currentLinkbaseDocument as CalculationLinkbaseDocument;
@@ -113,9 +104,9 @@ namespace JeffFerguson.Gepsio
         {
             get
             {
-                if (LinkbaseDocuments != null)
+                if (thisLinkbaseDocuments != null)
                 {
-                    foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+                    foreach (var currentLinkbaseDocument in thisLinkbaseDocuments)
                     {
                         if (currentLinkbaseDocument is DefinitionLinkbaseDocument)
                             return currentLinkbaseDocument as DefinitionLinkbaseDocument;
@@ -132,9 +123,9 @@ namespace JeffFerguson.Gepsio
         {
             get
             {
-                if (LinkbaseDocuments != null)
+                if (thisLinkbaseDocuments != null)
                 {
-                    foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+                    foreach (var currentLinkbaseDocument in thisLinkbaseDocuments)
                     {
                         if (currentLinkbaseDocument is LabelLinkbaseDocument)
                             return currentLinkbaseDocument as LabelLinkbaseDocument;
@@ -151,9 +142,9 @@ namespace JeffFerguson.Gepsio
         {
             get
             {
-                if (LinkbaseDocuments != null)
+                if (thisLinkbaseDocuments != null)
                 {
-                    foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+                    foreach (var currentLinkbaseDocument in thisLinkbaseDocuments)
                     {
                         if (currentLinkbaseDocument is PresentationLinkbaseDocument)
                             return currentLinkbaseDocument as PresentationLinkbaseDocument;
@@ -222,7 +213,7 @@ namespace JeffFerguson.Gepsio
             }
 
             thisSchemaDocument = Container.Resolve<IDocument>();
-            this.LinkbaseDocuments = new List<LinkbaseDocument>();
+            this.thisLinkbaseDocuments = new List<LinkbaseDocument>();
             this.RoleTypes = new List<RoleType>();
             thisSchemaDocument.Load(this.Path);
             this.NamespaceManager = Container.Resolve<INamespaceManager>();
@@ -440,19 +431,19 @@ namespace JeffFerguson.Gepsio
             var xlinkNode = new XlinkNode(LinkbaseReferenceNode);
             if (xlinkNode.IsInRole(XbrlDocument.XbrlCalculationLinkbaseReferenceRoleNamespaceUri) == true)
             {
-                this.LinkbaseDocuments.Add(new CalculationLinkbaseDocument(this, xlinkNode.Href));
+                this.thisLinkbaseDocuments.Add(new CalculationLinkbaseDocument(this, xlinkNode.Href));
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlDefinitionLinkbaseReferenceRoleNamespaceUri) == true)
             {
-                this.LinkbaseDocuments.Add(new DefinitionLinkbaseDocument(this, xlinkNode.Href));
+                this.thisLinkbaseDocuments.Add(new DefinitionLinkbaseDocument(this, xlinkNode.Href));
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlLabelLinkbaseReferenceRoleNamespaceUri) == true)
             {
-                this.LinkbaseDocuments.Add(new LabelLinkbaseDocument(this, xlinkNode.Href));
+                this.thisLinkbaseDocuments.Add(new LabelLinkbaseDocument(this, xlinkNode.Href));
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlPresentationLinkbaseReferenceRoleNamespaceUri) == true)
             {
-                this.LinkbaseDocuments.Add(new PresentationLinkbaseDocument(this, xlinkNode.Href));
+                this.thisLinkbaseDocuments.Add(new PresentationLinkbaseDocument(this, xlinkNode.Href));
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlReferenceLinkbaseReferenceRoleNamespaceUri) == true)
             {
