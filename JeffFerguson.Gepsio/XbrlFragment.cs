@@ -836,31 +836,15 @@ namespace JeffFerguson.Gepsio
         //-------------------------------------------------------------------------------
         private void ValidateItemsReferencedInDefinitionArcRoles()
         {
-            foreach (XbrlSchema CurrentSchema in thisSchemas)
-                ValidateFactsReferencedInDefinitionArcRoles(CurrentSchema);
-        }
-
-        //-------------------------------------------------------------------------------
-        // Searches the given XBRL schemas, looking for facts that are referenced
-        // in arc roles.
-        //-------------------------------------------------------------------------------
-        private void ValidateFactsReferencedInDefinitionArcRoles(XbrlSchema CurrentSchema)
-        {
-            if (CurrentSchema.LinkbaseDocuments != null)
+            foreach (var currentSchema in Schemas)
             {
-                foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
-                    ValidateFactsReferencedInDefinitionArcRoles(CurrentLinkbaseDocument);
+                var currentDefinitionLinkbaseDocument = currentSchema.DefinitionLinkbase;
+                if (currentDefinitionLinkbaseDocument != null)
+                {
+                    foreach (DefinitionLink CurrentDefinitionLink in currentDefinitionLinkbaseDocument.DefinitionLinks)
+                        ValidateFactsReferencedInDefinitionArcRoles(CurrentDefinitionLink);
+                }
             }
-        }
-
-        //-------------------------------------------------------------------------------
-        // Searches the given linkbase document, looking for facts that are referenced
-        // in arc roles.
-        //-------------------------------------------------------------------------------
-        private void ValidateFactsReferencedInDefinitionArcRoles(LinkbaseDocument CurrentLinkbaseDocument)
-        {
-            foreach (DefinitionLink CurrentDefinitionLink in CurrentLinkbaseDocument.DefinitionLinks)
-                ValidateFactsReferencedInDefinitionArcRoles(CurrentDefinitionLink);
         }
 
         //-------------------------------------------------------------------------------

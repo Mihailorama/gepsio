@@ -81,8 +81,8 @@ namespace JeffFerguson.Gepsio
         internal static string XbrlCalculationLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/calculationLinkbaseRef";
         internal static string XbrlDefinitionLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/definitionLinkbaseRef";
         internal static string XbrlLabelLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/labelLinkbaseRef";
-        internal static string XbrlLabelPresentationReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/presentationLinkbaseRef";
-        internal static string XbrlReferencePresentationReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/referenceLinkbaseRef";
+        internal static string XbrlPresentationLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/presentationLinkbaseRef";
+        internal static string XbrlReferenceLinkbaseReferenceRoleNamespaceUri = "http://www.xbrl.org/2003/role/referenceLinkbaseRef";
 
         // fields
 

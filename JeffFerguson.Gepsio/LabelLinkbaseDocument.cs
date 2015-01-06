@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
@@ -16,8 +17,15 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        LabelLinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
+        internal LabelLinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
             : base(ContainingXbrlSchema, DocumentPath)
         {
-        }    }
+            LabelLinks = new List<LabelLink>();
+            foreach (INode CurrentChild in thisLinkbaseNode.ChildNodes)
+            {
+                if (CurrentChild.LocalName.Equals("labelLink") == true)
+                    this.LabelLinks.Add(new LabelLink(CurrentChild));
+            }
+        }
+    }
 }

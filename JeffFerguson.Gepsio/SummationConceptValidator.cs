@@ -40,23 +40,10 @@ namespace JeffFerguson.Gepsio
         /// </param>
         private void Validate(XbrlSchema CurrentSchema)
         {
-            if (CurrentSchema.LinkbaseDocuments != null)
-            {
-                foreach (LinkbaseDocument CurrentLinkbaseDocument in CurrentSchema.LinkbaseDocuments)
-                    Validate(CurrentLinkbaseDocument);
-            }
-        }
-
-
-        /// <summary>
-        /// Validates all summation concepts found in the current linkbase document.
-        /// </summary>
-        /// <param name="CurrentLinkbaseDocument">
-        /// The linkbase document whose containing summation concepts should be validated.
-        /// </param>
-        private void Validate(LinkbaseDocument CurrentLinkbaseDocument)
-        {
-            foreach (CalculationLink CurrentCalculationLink in CurrentLinkbaseDocument.CalculationLinks)
+            var calculationLinkbase = CurrentSchema.CalculationLinkbase;
+            if (calculationLinkbase == null)
+                return;
+            foreach (CalculationLink CurrentCalculationLink in calculationLinkbase.CalculationLinks)
                 Validate(CurrentCalculationLink);
         }
 

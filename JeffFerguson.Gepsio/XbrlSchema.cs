@@ -80,10 +80,87 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// A collection of <see cref="LinkbaseDocument"/> objects representing all linkbase documents defined in the schema.
         /// </summary>
-        public List<LinkbaseDocument> LinkbaseDocuments
+        private List<LinkbaseDocument> LinkbaseDocuments
         {
             get;
-            private set;
+            //private set;
+            set;
+        }
+
+        /// <summary>
+        /// A reference to the schema's calculation linkbase. Null is returned if no such linkbase is available.
+        /// </summary>
+        public CalculationLinkbaseDocument CalculationLinkbase
+        {
+            get
+            {
+                if(LinkbaseDocuments != null)
+                {
+                    foreach(var currentLinkbaseDocument in LinkbaseDocuments)
+                    {
+                        if (currentLinkbaseDocument is CalculationLinkbaseDocument)
+                            return currentLinkbaseDocument as CalculationLinkbaseDocument;
+                    }
+                }
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// A reference to the schema's definition linkbase. Null is returned if no such linkbase is available.
+        /// </summary>
+        public DefinitionLinkbaseDocument DefinitionLinkbase
+        {
+            get
+            {
+                if (LinkbaseDocuments != null)
+                {
+                    foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+                    {
+                        if (currentLinkbaseDocument is DefinitionLinkbaseDocument)
+                            return currentLinkbaseDocument as DefinitionLinkbaseDocument;
+                    }
+                }
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// A reference to the schema's label linkbase. Null is returned if no such linkbase is available.
+        /// </summary>
+        public LabelLinkbaseDocument LabelLinkbase
+        {
+            get
+            {
+                if (LinkbaseDocuments != null)
+                {
+                    foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+                    {
+                        if (currentLinkbaseDocument is LabelLinkbaseDocument)
+                            return currentLinkbaseDocument as LabelLinkbaseDocument;
+                    }
+                }
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// A reference to the schema's presentation linkbase. Null is returned if no such linkbase is available.
+        /// </summary>
+        public PresentationLinkbaseDocument PresentationLinkbase
+        {
+            get
+            {
+                if (LinkbaseDocuments != null)
+                {
+                    foreach (var currentLinkbaseDocument in LinkbaseDocuments)
+                    {
+                        if (currentLinkbaseDocument is PresentationLinkbaseDocument)
+                            return currentLinkbaseDocument as PresentationLinkbaseDocument;
+                    }
+                }
+                return null;
+            }
         }
 
         /// <summary>
@@ -209,12 +286,11 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         public CalculationLink GetCalculationLink(RoleType CalculationLinkRole)
         {
-            foreach (var currentLinkbaseDocument in LinkbaseDocuments)
-            {
-                var calculationLinkCandidate = currentLinkbaseDocument.GetCalculationLink(CalculationLinkRole);
-                if (calculationLinkCandidate != null)
-                    return calculationLinkCandidate;
-            }
+            if (this.CalculationLinkbase == null)
+                return null;
+            var calculationLinkCandidate = CalculationLinkbase.GetCalculationLink(CalculationLinkRole);
+            if (calculationLinkCandidate != null)
+                return calculationLinkCandidate;
             return null;
         }
 
@@ -364,23 +440,23 @@ namespace JeffFerguson.Gepsio
             var xlinkNode = new XlinkNode(LinkbaseReferenceNode);
             if (xlinkNode.IsInRole(XbrlDocument.XbrlCalculationLinkbaseReferenceRoleNamespaceUri) == true)
             {
+                this.LinkbaseDocuments.Add(new CalculationLinkbaseDocument(this, xlinkNode.Href));
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlDefinitionLinkbaseReferenceRoleNamespaceUri) == true)
             {
+                this.LinkbaseDocuments.Add(new DefinitionLinkbaseDocument(this, xlinkNode.Href));
             }
             else if (xlinkNode.IsInRole(XbrlDocument.XbrlLabelLinkbaseReferenceRoleNamespaceUri) == true)
             {
+                this.LinkbaseDocuments.Add(new LabelLinkbaseDocument(this, xlinkNode.Href));
             }
-            else if (xlinkNode.IsInRole(XbrlDocument.XbrlLabelPresentationReferenceRoleNamespaceUri) == true)
+            else if (xlinkNode.IsInRole(XbrlDocument.XbrlPresentationLinkbaseReferenceRoleNamespaceUri) == true)
             {
+                this.LinkbaseDocuments.Add(new PresentationLinkbaseDocument(this, xlinkNode.Href));
             }
-            else if (xlinkNode.IsInRole(XbrlDocument.XbrlReferencePresentationReferenceRoleNamespaceUri) == true)
+            else if (xlinkNode.IsInRole(XbrlDocument.XbrlReferenceLinkbaseReferenceRoleNamespaceUri) == true)
             {
-            }
-            foreach (IAttribute CurrentAttribute in LinkbaseReferenceNode.Attributes)
-            {
-                if ((CurrentAttribute.NamespaceURI.Equals(Xlink.XlinkNode.xlinkNamespace) == true) && (CurrentAttribute.LocalName.Equals("href") == true))
-                    this.LinkbaseDocuments.Add(new LinkbaseDocument(this, CurrentAttribute.Value));
+                //this.LinkbaseDocuments.Add(new ReferenceLinkbaseDocument(this, xlinkNode.Href));
             }
         }
 

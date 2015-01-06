@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
@@ -16,9 +17,15 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        PresentationLinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
+        internal PresentationLinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
             : base(ContainingXbrlSchema, DocumentPath)
         {
+            PresentationLinks = new List<PresentationLink>();
+            foreach (INode CurrentChild in thisLinkbaseNode.ChildNodes)
+            {
+                if (CurrentChild.LocalName.Equals("presentationLink") == true)
+                    this.PresentationLinks.Add(new PresentationLink(CurrentChild));
+            }
         }
     }
 }

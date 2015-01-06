@@ -1,7 +1,6 @@
 ﻿using JeffFerguson.Gepsio.IoC;
 using JeffFerguson.Gepsio.Xml.Interfaces;
 using System;
-using System.Collections.Generic;
 
 namespace JeffFerguson.Gepsio
 {
@@ -15,7 +14,7 @@ namespace JeffFerguson.Gepsio
         private IDocument thisXmlDocument;
         private string thisLinkbasePath;
         private INamespaceManager thisNamespaceManager;
-        private INode thisLinkbaseNode;
+        internal INode thisLinkbaseNode;
 
         /// <summary>
         /// The schema that references this linkbase document.
@@ -26,50 +25,10 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
-        /// <summary>
-        /// A collection of <see cref="DefinitionLink"/> objects defined by the linkbase document.
-        /// </summary>
-        public List<DefinitionLink> DefinitionLinks
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
-        /// A collection of <see cref="CalculationLink"/> objects defined by the linkbase document.
-        /// </summary>
-        public List<CalculationLink> CalculationLinks
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
-        /// A collection of <see cref="LabelLink"/> objects defined by the linkbase document.
-        /// </summary>
-        public List<LabelLink> LabelLinks
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
-        /// A collection of <see cref="PresentationLink"/> objects defined by the linkbase document.
-        /// </summary>
-        public List<PresentationLink> PresentationLinks
-        {
-            get;
-            private set;
-        }
-
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
         internal LinkbaseDocument(XbrlSchema ContainingXbrlSchema, string DocumentPath)
         {
-            this.DefinitionLinks = new List<DefinitionLink>();
-            this.CalculationLinks = new List<CalculationLink>();
-            this.LabelLinks = new List<LabelLink>();
-            this.PresentationLinks = new List<PresentationLink>();
             this.Schema = ContainingXbrlSchema;
             thisLinkbasePath = GetFullLinkbasePath(DocumentPath);
             thisXmlDocument = Container.Resolve<IDocument>();
@@ -77,45 +36,7 @@ namespace JeffFerguson.Gepsio
             thisNamespaceManager = Container.Resolve<INamespaceManager>();
             thisNamespaceManager.Document = thisXmlDocument;
             thisNamespaceManager.AddNamespace("default", XbrlDocument.XbrlLinkbaseNamespaceUri);
-            ReadLinkbaseNode();
-        }
-
-        /// <summary>
-        /// Finds the <see cref="CalculationLink"/> object having the given role.
-        /// </summary>
-        /// <param name="CalculationLinkRole">
-        /// The role type to find.
-        /// </param>
-        /// <returns>
-        /// The <see cref="CalculationLink"/> object having the given role, or
-        /// null if no object can be found.
-        /// </returns>
-        public CalculationLink GetCalculationLink(RoleType CalculationLinkRole)
-        {
-            foreach (var currentCalculationLink in CalculationLinks)
-            {
-                if (currentCalculationLink.RoleUri.Equals(CalculationLinkRole.RoleUri) == true)
-                    return currentCalculationLink;
-            }
-            return null;
-        }
-
-        //------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------
-        private void ReadLinkbaseNode()
-        {
             thisLinkbaseNode = thisXmlDocument.SelectSingleNode("//default:linkbase", thisNamespaceManager);
-            foreach (INode CurrentChild in thisLinkbaseNode.ChildNodes)
-            {
-                if (CurrentChild.LocalName.Equals("definitionLink") == true)
-                    this.DefinitionLinks.Add(new DefinitionLink(CurrentChild));
-                else if (CurrentChild.LocalName.Equals("calculationLink") == true)
-                    this.CalculationLinks.Add(new CalculationLink(this, CurrentChild));
-                else if (CurrentChild.LocalName.Equals("labelLink") == true)
-                    this.LabelLinks.Add(new LabelLink(CurrentChild));
-                else if (CurrentChild.LocalName.Equals("presentationLink") == true)
-                    this.PresentationLinks.Add(new PresentationLink(CurrentChild));
-            }
         }
 
         //------------------------------------------------------------------------------------
@@ -144,6 +65,14 @@ namespace JeffFerguson.Gepsio
                 throw new NotImplementedException("XbrlSchema.GetFullSchemaPath() code path not implemented.");
             }
             return FullPath;
+        }
+
+        //------------------------------------------------------------------------------------
+        // Called during validation passes. Derived classes can override this to provide
+        // linkbase-specific validation.
+        //------------------------------------------------------------------------------------
+        virtual internal void Validate()
+        {
         }
     }
 }
