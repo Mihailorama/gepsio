@@ -1,7 +1,7 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Xml;
 
-namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
+namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
 {
     internal class NamespaceManager : INamespaceManager
     {

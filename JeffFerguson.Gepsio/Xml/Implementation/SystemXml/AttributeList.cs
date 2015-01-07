@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 
-namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
+namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
 {
     internal class AttributeList : IAttributeList, IEnumerable, IEnumerator
     {

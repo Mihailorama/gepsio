@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 
-namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
+namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
 {
     internal class Schema : ISchema
     {

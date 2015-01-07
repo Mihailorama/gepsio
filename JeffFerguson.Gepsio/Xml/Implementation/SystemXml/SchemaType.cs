@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Schema;
 
-namespace JeffFerguson.Gepsio.Xml.Implementation.DotNet
+namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
 {
     /// <summary>
     /// An encapsulation of a global type defined in an XML schema. The class supports both simple and complex types.
