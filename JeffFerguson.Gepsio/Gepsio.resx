@@ -255,7 +255,7 @@
     <value>Facts named {0} are defined as being in an essence alias relationship with facts named {1}. However, the fact with ID {2} has a rounded value of {3}, which differs from the fact with ID {4}, which has a rounded value of {5}. These two facts are therefore not in a valid essence alias relationship.</value>
   </data>
   <data name="WebExceptionThrownDuringSchemaCreation" xml:space="preserve">
-    <value>The XBRL schema at {0} could not be read due to error that occurred while accessing the network through a pluggable protocol. More information is available from the thrown exception's inner exception.</value>
+    <value>The XBRL schema at {0} could not be read due to error that occurred while accessing the network through a pluggable protocol. More information is available from the validation error object's inner exception property.</value>
   </data>
   <data name="CannotFindFootnoteLocatorOrFootnote" xml:space="preserve">
     <value>Footnote arc {0} references a resource with a label of {1}, but no locator or footnote can be found.</value>
@@ -276,5 +276,8 @@
   </data>
   <data name="SegmentTextNotConvertable" xml:space="preserve">
     <value>The child of a segment node has a text value of '{0}'. This value is not convertable to the child node's data type.</value>
+  </data>
+  <data name="FileNotFoundDuringSchemaCreation" xml:space="preserve">
+    <value>The XBRL schema at {0} could not be read because the file could not be found. Because the schema cannot be loaded, some validations will not be able to be performed. Other validation errors reported against this instance may stem from the fact that the schema cannot be loaded. More information on the "file not found" condition is available from the validation error object's inner exception property.</value>
   </data>
 </root>

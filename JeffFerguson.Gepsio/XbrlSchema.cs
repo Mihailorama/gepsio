@@ -4,6 +4,7 @@ using JeffFerguson.Gepsio.Xml.Interfaces;
 using JeffFerguson.Gepsio.Xsd;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -202,6 +203,14 @@ namespace JeffFerguson.Gepsio
                 }                
                 thisXmlSchemaSet.Add(thisXmlSchema);
                 thisXmlSchemaSet.Compile();
+            }
+            catch (FileNotFoundException fnfEx)
+            {
+                StringBuilder MessageBuilder = new StringBuilder();
+                string StringFormat = AssemblyResources.GetName("FileNotFoundDuringSchemaCreation");
+                MessageBuilder.AppendFormat(StringFormat, this.Path);
+                this.Fragment.AddValidationError(new SchemaValidationError(this, MessageBuilder.ToString(), fnfEx));
+                return;
             }
             catch (WebException webEx)
             {

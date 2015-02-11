@@ -1,7 +1,5 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Collections.Generic;
-using System.Net;
-using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 

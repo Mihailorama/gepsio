@@ -337,6 +337,8 @@ namespace JeffFerguson.Gepsio
             var text = SegmentNode.InnerText;
             if (string.IsNullOrEmpty(text) == true)
                 return;
+            if (this.Fragment.Schemas.Count == 0)
+                return;
             var schema = this.Fragment.Schemas[0];
             var segmentNodeType = schema.GetNodeType(SegmentNode);
             if (segmentNodeType == null)

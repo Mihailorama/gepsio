@@ -1,6 +1,7 @@
 using JeffFerguson.Gepsio.IoC;
 using JeffFerguson.Gepsio.Xml.Interfaces;
 using System.Collections.Generic;
+using System.IO;
 
 namespace JeffFerguson.Gepsio
 {
@@ -194,6 +195,26 @@ namespace JeffFerguson.Gepsio
             NewNamespaceManager.AddNamespace("instance", XbrlNamespaceUri);
             INodeList XbrlNodes = SchemaValidXbrl.SelectNodes("//instance:xbrl", NewNamespaceManager);
             foreach(INode XbrlNode in XbrlNodes)
+                thisXbrlFragments.Add(new XbrlFragment(this, NewNamespaceManager, XbrlNode));
+        }
+
+        /// <summary>
+        /// Loads an XBRL document containing XBRL data.
+        /// </summary>
+        /// <param name="dataStream">
+        /// A stream of data containing the XML document to load.
+        /// </param>
+        public void Load(Stream dataStream)
+        {
+            var SchemaValidXbrl = Container.Resolve<IDocument>();
+            SchemaValidXbrl.Load(dataStream);
+            thisFilename = string.Empty;
+            thisPath = string.Empty;
+            var NewNamespaceManager = Container.Resolve<INamespaceManager>();
+            NewNamespaceManager.Document = SchemaValidXbrl;
+            NewNamespaceManager.AddNamespace("instance", XbrlNamespaceUri);
+            INodeList XbrlNodes = SchemaValidXbrl.SelectNodes("//instance:xbrl", NewNamespaceManager);
+            foreach (INode XbrlNode in XbrlNodes)
                 thisXbrlFragments.Add(new XbrlFragment(this, NewNamespaceManager, XbrlNode));
         }
 

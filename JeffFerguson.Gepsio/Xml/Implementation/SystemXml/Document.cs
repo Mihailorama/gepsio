@@ -1,4 +1,5 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
+using System.IO;
 using System.Xml;
 
 namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
@@ -26,6 +27,11 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
         public void Load(string path)
         {
             thisDocument.Load(path);
+        }
+
+        public void Load(Stream stream)
+        {
+            thisDocument.Load(stream);
         }
 
         public INodeList SelectNodes(string xpath, INamespaceManager namespaceManager)

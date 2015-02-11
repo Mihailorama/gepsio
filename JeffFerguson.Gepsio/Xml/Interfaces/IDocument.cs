@@ -1,4 +1,5 @@
-﻿
+﻿using System.IO;
+
 namespace JeffFerguson.Gepsio.Xml.Interfaces
 {
     /// <summary>
@@ -20,6 +21,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     internal interface IDocument
     {
         void Load(string path);
+        void Load(Stream stream);
         INodeList SelectNodes(string xpath, INamespaceManager namespaceManager);
         INode SelectSingleNode(string xPath, INamespaceManager namespaceManager);
     }

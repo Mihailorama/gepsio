@@ -529,7 +529,9 @@ namespace JeffFerguson.Gepsio
         {
             string HrefAttributeValue = SchemaRefNode.GetAttributeValue(Xlink.XlinkNode.xlinkNamespace, "href");
             string Base = SchemaRefNode.GetAttributeValue(XbrlDocument.XmlNamespaceUri, "base");
-            thisSchemas.Add(new XbrlSchema(this, HrefAttributeValue, Base));
+            var newSchema = new XbrlSchema(this, HrefAttributeValue, Base);
+            if(newSchema.SchemaRootNode != null)
+                thisSchemas.Add(newSchema);
         }
 
         //-------------------------------------------------------------------------------

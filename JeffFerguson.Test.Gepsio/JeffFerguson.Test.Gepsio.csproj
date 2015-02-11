@@ -80,6 +80,7 @@
     <Compile Include="WorkItemsTests.cs" />
     <Compile Include="XBRLCONFCR520120124Test.cs" />
     <Compile Include="XBRLCONFCR520120124TestVariation.cs" />
+    <Compile Include="XbrlDocumentTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
