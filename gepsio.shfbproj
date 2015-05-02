@@ -18,8 +18,8 @@
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>JeffFerguson.Gepsio</HtmlHelpName>
     <Language>en-US</Language>
-    <HelpFileFormat>OpenXml</HelpFileFormat>
-    <CopyrightText>Copyright %28c%29 2008-2014 Jeff Ferguson</CopyrightText>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <CopyrightText>Copyright %28c%29 2008-2015 Jeff Ferguson</CopyrightText>
     <FeedbackEMailAddress>gepsio%40outlook.com</FeedbackEMailAddress>
     <HelpTitle>Gepsio</HelpTitle>
     <DocumentationSources>
@@ -33,11 +33,12 @@
     <ProjectSummary>Gepsio is a .NET-based document object model for XBRL documents. Load your XBRL document with the XbrlDocument class and work with your XBRL document exposed as a set of .NET classes with a variety of properties and methods. Loaded XBRL documents are automatically validated against the information against the XBRL specification, and exceptions are thrown when invalid XBRL documents are loaded. The Gepsio code base is unit tested using the XBRL-CONF-CR5-2012-01-24 unit tests designed by the XBRL organization. </ProjectSummary>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="JeffFerguson.Gepsio" isDocumented="True">Gepsio is a .NET-based document object model for XBRL documents. Load your XBRL document with the XbrlDocument class and work with your XBRL document exposed as a set of .NET classes with a variety of properties and methods. Loaded XBRL documents are automatically validated against the information against the XBRL specification, and exceptions are thrown when invalid XBRL documents are loaded. The Gepsio code base is unit tested using the XBRL-CONF-CR5-2012-01-24 unit tests designed by the XBRL organization.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="JeffFerguson.Gepsio.Xlink" isDocumented="True">Provides support for the XLINK specification to the Gepsio codebase. The classes in this namespace are typically used for internal use only and are not desgined to be directly usable by Gepsio clients.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="JeffFerguson.Gepsio.Xsd" isDocumented="True">Provides support for the XML Schema specification to the Gepsio codebase. The classes in this namespace are typically used for internal use only and are not desgined to be directly usable by Gepsio clients.</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="JeffFerguson.Gepsio.Xlink" isDocumented="True">Provides support for the XLINK specification to the Gepsio codebase. The classes in this namespace are typically used for internal use only and are not desgined to be directly usable by Gepsio clients.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="JeffFerguson.Gepsio.Xsd" isDocumented="True">Provides support for the XML Schema specification to the Gepsio codebase. The classes in this namespace are typically used for internal use only and are not desgined to be directly usable by Gepsio clients.</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <VendorName>Jeff Ferguson</VendorName>
     <WebsiteSdkLinkType>None</WebsiteSdkLinkType>
-    <PresentationStyle>OpenXML</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <KeepLogFile>False</KeepLogFile>
     <SyntaxFilters>C#, Visual Basic, Visual Basic Usage, Managed C++, F#, XAML Usage, ASP.NET</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
