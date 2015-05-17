@@ -691,12 +691,14 @@ namespace JeffFerguson.Gepsio
         private void ReadFacts()
         {
             thisFacts = new List<Fact>();
+            thisFacts.Capacity = thisXbrlRootNode.ChildNodes.Count;
             foreach (INode CurrentChild in thisXbrlRootNode.ChildNodes)
             {
                 var CurrentFact = Fact.Create(this, CurrentChild);
                 if (CurrentFact != null)
                     thisFacts.Add(CurrentFact);
             }
+            thisFacts.TrimExcess();
         }
 
         //-------------------------------------------------------------------------------

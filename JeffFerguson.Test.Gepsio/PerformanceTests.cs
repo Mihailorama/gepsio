@@ -17,7 +17,10 @@ namespace JeffFerguson.Test.Gepsio
         /// <remarks>
         /// <list type="bullet">
         /// <item>
-        /// Load times (in milliseconds) for Gepsio 2.1.0.6 (Sep 2012 CTP): 240112276, 265228912, 224193740
+        /// Load times (in seconds) for Gepsio 2.1.0.6 (Sep 2012 CTP): 24.0112276, 26.5228912, 22.4193740
+        /// </item>
+        /// <item>
+        /// Load times (in seconds) for Gepsio 2.1.0.9 (May 2015 CTP): 10.2193900, 07.3005537, 12.5917571
         /// </item>
         /// </list>
         /// </remarks>
