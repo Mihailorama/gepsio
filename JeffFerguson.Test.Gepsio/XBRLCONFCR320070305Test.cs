@@ -49,6 +49,7 @@ namespace JeffFerguson.Test.Gepsio
         #endregion
 
         [TestMethod]
+        [Ignore]
         [Description("XBRL-CONF-CR3-2007-03-05")]
         public void ExecuteXBRLCONFCR320070305Testcases()
         {
