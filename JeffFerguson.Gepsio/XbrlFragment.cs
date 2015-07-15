@@ -82,7 +82,7 @@ namespace JeffFerguson.Gepsio
         private IDictionary<string, Context> thisContextDictionary;
         private INamespaceManager thisNamespaceManager;
         private List<XbrlSchema> thisSchemas;
-        private List<Fact> thisFacts;
+        private FactCollection thisFacts;
         private List<Unit> thisUnits;
         private List<FootnoteLink> thisFootnoteLinks;
         private List<ValidationError> thisValidationErrors;
@@ -137,7 +137,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// A collection of <see cref="Fact"/> objects representing all facts found in the fragment.
         /// </summary>
-        public List<Fact> Facts
+        public FactCollection Facts
         {
             get
             {
@@ -562,7 +562,7 @@ namespace JeffFerguson.Gepsio
         /// <param name="FactList">
         /// A collection of facts whose contexts should be validated.
         /// </param>
-        private void ValidateContextRefs(List<Fact> FactList)
+        private void ValidateContextRefs(FactCollection FactList)
         {
             foreach (Fact CurrentFact in FactList)
             {
@@ -690,7 +690,7 @@ namespace JeffFerguson.Gepsio
         /// </remarks>
         private void ReadFacts()
         {
-            thisFacts = new List<Fact>();
+            thisFacts = new FactCollection();
             thisFacts.Capacity = thisXbrlRootNode.ChildNodes.Count;
             foreach (INode CurrentChild in thisXbrlRootNode.ChildNodes)
             {
@@ -927,7 +927,7 @@ namespace JeffFerguson.Gepsio
         /// <param name="FactList">
         /// A collection of <see cref="Fact"/> objects defined in the fragment.
         /// </param>
-        private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc, List<Fact> FactList)
+        private void ValidateEssenceAliasedFacts(DefinitionArc EssenceAliasDefinitionArc, FactCollection FactList)
         {
             Locator CurrentFromLocator = EssenceAliasDefinitionArc.FromLocator;
             if (CurrentFromLocator == null)
@@ -979,7 +979,7 @@ namespace JeffFerguson.Gepsio
         /// <param name="ToItemName">
         /// The name of the item that represents the "to" end of the essence alias relationship.
         /// </param>
-        private void ValidateEssenceAliasedFacts(Item FromItem, List<Fact> FactList, string ToItemName)
+        private void ValidateEssenceAliasedFacts(Item FromItem, FactCollection FactList, string ToItemName)
         {
             foreach (Fact CurrentFact in FactList)
             {

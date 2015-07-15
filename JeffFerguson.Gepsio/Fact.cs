@@ -22,11 +22,21 @@ namespace JeffFerguson.Gepsio
             private set;
         }
 
+        /// <summary>
+        /// The ID of the fact.
+        /// </summary>
+        public string Id
+        {
+            get;
+            private set;
+        }
+
         internal Fact(XbrlFragment ParentFragment, INode FactNode)
         {
             thisParentFragment = ParentFragment;
             thisFactNode = FactNode;
             this.Name = thisFactNode.LocalName;
+            this.Id = thisFactNode.GetAttributeValue("id");
         }
 
         internal static Fact Create(XbrlFragment ParentFragment, INode FactNode)

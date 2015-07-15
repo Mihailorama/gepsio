@@ -88,7 +88,7 @@ namespace JeffFerguson.Gepsio
         /// <param name="FactList">
         /// The collection of items that should be searched when looking for summation or contributing items.
         /// </param>
-        private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept, List<Fact> FactList)
+        private void ValidateSummationConcept(CalculationLink CurrentCalculationLink, SummationConcept CurrentSummationConcept, FactCollection FactList)
         {
             Element SummationConceptElement = LocateElement(CurrentSummationConcept.SummationConceptLocator);
             Item SummationConceptItem = LocateItem(SummationConceptElement, FactList);
@@ -258,7 +258,7 @@ namespace JeffFerguson.Gepsio
         /// This method should most likely be moved into a class which wraps <see cref="Item"/>
         /// collections with a value-added wrapper class.
         /// </remarks>
-        private Item LocateItem(Element ItemElement, List<Fact> FactList)
+        private Item LocateItem(Element ItemElement, FactCollection FactList)
         {
             if (ItemElement == null)
                 return null;
@@ -310,7 +310,7 @@ namespace JeffFerguson.Gepsio
         /// This method should most likely be moved into a class which wraps <see cref="Item"/>
         /// collections with a value-added wrapper class.
         /// </remarks>
-        private List<Item> LocateItems(Element ItemElement, List<Fact> FactList)
+        private List<Item> LocateItems(Element ItemElement, FactCollection FactList)
         {
             var ItemList = new List<Item>();
             if (ItemElement != null)

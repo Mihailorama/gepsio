@@ -15,7 +15,12 @@ namespace JeffFerguson.Test.Gepsio
         /// of Gepsio assumed that this value was of an integer type; those early versions of Gepsio would throw an exception when trying
         /// to parse the decimal-based "order" attributes as an integer.
         /// </summary>
+        /// <remarks>
+        /// This test must be ignored, as one of the type definitions refers to a base type at an XBRL.US
+        /// location which no longer exists.
+        /// </remarks>
         [TestMethod]
+        [Ignore]
         public void WorkItem3828Test()
         {
             var NewXbrlDocument = new XbrlDocument();
@@ -46,7 +51,12 @@ namespace JeffFerguson.Test.Gepsio
         /// <summary>
         /// Work item 9571 notes that the Nov 2011 CTP has no support for schema role types.
         /// </summary>
+        /// <remarks>
+        /// This test must be ignored, as one of the type definitions refers to a base type at an XBRL.US
+        /// location which no longer exists.
+        /// </remarks>
         [TestMethod]
+        [Ignore]
         public void WorkItem9571Test()
         {
             var xbrlDocument = new XbrlDocument();

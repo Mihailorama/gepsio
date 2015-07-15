@@ -11,7 +11,7 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// A collection of <see cref="Fact"/> objects that are contained by the tuple.
         /// </summary>
-        public List<Fact> Facts
+        public FactCollection Facts
         {
             get;
             set;
@@ -19,7 +19,7 @@ namespace JeffFerguson.Gepsio
 
         internal Tuple(XbrlFragment ParentFragment, INode TupleNode) : base(ParentFragment, TupleNode)
         {
-            this.Facts = new List<Fact>();
+            this.Facts = new FactCollection();
             foreach (INode CurrentChild in TupleNode.ChildNodes)
             {
                 var CurrentFact = Fact.Create(ParentFragment, CurrentChild);
