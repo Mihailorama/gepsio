@@ -320,12 +320,10 @@ namespace JeffFerguson.Gepsio
         /// </returns>
         public Item GetFact(string FactId)
         {
-            foreach (Item CurrentFact in thisFacts)
-            {
-                if (CurrentFact.Id == FactId)
-                    return CurrentFact;
-            }
-            return null;
+            var matchingFact = thisFacts.GetFactById(FactId);
+            if (matchingFact == null)
+                return null;
+            return matchingFact as Item;
         }
 
         /// <summary>
