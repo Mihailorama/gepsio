@@ -145,15 +145,6 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
-        /// The ID of this item.
-        /// </summary>
-        public string Id
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
         /// True if this fact has a nil value. False if this fact does not have a nil value.
         /// </summary>
         public bool NilSpecified
@@ -195,7 +186,6 @@ namespace JeffFerguson.Gepsio
             this.ContextRefName = thisFactNode.GetAttributeValue("contextRef");
             this.UnitRefName = thisFactNode.GetAttributeValue("unitRef");
             thisRoundedValueCalculated = false;
-            this.Id = thisFactNode.GetAttributeValue("id");
             this.NilSpecified = false;
             string NilValue = thisFactNode.GetAttributeValue(XbrlSchema.XmlSchemaInstanceNamespaceUri, "nil");
             if (NilValue.Equals("true", StringComparison.CurrentCultureIgnoreCase) == true)
