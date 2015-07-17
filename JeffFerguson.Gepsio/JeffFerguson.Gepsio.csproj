@@ -77,6 +77,8 @@
     <Compile Include="DefinitionLinkbaseDocument.cs" />
     <Compile Include="FactCollection.cs" />
     <Compile Include="LabelLinkbaseDocument.cs" />
+    <Compile Include="PresentableFactTree.cs" />
+    <Compile Include="PresentableFactTreeNode.cs" />
     <Compile Include="PresentationArc.cs" />
     <Compile Include="PresentationLink.cs" />
     <Compile Include="PresentationLinkbaseDocument.cs" />

@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PerformanceTests.cs" />
+    <Compile Include="PresentableFactTreeTests.cs" />
     <Compile Include="RoleTypeTests.cs" />
     <Compile Include="XBRLCONFCR320070305Test.cs" />
     <Compile Include="InferPrecisionTest.cs" />
@@ -112,7 +113,9 @@
     <Content Include="PerformanceTests\aig20130630\aig-20130630.xml" />
     <Content Include="PerformanceTests\aig20130630\aig-20130630_cal.xml" />
     <Content Include="PerformanceTests\aig20130630\aig-20130630_def.xml" />
-    <Content Include="PerformanceTests\aig20130630\aig-20130630_lab.xml" />
+    <Content Include="PerformanceTests\aig20130630\aig-20130630_lab.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="PerformanceTests\aig20130630\aig-20130630_pre.xml" />
     <Content Include="RoleType\tgt-20130202.xml" />
     <Content Include="RoleType\tgt-20130202_cal.xml" />

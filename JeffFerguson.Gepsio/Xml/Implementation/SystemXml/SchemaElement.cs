@@ -20,6 +20,14 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
             }
         }
 
+        public bool IsAbstract
+        {
+            get
+            {
+                return thisSchemaElement.IsAbstract;
+            }
+        }
+
         public string Name
         {
             get

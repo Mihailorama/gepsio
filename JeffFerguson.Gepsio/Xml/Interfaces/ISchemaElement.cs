@@ -21,6 +21,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     internal interface ISchemaElement
     {
         string Id { get; }
+        bool IsAbstract { get; }
         string Name { get; }
         IQualifiedName SchemaTypeName { get; }
         IQualifiedName SubstitutionGroup { get; }

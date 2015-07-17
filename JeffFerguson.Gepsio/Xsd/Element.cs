@@ -76,6 +76,15 @@ namespace JeffFerguson.Gepsio.Xsd
         }
 
         /// <summary>
+        /// True if this element is an abstract element; false otherwise.
+        /// </summary>
+        public bool IsAbstract
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
         /// The substitution group for the element.
         /// </summary>
         public ElementSubstitutionGroup SubstitutionGroup
@@ -126,6 +135,7 @@ namespace JeffFerguson.Gepsio.Xsd
             thisSchemaElement = SchemaElement;
             this.Id = SchemaElement.Id;
             this.Name = SchemaElement.Name;
+            this.IsAbstract = SchemaElement.IsAbstract;
             this.TypeName = SchemaElement.SchemaTypeName;
             SetSubstitutionGroup(SchemaElement.SubstitutionGroup);
             SetPeriodType();

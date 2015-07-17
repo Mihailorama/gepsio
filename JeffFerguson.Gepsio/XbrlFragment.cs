@@ -421,6 +421,23 @@ namespace JeffFerguson.Gepsio
             return null;
         }
 
+        /// <summary>
+        /// Returns a prestable fact tree.
+        /// </summary>
+        /// <returns>
+        /// A presentable fact tree. A null will be returned if no presentation linkbase
+        /// is available.
+        /// </returns>
+        public PresentableFactTree GetPresentableFactTree()
+        {
+            foreach (var currentSchema in Schemas)
+            {
+                if (currentSchema.PresentationLinkbase != null)
+                    return new PresentableFactTree(currentSchema, this.Facts);
+            }
+            return null;
+        }
+
         //===============================================================================
         #endregion
         //===============================================================================
