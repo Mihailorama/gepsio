@@ -19,10 +19,42 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface INamespaceManager
     {
+        /// <summary>
+        /// The XML document associated with this namespace manager.
+        /// </summary>
         IDocument Document { get; set; }
 
+        /// <summary>
+        /// Adds a namespace to the namespace manager.
+        /// </summary>
+        /// <param name="prefix">
+        /// The prefix of the namespace to be added.
+        /// </param>
+        /// <param name="uri">
+        /// The URI of the namespace to be added.
+        /// </param>
         void AddNamespace(string prefix, string uri);
+
+        /// <summary>
+        /// Looks up the prefix for a given URI.
+        /// </summary>
+        /// <param name="uri">
+        /// The URI of the namespace whose prefix should be returned.
+        /// </param>
+        /// <returns>
+        /// The prefix of the namespace with the given URI.
+        /// </returns>
         string LookupPrefix(string uri);
+
+        /// <summary>
+        /// Looks up the URI for a given prefix.
+        /// </summary>
+        /// <param name="prefix">
+        /// The prefix of the namespace whose URI should be returned.
+        /// </param>
+        /// <returns>
+        /// The URI of the namespace with the given prefix.
+        /// </returns>
         string LookupNamespace(string prefix);
     }
 }

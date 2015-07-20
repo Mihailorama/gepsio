@@ -19,10 +19,29 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface IAttribute
     {
+        /// <summary>
+        /// The local name of the attribute.
+        /// </summary>
         string LocalName { get; }
+
+        /// <summary>
+        /// The prefix of the attribute.
+        /// </summary>
         string Prefix { get; }
+
+        /// <summary>
+        /// The value of the attribute.
+        /// </summary>
         string Value { get; }
+
+        /// <summary>
+        /// The name of the attribute.
+        /// </summary>
         string Name { get; }
+
+        /// <summary>
+        /// The namespace URI of the attribute.
+        /// </summary>
         string NamespaceURI { get; }
     }
 }

@@ -10,7 +10,6 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
         private IQualifiedName thisSchemaTypeName;
         private IQualifiedName thisSubstitutionGroup;
         private IAttributeList thisUnhandledAttributes;
-        private AnyType thisSchemaType;
 
         public string Id
         {

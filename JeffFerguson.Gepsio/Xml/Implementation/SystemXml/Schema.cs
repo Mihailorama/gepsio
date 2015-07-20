@@ -58,7 +58,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
                 thisSchema = XmlSchema.Read(schemaReader, null);
                 return true;
             }
-            catch(XmlSchemaException e)
+            catch(XmlSchemaException)
             {
                 return false;
             }

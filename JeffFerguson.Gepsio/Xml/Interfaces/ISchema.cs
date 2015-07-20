@@ -20,8 +20,20 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface ISchema
     {
+        /// <summary>
+        /// The list of namespaces referenced by the schema.
+        /// </summary>
         List<IQualifiedName> Namespaces { get; }
 
+        /// <summary>
+        /// Reads a schema.
+        /// </summary>
+        /// <param name="path">
+        /// The path to the schema file to be read.
+        /// </param>
+        /// <returns>
+        /// True if the schema was read successfully; false otherwise.
+        /// </returns>
         bool Read(string path);
     }
 }

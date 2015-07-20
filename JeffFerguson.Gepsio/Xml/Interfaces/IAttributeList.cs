@@ -20,8 +20,26 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface IAttributeList : IEnumerable
     {
+        /// <summary>
+        /// The indexer for the list.
+        /// </summary>
+        /// <param name="s">
+        /// The name of the attribute to be returned.
+        /// </param>
+        /// <returns>
+        /// The attribute in the list with the supplied name.
+        /// </returns>
         IAttribute this[string s] { get; }
 
+        /// <summary>
+        /// Finds an attribute with the given name.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the attribute to be returned.
+        /// </param>
+        /// <returns>
+        /// The attribute in the list with the supplied name.
+        /// </returns>
         IAttribute FindAttribute(string name);
     }
 }

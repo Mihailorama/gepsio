@@ -19,10 +19,29 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface ISchemaAttribute
     {
+        /// <summary>
+        /// The name of the schema attribute.
+        /// </summary>
         string Name { get; }
+
+        /// <summary>
+        /// True if the schema attribute is optional; false otherwise.
+        /// </summary>
         bool Optional { get; }
+
+        /// <summary>
+        /// True if the schema attribute is prohibited; false otherwise. 
+        /// </summary>
         bool Prohibited { get; }
+
+        /// <summary>
+        /// True if the schema attribute is required; false otherwise. 
+        /// </summary>
         bool Required { get; }
+
+        /// <summary>
+        /// The fixed value of the attribute.
+        /// </summary>
         string FixedValue { get; }
     }
 }

@@ -19,8 +19,20 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface IQualifiedName
     {
+        /// <summary>
+        /// The name portion of the qualified name.
+        /// </summary>
         string Name { get; set; }
+
+        /// <summary>
+        /// The namespace portion of the qualified name.
+        /// </summary>
         string Namespace { get; set; }
+
+        /// <summary>
+        /// The fully qualified name as a string,
+        /// including the namespace and the local name.
+        /// </summary>
         string FullyQualifiedName { get; set; }
     }
 }

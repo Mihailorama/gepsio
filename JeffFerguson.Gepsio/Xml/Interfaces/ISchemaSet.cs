@@ -20,10 +20,27 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface ISchemaSet
     {
+        /// <summary>
+        /// A dictionary of qualified names and elements for all of the gobal elements in this schema set.
+        /// </summary>
         Dictionary<IQualifiedName, ISchemaElement> GlobalElements { get; }
+
+        /// <summary>
+        /// A dictionary of qualified names and types for all of the gobal types in this schema set.
+        /// </summary>
         Dictionary<IQualifiedName, ISchemaType> GlobalTypes { get; }
 
+        /// <summary>
+        /// Adds a schema to the schema set.
+        /// </summary>
+        /// <param name="schemaToAdd">
+        /// The schema to be added to the schema set.
+        /// </param>
         void Add(ISchema schemaToAdd);
+
+        /// <summary>
+        /// Compiles the schema set.
+        /// </summary>
         void Compile();
     }
 }

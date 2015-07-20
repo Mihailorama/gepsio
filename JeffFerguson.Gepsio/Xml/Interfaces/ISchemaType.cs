@@ -19,13 +19,45 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface ISchemaType
     {
+        /// <summary>
+        /// The qualified name of the type.
+        /// </summary>
         IQualifiedName QualifiedName { get; }
+
+        /// <summary>
+        /// The name of the type.
+        /// </summary>
         string Name { get; }
+
+        /// <summary>
+        /// True if the type is numeric; false otherwise.
+        /// </summary>
         bool IsNumeric { get; }
+
+        /// <summary>
+        /// True if the type is complex; false otherwise.
+        /// </summary>
         bool IsComplex { get; }
+
+        /// <summary>
+        /// True if the type is derived by restriction; false otherwise.
+        /// </summary>
         bool DerivedByRestriction { get; }
+
+        /// <summary>
+        /// The base type for this type.
+        /// </summary>
         ISchemaType BaseSchemaType { get; }
 
+        /// <summary>
+        /// Gets a named schema attribute.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the attribute to be returned.
+        /// </param>
+        /// <returns>
+        /// The attribute with the given name.
+        /// </returns>
         ISchemaAttribute GetAttribute(string name);
     }
 }

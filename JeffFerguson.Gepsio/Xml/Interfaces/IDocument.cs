@@ -20,9 +20,50 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// </remarks>
     public interface IDocument
     {
+        /// <summary>
+        /// Loads an XBRL document.
+        /// </summary>
+        /// <param name="path">
+        /// The path to the document stored on disk.
+        /// </param>
         void Load(string path);
+
+        /// <summary>
+        /// Loads an XBRL document.
+        /// </summary>
+        /// <param name="stream">
+        /// A stream containing the XBRL data to be loaded.
+        /// </param>
         void Load(Stream stream);
+
+        /// <summary>
+        /// Select a set of nodes from the document.
+        /// </summary>
+        /// <param name="xpath">
+        /// The XPATH specification of the nodes to be found.
+        /// </param>
+        /// <param name="namespaceManager">
+        /// The namespace manager to be used to resolve namespace
+        /// information found in the given XPATH specification.
+        /// </param>
+        /// <returns>
+        /// A list of nodes in the document matching the given XPATH specification.
+        /// </returns>
         INodeList SelectNodes(string xpath, INamespaceManager namespaceManager);
+
+        /// <summary>
+        /// Select a node from the document.
+        /// </summary>
+        /// <param name="xPath">
+        /// The XPATH specification of the nodes to be found.
+        /// </param>
+        /// <param name="namespaceManager">
+        /// The namespace manager to be used to resolve namespace
+        /// information found in the given XPATH specification.
+        /// </param>
+        /// <returns>
+        /// A node in the document matching the given XPATH specification.
+        /// </returns>
         INode SelectSingleNode(string xPath, INamespaceManager namespaceManager);
     }
 }

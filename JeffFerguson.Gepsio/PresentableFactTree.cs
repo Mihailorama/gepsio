@@ -10,6 +10,19 @@ namespace JeffFerguson.Gepsio
     /// </summary>
     public class PresentableFactTree
     {
+        /// <summary>
+        /// A collection of top-level nodes in the tree.
+        /// </summary>
+        /// <remarks>
+        /// This property is a list of top-level presentable tree nodes,
+        /// each of which is represented by a class called
+        /// <see cref="PresentableFactTreeNode"/>. Unlike traditional trees
+        /// in computer science, which have a single "root" node at the top,
+        /// presentation linkbases do not necessarily define a single "root"
+        /// top level node. Gepsio, therefore, must prepare for the scenario
+        /// in which the presentation linkbase has multiple "top-level" nodes
+        /// and defines a list of top level nodes in a presentable fact tree.
+        /// </remarks>
         public List<PresentableFactTreeNode> TopLevelNodes
         {
             get;
