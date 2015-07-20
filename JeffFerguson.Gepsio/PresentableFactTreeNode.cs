@@ -36,6 +36,12 @@ namespace JeffFerguson.Gepsio
         /// <summary>
         /// The label for this node, as described by the label linkbase.
         /// </summary>
+        /// <remarks>
+        /// This information is automatically retrieved from the label linkbase,
+        /// if it exists. If a label cannot be found, then this value is the empty string.
+        /// This property is always available, regardless of whether or not the NodeFact
+        /// is populated.
+        /// </remarks>
         public string NodeLabel
         {
             get;
