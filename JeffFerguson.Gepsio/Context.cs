@@ -80,7 +80,7 @@ namespace JeffFerguson.Gepsio
         /// The segment node defined for this context. If this context was not marked up with a segment node, then
         /// this property will return null.
         /// </summary>
-        internal INode Segment
+        public INode Segment
         {
             get;
             private set;

@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface IDocument
+    public interface IDocument
     {
         void Load(string path);
         void Load(Stream stream);

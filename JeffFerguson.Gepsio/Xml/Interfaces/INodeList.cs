@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface INodeList : IEnumerable
+    public interface INodeList : IEnumerable
     {
         int Count { get; }
         INode this[int i] { get; }

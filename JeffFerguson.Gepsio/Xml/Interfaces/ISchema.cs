@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    interface ISchema
+    public interface ISchema
     {
         List<IQualifiedName> Namespaces { get; }
 

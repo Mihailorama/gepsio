@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface IAttributeList : IEnumerable
+    public interface IAttributeList : IEnumerable
     {
         IAttribute this[string s] { get; }
 

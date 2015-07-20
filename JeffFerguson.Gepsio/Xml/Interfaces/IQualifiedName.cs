@@ -17,7 +17,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface IQualifiedName
+    public interface IQualifiedName
     {
         string Name { get; set; }
         string Namespace { get; set; }

@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface ISchemaElement
+    public interface ISchemaElement
     {
         string Id { get; }
         bool IsAbstract { get; }

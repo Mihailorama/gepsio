@@ -21,7 +21,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface INode
+    public interface INode
     {
         IAttributeList Attributes { get; }
         INodeList ChildNodes { get; }

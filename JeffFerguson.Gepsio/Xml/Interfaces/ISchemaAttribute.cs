@@ -17,7 +17,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    interface ISchemaAttribute
+    public interface ISchemaAttribute
     {
         string Name { get; }
         bool Optional { get; }

@@ -17,7 +17,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface IAttribute
+    public interface IAttribute
     {
         string LocalName { get; }
         string Prefix { get; }

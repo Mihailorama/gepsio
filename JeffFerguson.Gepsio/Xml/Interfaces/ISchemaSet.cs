@@ -18,7 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Interfaces
     /// into a specific implementation.
     /// </para>
     /// </remarks>
-    internal interface ISchemaSet
+    public interface ISchemaSet
     {
         Dictionary<IQualifiedName, ISchemaElement> GlobalElements { get; }
         Dictionary<IQualifiedName, ISchemaType> GlobalTypes { get; }
