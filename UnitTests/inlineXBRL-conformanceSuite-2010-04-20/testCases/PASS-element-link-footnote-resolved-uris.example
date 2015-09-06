@@ -1,0 +1,82 @@
+<testcase xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:ix='http://www.xbrl.org/2008/inlineXBRL' xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:iso4217='http://www.xbrl.org/2003/iso4217' xmlns:pt='http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01'>
+  <head>
+    <number>81</number>
+    <creator>
+      <name>Richard Ashby</name>
+      <email>rna@corefiling.com</email>
+    </creator>
+    <description>Tests the resolution of relative URIs in footnote HTML against the base URI of the input document.</description>
+    <requirement>req-ix-footnote-content</requirement>
+  </head>
+  <body>
+    <input>
+      <html version="-//XBRL International//DTD XHTML Inline XBRL 1.0//EN" xmlns="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../../schema/xhtml-inlinexbrl-1_0.xsd">
+        <head>
+          <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+          <title>URIs in footnotes</title>
+          <base href="http://www.example.com/base/" />
+        </head>
+        <body xml:lang="en">
+          <div xmlns:ix="http://www.xbrl.org/2008/inlineXBRL" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance" style="display:none">
+            <ix:header>
+              <ix:hidden>
+                <ix:footnote xml:lang="en" footnoteID="footnote">Excluding the effects of the <a href="mergerInfo.html">merger</a> and contingent liabilities.
+                    <img alt="Dummy Image" src="http://www.example.com/absolute/uri/image.png"/>
+                </ix:footnote>
+              </ix:hidden>
+              <ix:references>
+                <link:schemaRef xlink:href="../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd" xlink:type="simple" />
+              </ix:references>
+              <ix:resources>
+                <xbrli:context id="NNC1">
+                  <xbrli:entity>
+                    <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+                  </xbrli:entity>
+                  <xbrli:period>
+                    <xbrli:instant>2005-12-31</xbrli:instant>
+                  </xbrli:period>
+                </xbrli:context>
+                <xbrli:unit id="GBP">
+                  <xbrli:measure>iso4217:GBP</xbrli:measure>
+                </xbrli:unit>
+              </ix:resources>
+            </ix:header>
+            <ix:nonFraction id="fact" contextRef='NNC1' name='pt:NetAssetsLiabilitiesAcquisitionByIndividualBusinessDivision' decimals="-2"
+              unitRef='GBP' footnoteRefs="footnote">1234.56</ix:nonFraction>
+          </div>
+        </body>
+      </html>
+    </input>
+    <transformedOutput>
+      <xbrli:xbrl>
+        <link:schemaRef xlink:href="../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd" xlink:type="simple" />
+        <xbrli:context id="NNC1">
+          <xbrli:entity>
+            <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+          </xbrli:entity>
+          <xbrli:period>
+            <xbrli:instant>2005-12-31</xbrli:instant>
+          </xbrli:period>
+        </xbrli:context>
+        <xbrli:unit id="GBP">
+          <xbrli:measure>iso4217:GBP</xbrli:measure>
+        </xbrli:unit>
+        <pt:NetAssetsLiabilitiesAcquisitionByIndividualBusinessDivision contextRef="NNC1"
+          decimals="-2" id="fact" unitRef="GBP" xmlns:pt="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01">1234.56</pt:NetAssetsLiabilitiesAcquisitionByIndividualBusinessDivision>
+
+		<!-- Note that the relative URI from the input has been resolved, but the absolute URI remains the same. -->
+        <link:footnoteLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
+          <link:loc xlink:href="#fact" xlink:label="fact" xlink:type="locator" />
+          <link:footnoteArc xlink:from="fact" xlink:to="footnote" xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote" xlink:type="arc" />
+          <link:footnote xmlns="http://www.w3.org/1999/xhtml" xlink:label="footnote" xlink:role="http://www.xbrl.org/2003/role/footnote" 
+           xlink:type="resource" xml:lang="en">Excluding the effects of the <a href="http://www.example.com/base/mergerInfo.html">merger</a> and contingent liabilities.
+              <img alt="Dummy Image" src="http://www.example.com/absolute/uri/image.png"/>
+           </link:footnote>
+        </link:footnoteLink>
+        
+      </xbrli:xbrl>
+    </transformedOutput>
+  </body>
+</testcase>

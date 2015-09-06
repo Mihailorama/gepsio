@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">420000000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax>
+  <uk-gaap-pt:RealisationPropertyValuationGainsPriorPeriods contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">15000000</uk-gaap-pt:RealisationPropertyValuationGainsPriorPeriods>
+  <uk-gaap-pt:HistoricalCostDepreciationChargeLessActualDepreciationChargeCalculatedOnRevaluedAmount contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">1000000</uk-gaap-pt:HistoricalCostDepreciationChargeLessActualDepreciationChargeCalculatedOnRevaluedAmount>
+  <uk-gaap-pt:HistoricalCostProfitLossOnOrdinaryActivitiesBeforeTaxation contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">436000000</uk-gaap-pt:HistoricalCostProfitLossOnOrdinaryActivitiesBeforeTaxation>
+  <uk-gaap-pt:HistoricalCostProfitLossForPeriodRetainedAfterTaxationMinorityInterestsDividends contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">88000000</uk-gaap-pt:HistoricalCostProfitLossForPeriodRetainedAfterTaxationMinorityInterestsDividends>
+</xbrl>

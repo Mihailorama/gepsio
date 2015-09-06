@@ -1,0 +1,128 @@
+<testcase
+  xmlns:ct-Tax='http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-Tax/2006-07-03'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:ix='http://www.xbrl.org/2008/inlineXBRL'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:iso4217='http://www.xbrl.org/2003/iso4217'
+>
+  <head>
+    <number>17</number>
+    <creator><name>Philip Allen</name><email>plega@decisionsoft.com</email></creator>
+    <description>Dummy test case</description>
+    <requirement>no reference</requirement>
+  </head>
+  <body>
+    <input>
+<html
+      version="-//XBRL International//DTD XHTML Inline XBRL 1.0//EN"
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../../schema/xhtml-inlinexbrl-1_0.xsd"
+      >
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>Basic Inline XBRL Example</title>
+  </head>
+  <body xml:lang="en">
+    <div style="display:none">
+      <ix:header>
+        <ix:references>
+          <link:schemaRef xlink:href="../schemas/ct-2006-07-03.xsd" xlink:type="simple"/>
+        </ix:references>
+        <ix:resources>
+          <xbrli:context id="NNC1">
+            <xbrli:entity>
+              <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+            </xbrli:entity>
+            <xbrli:period>
+              <xbrli:instant>2005-12-31</xbrli:instant>
+            </xbrli:period>
+	  </xbrli:context>
+	  <xbrli:context id="NFC1">
+            <xbrli:entity>
+              <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+            </xbrli:entity>
+            <xbrli:period>
+              <xbrli:startDate>2005-01-01</xbrli:startDate>
+              <xbrli:endDate>2005-12-31</xbrli:endDate>
+            </xbrli:period>
+	  </xbrli:context>
+          <xbrli:unit id="u1">
+            <xbrli:measure>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+	  <xbrli:unit id="ID-PURE">
+            <xbrli:measure>xbrli:pure</xbrli:measure>
+	  </xbrli:unit>
+	  <xbrli:unit id="GBP">
+            <xbrli:measure>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+        </ix:resources>
+      </ix:header>	
+    </div>
+<table xmlns:ix="http://www.xbrl.org/2008/inlineXBRL" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance" style="border-collapse: collapse">
+<tr>
+  <td class="label">
+
+Apportionment fraction for FY1</td>
+
+  <td/>
+  <td align="right">
+    <ix:fraction name="ct-Tax:CalculationOfCTLiabilityFinancialYear1FinancialYearApportionmentFraction" unitRef="GBP" contextRef="NFC1">
+      <ix:numerator sign="-">90</ix:numerator>
+
+/
+
+      <ix:denominator>365</ix:denominator>
+    </ix:fraction>
+  </td>
+</tr>
+</table>
+  </body>
+</html>
+    </input>
+    <transformedOutput>
+<xbrli:xbrl >
+   <link:schemaRef
+                   xlink:href="../schemas/ct-2006-07-03.xsd"
+                   xlink:type="simple"/>
+   <ct-Tax:CalculationOfCTLiabilityFinancialYear1FinancialYearApportionmentFraction
+                                                                                    contextRef="NFC1"
+                                                                                    unitRef="GBP">
+      <xbrli:numerator>-90</xbrli:numerator>
+      <xbrli:denominator>365</xbrli:denominator>
+   </ct-Tax:CalculationOfCTLiabilityFinancialYear1FinancialYearApportionmentFraction>
+   <xbrli:context
+                  id="NNC1">
+            <xbrli:entity>
+              <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+            </xbrli:entity>
+            <xbrli:period>
+              <xbrli:instant>2005-12-31</xbrli:instant>
+            </xbrli:period>
+	  </xbrli:context>
+   <xbrli:context
+                  id="NFC1">
+            <xbrli:entity>
+              <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+            </xbrli:entity>
+            <xbrli:period>
+              <xbrli:startDate>2005-01-01</xbrli:startDate>
+              <xbrli:endDate>2005-12-31</xbrli:endDate>
+            </xbrli:period>
+	  </xbrli:context>
+   <xbrli:unit
+               id="u1">
+            <xbrli:measure>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+   <xbrli:unit
+               id="ID-PURE">
+            <xbrli:measure>xbrli:pure</xbrli:measure>
+	  </xbrli:unit>
+   <xbrli:unit
+               id="GBP">
+            <xbrli:measure>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+</xbrli:xbrl>    </transformedOutput>
+  </body>
+</testcase>

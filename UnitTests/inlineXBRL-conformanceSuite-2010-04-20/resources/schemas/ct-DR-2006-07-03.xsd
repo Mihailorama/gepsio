@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ct-default="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+            xmlns:ct-DR="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-DR/2006-07-03"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-DR/2006-07-03">
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+               schemaLocation="ct-default-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.xbrl.org/2003/instance"
+               schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:annotation>
+      <xsd:appinfo>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-presentation-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+                         xlink:type="simple"/>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-label-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+                         xlink:type="simple"/>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsMakeAndModel"
+                name="ManagementExpensesExpensiveLeasedCarsMakeAndModel"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsRegistrationNumber"
+                name="ManagementExpensesExpensiveLeasedCarsRegistrationNumber"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsRetailPrice"
+                name="ManagementExpensesExpensiveLeasedCarsRetailPrice"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsLeasingPayment"
+                name="ManagementExpensesExpensiveLeasedCarsLeasingPayment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsMaintenanceElement"
+                name="ManagementExpensesExpensiveLeasedCarsMaintenanceElement"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsNetLeasingCost"
+                name="ManagementExpensesExpensiveLeasedCarsNetLeasingCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsAmountAllowable"
+                name="ManagementExpensesExpensiveLeasedCarsAmountAllowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsAmountDisallowable"
+                name="ManagementExpensesExpensiveLeasedCarsAmountDisallowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsIndividualItem"
+                name="ManagementExpensesExpensiveLeasedCarsIndividualItem"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsMakeAndModel"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsRegistrationNumber"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsRetailPrice"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsLeasingPayment"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsMaintenanceElement"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsNetLeasingCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsAmountAllowable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveLeasedCarsAmountDisallowable"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsIndividualAssetPoolAssetDescription"
+                name="ManagementExpensesPMAExpensiveCarsIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsWDVBF"
+                name="ManagementExpensesPMAExpensiveCarsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsTransfersIn"
+                name="ManagementExpensesPMAExpensiveCarsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsAdditionsTotal"
+                name="ManagementExpensesPMAExpensiveCarsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsDeductionsDisposalProceeds"
+                name="ManagementExpensesPMAExpensiveCarsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsDeductionsTransfersOut"
+                name="ManagementExpensesPMAExpensiveCarsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsAllowancesClaimed"
+                name="ManagementExpensesPMAExpensiveCarsAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsAllowancesBalancingCharge"
+                name="ManagementExpensesPMAExpensiveCarsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsAllowancesBalancingAllowance"
+                name="ManagementExpensesPMAExpensiveCarsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsAllowancesDueToTransferor"
+                name="ManagementExpensesPMAExpensiveCarsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsAllowancesDueToTransferee"
+                name="ManagementExpensesPMAExpensiveCarsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_DeductionsManagementExpensesPMAExpensiveCarsWDVCF"
+                name="DeductionsManagementExpensesPMAExpensiveCarsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsSummaryWDVBFTotal"
+                name="ManagementExpensesPMAExpensiveCarsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsSummaryAllowancesTotal"
+                name="ManagementExpensesPMAExpensiveCarsSummaryAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsSummaryBalancingChargeTotal"
+                name="ManagementExpensesPMAExpensiveCarsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsSummaryWDVCFTotal"
+                name="ManagementExpensesPMAExpensiveCarsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesTotalCapitalAllowances"
+                name="ManagementExpensesTotalCapitalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_InterestDistributionsUnderS468LClaimed"
+                name="InterestDistributionsUnderS468LClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_InterestDistributionsUnderS468LExcess"
+                name="InterestDistributionsUnderS468LExcess"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCars3000WDAAvailable"
+                name="ManagementExpensesExpensiveCars3000WDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCars25PercentWDAAvailable"
+                name="ManagementExpensesExpensiveCars25PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsWDAClaimed"
+                name="ManagementExpensesExpensiveCarsWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAExpensiveCarsIndividualAssetPool"
+                name="ManagementExpensesPMAExpensiveCarsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:ManagementExpensesPMAExpensiveCarsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveCars3000WDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveCars25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesExpensiveCarsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAExpensiveCarsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:DeductionsManagementExpensesPMAExpensiveCarsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-DR_LossesBFAgainstCertainInvestmentIncome"
+                name="LossesBFAgainstCertainInvestmentIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_CVSLossRelief" name="CVSLossRelief" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsIndividualAssetPoolAssetDescription"
+                name="ManagementExpensesPMAShortLifeAssetsIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsWDVBF"
+                name="ManagementExpensesPMAShortLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsTransfersIn"
+                name="ManagementExpensesPMAShortLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                name="ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                name="ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                name="ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsDeductionsDisposalProceeds"
+                name="ManagementExpensesPMAShortLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsDeductionsTransfersOut"
+                name="ManagementExpensesPMAShortLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsDeductionsOther"
+                name="ManagementExpensesPMAShortLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAllowancesBalancingCharge"
+                name="ManagementExpensesPMAShortLifeAssetsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAllowancesBalancingAllowance"
+                name="ManagementExpensesPMAShortLifeAssetsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAllowancesDueToTransferor"
+                name="ManagementExpensesPMAShortLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsAllowancesDueToTransferee"
+                name="ManagementExpensesPMAShortLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsWDVCF"
+                name="ManagementExpensesPMAShortLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsSummaryWDVBFTotal"
+                name="ManagementExpensesPMAShortLifeAssetsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsSummaryAdditionsTotal"
+                name="ManagementExpensesPMAShortLifeAssetsSummaryAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsSummaryAllowancesTotal"
+                name="ManagementExpensesPMAShortLifeAssetsSummaryAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsSummaryBalancingChargeTotal"
+                name="ManagementExpensesPMAShortLifeAssetsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsSummaryWDVCFTotal"
+                name="ManagementExpensesPMAShortLifeAssetsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesPMALongLifeAssets"
+                name="ManagementExpensesPMALongLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsWDVBF"
+                name="ManagementExpensesPMALongLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsTransfersIn"
+                name="ManagementExpensesPMALongLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsDeductions"
+                name="ManagementExpensesPMALongLifeAssetsDeductions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsDeductionsTotal"
+                name="ManagementExpensesPMALongLifeAssetsDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsDeductionsDisposalProceeds"
+                name="ManagementExpensesPMALongLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsDeductionsTransfersOut"
+                name="ManagementExpensesPMALongLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsDeductionsOther"
+                name="ManagementExpensesPMALongLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsAllowancesBalancingCharge"
+                name="ManagementExpensesPMALongLifeAssetsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsAllowancesBalancingAllowance"
+                name="ManagementExpensesPMALongLifeAssetsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMALongLifeAssetsWDVCF"
+                name="ManagementExpensesPMALongLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesPMAExpensiveCars"
+                name="ManagementExpensesPMAExpensiveCars"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsTotalAdditions"
+                name="ManagementExpensesShortLifeAssetsTotalAdditions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsDateOfAcquisition"
+                name="ManagementExpensesShortLifeAssetsDateOfAcquisition"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssets100PercentFYAAvailable"
+                name="ManagementExpensesShortLifeAssets100PercentFYAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssets40PercentFYAAvailable"
+                name="ManagementExpensesShortLifeAssets40PercentFYAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssets25PercentWDAAvailable"
+                name="ManagementExpensesShortLifeAssets25PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsFYAClaimed"
+                name="ManagementExpensesShortLifeAssetsFYAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsWDAClaimed"
+                name="ManagementExpensesShortLifeAssetsWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsTotalAllowancesClaimed"
+                name="ManagementExpensesShortLifeAssetsTotalAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAShortLifeAssetsIndividualAssetPool"
+                name="ManagementExpensesPMAShortLifeAssetsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssetsTotalAdditions"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssetsDateOfAcquisition"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsDeductionsOther"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssets100PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssets40PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssets25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssetsFYAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssetsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesShortLifeAssetsTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:ManagementExpensesPMAShortLifeAssetsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpenses" name="ManagementExpenses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesRelief" name="ManagementExpensesRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesBF" name="ManagementExpensesBF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesArisingThisPeriod"
+                name="ManagementExpensesArisingThisPeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesAvailableForGroupRelief"
+                name="ManagementExpensesAvailableForGroupRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesSurrenderedAsGroupRelief"
+                name="ManagementExpensesSurrenderedAsGroupRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesCF" name="ManagementExpensesCF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesPMAGeneralPool"
+                name="ManagementExpensesPMAGeneralPool"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolWDVBF"
+                name="ManagementExpensesPMAGeneralPoolWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolTransfersIn"
+                name="ManagementExpensesPMAGeneralPoolTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAdditionsTotal"
+                name="ManagementExpensesPMAGeneralPoolAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                name="ManagementExpensesPMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                name="ManagementExpensesPMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                name="ManagementExpensesPMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolDeductionsTotal"
+                name="ManagementExpensesPMAGeneralPoolDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolDeductionsDisposalProceeds"
+                name="ManagementExpensesPMAGeneralPoolDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolDeductionsTransfersOut"
+                name="ManagementExpensesPMAGeneralPoolDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolDeductionsOther"
+                name="ManagementExpensesPMAGeneralPoolDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAllowancesBalancingCharge"
+                name="ManagementExpensesPMAGeneralPoolAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAllowancesBalancingAllowance"
+                name="ManagementExpensesPMAGeneralPoolAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAllowancesDueToTransferor"
+                name="ManagementExpensesPMAGeneralPoolAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolAllowancesDueToTransferee"
+                name="ManagementExpensesPMAGeneralPoolAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesPMAGeneralPoolWDVCF"
+                name="ManagementExpensesPMAGeneralPoolWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesPMAShortLifeAssets"
+                name="ManagementExpensesPMAShortLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARIndividualAssetPoolAssetDescription"
+                name="IARIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARAccountsWDVBF" name="IARAccountsWDVBF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTransfersIn" name="IARTransfersIn" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARAdditionsTotal" name="IARAdditionsTotal" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARAdditionsDepreciationClaimedInAccountsAllCostsAllowable"
+                name="IARAdditionsDepreciationClaimedInAccountsAllCostsAllowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARAdditionsDepreciationClaimedInAccountsSomeCostsDisallowable"
+                name="IARAdditionsDepreciationClaimedInAccountsSomeCostsDisallowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARAdditionsSch29Para10ElectionFor4PercentAllowance"
+                name="IARAdditionsSch29Para10ElectionFor4PercentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARAdditionsRevaluationAddition"
+                name="IARAdditionsRevaluationAddition"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARDeductionsTotal" name="IARDeductionsTotal" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARDeductionsDisposalProceeds" name="IARDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARDeductionsDisposalMarketValue"
+                name="IARDeductionsDisposalMarketValue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARDeductionsDepreciationImpairmentWrittenOff"
+                name="IARDeductionsDepreciationImpairmentWrittenOff"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARDeductionsPartDisposalBookValue"
+                name="IARDeductionsPartDisposalBookValue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARDeductionsOther" name="IARDeductionsOther" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARSch29Para10ElectionMade" name="IARSch29Para10ElectionMade"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARNoGainNoLossDisposal" name="IARNoGainNoLossDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARAccountsWDVCF" name="IARAccountsWDVCF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxWDVBF" name="IARTaxWDVBF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARCumulativeTaxDebitsClaimedBF"
+                name="IARCumulativeTaxDebitsClaimedBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxDebitsTotal" name="IARTaxDebitsTotal" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxDebitsCostDisallowed" name="IARTaxDebitsCostDisallowed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxDebitsAnnualAmountAvailable"
+                name="IARTaxDebitsAnnualAmountAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxDebitsWritingDownClaimed" name="IARTaxDebitsWritingDownClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxDebitsDisposal" name="IARTaxDebitsDisposal" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxDebitsDueToTransferor" name="IARTaxDebitsDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxDebitsDueToTransferee" name="IARTaxDebitsDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxCreditsTotal" name="IARTaxCreditsTotal" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxCreditsRevaluation" name="IARTaxCreditsRevaluation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxCreditsDisposal" name="IARTaxCreditsDisposal" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxCreditsGainsRolledOver" name="IARTaxCreditsGainsRolledOver"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARTaxWDVCF" name="IARTaxWDVCF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARCumulativeWDAsClaimedCF" name="IARCumulativeWDAsClaimedCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARTaxWDVTransferred" name="IARTaxWDVTransferred" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARCumulativeWDAsClaimedTransferred"
+                name="IARCumulativeWDAsClaimedTransferred"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_IARSummaryTaxDebitsTotal" name="IARSummaryTaxDebitsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARSummaryTotalNonTradingLossesArising"
+                name="IARSummaryTotalNonTradingLossesArising"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARSummaryTotalNonTradingLossesAvailableForGroupRelief"
+                name="IARSummaryTotalNonTradingLossesAvailableForGroupRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ChargesUsedAgainstProfitsOfThePeriod"
+                name="ChargesUsedAgainstProfitsOfThePeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ChargesExcess" name="ChargesExcess" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_GroupReliefClaimed" name="GroupReliefClaimed" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_NonTradingCapitalAllowancesBalancingCharges"
+                name="NonTradingCapitalAllowancesBalancingCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_NonTradingCapitalAllowancesAllowances"
+                name="NonTradingCapitalAllowancesAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_NonTradingCapitalAllowancesExcessOverIncome"
+                name="NonTradingCapitalAllowancesExcessOverIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_LandRemediationEnhancedExpenditure"
+                name="LandRemediationEnhancedExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_LandRemediationEnhancedExpenditureTotal"
+                name="LandRemediationEnhancedExpenditureTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_IARIndividualAssetPool" name="IARIndividualAssetPool" nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:InvestmentIncomeAndReliefsAdditionsRevaluationsAndDisposalsCaseIReceiptExpense"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:InvestmentIncomeAndReliefsAdditionsRevaluationsAndDisposalsCaseVTradeReceiptExpense"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:InvestmentIncomeAndReliefsAdditionsRevaluationsAndDisposalsCaseVPropertyBusinessReceiptExpense"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:InvestmentIncomeAndReliefsAdditionsRevaluationsAndDisposalsScheduleAReceiptExpense"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:InvestmentIncomeAndReliefsAdditionsRevaluationsAndDisposalsCaseVIReceiptExpense"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARAccountsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:IARAdditionsDepreciationClaimedInAccountsAllCostsAllowable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:IARAdditionsDepreciationClaimedInAccountsSomeCostsDisallowable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:IARAdditionsSch29Para10ElectionFor4PercentAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARAdditionsRevaluationAddition"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-DR:IARDeductionsDepreciationImpairmentWrittenOff"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARDeductionsDisposalMarketValue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARDeductionsPartDisposalBookValue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARDeductionsOther"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARDeductionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARAccountsWDVCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARSch29Para10ElectionMade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARNoGainNoLossDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARCumulativeTaxDebitsClaimedBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsCostDisallowed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsAnnualAmountAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsWritingDownClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxDebitsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxCreditsRevaluation"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxCreditsDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxCreditsGainsRolledOver"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxCreditsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARCumulativeWDAsClaimedTransferred"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxWDVTransferred"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARCumulativeWDAsClaimedCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-DR:IARTaxWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-DR_ManagementExpensesExpensesOfPeriodManagementExpenses"
+                name="ManagementExpensesExpensesOfPeriodManagementExpenses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsAdditionsQualifyingFor100PercentFYATotal"
+                name="ManagementExpensesShortLifeAssetsAdditionsQualifyingFor100PercentFYATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensesOfPeriodExpensiveLeasedCarDisallowance"
+                name="ManagementExpensesExpensesOfPeriodExpensiveLeasedCarDisallowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesGeneralPoolFYAAvailable100Percent"
+                name="ManagementExpensesGeneralPoolFYAAvailable100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsLeasingPaymentTotal"
+                name="ManagementExpensesExpensiveLeasedCarsLeasingPaymentTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesLongLifeAssetsAllowancesAvailableOn"
+                name="ManagementExpensesLongLifeAssetsAllowancesAvailableOn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesGeneralPoolWDAAvailable25Percent"
+                name="ManagementExpensesGeneralPoolWDAAvailable25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsOtherDeductionsTotal"
+                name="ManagementExpensesShortLifeAssetsOtherDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsTransfersOutTotal"
+                name="ManagementExpensesExpensiveCarsTransfersOutTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesCapAllowSummaryLongLifeAssetsWDAsAllowances"
+                name="ManagementExpensesCapAllowSummaryLongLifeAssetsWDAsAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsAllowancesDueToTransferorTotal"
+                name="ManagementExpensesExpensiveCarsAllowancesDueToTransferorTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensesOfPeriodTotalExpenses"
+                name="ManagementExpensesExpensesOfPeriodTotalExpenses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsAdditionsTotal"
+                name="ManagementExpensesExpensiveCarsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesGeneralPoolAllowancesAvailableOn"
+                name="ManagementExpensesGeneralPoolAllowancesAvailableOn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsMaintenanceElementTotal"
+                name="ManagementExpensesExpensiveLeasedCarsMaintenanceElementTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesExpensiveLeasedCars"
+                name="ManagementExpensesExpensiveLeasedCars"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsAllowancesDueToTransfereeTotal"
+                name="ManagementExpensesExpensiveCarsAllowancesDueToTransfereeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesCapAllowSummaryPlantAndMachineryAllowances"
+                name="ManagementExpensesCapAllowSummaryPlantAndMachineryAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesSummaryTotalAvailableForRelief"
+                name="ManagementExpensesSummaryTotalAvailableForRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsBalancingAllowanceTotal"
+                name="ManagementExpensesShortLifeAssetsBalancingAllowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssets25PercentWDAAvailableTotal"
+                name="ManagementExpensesShortLifeAssets25PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsWDAClaimedTotal"
+                name="ManagementExpensesShortLifeAssetsWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesCapAllowSummaryAllowances"
+                name="ManagementExpensesCapAllowSummaryAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesLongLifeAssetsWDAClaimed"
+                name="ManagementExpensesLongLifeAssetsWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsNetLeasingCostTotal"
+                name="ManagementExpensesExpensiveLeasedCarsNetLeasingCostTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesSummary"
+                name="ManagementExpensesSummary"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesExpensesOfPeriod"
+                name="ManagementExpensesExpensesOfPeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsAdditionsQualifyingFor25PercentWDATotal"
+                name="ManagementExpensesShortLifeAssetsAdditionsQualifyingFor25PercentWDATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesLongLifeAssetsAdditionsQualifyingForWDA"
+                name="ManagementExpensesLongLifeAssetsAdditionsQualifyingForWDA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsDisposalsTotal"
+                name="ManagementExpensesShortLifeAssetsDisposalsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCars25PercentWDAAvailableTotal"
+                name="ManagementExpensesExpensiveCars25PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsBalancingAllowanceTotal"
+                name="ManagementExpensesExpensiveCarsBalancingAllowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssets40PercentFYAAvailableTotal"
+                name="ManagementExpensesShortLifeAssets40PercentFYAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesGeneralPoolFYAClaimed"
+                name="ManagementExpensesGeneralPoolFYAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsAllowancesDueToTransferorTotal"
+                name="ManagementExpensesShortLifeAssetsAllowancesDueToTransferorTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesCapAllowSummary"
+                name="ManagementExpensesCapAllowSummary"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesGeneralPoolWDAClaimed"
+                name="ManagementExpensesGeneralPoolWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCars3000WDAAvailableTotal"
+                name="ManagementExpensesExpensiveCars3000WDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesLongLifeAssetsWDAAvailable6Percent"
+                name="ManagementExpensesLongLifeAssetsWDAAvailable6Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsTransfersInTotal"
+                name="ManagementExpensesShortLifeAssetsTransfersInTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesShortLifeAssetsTotal"
+                name="ManagementExpensesShortLifeAssetsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsDisposalsTotal"
+                name="ManagementExpensesExpensiveCarsDisposalsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesExpensiveCarsTotal"
+                name="ManagementExpensesExpensiveCarsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssets100PercentFYAAvailableShips"
+                name="ManagementExpensesShortLifeAssets100PercentFYAAvailableShips"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsAllowancesDueToTransfereeTotal"
+                name="ManagementExpensesShortLifeAssetsAllowancesDueToTransfereeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsTransfersOutTotal"
+                name="ManagementExpensesShortLifeAssetsTransfersOutTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsWDAClaimedTotal"
+                name="ManagementExpensesExpensiveCarsWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsAdditionsQualifyingFor40PercentFYATotal"
+                name="ManagementExpensesShortLifeAssetsAdditionsQualifyingFor40PercentFYATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveLeasedCarsAmountAllowableTotal"
+                name="ManagementExpensesExpensiveLeasedCarsAmountAllowableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesExpensiveCarsTransfersInTotal"
+                name="ManagementExpensesExpensiveCarsTransfersInTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesExpensiveLeasedCarsTotal"
+                name="ManagementExpensesExpensiveLeasedCarsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-DR_ManagementExpensesGeneralPoolFYAAvailable40Percent"
+                name="ManagementExpensesGeneralPoolFYAAvailable40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesShortLifeAssetsFYAClaimedTotal"
+                name="ManagementExpensesShortLifeAssetsFYAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-DR_ManagementExpensesDisbursedForFirstNewPeriodTreatedAsBF"
+                name="ManagementExpensesDisbursedForFirstNewPeriodTreatedAsBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-DR_LandRemediationEnhancedExpenditureEnhanced"
+                name="LandRemediationEnhancedExpenditureEnhanced"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_LandRemediationEnhancedExpenditureActual"
+                name="LandRemediationEnhancedExpenditureActual"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-DR_ManagementExpensesCapAllowSummaryCharges"
+                name="ManagementExpensesCapAllowSummaryCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+</xsd:schema>

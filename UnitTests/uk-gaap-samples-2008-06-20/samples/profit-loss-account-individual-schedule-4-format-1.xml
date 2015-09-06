@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+      <context id="CURRENT_YEAR">
+        <entity>
+          <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+        </entity>
+        <period>
+          <startDate>2007-01-01</startDate>
+          <endDate>2007-12-31</endDate>
+        </period>
+      </context>
+      <unit id="GBP">
+        <measure>iso4217:GBP</measure>
+      </unit>
+      <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">151000000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+      <uk-gaap-pt:CostSales contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">84000000</uk-gaap-pt:CostSales>
+      <uk-gaap-pt:GrossProfitLoss contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">67000000</uk-gaap-pt:GrossProfitLoss>
+      <uk-gaap-pt:DistributionCosts contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">14000000</uk-gaap-pt:DistributionCosts>
+      <uk-gaap-pt:AdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">25000000</uk-gaap-pt:AdministrativeExpenses>
+      <uk-gaap-pt:OtherOperatingIncome contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">1000000</uk-gaap-pt:OtherOperatingIncome>
+      <uk-gaap-pt:OtherInterestReceivableSimilarIncome contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">1000000</uk-gaap-pt:OtherInterestReceivableSimilarIncome>
+      <uk-gaap-pt:InterestPayableSimilarCharges contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">3000000</uk-gaap-pt:InterestPayableSimilarCharges>
+      <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">27000000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax>
+      <uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">8000000</uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities>
+      <uk-gaap-pt:RetainedProfitLossForPeriod-TransferredToFromReserves contextRef="CURRENT_YEAR" unitRef="GBP" decimals="-6">19000000</uk-gaap-pt:RetainedProfitLossForPeriod-TransferredToFromReserves>
+</xbrl>

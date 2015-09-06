@@ -1,0 +1,2562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ct-default="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:ct-CaseV="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseV/2006-07-03"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseV/2006-07-03">
+   <xsd:import namespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2006-07-03"
+               schemaLocation="ct-default-2006-07-03.xsd"/>
+   <xsd:import namespace="http://www.xbrl.org/2003/instance"
+               schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:annotation>
+      <xsd:appinfo>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-presentation-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+                         xlink:type="simple"/>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-label-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+                         xlink:type="simple"/>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsIndividualAssetPoolAssetDescription"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsWDVBF"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsTransfersIn"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsDisposalProceeds"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsTransfersOut"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsOther"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesBalancingCharge"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesBalancingAllowance"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesDueToTransferor"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesDueToTransferee"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsWDVCF"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryTotal"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryWDVBFTotal"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryAllowancesTotal"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryBalancingChargeTotal"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryWDVCFTotal"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssets"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsWDVBF"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsTransfersIn"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsTotal"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsDisposalProceeds"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsTransfersOut"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsOther"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMALongLifeAssetsWDVCF"
+                name="OverseasIncomePropertyBusinessPMALongLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusinessIBA"
+                name="OverseasIncomePropertyBusinessIBA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssetsIndividualAssetPool"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssetsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsTotalAdditionsIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsDateOfAcquisitionIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsDeductionsOther"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssets100PercentFYAAvailableIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssets40PercentFYAAvailableIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssets25PercentWDAAvailableIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsFYAClaimedIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsWDAClaimedIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsTotalAllowancesClaimedIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessPMAShortLifeAssetsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareCompanyName"
+                name="OverseasIncomeDividendIncomePartnershipShareCompanyName"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareReceived"
+                name="OverseasIncomeDividendIncomePartnershipShareReceived"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareWithholdingTax"
+                name="OverseasIncomeDividendIncomePartnershipShareWithholdingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareCreditableUnderlyingTax"
+                name="OverseasIncomeDividendIncomePartnershipShareCreditableUnderlyingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareGross"
+                name="OverseasIncomeDividendIncomePartnershipShareGross"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareTotal"
+                name="OverseasIncomeDividendIncomePartnershipShareTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareTotalReceived"
+                name="OverseasIncomeDividendIncomePartnershipShareTotalReceived"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareTotalWithholdingTax"
+                name="OverseasIncomeDividendIncomePartnershipShareTotalWithholdingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareTotalCreditableUnderlyingTax"
+                name="OverseasIncomeDividendIncomePartnershipShareTotalCreditableUnderlyingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareTotalGross"
+                name="OverseasIncomeDividendIncomePartnershipShareTotalGross"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomePartnershipShareIndividualItem"
+                name="OverseasIncomeDividendIncomePartnershipShareIndividualItem"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomePartnershipShareCompanyName"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsDatePaidPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsYearPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsDistributableProfitsPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsTaxPayablePartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsUnderlyingTaxRatePartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsBalanceBFPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomePartnershipShareReceived"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsExchangeDifferencePartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsBalanceCFPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsNetDividendPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomePartnershipShareWithholdingTax"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomePartnershipShareCreditableUnderlyingTax"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomePartnershipShareOfDividendsCappedUnderlyingTaxPartnershipShare"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomePartnershipShareGross"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsIndividualAssetPoolAssetDescription"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsWDVBF"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsTransfersIn"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsAdditionsTotal"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsDeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesBalancingCharge"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesBalancingAllowance"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsWDVCF"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsIndividualAssetPool"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeExpensiveCars3000WDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeExpensiveCars25PercentWDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeExpensiveCarsWDAClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeCapAllowSummaryExpensiveCarsAllowancesTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAExpensiveCarsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsIndividualAssetPoolAssetDescription"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsWDVBF"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsTransfersIn"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsOther"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesBalancingCharge"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesBalancingAllowance"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsWDVCF"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsIndividualAssetPool"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsTotalAdditionsTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsDateOfAcquisitionTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsDeductionsOther"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssets100PercentFYAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssets40PercentFYAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssets25PercentWDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsFYAClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsWDAClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeShortLifeAssetsTotalAllowancesClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradePMAShortLifeAssetsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetDescription"
+                name="OverseasIncomeIndividualTradeIBAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetSite"
+                name="OverseasIncomeIndividualTradeIBAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetBuilding"
+                name="OverseasIncomeIndividualTradeIBAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetYearOfExpenditure"
+                name="OverseasIncomeIndividualTradeIBAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetOriginalCost"
+                name="OverseasIncomeIndividualTradeIBAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetDateOfTransfer"
+                name="OverseasIncomeIndividualTradeIBAAssetDateOfTransfer"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetNonQualifyingUseOnDisposal"
+                name="OverseasIncomeIndividualTradeIBAAssetNonQualifyingUseOnDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetWDVBF"
+                name="OverseasIncomeIndividualTradeIBAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAdditionsTotalCost"
+                name="OverseasIncomeIndividualTradeIBAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAdditionsTransfersIn"
+                name="OverseasIncomeIndividualTradeIBAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAdditionsQualifyingForWDA4Percent"
+                name="OverseasIncomeIndividualTradeIBAAssetAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAdditionsQualifyingForWDA2Percent"
+                name="OverseasIncomeIndividualTradeIBAAssetAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradeIBAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetDeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradeIBAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesBalancing"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesTotalClaimed"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                name="OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCumulativeBF"
+                name="OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCurrentAllowance"
+                name="OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesBalancingAdjustment"
+                name="OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCumulativeCF"
+                name="OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetBalancingCharge"
+                name="OverseasIncomeIndividualTradeIBAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAssetTaxWDVCF"
+                name="OverseasIncomeIndividualTradeIBAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAsset"
+                name="OverseasIncomeIndividualTradeIBAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetDateOfTransfer"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetNonQualifyingUseOnDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAdditionsQualifyingForWDA4Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAdditionsQualifyingForWDA2Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAUnletBFTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAUnletCFTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBA4PercentWDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBA2PercentWDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAWDAClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCumulativeBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCurrentAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesBalancingAdjustment"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetNotionalAllowancesCumulativeCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetTaxWDVCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeIBAAssetAllowancesTotalClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAPotentialClawbackTradingIncomeOrLossOfMoreThanOneTrade"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncome" name="OverseasIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryAccountsWDVBFTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryAccountsWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryAccountsWDVCFTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryAccountsWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryAdditionsTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryDeductionsTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryTaxWDVBFTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryTaxWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryCumulativeTaxDebitsClaimedBFTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryCumulativeTaxDebitsClaimedBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryTaxDebitsTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryTaxDebitsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryTaxCreditsTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryTaxCreditsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryTaxWDVCFTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryTaxWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryTaxWDVTransferredTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryTaxWDVTransferredTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryCumulativeWDAsClaimedBFTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryCumulativeWDAsClaimedBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIARSummaryCumulativeWDAsClaimedTransferredTotal"
+                name="OverseasIncomePropertyBusinessIARSummaryCumulativeWDAsClaimedTransferredTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeTotalGrossIncome"
+                name="OverseasIncomeTotalGrossIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetDescription"
+                name="OverseasIncomePropertyBusinessIBAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetSite"
+                name="OverseasIncomePropertyBusinessIBAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetBuilding"
+                name="OverseasIncomePropertyBusinessIBAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetYearOfExpenditure"
+                name="OverseasIncomePropertyBusinessIBAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetOriginalCost"
+                name="OverseasIncomePropertyBusinessIBAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetDateOfTransfer"
+                name="OverseasIncomePropertyBusinessIBAAssetDateOfTransfer"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetNonQualifyingUseOnDisposal"
+                name="OverseasIncomePropertyBusinessIBAAssetNonQualifyingUseOnDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetWDVBF"
+                name="OverseasIncomePropertyBusinessIBAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAdditionsTotalCost"
+                name="OverseasIncomePropertyBusinessIBAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAdditionsTransfersIn"
+                name="OverseasIncomePropertyBusinessIBAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAdditionsQualifyingForWDA4Percent"
+                name="OverseasIncomePropertyBusinessIBAAssetAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAdditionsQualifyingForWDA2Percent"
+                name="OverseasIncomePropertyBusinessIBAAssetAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetDeductionsDisposalProceeds"
+                name="OverseasIncomePropertyBusinessIBAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetDeductionsTransfersOut"
+                name="OverseasIncomePropertyBusinessIBAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesBalancing"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesTotalClaimed"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesDueToTransferor"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesDueToTransferee"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                name="OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCumulativeBF"
+                name="OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCurrentAllowance"
+                name="OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesBalancingAdjustment"
+                name="OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCumulativeCF"
+                name="OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetBalancingCharge"
+                name="OverseasIncomePropertyBusinessIBAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAssetTaxWDVCF"
+                name="OverseasIncomePropertyBusinessIBAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAWDVBF"
+                name="OverseasIncomePropertyBusinessIBAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAdditionsTotalCost"
+                name="OverseasIncomePropertyBusinessIBAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAdditionsQualifyingForWDA4Percent"
+                name="OverseasIncomePropertyBusinessIBAAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAdditionsQualifyingForWDA2Percent"
+                name="OverseasIncomePropertyBusinessIBAAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBADeductionsDisposalProceeds"
+                name="OverseasIncomePropertyBusinessIBADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBADeductionsTransfersOut"
+                name="OverseasIncomePropertyBusinessIBADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAllowancesBalancing"
+                name="OverseasIncomePropertyBusinessIBAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAllowancesTotalClaimed"
+                name="OverseasIncomePropertyBusinessIBAAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAllowancesDueToTransferor"
+                name="OverseasIncomePropertyBusinessIBAAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAllowancesDueToTransferee"
+                name="OverseasIncomePropertyBusinessIBAAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBANotionalAllowancesCumulativeBF"
+                name="OverseasIncomePropertyBusinessIBANotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBANotionalAllowancesCurrentAllowance"
+                name="OverseasIncomePropertyBusinessIBANotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBANotionalAllowancesBalancingAdjustment"
+                name="OverseasIncomePropertyBusinessIBANotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBANotionalAllowancesCumulativeCF"
+                name="OverseasIncomePropertyBusinessIBANotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBABalancingCharge"
+                name="OverseasIncomePropertyBusinessIBABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBATaxWDVCF"
+                name="OverseasIncomePropertyBusinessIBATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusinessIAR"
+                name="OverseasIncomePropertyBusinessIAR"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessIBAAsset"
+                name="OverseasIncomePropertyBusinessIBAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetDateOfTransfer"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetNonQualifyingUseOnDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAdditionsQualifyingForWDA4Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAdditionsQualifyingForWDA2Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAUnletBFIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAUnletCFIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBA4PercentWDAAvailableIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBA2PercentWDAAvailableIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAWDAClaimedIncomeFromProperty"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCumulativeBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCurrentAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesBalancingAdjustment"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetNotionalAllowancesCumulativeCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetTaxWDVCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomePropertyBusinessIBAAssetAllowancesTotalClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeIBAPotentialClawbackIncomeFromProperty"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationCarDescription"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationCarDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationRetailPrice"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationRetailPrice"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationLeasingCharges"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationLeasingCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationMaintenanceElement"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationMaintenanceElement"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationAmountAllowable"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationAmountAllowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationAmountDisallowable"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationAmountDisallowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputationIndividualItem"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputationIndividualItem"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeExpensiveLeasedCarComputationCarDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeExpensiveLeasedCarComputationRetailPrice"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeExpensiveLeasedCarComputationLeasingCharges"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeExpensiveLeasedCarComputationMaintenanceElement"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeExpensiveLeasedCarComputationAmountAllowable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeExpensiveLeasedCarComputationAmountDisallowable"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarComputation"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarComputation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeDescriptionOfTrade"
+                name="OverseasIncomeIndividualTradeDescriptionOfTrade"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeProfitPerAccounts"
+                name="OverseasIncomeIndividualTradeProfitPerAccounts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeAdditions"
+                name="OverseasIncomeIndividualTradeAdditions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeDeductions"
+                name="OverseasIncomeIndividualTradeDeductions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeAdvertisingAndPromotions"
+                name="OverseasIncomeIndividualTradeAdvertisingAndPromotions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeAdviceOnTax"
+                name="OverseasIncomeIndividualTradeAdviceOnTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeBadDebts"
+                name="OverseasIncomeIndividualTradeBadDebts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeCapitalItemsExpensed"
+                name="OverseasIncomeIndividualTradeCapitalItemsExpensed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeCharges"
+                name="OverseasIncomeIndividualTradeCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeClaimsAgainstTheCompany"
+                name="OverseasIncomeIndividualTradeClaimsAgainstTheCompany"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeClaimsAgainstTheCompanyProvision"
+                name="OverseasIncomeIndividualTradeClaimsAgainstTheCompanyProvision"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeClaimsAgainstTheCompanyReleased"
+                name="OverseasIncomeIndividualTradeClaimsAgainstTheCompanyReleased"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeCommissions"
+                name="OverseasIncomeIndividualTradeCommissions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeConsultancy"
+                name="OverseasIncomeIndividualTradeConsultancy"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeDepositAccountInterest"
+                name="OverseasIncomeIndividualTradeDepositAccountInterest"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeDepreciation"
+                name="OverseasIncomeIndividualTradeDepreciation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeDirectorsBonuses"
+                name="OverseasIncomeIndividualTradeDirectorsBonuses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeDirectorsRemunerationNotPaid"
+                name="OverseasIncomeIndividualTradeDirectorsRemunerationNotPaid"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeEntertaining"
+                name="OverseasIncomeIndividualTradeEntertaining"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExchangeLosses"
+                name="OverseasIncomeIndividualTradeExchangeLosses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeExpensiveLeasedCarDisallowance"
+                name="OverseasIncomeIndividualTradeExpensiveLeasedCarDisallowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeFinanceLeasePayments"
+                name="OverseasIncomeIndividualTradeFinanceLeasePayments"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeFrankedInvestmentIncome"
+                name="OverseasIncomeIndividualTradeFrankedInvestmentIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeGeneralProvisions"
+                name="OverseasIncomeIndividualTradeGeneralProvisions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeGeneralProvisionsIncreaseDecrease"
+                name="OverseasIncomeIndividualTradeGeneralProvisionsIncreaseDecrease"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeGiftsDonations"
+                name="OverseasIncomeIndividualTradeGiftsDonations"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeGoodwillAmortisation"
+                name="OverseasIncomeIndividualTradeGoodwillAmortisation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIntercompanyCharges"
+                name="OverseasIncomeIndividualTradeIntercompanyCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIntraGroupInterest"
+                name="OverseasIncomeIndividualTradeIntraGroupInterest"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeInvestmentIncome"
+                name="OverseasIncomeIndividualTradeInvestmentIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeLeaseAmortisation"
+                name="OverseasIncomeIndividualTradeLeaseAmortisation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeLegalAndProfessionalCharges"
+                name="OverseasIncomeIndividualTradeLegalAndProfessionalCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeLossProfitOnDisposalOfFixedAssets"
+                name="OverseasIncomeIndividualTradeLossProfitOnDisposalOfFixedAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeLossProfitOnDisposalOfInvestments"
+                name="OverseasIncomeIndividualTradeLossProfitOnDisposalOfInvestments"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeManagementCharges"
+                name="OverseasIncomeIndividualTradeManagementCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeNonTradeDebitsCredits"
+                name="OverseasIncomeIndividualTradeNonTradeDebitsCredits"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeNonTradeDebitsCreditsInterestPayable"
+                name="OverseasIncomeIndividualTradeNonTradeDebitsCreditsInterestPayable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeNonTradeDebitsCreditsInterestReceivable"
+                name="OverseasIncomeIndividualTradeNonTradeDebitsCreditsInterestReceivable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePaymentsToEBT"
+                name="OverseasIncomeIndividualTradePaymentsToEBT"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePensionContributionsNotPaid"
+                name="OverseasIncomeIndividualTradePensionContributionsNotPaid"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePreTradingExpenditure"
+                name="OverseasIncomeIndividualTradePreTradingExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeRepairsRenewalsMaintenance"
+                name="OverseasIncomeIndividualTradeRepairsRenewalsMaintenance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeRestructuringCosts"
+                name="OverseasIncomeIndividualTradeRestructuringCosts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeRoyalties"
+                name="OverseasIncomeIndividualTradeRoyalties"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeScheduleAExpenses"
+                name="OverseasIncomeIndividualTradeScheduleAExpenses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeScheduleAIncome"
+                name="OverseasIncomeIndividualTradeScheduleAIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeSoftwareCharges"
+                name="OverseasIncomeIndividualTradeSoftwareCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeSubscriptions"
+                name="OverseasIncomeIndividualTradeSubscriptions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTelephoneAndTelex"
+                name="OverseasIncomeIndividualTradeTelephoneAndTelex"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTradeFairsExhibitions"
+                name="OverseasIncomeIndividualTradeTradeFairsExhibitions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTravelAndSubsistence"
+                name="OverseasIncomeIndividualTradeTravelAndSubsistence"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeOther"
+                name="OverseasIncomeIndividualTradeOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradeCapitalAllowances"
+                name="OverseasIncomeIndividualTradeCapitalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeCapitalAllowancesTotal"
+                name="OverseasIncomeIndividualTradeCapitalAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPool"
+                name="OverseasIncomeIndividualTradePMAGeneralPool"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolWDVBF"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolTransfersIn"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAdditionsTotal"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolDeductionsTotal"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolDeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolDeductionsOther"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAllowancesBalancingCharge"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAllowancesBalancingAllowance"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAGeneralPoolWDVCF"
+                name="OverseasIncomeIndividualTradePMAGeneralPoolWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssets"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryTotal"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryWDVBFTotal"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryBalancingChargeTotal"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryWDVCFTotal"
+                name="OverseasIncomeIndividualTradePMAShortLifeAssetsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssets"
+                name="OverseasIncomeIndividualTradePMALongLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsWDVBF"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsTransfersIn"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsTotal"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsOther"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMALongLifeAssetsWDVCF"
+                name="OverseasIncomeIndividualTradePMALongLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCars"
+                name="OverseasIncomeIndividualTradePMAExpensiveCars"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsSummaryTotal"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsSummaryWDVBFTotal"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsSummaryBalancingChargeTotal"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradePMAExpensiveCarsSummaryWDVCFTotal"
+                name="OverseasIncomeIndividualTradePMAExpensiveCarsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradeRDA"
+                name="OverseasIncomeIndividualTradeRDA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeRDAAllowancesClaimed"
+                name="OverseasIncomeIndividualTradeRDAAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeRDAAllowancesBalancingCharge"
+                name="OverseasIncomeIndividualTradeRDAAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowance"
+                name="OverseasIncomeIndividualTradeKnowHowAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceWDVBF"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceTransfersIn"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceAdditionsQualifyingForWDA25Percent"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceDeductionsTotal"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceDeductionsOther"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesBalancingCharge"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesBalancingAllowance"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeKnowHowAllowanceWDVCF"
+                name="OverseasIncomeIndividualTradeKnowHowAllowanceWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowance"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryTotal"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryWDVBFTotal"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryBalancingChargeTotal"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryWDVCFTotal"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeIndividualTradeIBA"
+                name="OverseasIncomeIndividualTradeIBA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAWDVBF"
+                name="OverseasIncomeIndividualTradeIBAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAdditionsTotalCost"
+                name="OverseasIncomeIndividualTradeIBAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAdditionsTransfersIn"
+                name="OverseasIncomeIndividualTradeIBAAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAdditionsQualifyingForWDA4Percent"
+                name="OverseasIncomeIndividualTradeIBAAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAdditionsQualifyingForWDA2Percent"
+                name="OverseasIncomeIndividualTradeIBAAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBADeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradeIBADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBADeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradeIBADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAllowancesBalancing"
+                name="OverseasIncomeIndividualTradeIBAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAllowancesTotalClaimed"
+                name="OverseasIncomeIndividualTradeIBAAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradeIBAAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBAAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradeIBAAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBANotionalAllowancesCumulativeBF"
+                name="OverseasIncomeIndividualTradeIBANotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBANotionalAllowancesCurrentAllowance"
+                name="OverseasIncomeIndividualTradeIBANotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBANotionalAllowancesBalancingAdjustment"
+                name="OverseasIncomeIndividualTradeIBANotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBANotionalAllowancesCumulativeCF"
+                name="OverseasIncomeIndividualTradeIBANotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBABalancingCharge"
+                name="OverseasIncomeIndividualTradeIBABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeIBATaxWDVCF"
+                name="OverseasIncomeIndividualTradeIBATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeNetProfitLoss"
+                name="OverseasIncomeIndividualTradeNetProfitLoss"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-CaseV_OverseasIncomeIndividualTradeTradingProfitsTradingLosses"
+                name="OverseasIncomeIndividualTradeTradingProfitsTradingLosses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTradingProfitsTradingLossesBF"
+                name="OverseasIncomeIndividualTradeTradingProfitsTradingLossesBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTradingProfitsTradingLossesBroughtBack"
+                name="OverseasIncomeIndividualTradeTradingProfitsTradingLossesBroughtBack"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTradingProfitsTradingLossesTotalArising"
+                name="OverseasIncomeIndividualTradeTradingProfitsTradingLossesTotalArising"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeTradingProfitsTradingLossesCF"
+                name="OverseasIncomeIndividualTradeTradingProfitsTradingLossesCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeTrade" name="OverseasIncomeTrade"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeTradeNetProfitLoss"
+                name="OverseasIncomeTradeNetProfitLoss"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeTradeTradingProfitsTradingLossesTotalArising"
+                name="OverseasIncomeTradeTradingProfitsTradingLossesTotalArising"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusiness"
+                name="OverseasIncomePropertyBusiness"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessGrossIncome"
+                name="OverseasIncomePropertyBusinessGrossIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessLoss"
+                name="OverseasIncomePropertyBusinessLoss"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusinessCapitalAllowances"
+                name="OverseasIncomePropertyBusinessCapitalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessCapitalAllowancesTotal"
+                name="OverseasIncomePropertyBusinessCapitalAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPool"
+                name="OverseasIncomePropertyBusinessPMAGeneralPool"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolWDVBF"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolTransfersIn"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsTotal"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsTotal"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsDisposalProceeds"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsTransfersOut"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsOther"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesBalancingCharge"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesBalancingAllowance"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesDueToTransferor"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesDueToTransferee"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomePropertyBusinessPMAGeneralPoolWDVCF"
+                name="OverseasIncomePropertyBusinessPMAGeneralPoolWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomePropertyBusinessPMAShortLifeAssets"
+                name="OverseasIncomePropertyBusinessPMAShortLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTrade"
+                name="OverseasIncomeIndividualTrade"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeDescriptionOfTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeNetProfitLoss"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeTradingProfitsTradingLossesTotalArising"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceIndividualAssetPoolAssetDescription"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceIndividualAssetPoolAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceWDVBF"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceTransfersIn"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsTotal"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForFYA100Percent"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForWDA25Percent"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceDeductionsDisposalProceeds"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceDeductionsTransfersOut"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesBalancingCharge"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferor"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferee"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceWDVCF"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeIndividualTradeMineralExtractionAllowanceIndividualAssetPool"
+                name="OverseasIncomeIndividualTradeMineralExtractionAllowanceIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceIndividualAssetPoolAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesLicenceNumberTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesOriginalCostTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForFYA100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesAdditionsQualifyingFor10PercentWDATradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesPercentDisposalTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowances100PercentInitialAllowanceAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowances25PercentWDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowances10PercentWDAAvailableTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesInitialAllowanceClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesWDAClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesBalancingAllowanceDueTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesBalancingAllowanceClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeIndividualTradeMineralExtractionAllowanceWDVCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeMineralExtractionAllowancesTotalAllowancesClaimedTradingIncomeOrLossOfMoreThanOneTrade"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeCompanyName"
+                name="OverseasIncomeDividendIncomeCompanyName"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeReceived"
+                name="OverseasIncomeDividendIncomeReceived"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeWithholdingTax"
+                name="OverseasIncomeDividendIncomeWithholdingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeCreditableUnderlyingTax"
+                name="OverseasIncomeDividendIncomeCreditableUnderlyingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeGross"
+                name="OverseasIncomeDividendIncomeGross"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-CaseV_OverseasIncomeDividendIncomeTotal"
+                name="OverseasIncomeDividendIncomeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeTotalReceived"
+                name="OverseasIncomeDividendIncomeTotalReceived"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeTotalWithholdingTax"
+                name="OverseasIncomeDividendIncomeTotalWithholdingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeTotalCreditableUnderlyingTax"
+                name="OverseasIncomeDividendIncomeTotalCreditableUnderlyingTax"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeTotalGross"
+                name="OverseasIncomeDividendIncomeTotalGross"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-CaseV_OverseasIncomeDividendIncomeIndividualItem"
+                name="OverseasIncomeDividendIncomeIndividualItem"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomeCompanyName"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:ForeignIncomeDividendsDatePaid"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:ForeignIncomeDividendsYear"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeDividendsDistributableProfits"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:ForeignIncomeDividendsTaxPayable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeDividendsUnderlyingTaxRate"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:ForeignIncomeDividendsBalanceBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-CaseV:OverseasIncomeDividendIncomeReceived"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeDividendsExchangeDifference"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:ForeignIncomeDividendsBalanceCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-default:ForeignIncomeDividendsNetDividend"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomeWithholdingTax"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-CaseV:OverseasIncomeDividendIncomeCreditableUnderlyingTax"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-default:ForeignIncomeDividendsCappedUnderlyingTax"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-CaseV:OverseasIncomeDividendIncomeGross"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

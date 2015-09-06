@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15"
+      xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+      xmlns:example="http://www.xbrl.org/uk/uk-gaap-example">
+  <link:schemaRef xlink:type="simple" xlink:href="./extension/segment-reporting-dimension-schema.xsd"/>
+  <context id="CONTINUING_OPERATIONS_BEVERAGES_UK">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:BeveragesBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:UKGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_CONFECTIONARY_UK">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:ConfectionaryBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:UKGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_BEVERAGES_EUROPE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:BeveragesBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfEuropeGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_CONFECTIONARY_EUROPE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:ConfectionaryBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfEuropeGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_BEVERAGES_WORLD">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:BeveragesBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfWorldGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_CONFECTIONARY_WORLD">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:ConfectionaryBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfWorldGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_BEVERAGES_TOTAL_GEOGRAPHIC_SEGMENTS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:BeveragesBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">uk-gaap-pt:TotalGeographicSegments</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_CONFECTIONARY_TOTAL_GEOGRAPHIC_SEGMENTS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">example:ConfectionaryBusinessSegment</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">uk-gaap-pt:TotalGeographicSegments</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_UK">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:UKGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_EUROPE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfEuropeGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_WORLD">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfWorldGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_TOTAL_GEOGRAPHIC_SEGMENTS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:ContinuingOperationsIncludingAcquisitions</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">uk-gaap-pt:TotalGeographicSegments</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_UK">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:DiscontinuedOperations</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:UKGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_EUROPE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:DiscontinuedOperations</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfEuropeGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_WORLD">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:DiscontinuedOperations</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfWorldGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_TOTAL_GEOGRAPHIC_SEGMENTS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:OperatingActivitiesDimension">uk-gaap-pt:DiscontinuedOperations</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">uk-gaap-pt:TotalGeographicSegments</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_UK">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:UKGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_EUROPE">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfEuropeGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_WORLD">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">example:RestOfWorldGeographicSegment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_TOTAL_GEOGRAPHIC_SEGMENTS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:BusinessSegmentsDimension">uk-gaap-pt:TotalBusinessSegments</xbrldi:explicitMember>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:GeographicSegmentsDimension">uk-gaap-pt:TotalGeographicSegments</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_BEVERAGES_UK" unitRef="GBP" decimals="0">20000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_CONFECTIONARY_UK" unitRef="GBP" decimals="0">10000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_BEVERAGES_EUROPE" unitRef="GBP" decimals="0">5000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_CONFECTIONARY_EUROPE" unitRef="GBP" decimals="0">3000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_BEVERAGES_WORLD" unitRef="GBP" decimals="0">8000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_CONFECTIONARY_WORLD" unitRef="GBP" decimals="0">5000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_BEVERAGES_TOTAL_GEOGRAPHIC_SEGMENTS" unitRef="GBP" decimals="0">33000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_CONFECTIONARY_TOTAL_GEOGRAPHIC_SEGMENTS" unitRef="GBP" decimals="0">18000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_UK" unitRef="GBP" decimals="0">30000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_EUROPE" unitRef="GBP" decimals="0">8000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_WORLD" unitRef="GBP" decimals="0">13000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CONTINUING_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_TOTAL_GEOGRAPHIC_SEGMENTS" unitRef="GBP" decimals="0">51000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_UK" unitRef="GBP" decimals="0">500</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_EUROPE" unitRef="GBP" decimals="0">300</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_WORLD" unitRef="GBP" decimals="0">200</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="DISCONTINUED_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_TOTAL_GEOGRAPHIC_SEGMENTS" unitRef="GBP" decimals="0">1000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_UK" unitRef="GBP" decimals="0">30500</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_EUROPE" unitRef="GBP" decimals="0">8300</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_WORLD" unitRef="GBP" decimals="0">13200</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="ALL_OPERATIONS_TOTAL_BUSINESS_SEGMENTS_TOTAL_GEOGRAPHIC_SEGMENTS" unitRef="GBP" decimals="0">52000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+</xbrl>

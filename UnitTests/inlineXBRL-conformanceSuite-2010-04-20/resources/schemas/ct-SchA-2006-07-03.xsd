@@ -1,0 +1,2541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:ct-SchA="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-SchA/2006-07-03"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-SchA/2006-07-03">
+   <xsd:import namespace="http://www.xbrl.org/2003/instance"
+               schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:annotation>
+      <xsd:appinfo>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-presentation-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+                         xlink:type="simple"/>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-label-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+                         xlink:type="simple"/>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetDescription"
+                name="IncomeFromUKLandBuildingsABAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetSite"
+                name="IncomeFromUKLandBuildingsABAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetBuilding"
+                name="IncomeFromUKLandBuildingsABAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetYearOfExpenditure"
+                name="IncomeFromUKLandBuildingsABAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetOriginalCost"
+                name="IncomeFromUKLandBuildingsABAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetDateOfTransfer"
+                name="IncomeFromUKLandBuildingsABAAssetDateOfTransfer"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetNonQualifyingUseOnDisposal"
+                name="IncomeFromUKLandBuildingsABAAssetNonQualifyingUseOnDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetWDVBF"
+                name="IncomeFromUKLandBuildingsABAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetAdditionsTotalCost"
+                name="IncomeFromUKLandBuildingsABAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetAdditionsTransfersIn"
+                name="IncomeFromUKLandBuildingsABAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetDeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsABAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetDeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsABAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetAllowancesBalancing"
+                name="IncomeFromUKLandBuildingsABAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetBalancingCharge"
+                name="IncomeFromUKLandBuildingsABAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAssetTaxWDVCF"
+                name="IncomeFromUKLandBuildingsABAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAWDVBF"
+                name="IncomeFromUKLandBuildingsABAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAdditionsTotalCost"
+                name="IncomeFromUKLandBuildingsABAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAdditionsTransfersIn"
+                name="IncomeFromUKLandBuildingsABAAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABADeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsABADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABADeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsABADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAllowancesBalancing"
+                name="IncomeFromUKLandBuildingsABAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABABalancingCharge"
+                name="IncomeFromUKLandBuildingsABABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABATaxWDVCF"
+                name="IncomeFromUKLandBuildingsABATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsIAR"
+                name="IncomeFromUKLandBuildingsIAR"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAABA4PercentWDAAvailable"
+                name="ScheduleAABA4PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAABA2PercentWDAAvailable"
+                name="ScheduleAABA2PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAABAWDAClaimed" name="ScheduleAABAWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAABATotalAllowancesClaimed"
+                name="ScheduleAABATotalAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsABAAsset"
+                name="IncomeFromUKLandBuildingsABAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetDateOfTransfer"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetNonQualifyingUseOnDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAABA4PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAABA2PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAABAWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAABATotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsABAAssetTaxWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationCarDescription"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationCarDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationRetailPrice"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationRetailPrice"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationLeasingCharges"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationLeasingCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationMaintenanceElement"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationMaintenanceElement"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountAllowable"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountAllowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountDisallowable"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountDisallowable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsDisallowance"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsDisallowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsChargesOnIncomePerPL"
+                name="IncomeFromUKLandBuildingsAdjustmentsChargesOnIncomePerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsGeneralProvisionsPerPL"
+                name="IncomeFromUKLandBuildingsAdjustmentsGeneralProvisionsPerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsUtilisationOfGeneralProvisions"
+                name="IncomeFromUKLandBuildingsAdjustmentsUtilisationOfGeneralProvisions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsDisallowableUtilisationOfGeneralProvisions"
+                name="IncomeFromUKLandBuildingsAdjustmentsDisallowableUtilisationOfGeneralProvisions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsFinanceLeaseAdjustment"
+                name="IncomeFromUKLandBuildingsAdjustmentsFinanceLeaseAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsOverseasDividendsReceivable"
+                name="IncomeFromUKLandBuildingsAdjustmentsOverseasDividendsReceivable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsRevenueInCapital"
+                name="IncomeFromUKLandBuildingsAdjustmentsRevenueInCapital"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsNonTradingForeignExchangeGainsAndLosses"
+                name="IncomeFromUKLandBuildingsAdjustmentsNonTradingForeignExchangeGainsAndLosses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsDeductions"
+                name="IncomeFromUKLandBuildingsDeductions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsExpensesTotal"
+                name="IncomeFromUKLandBuildingsDeductionsExpensesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsExpensesCapitalInRevenue"
+                name="IncomeFromUKLandBuildingsDeductionsExpensesCapitalInRevenue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsExpensesRates"
+                name="IncomeFromUKLandBuildingsDeductionsExpensesRates"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsExpensesOther"
+                name="IncomeFromUKLandBuildingsDeductionsExpensesOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLeasePremiumPayable"
+                name="IncomeFromUKLandBuildingsDeductionsLeasePremiumPayable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLosses"
+                name="IncomeFromUKLandBuildingsDeductionsLosses"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLossesBF"
+                name="IncomeFromUKLandBuildingsDeductionsLossesBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLossesUsedAgainstProfitsOfThePeriod"
+                name="IncomeFromUKLandBuildingsDeductionsLossesUsedAgainstProfitsOfThePeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLossesArising"
+                name="IncomeFromUKLandBuildingsDeductionsLossesArising"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLossesAvailableForSurrender"
+                name="IncomeFromUKLandBuildingsDeductionsLossesAvailableForSurrender"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLossesSurrenderedAsGroupRelief"
+                name="IncomeFromUKLandBuildingsDeductionsLossesSurrenderedAsGroupRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsLossesCF"
+                name="IncomeFromUKLandBuildingsDeductionsLossesCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsNonTradingLoanRelationshipDebitsPerPL"
+                name="IncomeFromUKLandBuildingsDeductionsNonTradingLoanRelationshipDebitsPerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsWearTearAllowance"
+                name="IncomeFromUKLandBuildingsDeductionsWearTearAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_IncomeFromUKLandBuildingsDeductionsCapitalAllowances"
+                name="IncomeFromUKLandBuildingsDeductionsCapitalAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsDeductionsCapitalAllowancesTotal"
+                name="IncomeFromUKLandBuildingsDeductionsCapitalAllowancesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPool"
+                name="IncomeFromUKLandBuildingsPMAGeneralPool"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolWDVBF"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolTransfersIn"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsTotal"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsTotal"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsOther"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesBalancingCharge"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesBalancingAllowance"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesDueToTransferor"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesDueToTransferee"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAGeneralPoolWDVCF"
+                name="IncomeFromUKLandBuildingsPMAGeneralPoolWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_IncomeFromUKLandBuildingsDeductionsPMAShortLifeAssets"
+                name="IncomeFromUKLandBuildingsDeductionsPMAShortLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationIndividualItem"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationIndividualItem"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationCarDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationRetailPrice"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationLeasingCharges"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationMaintenanceElement"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountAllowable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountDisallowable"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsAssetDescription"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsWDVBF"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsTransfersIn"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsAdditionsTotal"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsDeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsDeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesBalancingCharge"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesBalancingAllowance"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesDueToTransferor"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesDueToTransferee"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsWDVCF"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_IncomeFromUKLandBuildingsDeductionsPMAExpensiveCarsSummaryTotal"
+                name="IncomeFromUKLandBuildingsDeductionsPMAExpensiveCarsSummaryTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsSummaryWDVBFTotal"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsSummaryBalancingChargeTotal"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsSummaryWDVCFTotal"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsSummaryWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsDeductionsIBA"
+                name="IncomeFromUKLandBuildingsDeductionsIBA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCars3000WDAAvailable"
+                name="ScheduleAExpensiveCars3000WDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCars25PercentWDAAvailable"
+                name="ScheduleAExpensiveCars25PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsWDAClaimed"
+                name="ScheduleAExpensiveCarsWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsTotalAllowancesClaimed"
+                name="ScheduleAExpensiveCarsTotalAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAExpensiveCarsIndividualAssetPool"
+                name="IncomeFromUKLandBuildingsPMAExpensiveCarsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsAdditionsTotal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAExpensiveCars3000WDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAExpensiveCars25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAExpensiveCarsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAExpensiveCarsTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAExpensiveCarsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryAccountsWDVBFTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryAccountsWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryAccountsWDVCFTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryAccountsWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryAdditionsTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryDeductionsTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryTaxWDVBFTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryTaxWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryCumulativeTaxDebitsClaimedBFTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryCumulativeTaxDebitsClaimedBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryTaxDebitsTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryTaxDebitsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryTaxCreditsTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryTaxCreditsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryTaxWDVCFTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryTaxWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryCumulativeWDAsClaimedBFTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryCumulativeWDAsClaimedBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryTaxWDVTransferredTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryTaxWDVTransferredTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIARSummaryCumulativeWDAsClaimedTransferredTotal"
+                name="IncomeFromUKLandBuildingsIARSummaryCumulativeWDAsClaimedTransferredTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsLandRemediationQualifyingCapitalExpenditure"
+                name="IncomeFromUKLandBuildingsLandRemediationQualifyingCapitalExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsLandRemediationEnhancedExpenditure"
+                name="IncomeFromUKLandBuildingsLandRemediationEnhancedExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildings"
+                name="IncomeFromUKLandBuildings"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAssessable"
+                name="IncomeFromUKLandBuildingsAssessable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsAdditions"
+                name="IncomeFromUKLandBuildingsAdditions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsProfitPerAccounts"
+                name="IncomeFromUKLandBuildingsAdditionsProfitPerAccounts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsOtherIncome"
+                name="IncomeFromUKLandBuildingsAdditionsOtherIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsRentReceived"
+                name="IncomeFromUKLandBuildingsAdditionsRentReceived"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsDepreciation"
+                name="IncomeFromUKLandBuildingsAdditionsDepreciation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsEntertainingDisallowed"
+                name="IncomeFromUKLandBuildingsAdditionsEntertainingDisallowed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsLegalDisallowed"
+                name="IncomeFromUKLandBuildingsAdditionsLegalDisallowed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsLeasePremiumSchA"
+                name="IncomeFromUKLandBuildingsAdditionsLeasePremiumSchA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsLeasePremiumSchAPremiumReceived"
+                name="IncomeFromUKLandBuildingsAdditionsLeasePremiumSchAPremiumReceived"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsNetPartnershipShareOfUKPropertyIncome"
+                name="IncomeFromUKLandBuildingsAdditionsNetPartnershipShareOfUKPropertyIncome"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsNonTradingLoanRelationshipCreditsPerPL"
+                name="IncomeFromUKLandBuildingsAdditionsNonTradingLoanRelationshipCreditsPerPL"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsDisallowableSubscriptionsAndDonations"
+                name="IncomeFromUKLandBuildingsAdditionsDisallowableSubscriptionsAndDonations"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdditionsTotal"
+                name="IncomeFromUKLandBuildingsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssets"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsWDVBF"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsTransfersIn"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsOther"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesBalancingCharge"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesBalancingAllowance"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesDueToTransferor"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesDueToTransferee"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsWDVCF"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsSummaryWDVBFTotal"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsSummaryWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsSummaryBalancingChargeTotal"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsSummaryBalancingChargeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssets"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsWDVBF"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsTransfersIn"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsTotal"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsOther"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsDeductionsOther"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsAllowancesDueToTransferor"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsAllowancesDueToTransferee"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMALongLifeAssetsWDVCF"
+                name="IncomeFromUKLandBuildingsPMALongLifeAssetsWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_IncomeFromUKLandBuildingsDeductionsPMAExpensiveCars"
+                name="IncomeFromUKLandBuildingsDeductionsPMAExpensiveCars"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsTotalAdditions"
+                name="ScheduleAShortLifeAssetsTotalAdditions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsDateOfAcquisition"
+                name="ScheduleAShortLifeAssetsDateOfAcquisition"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsTransfersToPlantAndMachineryPool"
+                name="ScheduleAShortLifeAssetsTransfersToPlantAndMachineryPool"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssets100PercentFYAAvailable"
+                name="ScheduleAShortLifeAssets100PercentFYAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssets40PercentFYAAvailable"
+                name="ScheduleAShortLifeAssets40PercentFYAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssets25PercentWDAAvailable"
+                name="ScheduleAShortLifeAssets25PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsFYAClaimed"
+                name="ScheduleAShortLifeAssetsFYAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsWDAClaimed"
+                name="ScheduleAShortLifeAssetsWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsTotalAllowancesClaimed"
+                name="ScheduleAShortLifeAssetsTotalAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsPMAShortLifeAssetsIndividualAssetPool"
+                name="IncomeFromUKLandBuildingsPMAShortLifeAssetsIndividualAssetPool"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssets"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForFYA100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForFYA40Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssetsTotalAdditions"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssetsDateOfAcquisition"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssetsTransfersToPlantAndMachineryPool"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsDeductionsOther"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssets100PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssets40PercentFYAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssets25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAShortLifeAssetsFYAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAShortLifeAssetsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAShortLifeAssetsTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsAllowancesBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsPMAShortLifeAssetsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetDescription"
+                name="IncomeFromUKLandBuildingsIBAAssetDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetSite"
+                name="IncomeFromUKLandBuildingsIBAAssetSite"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetBuilding"
+                name="IncomeFromUKLandBuildingsIBAAssetBuilding"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetYearOfExpenditure"
+                name="IncomeFromUKLandBuildingsIBAAssetYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetOriginalCost"
+                name="IncomeFromUKLandBuildingsIBAAssetOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetDateOfTransfer"
+                name="IncomeFromUKLandBuildingsIBAAssetDateOfTransfer"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetNonQualifyingUseOnDisposal"
+                name="IncomeFromUKLandBuildingsIBAAssetNonQualifyingUseOnDisposal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetWDVBF"
+                name="IncomeFromUKLandBuildingsIBAAssetWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsTotalCost"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsTransfersIn"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance100Percent"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance75Percent"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance75Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance20Percent"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance20Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA25Percent"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA4Percent"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA2Percent"
+                name="IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetDeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsIBAAssetDeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetDeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsIBAAssetDeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesBalancing"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesTotalClaimed"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesDueToTransferor"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesDueToTransferee"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:dateTimeItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                name="IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCumulativeBF"
+                name="IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCurrentAllowance"
+                name="IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesBalancingAdjustment"
+                name="IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCumulativeCF"
+                name="IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetBalancingCharge"
+                name="IncomeFromUKLandBuildingsIBAAssetBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAssetTaxWDVCF"
+                name="IncomeFromUKLandBuildingsIBAAssetTaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAWDVBF"
+                name="IncomeFromUKLandBuildingsIBAWDVBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsTotalCost"
+                name="IncomeFromUKLandBuildingsIBAAdditionsTotalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsTransfersIn"
+                name="IncomeFromUKLandBuildingsIBAAdditionsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsQualifyingForInitialAllowance100Percent"
+                name="IncomeFromUKLandBuildingsIBAAdditionsQualifyingForInitialAllowance100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsQualifyingForInitialAllowance75Percent"
+                name="IncomeFromUKLandBuildingsIBAAdditionsQualifyingForInitialAllowance75Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsQualifyingForInitialAllowance20Percent"
+                name="IncomeFromUKLandBuildingsIBAAdditionsQualifyingForInitialAllowance20Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsQualifyingForWDA25Percent"
+                name="IncomeFromUKLandBuildingsIBAAdditionsQualifyingForWDA25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsQualifyingForWDA4Percent"
+                name="IncomeFromUKLandBuildingsIBAAdditionsQualifyingForWDA4Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAdditionsQualifyingForWDA2Percent"
+                name="IncomeFromUKLandBuildingsIBAAdditionsQualifyingForWDA2Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBADeductionsDisposalProceeds"
+                name="IncomeFromUKLandBuildingsIBADeductionsDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBADeductionsTransfersOut"
+                name="IncomeFromUKLandBuildingsIBADeductionsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAllowancesBalancing"
+                name="IncomeFromUKLandBuildingsIBAAllowancesBalancing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAllowancesTotalClaimed"
+                name="IncomeFromUKLandBuildingsIBAAllowancesTotalClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAllowancesDueToTransferor"
+                name="IncomeFromUKLandBuildingsIBAAllowancesDueToTransferor"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAllowancesDueToTransferee"
+                name="IncomeFromUKLandBuildingsIBAAllowancesDueToTransferee"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBANotionalAllowancesCumulativeBF"
+                name="IncomeFromUKLandBuildingsIBANotionalAllowancesCumulativeBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBANotionalAllowancesCurrentAllowance"
+                name="IncomeFromUKLandBuildingsIBANotionalAllowancesCurrentAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBANotionalAllowancesBalancingAdjustment"
+                name="IncomeFromUKLandBuildingsIBANotionalAllowancesBalancingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBANotionalAllowancesCumulativeCF"
+                name="IncomeFromUKLandBuildingsIBANotionalAllowancesCumulativeCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBABalancingCharge"
+                name="IncomeFromUKLandBuildingsIBABalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBATaxWDVCF"
+                name="IncomeFromUKLandBuildingsIBATaxWDVCF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsDeductionsABA"
+                name="IncomeFromUKLandBuildingsDeductionsABA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAUnletBF" name="ScheduleAIBAUnletBF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAUnletCF" name="ScheduleAIBAUnletCF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA100PercentInitialAllowanceAvailable"
+                name="ScheduleAIBA100PercentInitialAllowanceAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA75PercentInitialAllowanceAvailable"
+                name="ScheduleAIBA75PercentInitialAllowanceAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA20PercentInitialAllowanceAvailable"
+                name="ScheduleAIBA20PercentInitialAllowanceAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA25PercentWDAAvailable"
+                name="ScheduleAIBA25PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA4PercentWDAAvailable"
+                name="ScheduleAIBA4PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA2PercentWDAAvailable"
+                name="ScheduleAIBA2PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAInitialAllowanceClaimed"
+                name="ScheduleAIBAInitialAllowanceClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAWDAClaimed" name="ScheduleAIBAWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAPotentialClawback" name="ScheduleAIBAPotentialClawback"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsIBAAsset"
+                name="IncomeFromUKLandBuildingsIBAAsset"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetDateOfTransfer"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetNonQualifyingUseOnDisposal"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance100Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance75Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForInitialAllowance20Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA25Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA4Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsQualifyingForWDA2Percent"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAdditionsTotalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetDeductionsDisposalProceeds"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetDeductionsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingResidueOfQualifyingExpenditureAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingResidueOf25YearAllowancePeriodAfterSale"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingAnnualRateOfWDADue"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesUsedIndustrialBuildingWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBAUnletBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBAUnletCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAIBA100PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAIBA75PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAIBA20PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBA25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBA4PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBA2PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBAInitialAllowanceClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBAWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesDueToTransferor"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesDueToTransferee"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCumulativeBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCurrentAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesBalancingAdjustment"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetNotionalAllowancesCumulativeCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesBalancing"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetTaxWDVCF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsIBAAssetAllowancesTotalClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAIBAPotentialClawback"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_ScheduleAFCAsDescription" name="ScheduleAFCAsDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsSite" name="ScheduleAFCAsSite" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsBuilding" name="ScheduleAFCAsBuilding" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsYearOfExpenditure"
+                name="ScheduleAFCAsYearOfExpenditure"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:integerItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsOriginalCost" name="ScheduleAFCAsOriginalCost"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsWDVBF" name="ScheduleAFCAsWDVBF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTransfersIn" name="ScheduleAFCAsTransfersIn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsAdditionsQualifyingFor100PercentInitialAllowance"
+                name="ScheduleAFCAsAdditionsQualifyingFor100PercentInitialAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsAdditionsQualifyingFor25PercentWDA"
+                name="ScheduleAFCAsAdditionsQualifyingFor25PercentWDA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTotalAdditions" name="ScheduleAFCAsTotalAdditions"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsDemolitionCosts" name="ScheduleAFCAsDemolitionCosts"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsDisposals" name="ScheduleAFCAsDisposals"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTransfersOut" name="ScheduleAFCAsTransfersOut"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAs100PercentInitialAllowanceAvailable"
+                name="ScheduleAFCAs100PercentInitialAllowanceAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAs25PercentWDAAvailable"
+                name="ScheduleAFCAs25PercentWDAAvailable"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsInitialAllowanceClaimed"
+                name="ScheduleAFCAsInitialAllowanceClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsWDAClaimed" name="ScheduleAFCAsWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsBalancingAllowance"
+                name="ScheduleAFCAsBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTotalAllowancesClaimed"
+                name="ScheduleAFCAsTotalAllowancesClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsBalancingCharge" name="ScheduleAFCAsBalancingCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsWDVCF" name="ScheduleAFCAsWDVCF" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsIndividualItem" name="ScheduleAFCAsIndividualItem"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsSite"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsBuilding"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsYearOfExpenditure"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsOriginalCost"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsWDVBF"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsTransfersIn"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAFCAsAdditionsQualifyingFor100PercentInitialAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAFCAsAdditionsQualifyingFor25PercentWDA"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsTotalAdditions"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsDemolitionCosts"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsDisposals"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsTransfersOut"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:ScheduleAFCAs100PercentInitialAllowanceAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAs25PercentWDAAvailable"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsInitialAllowanceClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsWDAClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsBalancingAllowance"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsTotalAllowancesClaimed"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsBalancingCharge"/>
+                  <xsd:element maxOccurs="1" minOccurs="0" ref="ct-SchA:ScheduleAFCAsWDVCF"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolTotalFrom"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolTotalFrom"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowExpensiveCarsAllowances"
+                name="ScheduleAScheduleACapAllowExpensiveCarsAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsWDAClaimedTotal" name="ScheduleAFCAsWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTransfersInTotal" name="ScheduleAFCAsTransfersInTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCars3000WDAAvailableTotal"
+                name="ScheduleAExpensiveCars3000WDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsDisposalsTotal"
+                name="ScheduleAExpensiveCarsDisposalsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowPlantAndMachineryAllowances"
+                name="ScheduleAScheduleACapAllowPlantAndMachineryAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowLongLifeAssetsCharges"
+                name="ScheduleAScheduleACapAllowLongLifeAssetsCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTransfersOutTotal"
+                name="ScheduleAFCAsTransfersOutTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAPlantAndMachineryPoolWDAAvailable25Percent"
+                name="ScheduleAPlantAndMachineryPoolWDAAvailable25Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsAdditionsQualifyingFor100PercentFYATotal"
+                name="ScheduleAShortLifeAssetsAdditionsQualifyingFor100PercentFYATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAABA4PercentWDAAvailableTotal"
+                name="ScheduleAABA4PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsAdditionsQualifyingFor40PercentFYATotal"
+                name="ScheduleAShortLifeAssetsAdditionsQualifyingFor40PercentFYATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowShortLifeAssetsCharges"
+                name="ScheduleAScheduleACapAllowShortLifeAssetsCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAPotentialClawbackTotal"
+                name="ScheduleAIBAPotentialClawbackTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPool"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPool"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsBalancingAllowanceTotal"
+                name="ScheduleAExpensiveCarsBalancingAllowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowLongLifeAssetsAllowances"
+                name="ScheduleAScheduleACapAllowLongLifeAssetsAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAPlantAndMachineryPoolFYAClaimed"
+                name="ScheduleAPlantAndMachineryPoolFYAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA75PercentInitialAllowanceAvailableTotal"
+                name="ScheduleAIBA75PercentInitialAllowanceAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA4PercentWDAAvailableTotal"
+                name="ScheduleAIBA4PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsAdditionsQualifyingFor25PercentWDATotal"
+                name="ScheduleAFCAsAdditionsQualifyingFor25PercentWDATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolSection343TransfersFrom"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolSection343TransfersFrom"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssets40PercentFYAAvailableTotal"
+                name="ScheduleAShortLifeAssets40PercentFYAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAABATotal" name="ScheduleAABATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsAdditionsQualifyingFor25PercentWDATotal"
+                name="ScheduleAShortLifeAssetsAdditionsQualifyingFor25PercentWDATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsWDVBFTotal" name="ScheduleAFCAsWDVBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA100PercentInitialAllowanceAvailableTotal"
+                name="ScheduleAIBA100PercentInitialAllowanceAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAFCAsTotal" name="ScheduleAFCAsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsWDAClaimedTotal"
+                name="ScheduleAShortLifeAssetsWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsBalancingAllowanceTotal"
+                name="ScheduleAFCAsBalancingAllowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleALongLifeAssetsPoolBalancingAllowance"
+                name="ScheduleALongLifeAssetsPoolBalancingAllowance"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleAIncomeOrLossShortLeasePremiumRelief"
+                name="ScheduleAScheduleAIncomeOrLossShortLeasePremiumRelief"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolTotalTo"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolTotalTo"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAPlantAndMachineryPoolFYAAvailable40Percent"
+                name="ScheduleAPlantAndMachineryPoolFYAAvailable40Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAABAWDAClaimedTotal" name="ScheduleAABAWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowShortLifeAssetsAllowances"
+                name="ScheduleAScheduleACapAllowShortLifeAssetsAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsFYAClaimedTotal"
+                name="ScheduleAShortLifeAssetsFYAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA25PercentWDAAvailableTotal"
+                name="ScheduleAIBA25PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsTotalAdditionsTotal"
+                name="ScheduleAFCAsTotalAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAWDAClaimedTotal" name="ScheduleAIBAWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssets25PercentWDAAvailableTotal"
+                name="ScheduleAShortLifeAssets25PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsDisposalsTotal"
+                name="ScheduleAShortLifeAssetsDisposalsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsTransfersOutTotal"
+                name="ScheduleAExpensiveCarsTransfersOutTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAs100PercentInitialAllowanceAvailableTotal"
+                name="ScheduleAFCAs100PercentInitialAllowanceAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAUnletCFTotal" name="ScheduleAIBAUnletCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA20PercentInitialAllowanceAvailableTotal"
+                name="ScheduleAIBA20PercentInitialAllowanceAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAFCAs" name="ScheduleAFCAs" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowABAs"
+                name="ScheduleAScheduleACapAllowABAs"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsAllowancesDueToTransferorTotal"
+                name="ScheduleAExpensiveCarsAllowancesDueToTransferorTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAEScheduleA" name="ScheduleAEScheduleA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAPlantAndMachineryPoolAllowancesAvailableOn"
+                name="ScheduleAPlantAndMachineryPoolAllowancesAvailableOn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleALongLifeAssetsPoolWDAAvailable6Percent"
+                name="ScheduleALongLifeAssetsPoolWDAAvailable6Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsOtherDeductionsTotal"
+                name="ScheduleAShortLifeAssetsOtherDeductionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAIBATotal" name="ScheduleAIBATotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsAllowancesDueToTransfereeTotal"
+                name="ScheduleAExpensiveCarsAllowancesDueToTransfereeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolSection343TransfersTo"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolSection343TransfersTo"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsWDVCFTotal" name="ScheduleAFCAsWDVCFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolTransfersFromShortLifeAssetPoolTo"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolTransfersFromShortLifeAssetPoolTo"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAInitialAllowanceClaimedTotal"
+                name="ScheduleAIBAInitialAllowanceClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsWDAClaimedTotal"
+                name="ScheduleAExpensiveCarsWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAPlantAndMachineryPoolFYAAvailable100Percent"
+                name="ScheduleAPlantAndMachineryPoolFYAAvailable100Percent"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleALongLifeAssetsPoolWDAClaimed"
+                name="ScheduleALongLifeAssetsPoolWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsTransfersOutTotal"
+                name="ScheduleAShortLifeAssetsTransfersOutTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAScheduleACapAllowCharges"
+                name="ScheduleAScheduleACapAllowCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsAllowancesDueToTransferorTotal"
+                name="ScheduleAShortLifeAssetsAllowancesDueToTransferorTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsDemolitionCostsTotal"
+                name="ScheduleAFCAsDemolitionCostsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAShortLifeAssetsTotal"
+                name="ScheduleAShortLifeAssetsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsTransfersInTotal"
+                name="ScheduleAExpensiveCarsTransfersInTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssets100PercentFYAAvailableTotal"
+                name="ScheduleAShortLifeAssets100PercentFYAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCars25PercentWDAAvailableTotal"
+                name="ScheduleAExpensiveCars25PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsDisposalsTotal" name="ScheduleAFCAsDisposalsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAPlantAndMachineryPoolWDAClaimed"
+                name="ScheduleAPlantAndMachineryPoolWDAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolTo"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolTo"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAs25PercentWDAAvailableTotal"
+                name="ScheduleAFCAs25PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleALongLifeAssetsPoolAdditionsQualifyingForWDA"
+                name="ScheduleALongLifeAssetsPoolAdditionsQualifyingForWDA"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAUsedBuildingWDAClaimedTotal"
+                name="ScheduleAIBAUsedBuildingWDAClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAUnletBFTotal" name="ScheduleAIBAUnletBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAABA2PercentWDAAvailableTotal"
+                name="ScheduleAABA2PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsAllowancesDueToTransfereeTotal"
+                name="ScheduleAShortLifeAssetsAllowancesDueToTransfereeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAIBA2PercentWDAAvailableTotal"
+                name="ScheduleAIBA2PercentWDAAvailableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsTotalAdditionsTotal"
+                name="ScheduleAShortLifeAssetsTotalAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowFlatConversionInitialAllowancesAllowances"
+                name="ScheduleAScheduleACapAllowFlatConversionInitialAllowancesAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsTransfersInTotal"
+                name="ScheduleAShortLifeAssetsTransfersInTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsAdditionsQualifyingFor100PercentInitialAllowanceTotal"
+                name="ScheduleAFCAsAdditionsQualifyingFor100PercentInitialAllowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAIBAUsedBuildingResidueBFTotal"
+                name="ScheduleAIBAUsedBuildingResidueBFTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_ScheduleA1TransfersToAndFromPlantAndMachineryPoolFrom"
+                name="ScheduleA1TransfersToAndFromPlantAndMachineryPoolFrom"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAExpensiveCarsAdditionsTotal"
+                name="ScheduleAExpensiveCarsAdditionsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_ScheduleAScheduleACapAllowFlatConversionInitialAllowancesCharges"
+                name="ScheduleAScheduleACapAllowFlatConversionInitialAllowancesCharges"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_ScheduleAScheduleACapAllowAllowances"
+                name="ScheduleAScheduleACapAllowAllowances"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAShortLifeAssetsBalancingAllowanceTotal"
+                name="ScheduleAShortLifeAssetsBalancingAllowanceTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleAFCAsInitialAllowanceClaimedTotal"
+                name="ScheduleAFCAsInitialAllowanceClaimedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_ScheduleALongLifeAssetsPoolAllowancesAvailableOn"
+                name="ScheduleALongLifeAssetsPoolAllowancesAvailableOn"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-SchA_IncomeFromUKLandBuildingsTransferPricing"
+                name="IncomeFromUKLandBuildingsTransferPricing"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingAdjustment"
+                name="IncomeFromUKLandBuildingsTransferPricingAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingAdjustmentDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingAdjustmentAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingAdjustmentTotal"
+                name="IncomeFromUKLandBuildingsTransferPricingAdjustmentTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingAdjustmentDescription"
+                name="IncomeFromUKLandBuildingsTransferPricingAdjustmentDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingAdjustmentAmount"
+                name="IncomeFromUKLandBuildingsTransferPricingAdjustmentAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustments"
+                name="IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustments"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentsTotal"
+                name="IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentsTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentDescription"
+                name="IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentAmount"
+                name="IncomeFromUKLandBuildingsTransferPricingCompensatingAdjustmentAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceived"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceived"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedTotal"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedDescription"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedAmount"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentReceivedAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMade"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMade"
+                nillable="true"
+                substitutionGroup="xbrli:tuple">
+      <xsd:complexType>
+         <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType">
+               <xsd:sequence>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeDescription"/>
+                  <xsd:element maxOccurs="1" minOccurs="0"
+                               ref="ct-SchA:IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeAmount"/>
+               </xsd:sequence>
+               <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:restriction>
+         </xsd:complexContent>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeTotal"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeDescription"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeDescription"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeAmount"
+                name="IncomeFromUKLandBuildingsTransferPricingInterestBalancingPaymentMadeAmount"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandAndBuildingsAdjustmentForDifferentAccountingPracticesWithinGroup"
+                name="IncomeFromUKLandAndBuildingsAdjustmentForDifferentAccountingPracticesWithinGroup"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandAndBuildingsDeductionsExpenditureOnEnergySavingItems"
+                name="IncomeFromUKLandAndBuildingsDeductionsExpenditureOnEnergySavingItems"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationTotal"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationLeasingChargesTotal"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationLeasingChargesTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationMaintenanceElementTotal"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationMaintenanceElementTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountAllowableTotal"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountAllowableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountDisallowableTotal"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputationAmountDisallowableTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element abstract="true"
+                id="ct-SchA_IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputation"
+                name="IncomeFromUKLandBuildingsAdjustmentsExpensiveLeasedCarsComputation"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+</xsd:schema>

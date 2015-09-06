@@ -1,0 +1,185 @@
+<testcase
+  xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+  xmlns:ix='http://www.xbrl.org/2008/inlineXBRL'
+  xmlns:ixt='http://www.xbrl.org/inlineXBRL/transformation/2010-04-20'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:pt='http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+>
+  <head>
+    <number>48</number>
+    <creator>
+      <name>Walter Hamscher</name>
+      <email>walter@hamscher.com</email>
+    </creator>
+    <description>Dissolution of ix: elements within escaped html without stray namespace attributes appearing for xsi:nil</description>
+    <requirement>req-ix-nonNumeric-attr-ix-escape</requirement>
+  </head>
+  <body>
+    <input>
+      <html
+        version='-//XBRL International//DTD XHTML Inline XBRL 1.0//EN'
+        xmlns='http://www.w3.org/1999/xhtml'
+        xsi:schemaLocation='http://www.w3.org/1999/xhtml ../../../schema/xhtml-inlinexbrl-1_0.xsd'
+      >
+        <head>
+          <meta
+            content='text/html; charset=UTF-8'
+            http-equiv='Content-Type'
+          ></meta>
+          <title>Basic Inline XBRL Example</title>
+          <base href="http://xbrl.org/example/base/URI.html"/>
+        </head>
+        <body
+          xml:lang='en'
+        >
+          <div
+            style='display:none'
+          >
+            <ix:header>
+              <ix:references>
+                <link:schemaRef
+                  xlink:href='../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd'
+                  xlink:type='simple'
+                ></link:schemaRef>
+              </ix:references>
+              <ix:resources>
+                <xbrli:context
+                  id='NNC1'
+                >
+                  <xbrli:entity>
+                    <xbrli:identifier
+                      scheme='test'
+                    >Test Co 1</xbrli:identifier>
+                  </xbrli:entity>
+                  <xbrli:period>
+                    <xbrli:instant>2005-12-31</xbrli:instant>
+                  </xbrli:period>
+                </xbrli:context>
+                <xbrli:context
+                  id='NFC1'
+                >
+                  <xbrli:entity>
+                    <xbrli:identifier
+                      scheme='test'
+                    >Test Co 1</xbrli:identifier>
+                  </xbrli:entity>
+                  <xbrli:period>
+                    <xbrli:startDate>2005-01-01</xbrli:startDate>
+                    <xbrli:endDate>2005-12-31</xbrli:endDate>
+                  </xbrli:period>
+                </xbrli:context>
+                <xbrli:unit
+                  id='u1'
+                >
+                  <xbrli:measure>iso4217:GBP</xbrli:measure>
+                </xbrli:unit>
+                <xbrli:unit
+                  id='ID-PURE'
+                >
+                  <xbrli:measure>pure</xbrli:measure>
+                </xbrli:unit>
+                <xbrli:unit
+                  id='GBP'
+                >
+                  <xbrli:measure>iso4217:GBP</xbrli:measure>
+                </xbrli:unit>
+              </ix:resources>
+            </ix:header>
+          </div>
+          <div>
+            <ix:nonNumeric
+              escape="1"
+              contextRef='NNC1'
+              name='pt:StatementResponsibilities'
+            >
+
+It is the responsibility of the <i>auditor</i>, (in this case
+
+              <ix:nonNumeric
+                escape="0"
+                contextRef='NNC1'
+                name='pt:DescriptionAddressAssociate'
+                xsi:nil="true"
+              />
+                <b>
+                  <a href="/"><i>&lt;XML&gt; Associates Inc.</i></a>, <a href="about.html">About us</a>, <a href="/contact.html#id123">Contact us</a>, <a href="#id123">Copyright notice</a>
+                </b>
+              
+
+) to provide a full and fair audit of the accounts.
+
+            </ix:nonNumeric>
+          </div>
+        </body>
+      </html>
+    </input>
+    <transformedOutput>
+      <xbrli:xbrl>
+        <link:schemaRef
+          xlink:href='../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd'
+          xlink:type='simple'
+        ></link:schemaRef>
+        <pt:StatementResponsibilities
+          contextRef='NNC1'
+        >
+
+It is the responsibility of the &lt;i xmlns="http://www.w3.org/1999/xhtml"&gt;auditor&lt;/i&gt;, (in this case
+
+              
+                &lt;b xmlns="http://www.w3.org/1999/xhtml"&gt;
+                  &lt;a href="http://xbrl.org/"&gt;&lt;i&gt;&amp;lt;XML&amp;gt; Associates Inc.&lt;/i&gt;&lt;/a&gt;, &lt;a href="http://xbrl.org/example/base/about.html"&gt;About us&lt;/a&gt;, &lt;a href="http://xbrl.org/contact.html#id123"&gt;Contact us&lt;/a&gt;, &lt;a href="http://xbrl.org/example/base/URI.html#id123"&gt;Copyright notice&lt;/a&gt;
+                &lt;/b&gt;
+              
+
+) to provide a full and fair audit of the accounts.
+
+            </pt:StatementResponsibilities>
+        <pt:DescriptionAddressAssociate
+          contextRef='NNC1' xsi:nil="true"/>
+        <xbrli:context
+          id='NNC1'
+        >
+          <xbrli:entity>
+            <xbrli:identifier
+              scheme='test'
+            >Test Co 1</xbrli:identifier>
+          </xbrli:entity>
+          <xbrli:period>
+            <xbrli:instant>2005-12-31</xbrli:instant>
+          </xbrli:period>
+        </xbrli:context>
+        <xbrli:context
+          id='NFC1'
+        >
+          <xbrli:entity>
+            <xbrli:identifier
+              scheme='test'
+            >Test Co 1</xbrli:identifier>
+          </xbrli:entity>
+          <xbrli:period>
+            <xbrli:startDate>2005-01-01</xbrli:startDate>
+            <xbrli:endDate>2005-12-31</xbrli:endDate>
+          </xbrli:period>
+        </xbrli:context>
+        <xbrli:unit
+          id='u1'
+        >
+          <xbrli:measure>iso4217:GBP</xbrli:measure>
+        </xbrli:unit>
+        <xbrli:unit
+          id='ID-PURE'
+        >
+          <xbrli:measure>pure</xbrli:measure>
+        </xbrli:unit>
+        <xbrli:unit
+          id='GBP'
+        >
+          <xbrli:measure>iso4217:GBP</xbrli:measure>
+        </xbrli:unit>
+      </xbrli:xbrl>
+    </transformedOutput>
+  </body>
+</testcase>

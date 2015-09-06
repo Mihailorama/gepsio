@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- Prepared by Clarity FSR  v6.6.0.460 using Fujitsu Interstage XWand -->
+<schema targetNamespace="http://intel.com/20111231" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intc="http://intel.com/20111231" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt">
+  <annotation>
+    <appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="intc-20111231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="intc-20111231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="intc-20111231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="intc-20111231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:roleType roleURI="http://intel.com/role/DisclosureDeferredIncomeTables" id="intc_ELRID_DeferredIncomeTables">
+        <link:definition>000518 - Disclosure - Deferred Income (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureDeferredIncomeDetail" id="intc_ELRID_DeferredIncomeDetail">
+        <link:definition>000618 - Disclosure - Deferred Income (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureOperatingSegmentAndGeographicInformation" id="intc_ELRID_OperatingSegmentAndGeographicInformation">
+        <link:definition>000230 - Disclosure - Operating Segment and Geographic Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureDeferredIncome" id="intc_ELRID_DeferredIncome">
+        <link:definition>000218 - Disclosure - Deferred Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureChipsetDesignIssueDetail" id="intc_ELRID_ChipsetDesignIssueDetail">
+        <link:definition>000620 - Disclosure - Chipset Design Issue (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureChipsetDesignIssue" id="intc_ELRID_ChipsetDesignIssue">
+        <link:definition>000220 - Disclosure - Chipset Design Issue</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAcquisitionsDetail" id="intc_ELRID_AcquisitionsDetail">
+        <link:definition>000614 - Disclosure - Acquisitions (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureDivestituresDetail" id="intc_ELRID_DivestituresDetail">
+        <link:definition>000615 - Disclosure - Divestitures (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureOperatingSegmentAndGeographicInformationDetail" id="intc_ELRID_OperatingSegmentAndGeographicInformationDetail">
+        <link:definition>000630 - Disclosure - Operating Segment and Geographic Information (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAccountingPoliciesPolicies" id="AccountingPoliciesPolicies">
+        <link:definition>000402 - Disclosure - Accounting Policies (Policies)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureOperatingSegmentAndGeographicInformationTables" id="intc_ELRID_OperatingSegmentAndGeographicInformationTables">
+        <link:definition>000530 - Disclosure - Operating Segment and Geographic Information (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAcquisitionsTables" id="intc_ELRID_AcquisitionsTables">
+        <link:definition>000514 - Disclosure - Acquisitions (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureDivestitures" id="intc_ELRID_Divestitures">
+        <link:definition>000215 - Disclosure - Divestitures</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAcquisitions" id="intc_ELRID_Acquisitions">
+        <link:definition>000214 - Disclosure - Acquisitions</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAccountingPolicies" id="AccountingPolicies">
+        <link:definition>000202 - Disclosure - Accounting Policies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureDerivativeFinancialInstrumentsDetail" id="intc_ELRID_DerivativeFinancialInstrumentsDetail">
+        <link:definition>000608 - Disclosure - Derivative Financial Instruments (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DerivativeFinancialInstrumentsTables" id="intc_ELRID_DerivativeFinancialInstrumentsTables">
+        <link:definition>000508 - Disclosure - Derivative Financial Instruments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEquityMethodAndCostMethodInvestmentsDetails" id="intc_ELRID_EquityMethodAndCostMethodInvestmentsDetails">
+        <link:definition>000611 - Disclosure - Equity Method and Cost Method Investments (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEquityMethodAndCostMethodInvestments" id="intc_ELRID_EquityMethodAndCostMethodInvestments">
+        <link:definition>000211 - Disclosure - Equity Method and Cost Method Investments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEarningsPerShareTables" id="intc_ELRID_EarningsPerShareTables">
+        <link:definition>000526 - Disclosure - Earnings Per Share (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureComprehensiveIncomeTables" id="intc_ELRID_ComprehensiveIncomeTables">
+        <link:definition>000527 - Disclosure - Comprehensive Income (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEarningsPerShareDetail" id="intc_ELRID_EarningsPerShareDetail">
+        <link:definition>000626 - Disclosure - Earnings Per Share (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureComprehensiveIncomeDetail" id="intc_ELRID_ComprehensiveIncomeDetail">
+        <link:definition>000627 - Disclosure - Comprehensive Income (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEarningsPerShare" id="intc_ELRID_EarningsPerShare">
+        <link:definition>000226 - Disclosure - Earnings Per Share</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureComprehensiveIncome" id="intc_ELRID_ComprehensiveIncome">
+        <link:definition>000227 - Disclosure - Comprehensive Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureCommonStockRepurchasesDetail" id="intc_ELRID_CommonStockRepurchasesDetail">
+        <link:definition>000625 - Disclosure - Common Stock Repurchases (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureTradingAssetsTables" id="intc_ELRID_TradingAssetsTables">
+        <link:definition>000506 - Disclosure - Trading Assets (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureCommonStockRepurchases" id="intc_ELRID_CommonStockRepurchases">
+        <link:definition>000225 - Disclosure - Common Stock Repurchases</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureTradingAssets" id="intc_ELRID_TradingAssets">
+        <link:definition>000206 - Disclosure - Trading Assets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DocumentDocumentAndEntityInformation" id="DocumentAndCompanyInformation">
+        <link:definition>000000 - Document - Document and Entity Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureContingenciesDetail" id="intc_ELRID_ContingenciesDetail">
+        <link:definition>000629 - Disclosure - Contingencies (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEmployeeEquityIncentivePlansDetail" id="intc_ELRID_EmployeeEquityIncentivePlansDetail">
+        <link:definition>000624 - Disclosure - Employee Equity Incentive Plans (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEmployeeEquityIncentivePlansTables" id="intc_ELRID_EmployeeEquityIncentivePlansTables">
+        <link:definition>000524 - Disclosure - Employee Equity Incentive Plans (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureGainsLossesOnEquityInvestmentsNet" id="intc_ELRID_GainsLossesOnEquityInvestmentsNet">
+        <link:definition>000212 - Disclosure - Gains (Losses) on Equity Investments, Net</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureGoodwillDetail" id="intc_ELRID_GoodwillDetail">
+        <link:definition>000616 - Disclosure - Goodwill (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureGoodwillTables" id="intc_ELRID_GoodwillTables">
+        <link:definition>000516 - Disclosure - Goodwill (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureTradingAssetsDetail" id="intc_ELRID_TradingAssetsDetail">
+        <link:definition>000606 - Disclosure - Trading Assets (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureGoodwill" id="intc_ELRID_Goodwill">
+        <link:definition>000216 - Disclosure - Goodwill</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureGainsLossesOnEquityInvestmentsNetDetail" id="intc_ELRID_GainsLossesOnEquityInvestmentsNetDetail">
+        <link:definition>000612 - Disclosure - Gains (Losses) on Equity Investments, Net (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureGainsLossesOnEquityInvestmentsNetTables" id="intc_ELRID_GainsLossesOnEquityInvestmentsNetTables">
+        <link:definition>000512 - Disclosure - Gains (Losses) on Equity Investments, Net (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureIdentifiedIntangibleAssetsDetail" id="intc_ELRID_IdentifiedIntangibleAssetsDetail">
+        <link:definition>000617 - Disclosure - Identified Intangible Assets (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureInterestAndOtherNetDetail" id="intc_ELRID_InterestAndOtherNetDetail">
+        <link:definition>000613 - Disclosure - Interest and Other, Net (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureOtherLongTermAssetsDetail" id="intc_ELRID_OtherLongTermAssetsDetail">
+        <link:definition>000610 - Disclosure - Other Long Term Assets (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureFairValueDetail" id="intc_ELRID_FairValueDetail">
+        <link:definition>000605 - Disclosure - Fair Value (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureIdentifiedIntangibleAssetsTables" id="intc_ELRID_IdentifiedIntangibleAssetsTables">
+        <link:definition>000517 - Disclosure - Identified Intangible Assets (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureInterestAndOtherNetTables" id="intc_ELRID_InterestAndOtherNetTables">
+        <link:definition>000513 - Disclosure - Interest and Other, Net (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureOtherLongTermAssetsTables" id="intc_ELRID_OtherLongTermAssetsTables">
+        <link:definition>000510 - Disclosure - Other Long-Term Assets (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureFairValueTables" id="intc_ELRID_FairValueTables">
+        <link:definition>000505 - Disclosure - Fair Value (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAvailableForSaleInvestmentsDetail" id="intc_ELRID_AvailableForSaleInvestmentsDetail">
+        <link:definition>000607 - Disclosure - Available For Sale Investments (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAvailableforSaleInvestmentsTables" id="intc_ELRID_AvailableforSaleInvestmentsTables">
+        <link:definition>000507 - Disclosure - Available-for-Sale Investments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureOtherLongTermAssets" id="intc_ELRID_OtherLongTermAssets">
+        <link:definition>000210 - Disclosure - Other Long-Term Assets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAvailableforSaleInvestments" id="intc_ELRID_AvailableforSaleInvestments">
+        <link:definition>000207 - Disclosure - Available-for-Sale Investments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureDerivativeFinancialInstruments" id="intc_ELRID_DerivativeFinancialInstruments">
+        <link:definition>000208 - Disclosure - Derivative Financial Instruments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAccountingChanges" id="AccountingChanges">
+        <link:definition>000203 - Disclosure - Accounting Changes</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementConsolidatedStatementsOfCashFlows" id="intc_ELRID_ConsolidatedStatementsOfCashFlows">
+        <link:definition>000130 - Statement - Consolidated Statements of Cash Flows</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementConsolidatedBalanceSheets" id="intc_ELRID_ConsolidatedBalanceSheets">
+        <link:definition>000120 - Statement - Consolidated Balance Sheets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementConsolidatedStatementsOfIncome" id="intc_ELRID_ConsolidatedStatementsOfIncome">
+        <link:definition>000110 - Statement - Consolidated Statements of Income</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementConsolidatedBalanceSheetsParenthetical" id="intc_ELRID_ConsolidatedBalanceSheetsParenthetical">
+        <link:definition>000121 - Statement - Consolidated Balance Sheets (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureContingencies" id="intc_ELRID_Contingencies">
+        <link:definition>000229 - Disclosure - Contingencies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEmployeeEquityIncentivePlans" id="intc_ELRID_EmployeeEquityIncentivePlans">
+        <link:definition>000224 - Disclosure - Employee Equity Incentive Plans</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureIdentifiedIntangibleAssets" id="intc_ELRID_IdentifiedIntangibleAssets">
+        <link:definition>000217 - Disclosure - Identified Intangible Assets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureInterestAndOtherNet" id="intc_ELRID_InterestAndOtherNet">
+        <link:definition>000213 - Disclosure - Interest and Other, Net</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureFairValue" id="intc_ELRID_FairValue">
+        <link:definition>000205 - Disclosure - Fair Value</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureBasisOfPresentation" id="BasisOfPresentation">
+        <link:definition>000201 - Disclosure - Basis of Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRecentAccountingStandards" id="intc_ELRID_RecentAccountingStandards">
+        <link:definition>000204 - Disclosure - Recent Accounting Standards</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureBorrowings" id="intc_ELRID_Borrowings">
+        <link:definition>000221 - Disclosure - Borrowings</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureBorrowingsDetail" id="intc_ELRID_BorrowingsDetail">
+        <link:definition>000621 - Disclosure - Borrowings (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureBorrowingsTables" id="intc_ELRID_BorrowingsTables">
+        <link:definition>000521 - Disclosure - Borrowings (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementConsolidatedStatementsOfStockholdersEquity" id="intc_ELRID_ConsolidatedStatementsOfStockholdersEquity">
+        <link:definition>000140 - Statement - Consolidated Statements of Stockholders' Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementConsolidatedStatementsOfStockholdersEquityParenthetical" id="intc_ELRID_ConsolidatedStatementsOfStockholdersEquityParenthetical">
+        <link:definition>000141 - Statement - Consolidated Statements of Stockholders' Equity (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureConcentrationsOfCreditRisk" id="intc_ELRID_ConcentrationsOfCreditRisk">
+        <link:definition>000209 - Disclosure - Concentrations of Credit Risk</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRestructuringAndAssetImpairmentCharges" id="intc_ELRID_RestructuringAndAssetImpairmentCharges">
+        <link:definition>000219 - Disclosure - Restructuring and Asset Impairment Charges</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRetirementBenefitPlans" id="intc_ELRID_RetirementBenefitPlans">
+        <link:definition>000222 - Disclosure - Retirement Benefit Plans</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureCommitments" id="intc_ELRID_Commitments">
+        <link:definition>000223 - Disclosure - Commitments</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureTaxes" id="intc_ELRID_Taxes">
+        <link:definition>000228 - Disclosure - Taxes</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureTaxesDetail" id="intc_ELRID_TaxesDetail">
+        <link:definition>000628 - Disclosure - Taxes (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureTaxesTables" id="intc_ELRID_TaxesTables">
+        <link:definition>000528 - Disclosure - Taxes (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureCommitmentsTables" id="intc_ELRID_CommitmentsTables">
+        <link:definition>000523 - Disclosure - Commitments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureCommitmentsDetail" id="intc_ELRID_CommitmentsDetail">
+        <link:definition>000623 - Disclosure - Commitments (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRetirementBenefitPlansTables" id="intc_ELRID_RetirementBenefitPlansTables">
+        <link:definition>000522 - Disclosure - Retirement Benefit Plans (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRetirementBenefitPlansDetail" id="intc_ELRID_RetirementBenefitPlansDetail">
+        <link:definition>000622 - Disclosure - Retirement Benefit Plans (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRestructuringAndAssetImpairmentChargesTables" id="intc_ELRID_RestructuringAndAssetImpairmentChargesTables">
+        <link:definition>000519 - Disclosure - Restructuring and Asset Impairment Charges (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureRestructuringAndAssetImpairmentChargesDetail" id="intc_ELRID_RestructuringAndAssetImpairmentChargesDetail">
+        <link:definition>000619 - Disclosure - Restructuring and Asset Impairment Charges (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureEquityMethodAndCostMethodInvestmentsTables" id="intc_ELRID_EquityMethodAndCostMethodInvestmentsTables">
+        <link:definition>000511 - Disclosure - Equity Method and Cost Method Investments (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureConcentrationsOfRiskDetail" id="intc_ELRID_ConcentrationsOfRiskDetail">
+        <link:definition>000609 - Disclosure - Concentrations of Risk (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAccountingPoliciesDetail" id="intc_ELRID_AccountingPoliciesDetail">
+        <link:definition>000602 - Disclosure - Accounting Policies (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DocumentValuationAndQualifyingAccounts" id="intc_ELRID_ValuationAndQualifyingAccounts">
+        <link:definition>000231 - Document - Valuation and Qualifying Accounts</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/StatementValuationAndQualifyingAccountsDetail" id="intc_ELRID_ValuationAndQualifyingAccountsDetail">
+        <link:definition>000631 - Statement - Valuation and Qualifying Accounts (Detail)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://intel.com/role/DisclosureAccountingPoliciesTables" id="intc_ELRID_AccountingPoliciesTables">
+        <link:definition>000502 - Disclosure - Accounting Policies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+  <import namespace="http://fasb.org/us-gaap/2011-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2011/elts/us-gaap-2011-01-31.xsd" />
+  <import namespace="http://xbrl.sec.gov/dei/2011-01-31" schemaLocation="http://xbrl.sec.gov/dei/2011/dei-2011-01-31.xsd" />
+  <import namespace="http://www.xbrl.org/2009/role/negated" schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" />
+  <import namespace="http://xbrl.sec.gov/invest/2011-01-31" schemaLocation="http://xbrl.sec.gov/invest/2011/invest-2011-01-31.xsd" />
+  <import namespace="http://xbrl.sec.gov/currency/2011-01-31" schemaLocation="http://xbrl.sec.gov/currency/2011/currency-2011-01-31.xsd" />
+  <import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+  <import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+  <element name="InterestAndOtherNet" id="intc_InterestAndOtherNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="ReturnOfEquityMethodInvestments" id="intc_ReturnOfEquityMethodInvestments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetTextBlock" id="intc_InterestAndOtherNetTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="FairValueAbstract" id="intc_FairValueAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetAbstract" id="intc_InterestAndOtherNetAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ContingenciesAbstract" id="intc_ContingenciesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityMethodAndCostMethodInvestmentsTextBlock" id="intc_EquityMethodAndCostMethodInvestmentsTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="FairValueTextBlock" id="intc_FairValueTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherLongTermAssetsTextBlock" id="intc_OtherLongTermAssetsTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="LongTermIncomeTaxesPayable" id="intc_LongTermIncomeTaxesPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="InvestmentsInNonMarketableEquityInvestments" id="intc_InvestmentsInNonMarketableEquityInvestments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="OriginationOfLoansReceivable" id="intc_OriginationOfLoansReceivable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="FairValueTablesAbstract" id="intc_FairValueTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherLongTermAssetsTablesAbstract" id="intc_OtherLongTermAssetsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetTablesAbstract" id="intc_InterestAndOtherNetTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsTablesAbstract" id="intc_IdentifiedIntangibleAssetsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="FairValueDetailAbstract" id="intc_FairValueDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherLongTermAssetsDetailAbstract" id="intc_OtherLongTermAssetsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetDetailAbstract" id="intc_InterestAndOtherNetDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsDetailAbstract" id="intc_IdentifiedIntangibleAssetsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AssetsLiabilitiesMeasuredAndRecordedAtFairValueOnRecurringBasisSignificantUnobservableInputsLevel3TableTextBlock" id="intc_AssetsLiabilitiesMeasuredAndRecordedAtFairValueOnRecurringBasisSignificantUnobservableInputsLevel3TableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfOtherLongTermAssetsTableTextBlock" id="intc_ScheduleOfOtherLongTermAssetsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsAmortizationExpensesTableTextBlock" id="intc_IdentifiedIntangibleAssetsAmortizationExpensesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetTableTextBlock" id="intc_InterestAndOtherNetTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherNetInterestAndOther" id="intc_OtherNetInterestAndOther" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetMember" id="intc_InterestAndOtherNetMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GainsLossesOnOtherEquityInvestmentsNetMember" id="intc_GainsLossesOnOtherEquityInvestmentsNetMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IntangibleAssetsOtherMember" id="intc_IntangibleAssetsOtherMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityMethodAndCostMethodInvestmentsDetailAbstract" id="intc_EquityMethodAndCostMethodInvestmentsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GainsLossesOnEquityInvestmentsNetTablesAbstract" id="intc_GainsLossesOnEquityInvestmentsNetTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfGainsLossesOnEquityInvestmentsNetTableTextBlock" id="intc_ScheduleOfGainsLossesOnEquityInvestmentsNetTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="GainsLossesOnEquityInvestmentsNetDetailAbstract" id="intc_GainsLossesOnEquityInvestmentsNetDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsTableTextBlock" id="intc_ScheduleOfDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfDerivativeInstrumentsInCashFlowHedgingRelationshipsTableTextBlock" id="intc_ScheduleOfDerivativeInstrumentsInCashFlowHedgingRelationshipsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="EuroMember" id="intc_EuroMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="JapaneseYenMember" id="intc_JapaneseYenMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IsraeliShekelMember" id="intc_IsraeliShekelMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BritishPoundSterlingMember" id="intc_BritishPoundSterlingMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ChineseYuanMember" id="intc_ChineseYuanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MalaysianRinggitMember" id="intc_MalaysianRinggitMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherCurrentAssetsMember" id="intc_OtherCurrentAssetsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherLongTermAssetsMember" id="intc_OtherLongTermAssetsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherAccruedLiabilitiesMember" id="intc_OtherAccruedLiabilitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherLongTermLiabilitiesMember" id="intc_OtherLongTermLiabilitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityOptionsMember" id="intc_EquityOptionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GoodwillAbstract" id="intc_GoodwillAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TradingAssetsDetailAbstract" id="intc_TradingAssetsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GoodwillTablesAbstract" id="intc_GoodwillTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GoodwillDetailAbstract" id="intc_GoodwillDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PercentageOfPurchaseCommitmentOfProductionOutputAndProductionRelatedServices" id="intc_PercentageOfPurchaseCommitmentOfProductionOutputAndProductionRelatedServices" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="AccumulatedOtherComprehensiveIncomeLossNetPriorServiceCostNetOfTax" id="intc_AccumulatedOtherComprehensiveIncomeLossNetPriorServiceCostNetOfTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="AccumulatedOtherComprehensiveIncomeLossNetActuarialGainsLossNetOfTax" id="intc_AccumulatedOtherComprehensiveIncomeLossNetActuarialGainsLossNetOfTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="EmployeeEquityIncentivePlansTablesAbstract" id="intc_EmployeeEquityIncentivePlansTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EmployeeEquityIncentivePlansDetailAbstract" id="intc_EmployeeEquityIncentivePlansDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="StockOptionsActivityTableTextBlock" id="intc_StockOptionsActivityTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="StockOptionActivityAbstract" id="intc_StockOptionActivityAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RestrictedStockUnitActivityAbstract" id="intc_RestrictedStockUnitActivityAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EmployeeEquityIncentivePlansTextualDetailsAbstract" id="intc_EmployeeEquityIncentivePlansTextualDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageExercisePriceForStockOptionGrantsDuringYear" id="intc_WeightedAverageExercisePriceForStockOptionGrantsDuringYear" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageExercisePriceForStockOptionExercisesDuringYear" id="intc_WeightedAverageExercisePriceForStockOptionExercisesDuringYear" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageExercisePriceForStockOptionCancellationsAndForfeituresDuringYear" id="intc_WeightedAverageExercisePriceForStockOptionCancellationsAndForfeituresDuringYear" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageExercisePriceForStockOptionExpirationsDuringYear" id="intc_WeightedAverageExercisePriceForStockOptionExpirationsDuringYear" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentOfMarketPrice" id="intc_ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentOfMarketPrice" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="EmployeePurchasesAmount" id="intc_EmployeePurchasesAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="StockPurchasePlanMember" id="intc_StockPurchasePlanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AvailableForSaleInvestmentsTablesAbstract" id="intc_AvailableForSaleInvestmentsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GrossNotionalAmountsAbstract" id="intc_GrossNotionalAmountsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfDerivativeInstrumentsInCashFlowHedgingRelationshipsAbstract" id="intc_ScheduleOfDerivativeInstrumentsInCashFlowHedgingRelationshipsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsAbstract" id="intc_ScheduleOfDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherDerivativeInstrumentsMember" id="intc_OtherDerivativeInstrumentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherCurrenciesMember" id="intc_OtherCurrenciesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsAmortizationExpensesAbstract" id="intc_IdentifiedIntangibleAssetsAmortizationExpensesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsFutureAmortizationExpensesAbstract" id="intc_IdentifiedIntangibleAssetsFutureAmortizationExpensesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ResearchAndDevelopmentMember" id="intc_ResearchAndDevelopmentMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MarketingGeneralAndAdministrativeMember" id="intc_MarketingGeneralAndAdministrativeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NetCarryingValueMember" id="intc_NetCarryingValueMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ContingenciesDetailAbstract" id="intc_ContingenciesDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyLawsuitPreliminaryAllegedDamagesLowEstimate" id="intc_LossContingencyLawsuitPreliminaryAllegedDamagesLowEstimate" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="LossContingencyAnnouncedFineIntention" id="intc_LossContingencyAnnouncedFineIntention" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="GainsLossesOnEquityInvestmentsNetTextBlock" id="intc_GainsLossesOnEquityInvestmentsNetTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityIncentivePlanOneMember" id="intc_EquityIncentivePlanOneMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RestrictedStockOrStockUnitsEquityIncentivePlanOneMember" id="intc_RestrictedStockOrStockUnitsEquityIncentivePlanOneMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GainsLossesOnEquityInvestmentsNetAbstract" id="intc_GainsLossesOnEquityInvestmentsNetAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityMethodAndCostMethodInvestmentsAbstract" id="intc_EquityMethodAndCostMethodInvestmentsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AvailableForSaleInvestmentsDetailAbstract" id="intc_AvailableForSaleInvestmentsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GovernmentBondsMember" id="intc_GovernmentBondsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageGrantDateFairValueOfForfeitedRestrictedStockUnits" id="intc_WeightedAverageGrantDateFairValueOfForfeitedRestrictedStockUnits" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AccumulatedOtherComprehensiveIncomeLossNetChangeInDeferredTaxAssetValuationAllowance" id="intc_AccumulatedOtherComprehensiveIncomeLossNetChangeInDeferredTaxAssetValuationAllowance" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="NonMarketableEquityInvestments" id="intc_NonMarketableEquityInvestments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="GainsLossesForAssetsHeld" id="intc_GainsLossesForAssetsHeld" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="FinancialInstrumentsNotRecordedAtFairValueOnRecurringBasisTableTextBlock" id="intc_FinancialInstrumentsNotRecordedAtFairValueOnRecurringBasisTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="FinancialInstrumentsNotRecordedAtFairValueOnRecurringBasisAbstract" id="intc_FinancialInstrumentsNotRecordedAtFairValueOnRecurringBasisAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NonMarketableEquityInvestmentsAggregateFairValue" id="intc_NonMarketableEquityInvestmentsAggregateFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="LoansReceivableHeldAtAmortizedCostAggregateCarryingAmount" id="intc_LoansReceivableHeldAtAmortizedCostAggregateCarryingAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="LoansReceivableHeldAtAmortizedCostAggregateFairValue" id="intc_LoansReceivableHeldAtAmortizedCostAggregateFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="LongTermDebtHeldAtAmortizedCostIncludingCurrentPortionAggregateCarryingAmount" id="intc_LongTermDebtHeldAtAmortizedCostIncludingCurrentPortionAggregateCarryingAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="LongTermDebtHeldAtAmortizedCostIncludingCurrentPortionAggregateFairValue" id="intc_LongTermDebtHeldAtAmortizedCostIncludingCurrentPortionAggregateFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="NonMarketableEquityInvestmentsAggregateCarryingAmount" id="intc_NonMarketableEquityInvestmentsAggregateCarryingAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="LossContingencyAmountSoughtForEachProvenDonnelyActViolation" id="intc_LossContingencyAmountSoughtForEachProvenDonnelyActViolation" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="EmbeddedDebtDerivativesMember" id="intc_EmbeddedDebtDerivativesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyFine" id="intc_LossContingencyFine" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="AvailableForSaleInvestmentsAccumulatedOtherComprehensiveIncomeActivityTableTextBlock" id="intc_AvailableForSaleInvestmentsAccumulatedOtherComprehensiveIncomeActivityTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyPrePaymentAmountForForwardPurchaseAgreement" id="intc_LossContingencyPrePaymentAmountForForwardPurchaseAgreement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="LossContingencyCashCollateralReceivedForForwardPurchaseAgreement" id="intc_LossContingencyCashCollateralReceivedForForwardPurchaseAgreement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="LossContingencyCashCollateralForeclosedOnInForwardPurchaseAgreement" id="intc_LossContingencyCashCollateralForeclosedOnInForwardPurchaseAgreement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="OtherComprehensiveIncomeChangeInDeferredTaxAssetValuationAllowanceNetOfTaxGross" id="intc_OtherComprehensiveIncomeChangeInDeferredTaxAssetValuationAllowanceNetOfTaxGross" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="CurrencyForwardsCurrencyInterestRateSwapsAndCurrencyOptionsMember" id="intc_CurrencyForwardsCurrencyInterestRateSwapsAndCurrencyOptionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DocumentAndEntityInformationAbstract" id="intc_DocumentAndEntityInformationAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyLawsuitPreliminaryAllegedDamagesHighEstimate" id="intc_LossContingencyLawsuitPreliminaryAllegedDamagesHighEstimate" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesAbstract" id="intc_CommonStockRepurchasesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesTextBlock" id="intc_CommonStockRepurchasesTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ProceedsFromGovernmentGrants" id="intc_ProceedsFromGovernmentGrants" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="CashPaidDuringPeriodForAbstract" id="intc_CashPaidDuringPeriodForAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TradingAssetsTablesAbstract" id="intc_TradingAssetsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesDetailAbstract" id="intc_CommonStockRepurchasesDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesTextualsAbstract" id="intc_CommonStockRepurchasesTextualsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyValueOfSharesOfEntityCommonStockRequiredToBePurchasedUnderForwardPurchaseAgreement" id="intc_LossContingencyValueOfSharesOfEntityCommonStockRequiredToBePurchasedUnderForwardPurchaseAgreement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="LossContingencySharesOfEntityCommonStockRequiredToBeDeliveredUnderForwardPurchaseAgreement" id="intc_LossContingencySharesOfEntityCommonStockRequiredToBeDeliveredUnderForwardPurchaseAgreement" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="StockOptionAwardsMember" id="intc_StockOptionAwardsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MarketableEquitySecuritiesReceivableMember" id="intc_MarketableEquitySecuritiesReceivableMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesDueInOneToTwoYearsAmortizedCost" id="intc_AvailableForSaleSecuritiesDebtMaturitiesDueInOneToTwoYearsAmortizedCost" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesDueInTwoToFiveYearsAmortizedCost" id="intc_AvailableForSaleSecuritiesDebtMaturitiesDueInTwoToFiveYearsAmortizedCost" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesDueInOneToTwoYearsFairValue" id="intc_AvailableForSaleSecuritiesDebtMaturitiesDueInOneToTwoYearsFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesDueInTwoToFiveYearsFairValue" id="intc_AvailableForSaleSecuritiesDebtMaturitiesDueInTwoToFiveYearsFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="FairValueNonMarketableEquityInvestmentsGainsLosses" id="intc_FairValueNonMarketableEquityInvestmentsGainsLosses" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="FairValuePropertyPlantAndEquipmentGainsLosses" id="intc_FairValuePropertyPlantAndEquipmentGainsLosses" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="FairValueMeasurementWithUnobservableInputsReconciliationRecurringBasisChangeInUnrealizedGainsOrLossesIncludedInEarningsRelatedToAssetsAndLiabilitiesStillHeld" id="intc_FairValueMeasurementWithUnobservableInputsReconciliationRecurringBasisChangeInUnrealizedGainsOrLossesIncludedInEarningsRelatedToAssetsAndLiabilitiesStillHeld" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="ComprehensiveIncomeDetailAbstract" id="intc_ComprehensiveIncomeDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ComprehensiveIncomeTablesAbstract" id="intc_ComprehensiveIncomeTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DerivativeFinancialInstrumentsTablesAbstract" id="intc_DerivativeFinancialInstrumentsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DerivativeFinancialInstrumentsDetailAbstract" id="intc_DerivativeFinancialInstrumentsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EcFineMember" id="intc_EcFineMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ImFlashTechnologiesLlcMember" id="intc_ImFlashTechnologiesLlcMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="SmartTechnologiesIncMember" id="intc_SmartTechnologiesIncMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ImFlashTechnologiesLlcAndImFlashSingaporeLlpMember" id="intc_ImFlashTechnologiesLlcAndImFlashSingaporeLlpMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ImFlashSingaporeLlpMember" id="intc_ImFlashSingaporeLlpMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PcClientGroupMember" id="intc_PcClientGroupMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DataCenterGroupMember" id="intc_DataCenterGroupMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherIntelArchitectureOperatingSegmentsMember" id="intc_OtherIntelArchitectureOperatingSegmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="KoreaFairTradeCommissionAntitrustViolationInquiryMember" id="intc_KoreaFairTradeCommissionAntitrustViolationInquiryMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="StateOfNewYorkLawsuitMember" id="intc_StateOfNewYorkLawsuitMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="FrankTShumVersusIntelCorporationJeanMarcVerdiellAndLightLogicIncMember" id="intc_FrankTShumVersusIntelCorporationJeanMarcVerdiellAndLightLogicIncMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LehmanMatterMember" id="intc_LehmanMatterMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TotalStockRepurchaseAuthorizationEndOfCurrentPeriodValue" id="intc_TotalStockRepurchaseAuthorizationEndOfCurrentPeriodValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="RemainingStockRepurchaseAuthorizationEndOfCurrentPeriodValue" id="intc_RemainingStockRepurchaseAuthorizationEndOfCurrentPeriodValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="AcquisitionsAbstract" id="intc_AcquisitionsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DivestituresAbstract" id="intc_DivestituresAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AcquisitionsTablesAbstract" id="intc_AcquisitionsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AccountingPoliciesPoliciesAbstract" id="intc_AccountingPoliciesPoliciesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsByMajorClassAbstract" id="intc_IdentifiedIntangibleAssetsByMajorClassAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DivestituresDetailAbstract" id="intc_DivestituresDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsTextualDetailsAbstract" id="intc_IdentifiedIntangibleAssetsTextualDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyAcquiredIdentifiedIntangibleAssetAmount" id="intc_LossContingencyAcquiredIdentifiedIntangibleAssetAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="GoodwillNetTransfers" id="intc_GoodwillNetTransfers" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="NumberOfRestrictedStockUnitsAssumedInAcquisition" id="intc_NumberOfRestrictedStockUnitsAssumedInAcquisition" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageGrantDateFairValueOfRestrictedStockUnitsAssumedInAcquisition" id="intc_WeightedAverageGrantDateFairValueOfRestrictedStockUnitsAssumedInAcquisition" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="NumberOfOptionsAssumedInAcquisition" id="intc_NumberOfOptionsAssumedInAcquisition" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageExercisePriceForStockOptionAssumedInAcquisitionDuringYear" id="intc_WeightedAverageExercisePriceForStockOptionAssumedInAcquisitionDuringYear" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityMethodInvestmentsTextualDetailsAbstract" id="intc_EquityMethodInvestmentsTextualDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AcquisitionsDetailAbstract" id="intc_AcquisitionsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InfineonsWirelessSolutionsBusinessMember" id="intc_InfineonsWirelessSolutionsBusinessMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DateOfBusinessAcquisition" id="intc_DateOfBusinessAcquisition" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RepurchaseOfCommonStockValue" id="intc_RepurchaseOfCommonStockValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="RepurchaseOfCommonStockShares" id="intc_RepurchaseOfCommonStockShares" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DueAfterFiveYearsCost" id="intc_DueAfterFiveYearsCost" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="DueAfterFiveYearsFairValue" id="intc_DueAfterFiveYearsFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="ChipsetDesignIssueAbstract" id="intc_ChipsetDesignIssueAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ChipsetDesignIssueTextBlock" id="intc_ChipsetDesignIssueTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ChipsetDesignIssueDetailAbstract" id="intc_ChipsetDesignIssueDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ChipsetDesignIssueMember" id="intc_ChipsetDesignIssueMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencyAndInventoryWriteDownEstimateOfTotalLoss" id="intc_LossContingencyAndInventoryWriteDownEstimateOfTotalLoss" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="LossContingencyAndInventoryWriteDownChargeToCostOfSales" id="intc_LossContingencyAndInventoryWriteDownChargeToCostOfSales" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="SubjectToAmortizationMember" id="intc_SubjectToAmortizationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NotSubjectToAmortizationMember" id="intc_NotSubjectToAmortizationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DeferredIncomeAbstract" id="intc_DeferredIncomeAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DeferredIncomeTextBlock" id="intc_DeferredIncomeTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="OperatingSegmentAndGeographicInformationAbstract" id="intc_OperatingSegmentAndGeographicInformationAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InterestAndOtherNetTextualsAbstract" id="intc_InterestAndOtherNetTextualsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="McAfeeIncMember" id="intc_McAfeeIncMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="SoftwareAndServicesOperatingSegmentsMember" id="intc_SoftwareAndServicesOperatingSegmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfIntangibleAssetsByMajorClassTableTextBlock" id="intc_ScheduleOfIntangibleAssetsByMajorClassTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="IntangibleAssetsGross" id="intc_IntangibleAssetsGross" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="AmortizationOfAcquisitionRelatedIntangiblesMember" id="intc_AmortizationOfAcquisitionRelatedIntangiblesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AllOtherMember" id="intc_AllOtherMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OperatingSegmentAndGeographicInformationTablesAbstract" id="intc_OperatingSegmentAndGeographicInformationTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OperatingSegmentAndGeographicInformationDetailsAbstract" id="intc_OperatingSegmentAndGeographicInformationDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConsiderationToAcquireCompanyOneTableTextBlock" id="intc_ConsiderationToAcquireCompanyOneTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="PurchasePriceAllocationCompanyOneTableTextBlock" id="intc_PurchasePriceAllocationCompanyOneTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfIntangibleAssetsAcquiredAsPartOfBusinessCombinationCompanyOneTableTextBlock" id="intc_ScheduleOfIntangibleAssetsAcquiredAsPartOfBusinessCombinationCompanyOneTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="BusinessAcquisitionPurchasePriceAllocationMarketableDebtSecurities" id="intc_BusinessAcquisitionPurchasePriceAllocationMarketableDebtSecurities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="BusinessAcquisitionPurchasePriceAllocationOtherAssets" id="intc_BusinessAcquisitionPurchasePriceAllocationOtherAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="TotalFiniteLivedIntangibleAssetsMember" id="intc_TotalFiniteLivedIntangibleAssetsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InProcessResearchAndDevelopmentMember" id="intc_InProcessResearchAndDevelopmentMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MarketBasedRestrictedStockUnitsMember" id="intc_MarketBasedRestrictedStockUnitsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IntelGeCareInnovationsLlcMember" id="intc_IntelGeCareInnovationsLlcMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CurrentDeferredIncome" id="intc_CurrentDeferredIncome" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="FutureFundingRequiredUponEquityInvesteeMeetingEstablishedMilestonesMember" id="intc_FutureFundingRequiredUponEquityInvesteeMeetingEstablishedMilestonesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherNetEquityInvestments" id="intc_OtherNetEquityInvestments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="McAfeeIncAndSeriesOfIndividuallyImmaterialBusinessAcquisitionsMember" id="intc_McAfeeIncAndSeriesOfIndividuallyImmaterialBusinessAcquisitionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BusinessAcquisitionPurchasePriceAllocationDeferredTaxAssets" id="intc_BusinessAcquisitionPurchasePriceAllocationDeferredTaxAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="BusinessAcquisitionPurchasePriceAllocationDeferredIncome" id="intc_BusinessAcquisitionPurchasePriceAllocationDeferredIncome" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="BusinessAcquisitionPurchasePriceAllocationDeferredTaxLiabilities" id="intc_BusinessAcquisitionPurchasePriceAllocationDeferredTaxLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="BusinessCombinationsDuringPeriodConsiderationTransferred" id="intc_BusinessCombinationsDuringPeriodConsiderationTransferred" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="FairValueOfNetTangibleAssetsAcquiredDuringPeriod" id="intc_FairValueOfNetTangibleAssetsAcquiredDuringPeriod" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="BusinessAcquisitionsDuringPeriodPurchasePriceAllocationGoodwillAmount" id="intc_BusinessAcquisitionsDuringPeriodPurchasePriceAllocationGoodwillAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="BusinessCombinationsDuringPeriodRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibles" id="intc_BusinessCombinationsDuringPeriodRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibles" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="BusinessCombinationsDuringPeriodRecognizedIdentifiableAssetsAcquiredGoodwillAndLiabilitiesAssumedNet" id="intc_BusinessCombinationsDuringPeriodRecognizedIdentifiableAssetsAcquiredGoodwillAndLiabilitiesAssumedNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="NonrecurringAdjustmentIncludedInProFormaResultsWhichReducesNetIncomeDueToRevaluationOfAcquireesHistoricDeferredRevenue" id="intc_NonrecurringAdjustmentIncludedInProFormaResultsWhichReducesNetIncomeDueToRevaluationOfAcquireesHistoricDeferredRevenue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="BusinessAcquisitionPurchasePriceAllocationOtherLiabilities" id="intc_BusinessAcquisitionPurchasePriceAllocationOtherLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="ScheduleOfIntangibleAssetsAcquiredAsPartOfBusinessCombinationForSeriesOfIndividuallyImmaterialBusinessAcquisitionsTableTextBlock" id="intc_ScheduleOfIntangibleAssetsAcquiredAsPartOfBusinessCombinationForSeriesOfIndividuallyImmaterialBusinessAcquisitionsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="PurchasePriceAllocationForSeriesOfIndividuallyImmaterialBusinessAcquisitionsTableTextBlock" id="intc_PurchasePriceAllocationForSeriesOfIndividuallyImmaterialBusinessAcquisitionsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DeferredIncomeDetailAbstract" id="intc_DeferredIncomeDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TotalDeferredIncome" id="intc_TotalDeferredIncome" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="NonCurrentDeferredIncomeFromSoftwareAndServicesOperatingSegments" id="intc_NonCurrentDeferredIncomeFromSoftwareAndServicesOperatingSegments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="DeferredIncomeFromSoftwareAndServicesOperatingSegments" id="intc_DeferredIncomeFromSoftwareAndServicesOperatingSegments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="DeferredIncomeOnShipmentsToDistributors" id="intc_DeferredIncomeOnShipmentsToDistributors" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="DeferredIncomeTablesAbstract" id="intc_DeferredIncomeTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DeferredIncomeByArrangementDisclosureTableTextBlock" id="intc_DeferredIncomeByArrangementDisclosureTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AccumulatedStockRepurchasedDuringProgramTotalShares" id="intc_AccumulatedStockRepurchasedDuringProgramTotalShares" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="AccumulatedStockRepurchasedDuringProgramTotalValue" id="intc_AccumulatedStockRepurchasedDuringProgramTotalValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="LossContingencyCrossLicenseAnnualPaymentAmountTotal" id="intc_LossContingencyCrossLicenseAnnualPaymentAmountTotal" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="LossContingencyCrossLicenseAnnualPaymentAmountYearsOneThroughThree" id="intc_LossContingencyCrossLicenseAnnualPaymentAmountYearsOneThroughThree" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="LossContingencyCrossLicenseAnnualPaymentAmountYearsFourThroughSix" id="intc_LossContingencyCrossLicenseAnnualPaymentAmountYearsFourThroughSix" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="LossContingencyCrossLicenseExpense" id="intc_LossContingencyCrossLicenseExpense" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="LossContingencyCrossLicenseLiability" id="intc_LossContingencyCrossLicenseLiability" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="LossContingencyAcquiredIdentifiedIntangibleAssetWeightedAverageUsefulLife" id="intc_LossContingencyAcquiredIdentifiedIntangibleAssetWeightedAverageUsefulLife" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="NvidiaCrossLicenseAgreementMember" id="intc_NvidiaCrossLicenseAgreementMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AdditionalRevenueRecognitionPolicyTextBlock" id="intc_AdditionalRevenueRecognitionPolicyTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="RestrictedStockUnitWithholdingsMember" id="intc_RestrictedStockUnitWithholdingsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchaseProgramMember" id="intc_CommonStockRepurchaseProgramMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RecentAccountingStandardsAbstract" id="intc_RecentAccountingStandardsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BorrowingsAbstract" id="intc_BorrowingsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BorrowingsDetailAbstract" id="intc_BorrowingsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PrincipalAmountPerDebentureUsedInConversionRate" id="intc_PrincipalAmountPerDebentureUsedInConversionRate" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="ConvertibleBondConversionRateNumberOfCommonStockShares" id="intc_ConvertibleBondConversionRateNumberOfCommonStockShares" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="ConversionRateAdjustmentsQuarterlyDividendDistributionsExcessPerShare" id="intc_ConversionRateAdjustmentsQuarterlyDividendDistributionsExcessPerShare" type="num:perShareItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DebtInstrumentOneMember" id="intc_DebtInstrumentOneMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="VariousMember" id="intc_VariousMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherComprehensiveIncomeChangeInPriorServiceCostNetOfTax" id="intc_OtherComprehensiveIncomeChangeInPriorServiceCostNetOfTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfAdditionalSharesApprovedByStockholdersForIssuance" id="intc_ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfAdditionalSharesApprovedByStockholdersForIssuance" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="RestrictedStockUnitsStockOptionsAndStockPurchasePlanEstimatedValuesAndWeightedAverageAssumptionsAbstract" id="intc_RestrictedStockUnitsStockOptionsAndStockPurchasePlanEstimatedValuesAndWeightedAverageAssumptionsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RiskFreeInterestRate" id="intc_RiskFreeInterestRate" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DividendYield" id="intc_DividendYield" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodIntrinsicValueAmount" id="intc_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodIntrinsicValueAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="RestrictedStockUnitsEstimatedValuesAndWeightedAverageAssumptionsTableTextBlock" id="intc_RestrictedStockUnitsEstimatedValuesAndWeightedAverageAssumptionsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="StockOptionsAndStockPurchasePlanEstimatedValuesAndWeightedAverageAssumptionsTableTextBlock" id="intc_StockOptionsAndStockPurchasePlanEstimatedValuesAndWeightedAverageAssumptionsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="GoodwillUnallocatedMember" id="intc_GoodwillUnallocatedMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DerivativeInstrumentsInStatementsOfFinancialPositionFairValueAbstract" id="intc_DerivativeInstrumentsInStatementsOfFinancialPositionFairValueAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherComprehensiveIncomeChangeInActuarialGainLossNetOfTax" id="intc_OtherComprehensiveIncomeChangeInActuarialGainLossNetOfTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="TradingAssetsTextBlock" id="intc_TradingAssetsTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ComprehensiveIncomeLossAbstract" id="intc_ComprehensiveIncomeLossAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NetCarryingValueForAssetsMeasuredAndRecordedAtFairValueOnNonrecurringBasisDomain" id="intc_NetCarryingValueForAssetsMeasuredAndRecordedAtFairValueOnNonrecurringBasisDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NetCarryingValueForAssetsMeasuredAndRecordedAtFairValueOnNonrecurringBasisAxis" id="intc_NetCarryingValueForAssetsMeasuredAndRecordedAtFairValueOnNonrecurringBasisAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesTypeDomain" id="intc_CommonStockRepurchasesTypeDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesByTypeAxis" id="intc_CommonStockRepurchasesByTypeAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesTable" id="intc_CommonStockRepurchasesTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommonStockRepurchasesLineItems" id="intc_CommonStockRepurchasesLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiiedIntangibleAssetsLineItems" id="intc_IdentifiiedIntangibleAssetsLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="SubjectOrNotSubjectToAmortizationAxis" id="intc_SubjectOrNotSubjectToAmortizationAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="SubjectOrNotSubjectToAmortizationDomain" id="intc_SubjectOrNotSubjectToAmortizationDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsTable" id="intc_IdentifiedIntangibleAssetsTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IncomeStatementLocationAxis" id="intc_IncomeStatementLocationAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IncomeStatementLineItemDomain" id="intc_IncomeStatementLineItemDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NetIncomeAvailableToCommonStockholders" id="intc_NetIncomeAvailableToCommonStockholders" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="BasisOfPresentationAbstract" id="intc_BasisOfPresentationAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AvailableForSaleInvestmentsTextBlock" id="intc_AvailableForSaleInvestmentsTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="BorrowingsTablesAbstract" id="intc_BorrowingsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfLongTermDebtInstrumentsIssuedInCurrentPeriodTableTextBlock" id="intc_ScheduleOfLongTermDebtInstrumentsIssuedInCurrentPeriodTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DebtInstrumentFiveMember" id="intc_DebtInstrumentFiveMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DebtInstrumentSixMember" id="intc_DebtInstrumentSixMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DebtInstrumentSevenMember" id="intc_DebtInstrumentSevenMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DebtInstrumentEightMember" id="intc_DebtInstrumentEightMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BoardOfDirectorsMaximumBorrowingCapacityAuthorization" id="intc_BoardOfDirectorsMaximumBorrowingCapacityAuthorization" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="DebtInstrumentFourMember" id="intc_DebtInstrumentFourMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="StockRepurchaseAuthorizationIncreaseValue" id="intc_StockRepurchaseAuthorizationIncreaseValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="NetGainsLossesReclassifiedFromAccumulatedOtherComprehensiveIncomeLossIntoEarnings" id="intc_NetGainsLossesReclassifiedFromAccumulatedOtherComprehensiveIncomeLossIntoEarnings" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="AmountOfEquityMethodInvesteeFiveSharesSoldInSecondaryOffering" id="intc_AmountOfEquityMethodInvesteeFiveSharesSoldInSecondaryOffering" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AmountOfEquityMethodInvesteeFiveSharesOwned" id="intc_AmountOfEquityMethodInvesteeFiveSharesOwned" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RecognizedGainLossAsResultOfInitialPublicOfferingAndSubsequentSaleInSecondaryOffering" id="intc_RecognizedGainLossAsResultOfInitialPublicOfferingAndSubsequentSaleInSecondaryOffering" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="AmountOfCompanyOneCommonStockSharesReceivedUponClosingOfSaleOfEquityMethodInvestment" id="intc_AmountOfCompanyOneCommonStockSharesReceivedUponClosingOfSaleOfEquityMethodInvestment" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="AmountOfCompanyOneCommonStockSharesHeldInEscrowUponClosingOfSaleOfEquityMethodInvestment" id="intc_AmountOfCompanyOneCommonStockSharesHeldInEscrowUponClosingOfSaleOfEquityMethodInvestment" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="ShortTermNotePayableIssuedUponSaleOfEquityMethodInvestment" id="intc_ShortTermNotePayableIssuedUponSaleOfEquityMethodInvestment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="AmountOfCompanyOneCommonStockSharesSoldThatWasReceivedInSaleOfEquityMethodInvestment" id="intc_AmountOfCompanyOneCommonStockSharesSoldThatWasReceivedInSaleOfEquityMethodInvestment" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AmountOfCompanyOneCommonStockEscrowSharesSoldThatWasReceivedUponClosingOfSaleOfEquityMethodInvestment" id="intc_AmountOfCompanyOneCommonStockEscrowSharesSoldThatWasReceivedUponClosingOfSaleOfEquityMethodInvestment" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AmountOfCompanyOneCommonStockSharesSoldThatWasReceivedUponClosingOfSaleOfEquityMethodInvestment" id="intc_AmountOfCompanyOneCommonStockSharesSoldThatWasReceivedUponClosingOfSaleOfEquityMethodInvestment" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="CostMethodInvestmentsTextualDetailsAbstract" id="intc_CostMethodInvestmentsTextualDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherEquityMethodInvestmentsMember" id="intc_OtherEquityMethodInvestmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ClearwireCommunicationsLlcMember" id="intc_ClearwireCommunicationsLlcMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NumonyxBvMember" id="intc_NumonyxBvMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RevenueOfMajorCustomersPercentage" id="intc_RevenueOfMajorCustomersPercentage" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfNetPropertyPlantAndEquipmentByCountryAbstract" id="intc_ScheduleOfNetPropertyPlantAndEquipmentByCountryAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AsiaPacificTaiwanMember" id="intc_AsiaPacificTaiwanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AsiaPacificChinaIncludingHongKongMember" id="intc_AsiaPacificChinaIncludingHongKongMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AsiaPacificOtherAsiaPacificMember" id="intc_AsiaPacificOtherAsiaPacificMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AsiaPacificTotalMember" id="intc_AsiaPacificTotalMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="UnitedStatesMember" id="intc_UnitedStatesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AmericasOtherAmericasMember" id="intc_AmericasOtherAmericasMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AmericasTotalMember" id="intc_AmericasTotalMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EuropeMember" id="intc_EuropeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="JapanMember" id="intc_JapanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IsraelMember" id="intc_IsraelMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherCountriesMember" id="intc_OtherCountriesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OptionExchangeMinimumExercisePriceEligibleOptions" id="intc_OptionExchangeMinimumExercisePriceEligibleOptions" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="OptionExchangeNewOptionsGranted" id="intc_OptionExchangeNewOptionsGranted" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="OptionExchangeNewOptionsGrantPrice" id="intc_OptionExchangeNewOptionsGrantPrice" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="VestingRangeMin" id="intc_VestingRangeMin" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="VestingRangeMax" id="intc_VestingRangeMax" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardRequisiteServiceYears" id="intc_ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardRequisiteServiceYears" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardExpirationYears" id="intc_ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardExpirationYears" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="MinimumExercisePriceOfOptionsExercised" id="intc_MinimumExercisePriceOfOptionsExercised" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="MaximumExercisePriceOfOptionsExercised" id="intc_MaximumExercisePriceOfOptionsExercised" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="FairValueOfOptionsThatVestedDuringYear" id="intc_FairValueOfOptionsThatVestedDuringYear" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="ParticipationPercentageInStockPurchasePlan" id="intc_ParticipationPercentageInStockPurchasePlan" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="NumberOfRestrictedStockUnitsExpectedToVest" id="intc_NumberOfRestrictedStockUnitsExpectedToVest" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="WeightedAverageGrantDateFairValueOfRestrictedStockUnitsExpectedToVest" id="intc_WeightedAverageGrantDateFairValueOfRestrictedStockUnitsExpectedToVest" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="StockOptionsVestedAndExpectedToVestAbstract" id="intc_StockOptionsVestedAndExpectedToVestAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NumberOfOptionsExpectedToVest" id="intc_NumberOfOptionsExpectedToVest" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="WeightedAverageExercisePriceForExpectedToVestOptions" id="intc_WeightedAverageExercisePriceForExpectedToVestOptions" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="WeightedAverageRemainingContractualTermForExpectedToVestOptions" id="intc_WeightedAverageRemainingContractualTermForExpectedToVestOptions" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AggregateIntrinsicValueForExpectedToVestOptions" id="intc_AggregateIntrinsicValueForExpectedToVestOptions" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="ClosingPriceOfRegistrantsCommonStock" id="intc_ClosingPriceOfRegistrantsCommonStock" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RangeOfExercisePricesAndOptionsOutstandingAbstract" id="intc_RangeOfExercisePricesAndOptionsOutstandingAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GeneralEquityIncentivePlansMember" id="intc_GeneralEquityIncentivePlansMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GeneralEquityIncentivePlansOptionsMember" id="intc_GeneralEquityIncentivePlansOptionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RangeOneMember" id="intc_RangeOneMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RangeTwoMember" id="intc_RangeTwoMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RangeThreeMember" id="intc_RangeThreeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RangeFourMember" id="intc_RangeFourMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ComponentsOfTotalComprehensiveIncomeLossAbstract" id="intc_ComponentsOfTotalComprehensiveIncomeLossAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AdjustmentForGainLossOnInvestmentsIncludedInNetIncomeBeforeTax" id="intc_AdjustmentForGainLossOnInvestmentsIncludedInNetIncomeBeforeTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="AdjustmentForGainLossOnInvestmentsIncludedInNetIncomeTax" id="intc_AdjustmentForGainLossOnInvestmentsIncludedInNetIncomeTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="AdjustmentForGainLossOnInvestmentsIncludedInNetIncomeNetOfTax" id="intc_AdjustmentForGainLossOnInvestmentsIncludedInNetIncomeNetOfTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="OtherComprehensiveIncomeChangeInDeferredTaxAssetValuationAllowanceTax" id="intc_OtherComprehensiveIncomeChangeInDeferredTaxAssetValuationAllowanceTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="OtherComprehensiveIncomeChangeInPriorServiceCostsArisingDuringPeriodTax" id="intc_OtherComprehensiveIncomeChangeInPriorServiceCostsArisingDuringPeriodTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="ComprehensiveIncomeTextualDetailsAbstract" id="intc_ComprehensiveIncomeTextualDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AmdSettlementMember" id="intc_AmdSettlementMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfRevenueOfMajorCustomersTable" id="intc_ScheduleOfRevenueOfMajorCustomersTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RevenueOfMajorCustomersLineItems" id="intc_RevenueOfMajorCustomersLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RevenueOfMajorCustomersAbstract" id="intc_RevenueOfMajorCustomersAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="LossContingencySettlement" id="intc_LossContingencySettlement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="RestructuringAndAssetImpairmentChargesDetailAbstract" id="intc_RestructuringAndAssetImpairmentChargesDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RestructuringAndAssetImpairmentImpactsToDateAbstract" id="intc_RestructuringAndAssetImpairmentImpactsToDateAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RestructuringAndAssetImpairmentChargesByPlanAbstract" id="intc_RestructuringAndAssetImpairmentChargesByPlanAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PlanThreeMember" id="intc_PlanThreeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PlanOneMember" id="intc_PlanOneMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationCapitalizedAsInventoryLineItems" id="intc_ShareBasedCompensationCapitalizedAsInventoryLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationCapitalizedAsInventoryAbstract" id="intc_ShareBasedCompensationCapitalizedAsInventoryAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationTable" id="intc_ShareBasedCompensationTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationAxis" id="intc_ShareBasedCompensationAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationDomain" id="intc_ShareBasedCompensationDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ShareBasedCompensationMember" id="intc_ShareBasedCompensationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConcentrationsOfCreditRiskDetailAbstract" id="intc_ConcentrationsOfCreditRiskDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConcentrationRiskCreditRiskMaximumExposure" id="intc_ConcentrationRiskCreditRiskMaximumExposure" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="AccountsReceivableCustomerConcentrationRiskMember" id="intc_AccountsReceivableCustomerConcentrationRiskMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommitmentsDetailAbstract" id="intc_CommitmentsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MinimumRentalCommitmentsScheduleByYearPayableAbstract" id="intc_MinimumRentalCommitmentsScheduleByYearPayableAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TotalCapitalAdditionsCommitmentsMember" id="intc_TotalCapitalAdditionsCommitmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherPurchaseObligationsAndCommitmentsMember" id="intc_OtherPurchaseObligationsAndCommitmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ValuationAndQualifyingAccountsDetailAbstract" id="intc_ValuationAndQualifyingAccountsDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NetDeductionsRecoveries" id="intc_NetDeductionsRecoveries" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="LeaseAndRentalExpenseAbstract" id="intc_LeaseAndRentalExpenseAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AccountingPoliciesDetailAbstract" id="intc_AccountingPoliciesDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IdentifiedIntangibleAssetsAbstract" id="intc_IdentifiedIntangibleAssetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AdvertisingAbstract" id="intc_AdvertisingAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="FairValuePolicyTextBlock" id="intc_FairValuePolicyTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherThanTemporaryImpairmentPolicyTextBlock" id="intc_OtherThanTemporaryImpairmentPolicyTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="CommitmentsAbstract" id="intc_CommitmentsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AccountingPoliciesTablesAbstract" id="intc_AccountingPoliciesTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfUsefulLifeRangesForIdentifiedIntangibleAssetsTableTextBlock" id="intc_ScheduleOfUsefulLifeRangesForIdentifiedIntangibleAssetsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityMethodAndCostMethodInvestmentsTablesAbstract" id="intc_EquityMethodAndCostMethodInvestmentsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PurchasePriceAllocationForSeriesOfIndividuallyImmaterialBusinessAcquisitionsPriorPeriodTableTextBlock" id="intc_PurchasePriceAllocationForSeriesOfIndividuallyImmaterialBusinessAcquisitionsPriorPeriodTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ConvertibleDebenturesInterestRatesTableTextBlock" id="intc_ConvertibleDebenturesInterestRatesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ConvertibleDebenturesOtherDetailsTableTextBlock" id="intc_ConvertibleDebenturesOtherDetailsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="AggregateDebtMaturitiesTableTextBlock" id="intc_AggregateDebtMaturitiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="CommitmentsTablesAbstract" id="intc_CommitmentsTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MinimumRentalCommitmentsScheduleByYearPayableTableTextBlock" id="intc_MinimumRentalCommitmentsScheduleByYearPayableTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ComponentsOfOtherComprehensiveIncomeLossTableTextBlock" id="intc_ComponentsOfOtherComprehensiveIncomeLossTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="TaxesTablesAbstract" id="intc_TaxesTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IncomeBeforeTaxesAndProvisionsForTaxesTableTextBlock" id="intc_IncomeBeforeTaxesAndProvisionsForTaxesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ChangesInGrossUnrecognizedTaxBenefitsTableTextBlock" id="intc_ChangesInGrossUnrecognizedTaxBenefitsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfGeographicRevenueInformationTableTextBlock" id="intc_ScheduleOfGeographicRevenueInformationTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfNetPropertyPlantAndEquipmentByCountryTableTextBlock" id="intc_ScheduleOfNetPropertyPlantAndEquipmentByCountryTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="RetirementBenefitPlansTablesAbstract" id="intc_RetirementBenefitPlansTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ProceedsFromSalesOfSharesThroughEmployeeEquityIncentivePlansNetExcessTaxBenefitTaxDeficiencyAndOtherShares" id="intc_ProceedsFromSalesOfSharesThroughEmployeeEquityIncentivePlansNetExcessTaxBenefitTaxDeficiencyAndOtherShares" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="ProceedsFromSalesOfSharesThroughEmployeeEquityIncentivePlansNetExcessTaxBenefitTaxDeficiencyAndOther" id="intc_ProceedsFromSalesOfSharesThroughEmployeeEquityIncentivePlansNetExcessTaxBenefitTaxDeficiencyAndOther" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="MaximumAmountOfContingentInterestThatWillAccruePerYear" id="intc_MaximumAmountOfContingentInterestThatWillAccruePerYear" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="CompanyStockAsPercentageOfConversionPriceSurrenderForConversion" id="intc_CompanyStockAsPercentageOfConversionPriceSurrenderForConversion" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="CompanyStockAsPercentageOfConversionPriceRedemptionOfPrincipal" id="intc_CompanyStockAsPercentageOfConversionPriceRedemptionOfPrincipal" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="TradingDaysDuringThirtyDayPeriodInWhichCompanyStockHasBeenAtLeastOneHundredThirtyPercentOfConversionPriceSurrenderForConversion" id="intc_TradingDaysDuringThirtyDayPeriodInWhichCompanyStockHasBeenAtLeastOneHundredThirtyPercentOfConversionPriceSurrenderForConversion" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="TradingDayPeriodEndingOnLastDayOfPreceedingFiscalQuarterSurrenderForConversion" id="intc_TradingDayPeriodEndingOnLastDayOfPreceedingFiscalQuarterSurrenderForConversion" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="TradingDaysDuringThirtyDayPeriodInWhichCompanyStockHasBeenAtLeastOneHundredThirtyPercentOfConversionPriceRedemptionOfPrincipal" id="intc_TradingDaysDuringThirtyDayPeriodInWhichCompanyStockHasBeenAtLeastOneHundredThirtyPercentOfConversionPriceRedemptionOfPrincipal" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="TradingDayPeriodPriorToNoticeOfRedemptionDateRedemptionOfPrincipal" id="intc_TradingDayPeriodPriorToNoticeOfRedemptionDateRedemptionOfPrincipal" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DebtInstrumentThreeMember" id="intc_DebtInstrumentThreeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="UndistributedEarningsForCertainNonUnitedStatesSubsidiariesMember" id="intc_UndistributedEarningsForCertainNonUnitedStatesSubsidiariesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MattersRelatedToOurNonUnitedStatesSubsidiariesMember" id="intc_MattersRelatedToOurNonUnitedStatesSubsidiariesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="StateCreditCarryForwardsMember" id="intc_StateCreditCarryForwardsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InvestmentAssetImpairmentsMember" id="intc_InvestmentAssetImpairmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InternalRevenueServiceAndCertainStateTaxAuthoritiesPriorPeriodTaxPositionsMember" id="intc_InternalRevenueServiceAndCertainStateTaxAuthoritiesPriorPeriodTaxPositionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="UnitedStatesStateAndNonUnitedStatesMember" id="intc_UnitedStatesStateAndNonUnitedStatesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="UnitedStatesFederalMember" id="intc_UnitedStatesFederalMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TaxesDetailsAbstract" id="intc_TaxesDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IncomeBeforeTaxesAndProvisionForTaxesAbstract" id="intc_IncomeBeforeTaxesAndProvisionForTaxesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ProvisionsForTaxesDeferredOther" id="intc_ProvisionsForTaxesDeferredOther" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="EffectiveTaxRateReconciliationAbstract" id="intc_EffectiveTaxRateReconciliationAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IncreaseReductionInRateResultingFromEuropeanCommissionFine" id="intc_IncreaseReductionInRateResultingFromEuropeanCommissionFine" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="IncreaseReductionInRateResultingFromSettlementsEffectiveSettlementsAndRelatedRemeasurements" id="intc_IncreaseReductionInRateResultingFromSettlementsEffectiveSettlementsAndRelatedRemeasurements" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="IncreaseReductionInRateResultingFromOther" id="intc_IncreaseReductionInRateResultingFromOther" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="TaxesOtherTextualDetailsAbstract" id="intc_TaxesOtherTextualDetailsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="IncomeTaxHolidayTerminationDateEndOfRange" id="intc_IncomeTaxHolidayTerminationDateEndOfRange" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="IncomeTaxBenefitsDeficienciesAttributableToEquityBasedCompensationTransactionsAllocatedToStockholdersEquity" id="intc_IncomeTaxBenefitsDeficienciesAttributableToEquityBasedCompensationTransactionsAllocatedToStockholdersEquity" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="SignificantComponentsOfDeferredTaxAssetsAndLiabilitiesAbstract" id="intc_SignificantComponentsOfDeferredTaxAssetsAndLiabilitiesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DeferredTaxAssetsUnrealizedLossesOnInvestmentsAndDerivatives" id="intc_DeferredTaxAssetsUnrealizedLossesOnInvestmentsAndDerivatives" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="DeferredTaxAssetsStateCreditsAndNetOperatingLosses" id="intc_DeferredTaxAssetsStateCreditsAndNetOperatingLosses" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="DeferredTaxAssetsCapitalLosses" id="intc_DeferredTaxAssetsCapitalLosses" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="DeferredTaxAssetsOtherNet" id="intc_DeferredTaxAssetsOtherNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="DeferredTaxLiabilitiesConvertibleDebt" id="intc_DeferredTaxLiabilitiesConvertibleDebt" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="DeferredTaxLiabilitiesInvestmentInForeignSubsidiaries" id="intc_DeferredTaxLiabilitiesInvestmentInForeignSubsidiaries" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="DeferredTaxLiabilitiesOtherNet" id="intc_DeferredTaxLiabilitiesOtherNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="UncertainTaxPositionsAbstract" id="intc_UncertainTaxPositionsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="SettlementsAndEffectiveSettlementsWithTaxAuthoritiesAndRelatedRemeasurements" id="intc_SettlementsAndEffectiveSettlementsWithTaxAuthoritiesAndRelatedRemeasurements" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="YearWhichPriorYearsTaxReturnsAreGenerallyNoLongerSubjectToTaxExamination" id="intc_YearWhichPriorYearsTaxReturnsAreGenerallyNoLongerSubjectToTaxExamination" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RetirementBenefitPlansDetailAbstract" id="intc_RetirementBenefitPlansDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RetirementContributionPlansTextualDetailAbstract" id="intc_RetirementContributionPlansTextualDetailAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="RetirementContributionPlanEquitySecurities" id="intc_RetirementContributionPlanEquitySecurities" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RetirementContributionPlanFixedIncomeSecurities" id="intc_RetirementContributionPlanFixedIncomeSecurities" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RetirementContributionPlanRealAssets" id="intc_RetirementContributionPlanRealAssets" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="RetirementContributionPlanContribution" id="intc_RetirementContributionPlanContribution" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="ProjectedBenefitObligationAndPlanAssetsAbstract" id="intc_ProjectedBenefitObligationAndPlanAssetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CurrencyExchangeRateChangesPlanAssets" id="intc_CurrencyExchangeRateChangesPlanAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="AmountsRecognizedOnConsolidatedBalanceSheetsAbstract" id="intc_AmountsRecognizedOnConsolidatedBalanceSheetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AmountsRecordedToAccumulatedOtherComprehensiveIncomeLossBeforeTaxesAbstract" id="intc_AmountsRecordedToAccumulatedOtherComprehensiveIncomeLossBeforeTaxesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AccumulatedBenefitObligationsAbstract" id="intc_AccumulatedBenefitObligationsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PlansWithAccumulatedBenefitObligationsInExcessOfPlanAssetsAbstract" id="intc_PlansWithAccumulatedBenefitObligationsInExcessOfPlanAssetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="PlansWithProjectedBenefitObligationsInExcessOfPlanAssetsAbstract" id="intc_PlansWithProjectedBenefitObligationsInExcessOfPlanAssetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BenefitObligationAssumptionsAbstract" id="intc_BenefitObligationAssumptionsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NetPeriodicBenefitCostAssumptionsAbstract" id="intc_NetPeriodicBenefitCostAssumptionsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="FundingExpectationsAbstract" id="intc_FundingExpectationsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EstimatedFutureBenefitPaymentsAbstract" id="intc_EstimatedFutureBenefitPaymentsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GovernmentAndHighQualityCorporateBondsAndAssetBackedSecuritiesGlobalBondFundTargetAllocation" id="intc_GovernmentAndHighQualityCorporateBondsAndAssetBackedSecuritiesGlobalBondFundTargetAllocation" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalInflationIndexedBondsGlobalBondFundTargetAllocation" id="intc_GlobalInflationIndexedBondsGlobalBondFundTargetAllocation" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="InternationalGovernmentAndCorporateBondsGlobalBondFundTargetAllocation" id="intc_InternationalGovernmentAndCorporateBondsGlobalBondFundTargetAllocation" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="OpportunisticBondStrategyInvestmentsGlobalBondFundTargetAllocation" id="intc_OpportunisticBondStrategyInvestmentsGlobalBondFundTargetAllocation" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="DefinedBenefitPlanPercentageOfPlanAssetsInvestedInQualifiedInsuranceCompanies" id="intc_DefinedBenefitPlanPercentageOfPlanAssetsInvestedInQualifiedInsuranceCompanies" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="EquitySecuritiesTargetAllocationForPlanAssetsThatWeHaveControlOver" id="intc_EquitySecuritiesTargetAllocationForPlanAssetsThatWeHaveControlOver" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="FixedIncomeInstrumentsTargetAllocationForPlanAssetsThatWeHaveControlOver" id="intc_FixedIncomeInstrumentsTargetAllocationForPlanAssetsThatWeHaveControlOver" type="num:percentItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="UnitedStatesLargeCapStockFundMember" id="intc_UnitedStatesLargeCapStockFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="UnitedStatesSmallCapStockFundMember" id="intc_UnitedStatesSmallCapStockFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InternationalStockFundMember" id="intc_InternationalStockFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalBondFundCommonCollectiveTrustsMember" id="intc_GlobalBondFundCommonCollectiveTrustsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalBondFundOtherMember" id="intc_GlobalBondFundOtherMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="TotalAssetsMeasuredAtFairValueMember" id="intc_TotalAssetsMeasuredAtFairValueMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalEquitiesMember" id="intc_GlobalEquitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NonUnitedStatesVentureCapitalMember" id="intc_NonUnitedStatesVentureCapitalMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InvestmentsHeldByInsuranceCompaniesMember" id="intc_InvestmentsHeldByInsuranceCompaniesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="InsuranceContractsMember" id="intc_InsuranceContractsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="BusinessAcquisitionsDuringPeriodCostOfAcquiredEntityEquityInterestsIssuedAndIssuable" id="intc_BusinessAcquisitionsDuringPeriodCostOfAcquiredEntityEquityInterestsIssuedAndIssuable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="RestructuringAndAssetImpairmentChargesTablesAbstract" id="intc_RestructuringAndAssetImpairmentChargesTablesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="NumberOfOptionsExchanged" id="intc_NumberOfOptionsExchanged" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="WeightedAverageExercisePriceForStockOptionExchangedDuringYear" id="intc_WeightedAverageExercisePriceForStockOptionExchangedDuringYear" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="GainsLossesOnEquityInvestmentsNet" id="intc_GainsLossesOnEquityInvestmentsNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="RestructuringAssetImpairmentAndNetLossOnRetirementOfAssets" id="intc_RestructuringAssetImpairmentAndNetLossOnRetirementOfAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="FairValueOfEquityAwardsAssumedInConnectionWithAcquisitions" id="intc_FairValueOfEquityAwardsAssumedInConnectionWithAcquisitions" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="EquityInvestmentOtherThanTemporaryImpairment" id="intc_EquityInvestmentOtherThanTemporaryImpairment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="AssetImpairmentsPlanThreeMember" id="intc_AssetImpairmentsPlanThreeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EmployeeSeveranceAndBenefitsPlanThreeMember" id="intc_EmployeeSeveranceAndBenefitsPlanThreeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AdjustmentForGainLossOnDeferredTaxAssetValuationAllowanceIncludedInNetIncomeTax" id="intc_AdjustmentForGainLossOnDeferredTaxAssetValuationAllowanceIncludedInNetIncomeTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="AdjustmentForGainLossOnDeferredTaxAssetValuationAllowanceIncludedInNetIncomeNetOfTax" id="intc_AdjustmentForGainLossOnDeferredTaxAssetValuationAllowanceIncludedInNetIncomeNetOfTax" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="NetGainsLossesOnDerivativesAndIntercompanyLoansRelatedToTradingSecurities" id="intc_NetGainsLossesOnDerivativesAndIntercompanyLoansRelatedToTradingSecurities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="InvestmentsThatWereSoldMember" id="intc_InvestmentsThatWereSoldMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfInvestmentTypeTable" id="intc_ScheduleOfInvestmentTypeTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfInvestmentTypeAxis" id="intc_ScheduleOfInvestmentTypeAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfInvestmentTypeDomain" id="intc_ScheduleOfInvestmentTypeDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="EquityInvestmentsMember" id="intc_EquityInvestmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConcentrationRiskByTypeOfConcentrationLineItems" id="intc_ConcentrationRiskByTypeOfConcentrationLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConcentrationRiskByTypeOfConcentrationTable" id="intc_ConcentrationRiskByTypeOfConcentrationTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConcentrationRiskByTypeOfConcentrationAxis" id="intc_ConcentrationRiskByTypeOfConcentrationAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ConcentrationRiskByTypeOfConcentrationDomain" id="intc_ConcentrationRiskByTypeOfConcentrationDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ExcludingUnitedStatesTreasurySecuritiesMember" id="intc_ExcludingUnitedStatesTreasurySecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="YearWhichPriorYearsTaxReturnsAreNoLongerSubjectToTaxExamination" id="intc_YearWhichPriorYearsTaxReturnsAreNoLongerSubjectToTaxExamination" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant" />
+  <element name="ScheduleOfDefinedContributionPlansDisclosuresTable" id="intc_ScheduleOfDefinedContributionPlansDisclosuresTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DefinedContributionPlansDisclosuresDefinedContributionPlansAxis" id="intc_DefinedContributionPlansDisclosuresDefinedContributionPlansAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DefinedContributionPlansDisclosuresDefinedContributionPlansDomain" id="intc_DefinedContributionPlansDisclosuresDefinedContributionPlansDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="UnitedStatesIntelRetirementContributionPlanMember" id="intc_UnitedStatesIntelRetirementContributionPlanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="QualifiedUnitedStatesRetirementContributionPlansMember" id="intc_QualifiedUnitedStatesRetirementContributionPlansMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AvailableForSaleSecuritiesRealizedGainsLossesThirdPartyMergerTransactions" id="intc_AvailableForSaleSecuritiesRealizedGainsLossesThirdPartyMergerTransactions" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="CurrencyExchangeRateChangesBenefitObligation" id="intc_CurrencyExchangeRateChangesBenefitObligation" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="CollectionOfLoansReceivable" id="intc_CollectionOfLoansReceivable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="RangeTenMember" id="intc_RangeTenMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherBasisDifferencesForCertainNonUnitedStatesSubsidiariesMember" id="intc_OtherBasisDifferencesForCertainNonUnitedStatesSubsidiariesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalBondFundGovernmentBondsMember" id="intc_GlobalBondFundGovernmentBondsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalBondFundAssetBackedSecuritiesMember" id="intc_GlobalBondFundAssetBackedSecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="GlobalBondFundCorporateBondsMember" id="intc_GlobalBondFundCorporateBondsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OtherPlanAssetCategoryMember" id="intc_OtherPlanAssetCategoryMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="CommercialPaperFairValue" id="intc_CommercialPaperFairValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant" />
+  <element name="SegmentReportingInformationAndGeographicRevenueInformationLineItems" id="intc_SegmentReportingInformationAndGeographicRevenueInformationLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfSegmentReportingInformationAndGeographicRevenueInformationAbstract" id="intc_ScheduleOfSegmentReportingInformationAndGeographicRevenueInformationAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfInvestmentTypeLineItems" id="intc_ScheduleOfInvestmentTypeLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfDefinedContributionPlansDisclosuresLineItems" id="intc_ScheduleOfDefinedContributionPlansDisclosuresLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="ScheduleOfSegmentReportingInformationAndGeographicRevenueInformationTable" id="intc_ScheduleOfSegmentReportingInformationAndGeographicRevenueInformationTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="MaximumBorrowingsCommercialPaperProgram" id="intc_MaximumBorrowingsCommercialPaperProgram" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="TradingDaysDuringThirtyDayPeriodInWhichCompanyStockHasBeenAtLeastOneHundredFiftyPercentOfConversionPriceRedemptionOfPrincipal" id="intc_TradingDaysDuringThirtyDayPeriodInWhichCompanyStockHasBeenAtLeastOneHundredFiftyPercentOfConversionPriceRedemptionOfPrincipal" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="duration" />
+  <element name="EmployeeServiceShareBasedCompensationTaxBenefitRealizedFromExerciseOfShareBasedPaymentAward" id="intc_EmployeeServiceShareBasedCompensationTaxBenefitRealizedFromExerciseOfShareBasedPaymentAward" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="duration" />
+  <element name="MarketableEquityMethodInvestmentMember" id="intc_MarketableEquityMethodInvestmentMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="OperatingLossCarryforwardsThatHaveValuationAllowance" id="intc_OperatingLossCarryforwardsThatHaveValuationAllowance" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="instant" />
+  <element name="IdentifiedIntangibleAssetsAcquiredDuringPeriodAbstract" id="intc_IdentifiedIntangibleAssetsAcquiredDuringPeriodAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="AcquiredIdentifiedIntangibleAssetAmount" id="intc_AcquiredIdentifiedIntangibleAssetAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="debit" xbrli:periodType="duration" />
+  <element name="HewlettPackardCompanyMember" id="intc_HewlettPackardCompanyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+  <element name="DellIncMember" id="intc_DellIncMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration" />
+</schema>

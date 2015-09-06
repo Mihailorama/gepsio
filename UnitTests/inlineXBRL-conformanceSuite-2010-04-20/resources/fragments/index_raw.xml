@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='stylesheets/documentation.xsl'?>
+<documentation 
+  name='Inline XBRL Specification Tests and Examples'
+  date='2008-06-30'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xsi:noNamespaceSchemaLocation='schemas/documentation.xsd'>
+
+    <testcases title='Test Cases' root='files'>
+      <testcase uri=""/>
+    </testcases>
+   
+</documentation>
+

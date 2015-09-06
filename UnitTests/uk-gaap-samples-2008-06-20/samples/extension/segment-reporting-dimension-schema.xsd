@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xbrli="http://www.xbrl.org/2003/instance"
+        xmlns:link="http://www.xbrl.org/2003/linkbase"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:example="http://www.xbrl.org/uk/uk-gaap-example"
+        targetNamespace="http://www.xbrl.org/uk/uk-gaap-example">
+  <annotation>
+    <appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="segment-reporting-dimension-linkbase.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <element id="example_BeveragesBusinessSegment" name="BeveragesBusinessSegment" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" nillable="true"/>
+  <element id="example_ConfectionaryBusinessSegment" name="ConfectionaryBusinessSegment" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" nillable="true"/>
+  <element id="example_UKGeographicSegment" name="UKGeographicSegment" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" nillable="true"/>
+  <element id="example_RestOfEuropeGeographicSegment" name="RestOfEuropeGeographicSegment" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" nillable="true"/>
+  <element id="example_RestOfWorldGeographicSegment" name="RestOfWorldGeographicSegment" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" nillable="true"/>
+</schema>

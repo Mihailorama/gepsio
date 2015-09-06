@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:uk-gaap-ci="http://www.xbrl.org/uk/fr/gaap/ci/2004-12-01" targetNamespace="http://www.xbrl.org/uk/fr/gaap/ci/2004-12-01" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <annotation>
+    <appinfo>
+      <link:roleType roleURI="http://www.xbrl.org/2003/frta/role/restated" id="restated">
+        <link:usedOn>link:label</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/StandardInformation" id="StandardInformation">
+        <link:definition>Standard Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/Contexts" id="Contexts">
+        <link:definition>Contexts</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/IncomeStatementPresentation" id="IncomeStatementPresentation">
+        <link:definition>Inccome Statement Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/BalanceSheetStatementPresentation" id="BalanceSheetStatementPresentation">
+        <link:definition>Balance Sheet Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/CashFlowStatementPresentation" id="CashFlowStatementPresentation">
+        <link:definition>Cash Flow Statement Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/STRGL" id="STRGL">
+        <link:definition>Statement of Total Recognised Gains and Losses</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/NoteHistoricalCostProfits" id="NoteHistoricalCostProfits">
+        <link:definition>Note of Historical Cost Profits and Losses</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/ReconciliationMovementsShareholderFunds" id="ReconciliationMovementsShareholderFunds">
+        <link:definition>Reconciliation of Movements in Shareholder Funds</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AuditorsReportPresentation" id="AuditorsReportPresentation">
+        <link:definition>Auditors' Report Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/OtherReportsPresentation" id="OtherReportsPresentation">
+        <link:definition>Other Reports Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/NotesPresentation" id="NotesPresentation">
+        <link:definition>Notes and Detailed Disclosures presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/IncomeMainCalculation" id="IncomeMainCalculation">
+        <link:definition>Income Statement Main Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/OperatingProfitFormat1Calculation" id="OperatingProfitFormat1Calculation">
+        <link:definition>Operating Profit Format 1 Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/OperatingProfitFormat2Calculation" id="OperatingProfitFormat2Calculation">
+        <link:definition>Operating Profit Format 2 Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/IncomeAdditionalCalculatons" id="IncomeAdditionalCalculatons">
+        <link:definition>Income Data Additional Calculations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/IncomeAlternativeCalculations" id="IncomeAlternativeCalculations">
+        <link:definition>Income Data Alternative Calculations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/IncomeFurtherTaxCalculations" id="IncomeFurtherTaxCalculations">
+        <link:definition>Income Further Tax Calculations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/BalanceMainCalculation" id="BalanceMainCalculation">
+        <link:definition>Main Balance Sheet Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/BalanceSheetFormat2Calculation" id="BalanceSheetFormat2Calculation">
+        <link:definition>Balance Sheet Format 2 Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/BalanceAdditionalCalculations" id="BalanceAdditionalCalculations">
+        <link:definition>Balance Sheet and Notes Additional Calculations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/BalanceAlternativeCalculations" id="BalanceAlternativeCalculations">
+        <link:definition>Balance Sheet and Notes Alternative Calculations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/CashFlowMainCalculation" id="CashFlowMainCalculation">
+        <link:definition>Cash Flow Main Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/CashFlowReconciliationCalculation" id="CashFlowReconciliationCalculation">
+        <link:definition>Cash Flow Reconciliation Calculation</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/CashFlowAdditionalCalculatons" id="CashFlowAdditionalCalculatons">
+        <link:definition>Cash Flow Additional Calculations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/CashFlowAlternativeCalculatons" id="CashFlowAlternativeCalculatons">
+        <link:definition>Cash Flow Alternative Calculatons</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/Errors" id="Errors">
+        <link:definition>Errors - removal not working</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gaap-ci-2004-12-01-presentation.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Presentation Links, all" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gaap-ci-2004-12-01-calculation.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Calculation Links, all" />
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <import namespace="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" schemaLocation="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd" />
+  <complexType name="ContinuingOperationsItemType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <enumeration value="CONT" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <complexType name="AcquiredOperationsItemType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <enumeration value="ACQ" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <complexType name="OriginalExistingOperationsItemType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <enumeration value="ORIG" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <complexType name="DiscontinuedOperationsItemType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <enumeration value="DISC" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+</schema>

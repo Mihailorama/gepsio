@@ -1,0 +1,1371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ref="http://www.xbrl.org/2004/ref" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://www.xbrl.org/2004/ref http://www.xbrl.org/2004/ref-2004-08-10.xsd">
+  <referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AccrualsDeferredIncomeAfterOneYear" xlink:label="uk-gaap-pt_AccrualsDeferredIncomeAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AccrualsDeferredIncomeAfterOneYear" xlink:to="uk-gaap-pt_AccrualsDeferredIncomeAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AccrualsDeferredIncomeAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>9</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AccrualsDeferredIncome" xlink:label="uk-gaap-pt_AccrualsDeferredIncome" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AccrualsDeferredIncome" xlink:to="uk-gaap-pt_AccrualsDeferredIncome_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AccrualsDeferredIncome_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>9</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AccrualsDeferredIncomeWithinOneYear" xlink:label="uk-gaap-pt_AccrualsDeferredIncomeWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AccrualsDeferredIncomeWithinOneYear" xlink:to="uk-gaap-pt_AccrualsDeferredIncomeWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AccrualsDeferredIncomeWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>9</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AdministrativeExpenses" xlink:label="uk-gaap-pt_AdministrativeExpenses" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AdministrativeExpenses" xlink:to="uk-gaap-pt_AdministrativeExpenses_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AdministrativeExpenses_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>5</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsOwedBySubsidiaries" xlink:label="uk-gaap-pt_AmountsOwedBySubsidiaries" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsOwedBySubsidiaries" xlink:to="uk-gaap-pt_AmountsOwedBySubsidiaries_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsOwedBySubsidiaries_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsOwedBySubsidiariesWithinOneYear" xlink:label="uk-gaap-pt_AmountsOwedBySubsidiariesWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsOwedBySubsidiariesWithinOneYear" xlink:to="uk-gaap-pt_AmountsOwedBySubsidiariesWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsOwedBySubsidiariesWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsOwedToSubsidiariesAfterOneYear" xlink:label="uk-gaap-pt_AmountsOwedToSubsidiariesAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsOwedToSubsidiariesAfterOneYear" xlink:to="uk-gaap-pt_AmountsOwedToSubsidiariesAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsOwedToSubsidiariesAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>6</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsOwedToSubsidiaries" xlink:label="uk-gaap-pt_AmountsOwedToSubsidiaries" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsOwedToSubsidiaries" xlink:to="uk-gaap-pt_AmountsOwedToSubsidiaries_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsOwedToSubsidiaries_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>6</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsOwedToSubsidiariesWithinOneYear" xlink:label="uk-gaap-pt_AmountsOwedToSubsidiariesWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsOwedToSubsidiariesWithinOneYear" xlink:to="uk-gaap-pt_AmountsOwedToSubsidiariesWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsOwedToSubsidiariesWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>6</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsRecoverableOnContracts" xlink:label="uk-gaap-pt_AmountsRecoverableOnContracts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsRecoverableOnContracts" xlink:to="uk-gaap-pt_AmountsRecoverableOnContracts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsRecoverableOnContracts_ref">
+      <ref:Name>SSAP</ref:Name>
+      <ref:Number>9</ref:Number>
+      <ref:Paragraph>30</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsRecoverableOnContractsWithinOneYear" xlink:label="uk-gaap-pt_AmountsRecoverableOnContractsWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsRecoverableOnContractsWithinOneYear" xlink:to="uk-gaap-pt_AmountsRecoverableOnContractsWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsRecoverableOnContractsWithinOneYear_ref">
+      <ref:Name>SSAP</ref:Name>
+      <ref:Number>9</ref:Number>
+      <ref:Paragraph>30</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_AmountsWrittenOffFixedAssetInvestments" xlink:label="uk-gaap-pt_AmountsWrittenOffFixedAssetInvestments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_AmountsWrittenOffFixedAssetInvestments" xlink:to="uk-gaap-pt_AmountsWrittenOffFixedAssetInvestments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_AmountsWrittenOffFixedAssetInvestments_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>13</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BalanceSheet" xlink:label="uk-gaap-pt_BalanceSheet" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BalanceSheet" xlink:to="uk-gaap-pt_BalanceSheet_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BalanceSheet_ref">
+      <ref:Subparagraph>61</ref:Subparagraph>
+    </reference>
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BalanceSheet_ref">
+      <ref:Name>?</ref:Name>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BankLoansOverdraftsAfterOneYear" xlink:label="uk-gaap-pt_BankLoansOverdraftsAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BankLoansOverdraftsAfterOneYear" xlink:to="uk-gaap-pt_BankLoansOverdraftsAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BankLoansOverdraftsAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BankLoansOverdrafts" xlink:label="uk-gaap-pt_BankLoansOverdrafts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BankLoansOverdrafts" xlink:to="uk-gaap-pt_BankLoansOverdrafts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BankLoansOverdrafts_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BankLoansOverdraftsWithinOneYear" xlink:label="uk-gaap-pt_BankLoansOverdraftsWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BankLoansOverdraftsWithinOneYear" xlink:to="uk-gaap-pt_BankLoansOverdraftsWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BankLoansOverdraftsWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BasicEPS" xlink:label="uk-gaap-pt_BasicEPS" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BasicEPS" xlink:to="uk-gaap-pt_BasicEPS_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BasicEPS_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>14</ref:Number>
+      <ref:Paragraph>69</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BillsExchangeAfterOneYear" xlink:label="uk-gaap-pt_BillsExchangeAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BillsExchangeAfterOneYear" xlink:to="uk-gaap-pt_BillsExchangeAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BillsExchangeAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>5</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BillsExchange" xlink:label="uk-gaap-pt_BillsExchange" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BillsExchange" xlink:to="uk-gaap-pt_BillsExchange_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BillsExchange_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>5</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_BillsExchangeWithinOneYear" xlink:label="uk-gaap-pt_BillsExchangeWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_BillsExchangeWithinOneYear" xlink:to="uk-gaap-pt_BillsExchangeWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_BillsExchangeWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>5</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAssetDueWithinOneYear" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAssetDueWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAssetDueWithinOneYear" xlink:to="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAssetDueWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAssetDueWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>5</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset" xlink:to="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidCurrentAsset_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>5</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset" xlink:to="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CalledUpShareCapitalNotPaidNotExpressedAsCurrentAsset_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>A</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CalledUpShareCapital" xlink:label="uk-gaap-pt_CalledUpShareCapital" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CalledUpShareCapital" xlink:to="uk-gaap-pt_CalledUpShareCapital_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CalledUpShareCapital_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KI</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CapitalElementFinanceLeaseRentalPayments" xlink:label="uk-gaap-pt_CapitalElementFinanceLeaseRentalPayments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CapitalElementFinanceLeaseRentalPayments" xlink:to="uk-gaap-pt_CapitalElementFinanceLeaseRentalPayments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CapitalElementFinanceLeaseRentalPayments_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>31</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CapitalRedemptionReserve" xlink:label="uk-gaap-pt_CapitalRedemptionReserve" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CapitalRedemptionReserve" xlink:to="uk-gaap-pt_CapitalRedemptionReserve_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CapitalRedemptionReserve_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KIV</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CashBankInHand" xlink:label="uk-gaap-pt_CashBankInHand" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CashBankInHand" xlink:to="uk-gaap-pt_CashBankInHand_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CashBankInHand_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CIV</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CashPaymentsToAcquireTradesOrBusinesses" xlink:label="uk-gaap-pt_CashPaymentsToAcquireTradesOrBusinesses" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CashPaymentsToAcquireTradesOrBusinesses" xlink:to="uk-gaap-pt_CashPaymentsToAcquireTradesOrBusinesses_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CashPaymentsToAcquireTradesOrBusinesses_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>23</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CashReceiptsOnSaleTradesOrBusinesses" xlink:label="uk-gaap-pt_CashReceiptsOnSaleTradesOrBusinesses" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CashReceiptsOnSaleTradesOrBusinesses" xlink:to="uk-gaap-pt_CashReceiptsOnSaleTradesOrBusinesses_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CashReceiptsOnSaleTradesOrBusinesses_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>24</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ConcessionsPatentsLicencesTradeMarksSimilar" xlink:label="uk-gaap-pt_ConcessionsPatentsLicencesTradeMarksSimilar" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ConcessionsPatentsLicencesTradeMarksSimilar" xlink:to="uk-gaap-pt_ConcessionsPatentsLicencesTradeMarksSimilar_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ConcessionsPatentsLicencesTradeMarksSimilar_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BI</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ConvertibleDebtFairValue" xlink:label="uk-gaap-pt_ConvertibleDebtFairValue" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ConvertibleDebtFairValue" xlink:to="uk-gaap-pt_ConvertibleDebtFairValue_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ConvertibleDebtFairValue_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ConvertibleDebtNoncurrentLiability" xlink:label="uk-gaap-pt_ConvertibleDebtNoncurrentLiability" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ConvertibleDebtNoncurrentLiability" xlink:to="uk-gaap-pt_ConvertibleDebtNoncurrentLiability_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ConvertibleDebtNoncurrentLiability_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ConvertibleDebt" xlink:label="uk-gaap-pt_ConvertibleDebt" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ConvertibleDebt" xlink:to="uk-gaap-pt_ConvertibleDebt_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ConvertibleDebt_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CostSales" xlink:label="uk-gaap-pt_CostSales" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CostSales" xlink:to="uk-gaap-pt_CostSales_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CostSales_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>2</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CreditorsDueAfterOneYearTotalNoncurrentLiabilities" xlink:label="uk-gaap-pt_CreditorsDueAfterOneYearTotalNoncurrentLiabilities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CreditorsDueAfterOneYearTotalNoncurrentLiabilities" xlink:to="uk-gaap-pt_CreditorsDueAfterOneYearTotalNoncurrentLiabilities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CreditorsDueAfterOneYearTotalNoncurrentLiabilities_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CreditorsDueWithinOneYearTotalCurrentLiabilities" xlink:label="uk-gaap-pt_CreditorsDueWithinOneYearTotalCurrentLiabilities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CreditorsDueWithinOneYearTotalCurrentLiabilities" xlink:to="uk-gaap-pt_CreditorsDueWithinOneYearTotalCurrentLiabilities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CreditorsDueWithinOneYearTotalCurrentLiabilities_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_CurrentAssets" xlink:label="uk-gaap-pt_CurrentAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_CurrentAssets" xlink:to="uk-gaap-pt_CurrentAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_CurrentAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>C</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DebentureLoansAfterOneYearFairValue" xlink:label="uk-gaap-pt_DebentureLoansAfterOneYearFairValue" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DebentureLoansAfterOneYearFairValue" xlink:to="uk-gaap-pt_DebentureLoansAfterOneYearFairValue_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DebentureLoansAfterOneYearFairValue_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DebentureLoansAfterOneYear" xlink:label="uk-gaap-pt_DebentureLoansAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DebentureLoansAfterOneYear" xlink:to="uk-gaap-pt_DebentureLoansAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DebentureLoansAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DebentureLoans" xlink:label="uk-gaap-pt_DebentureLoans" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DebentureLoans" xlink:to="uk-gaap-pt_DebentureLoans_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DebentureLoans_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DebentureLoansWithinOneYear" xlink:label="uk-gaap-pt_DebentureLoansWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DebentureLoansWithinOneYear" xlink:to="uk-gaap-pt_DebentureLoansWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DebentureLoansWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DebtorsDueAfterOneYear" xlink:label="uk-gaap-pt_DebtorsDueAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DebtorsDueAfterOneYear" xlink:to="uk-gaap-pt_DebtorsDueAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DebtorsDueAfterOneYear_ref">
+      <ref:Name>UITF</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DebtorsDueWithinOneYear" xlink:label="uk-gaap-pt_DebtorsDueWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DebtorsDueWithinOneYear" xlink:to="uk-gaap-pt_DebtorsDueWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DebtorsDueWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DepreciationAmountsWrittenOffFixedAssets" xlink:label="uk-gaap-pt_DepreciationAmountsWrittenOffFixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DepreciationAmountsWrittenOffFixedAssets" xlink:to="uk-gaap-pt_DepreciationAmountsWrittenOffFixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DepreciationAmountsWrittenOffFixedAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>7</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DevelopmentCosts" xlink:label="uk-gaap-pt_DevelopmentCosts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DevelopmentCosts" xlink:to="uk-gaap-pt_DevelopmentCosts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DevelopmentCosts_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BI</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DilutedEPS" xlink:label="uk-gaap-pt_DilutedEPS" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DilutedEPS" xlink:to="uk-gaap-pt_DilutedEPS_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DilutedEPS_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>14</ref:Number>
+      <ref:Paragraph>69</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DistributionCosts" xlink:label="uk-gaap-pt_DistributionCosts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DistributionCosts" xlink:to="uk-gaap-pt_DistributionCosts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DistributionCosts_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>4</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DividendsPaidToMinorityInterests" xlink:label="uk-gaap-pt_DividendsPaidToMinorityInterests" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DividendsPaidToMinorityInterests" xlink:to="uk-gaap-pt_DividendsPaidToMinorityInterests_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DividendsPaidToMinorityInterests_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>15</ref:Paragraph>
+      <ref:Subparagraph>e</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DividendsProposed" xlink:label="uk-gaap-pt_DividendsProposed" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DividendsProposed" xlink:to="uk-gaap-pt_DividendsProposed_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DividendsProposed_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>Sch 4 </ref:Number>
+      <ref:Chapter>3</ref:Chapter>
+      <ref:Paragraph>7</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_DividendsReceived" xlink:label="uk-gaap-pt_DividendsReceived" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_DividendsReceived" xlink:to="uk-gaap-pt_DividendsReceived_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_DividendsReceived_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>14</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_EarningsLossPerShare" xlink:label="uk-gaap-pt_EarningsLossPerShare" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_EarningsLossPerShare" xlink:to="uk-gaap-pt_EarningsLossPerShare_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_EarningsLossPerShare_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>14</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_EquityDividendsPaid" xlink:label="uk-gaap-pt_EquityDividendsPaid" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_EquityDividendsPaid" xlink:to="uk-gaap-pt_EquityDividendsPaid_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_EquityDividendsPaid_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>25</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_EquityShareholdersFunds" xlink:label="uk-gaap-pt_EquityShareholdersFunds" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_EquityShareholdersFunds" xlink:to="uk-gaap-pt_EquityShareholdersFunds_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_EquityShareholdersFunds_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ExceptionalAmountsWrittenOffCurrentAssets" xlink:label="uk-gaap-pt_ExceptionalAmountsWrittenOffCurrentAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ExceptionalAmountsWrittenOffCurrentAssets" xlink:to="uk-gaap-pt_ExceptionalAmountsWrittenOffCurrentAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ExceptionalAmountsWrittenOffCurrentAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>7</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ExpensesOrCommissionsOnIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests" xlink:label="uk-gaap-pt_ExpensesOrCommissionsOnIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ExpensesOrCommissionsOnIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests" xlink:to="uk-gaap-pt_ExpensesOrCommissionsOnIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ExpensesOrCommissionsOnIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>31</ref:Paragraph>
+      <ref:Subparagraph>d</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ExtraordinaryProfitLoss" xlink:label="uk-gaap-pt_ExtraordinaryProfitLoss" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ExtraordinaryProfitLoss" xlink:to="uk-gaap-pt_ExtraordinaryProfitLoss_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ExtraordinaryProfitLoss_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>22</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_FinanceChargesNet" xlink:label="uk-gaap-pt_FinanceChargesNet" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_FinanceChargesNet" xlink:to="uk-gaap-pt_FinanceChargesNet_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_FinanceChargesNet_ref">
+      <ref:Name>?</ref:Name>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_FinishedGoodsGoodsForResale" xlink:label="uk-gaap-pt_FinishedGoodsGoodsForResale" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_FinishedGoodsGoodsForResale" xlink:to="uk-gaap-pt_FinishedGoodsGoodsForResale_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_FinishedGoodsGoodsForResale_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CI</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_FixedAssets" xlink:label="uk-gaap-pt_FixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_FixedAssets" xlink:to="uk-gaap-pt_FixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_FixedAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>B</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_FixturesFittingsToolsEquipment" xlink:label="uk-gaap-pt_FixturesFittingsToolsEquipment" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_FixturesFittingsToolsEquipment" xlink:to="uk-gaap-pt_FixturesFittingsToolsEquipment_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_FixturesFittingsToolsEquipment_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BII</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ForeignTaxPaid" xlink:label="uk-gaap-pt_ForeignTaxPaid" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ForeignTaxPaid" xlink:to="uk-gaap-pt_ForeignTaxPaid_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ForeignTaxPaid_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>18</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_GainLossFromDisposalTangibleFixedAssetsNet" xlink:label="uk-gaap-pt_GainLossFromDisposalTangibleFixedAssetsNet" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_GainLossFromDisposalTangibleFixedAssetsNet" xlink:to="uk-gaap-pt_GainLossFromDisposalTangibleFixedAssetsNet_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_GainLossFromDisposalTangibleFixedAssetsNet_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>20</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_GainLossFromFundamentalRestructuringReorganisation" xlink:label="uk-gaap-pt_GainLossFromFundamentalRestructuringReorganisation" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_GainLossFromFundamentalRestructuringReorganisation" xlink:to="uk-gaap-pt_GainLossFromFundamentalRestructuringReorganisation_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_GainLossFromFundamentalRestructuringReorganisation_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>20</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_Goodwill" xlink:label="uk-gaap-pt_Goodwill" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_Goodwill" xlink:to="uk-gaap-pt_Goodwill_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_Goodwill_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BI</ref:Paragraph>
+      <ref:Subparagraph>13</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_GrossProfitLoss" xlink:label="uk-gaap-pt_GrossProfitLoss" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_GrossProfitLoss" xlink:to="uk-gaap-pt_GrossProfitLoss_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_GrossProfitLoss_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>3</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IncomeFromOtherFixedAssetInvestments" xlink:label="uk-gaap-pt_IncomeFromOtherFixedAssetInvestments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_IncomeFromOtherFixedAssetInvestments" xlink:to="uk-gaap-pt_IncomeFromOtherFixedAssetInvestments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_IncomeFromOtherFixedAssetInvestments_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>11</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IncomeFromSharesInAssociates" xlink:label="uk-gaap-pt_IncomeFromSharesInAssociates" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_IncomeFromSharesInAssociates" xlink:to="uk-gaap-pt_IncomeFromSharesInAssociates_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_IncomeFromSharesInAssociates_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>10</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IncomeFromSharesInSubsidiariesGroupUndertakings" xlink:label="uk-gaap-pt_IncomeFromSharesInSubsidiariesGroupUndertakings" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_IncomeFromSharesInSubsidiariesGroupUndertakings" xlink:to="uk-gaap-pt_IncomeFromSharesInSubsidiariesGroupUndertakings_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_IncomeFromSharesInSubsidiariesGroupUndertakings_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>9</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IncreaseDecreaseInStocksFinishedGoodsWorkInProgress" xlink:label="uk-gaap-pt_IncreaseDecreaseInStocksFinishedGoodsWorkInProgress" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_IncreaseDecreaseInStocksFinishedGoodsWorkInProgress" xlink:to="uk-gaap-pt_IncreaseDecreaseInStocksFinishedGoodsWorkInProgress_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_IncreaseDecreaseInStocksFinishedGoodsWorkInProgress_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>2</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IntangibleFixedAssets" xlink:label="uk-gaap-pt_IntangibleFixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_IntangibleFixedAssets" xlink:to="uk-gaap-pt_IntangibleFixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_IntangibleFixedAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BI</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_InterestElementFinanceLeaseRentalPayments" xlink:label="uk-gaap-pt_InterestElementFinanceLeaseRentalPayments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_InterestElementFinanceLeaseRentalPayments" xlink:to="uk-gaap-pt_InterestElementFinanceLeaseRentalPayments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_InterestElementFinanceLeaseRentalPayments_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>15</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_InterestOtherInvestmentIncomeReceived" xlink:label="uk-gaap-pt_InterestOtherInvestmentIncomeReceived" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_InterestOtherInvestmentIncomeReceived" xlink:to="uk-gaap-pt_InterestOtherInvestmentIncomeReceived_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_InterestOtherInvestmentIncomeReceived_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>14</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_InterestPaid" xlink:label="uk-gaap-pt_InterestPaid" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_InterestPaid" xlink:to="uk-gaap-pt_InterestPaid_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_InterestPaid_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>15</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_InvestmentInTermDeposits" xlink:label="uk-gaap-pt_InvestmentInTermDeposits" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_InvestmentInTermDeposits" xlink:to="uk-gaap-pt_InvestmentInTermDeposits_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_InvestmentInTermDeposits_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>28</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_InvestmentProperties" xlink:label="uk-gaap-pt_InvestmentProperties" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_InvestmentProperties" xlink:to="uk-gaap-pt_InvestmentProperties_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_InvestmentProperties_ref">
+      <ref:Name>S</ref:Name>
+      <ref:Number>19</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_InvestmentsCurrentAssets" xlink:label="uk-gaap-pt_InvestmentsCurrentAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_InvestmentsCurrentAssets" xlink:to="uk-gaap-pt_InvestmentsCurrentAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_InvestmentsCurrentAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CIII</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_IssueCostsNewFinance" xlink:label="uk-gaap-pt_IssueCostsNewFinance" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_IssueCostsNewFinance" xlink:to="uk-gaap-pt_IssueCostsNewFinance_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_IssueCostsNewFinance_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>15</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_LandBuildings" xlink:label="uk-gaap-pt_LandBuildings" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_LandBuildings" xlink:to="uk-gaap-pt_LandBuildings_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_LandBuildings_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BII</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_MergerOrAcquisitionExpenses" xlink:label="uk-gaap-pt_MergerOrAcquisitionExpenses" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_MergerOrAcquisitionExpenses" xlink:to="uk-gaap-pt_MergerOrAcquisitionExpenses_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_MergerOrAcquisitionExpenses_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>6</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_MinorityInterestBalanceSheet" xlink:label="uk-gaap-pt_MinorityInterestBalanceSheet" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_MinorityInterestBalanceSheet" xlink:to="uk-gaap-pt_MinorityInterestBalanceSheet_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_MinorityInterestBalanceSheet_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>Sch 4A</ref:Number>
+      <ref:Chapter>17</ref:Chapter>
+      <ref:Paragraph>2</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" xlink:label="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability" xlink:to="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_ref">
+      <ref:Name>?</ref:Name>
+    </reference>
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetAssetsLiabilitiesIncludingPensionAssetLiability_ref">
+      <ref:Subparagraph>62</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCashFlowOutflowFromAcquisitionsDisposals" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromAcquisitionsDisposals" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCashFlowOutflowFromAcquisitionsDisposals" xlink:to="uk-gaap-pt_NetCashFlowOutflowFromAcquisitionsDisposals_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromAcquisitionsDisposals_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>22</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment" xlink:to="uk-gaap-pt_NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromCapitalExpenditureFinancialInvestment_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>19</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCashFlowOutflowFromFinancing" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromFinancing" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCashFlowOutflowFromFinancing" xlink:to="uk-gaap-pt_NetCashFlowOutflowFromFinancing_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromFinancing_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>29</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCashFlowOutflowFromManagementChangeInLiquidResources" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromManagementChangeInLiquidResources" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCashFlowOutflowFromManagementChangeInLiquidResources" xlink:to="uk-gaap-pt_NetCashFlowOutflowFromManagementChangeInLiquidResources_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromManagementChangeInLiquidResources_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>26</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCashFlowOutflowFromOperatingActivities" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromOperatingActivities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCashFlowOutflowFromOperatingActivities" xlink:to="uk-gaap-pt_NetCashFlowOutflowFromOperatingActivities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromOperatingActivities_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>11</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance" xlink:to="uk-gaap-pt_NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCashFlowOutflowFromReturnsOnInvestmentsServicingFinance_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>13</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetCurrentAssetsLiabilities" xlink:label="uk-gaap-pt_NetCurrentAssetsLiabilities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetCurrentAssetsLiabilities" xlink:to="uk-gaap-pt_NetCurrentAssetsLiabilities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetCurrentAssetsLiabilities_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>F</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetFixedAssetInvestmentsInJointVentures" xlink:label="uk-gaap-pt_NetFixedAssetInvestmentsInJointVentures" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetFixedAssetInvestmentsInJointVentures" xlink:to="uk-gaap-pt_NetFixedAssetInvestmentsInJointVentures_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetFixedAssetInvestmentsInJointVentures_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>9</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetIncreaseDecreaseInBorrowings" xlink:label="uk-gaap-pt_NetIncreaseDecreaseInBorrowings" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetIncreaseDecreaseInBorrowings" xlink:to="uk-gaap-pt_NetIncreaseDecreaseInBorrowings_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetIncreaseDecreaseInBorrowings_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>31</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetPaymentsForReacquisitionOrRedemptionShares" xlink:label="uk-gaap-pt_NetPaymentsForReacquisitionOrRedemptionShares" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetPaymentsForReacquisitionOrRedemptionShares" xlink:to="uk-gaap-pt_NetPaymentsForReacquisitionOrRedemptionShares_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetPaymentsForReacquisitionOrRedemptionShares_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>31</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NetProceedsFromIssueDebenturesLoansNotesBondsOtherLongTermInstruments" xlink:label="uk-gaap-pt_NetProceedsFromIssueDebenturesLoansNotesBondsOtherLongTermInstruments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NetProceedsFromIssueDebenturesLoansNotesBondsOtherLongTermInstruments" xlink:to="uk-gaap-pt_NetProceedsFromIssueDebenturesLoansNotesBondsOtherLongTermInstruments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NetProceedsFromIssueDebenturesLoansNotesBondsOtherLongTermInstruments_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>30</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NonEquityDividendsPaidCashFlow" xlink:label="uk-gaap-pt_NonEquityDividendsPaidCashFlow" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NonEquityDividendsPaidCashFlow" xlink:to="uk-gaap-pt_NonEquityDividendsPaidCashFlow_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NonEquityDividendsPaidCashFlow_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>15</ref:Paragraph>
+      <ref:Subparagraph>d</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NonEquityFinanceCosts" xlink:label="uk-gaap-pt_NonEquityFinanceCosts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NonEquityFinanceCosts" xlink:to="uk-gaap-pt_NonEquityFinanceCosts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NonEquityFinanceCosts_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NonEquityMinorityInterestsOrdinaryActivities" xlink:label="uk-gaap-pt_NonEquityMinorityInterestsOrdinaryActivities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NonEquityMinorityInterestsOrdinaryActivities" xlink:to="uk-gaap-pt_NonEquityMinorityInterestsOrdinaryActivities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NonEquityMinorityInterestsOrdinaryActivities_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+      <ref:Paragraph>60</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NonEquityShareholdersFunds" xlink:label="uk-gaap-pt_NonEquityShareholdersFunds" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NonEquityShareholdersFunds" xlink:to="uk-gaap-pt_NonEquityShareholdersFunds_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NonEquityShareholdersFunds_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>4</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_NoteHistoricalCostProfitsLosses" xlink:label="uk-gaap-pt_NoteHistoricalCostProfitsLosses" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_NoteHistoricalCostProfitsLosses" xlink:to="uk-gaap-pt_NoteHistoricalCostProfitsLosses_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_NoteHistoricalCostProfitsLosses_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>62</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYearFairValue" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYearFairValue" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYearFairValue" xlink:to="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYearFairValue_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYearFairValue_ref">
+      <ref:Name>SSAP</ref:Name>
+      <ref:Number>21</ref:Number>
+      <ref:Paragraph>52</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYear" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYear" xlink:to="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsAfterOneYear_ref">
+      <ref:Name>SSAP</ref:Name>
+      <ref:Number>21</ref:Number>
+      <ref:Paragraph>52</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContracts" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContracts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContracts" xlink:to="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContracts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContracts_ref">
+      <ref:Name>SSAP</ref:Name>
+      <ref:Number>21</ref:Number>
+      <ref:Paragraph>52</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsWithinOneYear" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsWithinOneYear" xlink:to="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ObligationsUnderFinanceLeaseHirePurchaseContractsWithinOneYear_ref">
+      <ref:Name>SSAP</ref:Name>
+      <ref:Number>21</ref:Number>
+      <ref:Paragraph>52</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityAfterOneYear" xlink:label="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityAfterOneYear" xlink:to="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>8</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurity" xlink:label="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurity" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurity" xlink:to="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurity_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurity_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>8</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityWithinOneYear" xlink:label="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityWithinOneYear" xlink:to="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherCreditorsIncludingTaxationSocialSecurityWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>8</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherDebtors" xlink:label="uk-gaap-pt_OtherDebtors" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherDebtors" xlink:to="uk-gaap-pt_OtherDebtors_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherDebtors_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherDebtorsWithinOneYear" xlink:label="uk-gaap-pt_OtherDebtorsWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherDebtorsWithinOneYear" xlink:to="uk-gaap-pt_OtherDebtorsWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherDebtorsWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherEPS" xlink:label="uk-gaap-pt_OtherEPS" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherEPS" xlink:to="uk-gaap-pt_OtherEPS_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherEPS_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>14</ref:Number>
+      <ref:Paragraph>74</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherExternalCharges" xlink:label="uk-gaap-pt_OtherExternalCharges" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherExternalCharges" xlink:to="uk-gaap-pt_OtherExternalCharges_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherExternalCharges_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>5</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherInvestmentsHeldForSale" xlink:label="uk-gaap-pt_OtherInvestmentsHeldForSale" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherInvestmentsHeldForSale" xlink:to="uk-gaap-pt_OtherInvestmentsHeldForSale_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherInvestmentsHeldForSale_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CIII</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherOperatingIncomeFormat1" xlink:label="uk-gaap-pt_OtherOperatingIncomeFormat1" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherOperatingIncomeFormat1" xlink:to="uk-gaap-pt_OtherOperatingIncomeFormat1_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherOperatingIncomeFormat1_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>4</ref:Paragraph>
+    </reference>
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherOperatingIncomeFormat1_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>6</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherReserves" xlink:label="uk-gaap-pt_OtherReserves" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherReserves" xlink:to="uk-gaap-pt_OtherReserves_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherReserves_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KIV</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OtherUKTaxPaid" xlink:label="uk-gaap-pt_OtherUKTaxPaid" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OtherUKTaxPaid" xlink:to="uk-gaap-pt_OtherUKTaxPaid_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OtherUKTaxPaid_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>18</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OwnSharesFixedAsset" xlink:label="uk-gaap-pt_OwnSharesFixedAsset" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OwnSharesFixedAsset" xlink:to="uk-gaap-pt_OwnSharesFixedAsset_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OwnSharesFixedAsset_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BIII</ref:Paragraph>
+      <ref:Subparagraph>7</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OwnSharesHeldForSale" xlink:label="uk-gaap-pt_OwnSharesHeldForSale" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OwnSharesHeldForSale" xlink:to="uk-gaap-pt_OwnSharesHeldForSale_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OwnSharesHeldForSale_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CIII</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_OwnWorkCapitalised" xlink:label="uk-gaap-pt_OwnWorkCapitalised" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_OwnWorkCapitalised" xlink:to="uk-gaap-pt_OwnWorkCapitalised_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_OwnWorkCapitalised_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>3</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PaymentsOnAccountFixedAsset" xlink:label="uk-gaap-pt_PaymentsOnAccountFixedAsset" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PaymentsOnAccountFixedAsset" xlink:to="uk-gaap-pt_PaymentsOnAccountFixedAsset_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PaymentsOnAccountFixedAsset_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BI</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PaymentsReceivedOnAccountAfterOneYear" xlink:label="uk-gaap-pt_PaymentsReceivedOnAccountAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PaymentsReceivedOnAccountAfterOneYear" xlink:to="uk-gaap-pt_PaymentsReceivedOnAccountAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PaymentsReceivedOnAccountAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PaymentsReceivedOnAccount" xlink:label="uk-gaap-pt_PaymentsReceivedOnAccount" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PaymentsReceivedOnAccount" xlink:to="uk-gaap-pt_PaymentsReceivedOnAccount_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PaymentsReceivedOnAccount_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PaymentsReceivedOnAccountWithinOneYear" xlink:label="uk-gaap-pt_PaymentsReceivedOnAccountWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PaymentsReceivedOnAccountWithinOneYear" xlink:to="uk-gaap-pt_PaymentsReceivedOnAccountWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PaymentsReceivedOnAccountWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PensionCosts" xlink:label="uk-gaap-pt_PensionCosts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PensionCosts" xlink:to="uk-gaap-pt_PensionCosts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PensionCosts_ref">
+      <ref:Name>ca</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>6</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PlantMachinery" xlink:label="uk-gaap-pt_PlantMachinery" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PlantMachinery" xlink:to="uk-gaap-pt_PlantMachinery_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PlantMachinery_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BII</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAssetDueWithinOneYear" xlink:label="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAssetDueWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAssetDueWithinOneYear" xlink:to="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAssetDueWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAssetDueWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>6</ref:Subparagraph>
+    </reference>
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAssetDueWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>D</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAsset" xlink:label="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAsset" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAsset" xlink:to="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAsset_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAsset_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>D</ref:Paragraph>
+    </reference>
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PrepaymentsAccruedIncomeCurrentAsset_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>6</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests" xlink:label="uk-gaap-pt_ProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests" xlink:to="uk-gaap-pt_ProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProceedsFromIssueSharesOtherEquityInstrumentsExcludingSharesIssuedToMinorityInterests_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>30</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProfitLossAccountReserve" xlink:label="uk-gaap-pt_ProfitLossAccountReserve" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProfitLossAccountReserve" xlink:to="uk-gaap-pt_ProfitLossAccountReserve_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProfitLossAccountReserve_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KV</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProfitLossForFinancialYearBeforeDividendAppropriations" xlink:label="uk-gaap-pt_ProfitLossForFinancialYearBeforeDividendAppropriations" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProfitLossForFinancialYearBeforeDividendAppropriations" xlink:to="uk-gaap-pt_ProfitLossForFinancialYearBeforeDividendAppropriations_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProfitLossForFinancialYearBeforeDividendAppropriations_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>22</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProfitLossOnOrdinaryActivitiesAfterTax" xlink:label="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesAfterTax" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesAfterTax" xlink:to="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesAfterTax_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesAfterTax_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>16</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeFinanceChargesInterest" xlink:label="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeFinanceChargesInterest" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeFinanceChargesInterest" xlink:to="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeFinanceChargesInterest_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeFinanceChargesInterest_ref">
+      <ref:Name>?</ref:Name>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeTax" xlink:label="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeTax" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeTax" xlink:to="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeTax_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProfitLossOnOrdinaryActivitiesBeforeTax_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProvisionsForDeferredConsiderations" xlink:label="uk-gaap-pt_ProvisionsForDeferredConsiderations" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProvisionsForDeferredConsiderations" xlink:to="uk-gaap-pt_ProvisionsForDeferredConsiderations_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProvisionsForDeferredConsiderations_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>I</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProvisionsForLiabilitiesCharges" xlink:label="uk-gaap-pt_ProvisionsForLiabilitiesCharges" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProvisionsForLiabilitiesCharges" xlink:to="uk-gaap-pt_ProvisionsForLiabilitiesCharges_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProvisionsForLiabilitiesCharges_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>I</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProvisionsForProductGuarantees" xlink:label="uk-gaap-pt_ProvisionsForProductGuarantees" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProvisionsForProductGuarantees" xlink:to="uk-gaap-pt_ProvisionsForProductGuarantees_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProvisionsForProductGuarantees_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>I</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProvisionsForRestructuringOrReorganisation" xlink:label="uk-gaap-pt_ProvisionsForRestructuringOrReorganisation" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProvisionsForRestructuringOrReorganisation" xlink:to="uk-gaap-pt_ProvisionsForRestructuringOrReorganisation_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProvisionsForRestructuringOrReorganisation_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>I</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ProvisionsForVacantProperties" xlink:label="uk-gaap-pt_ProvisionsForVacantProperties" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ProvisionsForVacantProperties" xlink:to="uk-gaap-pt_ProvisionsForVacantProperties_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ProvisionsForVacantProperties_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>I</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PurchaseCurrentAssetInvestmentsAcquisitionLiquidResources" xlink:label="uk-gaap-pt_PurchaseCurrentAssetInvestmentsAcquisitionLiquidResources" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PurchaseCurrentAssetInvestmentsAcquisitionLiquidResources" xlink:to="uk-gaap-pt_PurchaseCurrentAssetInvestmentsAcquisitionLiquidResources_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PurchaseCurrentAssetInvestmentsAcquisitionLiquidResources_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>27</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PurchaseFixedAssetInvestments" xlink:label="uk-gaap-pt_PurchaseFixedAssetInvestments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PurchaseFixedAssetInvestments" xlink:to="uk-gaap-pt_PurchaseFixedAssetInvestments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PurchaseFixedAssetInvestments_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>21</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_PurchaseTangibleFixedAssets" xlink:label="uk-gaap-pt_PurchaseTangibleFixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_PurchaseTangibleFixedAssets" xlink:to="uk-gaap-pt_PurchaseTangibleFixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_PurchaseTangibleFixedAssets_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>21</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_RawMaterialsConsumablesCurrentAssets" xlink:label="uk-gaap-pt_RawMaterialsConsumablesCurrentAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_RawMaterialsConsumablesCurrentAssets" xlink:to="uk-gaap-pt_RawMaterialsConsumablesCurrentAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_RawMaterialsConsumablesCurrentAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CI</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_RawMaterialsConsumables" xlink:label="uk-gaap-pt_RawMaterialsConsumables" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_RawMaterialsConsumables" xlink:to="uk-gaap-pt_RawMaterialsConsumables_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_RawMaterialsConsumables_ref">
+      <ref:Chapter>46</ref:Chapter>
+      <ref:Paragraph>183</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ReconciliationMovementsInShareholdersFunds" xlink:label="uk-gaap-pt_ReconciliationMovementsInShareholdersFunds" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ReconciliationMovementsInShareholdersFunds" xlink:to="uk-gaap-pt_ReconciliationMovementsInShareholdersFunds_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ReconciliationMovementsInShareholdersFunds_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>28</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ReserveForOwnShares" xlink:label="uk-gaap-pt_ReserveForOwnShares" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ReserveForOwnShares" xlink:to="uk-gaap-pt_ReserveForOwnShares_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ReserveForOwnShares_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KIV</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ReservesRequiredByArticlesAssociation" xlink:label="uk-gaap-pt_ReservesRequiredByArticlesAssociation" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ReservesRequiredByArticlesAssociation" xlink:to="uk-gaap-pt_ReservesRequiredByArticlesAssociation_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ReservesRequiredByArticlesAssociation_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KIV</ref:Paragraph>
+      <ref:Subparagraph>3</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_RetainedProfitLossForFinancialYearTransferredToReserves" xlink:label="uk-gaap-pt_RetainedProfitLossForFinancialYearTransferredToReserves" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_RetainedProfitLossForFinancialYearTransferredToReserves" xlink:to="uk-gaap-pt_RetainedProfitLossForFinancialYearTransferredToReserves_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_RetainedProfitLossForFinancialYearTransferredToReserves_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>22</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_RevaluationReserve" xlink:label="uk-gaap-pt_RevaluationReserve" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_RevaluationReserve" xlink:to="uk-gaap-pt_RevaluationReserve_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_RevaluationReserve_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KIII</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SaleFixedAssetInvestments" xlink:label="uk-gaap-pt_SaleFixedAssetInvestments" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SaleFixedAssetInvestments" xlink:to="uk-gaap-pt_SaleFixedAssetInvestments_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SaleFixedAssetInvestments_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>20</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SalesCurrentAssetInvestmentsDisposalsRedemptionsLiquidResources" xlink:label="uk-gaap-pt_SalesCurrentAssetInvestmentsDisposalsRedemptionsLiquidResources" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SalesCurrentAssetInvestmentsDisposalsRedemptionsLiquidResources" xlink:to="uk-gaap-pt_SalesCurrentAssetInvestmentsDisposalsRedemptionsLiquidResources_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SalesCurrentAssetInvestmentsDisposalsRedemptionsLiquidResources_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>27</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SaleTangibleFixedAssets" xlink:label="uk-gaap-pt_SaleTangibleFixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SaleTangibleFixedAssets" xlink:to="uk-gaap-pt_SaleTangibleFixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SaleTangibleFixedAssets_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>20</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ShareGrossAssetsInJointVentures" xlink:label="uk-gaap-pt_ShareGrossAssetsInJointVentures" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ShareGrossAssetsInJointVentures" xlink:to="uk-gaap-pt_ShareGrossAssetsInJointVentures_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ShareGrossAssetsInJointVentures_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>9</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ShareOperatingProfitLossFromAssociates" xlink:label="uk-gaap-pt_ShareOperatingProfitLossFromAssociates" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ShareOperatingProfitLossFromAssociates" xlink:to="uk-gaap-pt_ShareOperatingProfitLossFromAssociates_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ShareOperatingProfitLossFromAssociates_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>9</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ShareOperatingProfitLossFromJointVentures" xlink:label="uk-gaap-pt_ShareOperatingProfitLossFromJointVentures" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ShareOperatingProfitLossFromJointVentures" xlink:to="uk-gaap-pt_ShareOperatingProfitLossFromJointVentures_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ShareOperatingProfitLossFromJointVentures_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>9</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SharePremiumAccount" xlink:label="uk-gaap-pt_SharePremiumAccount" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SharePremiumAccount" xlink:to="uk-gaap-pt_SharePremiumAccount_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SharePremiumAccount_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>KII</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_ShareRevenueFromIndividualJointVenture" xlink:label="uk-gaap-pt_ShareRevenueFromIndividualJointVenture" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_ShareRevenueFromIndividualJointVenture" xlink:to="uk-gaap-pt_ShareRevenueFromIndividualJointVenture_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_ShareRevenueFromIndividualJointVenture_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>9</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SharesGrossLiabilitiesInJointVentures" xlink:label="uk-gaap-pt_SharesGrossLiabilitiesInJointVentures" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SharesGrossLiabilitiesInJointVentures" xlink:to="uk-gaap-pt_SharesGrossLiabilitiesInJointVentures_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SharesGrossLiabilitiesInJointVentures_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>9</ref:Number>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SharesInSubsidiariesHeldForSale" xlink:label="uk-gaap-pt_SharesInSubsidiariesHeldForSale" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SharesInSubsidiariesHeldForSale" xlink:to="uk-gaap-pt_SharesInSubsidiariesHeldForSale_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SharesInSubsidiariesHeldForSale_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CIII</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SharesInSubsidiariesNetBookValue" xlink:label="uk-gaap-pt_SharesInSubsidiariesNetBookValue" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SharesInSubsidiariesNetBookValue" xlink:to="uk-gaap-pt_SharesInSubsidiariesNetBookValue_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SharesInSubsidiariesNetBookValue_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BIII</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_SocialSecurityCosts" xlink:label="uk-gaap-pt_SocialSecurityCosts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_SocialSecurityCosts" xlink:to="uk-gaap-pt_SocialSecurityCosts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_SocialSecurityCosts_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>6</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_StaffCosts" xlink:label="uk-gaap-pt_StaffCosts" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_StaffCosts" xlink:to="uk-gaap-pt_StaffCosts_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_StaffCosts_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>6</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_StatementTotalRecognisedGainsLosses" xlink:label="uk-gaap-pt_StatementTotalRecognisedGainsLosses" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_StatementTotalRecognisedGainsLosses" xlink:to="uk-gaap-pt_StatementTotalRecognisedGainsLosses_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_StatementTotalRecognisedGainsLosses_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>27</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_StocksInventory" xlink:label="uk-gaap-pt_StocksInventory" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_StocksInventory" xlink:to="uk-gaap-pt_StocksInventory_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_StocksInventory_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CI</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TangibleFixedAssets" xlink:label="uk-gaap-pt_TangibleFixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TangibleFixedAssets" xlink:to="uk-gaap-pt_TangibleFixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TangibleFixedAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BII</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TaxationPaid" xlink:label="uk-gaap-pt_TaxationPaid" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TaxationPaid" xlink:to="uk-gaap-pt_TaxationPaid_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TaxationPaid_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>16</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TaxRelatedToProfitOrLossOnOrdinaryActivities" xlink:label="uk-gaap-pt_TaxRelatedToProfitOrLossOnOrdinaryActivities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TaxRelatedToProfitOrLossOnOrdinaryActivities" xlink:to="uk-gaap-pt_TaxRelatedToProfitOrLossOnOrdinaryActivities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TaxRelatedToProfitOrLossOnOrdinaryActivities_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>15</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalAssetsLessCurrentLiabilities" xlink:label="uk-gaap-pt_TotalAssetsLessCurrentLiabilities" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalAssetsLessCurrentLiabilities" xlink:to="uk-gaap-pt_TotalAssetsLessCurrentLiabilities_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalAssetsLessCurrentLiabilities_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>G</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalCashPaymentsToAcquireJointVenturesAssociates" xlink:label="uk-gaap-pt_TotalCashPaymentsToAcquireJointVenturesAssociates" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalCashPaymentsToAcquireJointVenturesAssociates" xlink:to="uk-gaap-pt_TotalCashPaymentsToAcquireJointVenturesAssociates_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalCashPaymentsToAcquireJointVenturesAssociates_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>23</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalCashReceiptsOnSaleJointVenturesAssociates" xlink:label="uk-gaap-pt_TotalCashReceiptsOnSaleJointVenturesAssociates" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalCashReceiptsOnSaleJointVenturesAssociates" xlink:to="uk-gaap-pt_TotalCashReceiptsOnSaleJointVenturesAssociates_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalCashReceiptsOnSaleJointVenturesAssociates_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>24</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalCreditors" xlink:label="uk-gaap-pt_TotalCreditors" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalCreditors" xlink:to="uk-gaap-pt_TotalCreditors_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalCreditors_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalGainLossOnSaleOrTerminationOperation" xlink:label="uk-gaap-pt_TotalGainLossOnSaleOrTerminationOperation" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalGainLossOnSaleOrTerminationOperation" xlink:to="uk-gaap-pt_TotalGainLossOnSaleOrTerminationOperation_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalGainLossOnSaleOrTerminationOperation_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>20</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalInterestPayableSimilarCharges" xlink:label="uk-gaap-pt_TotalInterestPayableSimilarCharges" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalInterestPayableSimilarCharges" xlink:to="uk-gaap-pt_TotalInterestPayableSimilarCharges_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalInterestPayableSimilarCharges_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>14</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalInterestReceivableSimilarIncome" xlink:label="uk-gaap-pt_TotalInterestReceivableSimilarIncome" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalInterestReceivableSimilarIncome" xlink:to="uk-gaap-pt_TotalInterestReceivableSimilarIncome_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalInterestReceivableSimilarIncome_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>12</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalInvestmentsFixedAssets" xlink:label="uk-gaap-pt_TotalInvestmentsFixedAssets" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalInvestmentsFixedAssets" xlink:to="uk-gaap-pt_TotalInvestmentsFixedAssets_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalInvestmentsFixedAssets_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BIII</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalLoansToUndertakingsInWhichEntityHasParticipatingInterest" xlink:label="uk-gaap-pt_TotalLoansToUndertakingsInWhichEntityHasParticipatingInterest" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalLoansToUndertakingsInWhichEntityHasParticipatingInterest" xlink:to="uk-gaap-pt_TotalLoansToUndertakingsInWhichEntityHasParticipatingInterest_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalLoansToUndertakingsInWhichEntityHasParticipatingInterest_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>BIII</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TotalRecognisedGainsLossesForPeriod" xlink:label="uk-gaap-pt_TotalRecognisedGainsLossesForPeriod" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TotalRecognisedGainsLossesForPeriod" xlink:to="uk-gaap-pt_TotalRecognisedGainsLossesForPeriod_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TotalRecognisedGainsLossesForPeriod_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>3</ref:Number>
+      <ref:Paragraph>27</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TradeCreditorsAfterOneYear" xlink:label="uk-gaap-pt_TradeCreditorsAfterOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TradeCreditorsAfterOneYear" xlink:to="uk-gaap-pt_TradeCreditorsAfterOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TradeCreditorsAfterOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TradeCreditors" xlink:label="uk-gaap-pt_TradeCreditors" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TradeCreditors" xlink:to="uk-gaap-pt_TradeCreditors_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TradeCreditors_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>H</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TradeCreditorsWithinOneYear" xlink:label="uk-gaap-pt_TradeCreditorsWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TradeCreditorsWithinOneYear" xlink:to="uk-gaap-pt_TradeCreditorsWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TradeCreditorsWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>E</ref:Paragraph>
+      <ref:Subparagraph>4</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TradeDebtors" xlink:label="uk-gaap-pt_TradeDebtors" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TradeDebtors" xlink:to="uk-gaap-pt_TradeDebtors_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TradeDebtors_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TradeDebtorsWithinOneYear" xlink:label="uk-gaap-pt_TradeDebtorsWithinOneYear" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TradeDebtorsWithinOneYear" xlink:to="uk-gaap-pt_TradeDebtorsWithinOneYear_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TradeDebtorsWithinOneYear_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CII</ref:Paragraph>
+      <ref:Subparagraph>1</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_TurnoverGrossOperatingRevenue" xlink:label="uk-gaap-pt_TurnoverGrossOperatingRevenue" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_TurnoverGrossOperatingRevenue" xlink:to="uk-gaap-pt_TurnoverGrossOperatingRevenue_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TurnoverGrossOperatingRevenue_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>1</ref:Paragraph>
+    </reference>
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_TurnoverGrossOperatingRevenue_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>1</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_UKCorporationTaxPaid" xlink:label="uk-gaap-pt_UKCorporationTaxPaid" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_UKCorporationTaxPaid" xlink:to="uk-gaap-pt_UKCorporationTaxPaid_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_UKCorporationTaxPaid_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>18</ref:Paragraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_WagesSalaries" xlink:label="uk-gaap-pt_WagesSalaries" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_WagesSalaries" xlink:to="uk-gaap-pt_WagesSalaries_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_WagesSalaries_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:Paragraph>6</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_WithdrawalFromTermDeposits" xlink:label="uk-gaap-pt_WithdrawalFromTermDeposits" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_WithdrawalFromTermDeposits" xlink:to="uk-gaap-pt_WithdrawalFromTermDeposits_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_WithdrawalFromTermDeposits_ref">
+      <ref:Name>FRS</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>27</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+    </reference>
+    <loc xlink:type="locator" xlink:href="uk-gaap-pt-2004-12-01.xsd#uk-gaap-pt_WorkInProgress" xlink:label="uk-gaap-pt_WorkInProgress" />
+    <referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="uk-gaap-pt_WorkInProgress" xlink:to="uk-gaap-pt_WorkInProgress_ref" />
+    <reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:label="uk-gaap-pt_WorkInProgress_ref">
+      <ref:Name>CA</ref:Name>
+      <ref:Number>1</ref:Number>
+      <ref:Paragraph>CI</ref:Paragraph>
+      <ref:Subparagraph>2</ref:Subparagraph>
+    </reference>
+  </referenceLink>
+</linkbase>

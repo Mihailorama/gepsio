@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15"
+      xmlns:xbrldi="http://xbrl.org/2006/xbrldi">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR-LANDBUILDINGS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:LandBuildings</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR-PLANTMACHINERY">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:PlantMachinery</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR-FIXTURESFITTINGS">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:FixturesFittings</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR-TOOLSEQUIPMENT">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+        <xbrldi:explicitMember dimension="uk-gaap-pt:TangibleFixedAssetClassesDimension">uk-gaap-pt:ToolsEquipment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <uk-gaap-pt:StatementOnBasisMeasurementPreparationAccounts contextRef="CURRENT_YEAR">The financial statements has been prepared under the historical cost convention, as modified by the revaluation of certain fixed assets.</uk-gaap-pt:StatementOnBasisMeasurementPreparationAccounts>
+  <uk-gaap-pt:TurnoverPolicy contextRef="CURRENT_YEAR">Turnover represents net invoiced sales of goods and services, excluding VAT.</uk-gaap-pt:TurnoverPolicy>
+  <uk-gaap-pt:DepreciationPolicy contextRef="CURRENT_YEAR">Depreciation is provided on tangible fixed assets, after taking account of any grants receivable, in order to write off the cost or valuation of each asset, less any estimated residual value, over its estimated useful life.</uk-gaap-pt:DepreciationPolicy>
+  <uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets contextRef="CURRENT_YEAR-LANDBUILDINGS">2% on cost or revalued amount</uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets>
+  <uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets contextRef="CURRENT_YEAR-PLANTMACHINERY">15% on cost</uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets>
+  <uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets contextRef="CURRENT_YEAR-FIXTURESFITTINGS">10% on cost</uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets>
+  <uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets contextRef="CURRENT_YEAR-TOOLSEQUIPMENT">20% on cost</uk-gaap-pt:DepreciationMethodRateOrUsefulEconomicLifeForTangibleFixedAssets>
+  <uk-gaap-pt:StocksWorkInProgressLong-termContractsPolicy contextRef="CURRENT_YEAR">Stocks are valued at the lower of cost and net realisable value, after allowing for obsolete and slow-moving items. Cost includes all direct expenditure and an appropriate proportion of fixed and variable overheads.</uk-gaap-pt:StocksWorkInProgressLong-termContractsPolicy>
+  <uk-gaap-pt:StocksWorkInProgressLong-termContractsPolicy contextRef="CURRENT_YEAR">Stocks are valued at the lower of cost and net realisable value, after allowing for obsolete and slow-moving items. Cost includes all direct expenditure and an appropriate proportion of fixed and variable overheads. Net realisable value is based on an estimated selling price less any further costs expected to be incurred to completion and disposal.</uk-gaap-pt:StocksWorkInProgressLong-termContractsPolicy>
+  <uk-gaap-pt:ResearchDevelopmentPolicy contextRef="CURRENT_YEAR">Expenditure on research and development is written off in the year in which it is incurred.</uk-gaap-pt:ResearchDevelopmentPolicy>
+  <uk-gaap-pt:TaxationDeferredTaxationPolicy contextRef="CURRENT_YEAR">Deferred taxation arises as a result of including items of income and expenditure in taxation computations in periods different from those in which they are included in the company's accounts. Deferred tax is provided in full on timing differences which result in an obligation to pay more, or less, tax at a future date, at the average tax rates that are expected to apply when the timing differences reverse, based on tax rates an laws enacted or substantively enacted at the balance sheet date.</uk-gaap-pt:TaxationDeferredTaxationPolicy>
+  <uk-gaap-pt:DescriptionTranslationAmountsInForeignCurrenciesIncludingResultsForeignEntities contextRef="CURRENT_YEAR">Transactions in foreign currencies are translated at the rate of exchange ruling at the date of transaction. Monetary assets and liabilities in foreign currencies are translated at the rate of exchange ruling at the balance sheet date.</uk-gaap-pt:DescriptionTranslationAmountsInForeignCurrenciesIncludingResultsForeignEntities>
+  <uk-gaap-pt:DescriptionTreatmentForeignExchangeDifferences contextRef="CURRENT_YEAR">Exchange differences are taken to the profit and loss account.</uk-gaap-pt:DescriptionTreatmentForeignExchangeDifferences>
+</xbrl>

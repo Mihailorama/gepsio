@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ct-FixedAss="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-FixedAss/2006-07-03"
+            xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-FixedAss/2006-07-03">
+   <xsd:import namespace="http://www.xbrl.org/2003/instance"
+               schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:annotation>
+      <xsd:appinfo>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-presentation-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+                         xlink:type="simple"/>
+         <lb:linkbaseRef xmlns:lb="http://www.xbrl.org/2003/linkbase"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                         xlink:href="ct-stylesheet-label-2006-07-03.xml"
+                         xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+                         xlink:type="simple"/>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:element abstract="true" id="ct-FixedAss_Statement" name="Statement" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-FixedAss_StatementNetBookValueBF" name="StatementNetBookValueBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-FixedAss_StatementNetBookValuePriorYearAdjustment"
+                name="StatementNetBookValuePriorYearAdjustment"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-FixedAss_StatementNetBookValueAdjustedBF"
+                name="StatementNetBookValueAdjustedBF"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element abstract="true" id="ct-FixedAss_StatementAdditionsInThePeriod"
+                name="StatementAdditionsInThePeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:stringItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementAdditionsInThePeriodTotal"
+                name="StatementAdditionsInThePeriodTotal"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementAdditionsInThePeriodFYAClaimed"
+                name="StatementAdditionsInThePeriodFYAClaimed"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementAdditionsInThePeriodLongLifeAssets"
+                name="StatementAdditionsInThePeriodLongLifeAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementAdditionsInThePeriodOtherAssets"
+                name="StatementAdditionsInThePeriodOtherAssets"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementAssetsAssetsAcquiredUnderFinanceLeases"
+                name="StatementAssetsAssetsAcquiredUnderFinanceLeases"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-FixedAss_StatementRevaluationsInPeriod"
+                name="StatementRevaluationsInPeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-FixedAss_StatementNetBookValueOfDisposals"
+                name="StatementNetBookValueOfDisposals"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+   <xsd:element id="ct-FixedAss_StatementDisposalProceeds" name="StatementDisposalProceeds"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementNetGroupTransfers" name="StatementNetGroupTransfers"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementDepreciationCharge" name="StatementDepreciationCharge"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementOther" name="StatementOther" nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="duration"/>
+   <xsd:element id="ct-FixedAss_StatementNetBookValueAtEndOfPeriod"
+                name="StatementNetBookValueAtEndOfPeriod"
+                nillable="true"
+                substitutionGroup="xbrli:item"
+                type="xbrli:monetaryItemType"
+                xbrli:periodType="instant"/>
+</xsd:schema>

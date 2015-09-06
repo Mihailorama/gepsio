@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Taxonomy based on XBRL Spec 2.1.
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:uk-gaap-ae="http://www.companieshouse.gov.uk/ef/xbrl/gaap/ae/2005-06-01" xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" targetNamespace="http://www.companieshouse.gov.uk/ef/xbrl/gaap/ae/2005-06-01" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:uk-gcd="http://www.xbrl.org/uk/fr/gcd/2004-12-01">
+  <annotation>
+    <appinfo>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AE-Standard-Information" id="AE-Standard-Information">
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AE-Directors-Report" id="AE-Directors-Report">
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AE-Balance-Sheet" id="AE-Balance-Sheet">
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AE-Income-Statement" id="AE-Income-Statement">
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AE-Notes-to-Accounts" id="AE-Notes-to-Accounts">
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.xbrl-uk.org/ExtendedLinkRoles/AE-Further-Calculations" id="AE-Further-Calculations">
+        <link:usedOn>link:calculationLink</link:usedOn>
+      </link:roleType>
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gaap-ae-2005-06-01-presentation.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Presentation Links, all" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gaap-ae-2005-06-01-label.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Label Links, all" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gaap-ae-2005-06-01-definition.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Definition Links, all" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gaap-ae-2005-06-01-calculation.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Calculation Links, all" />
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <import namespace="http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01" schemaLocation="../../pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd" />
+  <import namespace="http://www.xbrl.org/uk/fr/gcd/2004-12-01" schemaLocation="../../gcd/2004-12-01/uk-gcd-2004-12-01.xsd" />
+  <complexType name="CompaniesHouseDocumentAuthenticationType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <length value="6" />
+        <attributeGroup ref="xbrli:nonNumericItemAttrs" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <complexType name="CompaniesHouseRegisteredNumberType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <pattern value=".*[0-9]" />
+        <maxLength value="8" />
+        <attributeGroup ref="xbrli:nonNumericItemAttrs" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <complexType name="trueBooleanItemType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <enumeration value="true" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <element id="uk-gaap-ae_AccountingPolicies" name="AccountingPolicies" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" />
+  <element id="uk-gaap-ae_AccountingPolicy" name="AccountingPolicy" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:TitleAccountingPolicy" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:ContentAccountingPolicy" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies" name="AccountsAreInAccordanceWithSpecialProvisionsCompaniesActRelatingToSmallCompanies" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE" name="AccountsPreparedUnderHistoricalCostConventionInAccordanceWithFRSE" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" />
+  <element id="uk-gaap-ae_AdditionalNote" name="AdditionalNote" substitutionGroup="xbrli:tuple">
+    <complexType>
+      <sequence>
+        <element ref="uk-gaap-ae:TitleAdditionalNote"/>
+        <element ref="uk-gaap-ae:ContentAdditionalNote"/>
+      </sequence>
+      <attribute name="id" type="ID" use="optional" />
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_AddressCH" name="AddressCH" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:AddressLine1" minOccurs="1" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine2" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine3" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrTown" minOccurs="1" maxOccurs="1" />
+            <element ref="uk-gcd:County" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:Postcode" minOccurs="1" maxOccurs="1" />
+            <element ref="uk-gcd:Country" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_ApprovalDirectorsReport" name="ApprovalDirectorsReport" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:DateApprovalDirectorsReport" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:NamePersonApprovingDirectorsReport" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:PositionPersonApprovingDirectorsReport" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_BalanceSheet-AuditExemptFormat" name="BalanceSheet-AuditExemptFormat" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" />
+  <element id="uk-gaap-ae_BalanceSheetDeclarations" name="BalanceSheetDeclarations" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" />
+  <element id="uk-gaap-ae_Bankers" name="Bankers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:NameBankers" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:AddressCH" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_BusinessAddress" name="BusinessAddress" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:DescriptionBusinessAddress" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:AddressCH" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_CategoryItem" name="CategoryItem" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_ChargesBeforeOperatingProfit" name="ChargesBeforeOperatingProfit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" xbrli:balance="debit" nillable="true" />
+  <element id="uk-gaap-ae_CompaniesHouseDocumentAuthentication" name="CompaniesHouseDocumentAuthentication" type="uk-gaap-ae:CompaniesHouseDocumentAuthenticationType" substitutionGroup="xbrli:item" xbrli:periodType="duration" />
+  <element id="uk-gaap-ae_CompaniesHouseRegisteredNumber" name="CompaniesHouseRegisteredNumber" type="uk-gaap-ae:CompaniesHouseRegisteredNumberType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanyDormant" name="CompanyDormant" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985" name="CompanyEntitledToExemptionUnderSection249A1CompaniesAct1985" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985" name="CompanyEntitledToExemptionUnderSection249AA1CompaniesAct1985" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanyHasActedAsAnAgentDuringPeriod" name="CompanyHasActedAsAnAgentDuringPeriod" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanyIdentifyingNumbers" name="CompanyIdentifyingNumbers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:CompaniesHouseRegisteredNumber" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:VATRegistrationNumber" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_CompanyNon-trading" name="CompanyNon-trading" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanyNotDormant" name="CompanyNotDormant" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CompanySecretarysName" name="CompanySecretarysName" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_ContentAccountingPolicy" name="ContentAccountingPolicy" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_ContentAdditionalNote" name="ContentAdditionalNote" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_CostOrValuationOtherTangibleFixedAsset" name="CostOrValuationOtherTangibleFixedAsset" substitutionGroup="xbrli:tuple">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:OtherTangibleFixedAssetCostOrValuation" minOccurs="0" maxOccurs="unbounded" />
+            <element ref="uk-gaap-ae:OtherTangibleFixedAssetAdditions" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:OtherTangibleFixedAssetDisposals" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_DateApprovalDirectorsReport" name="DateApprovalDirectorsReport" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gaap-ae_DateResignation" name="DateResignation" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gaap-ae_DepreciationOtherTangibleFixedAsset" name="DepreciationOtherTangibleFixedAsset" substitutionGroup="xbrli:tuple">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:OtherTangibleFixedAssetDepreciation" minOccurs="0" maxOccurs="unbounded" />
+            <element ref="uk-gaap-ae:OtherTangibleFixedAssetDepreciationChargeForPeriod" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:OtherTangibleFixedAssetDepreciationDisposals" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_DepreciationRate" name="DepreciationRate" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:CategoryItem" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:TypeDepreciation" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:RateDepreciation" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_DescriptionAccountants" name="DescriptionAccountants" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_DescriptionBusinessAddress" name="DescriptionBusinessAddress" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct" name="DirectorsAcknowledgeTheirResponsibilitiesUnderCompaniesAct" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_DirectorShareholding" name="DirectorShareholding" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-pt:DirectorOrExecutivesName" minOccurs="1" maxOccurs="1" />
+            <element ref="uk-gaap-ae:Shareholding" minOccurs="0" maxOccurs="unbounded" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_DirectorsReport" name="DirectorsReport" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" />
+  <element id="uk-gaap-ae_DirectorsReportGeneralText" name="DirectorsReportGeneralText" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_ListDirectorsExecutives" name="ListDirectorsExecutives" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-pt:DirectorOrExecutivesName" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-pt:DateAssumedPosition" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:DateResignation" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_MembersHaveNotRequiredCompanyToObtainAnAudit" name="MembersHaveNotRequiredCompanyToObtainAnAudit" type="uk-gaap-ae:trueBooleanItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_NameAccountants" name="NameAccountants" type="uk-gcd:nonEmptyStringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_NameBankers" name="NameBankers" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_NamePersonApprovingDirectorsReport" name="NamePersonApprovingDirectorsReport" type="uk-gcd:nonEmptyStringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_NameSolicitors" name="NameSolicitors" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_NameTypeTangibleFixedAsset" name="NameTypeTangibleFixedAsset" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAsset" name="OtherTangibleFixedAsset" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAssetAdditions" name="OtherTangibleFixedAssetAdditions" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" xbrli:balance="debit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAssetCostOrValuation" name="OtherTangibleFixedAssetCostOrValuation" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAssetDepreciation" name="OtherTangibleFixedAssetDepreciation" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" xbrli:balance="credit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAssetDepreciationChargeForPeriod" name="OtherTangibleFixedAssetDepreciationChargeForPeriod" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" xbrli:balance="credit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAssetDepreciationDisposals" name="OtherTangibleFixedAssetDepreciationDisposals" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" xbrli:balance="debit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTangibleFixedAssetDisposals" name="OtherTangibleFixedAssetDisposals" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" xbrli:balance="credit" nillable="true" />
+  <element id="uk-gaap-ae_OtherTypeTangibleFixedAsset-Analysis" name="OtherTypeTangibleFixedAsset-Analysis" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:NameTypeTangibleFixedAsset" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:CostOrValuationOtherTangibleFixedAsset" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:DepreciationOtherTangibleFixedAsset" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:OtherTangibleFixedAsset" minOccurs="0" maxOccurs="2" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_PoliticalCharitableDonationsText" name="PoliticalCharitableDonationsText" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_PositionPersonApprovingDirectorsReport" name="PositionPersonApprovingDirectorsReport" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_ProfitLossAccount" name="ProfitLossAccount" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" />
+  <element id="uk-gaap-ae_RateDepreciation" name="RateDepreciation" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_RegisteredOfficeAddress" name="RegisteredOfficeAddress" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:AddressCH" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_ReportingAccountants" name="ReportingAccountants" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:NameAccountants" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:DescriptionAccountants" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:AddressCH" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_Shareholding" name="Shareholding" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-pt:DescriptionSharesOrDebentures" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-pt:SharesDirectorOrExecutive" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_Solicitors" name="Solicitors" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gaap-ae:NameSolicitors" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gaap-ae:AddressCH" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gaap-ae_TitleAccountingPolicy" name="TitleAccountingPolicy" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_TitleAdditionalNote" name="TitleAdditionalNote" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_TransactionsWithDirectors" name="TransactionsWithDirectors" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_TypeDepreciation" name="TypeDepreciation" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gaap-ae_VATRegistrationNumber" name="VATRegistrationNumber" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+</schema>

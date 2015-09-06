@@ -1,0 +1,18 @@
+This conformance suite is designed to test that a processor which extracts XBRL
+from iXBRL is doing its job correctly.  To run it, users should:
+
+1. Edit the value of IXBRL_EXTRACTOR in the file bin/CONFIG so that it
+refers to the processor being tested.
+
+2. If the processor is *not* written in XSLT, then further changes will
+need to be made to bin/makeXBRL.sh so that the extraction mechanism
+invokes the processor correctly.
+
+3. If you are running on Windows, you will need to be able to run "bash"
+and "make".  The easiest way to do this is to install a UNIX emulator such a
+s Cygwin, which can be found at http://www.cygwin.com.
+
+4. Run "make" to setup the tests and test the processor; or "make help" to
+see options.
+
+THIS SUITE WILL BE UPDATED FROM TIME TO TIME WITH ADDITIONAL TESTS.

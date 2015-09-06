@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- Edited by Masatomo Goto (Fujitsu Ltd.) -->
+<!-- Copyright 2003 XBRL International Inc.  See www.xbrl.org/legal.  All Rights Reserved. -->
+<xbrl
+  xmlns="http://www.xbrl.org/2003/instance"
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:example="http://example.com/xbrl/taxonomy"
+  xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://example.com/xbrl/taxonomy IdScope.xsd"
+  
+  xmlns:xbrli="http://www.xbrl.org/2003/instance"
+  xmlns:arcrole="http://www.xbrl.org/2003/arcrole"
+  xmlns:cbs-bedr="http://www.nltaxonomie.nl/2009/domein/cbs/bedrijven/cbs-bedrijven"
+  xmlns:cbs-types="http://www.nltaxonomie.nl/2009/domein/cbs/types/cbs-types"
+  xmlns:ff="http://www.xbrl.org/2005/role/restatedLabel"
+  xmlns:fjr-cns-ps="http://www.nltaxonomie.nl/2009/domein/fjr/formset/fs-fjr-cns-ps"
+  xmlns:fs-kvk-cd-small="http://www.nltaxonomie.nl/2009/domein/kvk/formset/common-data-small/fs-kvk-common-data-small"
+  xmlns:gen="http://www.nltaxonomie.nl/2009/basis/nl-genbase/nl-genbase"
+  xmlns:ifrs-gp="http://xbrl.iasb.org/int/fr/ifrs/gp/2006-08-15"
+  xmlns:ifrs-gp-2005="http://www.nltaxonomie.nl/2009/domein/kvk/fr/ifrs/gp/2005-05-15"
+  xmlns:ifrs-gp-nl="http://www.nltaxonomie.nl/2009/basis/ifrs-gp-nl/ifrs-gp-nl-2006"
+  xmlns:ifrs-gp-typ="http://xbrl.iasb.org/int/fr/ifrs/gp/types/2006-08-15"
+  xmlns:kvk-cd="http://www.nltaxonomie.nl/2009/domein/kvk/common-data/kvk-common-data"
+  xmlns:kvk-rj="http://www.nltaxonomie.nl/2009/basis/kvk-rj/kvk-rj"
+  xmlns:kvk-sc="http://www.nltaxonomie.nl/2009/domein/kvk/context/kvk-context"
+  xmlns:nl-cd="http://www.nltaxonomie.nl/2009/basis/nl-common-data/nl-common-data"
+  xmlns:nl-cd-ref="http://www.nltaxonomie.nl/2009/basis/nl-common-data/nl-common-data-ref"
+  xmlns:nl-codes="http://www.nltaxonomie.nl/2009/basis/nl-types/nl-codes"
+  xmlns:nl-types="http://www.nltaxonomie.nl/2009/basis/nl-types/nl-types"
+  xmlns:Q1="http://www.nltaxonomie.nl/2009/basis/nl-types/nl-types"  
+>
+	<link:schemaRef xlink:href="WorkItem3903.xsd" xlink:type="simple"/>
+	<example:fixedAssets precision="4" contextRef="ci1" unitRef="u1">5000</example:fixedAssets>
+	<example:changeInRetainedEarnings precision="4" contextRef="cd1" unitRef="u1">3000</example:changeInRetainedEarnings>
+	<context id="ci1">
+		<entity>
+			<identifier scheme="www.example.com">example</identifier>
+		</entity>
+		<period>
+			<instant>2003-03-31</instant>
+		</period>
+	</context>
+	<context id="cd1">
+		<entity>
+			<identifier scheme="www.example.com">example</identifier>
+		</entity>
+		<period>
+			<startDate>2002-04-01</startDate>
+			<endDate>2003-03-31</endDate>
+		</period>
+	</context>
+	<unit id="u1">
+		<measure>iso4217:USD</measure>
+	</unit>
+</xbrl>

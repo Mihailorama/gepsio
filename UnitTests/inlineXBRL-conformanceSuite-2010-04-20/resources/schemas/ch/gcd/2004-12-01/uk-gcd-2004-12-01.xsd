@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+v2.1 Taxonomy schema document
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:uk-gcd="http://www.xbrl.org/uk/fr/gcd/2004-12-01" targetNamespace="http://www.xbrl.org/uk/fr/gcd/2004-12-01" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <annotation>
+    <appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="uk-gcd-2004-12-01-labels.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Label Links, all" />
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <complexType name="nonEmptyStringItemType">
+    <simpleContent>
+      <restriction base="xbrli:stringItemType">
+        <minLength value="1" />
+        <attributeGroup ref="xbrli:nonNumericItemAttrs" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <complexType name="entityCurrentLegalNameType">
+    <simpleContent>
+      <restriction base="uk-gcd:nonEmptyStringItemType">
+        <maxLength value="160" />
+        <attributeGroup ref="xbrli:nonNumericItemAttrs" />
+      </restriction>
+    </simpleContent>
+  </complexType>
+  <element id="uk-gcd_AddressDescription" name="AddressDescription" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine1" name="AddressLine1" type="uk-gcd:nonEmptyStringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine1DocumentAuthor" name="AddressLine1DocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine1DocumentContact" name="AddressLine1DocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine1Entity" name="AddressLine1Entity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine1EntityContact" name="AddressLine1EntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine2" name="AddressLine2" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine2DocumentAuthor" name="AddressLine2DocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine2DocumentContact" name="AddressLine2DocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine2Entity" name="AddressLine2Entity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine2EntityContact" name="AddressLine2EntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine3" name="AddressLine3" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine3DocumentAuthor" name="AddressLine3DocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine3DocumentContact" name="AddressLine3DocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine3Entity" name="AddressLine3Entity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AddressLine3EntityContact" name="AddressLine3EntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_AuthorAddress" name="AuthorAddress" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionAddressDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine1DocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine2DocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine3DocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrTownDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:StateOrProvinceDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountyOrRegionDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ZIPOrPostalCodeDocumentAuthor" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_AuthorPhoneFaxNumbers" name="AuthorPhoneFaxNumbers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionPhoneOrFaxNumberDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryOrRegionCodeDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrAreaCodeDocumentAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:LocalPhoneNumberDocumentAuthor" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_BalanceSheetDate" name="BalanceSheetDate" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_CityOrAreaCodeDocumentAuthor" name="CityOrAreaCodeDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrAreaCodeDocumentContact" name="CityOrAreaCodeDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrAreaCodeEntity" name="CityOrAreaCodeEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrAreaCodeEntityContact" name="CityOrAreaCodeEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrTown" name="CityOrTown" type="uk-gcd:nonEmptyStringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrTownDocumentAuthor" name="CityOrTownDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrTownDocumentContact" name="CityOrTownDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrTownEntity" name="CityOrTownEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CityOrTownEntityContact" name="CityOrTownEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ContactAddress" name="ContactAddress" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionAddressEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine1EntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine2EntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine3EntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrTownEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:StateOrProvinceEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountyOrRegionEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ZIPOrPostalCodeEntityContact" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_ContactPhoneFaxNumbers" name="ContactPhoneFaxNumbers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionPhoneOrFaxNumberEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryOrRegionCodeEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrAreaCodeEntityContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:LocalPhoneNumberEntityContact" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_Country" name="Country" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryDocumentAuthor" name="CountryDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryDocumentContact" name="CountryDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryEntity" name="CountryEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryEntityContact" name="CountryEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryOrRegionCodeDocumentAuthor" name="CountryOrRegionCodeDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryOrRegionCodeDocumentContact" name="CountryOrRegionCodeDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryOrRegionCodeEntity" name="CountryOrRegionCodeEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountryOrRegionCodeEntityContact" name="CountryOrRegionCodeEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_County" name="County" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountyOrRegionDocumentAuthor" name="CountyOrRegionDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountyOrRegionDocumentContact" name="CountyOrRegionDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountyOrRegionEntity" name="CountyOrRegionEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_CountyOrRegionEntityContact" name="CountyOrRegionEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_Date" name="Date" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DateYearMonth" name="DateYearMonth" type="xbrli:gYearMonthItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DateMonthDay" name="DateMonthDay" type="xbrli:gMonthDayItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DateFormed" name="DateFormed" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DateIncorporation" name="DateIncorporation" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DateNameChanged" name="DateNameChanged" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DateRevision" name="DateRevision" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_Description" name="Description" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DescriptionAddressDocumentAuthor" name="DescriptionAddressDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionAddressDocumentContact" name="DescriptionAddressDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionAddressEntity" name="DescriptionAddressEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionAddressEntityContact" name="DescriptionAddressEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionDate" name="DescriptionDate" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DescriptionEmailAddressAuthor" name="DescriptionEmailAddressAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionEmailAddressContactEntity" name="DescriptionEmailAddressContactEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionEmailAddressDocumentContact" name="DescriptionEmailAddressDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionIdentifiyingSystem" name="DescriptionIdentifiyingSystem" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionIdentifyingCode" name="DescriptionIdentifyingCode" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionLegalFormEntity" name="DescriptionLegalFormEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionOrTitleRevisionAuthor" name="DescriptionOrTitleRevisionAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionPeriod" name="DescriptionPeriod" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionPeriodCoveredByStatement" name="DescriptionPeriodCoveredByStatement" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor" name="DescriptionPhoneOrFaxNumberDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact" name="DescriptionPhoneOrFaxNumberDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionPhoneOrFaxNumberEntity" name="DescriptionPhoneOrFaxNumberEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionPhoneOrFaxNumberEntityContact" name="DescriptionPhoneOrFaxNumberEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionSecurityEntity" name="DescriptionSecurityEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_DescriptionUniqueDocumentIdentifier" name="DescriptionUniqueDocumentIdentifier" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DocumentAuthors" name="DocumentAuthors" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:NameAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:TitlePositionAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EmailAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AuthorAddress" minOccurs="0" maxOccurs="unbounded" />
+            <element ref="uk-gcd:AuthorPhoneFaxNumbers" minOccurs="0" maxOccurs="unbounded" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentContactAddress" name="DocumentContactAddress" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionAddressDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine1DocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine2DocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine3DocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrTownDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:StateOrProvinceDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountyOrRegionDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ZIPOrPostalCodeDocumentContact" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentContactPhoneFaxNumbers" name="DocumentContactPhoneFaxNumbers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionPhoneOrFaxNumberDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryOrRegionCodeDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrAreaCodeDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:LocalPhoneNumberDocumentContact" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentContacts" name="DocumentContacts" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:NameDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:TitlePositionDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EmailDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentContactAddress" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentContactPhoneFaxNumbers" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentCreationDate" name="DocumentCreationDate" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DocumentDescription" name="DocumentDescription" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DocumentInformation" name="DocumentInformation" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DocumentNameTitle" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentDescription" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DescriptionUniqueDocumentIdentifier" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:UniqueDocumentDentifier" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentVersionNumber" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentCreationDate" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentLastEditDate" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentRevisionHistory" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentLanguages" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentAuthors" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DocumentContacts" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:OtherDocumentInformation" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentLanguages" name="DocumentLanguages" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:NameLanguage" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ISOLanguageCode" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentLastEditDate" name="DocumentLastEditDate" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DocumentNameTitle" name="DocumentNameTitle" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_DocumentRevisionHistory" name="DocumentRevisionHistory" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:VersionNumberRevisionConcerned" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:Description" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:RevisionAuthors" minOccurs="0" maxOccurs="unbounded" />
+            <element ref="uk-gcd:DateRevision" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_DocumentVersionNumber" name="DocumentVersionNumber" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EmailAddressAuthor" name="EmailAddressAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EmailAddressContactEntity" name="EmailAddressContactEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EmailAddressDocumentContact" name="EmailAddressDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EmailAuthor" name="EmailAuthor" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionEmailAddressAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EmailAddressAuthor" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EmailContactEntity" name="EmailContactEntity" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionEmailAddressContactEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EmailAddressContactEntity" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EmailDocumentContact" name="EmailDocumentContact" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionEmailAddressDocumentContact" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EmailAddressDocumentContact" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EndDate" name="EndDate" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_EndDateForFinancialStatement" name="EndDateForFinancialStatement" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_EntityAddress" name="EntityAddress" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionAddressEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine1Entity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine2Entity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:AddressLine3Entity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrTownEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:StateOrProvinceEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountyOrRegionEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ZIPOrPostalCodeEntity" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityBusinessDescription" name="EntityBusinessDescription" type="uk-gcd:nonEmptyStringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EntityContacts" name="EntityContacts" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:NameContactEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:TitlePositionContactEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EmailContactEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ContactAddress" minOccurs="0" maxOccurs="unbounded" />
+            <element ref="uk-gcd:ContactPhoneFaxNumbers" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityCurrentLegalName" name="EntityCurrentLegalName" type="uk-gcd:entityCurrentLegalNameType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EntityFormerName" name="EntityFormerName" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:FormerNameEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DateNameChanged" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityGeneralIdentifier" name="EntityGeneralIdentifier" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionIdentifyingCode" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:IdentifyingCode" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityIncorporationInformation" name="EntityIncorporationInformation" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:LocationIncorporation" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DateIncorporation" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityIndustryOrSectorIdentifiers" name="EntityIndustryOrSectorIdentifiers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionIdentifiyingSystem" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:IndentifyingCode" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityInformation" name="EntityInformation" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:EntityNames" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityBusinessDescription" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:XBRLEntitySegmentIdentifier" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityGeneralIdentifier" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:LegalFormEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityIncorporationInformation" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityPublicListingInformation" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityIndustryOrSectorIdentifiers" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityAddress" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityPhoneFaxNumbers" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityContacts" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityWebsite" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityTaxIdentifiers" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:OtherEntityInformation" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityListingDetails" name="EntityListingDetails" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionSecurityEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:SymbolSecurity" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityNames" name="EntityNames" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:EntityCurrentLegalName" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityTradingName" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityFormerName" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityPhoneFaxNumbers" name="EntityPhoneFaxNumbers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionPhoneOrFaxNumberEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CountryOrRegionCodeEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:CityOrAreaCodeEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:LocalPhoneNumberEntity" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityPublicListingInformation" name="EntityPublicListingInformation" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:ExchangeName" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:ExchangeDescription" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:MainTradingSymbol" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EntityListingDetails" minOccurs="0" maxOccurs="unbounded" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityTaxIdentifiers" name="EntityTaxIdentifiers" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:TaxIdentifierDescription" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:TaxIdentifier" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:TaxJurisdiction" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_EntityTradingName" name="EntityTradingName" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_EntityWebsite" name="EntityWebsite" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:WebsiteDescription" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:WebsiteURL" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_ExchangeDescription" name="ExchangeDescription" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ExchangeName" name="ExchangeName" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_FinancialStatementDates" name="FinancialStatementDates" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" abstract="true" />
+  <element id="uk-gcd_FormerNameEntity" name="FormerNameEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_IdentifyingCode" name="IdentifyingCode" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_IndentifyingCode" name="IndentifyingCode" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ISOLanguageCode" name="ISOLanguageCode" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_Jurisdiction" name="Jurisdiction" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_LegalFormEntity" name="LegalFormEntity" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionLegalFormEntity" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:Jurisdiction" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:DateFormed" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_LocalPhoneNumberDocumentAuthor" name="LocalPhoneNumberDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_LocalPhoneNumberDocumentContact" name="LocalPhoneNumberDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_LocalPhoneNumberEntity" name="LocalPhoneNumberEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_LocalPhoneNumberEntityContact" name="LocalPhoneNumberEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_LocationIncorporation" name="LocationIncorporation" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_MainTradingSymbol" name="MainTradingSymbol" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_NameAuthor" name="NameAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_NameContactEntity" name="NameContactEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_NameDocumentContact" name="NameDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_NameLanguage" name="NameLanguage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_NameRevisionAuthor" name="NameRevisionAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_OtherDocumentInformation" name="OtherDocumentInformation" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_OtherEntityInformation" name="OtherEntityInformation" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_PeriodCoveredByFinancialStatement" name="PeriodCoveredByFinancialStatement" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionPeriodCoveredByStatement" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:StartDateForFinancialStatement" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EndDateForFinancialStatement" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_PeriodDuration" name="PeriodDuration" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionPeriod" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:StartDate" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:EndDate" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_Postcode" name="Postcode" type="uk-gcd:nonEmptyStringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_RevisionAuthors" name="RevisionAuthors" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionOrTitleRevisionAuthor" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:NameRevisionAuthor" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_SpecificDate" name="SpecificDate" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:DescriptionDate" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:Date" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_StandardInformation" name="StandardInformation" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" abstract="true" />
+  <element id="uk-gcd_StartDate" name="StartDate" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_StartDateForFinancialStatement" name="StartDateForFinancialStatement" type="xbrli:dateItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_StatementDatesPeriodsCovered" name="StatementDatesPeriodsCovered" substitutionGroup="xbrli:tuple" nillable="true">
+    <complexType>
+      <complexContent>
+        <restriction base="anyType">
+          <sequence>
+            <element ref="uk-gcd:BalanceSheetDate" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:PeriodCoveredByFinancialStatement" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:SpecificDate" minOccurs="0" maxOccurs="1" />
+            <element ref="uk-gcd:PeriodDuration" minOccurs="0" maxOccurs="1" />
+          </sequence>
+          <attribute name="id" type="ID" use="optional" />
+        </restriction>
+      </complexContent>
+    </complexType>
+  </element>
+  <element id="uk-gcd_StateOrProvinceDocumentAuthor" name="StateOrProvinceDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_StateOrProvinceDocumentContact" name="StateOrProvinceDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_StateOrProvinceEntity" name="StateOrProvinceEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_StateOrProvinceEntityContact" name="StateOrProvinceEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_SymbolSecurity" name="SymbolSecurity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_TaxIdentifier" name="TaxIdentifier" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_TaxIdentifierDescription" name="TaxIdentifierDescription" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_TaxJurisdiction" name="TaxJurisdiction" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_TitlePositionAuthor" name="TitlePositionAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_TitlePositionContactEntity" name="TitlePositionContactEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_TitlePositionDocumentContact" name="TitlePositionDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_UniqueDocumentDentifier" name="UniqueDocumentDentifier" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" />
+  <element id="uk-gcd_VersionNumberRevisionConcerned" name="VersionNumberRevisionConcerned" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_WebsiteDescription" name="WebsiteDescription" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_WebsiteURL" name="WebsiteURL" type="xbrli:anyURIItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_XBRLEntitySegmentIdentifier" name="XBRLEntitySegmentIdentifier" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ZIPOrPostalCodeDocumentAuthor" name="ZIPOrPostalCodeDocumentAuthor" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ZIPOrPostalCodeDocumentContact" name="ZIPOrPostalCodeDocumentContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ZIPOrPostalCodeEntity" name="ZIPOrPostalCodeEntity" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+  <element id="uk-gcd_ZIPOrPostalCodeEntityContact" name="ZIPOrPostalCodeEntityContact" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" />
+</schema>

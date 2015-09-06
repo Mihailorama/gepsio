@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+     </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="PREVIOUS_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+     </entity>
+    <period>
+      <startDate>2006-01-01</startDate>
+      <endDate>2006-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:UKCurrentCorporationTaxOnIncomeForPeriod contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">30000</uk-gaap-pt:UKCurrentCorporationTaxOnIncomeForPeriod>
+  <uk-gaap-pt:UKCurrentCorporationTaxOnIncomeForPeriod contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">30000</uk-gaap-pt:UKCurrentCorporationTaxOnIncomeForPeriod>
+  <uk-gaap-pt:IncreaseDecreaseInUKCorporationTaxArisingFromAdjustmentForPriorPeriods contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">5000</uk-gaap-pt:IncreaseDecreaseInUKCorporationTaxArisingFromAdjustmentForPriorPeriods>
+  <uk-gaap-pt:IncreaseDecreaseInUKCorporationTaxArisingFromAdjustmentForPriorPeriods contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">10000</uk-gaap-pt:IncreaseDecreaseInUKCorporationTaxArisingFromAdjustmentForPriorPeriods>
+  <uk-gaap-pt:DoubleTaxationRelief contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">5000</uk-gaap-pt:DoubleTaxationRelief>
+  <uk-gaap-pt:DoubleTaxationRelief contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">5000</uk-gaap-pt:DoubleTaxationRelief>
+  <uk-gaap-pt:UKCurrentCorporationTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">30000</uk-gaap-pt:UKCurrentCorporationTax>
+  <uk-gaap-pt:UKCurrentCorporationTax contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">35000</uk-gaap-pt:UKCurrentCorporationTax>
+  <uk-gaap-pt:ForeignCurrentTaxOnIncomeForPeriod contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">10000</uk-gaap-pt:ForeignCurrentTaxOnIncomeForPeriod>
+  <uk-gaap-pt:ForeignCurrentTaxOnIncomeForPeriod contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">5000</uk-gaap-pt:ForeignCurrentTaxOnIncomeForPeriod>
+  <uk-gaap-pt:IncreaseDecreaseInForeignTaxArisingFromAdjustmentForPriorPeriods contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">2000</uk-gaap-pt:IncreaseDecreaseInForeignTaxArisingFromAdjustmentForPriorPeriods>
+  <uk-gaap-pt:IncreaseDecreaseInForeignTaxArisingFromAdjustmentForPriorPeriods contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">-3000</uk-gaap-pt:IncreaseDecreaseInForeignTaxArisingFromAdjustmentForPriorPeriods>
+  <uk-gaap-pt:ForeignCurrentTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">12000</uk-gaap-pt:ForeignCurrentTax>
+  <uk-gaap-pt:ForeignCurrentTax contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">2000</uk-gaap-pt:ForeignCurrentTax>
+  <uk-gaap-pt:IncreaseDecreaseInDeferredTaxFromOriginationReversalTimingDifferences contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">2000</uk-gaap-pt:IncreaseDecreaseInDeferredTaxFromOriginationReversalTimingDifferences>
+  <uk-gaap-pt:IncreaseDecreaseInDeferredTaxFromOriginationReversalTimingDifferences contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">7000</uk-gaap-pt:IncreaseDecreaseInDeferredTaxFromOriginationReversalTimingDifferences>
+  <uk-gaap-pt:IncreaseDecreaseInDeferredTaxArisingFromAdjustmentsForPriorPeriods contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">4000</uk-gaap-pt:IncreaseDecreaseInDeferredTaxArisingFromAdjustmentsForPriorPeriods>
+  <uk-gaap-pt:IncreaseDecreaseInDeferredTaxArisingFromAdjustmentsForPriorPeriods contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">5000</uk-gaap-pt:IncreaseDecreaseInDeferredTaxArisingFromAdjustmentsForPriorPeriods>
+  <uk-gaap-pt:TotalUKForeignDeferredTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">6000</uk-gaap-pt:TotalUKForeignDeferredTax>
+  <uk-gaap-pt:TotalUKForeignDeferredTax contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">12000</uk-gaap-pt:TotalUKForeignDeferredTax>
+  <uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">48000</uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities>
+  <uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">49000</uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">150000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">120000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax>
+  <uk-gaap-pt:TaxOnGroupProfitOnOrdinaryActivitiesStandardUKTaxRate contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">45000</uk-gaap-pt:TaxOnGroupProfitOnOrdinaryActivitiesStandardUKTaxRate>
+  <uk-gaap-pt:TaxOnGroupProfitOnOrdinaryActivitiesStandardUKTaxRate contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">36000</uk-gaap-pt:TaxOnGroupProfitOnOrdinaryActivitiesStandardUKTaxRate>
+  <uk-gaap-pt:ExpensesNotDeductibleForTaxPurposes contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">4000</uk-gaap-pt:ExpensesNotDeductibleForTaxPurposes>
+  <uk-gaap-pt:ExpensesNotDeductibleForTaxPurposes contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">12000</uk-gaap-pt:ExpensesNotDeductibleForTaxPurposes>
+  <uk-gaap-pt:CapitalAllowancesInExcessDepreciationLeadingToDecreaseIncreaseInTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">5000</uk-gaap-pt:CapitalAllowancesInExcessDepreciationLeadingToDecreaseIncreaseInTax>
+  <uk-gaap-pt:CapitalAllowancesInExcessDepreciationLeadingToDecreaseIncreaseInTax contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">3000</uk-gaap-pt:CapitalAllowancesInExcessDepreciationLeadingToDecreaseIncreaseInTax>
+  <uk-gaap-pt:RolloverReliefOnProfitOnDisposalFixedAssetsImpactOnTaxRate contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">1000</uk-gaap-pt:RolloverReliefOnProfitOnDisposalFixedAssetsImpactOnTaxRate>
+  <uk-gaap-pt:RolloverReliefOnProfitOnDisposalFixedAssetsImpactOnTaxRate contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">2000</uk-gaap-pt:RolloverReliefOnProfitOnDisposalFixedAssetsImpactOnTaxRate>
+  <uk-gaap-pt:UtilisationTaxLossesImpactOnTaxRate contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">2000</uk-gaap-pt:UtilisationTaxLossesImpactOnTaxRate>
+  <uk-gaap-pt:UtilisationTaxLossesImpactOnTaxRate contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">1000</uk-gaap-pt:UtilisationTaxLossesImpactOnTaxRate>
+  <uk-gaap-pt:AdjustmentForPriorPeriodsLeadingToAnIncreaseDecreaseInTaxCharge contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">7000</uk-gaap-pt:AdjustmentForPriorPeriodsLeadingToAnIncreaseDecreaseInTaxCharge>
+  <uk-gaap-pt:AdjustmentForPriorPeriodsLeadingToAnIncreaseDecreaseInTaxCharge contextRef="PREVIOUS_YEAR" unitRef="GBP" decimals="0">7000</uk-gaap-pt:AdjustmentForPriorPeriodsLeadingToAnIncreaseDecreaseInTaxCharge>
+</xbrl>

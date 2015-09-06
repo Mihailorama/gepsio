@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15"
+      xmlns:xbrldi="http://xbrl.org/2006/xbrldi">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <context id="PREVIOUS_YEAR_RESTATED">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:RestatementsDimension">uk-gaap-pt:RestatedAmount</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2006-01-01</startDate>
+      <endDate>2006-12-31</endDate>
+    </period>
+  </context>
+  <context id="CURRENT_YEAR_PRIOR_YEAR_ADJUSTMENT">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+      <segment>
+            <xbrldi:explicitMember dimension="uk-gaap-pt:RestatementsDimension">uk-gaap-pt:PriorPeriodAdjustment</xbrldi:explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:ProfitLossForPeriodBeforeDividendAppropriations contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">230000000</uk-gaap-pt:ProfitLossForPeriodBeforeDividendAppropriations>
+  <uk-gaap-pt:ProfitLossForPeriodBeforeDividendAppropriations contextRef="PREVIOUS_YEAR_RESTATED" unitRef="GBP" decimals="0">250000000</uk-gaap-pt:ProfitLossForPeriodBeforeDividendAppropriations>
+  <uk-gaap-pt:RevaluationSurplusInPeriod contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">50000000</uk-gaap-pt:RevaluationSurplusInPeriod>
+  <uk-gaap-pt:RevaluationSurplusInPeriod contextRef="PREVIOUS_YEAR_RESTATED" unitRef="GBP" decimals="0">10000000</uk-gaap-pt:RevaluationSurplusInPeriod>
+  <uk-gaap-pt:GainLossFromExchangeAdjustments-Net contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">1500000</uk-gaap-pt:GainLossFromExchangeAdjustments-Net>
+  <uk-gaap-pt:GainLossFromExchangeAdjustments-Net contextRef="PREVIOUS_YEAR_RESTATED" unitRef="GBP" decimals="0">-14500000</uk-gaap-pt:GainLossFromExchangeAdjustments-Net>
+  <uk-gaap-pt:ActuarialGainLossRecognisedInPensionSchemes contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">25000000</uk-gaap-pt:ActuarialGainLossRecognisedInPensionSchemes>
+  <uk-gaap-pt:ActuarialGainLossRecognisedInPensionSchemes contextRef="PREVIOUS_YEAR_RESTATED" unitRef="GBP" decimals="0">35000000</uk-gaap-pt:ActuarialGainLossRecognisedInPensionSchemes>
+  <uk-gaap-pt:TotalRecognisedGainLossForPeriod contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">306500000</uk-gaap-pt:TotalRecognisedGainLossForPeriod>
+  <uk-gaap-pt:TotalRecognisedGainLossForPeriod contextRef="PREVIOUS_YEAR_RESTATED" unitRef="GBP" decimals="0">280500000</uk-gaap-pt:TotalRecognisedGainLossForPeriod>
+  <uk-gaap-pt:TotalRecognisedGainLossForPeriod contextRef="CURRENT_YEAR_PRIOR_YEAR_ADJUSTMENT" unitRef="GBP" decimals="0">-10000000</uk-gaap-pt:TotalRecognisedGainLossForPeriod>
+  <uk-gaap-pt:TotalRecognisedGainLossForPeriod contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">296500000</uk-gaap-pt:TotalRecognisedGainLossForPeriod>
+</xbrl>

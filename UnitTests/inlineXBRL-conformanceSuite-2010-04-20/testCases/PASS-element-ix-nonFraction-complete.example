@@ -1,0 +1,90 @@
+<testcase
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xmlns:pt='http://www.xbrl.org/uk/fr/gaap/pt/2004-12-01'
+  xmlns:ix='http://www.xbrl.org/2008/inlineXBRL'
+  xmlns:link='http://www.xbrl.org/2003/linkbase'
+  xmlns:xbrli='http://www.xbrl.org/2003/instance'
+  xmlns:xlink='http://www.w3.org/1999/xlink'
+  xmlns:iso4217='http://www.xbrl.org/2003/iso4217'
+>
+  <head>
+    <number>25</number>
+    <creator><name>Philip Allen</name><email>plega@decisionsoft.com</email></creator>
+    <description>Dummy test case</description>
+    <requirement>no reference</requirement>
+  </head>
+  <body>
+    <input>
+<html
+      version="-//XBRL International//DTD XHTML Inline XBRL 1.0//EN"
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../../schema/xhtml-inlinexbrl-1_0.xsd"
+      >
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>Basic Inline XBRL Example</title>
+  </head>
+  <body xml:lang="en">
+    <div style="display:none">
+      <ix:header>
+        <ix:references>
+          <link:schemaRef xlink:href="../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd" xlink:type="simple"/>
+        </ix:references>
+        <ix:resources>
+          <xbrli:context id="NNC1">
+            <xbrli:entity>
+              <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+            </xbrli:entity>
+            <xbrli:period>
+              <xbrli:instant>2005-12-31</xbrli:instant>
+            </xbrli:period>
+	  </xbrli:context>
+          <xbrli:unit id="u1">
+            <xbrli:measure>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+	  <xbrli:unit id="GBP" xmlns:iso4217="http://localhost/wrongNamespaceForTestingPurposes">
+              <xbrli:measure xmlns:iso4217='http://www.xbrl.org/2003/iso4217'>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+        </ix:resources>
+      </ix:header>	
+    </div>
+<p xmlns:ix="http://www.xbrl.org/2008/inlineXBRL" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<b>
+  (
+  <ix:nonFraction contextRef="NNC1" decimals="2" name="pt:DefinedContributionPensionSchemePrepaymentsDueWithinOneYear" scale="0" sign="-" unitRef="GBP">
+
+1234567.00
+
+  </ix:nonFraction>
+  )
+</b>
+</p>
+  </body>
+</html>
+    </input>
+    <transformedOutput>
+<xbrli:xbrl >
+   <link:schemaRef
+                   xlink:href="../schemas/ch/pt/2004-12-01/uk-gaap-pt-2004-12-01.xsd"
+                   xlink:type="simple"/>
+   <pt:DefinedContributionPensionSchemePrepaymentsDueWithinOneYear
+      contextRef="NNC1" decimals="2" unitRef="GBP">-1234567.00</pt:DefinedContributionPensionSchemePrepaymentsDueWithinOneYear>
+   <xbrli:context
+                  id="NNC1">
+            <xbrli:entity>
+              <xbrli:identifier scheme="test">Test Co 1</xbrli:identifier>
+            </xbrli:entity>
+            <xbrli:period>
+              <xbrli:instant>2005-12-31</xbrli:instant>
+            </xbrli:period>
+	  </xbrli:context>
+   <xbrli:unit
+               id="u1">
+            <xbrli:measure>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+	  <xbrli:unit id="GBP" xmlns:iso4217="http://localhost/wrongNamespaceForTestingPurposes">
+              <xbrli:measure xmlns:iso4217='http://www.xbrl.org/2003/iso4217'>iso4217:GBP</xbrli:measure>
+	  </xbrli:unit>
+</xbrli:xbrl>    </transformedOutput>
+  </body>
+</testcase>

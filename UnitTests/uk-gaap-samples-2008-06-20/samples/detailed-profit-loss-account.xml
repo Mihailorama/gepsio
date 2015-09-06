@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+      xmlns:uk-gaap-pt="http://www.xbrl.org/uk/fr/gaap/pt/2008-01-15">
+  <link:schemaRef xlink:type="simple" xlink:href="../taxonomy/UK-GAAP-2008-01-15/monolithic/2008-01-15/uk-gaap-pt-2008-01-15.xsd"/>
+  <context id="CURRENT_YEAR">
+    <entity>
+      <identifier scheme="http://www.companieshouse.gov.uk/">00000000</identifier>
+    </entity>
+    <period>
+      <startDate>2007-01-01</startDate>
+      <endDate>2007-12-31</endDate>
+    </period>
+  </context>
+  <unit id="GBP">
+    <measure>iso4217:GBP</measure>
+  </unit>
+  <uk-gaap-pt:TurnoverGrossOperatingRevenue contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">100000</uk-gaap-pt:TurnoverGrossOperatingRevenue>
+  <uk-gaap-pt:CostSales contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">45000</uk-gaap-pt:CostSales>
+  <uk-gaap-pt:GrossProfitLoss contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">55000</uk-gaap-pt:GrossProfitLoss>
+  <uk-gaap-pt:AdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">30000</uk-gaap-pt:AdministrativeExpenses>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">25000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesBeforeTax>
+  <uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">10000</uk-gaap-pt:TaxOnProfitOrLossOnOrdinaryActivities>
+  <uk-gaap-pt:ProfitLossOnOrdinaryActivitiesAfterTax contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">15000</uk-gaap-pt:ProfitLossOnOrdinaryActivitiesAfterTax>
+  <!-- analysis of administrative expenses -->
+  <uk-gaap-pt:WagesSalariesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">10000</uk-gaap-pt:WagesSalariesAdministrativeExpenses>
+  <uk-gaap-pt:EmployersNationalInsuranceAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">1000</uk-gaap-pt:EmployersNationalInsuranceAdministrativeExpenses>
+  <uk-gaap-pt:PensionsDefinedContributionSchemesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:PensionsDefinedContributionSchemesAdministrativeExpenses>
+  <uk-gaap-pt:PensionsDefinedBenefitSchemesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">800</uk-gaap-pt:PensionsDefinedBenefitSchemesAdministrativeExpenses>
+  <uk-gaap-pt:PrivateHealthCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:PrivateHealthCostsAdministrativeExpenses>
+  <uk-gaap-pt:BonusesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">1000</uk-gaap-pt:BonusesAdministrativeExpenses>
+  <uk-gaap-pt:StaffTrainingAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:StaffTrainingAdministrativeExpenses>
+  <uk-gaap-pt:StaffExpensesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">800</uk-gaap-pt:StaffExpensesAdministrativeExpenses>
+  <uk-gaap-pt:RedundancyCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">750</uk-gaap-pt:RedundancyCostsAdministrativeExpenses>
+  <uk-gaap-pt:StaffRelocationCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:StaffRelocationCostsAdministrativeExpenses>
+  <uk-gaap-pt:RentPremisesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">1000</uk-gaap-pt:RentPremisesAdministrativeExpenses>
+  <uk-gaap-pt:RatesOnPremisesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">400</uk-gaap-pt:RatesOnPremisesAdministrativeExpenses>
+  <uk-gaap-pt:UtilityChargesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">800</uk-gaap-pt:UtilityChargesAdministrativeExpenses>
+  <uk-gaap-pt:SecurityCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">200</uk-gaap-pt:SecurityCostsAdministrativeExpenses>
+  <uk-gaap-pt:InsuranceOnPremisesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">750</uk-gaap-pt:InsuranceOnPremisesAdministrativeExpenses>
+  <uk-gaap-pt:HireLeasingPlantMachineryAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">750</uk-gaap-pt:HireLeasingPlantMachineryAdministrativeExpenses>
+  <uk-gaap-pt:PlantMachineryRepairsRenewalsMaintenanceAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">450</uk-gaap-pt:PlantMachineryRepairsRenewalsMaintenanceAdministrativeExpenses>
+  <uk-gaap-pt:ProfessionalIndemnityInsuranceAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">600</uk-gaap-pt:ProfessionalIndemnityInsuranceAdministrativeExpenses>
+  <uk-gaap-pt:GeneralConsultancyFeesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">450</uk-gaap-pt:GeneralConsultancyFeesAdministrativeExpenses>
+  <uk-gaap-pt:LegalFeesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:LegalFeesAdministrativeExpenses>
+  <uk-gaap-pt:AccountancyFeesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">750</uk-gaap-pt:AccountancyFeesAdministrativeExpenses>
+  <uk-gaap-pt:MarketingCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">600</uk-gaap-pt:MarketingCostsAdministrativeExpenses>
+  <uk-gaap-pt:AdvertisingPromotionalCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">400</uk-gaap-pt:AdvertisingPromotionalCostsAdministrativeExpenses>
+  <uk-gaap-pt:TelecommunicationsCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:TelecommunicationsCostsAdministrativeExpenses>
+  <uk-gaap-pt:FreightCarriageAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">200</uk-gaap-pt:FreightCarriageAdministrativeExpenses>
+  <uk-gaap-pt:CourierServicesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">200</uk-gaap-pt:CourierServicesAdministrativeExpenses>
+  <uk-gaap-pt:PrintingPhotocopyingCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">250</uk-gaap-pt:PrintingPhotocopyingCostsAdministrativeExpenses>
+  <uk-gaap-pt:PostageCostsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">250</uk-gaap-pt:PostageCostsAdministrativeExpenses>
+  <uk-gaap-pt:StationeryAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">250</uk-gaap-pt:StationeryAdministrativeExpenses>
+  <uk-gaap-pt:OtherOfficeConsumablesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">200</uk-gaap-pt:OtherOfficeConsumablesAdministrativeExpenses>
+  <uk-gaap-pt:RoyaltiesPayableLicenceFeesSimilarChargesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">500</uk-gaap-pt:RoyaltiesPayableLicenceFeesSimilarChargesAdministrativeExpenses>
+  <uk-gaap-pt:PublicationOtherInformationSubscriptionsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">150</uk-gaap-pt:PublicationOtherInformationSubscriptionsAdministrativeExpenses>
+  <uk-gaap-pt:SubscriptionsToProfessionalTradeBodiesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">150</uk-gaap-pt:SubscriptionsToProfessionalTradeBodiesAdministrativeExpenses>
+  <uk-gaap-pt:BadDebtsWrittenOffAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">150</uk-gaap-pt:BadDebtsWrittenOffAdministrativeExpenses>
+  <uk-gaap-pt:LossGainOnForeignCurrencyTransactionsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">250</uk-gaap-pt:LossGainOnForeignCurrencyTransactionsAdministrativeExpenses>
+  <uk-gaap-pt:LossGainFromDisposalTangibleFixedAssetsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">300</uk-gaap-pt:LossGainFromDisposalTangibleFixedAssetsAdministrativeExpenses>
+  <uk-gaap-pt:LossGainFromDisposalIntangibleFixedAssetsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">400</uk-gaap-pt:LossGainFromDisposalIntangibleFixedAssetsAdministrativeExpenses>
+  <uk-gaap-pt:SundryExpensesAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">250</uk-gaap-pt:SundryExpensesAdministrativeExpenses>
+  <uk-gaap-pt:DepreciationTangibleFixedAssetsAdministrativeExpenses contextRef="CURRENT_YEAR" unitRef="GBP" decimals="0">2000</uk-gaap-pt:DepreciationTangibleFixedAssetsAdministrativeExpenses>
+</xbrl>

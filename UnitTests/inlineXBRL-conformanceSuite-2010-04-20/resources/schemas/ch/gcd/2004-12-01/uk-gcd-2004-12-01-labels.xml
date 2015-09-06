@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+v2.1 Label linkbase
+-->
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressDescription" xlink:label="uk-gcd_AddressDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressDescription" xlink:to="uk-gcd_AddressDescription_lbl" />
+    <label id="uk-gcd_AddressDescription_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_AddressDescription_lbl" xml:lang="en">Textual description of address:  e.g. "registered office address", "contact address", "bankers' address".</label>
+    <label id="uk-gcd_AddressDescription_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressDescription_lbl" xml:lang="en">Address description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine1DocumentAuthor" xlink:label="uk-gcd_AddressLine1DocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine1DocumentAuthor" xlink:to="uk-gcd_AddressLine1DocumentAuthor_lbl" />
+    <label id="uk-gcd_AddressLine1DocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine1DocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_street13">Address line 1, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine1DocumentContact" xlink:label="uk-gcd_AddressLine1DocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine1DocumentContact" xlink:to="uk-gcd_AddressLine1DocumentContact_lbl" />
+    <label id="uk-gcd_AddressLine1DocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine1DocumentContact_lbl" xml:lang="en" xlink:title="UKD_street13">Address line 1, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine1" xlink:label="uk-gcd_AddressLine1" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine1" xlink:to="uk-gcd_AddressLine1_lbl" />
+    <label id="uk-gcd_AddressLine1_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine1_lbl" xml:lang="en">Address line 1</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine1EntityContact" xlink:label="uk-gcd_AddressLine1EntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine1EntityContact" xlink:to="uk-gcd_AddressLine1EntityContact_lbl" />
+    <label id="uk-gcd_AddressLine1EntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine1EntityContact_lbl" xml:lang="en" xlink:title="UKD_street13">Address line 1, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine1Entity" xlink:label="uk-gcd_AddressLine1Entity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine1Entity" xlink:to="uk-gcd_AddressLine1Entity_lbl" />
+    <label id="uk-gcd_AddressLine1Entity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine1Entity_lbl" xml:lang="en" xlink:title="UKD_street13">Address line 1, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine2DocumentAuthor" xlink:label="uk-gcd_AddressLine2DocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine2DocumentAuthor" xlink:to="uk-gcd_AddressLine2DocumentAuthor_lbl" />
+    <label id="uk-gcd_AddressLine2DocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine2DocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_street23">Address line 2, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine2DocumentContact" xlink:label="uk-gcd_AddressLine2DocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine2DocumentContact" xlink:to="uk-gcd_AddressLine2DocumentContact_lbl" />
+    <label id="uk-gcd_AddressLine2DocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine2DocumentContact_lbl" xml:lang="en" xlink:title="UKD_street23">Address line 2, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine2" xlink:label="uk-gcd_AddressLine2" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine2" xlink:to="uk-gcd_AddressLine2_lbl" />
+    <label id="uk-gcd_AddressLine2_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine2_lbl" xml:lang="en">Address line 2</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine2EntityContact" xlink:label="uk-gcd_AddressLine2EntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine2EntityContact" xlink:to="uk-gcd_AddressLine2EntityContact_lbl" />
+    <label id="uk-gcd_AddressLine2EntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine2EntityContact_lbl" xml:lang="en" xlink:title="UKD_street23">Address line 2, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine2Entity" xlink:label="uk-gcd_AddressLine2Entity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine2Entity" xlink:to="uk-gcd_AddressLine2Entity_lbl" />
+    <label id="uk-gcd_AddressLine2Entity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine2Entity_lbl" xml:lang="en" xlink:title="UKD_street23">Address line 2, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine3DocumentAuthor" xlink:label="uk-gcd_AddressLine3DocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine3DocumentAuthor" xlink:to="uk-gcd_AddressLine3DocumentAuthor_lbl" />
+    <label id="uk-gcd_AddressLine3DocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine3DocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_street33">Address line 3, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine3DocumentContact" xlink:label="uk-gcd_AddressLine3DocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine3DocumentContact" xlink:to="uk-gcd_AddressLine3DocumentContact_lbl" />
+    <label id="uk-gcd_AddressLine3DocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine3DocumentContact_lbl" xml:lang="en" xlink:title="UKD_street33">Address line 3, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine3" xlink:label="uk-gcd_AddressLine3" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine3" xlink:to="uk-gcd_AddressLine3_lbl" />
+    <label id="uk-gcd_AddressLine3_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine3_lbl" xml:lang="en">Address line 3</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine3EntityContact" xlink:label="uk-gcd_AddressLine3EntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine3EntityContact" xlink:to="uk-gcd_AddressLine3EntityContact_lbl" />
+    <label id="uk-gcd_AddressLine3EntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine3EntityContact_lbl" xml:lang="en" xlink:title="UKD_street33">Address line 3, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AddressLine3Entity" xlink:label="uk-gcd_AddressLine3Entity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AddressLine3Entity" xlink:to="uk-gcd_AddressLine3Entity_lbl" />
+    <label id="uk-gcd_AddressLine3Entity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AddressLine3Entity_lbl" xml:lang="en" xlink:title="UKD_street33">Address line 3, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AuthorAddress" xlink:label="uk-gcd_AuthorAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AuthorAddress" xlink:to="uk-gcd_AuthorAddress_lbl" />
+    <label id="uk-gcd_AuthorAddress_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AuthorAddress_lbl" xml:lang="en" xlink:title="UKD_entityAddress">Author address</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_AuthorPhoneFaxNumbers" xlink:label="uk-gcd_AuthorPhoneFaxNumbers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_AuthorPhoneFaxNumbers" xlink:to="uk-gcd_AuthorPhoneFaxNumbers_lbl" />
+    <label id="uk-gcd_AuthorPhoneFaxNumbers_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_AuthorPhoneFaxNumbers_lbl" xml:lang="en" xlink:title="UKD_entityPhoneFaxNumber">Author phone and fax numbers</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_BalanceSheetDate" xlink:label="uk-gcd_BalanceSheetDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_BalanceSheetDate" xlink:to="uk-gcd_BalanceSheetDate_lbl" />
+    <label id="uk-gcd_BalanceSheetDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_BalanceSheetDate_lbl" xml:lang="en">Balance sheet date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrAreaCodeDocumentAuthor" xlink:label="uk-gcd_CityOrAreaCodeDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrAreaCodeDocumentAuthor" xlink:to="uk-gcd_CityOrAreaCodeDocumentAuthor_lbl" />
+    <label id="uk-gcd_CityOrAreaCodeDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrAreaCodeDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_cityOrAreaCode">City or area code, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrAreaCodeDocumentContact" xlink:label="uk-gcd_CityOrAreaCodeDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrAreaCodeDocumentContact" xlink:to="uk-gcd_CityOrAreaCodeDocumentContact_lbl" />
+    <label id="uk-gcd_CityOrAreaCodeDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrAreaCodeDocumentContact_lbl" xml:lang="en" xlink:title="UKD_cityOrAreaCode">City or area code, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrAreaCodeEntityContact" xlink:label="uk-gcd_CityOrAreaCodeEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrAreaCodeEntityContact" xlink:to="uk-gcd_CityOrAreaCodeEntityContact_lbl" />
+    <label id="uk-gcd_CityOrAreaCodeEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrAreaCodeEntityContact_lbl" xml:lang="en" xlink:title="UKD_cityOrAreaCode">City or area code, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrAreaCodeEntity" xlink:label="uk-gcd_CityOrAreaCodeEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrAreaCodeEntity" xlink:to="uk-gcd_CityOrAreaCodeEntity_lbl" />
+    <label id="uk-gcd_CityOrAreaCodeEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrAreaCodeEntity_lbl" xml:lang="en" xlink:title="UKD_cityOrAreaCode">City or area code, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrTownDocumentAuthor" xlink:label="uk-gcd_CityOrTownDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrTownDocumentAuthor" xlink:to="uk-gcd_CityOrTownDocumentAuthor_lbl" />
+    <label id="uk-gcd_CityOrTownDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrTownDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_city3">City or town, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrTownDocumentContact" xlink:label="uk-gcd_CityOrTownDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrTownDocumentContact" xlink:to="uk-gcd_CityOrTownDocumentContact_lbl" />
+    <label id="uk-gcd_CityOrTownDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrTownDocumentContact_lbl" xml:lang="en" xlink:title="UKD_city3">City or town, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrTown" xlink:label="uk-gcd_CityOrTown" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrTown" xlink:to="uk-gcd_CityOrTown_lbl" />
+    <label id="uk-gcd_CityOrTown_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrTown_lbl" xml:lang="en">City or Town</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrTownEntityContact" xlink:label="uk-gcd_CityOrTownEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrTownEntityContact" xlink:to="uk-gcd_CityOrTownEntityContact_lbl" />
+    <label id="uk-gcd_CityOrTownEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrTownEntityContact_lbl" xml:lang="en" xlink:title="UKD_city3">City or town, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CityOrTownEntity" xlink:label="uk-gcd_CityOrTownEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CityOrTownEntity" xlink:to="uk-gcd_CityOrTownEntity_lbl" />
+    <label id="uk-gcd_CityOrTownEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CityOrTownEntity_lbl" xml:lang="en" xlink:title="UKD_city3">City or town, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ContactAddress" xlink:label="uk-gcd_ContactAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ContactAddress" xlink:to="uk-gcd_ContactAddress_lbl" />
+    <label id="uk-gcd_ContactAddress_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ContactAddress_lbl" xml:lang="en" xlink:title="UKD_entityAddress">Contact address</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ContactPhoneFaxNumbers" xlink:label="uk-gcd_ContactPhoneFaxNumbers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ContactPhoneFaxNumbers" xlink:to="uk-gcd_ContactPhoneFaxNumbers_lbl" />
+    <label id="uk-gcd_ContactPhoneFaxNumbers_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ContactPhoneFaxNumbers_lbl" xml:lang="en" xlink:title="UKD_entityPhoneFaxNumber">Contact phone and fax numbers</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryDocumentAuthor" xlink:label="uk-gcd_CountryDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryDocumentAuthor" xlink:to="uk-gcd_CountryDocumentAuthor_lbl" />
+    <label id="uk-gcd_CountryDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_country4">Country, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryDocumentContact" xlink:label="uk-gcd_CountryDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryDocumentContact" xlink:to="uk-gcd_CountryDocumentContact_lbl" />
+    <label id="uk-gcd_CountryDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryDocumentContact_lbl" xml:lang="en" xlink:title="UKD_country4">Country, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_Country" xlink:label="uk-gcd_Country" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_Country" xlink:to="uk-gcd_Country_lbl" />
+    <label id="uk-gcd_Country_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_Country_lbl" xml:lang="en">Country</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryEntityContact" xlink:label="uk-gcd_CountryEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryEntityContact" xlink:to="uk-gcd_CountryEntityContact_lbl" />
+    <label id="uk-gcd_CountryEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryEntityContact_lbl" xml:lang="en" xlink:title="UKD_country4">Country, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryEntity" xlink:label="uk-gcd_CountryEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryEntity" xlink:to="uk-gcd_CountryEntity_lbl" />
+    <label id="uk-gcd_CountryEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryEntity_lbl" xml:lang="en" xlink:title="UKD_country4">Country, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryOrRegionCodeDocumentAuthor" xlink:label="uk-gcd_CountryOrRegionCodeDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryOrRegionCodeDocumentAuthor" xlink:to="uk-gcd_CountryOrRegionCodeDocumentAuthor_lbl" />
+    <label id="uk-gcd_CountryOrRegionCodeDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryOrRegionCodeDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_countryOrRegionCode">Country or region code, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryOrRegionCodeDocumentContact" xlink:label="uk-gcd_CountryOrRegionCodeDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryOrRegionCodeDocumentContact" xlink:to="uk-gcd_CountryOrRegionCodeDocumentContact_lbl" />
+    <label id="uk-gcd_CountryOrRegionCodeDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryOrRegionCodeDocumentContact_lbl" xml:lang="en" xlink:title="UKD_countryOrRegionCode">Country or region code, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryOrRegionCodeEntityContact" xlink:label="uk-gcd_CountryOrRegionCodeEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryOrRegionCodeEntityContact" xlink:to="uk-gcd_CountryOrRegionCodeEntityContact_lbl" />
+    <label id="uk-gcd_CountryOrRegionCodeEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryOrRegionCodeEntityContact_lbl" xml:lang="en" xlink:title="UKD_countryOrRegionCode">Country or region code, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountryOrRegionCodeEntity" xlink:label="uk-gcd_CountryOrRegionCodeEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountryOrRegionCodeEntity" xlink:to="uk-gcd_CountryOrRegionCodeEntity_lbl" />
+    <label id="uk-gcd_CountryOrRegionCodeEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountryOrRegionCodeEntity_lbl" xml:lang="en" xlink:title="UKD_countryOrRegionCode">Country or region code, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_County" xlink:label="uk-gcd_County" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_County" xlink:to="uk-gcd_County_lbl" />
+    <label id="uk-gcd_County_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_County_lbl" xml:lang="en">County</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountyOrRegionDocumentAuthor" xlink:label="uk-gcd_CountyOrRegionDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountyOrRegionDocumentAuthor" xlink:to="uk-gcd_CountyOrRegionDocumentAuthor_lbl" />
+    <label id="uk-gcd_CountyOrRegionDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountyOrRegionDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_countyOrRegion3">County or Region, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountyOrRegionDocumentContact" xlink:label="uk-gcd_CountyOrRegionDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountyOrRegionDocumentContact" xlink:to="uk-gcd_CountyOrRegionDocumentContact_lbl" />
+    <label id="uk-gcd_CountyOrRegionDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountyOrRegionDocumentContact_lbl" xml:lang="en" xlink:title="UKD_countyOrRegion3">County or Region, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountyOrRegionEntityContact" xlink:label="uk-gcd_CountyOrRegionEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountyOrRegionEntityContact" xlink:to="uk-gcd_CountyOrRegionEntityContact_lbl" />
+    <label id="uk-gcd_CountyOrRegionEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountyOrRegionEntityContact_lbl" xml:lang="en" xlink:title="UKD_countyOrRegion3">County or Region, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_CountyOrRegionEntity" xlink:label="uk-gcd_CountyOrRegionEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_CountyOrRegionEntity" xlink:to="uk-gcd_CountyOrRegionEntity_lbl" />
+    <label id="uk-gcd_CountyOrRegionEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_CountyOrRegionEntity_lbl" xml:lang="en" xlink:title="UKD_countyOrRegion3">County or region, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_Date" xlink:label="uk-gcd_Date" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_Date" xlink:to="uk-gcd_Date_lbl" />
+    <label id="uk-gcd_Date_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_Date_lbl" xml:lang="en" xlink:title="UKD_pdStartDte">Date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DateFormed" xlink:label="uk-gcd_DateFormed" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DateFormed" xlink:to="uk-gcd_DateFormed_lbl" />
+    <label id="uk-gcd_DateFormed_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DateFormed_lbl" xml:lang="en" xlink:title="UKD_entityDteFormed">Date formed</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DateIncorporation" xlink:label="uk-gcd_DateIncorporation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DateIncorporation" xlink:to="uk-gcd_DateIncorporation_lbl" />
+    <label id="uk-gcd_DateIncorporation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DateIncorporation_lbl" xml:lang="en" xlink:title="UKD_dteOfIncorporation">Date of incorporation</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DateNameChanged" xlink:label="uk-gcd_DateNameChanged" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DateNameChanged" xlink:to="uk-gcd_DateNameChanged_lbl" />
+    <label id="uk-gcd_DateNameChanged_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DateNameChanged_lbl" xml:lang="en" xlink:title="UKD_dteNameChanged">Date name changed</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DateRevision" xlink:label="uk-gcd_DateRevision" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DateRevision" xlink:to="uk-gcd_DateRevision_lbl" />
+    <label id="uk-gcd_DateRevision_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DateRevision_lbl" xml:lang="en" xlink:title="UKD_dteOfRevision">Date of revision</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionAddressDocumentAuthor" xlink:label="uk-gcd_DescriptionAddressDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionAddressDocumentAuthor" xlink:to="uk-gcd_DescriptionAddressDocumentAuthor_lbl" />
+    <label id="uk-gcd_DescriptionAddressDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionAddressDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_name10">Description of address, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionAddressDocumentContact" xlink:label="uk-gcd_DescriptionAddressDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionAddressDocumentContact" xlink:to="uk-gcd_DescriptionAddressDocumentContact_lbl" />
+    <label id="uk-gcd_DescriptionAddressDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionAddressDocumentContact_lbl" xml:lang="en" xlink:title="UKD_name10">Description of address, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionAddressEntityContact" xlink:label="uk-gcd_DescriptionAddressEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionAddressEntityContact" xlink:to="uk-gcd_DescriptionAddressEntityContact_lbl" />
+    <label id="uk-gcd_DescriptionAddressEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionAddressEntityContact_lbl" xml:lang="en" xlink:title="UKD_name10">Description of address, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionAddressEntity" xlink:label="uk-gcd_DescriptionAddressEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionAddressEntity" xlink:to="uk-gcd_DescriptionAddressEntity_lbl" />
+    <label id="uk-gcd_DescriptionAddressEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionAddressEntity_lbl" xml:lang="en">Description of nature of address.  For example: "primary place of business" or "place of incorporation".</label>
+    <label id="uk-gcd_DescriptionAddressEntity_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionAddressEntity_lbl" xml:lang="en" xlink:title="UKD_name10">Description of address, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionDate" xlink:label="uk-gcd_DescriptionDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionDate" xlink:to="uk-gcd_DescriptionDate_lbl" />
+    <label id="uk-gcd_DescriptionDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionDate_lbl" xml:lang="en">Definition of a precise date.  An example is "start date for xxxxx".</label>
+    <label id="uk-gcd_DescriptionDate_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionDate_lbl" xml:lang="en" xlink:title="UKD_pdEndDte">Description of date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionEmailAddressAuthor" xlink:label="uk-gcd_DescriptionEmailAddressAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionEmailAddressAuthor" xlink:to="uk-gcd_DescriptionEmailAddressAuthor_lbl" />
+    <label id="uk-gcd_DescriptionEmailAddressAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionEmailAddressAuthor_lbl" xml:lang="en" xlink:title="UKD_emailAddressDsc">Description of e-mail address of author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionEmailAddressContactEntity" xlink:label="uk-gcd_DescriptionEmailAddressContactEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionEmailAddressContactEntity" xlink:to="uk-gcd_DescriptionEmailAddressContactEntity_lbl" />
+    <label id="uk-gcd_DescriptionEmailAddressContactEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionEmailAddressContactEntity_lbl" xml:lang="en">Description of the e-mail adress.  Examples are "private e-mail address" or "business e-mail address".</label>
+    <label id="uk-gcd_DescriptionEmailAddressContactEntity_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionEmailAddressContactEntity_lbl" xml:lang="en" xlink:title="UKD_emailAddressDsc">Description of e-mail address of contact, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionEmailAddressDocumentContact" xlink:label="uk-gcd_DescriptionEmailAddressDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionEmailAddressDocumentContact" xlink:to="uk-gcd_DescriptionEmailAddressDocumentContact_lbl" />
+    <label id="uk-gcd_DescriptionEmailAddressDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionEmailAddressDocumentContact_lbl" xml:lang="en" xlink:title="UKD_emailAddressDsc">Description of e-mail address of document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_Description" xlink:label="uk-gcd_Description" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_Description" xlink:to="uk-gcd_Description_lbl" />
+    <label id="uk-gcd_Description_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_Description_lbl" xml:lang="en">Descriptive information about the revision and changes made by the revision.</label>
+    <label id="uk-gcd_Description_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_Description_lbl" xml:lang="en" xlink:title="UKD_dsc11">Description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionIdentifiyingSystem" xlink:label="uk-gcd_DescriptionIdentifiyingSystem" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionIdentifiyingSystem" xlink:to="uk-gcd_DescriptionIdentifiyingSystem_lbl" />
+    <label id="uk-gcd_DescriptionIdentifiyingSystem_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionIdentifiyingSystem_lbl" xml:lang="en">Any descriptive information about the system which assigns the code.  An example is "SIC Code".</label>
+    <label id="uk-gcd_DescriptionIdentifiyingSystem_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionIdentifiyingSystem_lbl" xml:lang="en" xlink:title="UKD_dsc6">Description of identifiying system</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionIdentifyingCode" xlink:label="uk-gcd_DescriptionIdentifyingCode" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionIdentifyingCode" xlink:to="uk-gcd_DescriptionIdentifyingCode_lbl" />
+    <label id="uk-gcd_DescriptionIdentifyingCode_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionIdentifyingCode_lbl" xml:lang="en" xlink:title="UKD_dsc5">Description of identifying code</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionLegalFormEntity" xlink:label="uk-gcd_DescriptionLegalFormEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionLegalFormEntity" xlink:to="uk-gcd_DescriptionLegalFormEntity_lbl" />
+    <label id="uk-gcd_DescriptionLegalFormEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionLegalFormEntity_lbl" xml:lang="en">Details of the entity's legal form.  Examples are partnership, limited liability company, trust, etc.</label>
+    <label id="uk-gcd_DescriptionLegalFormEntity_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionLegalFormEntity_lbl" xml:lang="en" xlink:title="UKD_entityLegalForm">Description of legal form of entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionOrTitleRevisionAuthor" xlink:label="uk-gcd_DescriptionOrTitleRevisionAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionOrTitleRevisionAuthor" xlink:to="uk-gcd_DescriptionOrTitleRevisionAuthor_lbl" />
+    <label id="uk-gcd_DescriptionOrTitleRevisionAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionOrTitleRevisionAuthor_lbl" xml:lang="en" xlink:title="UKD_revisedByTitle">Description or title of revision author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionPeriodCoveredByStatement" xlink:label="uk-gcd_DescriptionPeriodCoveredByStatement" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionPeriodCoveredByStatement" xlink:to="uk-gcd_DescriptionPeriodCoveredByStatement_lbl" />
+    <label id="uk-gcd_DescriptionPeriodCoveredByStatement_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionPeriodCoveredByStatement_lbl" xml:lang="en">Description of period covered by statement</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionPeriod" xlink:label="uk-gcd_DescriptionPeriod" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionPeriod" xlink:to="uk-gcd_DescriptionPeriod_lbl" />
+    <label id="uk-gcd_DescriptionPeriod_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionPeriod_lbl" xml:lang="en">Description of period.  Example is "Q1 2005".</label>
+    <label id="uk-gcd_DescriptionPeriod_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionPeriod_lbl" xml:lang="en">Description of period</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor" xlink:to="uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor_lbl" />
+    <label id="uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_dsc8">Description of phone or fax number, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact" xlink:to="uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact_lbl" />
+    <label id="uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberDocumentContact_lbl" xml:lang="en" xlink:title="UKD_dsc8">Description of phone or fax number, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionPhoneOrFaxNumberEntityContact" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionPhoneOrFaxNumberEntityContact" xlink:to="uk-gcd_DescriptionPhoneOrFaxNumberEntityContact_lbl" />
+    <label id="uk-gcd_DescriptionPhoneOrFaxNumberEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberEntityContact_lbl" xml:lang="en" xlink:title="UKD_dsc8">Description of phone or fax number, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionPhoneOrFaxNumberEntity" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionPhoneOrFaxNumberEntity" xlink:to="uk-gcd_DescriptionPhoneOrFaxNumberEntity_lbl" />
+    <label id="uk-gcd_DescriptionPhoneOrFaxNumberEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberEntity_lbl" xml:lang="en">Description of the phone or fax number.  Examples include "Main fax", "Investor relations phone", etc.</label>
+    <label id="uk-gcd_DescriptionPhoneOrFaxNumberEntity_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionPhoneOrFaxNumberEntity_lbl" xml:lang="en" xlink:title="UKD_dsc8">Description of phone or fax number, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionSecurityEntity" xlink:label="uk-gcd_DescriptionSecurityEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionSecurityEntity" xlink:to="uk-gcd_DescriptionSecurityEntity_lbl" />
+    <label id="uk-gcd_DescriptionSecurityEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionSecurityEntity_lbl" xml:lang="en">Description of security of entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DescriptionUniqueDocumentIdentifier" xlink:label="uk-gcd_DescriptionUniqueDocumentIdentifier" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DescriptionUniqueDocumentIdentifier" xlink:to="uk-gcd_DescriptionUniqueDocumentIdentifier_lbl" />
+    <label id="uk-gcd_DescriptionUniqueDocumentIdentifier_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DescriptionUniqueDocumentIdentifier_lbl" xml:lang="en" xlink:title="UKD_documentIdentifierDsc">Description of unique document identifier</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentAuthors" xlink:label="uk-gcd_DocumentAuthors" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentAuthors" xlink:to="uk-gcd_DocumentAuthors_lbl" />
+    <label id="uk-gcd_DocumentAuthors_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentAuthors_lbl" xml:lang="en" xlink:title="UKD_entityContact">Document authors</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentContactAddress" xlink:label="uk-gcd_DocumentContactAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentContactAddress" xlink:to="uk-gcd_DocumentContactAddress_lbl" />
+    <label id="uk-gcd_DocumentContactAddress_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentContactAddress_lbl" xml:lang="en" xlink:title="UKD_entityAddress">Document contact address</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentContactPhoneFaxNumbers" xlink:label="uk-gcd_DocumentContactPhoneFaxNumbers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentContactPhoneFaxNumbers" xlink:to="uk-gcd_DocumentContactPhoneFaxNumbers_lbl" />
+    <label id="uk-gcd_DocumentContactPhoneFaxNumbers_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentContactPhoneFaxNumbers_lbl" xml:lang="en" xlink:title="UKD_entityPhoneFaxNumber">Document contact phone and fax numbers</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentContacts" xlink:label="uk-gcd_DocumentContacts" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentContacts" xlink:to="uk-gcd_DocumentContacts_lbl" />
+    <label id="uk-gcd_DocumentContacts_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentContacts_lbl" xml:lang="en" xlink:title="UKD_entityContact">Document contacts</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentCreationDate" xlink:label="uk-gcd_DocumentCreationDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentCreationDate" xlink:to="uk-gcd_DocumentCreationDate_lbl" />
+    <label id="uk-gcd_DocumentCreationDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentCreationDate_lbl" xml:lang="en" xlink:title="UKD_documentCreationDte">Document creation date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentDescription" xlink:label="uk-gcd_DocumentDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentDescription" xlink:to="uk-gcd_DocumentDescription_lbl" />
+    <label id="uk-gcd_DocumentDescription_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DocumentDescription_lbl" xml:lang="en">A textual description of the document or its content.  An example is "Annual report pursuant to section xxx of Companies Act" etc.</label>
+    <label id="uk-gcd_DocumentDescription_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentDescription_lbl" xml:lang="en" xlink:title="UKD_documentDsc">Document description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentInformation" xlink:label="uk-gcd_DocumentInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentInformation" xlink:to="uk-gcd_DocumentInformation_lbl" />
+    <label id="uk-gcd_DocumentInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DocumentInformation_lbl" xml:lang="en">Information on XBRL instance document produced from the taxonomy</label>
+    <label id="uk-gcd_DocumentInformation_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentInformation_lbl" xml:lang="en" xlink:title="UKD_documentInformation">Document information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentLanguages" xlink:label="uk-gcd_DocumentLanguages" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentLanguages" xlink:to="uk-gcd_DocumentLanguages_lbl" />
+    <label id="uk-gcd_DocumentLanguages_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DocumentLanguages_lbl" xml:lang="en">The language(s) in which the document is presented.  (Note: The label linkbase may contain multiple languages).</label>
+    <label id="uk-gcd_DocumentLanguages_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentLanguages_lbl" xml:lang="en" xlink:title="UKD_documentLanguage">Document languages</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentLastEditDate" xlink:label="uk-gcd_DocumentLastEditDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentLastEditDate" xlink:to="uk-gcd_DocumentLastEditDate_lbl" />
+    <label id="uk-gcd_DocumentLastEditDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentLastEditDate_lbl" xml:lang="en" xlink:title="UKD_documentLastEditDte">Document last edit date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentNameTitle" xlink:label="uk-gcd_DocumentNameTitle" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentNameTitle" xlink:to="uk-gcd_DocumentNameTitle_lbl" />
+    <label id="uk-gcd_DocumentNameTitle_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DocumentNameTitle_lbl" xml:lang="en">The name or title given to the document by the creator or publisher.  An examples is "2004 Annual Report".</label>
+    <label id="uk-gcd_DocumentNameTitle_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentNameTitle_lbl" xml:lang="en" xlink:title="UKD_documentNameTitle">Document name / title</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentRevisionHistory" xlink:label="uk-gcd_DocumentRevisionHistory" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentRevisionHistory" xlink:to="uk-gcd_DocumentRevisionHistory_lbl" />
+    <label id="uk-gcd_DocumentRevisionHistory_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentRevisionHistory_lbl" xml:lang="en" xlink:title="UKD_documentRevisionHistory">Document revision history</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_DocumentVersionNumber" xlink:label="uk-gcd_DocumentVersionNumber" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_DocumentVersionNumber" xlink:to="uk-gcd_DocumentVersionNumber_lbl" />
+    <label id="uk-gcd_DocumentVersionNumber_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_DocumentVersionNumber_lbl" xml:lang="en">Convenient version number for reference, such as 2.0 or 3.0.</label>
+    <label id="uk-gcd_DocumentVersionNumber_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_DocumentVersionNumber_lbl" xml:lang="en">Document version number</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EmailAddressAuthor" xlink:label="uk-gcd_EmailAddressAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EmailAddressAuthor" xlink:to="uk-gcd_EmailAddressAuthor_lbl" />
+    <label id="uk-gcd_EmailAddressAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EmailAddressAuthor_lbl" xml:lang="en" xlink:title="UKD_emailAddress">Email address of author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EmailAddressContactEntity" xlink:label="uk-gcd_EmailAddressContactEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EmailAddressContactEntity" xlink:to="uk-gcd_EmailAddressContactEntity_lbl" />
+    <label id="uk-gcd_EmailAddressContactEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EmailAddressContactEntity_lbl" xml:lang="en" xlink:title="UKD_emailAddress">Email address of contact, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EmailAddressDocumentContact" xlink:label="uk-gcd_EmailAddressDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EmailAddressDocumentContact" xlink:to="uk-gcd_EmailAddressDocumentContact_lbl" />
+    <label id="uk-gcd_EmailAddressDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EmailAddressDocumentContact_lbl" xml:lang="en" xlink:title="UKD_emailAddress">Email address of document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EmailAuthor" xlink:label="uk-gcd_EmailAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EmailAuthor" xlink:to="uk-gcd_EmailAuthor_lbl" />
+    <label id="uk-gcd_EmailAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EmailAuthor_lbl" xml:lang="en" xlink:title="UKD_email">Email of author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EmailContactEntity" xlink:label="uk-gcd_EmailContactEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EmailContactEntity" xlink:to="uk-gcd_EmailContactEntity_lbl" />
+    <label id="uk-gcd_EmailContactEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EmailContactEntity_lbl" xml:lang="en" xlink:title="UKD_email">Email of contact, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EmailDocumentContact" xlink:label="uk-gcd_EmailDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EmailDocumentContact" xlink:to="uk-gcd_EmailDocumentContact_lbl" />
+    <label id="uk-gcd_EmailDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EmailDocumentContact_lbl" xml:lang="en" xlink:title="UKD_email">Email of document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EndDate" xlink:label="uk-gcd_EndDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EndDate" xlink:to="uk-gcd_EndDate_lbl" />
+    <label id="uk-gcd_EndDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EndDate_lbl" xml:lang="en" xlink:title="UKD_unitMeasurementOfTime">End date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EndDateForFinancialStatement" xlink:label="uk-gcd_EndDateForFinancialStatement" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EndDateForFinancialStatement" xlink:to="uk-gcd_EndDateForFinancialStatement_lbl" />
+    <label id="uk-gcd_EndDateForFinancialStatement_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EndDateForFinancialStatement_lbl" xml:lang="en">End date for financial statement</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityAddress" xlink:label="uk-gcd_EntityAddress" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityAddress" xlink:to="uk-gcd_EntityAddress_lbl" />
+    <label id="uk-gcd_EntityAddress_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_EntityAddress_lbl" xml:lang="en">Multiple entries are possible: for example, place of incorporation, primary place of business, etc.</label>
+    <label id="uk-gcd_EntityAddress_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityAddress_lbl" xml:lang="en" xlink:title="UKD_entityAddress">Entity address</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityBusinessDescription" xlink:label="uk-gcd_EntityBusinessDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityBusinessDescription" xlink:to="uk-gcd_EntityBusinessDescription_lbl" />
+    <label id="uk-gcd_EntityBusinessDescription_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_EntityBusinessDescription_lbl" xml:lang="en">Description of main line of business of entity</label>
+    <label id="uk-gcd_EntityBusinessDescription_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityBusinessDescription_lbl" xml:lang="en" xlink:title="UKD_entityBusinessDsc">Entity business description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityContacts" xlink:label="uk-gcd_EntityContacts" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityContacts" xlink:to="uk-gcd_EntityContacts_lbl" />
+    <label id="uk-gcd_EntityContacts_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityContacts_lbl" xml:lang="en" xlink:title="UKD_entityContact">Entity contacts</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityCurrentLegalName" xlink:label="uk-gcd_EntityCurrentLegalName" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityCurrentLegalName" xlink:to="uk-gcd_EntityCurrentLegalName_lbl" />
+    <label id="uk-gcd_EntityCurrentLegalName_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityCurrentLegalName_lbl" xml:lang="en">Entity current legal name</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityFormerName" xlink:label="uk-gcd_EntityFormerName" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityFormerName" xlink:to="uk-gcd_EntityFormerName_lbl" />
+    <label id="uk-gcd_EntityFormerName_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_EntityFormerName_lbl" xml:lang="en">Previous legal names used by the entity.  A new entity formed from the merger would not have a former name.</label>
+    <label id="uk-gcd_EntityFormerName_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityFormerName_lbl" xml:lang="en" xlink:title="UKD_entityFormerName">Entity former name</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityGeneralIdentifier" xlink:label="uk-gcd_EntityGeneralIdentifier" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityGeneralIdentifier" xlink:to="uk-gcd_EntityGeneralIdentifier_lbl" />
+    <label id="uk-gcd_EntityGeneralIdentifier_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityGeneralIdentifier_lbl" xml:lang="en" xlink:title="UKD_entityIdentifier">Entity general identifier</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityIncorporationInformation" xlink:label="uk-gcd_EntityIncorporationInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityIncorporationInformation" xlink:to="uk-gcd_EntityIncorporationInformation_lbl" />
+    <label id="uk-gcd_EntityIncorporationInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityIncorporationInformation_lbl" xml:lang="en" xlink:title="UKD_entityIncorporationInformation">Entity incorporation information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityIndustryOrSectorIdentifiers" xlink:label="uk-gcd_EntityIndustryOrSectorIdentifiers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityIndustryOrSectorIdentifiers" xlink:to="uk-gcd_EntityIndustryOrSectorIdentifiers_lbl" />
+    <label id="uk-gcd_EntityIndustryOrSectorIdentifiers_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityIndustryOrSectorIdentifiers_lbl" xml:lang="en" xlink:title="UKD_entityIndustryOrSectorCodeIndentifiers">Entity industry or sector identifiers</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityInformation" xlink:label="uk-gcd_EntityInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityInformation" xlink:to="uk-gcd_EntityInformation_lbl" />
+    <label id="uk-gcd_EntityInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_EntityInformation_lbl" xml:lang="en">Information on entity / entities described in the instance document</label>
+    <label id="uk-gcd_EntityInformation_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityInformation_lbl" xml:lang="en" xlink:title="UKD_entityInformation">Entity information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityListingDetails" xlink:label="uk-gcd_EntityListingDetails" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityListingDetails" xlink:to="uk-gcd_EntityListingDetails_lbl" />
+    <label id="uk-gcd_EntityListingDetails_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityListingDetails_lbl" xml:lang="en">Entity listing details</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityNames" xlink:label="uk-gcd_EntityNames" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityNames" xlink:to="uk-gcd_EntityNames_lbl" />
+    <label id="uk-gcd_EntityNames_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityNames_lbl" xml:lang="en" xlink:title="UKD_entityNames">Entity names</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityPhoneFaxNumbers" xlink:label="uk-gcd_EntityPhoneFaxNumbers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityPhoneFaxNumbers" xlink:to="uk-gcd_EntityPhoneFaxNumbers_lbl" />
+    <label id="uk-gcd_EntityPhoneFaxNumbers_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityPhoneFaxNumbers_lbl" xml:lang="en" xlink:title="UKD_entityPhoneFaxNumber">Entity phone and fax numbers</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityPublicListingInformation" xlink:label="uk-gcd_EntityPublicListingInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityPublicListingInformation" xlink:to="uk-gcd_EntityPublicListingInformation_lbl" />
+    <label id="uk-gcd_EntityPublicListingInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_EntityPublicListingInformation_lbl" xml:lang="en">Listing information for public entity.  Multiple entries are allowed;  e.g. DaimlerChrysler listed on the Dow, Frankfurt, and LSE exchanges.</label>
+    <label id="uk-gcd_EntityPublicListingInformation_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityPublicListingInformation_lbl" xml:lang="en" xlink:title="UKD_entityPublicListingInformation">Entity public listing information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityTaxIdentifiers" xlink:label="uk-gcd_EntityTaxIdentifiers" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityTaxIdentifiers" xlink:to="uk-gcd_EntityTaxIdentifiers_lbl" />
+    <label id="uk-gcd_EntityTaxIdentifiers_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_EntityTaxIdentifiers_lbl" xml:lang="en">Tax codes or identifiers to assist in the classication or identification of the entity. </label>
+    <label id="uk-gcd_EntityTaxIdentifiers_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityTaxIdentifiers_lbl" xml:lang="en" xlink:title="UKD_entityTaxIdentifiers">Entity tax identifiers</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityTradingName" xlink:label="uk-gcd_EntityTradingName" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityTradingName" xlink:to="uk-gcd_EntityTradingName_lbl" />
+    <label id="uk-gcd_EntityTradingName_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityTradingName_lbl" xml:lang="en">Entity trading name</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_EntityWebsite" xlink:label="uk-gcd_EntityWebsite" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_EntityWebsite" xlink:to="uk-gcd_EntityWebsite_lbl" />
+    <label id="uk-gcd_EntityWebsite_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_EntityWebsite_lbl" xml:lang="en" xlink:title="UKD_entityWebSite">Entity website</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ExchangeDescription" xlink:label="uk-gcd_ExchangeDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ExchangeDescription" xlink:to="uk-gcd_ExchangeDescription_lbl" />
+    <label id="uk-gcd_ExchangeDescription_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ExchangeDescription_lbl" xml:lang="en" xlink:title="UKD_exchangeDsc">Exchange description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ExchangeName" xlink:label="uk-gcd_ExchangeName" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ExchangeName" xlink:to="uk-gcd_ExchangeName_lbl" />
+    <label id="uk-gcd_ExchangeName_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ExchangeName_lbl" xml:lang="en" xlink:title="UKD_exchangeName">Exchange name</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_FinancialStatementDates" xlink:label="uk-gcd_FinancialStatementDates" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_FinancialStatementDates" xlink:to="uk-gcd_FinancialStatementDates_lbl" />
+    <label id="uk-gcd_FinancialStatementDates_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_FinancialStatementDates_lbl" xml:lang="en">Financial statement dates</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_FormerNameEntity" xlink:label="uk-gcd_FormerNameEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_FormerNameEntity" xlink:to="uk-gcd_FormerNameEntity_lbl" />
+    <label id="uk-gcd_FormerNameEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_FormerNameEntity_lbl" xml:lang="en" xlink:title="UKD_name7">Former name of entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_IdentifyingCode" xlink:label="uk-gcd_IdentifyingCode" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_IdentifyingCode" xlink:to="uk-gcd_IdentifyingCode_lbl" />
+    <label id="uk-gcd_IdentifyingCode_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_IdentifyingCode_lbl" xml:lang="en" xlink:title="UKD_name8">Identifying code</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_IndentifyingCode" xlink:label="uk-gcd_IndentifyingCode" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_IndentifyingCode" xlink:to="uk-gcd_IndentifyingCode_lbl" />
+    <label id="uk-gcd_IndentifyingCode_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_IndentifyingCode_lbl" xml:lang="en" xlink:title="UKD_name9">Indentifying code</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ISOLanguageCode" xlink:label="uk-gcd_ISOLanguageCode" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ISOLanguageCode" xlink:to="uk-gcd_ISOLanguageCode_lbl" />
+    <label id="uk-gcd_ISOLanguageCode_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_ISOLanguageCode_lbl" xml:lang="en">The content of this field should follow ISO 639-1988 language codes.</label>
+    <label id="uk-gcd_ISOLanguageCode_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ISOLanguageCode_lbl" xml:lang="en" xlink:title="UKD_name15">ISO language code</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_Jurisdiction" xlink:label="uk-gcd_Jurisdiction" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_Jurisdiction" xlink:to="uk-gcd_Jurisdiction_lbl" />
+    <label id="uk-gcd_Jurisdiction_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_Jurisdiction_lbl" xml:lang="en">Details of the jurisdiction where the entity was formed.  Examples are "Singapore" or "Sydney, Australia".</label>
+    <label id="uk-gcd_Jurisdiction_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_Jurisdiction_lbl" xml:lang="en" xlink:title="UKD_entityLegalJurisdictionFormed">Jurisdiction</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_LegalFormEntity" xlink:label="uk-gcd_LegalFormEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_LegalFormEntity" xlink:to="uk-gcd_LegalFormEntity_lbl" />
+    <label id="uk-gcd_LegalFormEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_LegalFormEntity_lbl" xml:lang="en">Details of the entity's legal form.  Examples include partnership, limited liability company, trust, etc.</label>
+    <label id="uk-gcd_LegalFormEntity_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_LegalFormEntity_lbl" xml:lang="en" xlink:title="UKD_entityForm">Legal form of entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_LocalPhoneNumberDocumentAuthor" xlink:label="uk-gcd_LocalPhoneNumberDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_LocalPhoneNumberDocumentAuthor" xlink:to="uk-gcd_LocalPhoneNumberDocumentAuthor_lbl" />
+    <label id="uk-gcd_LocalPhoneNumberDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_LocalPhoneNumberDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_localPhoneNumber">Local phone number, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_LocalPhoneNumberDocumentContact" xlink:label="uk-gcd_LocalPhoneNumberDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_LocalPhoneNumberDocumentContact" xlink:to="uk-gcd_LocalPhoneNumberDocumentContact_lbl" />
+    <label id="uk-gcd_LocalPhoneNumberDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_LocalPhoneNumberDocumentContact_lbl" xml:lang="en" xlink:title="UKD_localPhoneNumber">Local phone number, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_LocalPhoneNumberEntityContact" xlink:label="uk-gcd_LocalPhoneNumberEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_LocalPhoneNumberEntityContact" xlink:to="uk-gcd_LocalPhoneNumberEntityContact_lbl" />
+    <label id="uk-gcd_LocalPhoneNumberEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_LocalPhoneNumberEntityContact_lbl" xml:lang="en" xlink:title="UKD_localPhoneNumber">Local phone number, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_LocalPhoneNumberEntity" xlink:label="uk-gcd_LocalPhoneNumberEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_LocalPhoneNumberEntity" xlink:to="uk-gcd_LocalPhoneNumberEntity_lbl" />
+    <label id="uk-gcd_LocalPhoneNumberEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_LocalPhoneNumberEntity_lbl" xml:lang="en" xlink:title="UKD_localPhoneNumber">Local phone number, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_LocationIncorporation" xlink:label="uk-gcd_LocationIncorporation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_LocationIncorporation" xlink:to="uk-gcd_LocationIncorporation_lbl" />
+    <label id="uk-gcd_LocationIncorporation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_LocationIncorporation_lbl" xml:lang="en" xlink:title="UKD_stateOrCountryOfIncorporationName">Location of incorporation</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_MainTradingSymbol" xlink:label="uk-gcd_MainTradingSymbol" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_MainTradingSymbol" xlink:to="uk-gcd_MainTradingSymbol_lbl" />
+    <label id="uk-gcd_MainTradingSymbol_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_MainTradingSymbol_lbl" xml:lang="en">Main trading symbol associated with given entity on given exchange.</label>
+    <label id="uk-gcd_MainTradingSymbol_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_MainTradingSymbol_lbl" xml:lang="en" xlink:title="UKD_tradingSymbol">Main trading symbol</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_NameAuthor" xlink:label="uk-gcd_NameAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_NameAuthor" xlink:to="uk-gcd_NameAuthor_lbl" />
+    <label id="uk-gcd_NameAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_NameAuthor_lbl" xml:lang="en" xlink:title="UKD_name12">Name of author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_NameContactEntity" xlink:label="uk-gcd_NameContactEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_NameContactEntity" xlink:to="uk-gcd_NameContactEntity_lbl" />
+    <label id="uk-gcd_NameContactEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_NameContactEntity_lbl" xml:lang="en" xlink:title="UKD_name12">Name of contact, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_NameDocumentContact" xlink:label="uk-gcd_NameDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_NameDocumentContact" xlink:to="uk-gcd_NameDocumentContact_lbl" />
+    <label id="uk-gcd_NameDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_NameDocumentContact_lbl" xml:lang="en" xlink:title="UKD_name12">Name of document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_NameLanguage" xlink:label="uk-gcd_NameLanguage" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_NameLanguage" xlink:to="uk-gcd_NameLanguage_lbl" />
+    <label id="uk-gcd_NameLanguage_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_NameLanguage_lbl" xml:lang="en" xlink:title="UKD_dsc12">Name of language</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_NameRevisionAuthor" xlink:label="uk-gcd_NameRevisionAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_NameRevisionAuthor" xlink:to="uk-gcd_NameRevisionAuthor_lbl" />
+    <label id="uk-gcd_NameRevisionAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_NameRevisionAuthor_lbl" xml:lang="en">Name of revision author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_OtherDocumentInformation" xlink:label="uk-gcd_OtherDocumentInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_OtherDocumentInformation" xlink:to="uk-gcd_OtherDocumentInformation_lbl" />
+    <label id="uk-gcd_OtherDocumentInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_OtherDocumentInformation_lbl" xml:lang="en" xlink:title="UKD_otrDocumentInformation">Other Document Information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_OtherEntityInformation" xlink:label="uk-gcd_OtherEntityInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_OtherEntityInformation" xlink:to="uk-gcd_OtherEntityInformation_lbl" />
+    <label id="uk-gcd_OtherEntityInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_OtherEntityInformation_lbl" xml:lang="en">Other entity information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_PeriodCoveredByFinancialStatement" xlink:label="uk-gcd_PeriodCoveredByFinancialStatement" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_PeriodCoveredByFinancialStatement" xlink:to="uk-gcd_PeriodCoveredByFinancialStatement_lbl" />
+    <label id="uk-gcd_PeriodCoveredByFinancialStatement_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_PeriodCoveredByFinancialStatement_lbl" xml:lang="en">Period covered by financial statement</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_PeriodDuration" xlink:label="uk-gcd_PeriodDuration" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_PeriodDuration" xlink:to="uk-gcd_PeriodDuration_lbl" />
+    <label id="uk-gcd_PeriodDuration_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_PeriodDuration_lbl" xml:lang="en">Definition of a period</label>
+    <label id="uk-gcd_PeriodDuration_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_PeriodDuration_lbl" xml:lang="en" xlink:title="UKD_pdDuration">Period duration</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_Postcode" xlink:label="uk-gcd_Postcode" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_Postcode" xlink:to="uk-gcd_Postcode_lbl" />
+    <label id="uk-gcd_Postcode_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_Postcode_lbl" xml:lang="en">Postcode</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_RevisionAuthors" xlink:label="uk-gcd_RevisionAuthors" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_RevisionAuthors" xlink:to="uk-gcd_RevisionAuthors_lbl" />
+    <label id="uk-gcd_RevisionAuthors_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_RevisionAuthors_lbl" xml:lang="en" xlink:title="UKD_revisedByName">Revision authors</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_SpecificDate" xlink:label="uk-gcd_SpecificDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_SpecificDate" xlink:to="uk-gcd_SpecificDate_lbl" />
+    <label id="uk-gcd_SpecificDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_SpecificDate_lbl" xml:lang="en">Definition of a precise date.  An example is "start date for xxxxx" or "end of fiscal year".</label>
+    <label id="uk-gcd_SpecificDate_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_SpecificDate_lbl" xml:lang="en">Specific date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StandardInformation" xlink:label="uk-gcd_StandardInformation" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StandardInformation" xlink:to="uk-gcd_StandardInformation_lbl" />
+    <label id="uk-gcd_StandardInformation_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StandardInformation_lbl" xml:lang="en" xlink:title="UKD_standardInformationGlobalCommonDocumentTaxonomy">Standard information</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StartDate" xlink:label="uk-gcd_StartDate" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StartDate" xlink:to="uk-gcd_StartDate_lbl" />
+    <label id="uk-gcd_StartDate_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StartDate_lbl" xml:lang="en" xlink:title="UKD_numberOfUnits">Start date</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StartDateForFinancialStatement" xlink:label="uk-gcd_StartDateForFinancialStatement" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StartDateForFinancialStatement" xlink:to="uk-gcd_StartDateForFinancialStatement_lbl" />
+    <label id="uk-gcd_StartDateForFinancialStatement_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StartDateForFinancialStatement_lbl" xml:lang="en">Start date for financial statement</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StatementDatesPeriodsCovered" xlink:label="uk-gcd_StatementDatesPeriodsCovered" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StatementDatesPeriodsCovered" xlink:to="uk-gcd_StatementDatesPeriodsCovered_lbl" />
+    <label id="uk-gcd_StatementDatesPeriodsCovered_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_StatementDatesPeriodsCovered_lbl" xml:lang="en">Section recording information relating to the time period(s) of the data in the document.  For example, the data may apply "for the year ended 31 December 2005" or "for the month ending 31 December 2005".</label>
+    <label id="uk-gcd_StatementDatesPeriodsCovered_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StatementDatesPeriodsCovered_lbl" xml:lang="en" xlink:title="UKD_pdsCovered">Statement dates and periods covered</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StateOrProvinceDocumentAuthor" xlink:label="uk-gcd_StateOrProvinceDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StateOrProvinceDocumentAuthor" xlink:to="uk-gcd_StateOrProvinceDocumentAuthor_lbl" />
+    <label id="uk-gcd_StateOrProvinceDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StateOrProvinceDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_stateOrProvince3">State or province, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StateOrProvinceDocumentContact" xlink:label="uk-gcd_StateOrProvinceDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StateOrProvinceDocumentContact" xlink:to="uk-gcd_StateOrProvinceDocumentContact_lbl" />
+    <label id="uk-gcd_StateOrProvinceDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StateOrProvinceDocumentContact_lbl" xml:lang="en" xlink:title="UKD_stateOrProvince3">State or province, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StateOrProvinceEntityContact" xlink:label="uk-gcd_StateOrProvinceEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StateOrProvinceEntityContact" xlink:to="uk-gcd_StateOrProvinceEntityContact_lbl" />
+    <label id="uk-gcd_StateOrProvinceEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StateOrProvinceEntityContact_lbl" xml:lang="en" xlink:title="UKD_stateOrProvince3">State or province, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_StateOrProvinceEntity" xlink:label="uk-gcd_StateOrProvinceEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_StateOrProvinceEntity" xlink:to="uk-gcd_StateOrProvinceEntity_lbl" />
+    <label id="uk-gcd_StateOrProvinceEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_StateOrProvinceEntity_lbl" xml:lang="en" xlink:title="UKD_stateOrProvince3">State or province, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_SymbolSecurity" xlink:label="uk-gcd_SymbolSecurity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_SymbolSecurity" xlink:to="uk-gcd_SymbolSecurity_lbl" />
+    <label id="uk-gcd_SymbolSecurity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_SymbolSecurity_lbl" xml:lang="en" xlink:title="UKD_issueTypeOrSecurityName">Symbol of security</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_TaxIdentifierDescription" xlink:label="uk-gcd_TaxIdentifierDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_TaxIdentifierDescription" xlink:to="uk-gcd_TaxIdentifierDescription_lbl" />
+    <label id="uk-gcd_TaxIdentifierDescription_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_TaxIdentifierDescription_lbl" xml:lang="en">Tax identifier description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_TaxIdentifier" xlink:label="uk-gcd_TaxIdentifier" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_TaxIdentifier" xlink:to="uk-gcd_TaxIdentifier_lbl" />
+    <label id="uk-gcd_TaxIdentifier_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_TaxIdentifier_lbl" xml:lang="en">A unique tax idnetification number or code used by the entity for tax purposes. An example is "45-230-189".</label>
+    <label id="uk-gcd_TaxIdentifier_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_TaxIdentifier_lbl" xml:lang="en" xlink:title="UKD_entityTaxIdentificationNumber">Tax identifier</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_TaxJurisdiction" xlink:label="uk-gcd_TaxJurisdiction" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_TaxJurisdiction" xlink:to="uk-gcd_TaxJurisdiction_lbl" />
+    <label id="uk-gcd_TaxJurisdiction_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_TaxJurisdiction_lbl" xml:lang="en">Tax jurisdiction responsible for identifier.</label>
+    <label id="uk-gcd_TaxJurisdiction_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_TaxJurisdiction_lbl" xml:lang="en" xlink:title="UKD_entityPrincipalTaxJurisdiction">Tax jurisdiction</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_TitlePositionAuthor" xlink:label="uk-gcd_TitlePositionAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_TitlePositionAuthor" xlink:to="uk-gcd_TitlePositionAuthor_lbl" />
+    <label id="uk-gcd_TitlePositionAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_TitlePositionAuthor_lbl" xml:lang="en" xlink:title="UKD_titlePosition">Title / position of author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_TitlePositionContactEntity" xlink:label="uk-gcd_TitlePositionContactEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_TitlePositionContactEntity" xlink:to="uk-gcd_TitlePositionContactEntity_lbl" />
+    <label id="uk-gcd_TitlePositionContactEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_TitlePositionContactEntity_lbl" xml:lang="en" xlink:title="UKD_titlePosition">Title / position of contact, entity</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_TitlePositionDocumentContact" xlink:label="uk-gcd_TitlePositionDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_TitlePositionDocumentContact" xlink:to="uk-gcd_TitlePositionDocumentContact_lbl" />
+    <label id="uk-gcd_TitlePositionDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_TitlePositionDocumentContact_lbl" xml:lang="en" xlink:title="UKD_titlePosition">Title / position of document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_UniqueDocumentDentifier" xlink:label="uk-gcd_UniqueDocumentDentifier" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_UniqueDocumentDentifier" xlink:to="uk-gcd_UniqueDocumentDentifier_lbl" />
+    <label id="uk-gcd_UniqueDocumentDentifier_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_UniqueDocumentDentifier_lbl" xml:lang="en">String or number used uniquely to identify the instance document.  Examples are filenames which include a date or URLs based on such filenames. </label>
+    <label id="uk-gcd_UniqueDocumentDentifier_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_UniqueDocumentDentifier_lbl" xml:lang="en" xlink:title="UKD_documentIdentifier">Unique document dentifier</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_VersionNumberRevisionConcerned" xlink:label="uk-gcd_VersionNumberRevisionConcerned" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_VersionNumberRevisionConcerned" xlink:to="uk-gcd_VersionNumberRevisionConcerned_lbl" />
+    <label id="uk-gcd_VersionNumberRevisionConcerned_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_VersionNumberRevisionConcerned_lbl" xml:lang="en" xlink:title="UKD_versionNumber">Version number of revision concerned</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_WebsiteDescription" xlink:label="uk-gcd_WebsiteDescription" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_WebsiteDescription" xlink:to="uk-gcd_WebsiteDescription_lbl" />
+    <label id="uk-gcd_WebsiteDescription_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_WebsiteDescription_lbl" xml:lang="en">Description of the web site / sites.  Examples are "home page" or "product information".</label>
+    <label id="uk-gcd_WebsiteDescription_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_WebsiteDescription_lbl" xml:lang="en" xlink:title="UKD_webSiteDsc">Website description</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_WebsiteURL" xlink:label="uk-gcd_WebsiteURL" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_WebsiteURL" xlink:to="uk-gcd_WebsiteURL_lbl" />
+    <label id="uk-gcd_WebsiteURL_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_WebsiteURL_lbl" xml:lang="en" xlink:title="UKD_webSiteURL">Website URL</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_XBRLEntitySegmentIdentifier" xlink:label="uk-gcd_XBRLEntitySegmentIdentifier" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_XBRLEntitySegmentIdentifier" xlink:to="uk-gcd_XBRLEntitySegmentIdentifier_lbl" />
+    <label id="uk-gcd_XBRLEntitySegmentIdentifier_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="uk-gcd_XBRLEntitySegmentIdentifier_lbl" xml:lang="en">XBRL entity segment context identifier for entity</label>
+    <label id="uk-gcd_XBRLEntitySegmentIdentifier_lbl_1" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_XBRLEntitySegmentIdentifier_lbl" xml:lang="en">XBRL entity segment identifier</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ZIPOrPostalCodeDocumentAuthor" xlink:label="uk-gcd_ZIPOrPostalCodeDocumentAuthor" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ZIPOrPostalCodeDocumentAuthor" xlink:to="uk-gcd_ZIPOrPostalCodeDocumentAuthor_lbl" />
+    <label id="uk-gcd_ZIPOrPostalCodeDocumentAuthor_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ZIPOrPostalCodeDocumentAuthor_lbl" xml:lang="en" xlink:title="UKD_zIPOrPostalCode3">ZIP or Postal Code, document author</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ZIPOrPostalCodeDocumentContact" xlink:label="uk-gcd_ZIPOrPostalCodeDocumentContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ZIPOrPostalCodeDocumentContact" xlink:to="uk-gcd_ZIPOrPostalCodeDocumentContact_lbl" />
+    <label id="uk-gcd_ZIPOrPostalCodeDocumentContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ZIPOrPostalCodeDocumentContact_lbl" xml:lang="en" xlink:title="UKD_zIPOrPostalCode3">ZIP or Postal Code, document contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ZIPOrPostalCodeEntityContact" xlink:label="uk-gcd_ZIPOrPostalCodeEntityContact" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ZIPOrPostalCodeEntityContact" xlink:to="uk-gcd_ZIPOrPostalCodeEntityContact_lbl" />
+    <label id="uk-gcd_ZIPOrPostalCodeEntityContact_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ZIPOrPostalCodeEntityContact_lbl" xml:lang="en" xlink:title="UKD_zIPOrPostalCode3">ZIP or Postal Code, entity contact</label>
+    <loc xlink:type="locator" xlink:href="uk-gcd-2004-12-01.xsd#uk-gcd_ZIPOrPostalCodeEntity" xlink:label="uk-gcd_ZIPOrPostalCodeEntity" />
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="uk-gcd_ZIPOrPostalCodeEntity" xlink:to="uk-gcd_ZIPOrPostalCodeEntity_lbl" />
+    <label id="uk-gcd_ZIPOrPostalCodeEntity_lbl_0" xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="uk-gcd_ZIPOrPostalCodeEntity_lbl" xml:lang="en" xlink:title="UKD_zIPOrPostalCode3">ZIP or Postal Code, entity</label>
+  </labelLink>
+</linkbase>
