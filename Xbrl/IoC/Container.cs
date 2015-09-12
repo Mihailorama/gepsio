@@ -17,7 +17,11 @@ namespace JeffFerguson.Gepsio.IoC
         static Container()
         {
             registeredTypes = new Dictionary<Type, Type>();
+#if NETFX_CORE
+            currentAssembly = typeof(Container).GetTypeInfo().Assembly;
+#else
             currentAssembly = Assembly.GetExecutingAssembly();
+#endif
             allTypes = currentAssembly.GetTypes();
             RegisterAllTypes();
         }

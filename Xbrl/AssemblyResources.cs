@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Resources;
+using System.Reflection;
 
 namespace JeffFerguson.Gepsio
 {
@@ -11,8 +12,13 @@ namespace JeffFerguson.Gepsio
 
         static AssemblyResources()
         {
+#if NETFX_CORE
+            string ResourceFile = typeof(AssemblyResources).GetTypeInfo().Assembly.GetName().Name + ".Gepsio";
+            staticResourceManager = new ResourceManager(ResourceFile, typeof(AssemblyResources).GetTypeInfo().Assembly);
+#else
             string ResourceFile = typeof(AssemblyResources).Assembly.GetName().Name + ".Gepsio";
             staticResourceManager = new ResourceManager(ResourceFile, typeof(AssemblyResources).Assembly);
+#endif
         }
 
         public static string GetName(string Key)

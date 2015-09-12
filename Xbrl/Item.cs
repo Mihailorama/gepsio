@@ -498,8 +498,8 @@ namespace JeffFerguson.Gepsio
                 thisParentFragment.AddValidationError(new ItemValidationError(this, MessageBuilder.ToString()));
                 return;
             }
-            UnitRef.SetCultureAndRegionInfoFromISO4217Code(UnitRef.MeasureQualifiedNames[0].LocalName);
-            if ((UnitRef.CultureInformation == null) && (UnitRef.RegionInformation == null))
+            UnitRef.ValidateISO4217Code(UnitRef.MeasureQualifiedNames[0].LocalName);
+            if(UnitRef.IsIso4217CodeValid == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");

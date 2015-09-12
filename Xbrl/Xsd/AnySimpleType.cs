@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Reflection; // needed for GetTypeInfo() in NETFX_CORE
 
 namespace JeffFerguson.Gepsio.Xsd
 {
@@ -38,7 +39,11 @@ namespace JeffFerguson.Gepsio.Xsd
                         return true;
                     if (CurrentType.Equals(typeof(Float)) == true)
                         return true;
+#if NETFX_CORE
+                    CurrentType = CurrentType.GetTypeInfo().BaseType;
+#else
                     CurrentType = CurrentType.BaseType;
+#endif
                 }
                 return false;
             }

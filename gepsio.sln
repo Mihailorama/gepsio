@@ -53,23 +53,32 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeffFerguson.Gepsio.DotNet4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeffFerguson.Gepsio.Test.DotNet46", "JeffFerguson.Gepsio.Test.DotNet46\JeffFerguson.Gepsio.Test.DotNet46.csproj", "{4FEC0D4A-3AF8-4A98-BBE6-1435DB4D4AEF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UniversalWindows", "UniversalWindows", "{1566C45D-905D-4303-90CF-15AEB82B177D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeffFerguson.Gepsio.UniversalWindows", "JeffFerguson.Gepsio.UniversalWindows\JeffFerguson.Gepsio.UniversalWindows.csproj", "{B87F9B46-9495-44AF-9905-586FFCF55FF7}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UniversalWindowsXml", "UniversalWindowsXml\UniversalWindowsXml.shproj", "{AA69441E-F9C1-487E-B0D5-4F5C2FC09078}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Xbrl\Xbrl.projitems*{c44fb213-d277-4135-bcd9-de9ffb269eef}*SharedItemsImports = 4
 		SystemXml\SystemXml.projitems*{c44fb213-d277-4135-bcd9-de9ffb269eef}*SharedItemsImports = 4
-		Xbrl\Xbrl.projitems*{602219d2-f910-4c71-9b75-99516b75090a}*SharedItemsImports = 4
+		Xbrl\Xbrl.projitems*{c44fb213-d277-4135-bcd9-de9ffb269eef}*SharedItemsImports = 4
 		SystemXml\SystemXml.projitems*{602219d2-f910-4c71-9b75-99516b75090a}*SharedItemsImports = 4
-		Xbrl\Xbrl.projitems*{ce6c3578-aa38-4bf0-b562-4ec751b5b0eb}*SharedItemsImports = 4
+		Xbrl\Xbrl.projitems*{602219d2-f910-4c71-9b75-99516b75090a}*SharedItemsImports = 4
+		UniversalWindowsXml\UniversalWindowsXml.projitems*{aa69441e-f9c1-487e-b0d5-4f5c2fc09078}*SharedItemsImports = 13
 		SystemXml\SystemXml.projitems*{ce6c3578-aa38-4bf0-b562-4ec751b5b0eb}*SharedItemsImports = 4
-		Xbrl\Xbrl.projitems*{e67840e8-500d-43ef-87cc-9ab5397eb24c}*SharedItemsImports = 4
+		Xbrl\Xbrl.projitems*{ce6c3578-aa38-4bf0-b562-4ec751b5b0eb}*SharedItemsImports = 4
 		SystemXml\SystemXml.projitems*{e67840e8-500d-43ef-87cc-9ab5397eb24c}*SharedItemsImports = 4
-		Xbrl\Xbrl.projitems*{21d83331-daee-473a-b96b-d47c4aa74bf5}*SharedItemsImports = 4
+		Xbrl\Xbrl.projitems*{e67840e8-500d-43ef-87cc-9ab5397eb24c}*SharedItemsImports = 4
 		SystemXml\SystemXml.projitems*{21d83331-daee-473a-b96b-d47c4aa74bf5}*SharedItemsImports = 4
-		Xbrl\Xbrl.projitems*{f0347c11-bb07-4d1b-acbe-058537eb148d}*SharedItemsImports = 4
+		Xbrl\Xbrl.projitems*{21d83331-daee-473a-b96b-d47c4aa74bf5}*SharedItemsImports = 4
 		SystemXml\SystemXml.projitems*{f0347c11-bb07-4d1b-acbe-058537eb148d}*SharedItemsImports = 4
+		Xbrl\Xbrl.projitems*{f0347c11-bb07-4d1b-acbe-058537eb148d}*SharedItemsImports = 4
 		UnitTests\UnitTests.projitems*{2ad0e2bb-5339-43c1-8ce8-13c144bc6903}*SharedItemsImports = 13
 		SystemXml\SystemXml.projitems*{857d0c33-c731-4482-a038-29489699b78b}*SharedItemsImports = 13
 		Xbrl\Xbrl.projitems*{cf7e7b4b-4311-4528-8876-e0c7c5a44d23}*SharedItemsImports = 13
+		Xbrl\Xbrl.projitems*{b87f9b46-9495-44af-9905-586ffcf55ff7}*SharedItemsImports = 4
+		UniversalWindowsXml\UniversalWindowsXml.projitems*{b87f9b46-9495-44af-9905-586ffcf55ff7}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -324,6 +333,26 @@ Global
 		{4FEC0D4A-3AF8-4A98-BBE6-1435DB4D4AEF}.Release|Win32.Build.0 = Release|Any CPU
 		{4FEC0D4A-3AF8-4A98-BBE6-1435DB4D4AEF}.Release|x64.ActiveCfg = Release|Any CPU
 		{4FEC0D4A-3AF8-4A98-BBE6-1435DB4D4AEF}.Release|x64.Build.0 = Release|Any CPU
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|ARM.Build.0 = Debug|ARM
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|Win32.ActiveCfg = Debug|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|Win32.Build.0 = Debug|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|x64.ActiveCfg = Debug|x64
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Debug|x64.Build.0 = Debug|x64
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|ARM.ActiveCfg = Release|ARM
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|ARM.Build.0 = Release|ARM
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|Win32.ActiveCfg = Release|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|Win32.Build.0 = Release|x86
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|x64.ActiveCfg = Release|x64
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -342,9 +371,11 @@ Global
 		{9326F011-82BF-4F26-8468-90316BEE2B9C} = {71E0830C-CDD0-4C3A-A219-39C992288921}
 		{602219D2-F910-4C71-9B75-99516B75090A} = {C7526A19-A5D1-495E-BF87-C5F63E98F06E}
 		{4FEC0D4A-3AF8-4A98-BBE6-1435DB4D4AEF} = {C7526A19-A5D1-495E-BF87-C5F63E98F06E}
+		{B87F9B46-9495-44AF-9905-586FFCF55FF7} = {1566C45D-905D-4303-90CF-15AEB82B177D}
+		{AA69441E-F9C1-487E-B0D5-4F5C2FC09078} = {A05BFFF0-7237-4E0F-90E6-2835027F82D3}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 19
+		SccNumberOfProjects = 22
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs06
 		SccLocalPath0 = .
@@ -418,6 +449,18 @@ Global
 		SccProjectTopLevelParentUniqueName18 = UnitTests\\UnitTests.shproj
 		SccProjectName18 = UnitTests
 		SccLocalPath18 = UnitTests
+		SccProjectUniqueName19 = JeffFerguson.Gepsio.UniversalWindows\\JeffFerguson.Gepsio.UniversalWindows.csproj
+		SccProjectTopLevelParentUniqueName19 = gepsio.sln
+		SccProjectName19 = JeffFerguson.Gepsio.UniversalWindows
+		SccLocalPath19 = JeffFerguson.Gepsio.UniversalWindows
+		SccProjectUniqueName20 = UniversalWindowsXml\\UniversalWindowsXml.projitems
+		SccProjectTopLevelParentUniqueName20 = gepsio.sln
+		SccProjectName20 = UniversalWindowsXml
+		SccLocalPath20 = UniversalWindowsXml
+		SccProjectUniqueName21 = UniversalWindowsXml\\UniversalWindowsXml.shproj
+		SccProjectTopLevelParentUniqueName21 = gepsio.sln
+		SccProjectName21 = UniversalWindowsXml
+		SccLocalPath21 = UniversalWindowsXml
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = gepsio13.vsmdi

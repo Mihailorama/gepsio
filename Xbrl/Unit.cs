@@ -36,18 +36,9 @@ namespace JeffFerguson.Gepsio
         }
 
         /// <summary>
-        /// Region information for this unit.
+        /// True if the unit's ISO 4217 code is valid; false otherwise.
         /// </summary>
-        public RegionInfo RegionInformation
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
-        /// Culture information for this unit.
-        /// </summary>
-        public CultureInfo CultureInformation
+        public bool IsIso4217CodeValid
         {
             get;
             private set;
@@ -77,7 +68,7 @@ namespace JeffFerguson.Gepsio
         internal Unit(XbrlFragment fragment, INode UnitNode, INamespaceManager namespaceManager)
         {
             this.Fragment = fragment;
-            this.RegionInformation = null;
+            this.IsIso4217CodeValid = false;
             thisUnitNode = UnitNode;
             this.Id = thisUnitNode.Attributes["id"].Value;
             this.MeasureQualifiedNames = new List<QualifiedName>();
@@ -144,55 +135,47 @@ namespace JeffFerguson.Gepsio
 
         //------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------
-        internal void SetCultureAndRegionInfoFromISO4217Code(string Iso4217Code)
+        internal void ValidateISO4217Code(string Iso4217Code)
         {
-            //--------------------------------------------------------------------------------
-            // See if any obsolete ISO 4217 codes are being used and support those separately.
-            //--------------------------------------------------------------------------------
-            if (Iso4217Code.Equals("DEM") == true)
+            string[] validIso4217Codes =
             {
-                SetCultureAndRegionInfoFromRegionInfoName("DE");
-                return;
-            }
-            //--------------------------------------------------------------------------------
-            // Get a list of all cultures and find one whose region information specifies the
-            // given ISO 4217 code as its currency symbol.
-            //--------------------------------------------------------------------------------
-            CultureInfo[] AllSpecificCultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-            foreach (CultureInfo CurrentCultureInfo in AllSpecificCultures)
-            {
-                RegionInfo CurrentRegionInfo = new RegionInfo(CurrentCultureInfo.LCID);
-                if (CurrentRegionInfo.ISOCurrencySymbol == Iso4217Code)
-                {
-                    this.CultureInformation = CurrentCultureInfo;
-                    this.RegionInformation = CurrentRegionInfo;
-                    return;
-                }
-            }
-        }
+                "ADF", "ADP", "AED", "AFA", "AFN", "ALL", "AMD", "ANG", "AOA", "AON", "AOR",
+                "ARA", "ARL", "ARP", "ARS", "ATS", "AUD", "AWG", "AZM", "AZN", "BAD", "BAM",
+                "BBD", "BDT", "BEF", "BGL", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BOP",
+                "BOV", "BRB", "BRC", "BRE", "BRL", "BRN", "BRR", "BRZ", "BSD", "BTN", "BWP",
+                "BYB", "BYR", "BZD", "CAD", "CDF", "CHE", "CHF", "CHW", "CLE", "CLF", "CLP",
+                "CNY", "COP", "COU", "CRC", "CSD", "CSK", "CUC", "CUP", "CVE", "CYP", "CZK",
+                "DDM", "DEM", "DJF", "DKK", "DOP", "DZD", "ECS", "ECV", "EEK", "EGP", "ERN",
+                "ESA", "ESB", "ESP", "ETB", "EUR", "FIM", "FJD", "FKP", "FRF", "GBP", "GEL",
+                "GHC", "GHS", "GIP", "GMD", "GNE", "GNF", "GQE", "GRD", "GTQ", "GWP", "GYD",
+                "HKD", "HNL", "HRD", "HRK", "HTG", "HUF", "IDR", "IEP", "ILP", "ILR", "ILS",
+                "INR", "IQD", "IRR", "ISJ", "ISK", "ITL", "JMD", "JOD", "JPY", "KES", "KGS",
+                "KHR", "KMF", "KPW", "KRW", "KWD", "KYD", "KZT", "LAJ", "LAK", "LBP", "LKR",
+                "LRD", "LSL", "LTL", "LUF", "LVL", "LYD", "MAD", "MAF", "MCF", "MDL", "MGA",
+                "MGF", "MKD", "MKN", "MLF", "MMK", "MNT", "MOP", "MRO", "MTL", "MUR", "MVQ",
+                "MVR", "MWK", "MXN", "MXP", "MXV", "MYR", "MZM", "MZN", "NAD", "NFD", "NGN",
+                "NIO", "NLG", "NOK", "NPR", "NZD", "OMR", "PAB", "PEH", "PEI", "PEN", "PGK",
+                "PHP", "PKR", "PLN", "PLZ", "PTE", "PTP", "PYG", "QAR", "ROL", "RON", "RSD",
+                "RUB", "RUR", "RWF", "SAR", "SBD", "SCR", "SDD", "SDG", "SDP", "SEK", "SGD",
+                "SHP", "SIT", "SKK", "SLL", "SML", "SOS", "SRD", "SRG", "SSP", "STD", "SUR",
+                "SVC", "SYP", "SZL", "THB", "TJR", "TJS", "TMM", "TMT", "TND", "TNF", "TOP",
+                "TPE", "TRL", "TRY", "TTD", "TWD", "TZS", "UAH", "UAK", "UGS", "UGX", "USD",
+                "USN", "USS", "UYI", "UYN", "UYU", "UZS", "VAL", "VEB", "VEF", "VND", "VUV",
+                "WST", "XAF", "XAG", "XAU", "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XEU",
+                "XFO", "XFU", "XOF", "XPD", "XPF", "XPT", "XSU", "XTS", "XUA", "XXX", "YDD",
+                "YER", "YUD", "YUG", "YUM", "YUN", "YUO", "YUR", "ZAL", "ZAR", "ZMK", "ZMW",
+                "ZRN", "ZRZ", "ZWC", "ZWD", "ZWL", "ZWN", "ZWR"
+            };
 
-        //------------------------------------------------------------------------------------
-        // This method is a bit of a hack so that Gepsio passes unit test 304.24 in the
-        // XBRL-CONF-CR3-2007-03-05 conformance suite. The XBRL document in 304.24 uses a unit
-        // of measure called iso4217:DEM, which is an obsolete ISO 4217 currency code for the
-        // German Mark. This has been replaced in favor of the Euro.
-        //
-        // This method searches for appropriate CultureInfo and RegionInfo settings given the
-        // name of a region.
-        //------------------------------------------------------------------------------------
-        private void SetCultureAndRegionInfoFromRegionInfoName(string RegionInfoName)
-        {
-            CultureInfo[] AllSpecificCultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-            foreach (CultureInfo CurrentCultureInfo in AllSpecificCultures)
+            foreach(var currentCode in validIso4217Codes)
             {
-                RegionInfo CurrentRegionInfo = new RegionInfo(CurrentCultureInfo.LCID);
-                if (CurrentRegionInfo.Name == RegionInfoName)
+                if(currentCode.Equals(Iso4217Code) == true)
                 {
-                    this.CultureInformation = CurrentCultureInfo;
-                    this.RegionInformation = CurrentRegionInfo;
+                    this.IsIso4217CodeValid = true;
                     return;
                 }
             }
+            this.IsIso4217CodeValid = false;
         }
 
         //------------------------------------------------------------------------------------

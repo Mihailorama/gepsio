@@ -52,8 +52,8 @@ namespace JeffFerguson.Gepsio.Xsd
                 MessageBuilder.AppendFormat(StringFormat, FactToValidate.Name, UnitReference.Id, UnitReference.MeasureQualifiedNames[0].NamespaceUri);
                 //throw new XbrlException(MessageBuilder.ToString());
             }
-            UnitReference.SetCultureAndRegionInfoFromISO4217Code(UnitReference.MeasureQualifiedNames[0].LocalName);
-            if ((UnitReference.CultureInformation == null) && (UnitReference.RegionInformation == null))
+            UnitReference.ValidateISO4217Code(UnitReference.MeasureQualifiedNames[0].LocalName);
+            if(UnitReference.IsIso4217CodeValid == false)
             {
                 StringBuilder MessageBuilder = new StringBuilder();
                 string StringFormat = AssemblyResources.GetName("UnsupportedISO4217CodeForUnitMeasure");

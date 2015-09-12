@@ -33,7 +33,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)DefinitionLinkbaseDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ElementValidationError.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EssentialNumericItemAttributes.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExtensionMethods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FactAttributes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FactCollection.cs" />
