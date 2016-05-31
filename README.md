@@ -20,7 +20,7 @@ Working with Gepsio is extremely straightforward:
         {  
             static void Main(string[] args)  
             {  
-                XbrlDocument Doc = new XbrlDocument();
+                var Doc = new XbrlDocument();
                 Doc.Load("xbrldoc.xml");
                 if(Doc.IsValid == true)
                 {
