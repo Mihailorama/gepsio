@@ -11,7 +11,7 @@ namespace JeffFerguson.Gepsio
 
         static AssemblyResources()
         {
-            string ResourceFile = "JeffFerguson.Gepsio.Gepsio";
+            string ResourceFile = "SXBRL.Engine.Gepsio"; //"JeffFerguson.Gepsio.Gepsio";
             staticResourceManager = new ResourceManager(ResourceFile, typeof(AssemblyResources).Assembly);
         }
 

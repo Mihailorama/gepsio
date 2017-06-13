@@ -116,10 +116,10 @@ namespace JeffFerguson.Gepsio
             this.ToId = CalculationArcNode.GetAttributeValue(XlinkNode.xlinkNamespace, "to");
             string OrderString = CalculationArcNode.GetAttributeValue("order");
             if(string.IsNullOrEmpty(OrderString) == false)
-                this.Order = Convert.ToDecimal(OrderString);
+                this.Order = Convert.ToDecimal(OrderString.Replace(".",","));
             string WeightString = CalculationArcNode.GetAttributeValue("weight");
             if (string.IsNullOrEmpty(WeightString) == false)
-                this.Weight = Convert.ToDecimal(WeightString);
+                this.Weight = Convert.ToDecimal(WeightString.Replace(".", ","));
             else
                 this.Weight = (decimal)(1.0);
         }

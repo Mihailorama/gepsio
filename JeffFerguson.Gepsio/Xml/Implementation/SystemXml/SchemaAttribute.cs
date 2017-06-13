@@ -54,8 +54,8 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
                 case XmlSchemaUse.Required:
                     this.Required = true;
                     break;
-                default:
-                    throw new NotSupportedException("Unsupported XmlSchemaUse enumeration.");
+                //default:
+                //    throw new NotSupportedException("Unsupported XmlSchemaUse enumeration.");
             }
         }
     }

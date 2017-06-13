@@ -100,9 +100,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JeffFerguson.Gepsio.DotNet46\JeffFerguson.Gepsio.DotNet46.csproj">
+    <ProjectReference Include="..\JeffFerguson.Gepsio.DotNet46\XBRLV46.csproj">
       <Project>{602219d2-f910-4c71-9b75-99516b75090a}</Project>
-      <Name>JeffFerguson.Gepsio.DotNet46</Name>
+      <Name>XBRLV46</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

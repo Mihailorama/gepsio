@@ -182,7 +182,7 @@
       <FileName>FootnoteLocator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="JeffFerguson.Gepsio.Gepsio" Collapsed="true">
+  <Class Name="SXBRL.Engine.Gepsio" Collapsed="true">
     <Position X="78.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEQAQAQCBAAAADFAUEABMgIAMRAAAAkAABABCAMYYKA=</HashCode>
